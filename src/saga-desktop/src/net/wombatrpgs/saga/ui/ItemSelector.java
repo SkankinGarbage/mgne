@@ -301,7 +301,7 @@ public class ItemSelector extends ScreenGraphic implements CommandListener {
 	 * Called when the weird user presses select on an item?
 	 */
 	protected void select() {
-		if (selectedListener != null) {
+		if (selectListener != null) {
 			handleListener(selectListener.onSelection(selected));
 		}
 	}
