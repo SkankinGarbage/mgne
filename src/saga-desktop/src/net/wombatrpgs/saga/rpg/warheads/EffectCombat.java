@@ -269,7 +269,9 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 			temp *= Math.round((float) user.get(powerStat) / 4f);
 			result = user.get(powerStat);
 		}
-		result += (temp + MGlobal.rand.nextInt(temp / 2));
+		if (temp > 0) {
+			result += (temp + MGlobal.rand.nextInt(temp / 2));
+		}
 		return result;
 	}
 

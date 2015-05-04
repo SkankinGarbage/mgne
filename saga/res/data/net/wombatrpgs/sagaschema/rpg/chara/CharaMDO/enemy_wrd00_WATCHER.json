@@ -15,8 +15,7 @@
 	"loot" : "None",
 	"equipped" : [
 		"abil_esp",
-		"abil_sunburst",
-		"abil_ofire"
+		"abil_sunburst"
 	],
 	"stats" : {
 		"hp" : 20,

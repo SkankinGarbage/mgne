@@ -56,6 +56,8 @@ public class EffectDebuff extends EffectEnemyTarget {
 			battle.applyBoost(victim, mod);
 			battle.println(tab + victimname + "'s " + statName + " is down by "
 					+ debuffPower + ".");
+		} else {
+			battle.println("Nothing happens.");
 		}
 	}
 

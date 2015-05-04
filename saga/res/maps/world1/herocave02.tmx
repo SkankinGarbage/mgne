@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" nextobjectid="17">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level00_danger05"/>
@@ -24,108 +24,108 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object name="tele" type="Event" x="192" y="304" width="16" height="16">
+  <object id="1" name="tele" type="Event" x="192" y="304" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/herocave01.tmx', 18, 24)"/>
    </properties>
   </object>
-  <object name="chest" type="Chest" x="416" y="448" width="16" height="16">
+  <object id="2" name="chest" type="Chest" x="416" y="448" width="16" height="16">
    <properties>
     <property name="item" value="pot_defense"/>
    </properties>
   </object>
-  <object name="room" type="Ceiling" x="400" y="480">
+  <object id="3" name="room" type="Ceiling" x="400" y="480">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
    <polygon points="0,0 0,-80 80,-80 80,-176 112,-176 112,0"/>
   </object>
-  <object name="barrier" type="Event" x="336" y="368" width="16" height="32">
+  <object id="4" name="barrier" type="Event" x="336" y="368" width="16" height="32">
    <properties>
     <property name="hide" value="return hasItem('key_artifactHeatgoggle')"/>
     <property name="onCollide" value="play('scaldingwater.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="barrier" type="Event" x="320" y="320" width="32" height="16">
+  <object id="5" name="barrier" type="Event" x="320" y="320" width="32" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_artifactHeatgoggle')"/>
     <property name="onCollide" value="play('scaldingwater.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="barrier" type="Event" x="336" y="272" width="64" height="16">
+  <object id="6" name="barrier" type="Event" x="336" y="272" width="64" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_artifactHeatgoggle')"/>
     <property name="onCollide" value="play('scaldingwater.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="barrier" type="Event" x="304" y="208" width="80" height="32">
+  <object id="7" name="barrier" type="Event" x="304" y="208" width="80" height="32">
    <properties>
     <property name="hide" value="return hasItem('key_artifactHeatgoggle')"/>
     <property name="onCollide" value="play('scaldingwater.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="trap" type="Event" x="368" y="224" width="16" height="16">
+  <object id="8" name="trap" type="Event" x="368" y="224" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bubbles"/>
     <property name="onInteract" value="speak(getHero(0).getName(), 'The magus eye revealed a trap. It looks hot there.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="trap" type="Event" x="336" y="384" width="16" height="16">
+  <object id="9" name="trap" type="Event" x="336" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bubbles"/>
     <property name="onInteract" value="speak(getHero(0).getName(), 'The magus eye revealed a trap. It looks hot there.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="trap" type="Event" x="320" y="320" width="16" height="16">
+  <object id="10" name="trap" type="Event" x="320" y="320" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bubbles"/>
     <property name="onInteract" value="speak(getHero(0).getName(), 'The magus eye revealed a trap. It looks hot there.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="trap" type="Event" x="368" y="272" width="16" height="16">
+  <object id="11" name="trap" type="Event" x="368" y="272" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bubbles"/>
     <property name="onInteract" value="speak(getHero(0).getName(), 'The magus eye revealed a trap. It looks hot there.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="trap" type="Event" x="336" y="272" width="16" height="16">
+  <object id="12" name="trap" type="Event" x="336" y="272" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bubbles"/>
     <property name="onInteract" value="speak(getHero(0).getName(), 'The magus eye revealed a trap. It looks hot there.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="trap" type="Event" x="304" y="208" width="16" height="16">
+  <object id="13" name="trap" type="Event" x="304" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bubbles"/>
     <property name="onInteract" value="speak(getHero(0).getName(), 'The magus eye revealed a trap. It looks hot there.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="trap" type="Event" x="320" y="224" width="16" height="16">
+  <object id="14" name="trap" type="Event" x="320" y="224" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bubbles"/>
     <property name="onInteract" value="speak(getHero(0).getName(), 'The magus eye revealed a trap. It looks hot there.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="trap" type="Event" x="352" y="208" width="16" height="16">
+  <object id="15" name="trap" type="Event" x="352" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bubbles"/>
     <property name="onInteract" value="speak(getHero(0).getName(), 'The magus eye revealed a trap. It looks hot there.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="tele" type="Event" x="336" y="128" width="16" height="16">
+  <object id="16" name="tele" type="Event" x="336" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/herocave03.tmx', 31, 28)"/>
    </properties>

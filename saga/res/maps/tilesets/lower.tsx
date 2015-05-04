@@ -165,6 +165,20 @@
   <properties>
    <property name="x" value=""/>
   </properties>
+  <animation>
+   <frame tileid="56" duration="500"/>
+   <frame tileid="63" duration="500"/>
+   <frame tileid="70" duration="500"/>
+   <frame tileid="77" duration="500"/>
+  </animation>
+ </tile>
+ <tile id="58">
+  <animation>
+   <frame tileid="59" duration="500"/>
+   <frame tileid="60" duration="500"/>
+   <frame tileid="61" duration="500"/>
+   <frame tileid="62" duration="500"/>
+  </animation>
  </tile>
  <tile id="63">
   <properties>
@@ -195,6 +209,12 @@
   <properties>
    <property name="x" value=""/>
   </properties>
+  <animation>
+   <frame tileid="84" duration="500"/>
+   <frame tileid="91" duration="500"/>
+   <frame tileid="98" duration="500"/>
+   <frame tileid="105" duration="500"/>
+  </animation>
  </tile>
  <tile id="91">
   <properties>

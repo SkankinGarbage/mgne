@@ -6,7 +6,7 @@
 	"stats" : {
 		"stats" : [ ],
 		"flags" : [
-			"WEAK_FIRE"
+			"RESIST_FIRE"
 		]
 	}
 }
