@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" nextobjectid="3">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level00_danger05"/>
@@ -24,12 +24,12 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object name="tele" type="Event" x="192" y="304" width="16" height="16">
+  <object id="1" name="tele" type="Event" x="192" y="304" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/herocave02.tmx', 18, 24)"/>
+    <property name="onCollide" value="teleport('world1/herocave01.tmx', 18, 24)"/>
    </properties>
   </object>
-  <object name="barrier" type="Event" x="320" y="384" width="48" height="16">
+  <object id="2" name="barrier" type="Event" x="320" y="384" width="48" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_artifactHeatgoggle')"/>
     <property name="onCollide" value="play('scaldingwater.lua')"/>
