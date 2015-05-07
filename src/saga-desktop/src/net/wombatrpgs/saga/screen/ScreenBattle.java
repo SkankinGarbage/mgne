@@ -982,8 +982,8 @@ public class ScreenBattle extends SagaScreen {
 	 * @param	onHover			The callback for when the cursor moves
 	 * @param	onSelection		The callback for when the cursor selects
 	 */
-	public void selectMeatEater(int selected, SelectionListener onHover,
-			final SelectionListener onSelection) {
+	public void selectMeatEater(final int selected,
+			final SelectionListener onHover, final SelectionListener onSelection) {
 		miniInserts.setHoverListener(onHover);
 		showMeatMessage = true;
 		if (containsChild(text)) {
@@ -1003,6 +1003,8 @@ public class ScreenBattle extends SagaScreen {
 				if (close) {
 					removeChild(miniInserts);
 					showMeatMessage = false;
+				} else {
+					selectMeatEater(selected, onHover, onSelection);
 				}
 			}
 		});
