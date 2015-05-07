@@ -36,7 +36,7 @@ public class ScreenShop extends SagaScreen {
 	protected static final int ITEMS_EDGE_PADDING = 12;
 	protected static final int ITEMS_LIST_PADDING = 3;
 	protected static final int ITEMS_PRICE_WIDTH = 56;
-	protected static final int HEADER_HEIGHT = 24;
+	protected static final int HEADER_HEIGHT = 32;
 	protected static final int HEADER_MARGINS = 8;
 	protected static final int GP_WIDTH = 90;
 	protected static final int GP_HEIGHT = 24;
@@ -146,10 +146,10 @@ public class ScreenShop extends SagaScreen {
 		
 		headerFormat = new TextFormat();
 		headerFormat.align = HAlignment.LEFT;
-		headerFormat.width = ITEMS_WIDTH * 2 -  shopBG.getBorderWidth();
+		headerFormat.width = ITEMS_WIDTH * 2 - shopBG.getBorderWidth() * 3 - ITEMS_PRICE_WIDTH;
 		headerFormat.height = HEADER_HEIGHT;
 		headerFormat.x = (int) headerX + HEADER_MARGINS + headerBG.getBorderWidth() - 3;
-		headerFormat.y = (int) headerY + HEADER_MARGINS + headerBG.getBorderHeight() + 3;
+		headerFormat.y = (int) headerY + HEADER_MARGINS + headerBG.getBorderHeight() + 11;
 		headerString = "Welcome.";
 		
 		gpFormat = new TextFormat();

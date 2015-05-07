@@ -31,7 +31,6 @@
   </object>
   <object id="2" name="barrier" type="Event" x="320" y="384" width="48" height="16">
    <properties>
-    <property name="hide" value="return hasItem('key_artifactHeatgoggle')"/>
     <property name="onCollide" value="play('scaldingwater.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>

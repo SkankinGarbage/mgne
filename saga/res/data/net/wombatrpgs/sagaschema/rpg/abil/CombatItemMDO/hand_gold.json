@@ -7,14 +7,14 @@
 	"itemDescription" : "Increases defense by 3",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 150,
+	"cost" : 175,
 	"anim" : "None",
 	"equip" : [
 		"GAUNTLET"
 	],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
-		"key" : "anon_CombatItemMDO_-912754437"
+		"key" : "anon_CombatItemMDO_-667283718"
 	},
 	"tier" : 2,
 	"robostats" : {

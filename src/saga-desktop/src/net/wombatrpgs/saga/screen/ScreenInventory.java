@@ -35,7 +35,7 @@ public class ScreenInventory extends SagaScreen implements TargetSelectable {
 	protected static final int INSERTS_PADDING_X = 3;
 	protected static final int COLLECTION_WIDTH = 92;
 	protected static final int COLLECTION_PADDING = 3;
-	protected static final int DESCRIPTION_HEIGHT = 28;
+	protected static final int DESCRIPTION_HEIGHT = 36;
 	
 	protected Inventory inventory;
 	protected ItemSelector items;

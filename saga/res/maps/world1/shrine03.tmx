@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="21">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
   <property name="encounter" value="encounterset_level00_danger03"/>
@@ -261,44 +261,44 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object name="chest" type="Chest" x="336" y="112" width="16" height="16">
+  <object id="1" name="chest" type="Chest" x="336" y="112" width="16" height="16">
    <properties>
     <property name="item" value="pot_potion"/>
    </properties>
   </object>
-  <object name="exit" type="Event" x="256" y="272" width="16" height="16">
+  <object id="2" name="exit" type="Event" x="256" y="272" width="16" height="16">
    <properties>
     <property name="id" value="exit"/>
     <property name="onCollide" value="teleport('world1/shrine02.tmx', 16, 20)"/>
    </properties>
   </object>
-  <object name="door tele" type="Event" x="256" y="416" width="16" height="16">
+  <object id="3" name="door tele" type="Event" x="256" y="416" width="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_shrineKey')"/>
     <property name="onCollide" value="speak('It\'s locked.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object name="chest" type="Chest" x="176" y="112" width="16" height="16">
+  <object id="4" name="chest" type="Chest" x="176" y="112" width="16" height="16">
    <properties>
     <property name="item" value="item_agi24"/>
    </properties>
   </object>
-  <object name="room" type="Ceiling" x="64" y="304">
+  <object id="5" name="room" type="Ceiling" x="64" y="304">
    <properties>
     <property name="roofID" value="3"/>
     <property name="roofTileset" value="lower"/>
    </properties>
    <polygon points="256,-144 320,-144 320,-240 256,-240"/>
   </object>
-  <object name="room" type="Ceiling" x="-112" y="304">
+  <object id="6" name="room" type="Ceiling" x="-112" y="304">
    <properties>
     <property name="roofID" value="3"/>
     <property name="roofTileset" value="lower"/>
    </properties>
    <polygon points="256,-144 320,-144 320,-240 256,-240"/>
   </object>
-  <object name="shrineboss" type="Event" x="240" y="384" width="16" height="16">
+  <object id="7" name="shrineboss" type="Event" x="240" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="face" value="WEST"/>
@@ -306,7 +306,7 @@
     <property name="onInteract" value="play('shrineboss.lua')"/>
    </properties>
   </object>
-  <object name="shrineboss" type="Event" x="272" y="384" width="16" height="16">
+  <object id="8" name="shrineboss" type="Event" x="272" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
     <property name="face" value="EAST"/>
@@ -314,7 +314,7 @@
     <property name="onInteract" value="play('shrineboss.lua')"/>
    </properties>
   </object>
-  <object name="shrineboss" type="Event" x="256" y="368" width="16" height="16">
+  <object id="9" name="shrineboss" type="Event" x="256" y="368" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="SOUTH"/>
@@ -322,67 +322,67 @@
     <property name="onInteract" value="play('shrineboss.lua')"/>
    </properties>
   </object>
-  <object name="chest" type="Chest" x="256" y="352" width="16" height="16">
+  <object id="10" name="chest" type="Chest" x="256" y="352" width="16" height="16">
    <properties>
     <property name="item" value="key_shrineKey"/>
     <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
-  <object name="chest" type="Chest" x="240" y="352" width="16" height="16">
+  <object id="11" name="chest" type="Chest" x="240" y="352" width="16" height="16">
    <properties>
     <property name="item" value="key_artifactScuba"/>
     <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
-  <object name="chest" type="Chest" x="272" y="352" width="16" height="16">
+  <object id="12" name="chest" type="Chest" x="272" y="352" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('shrine_done')"/>
    </properties>
   </object>
-  <object name="trigger" type="Event" x="256" y="176" width="16" height="16">
+  <object id="13" name="trigger" type="Event" x="256" y="176" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('david01')"/>
     <property name="onCollide" value="play('david01.lua')"/>
    </properties>
   </object>
-  <object name="david" type="Character" x="256" y="112" width="16" height="16">
+  <object id="14" name="david" type="Character" x="256" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_david"/>
     <property name="hide" value="return getSwitch('shrine_done')"/>
     <property name="onInteract" value="play('david02.lua')"/>
    </properties>
   </object>
-  <object name="borg" type="Character" x="256" y="144" width="16" height="16">
+  <object id="15" name="borg" type="Character" x="256" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return not getSwitch('borg_leaves_shrine')"/>
    </properties>
   </object>
-  <object name="door" type="Door" x="176" y="176" width="16" height="16">
+  <object id="16" name="door" type="Door" x="176" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_shrineKey"/>
    </properties>
   </object>
-  <object name="door" type="Event" x="256" y="432" width="16" height="16">
+  <object id="17" name="door" type="Event" x="256" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/shrine01.tmx', 23, 20)"/>
    </properties>
   </object>
-  <object name="door" type="Door" x="256" y="160" width="16" height="16">
+  <object id="18" name="door" type="Door" x="256" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_shrineKey"/>
    </properties>
   </object>
-  <object name="door" type="Door" x="336" y="176" width="16" height="16">
+  <object id="19" name="door" type="Door" x="336" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_shrineKey"/>
    </properties>
   </object>
-  <object name="chest" type="Chest" x="272" y="352" width="16" height="16">
+  <object id="20" name="chest" type="Chest" x="272" y="352" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('shrine_done')"/>
     <property name="item" value="key_artifactRadio"/>

@@ -13,7 +13,6 @@
 		"helm_bronze",
 		"body_bronze",
 		"spell_fire",
-		"spell_ice",
-		"spell_cure"
+		"spell_ice"
 	]
 }

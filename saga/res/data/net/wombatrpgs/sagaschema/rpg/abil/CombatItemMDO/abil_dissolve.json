@@ -8,7 +8,7 @@
 	"type" : "ABILITY",
 	"uses" : 15,
 	"cost" : 0,
-	"anim" : "banim_particle_gas",
+	"anim" : "banim_gas",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",

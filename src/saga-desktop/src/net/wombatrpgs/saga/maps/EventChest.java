@@ -107,6 +107,15 @@ public class EventChest extends MapEvent {
 	}
 
 	/**
+	 * @see net.wombatrpgs.mgne.maps.events.MapEvent#update(float)
+	 */
+	@Override
+	public void update(float elapsed) {
+		super.update(elapsed);
+		setAppearance();
+	}
+
+	/**
 	 * Sets appearance based on switch status.
 	 */
 	protected void setAppearance() {

@@ -7,14 +7,14 @@
 	"itemDescription" : "Increases defense by 8",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 175,
+	"cost" : 225,
 	"anim" : "None",
 	"equip" : [
 		"ARMOR"
 	],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
-		"key" : "anon_CombatItemMDO_-822075065"
+		"key" : "anon_CombatItemMDO_1762961332"
 	},
 	"tier" : 2,
 	"robostats" : {
