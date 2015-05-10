@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" nextobjectid="14">
+ <properties>
+  <property name="bgm" value="no_change"/>
+  <property name="name" value="Cave of Hero"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="40" height="40" opacity="0.9">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2UPQ7DIAxGiXKCbKETvU0O0/vPXWzpqxvMP2Hw8BQgWDws7N05txuGYRiG8ccb2Ahce8JD4gn247kWg/fp7efdr0MgLoLncq9klF8APHhJvNgrGeW3AZg3ifbvmuSnnZ9iFT+OO+j7IlL1M8uP6+jMcHrCL4h4raYRzeeu135gXPrWYvWvkeOH9zlg3OLXox6wfzAnjFfxa+kfK/jF3qJcr/ErqXWNVL5q+8bqfrl9KEaOe2lfQ0IjOX53cT3qo1f+Z7nU5v9JP8MwDGMMXwIyx7kAGQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="40" height="40">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OuwkAIQADUKcWrJzAHRzAIe2tFO78wHtNmkASAgDAd+rpAw+LQ94mDwmsSYf322Sv/PoCAAD26fZhsccAGQAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="3" name="npc" type="Character" x="512" y="224" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="EAST"/>
+    <property name="onInteract" value="speak(&quot;Beware! Monsters lurk outside the castle walls.&quot;)"/>
+   </properties>
+  </object>
+  <object id="5" name="inn" type="Character" x="240" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onInteract" value="inn()"/>
+   </properties>
+  </object>
+  <object id="6" name="npc" type="Character" x="128" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="WEST"/>
+    <property name="onInteract" value="speak(&quot;The Oracle's Shrine lies at the end of this road. They say a seer once lived there.&quot;)"/>
+   </properties>
+  </object>
+  <object id="8" name="npc" type="Character" x="320" y="224" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak(&quot;The Gates of Hero lie at the end of this road.&quot;)"/>
+   </properties>
+  </object>
+  <object id="9" name="npc" type="Character" x="288" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak(&quot;This castle is built into the city walls. Before sages sealed the city, there was an entrance here.&quot;)"/>
+   </properties>
+  </object>
+  <object id="10" name="npc" type="Character" x="288" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak(&quot;This castle is built into the city walls. Before sages sealed the city, there was an entrance here.&quot;)"/>
+   </properties>
+  </object>
+  <object id="11" name="npc" type="Character" x="352" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak(&quot;The knights used to be reinforced by wanderers from the outside.&quot;)"/>
+   </properties>
+  </object>
+  <object id="12" name="tele" type="Event" x="192" y="320" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/fortress_f2.tmx', 1, 5)"/>
+   </properties>
+  </object>
+  <object id="13" name="tele" type="Event" x="448" y="288" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 13, 11)"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="40" height="40">
+  <properties>
+   <property name="z" value="1.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAAAAwJcBSxPzAQAZAAA=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,18 @@
+{
+	"key" : "shop_hero",
+	"subfolder" : "world1",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordLong",
+		"wpn_bowLong",
+		"wpn_whip",
+		"wpn_axeBattle",
+		"spell_fire",
+		"wpn_gunMusket",
+		"body_gold",
+		"hand_gold",
+		"helm_gold",
+		"shield_gold"
+	]
+}
