@@ -10,7 +10,10 @@
 	"cost" : 160,
 	"anim" : "banim_slash",
 	"equip" : [ ],
-	"warhead" : null,
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_138032182"
+	},
 	"tier" : 2,
 	"robostats" : {
 		"stats" : [

@@ -60,7 +60,7 @@
   </object>
   <object id="6" name="tele" type="Event" x="208" y="160" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 33, 17)"/>
+    <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 33, 13)"/>
    </properties>
   </object>
  </objectgroup>

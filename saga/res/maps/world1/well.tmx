@@ -55,7 +55,7 @@
   </object>
   <object id="6" name="chest" type="Chest" x="304" y="128" width="16" height="16">
    <properties>
-    <property name="item" value="body_gold"/>
+    <property name="item" value="helm_bronze"/>
    </properties>
   </object>
   <object id="7" name="chest" type="Chest" x="240" y="128" width="16" height="16">
