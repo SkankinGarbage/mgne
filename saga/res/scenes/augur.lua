@@ -8,8 +8,6 @@ speak("Augur", "That's not important. You ask too many questions.")
 speak("David", "Look out!")
 
 battle('party_bossHero', false)
-
-speak("Augur", "This world is ancient, pathetic, backwards, yet...")
 sceneSwitch('augur_dead', true)
 
 speak("David", "Thanks again for your help.")

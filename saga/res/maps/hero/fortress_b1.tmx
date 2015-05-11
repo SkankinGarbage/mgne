@@ -2,7 +2,7 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="18" tilewidth="16" tileheight="16" nextobjectid="7">
  <properties>
   <property name="bgm" value="no_change"/>
-  <property name="name" value="Cave of Hero"/>
+  <property name="name" value="Castle of Hero"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="113" source="../tilesets/upper.tsx"/>
@@ -35,14 +35,14 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="EAST"/>
-    <property name="onInteract" value="speak(&quot;Do the people outside still believe that silly story about the three artifacts?&quot;)"/>
+    <property name="onInteract" value="speak('Do the people outside still believe that story about the three artifacts?')"/>
    </properties>
   </object>
   <object id="3" name="knight" type="Character" x="176" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="WEST"/>
-    <property name="onInteract" value="speak(&quot;The Knights of Hero have held this fortress since the city was sealed.&quot;)"/>
+    <property name="onInteract" value="speak('The Knights of Hero have held this fortress since the city was sealed.')"/>
    </properties>
   </object>
   <object id="4" name="gm" type="Character" x="112" y="144" width="16" height="16">
@@ -50,7 +50,7 @@
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return not getSwitch('spoke_grandmaster01')"/>
-    <property name="onInteract" value="speak(&quot;There have been reports of a similar enemy hiding in the Oracle's Shrine east of the castle. Any help is welcome.&quot;)"/>
+    <property name="onInteract" value="speak('There have been reports of a similar enemy hiding in the Oracle\'s Palace east of the castle. Any help is welcome.')"/>
    </properties>
   </object>
   <object id="5" name="tele" type="Event" x="16" y="96" width="16" height="16">
@@ -60,7 +60,7 @@
   </object>
   <object id="6" name="tele" type="Event" x="208" y="160" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 28, 17)"/>
+    <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 33, 17)"/>
    </properties>
   </object>
  </objectgroup>

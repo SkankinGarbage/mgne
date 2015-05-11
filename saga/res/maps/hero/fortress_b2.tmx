@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" nextobjectid="5">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" nextobjectid="6">
  <properties>
-  <property name="bgm" value="no_change"/>
-  <property name="name" value="Cave of Hero"/>
+  <property name="bgm" value="ffl3_town"/>
+  <property name="name" value="Castle of Hero"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="113" source="../tilesets/upper.tsx"/>
@@ -36,14 +36,14 @@
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="EAST"/>
     <property name="hide" value="return (not getSwitch('entry_knight'))"/>
-    <property name="onInteract" value="speak(&quot;Please adventurer, pass and speak to the grandmaster.&quot;)"/>
+    <property name="onInteract" value="speak('Please, pass and speak to the grandmaster.')"/>
    </properties>
   </object>
   <object id="3" name="knight" type="Character" x="304" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="speak(&quot;Welcome to Hero, adventurer. This entrance is kept by the Knights of Hero, but none have passed in years.&quot;)"/>
+    <property name="onInteract" value="speak('Welcome to Hero, stranger. This entrance is kept by the Knights of Hero, but none have passed in years.')"/>
    </properties>
   </object>
   <object id="4" name="tele" type="Event" x="240" y="224" width="16" height="16">

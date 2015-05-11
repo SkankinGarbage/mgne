@@ -7,7 +7,7 @@
 	"itemDescription" : "Stuns with fixed damage aimed by agility (tier 1)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 88,
+	"cost" : 220,
 	"anim" : "banim_slash_agi",
 	"equip" : [ ],
 	"warhead" : {

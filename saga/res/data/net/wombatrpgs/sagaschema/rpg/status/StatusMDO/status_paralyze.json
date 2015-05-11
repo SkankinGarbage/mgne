@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"fullName" : "PARALYZED",
-	"tag" : "PLYZ",
+	"tag" : "PARA",
 	"inflictString" : " is paralyzed",
 	"healString" : " is rid of paralysis",
 	"priority" : 30,

@@ -7,7 +7,7 @@
 	"itemDescription" : "Attacks with weapon damage (tier 3)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 420,
+	"cost" : 482,
 	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {

@@ -34,7 +34,7 @@ public class ScreenTitle extends SagaScreen {
 	
 	protected static final String STRING_BEGIN = "START";
 	protected static final String STRING_CONTINUE = "CONTINUE";
-	protected static final String BGM_NAME = "ffl3_title";
+	protected static final String BGM_NAME = "ffl1_title";
 	
 	protected IntroSettingsMDO intro;
 	protected Graphic bg;

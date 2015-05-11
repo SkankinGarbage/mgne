@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"fullName" : "POISONED",
-	"tag" : "PSN",
+	"tag" : "POIS",
 	"inflictString" : " is poisoned",
 	"healString" : " is rid of poison",
 	"priority" : 10,

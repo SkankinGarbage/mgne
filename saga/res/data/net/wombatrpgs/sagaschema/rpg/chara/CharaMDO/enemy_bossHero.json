@@ -11,7 +11,7 @@
 	"portrait" : "battle_portraits/psi.png",
 	"meatEatLevel" : 3,
 	"meatTargetLevel" : 3,
-	"gp" : 1000,
+	"gp" : 240,
 	"loot" : "spell_fire",
 	"equipped" : [
 		"wpn_swordSilver",

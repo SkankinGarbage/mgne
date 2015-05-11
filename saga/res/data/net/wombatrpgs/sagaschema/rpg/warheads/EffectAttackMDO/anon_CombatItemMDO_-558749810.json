@@ -1,14 +1,14 @@
 {
-	"key" : "anon_CombatItemMDO_-1465126635",
+	"key" : "anon_CombatItemMDO_-558749810",
 	"subfolder" : "",
-	"name" : "anon_CombatItemMDO_-1465126635",
+	"name" : "anon_CombatItemMDO_-558749810",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "WEAPON",
 	"sideEffects" : [ ],
 	"slayerFlags" : [ ],
-	"power" : 5,
-	"attackStat" : "AGI",
+	"power" : 3,
+	"attackStat" : "STR",
 	"defendStat" : "DEF",
 	"miss" : "CAN_MISS"
 }

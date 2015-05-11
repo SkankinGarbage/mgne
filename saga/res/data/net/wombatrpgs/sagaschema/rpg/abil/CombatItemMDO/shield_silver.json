@@ -7,7 +7,7 @@
 	"itemDescription" : "Raises chance to dodge significantly",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 500,
+	"cost" : 330,
 	"anim" : "banim_defend",
 	"equip" : [ ],
 	"warhead" : {

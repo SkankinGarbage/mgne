@@ -7,7 +7,7 @@
 	"itemDescription" : "Heals by 50",
 	"type" : "ITEM",
 	"uses" : 3,
-	"cost" : 30,
+	"cost" : 40,
 	"anim" : "banim_cure",
 	"equip" : [ ],
 	"warhead" : {

@@ -7,13 +7,10 @@
 	"itemDescription" : "Inflicts weapon damage (tier 2)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 120,
+	"cost" : 160,
 	"anim" : "banim_slash",
 	"equip" : [ ],
-	"warhead" : {
-		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_-2009499444"
-	},
+	"warhead" : null,
 	"tier" : 2,
 	"robostats" : {
 		"stats" : [
