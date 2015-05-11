@@ -12,7 +12,7 @@
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
-		"key" : "anon_CombatItemMDO_549308896"
+		"key" : "anon_CombatItemMDO_-2116491593"
 	},
 	"tier" : 3,
 	"robostats" : {

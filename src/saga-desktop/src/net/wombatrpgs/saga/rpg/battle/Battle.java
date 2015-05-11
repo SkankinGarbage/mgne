@@ -285,7 +285,7 @@ public class Battle extends AssetQueuer implements Disposable {
 				String line4;
 				CharaMDO result = selected.predictEat(meatDropper);
 				String species = selected.getSpecies();
-				if (result == null || result.species.equals(species)) {
+				if (result == null || result.species.equals(species) || selected.isDead()) {
 					line4 = sp + "Nothing happens.";
 				} else {
 					line4 = sp + "to " + result.species;
@@ -297,11 +297,10 @@ public class Battle extends AssetQueuer implements Disposable {
 			}
 		}, new SelectionListener() {
 			@Override public boolean onSelection(Chara selected) {
-				if (selected == null) {
+				if (selected == null || selected.isDead()) {
 					onEatCancel();
 					return true;
 				}
-				if (selected.isDead()) return false;
 				
 				String eatername = selected.getName();
 				String oldSpecies = selected.getSpecies();
