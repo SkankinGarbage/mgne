@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="43" tilewidth="16" tileheight="16" nextobjectid="32">
+ <properties>
+  <property name="bgm" value="ffl3_dungeon"/>
+  <property name="encounter" value="encounterset_level01_danger00"/>
+  <property name="name" value="Oracle's Palace"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="41" height="43" opacity="0.9">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XMQ6DMAxF3bB2qbr0KMxM3P9EFQMCWT8mDrHN4OGpKtJHT8Y4ZiKi6SYvY+76pWM6pmM6WjouAtL9e3O9jm9Ai2MtN+IZcscvQKrTcpGzcFwBvD4FXEM5S8dzfVZQnwKuoZynI6cIdfN0nDsdZ/Jx3PrrQ0eflQZQztJx668fHX22OZxnDfqPcp7vdauj13vN0Tii/GhHdE5o+hGdN6Md0TmhrSO/x2jHWn9qHD2cnt6PqJ+08zFi79HOx6i9Z3fiv1HzEe0GPf0Y4dg6H5+y99SI3Htaidx70NxDczRy70FzE53rUXvPDvrua/luHO0o1coi14NUK4tckiRJcs0f/6M2aYwbAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="41" height="43">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3SoQ0AIBAEQbomwaLoGjp4BMl/yIxbd+JaAwBeGtkDLszsAXD0oCtYQfMPf6QSfwQAgL9sFIeTR4wbAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="15" name="tele" type="Event" x="320" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 57, 18)"/>
+   </properties>
+  </object>
+  <object id="20" name="tele" type="Event" x="208" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/oracle_f2.tmx', 3, 4)"/>
+   </properties>
+  </object>
+  <object id="21" name="tele" type="Event" x="432" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/oracle_f2.tmx', 17, 4)"/>
+   </properties>
+  </object>
+  <object id="22" name="tele" type="Event" x="208" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/oracle_f2.tmx', 3, 18)"/>
+   </properties>
+  </object>
+  <object id="23" name="tele" type="Event" x="432" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/oracle_f2.tmx', 17, 18)"/>
+   </properties>
+  </object>
+  <object id="26" name="room" type="Ceiling" x="384" y="160">
+   <properties>
+    <property name="roofID" value="65"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="96,-16 96,128 48,128 48,80 32,80 32,-16"/>
+  </object>
+  <object id="28" name="room" type="Ceiling" x="160" y="384">
+   <properties>
+    <property name="roofID" value="65"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,128 16,-16 64,-16 64,32 80,32 80,96 96,96 96,128"/>
+  </object>
+  <object id="29" name="room" type="Ceiling" x="144" y="160">
+   <properties>
+    <property name="roofID" value="65"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="32,-16 32,128 80,128 80,80 96,80 96,-16"/>
+  </object>
+  <object id="31" name="room" type="Ceiling" x="384" y="384">
+   <properties>
+    <property name="roofID" value="65"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="96,128 96,-16 48,-16 48,32 32,32 32,96 16,96 16,128"/>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="41" height="43">
+  <properties>
+   <property name="z" value="1.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQo/oAAAAAAAAICHAZdINoaMGwAA
+  </data>
+ </layer>
+</map>

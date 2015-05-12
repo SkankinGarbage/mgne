@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="9" height="14" tilewidth="16" tileheight="16" nextobjectid="21">
+ <properties>
+  <property name="bgm" value="ffl3_dungeon"/>
+  <property name="encounter" value="encounterset_level01_danger00"/>
+  <property name="name" value="Oracle's Palace"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="9" height="14" opacity="0.9">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC3NiYGBwIgLz4MEwNcJ4MEwNIxR7IGGYGLIaJjQ1TENEDYgtCKWxqYHxJbCIURoPMIwvHmAYAHIGzJL4AQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="9" height="14">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGDiwBYd4ORJ7Lw7xThx6cYnjAuVEiFPLrsEEABfdAMf4AQAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="20" name="tele" type="Event" x="64" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/oracle_f2.tmx', 10, 8)"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="9" height="14">
+  <properties>
+   <property name="z" value="1.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAUjEQAA3/DpEfgBAAA=
+  </data>
+ </layer>
+</map>

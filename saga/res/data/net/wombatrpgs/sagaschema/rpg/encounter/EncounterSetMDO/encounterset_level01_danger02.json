@@ -41,12 +41,12 @@
 			"weight" : 4
 		},
 		{
-			"encounter" : "encounter_lvl01_NIX2-3_VERMIN0-1",
-			"weight" : 2
+			"encounter" : "encounter_lvl01_PUPPET",
+			"weight" : 8
 		},
 		{
-			"encounter" : "encounter_lvl01_ASP2-3_VERMIN0-1",
-			"weight" : 2
+			"encounter" : "encounter_lvl01_FAUN",
+			"weight" : 8
 		}
 	],
 	"steps" : 42
