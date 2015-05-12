@@ -277,7 +277,7 @@
   </object>
   <object id="2" name="tele" type="Event" x="160" y="640" width="448" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 19, 44)"/>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 44)"/>
    </properties>
   </object>
   <object id="3" name="door" type="Event" x="368" y="304" width="16" height="16">

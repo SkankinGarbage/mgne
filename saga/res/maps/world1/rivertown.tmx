@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="16" tileheight="16" nextobjectid="20">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="River Town"/>
@@ -534,12 +534,7 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object type="Event" x="160" y="656" width="448" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 19, 31)"/>
-   </properties>
-  </object>
-  <object name="NPC" type="Character" x="576" y="336" width="16" height="16">
+  <object id="2" name="NPC" type="Character" x="576" y="336" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
@@ -547,24 +542,24 @@
     <property name="onInteract" value="speak('Are you planning a trip across the bridge? Monsters are much more vicious east of the river.')"/>
    </properties>
   </object>
-  <object type="Event" x="160" y="128" width="16" height="528">
+  <object id="3" type="Event" x="160" y="128" width="16" height="528">
    <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 19, 31)"/>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 31)"/>
    </properties>
   </object>
-  <object type="Event" x="160" y="112" width="448" height="16">
+  <object id="4" type="Event" x="160" y="112" width="448" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 19, 31)"/>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 31)"/>
    </properties>
   </object>
-  <object name="NPC" type="Character" x="416" y="432" width="16" height="16">
+  <object id="5" name="NPC" type="Character" x="416" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="speak('Before the portals in Hero opened, this town used to be at war with most of its neighbors.')"/>
    </properties>
   </object>
-  <object name="NPC" type="Character" x="224" y="496" width="16" height="16">
+  <object id="6" name="NPC" type="Character" x="224" y="496" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_bird"/>
     <property name="face" value="EAST"/>
@@ -572,14 +567,14 @@
     <property name="onInteract" value="speak('I tried to visit the Airseed Shrine once, but I couldn\'t find a way over the mountains.')"/>
    </properties>
   </object>
-  <object name="NPC" type="Character" x="528" y="416" width="16" height="16">
+  <object id="7" name="NPC" type="Character" x="528" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('The governor lives in this house. Be polite!')"/>
    </properties>
   </object>
-  <object name="NPC" type="Character" x="416" y="208" width="16" height="16">
+  <object id="8" name="NPC" type="Character" x="416" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="WEST"/>
@@ -587,14 +582,14 @@
     <property name="onInteract" value="speak('Welcome to the river city! It\'s a hard journey to come south over the mountains.')"/>
    </properties>
   </object>
-  <object name="NPC" type="Character" x="304" y="560" width="16" height="16">
+  <object id="9" name="NPC" type="Character" x="304" y="560" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_slime"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('A pub can be a good place to find information... or just a good drink.')"/>
    </properties>
   </object>
-  <object name="NPC" type="Character" x="432" y="608" width="16" height="16">
+  <object id="10" name="NPC" type="Character" x="432" y="608" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="WEST"/>
@@ -602,7 +597,7 @@
     <property name="onInteract" value="speak('The robots that hail from beyond Hero are amazing. They gain the power of items equipped to them.')"/>
    </properties>
   </object>
-  <object name="NPC" type="Character" x="288" y="384" width="16" height="16">
+  <object id="11" name="NPC" type="Character" x="288" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
@@ -610,14 +605,14 @@
     <property name="onInteract" value="speak('The swamps south of here can be tricky to traverse. I don\'t think any have been down that way in years.')"/>
    </properties>
   </object>
-  <object name="NPC" type="Character" x="208" y="224" width="16" height="16">
+  <object id="12" name="NPC" type="Character" x="208" y="224" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="hide" value="return getSwitch('opening_flashback')"/>
     <property name="onInteract" value="speak('Now that Hero is sealed off, this town is the most active trading hub on the continent.')"/>
    </properties>
   </object>
-  <object name="NPC" type="Character" x="544" y="272" width="16" height="16">
+  <object id="13" name="NPC" type="Character" x="544" y="272" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="WEST"/>
@@ -625,24 +620,29 @@
     <property name="onInteract" value="speak('Once in a while a shop might have a relic from Hero, but magical items are rare nowadays.')"/>
    </properties>
   </object>
-  <object type="Event" x="272" y="240" width="16" height="16">
+  <object id="14" type="Event" x="272" y="240" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/rivertown_interior.tmx', 4, 8)"/>
    </properties>
   </object>
-  <object type="Event" x="496" y="256" width="16" height="16">
+  <object id="15" type="Event" x="496" y="256" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/rivertown_interior.tmx', 30, 11)"/>
    </properties>
   </object>
-  <object type="Event" x="320" y="544" width="16" height="16">
+  <object id="16" type="Event" x="320" y="544" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/rivertown_interior.tmx', 10, 30)"/>
    </properties>
   </object>
-  <object type="Event" x="512" y="400" width="16" height="16">
+  <object id="17" type="Event" x="512" y="400" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/rivertown_interior.tmx', 28, 30)"/>
+   </properties>
+  </object>
+  <object id="19" type="Event" x="160" y="656" width="448" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 31)"/>
    </properties>
   </object>
  </objectgroup>

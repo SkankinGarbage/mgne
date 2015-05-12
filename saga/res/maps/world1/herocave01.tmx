@@ -243,7 +243,7 @@
  <objectgroup name="Object Layer 1">
   <object id="1" name="tele" type="Event" x="288" y="496" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 52, 20)"/>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 58, 20)"/>
    </properties>
   </object>
   <object id="2" name="well" type="Event" x="288" y="368" width="16" height="16">

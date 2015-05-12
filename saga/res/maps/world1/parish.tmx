@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="36" height="43" tilewidth="16" tileheight="16" nextobjectid="25">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="45" tilewidth="16" tileheight="16" nextobjectid="97">
  <properties>
   <property name="bgm" value="ffl2_hometown"/>
   <property name="name" value="Forest Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="113" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="36" height="43">
+ <layer name="Tile Layer 1" width="48" height="45">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2TQQ7CIBBFIS5M6s7EBbuyUg+gLnr/e9kmkJCf+VAotS5m8ZKWlJlX+DMYYwZFURRFUZQCZ+Bonxtw1DnYsH6feQSeK2vZhv6lc4g1XzPvwOeH54N9LaFHr7Hy+7T/HnlOfVh9KT9WuMfePqy+lB8r3ONWFwc+bF5K+emV08XHZ/qy3PTMjwO80Bf3rM1Pi1d0iEjzg2ssP3i/Lblu8WH5Sddbc+0Mz+MU3ifimWNLhpf9l0Cpz14e6HMN1NbsPeeSD86chORU6jVW+KRgxhF0S/fV/Afzkcj5oNva/5DmF2H7cpn9Nx90k55r5+7UCU+eFUVRGF94T8RoMBgAAA==
+   H4sIAAAAAAAAC+2UOw7CMBBEHVEgQYdEkS6pgAMARe5/LxLJlqxh17GJYweY4kn5+60zuwdjzIEQQgghhJAfZQ/U9knlDOT+frPSPrvvXkaulttCp1yuMfvs1rqPPCzPCv8/FvRsFGq4dYnP+75b6F/fX/OR8j+xdv+m+ms+Uv4naue/BX9tnszlv8a+O/8+4Ok/K/Vrjfy3QG/ePfGd2PyXqMM5O/C+5K/lH/NWoo8/8dfy718v1cet0ftvsOeDUleIEtn3/Y+WOa+teKP/yZLqUHtuSv44kySkGubW6lb098GeRrAW/72UunP5S4T8sZbYuqX5thRtnVCPfrs/1iId55hLuwL0yjEhhBDyr7wAgyj0KcAhAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="36" height="43">
+ <layer name="Tile Layer 2" width="48" height="45">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WSw4DIQiGuXIPMRsXzr6ruUGv2DSRhBhARVGT+iWk047CXx7O3ABwHzt2bJlFp7VWu5zW/rN51K3kU7t/OWgq9YJ2P1bsP7aH5Uj1tPqv3YvravT09BbdS7Xl4Ez9+CQD51xQbTmRXFM9VFOrNikX1B8aF1cD/VvyBWQvxqb/3wL1ZdHTG1/C0su9aHVs7ecW/y39w+nRekmrTzDErdEj1W4m3NyO0vMIv5fqiDq4/Fjn6JViBkFPINeQYuOnVCevmeaoOXtmcGXfW/S8k42E1qB0Fs4Cc1Sq2SpGz3kvO5yDqGOHWUcszypPuL5ZpQXJn12rGfnOeTjszBd2T3oyMBgAAA==
+   H4sIAAAAAAAAC+2XUQ6DIAxAufIO4Q8fzO997Qa74mJCk4ZRRGhLzfqSZjpRHrU0cQ8h7EQ8bxB39ab8V/vM+K92mfFf7fHP/jP3J6GxWv6b0FgPuZCoI26H1vXNwBrOarl1PXXc7+FRi5LaGM290TsXjOvx19wbeC68lhLoOQefHMFYrvFaShI6xv54DdJroXKN54eoebaA52u8j4DmAlec3xHwszT8Z30pNPbuLK26kvSmck75XKn/mj/nXmjVSxzw7PHnqiVNan1tlf+b+P+srsCbI/+jfeaRHSPhH9FxyK7wy+Ut1SNrcPZ+Te+tOJd0f+XgBM83WzeaecfAO5itISv09M0UfnutFc6+/bGrpdy3eifVDy3lfmRfWnE/qNW9Jb8esLeVur4C5zed4ziOQ/MF2LCoXMAhAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="friend" type="Character" x="304" y="544" width="16" height="16">
+  <object id="73" name="friend" type="Character" x="416" y="544" width="16" height="16">
    <properties>
     <property name="appearance" value="lua(return getHero(1).getSpriteName())"/>
     <property name="face" value="NORTH"/>
@@ -31,7 +31,7 @@
     <property name="onInteract" value="speak(getHero(1).getName() .. ':  You should talk to BORG and Elder before we leave.')"/>
    </properties>
   </object>
-  <object id="2" name="friend" type="Character" x="320" y="528" width="16" height="16">
+  <object id="74" name="friend" type="Character" x="432" y="528" width="16" height="16">
    <properties>
     <property name="appearance" value="lua(return getHero(2).getSpriteName())"/>
     <property name="face" value="WEST"/>
@@ -39,7 +39,7 @@
     <property name="onInteract" value="speak(getHero(2).getName() .. ':  ' .. getHero(0).getName() .. ', aren\'t you ready to go yet?')"/>
    </properties>
   </object>
-  <object id="3" name="friend" type="Character" x="320" y="512" width="16" height="16">
+  <object id="75" name="friend" type="Character" x="432" y="512" width="16" height="16">
    <properties>
     <property name="appearance" value="lua(return getHero(3).getSpriteName())"/>
     <property name="face" value="WEST"/>
@@ -47,54 +47,54 @@
     <property name="onInteract" value="speak(getHero(3).getName() .. ':  We\'ll wait for you here. Say your goodbyes, the journey starts today!')"/>
    </properties>
   </object>
-  <object id="4" name="past_borg" type="Character" x="304" y="416" width="16" height="16">
+  <object id="76" name="past_borg" type="Character" x="416" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="hide" value="return not getSwitch('opening_flashback')"/>
    </properties>
   </object>
-  <object id="5" name="elder" type="Character" x="320" y="416" width="16" height="16">
+  <object id="77" name="elder" type="Character" x="432" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="hide" value="return not getSwitch('opening_flashback')"/>
    </properties>
   </object>
-  <object id="6" name="clone" type="Character" x="128" y="448" width="16" height="16">
+  <object id="78" name="clone" type="Character" x="240" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="lua(return getHero(0).getSpriteName())"/>
     <property name="hide" value="return not getSwitch('opening_flashback')"/>
    </properties>
   </object>
-  <object id="7" name="jonas" type="Character" x="304" y="480" width="16" height="16">
+  <object id="79" name="jonas" type="Character" x="416" y="480" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return not getSwitch('opening_flashback')"/>
    </properties>
   </object>
-  <object id="8" name="janine" type="Character" x="320" y="480" width="16" height="16">
+  <object id="80" name="janine" type="Character" x="432" y="480" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return not getSwitch('opening_flashback')"/>
    </properties>
   </object>
-  <object id="9" type="Event" x="368" y="416" width="16" height="16">
+  <object id="81" type="Event" x="480" y="416" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/parish_interior.tmx', 24, 12)"/>
    </properties>
   </object>
-  <object id="10" type="Event" x="272" y="416" width="16" height="16">
+  <object id="82" type="Event" x="384" y="416" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/parish_interior.tmx', 24, 31)"/>
    </properties>
   </object>
-  <object id="11" type="Event" x="160" y="368" width="16" height="16">
+  <object id="83" type="Event" x="272" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/parish_interior.tmx', 3, 31)"/>
    </properties>
   </object>
-  <object id="12" name="friend3" type="Character" x="320" y="496" width="16" height="16">
+  <object id="84" name="friend3" type="Character" x="432" y="496" width="16" height="16">
    <properties>
     <property name="appearance" value="lua(return getHero(1).getSpriteName())"/>
     <property name="face" value="NORTH"/>
@@ -102,7 +102,7 @@
     <property name="onInteract" value="play('borg02.lua')"/>
    </properties>
   </object>
-  <object id="13" name="friend1" type="Character" x="304" y="480" width="16" height="16">
+  <object id="85" name="friend1" type="Character" x="416" y="480" width="16" height="16">
    <properties>
     <property name="appearance" value="lua(return getHero(2).getSpriteName())"/>
     <property name="face" value="NORTH"/>
@@ -110,7 +110,7 @@
     <property name="onInteract" value="play('borg02.lua')"/>
    </properties>
   </object>
-  <object id="14" name="friend2" type="Character" x="320" y="480" width="16" height="16">
+  <object id="86" name="friend2" type="Character" x="432" y="480" width="16" height="16">
    <properties>
     <property name="appearance" value="lua(return getHero(3).getSpriteName())"/>
     <property name="face" value="NORTH"/>
@@ -118,19 +118,19 @@
     <property name="onInteract" value="play('borg02.lua')"/>
    </properties>
   </object>
-  <object id="15" name="borg" type="Character" x="368" y="416" width="16" height="16">
+  <object id="87" name="borg" type="Character" x="480" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="hide" value="return not getSwitch('opening_borg_visible')"/>
    </properties>
   </object>
-  <object id="16" name="NPC" type="Character" x="48" y="432" width="16" height="16">
+  <object id="88" name="NPC" type="Character" x="160" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_slime"/>
     <property name="onInteract" value="speak('The tunnels outside town lead to a city on the river.')"/>
    </properties>
   </object>
-  <object id="17" name="NPC" type="Character" x="128" y="352" width="16" height="16">
+  <object id="89" name="NPC" type="Character" x="240" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="WEST"/>
@@ -138,7 +138,7 @@
     <property name="onInteract" value="speak('Elder found BORG and fixed him up, but BORG\'s memory was wiped.')"/>
    </properties>
   </object>
-  <object id="18" name="NPC" type="Character" x="160" y="464" width="16" height="16">
+  <object id="90" name="NPC" type="Character" x="272" y="464" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="NORTH"/>
@@ -147,7 +147,7 @@
     <property name="onInteract" value="speak('Nobody but Elder remembers what it was like when Hero was a center of trade instead of a monster town.')"/>
    </properties>
   </object>
-  <object id="19" name="NPC" type="Character" x="432" y="464" width="16" height="16">
+  <object id="91" name="NPC" type="Character" x="544" y="464" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
@@ -155,7 +155,7 @@
     <property name="onInteract" value="speak('There are other towns across the river, but monsters make the journey dangerous.')"/>
    </properties>
   </object>
-  <object id="20" name="NPC" type="Character" x="432" y="352" width="16" height="16">
+  <object id="92" name="NPC" type="Character" x="544" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="face" value="NORTH"/>
@@ -164,7 +164,7 @@
     <property name="onInteract" value="speak('I once visited a city to the south. You can buy all sorts of arms and armor there.')"/>
    </properties>
   </object>
-  <object id="21" name="NPC" type="Character" x="304" y="384" width="16" height="16">
+  <object id="93" name="NPC" type="Character" x="416" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="EAST"/>
@@ -173,7 +173,7 @@
     <property name="onInteract" value="speak('Friendly monsters are rare in these parts, but I hear they can be powerful allies.')"/>
    </properties>
   </object>
-  <object id="22" name="NPC" type="Character" x="240" y="304" width="16" height="16">
+  <object id="94" name="NPC" type="Character" x="352" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
@@ -182,12 +182,12 @@
     <property name="onInteract" value="speak('After Jonas and Janine left, we\'ve been counting on BORG to defend the town.')"/>
    </properties>
   </object>
-  <object id="23" name="tele" type="Event" x="304" y="560" width="32" height="16">
+  <object id="95" name="tele" type="Event" x="416" y="560" width="32" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 12, 18)"/>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 22, 10)"/>
    </properties>
   </object>
-  <object id="24" name="autostart" type="Event" x="352" y="496" width="16" height="16">
+  <object id="96" name="autostart" type="Event" x="464" y="496" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('disabled_reorder_done')"/>
     <property name="onEnter" value="sceneSwitch('disable_reorder', true); sceneSwitch('disabled_reorder_done', true)"/>
