@@ -50,7 +50,7 @@
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return not getSwitch('spoke_grandmaster01')"/>
-    <property name="onInteract" value="speak('There have been reports of a similar enemy hiding in the Oracle\'s Palace east of the castle. Any help is welcome.')"/>
+    <property name="onInteract" value="speak('There have been reports of a similar enemy hiding in the Oracle\'s Palace west of the castle. Any help is welcome.')"/>
    </properties>
   </object>
   <object id="5" name="tele" type="Event" x="16" y="96" width="16" height="16">

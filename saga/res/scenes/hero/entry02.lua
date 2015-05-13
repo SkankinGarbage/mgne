@@ -10,5 +10,5 @@ speak("Grandmaster", "But monsters have been slipping through... and some force 
 speak("Grandmaster", "Will you help us in our mission, and become knights yourselves?")
 speak("David", "You have my word!")
 speak(hero1, "I'm sorry, but we have another mission as well. I am looking for family.")
-speak("Grandmaster", "Well, you may stay in our castle. If you change your mind, there have been reports of a similar enemy hiding in the Oracle's Palace east of the castle. Any help is welcome.")
+speak("Grandmaster", "Well, you may stay in our castle. If you change your mind, there have been reports of a similar enemy hiding in the Oracle's Palace west of the castle. Any help is welcome.")
 sceneSwitch('entry_grandmaster01', true)

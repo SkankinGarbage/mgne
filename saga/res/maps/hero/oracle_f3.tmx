@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="9" height="14" tilewidth="16" tileheight="16" nextobjectid="21">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="9" height="14" tilewidth="16" tileheight="16" nextobjectid="25">
  <properties>
   <property name="bgm" value="ffl3_dungeon"/>
-  <property name="encounter" value="encounterset_level01_danger00"/>
+  <property name="encounter" value="encounterset_level01_danger01"/>
   <property name="name" value="Oracle's Palace"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
@@ -26,7 +26,27 @@
  <objectgroup name="Object Layer 1">
   <object id="20" name="tele" type="Event" x="64" y="160" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/oracle_f2.tmx', 10, 8)"/>
+    <property name="onCollide" value="teleport('hero/oracle_f2.tmx', 10, 18)"/>
+   </properties>
+  </object>
+  <object id="21" name="oracle" type="Character" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="hide" value="return getSwitch('oracle01') or getSwitch('oracle_mutate')"/>
+    <property name="onInteract" value="play('hero/oracle01.lua')"/>
+   </properties>
+  </object>
+  <object id="22" name="oracle2" type="Character" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="hide" value="return not getSwitch('oracle01')"/>
+    <property name="onInteract" value="speak('Oracle', 'One can pass the gates through the shrine east of here.')"/>
+   </properties>
+  </object>
+  <object id="23" name="mutant" type="Character" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_janine"/>
+    <property name="hide" value="return not getSwitch('oracle_mutate')"/>
    </properties>
   </object>
  </objectgroup>

@@ -185,6 +185,16 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="65">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="66">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
  <tile id="70">
   <properties>
    <property name="x" value=""/>

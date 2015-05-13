@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="40" tilewidth="16" tileheight="16" nextobjectid="11">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="40" tilewidth="16" tileheight="16" nextobjectid="12">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="name" value="Stronghold"/>
@@ -77,6 +77,11 @@
   <object id="10" name="chest" type="Chest" x="256" y="112" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_air"/>
+   </properties>
+  </object>
+  <object id="11" name="chest" type="Chest" x="176" y="128" width="16" height="16">
+   <properties>
+    <property name="item" value="item_hp200"/>
    </properties>
   </object>
  </objectgroup>

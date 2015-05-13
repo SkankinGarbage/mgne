@@ -1,0 +1,31 @@
+local hero1 = getHero(0).getName()
+local hero2 = getHero(3).getName()
+
+speak("David", "This must be our enemy!")
+speak("????", "Enemy?")
+speak(hero2, "Who are you?")
+speak("Oracle", "I am the Oracle. Why do you disturb me?")
+speak("David", "You are an enemy of Hero! We are here to slay you!")
+speak("Oracle", "Hm... are you maybe looking for this woman?")
+
+face('oracle', 'EAST')
+wait(0.075)
+face('oracle', 'NORTH')
+wait(0.075)
+face('oracle', 'WEST')
+wait(0.075)
+face('oracle', 'SOUTH')
+sceneSwitch('oracle_mutate', true)
+wait(1.0)
+
+speak(hero1, "Janine!")
+wait(.5)
+sceneSwitch('oracle_mutate', false)
+
+speak("Oracle", "Interesting... I happen to know that she has passed beyond the gates.")
+speak(hero2, "How do we find her?")
+speak("Oracle", "One can pass the gates through the shrine east of here. Break the mirror held there, and you will be able to cross through.")
+speak(hero1, "Thank you for your help.")
+speak("David", "...")
+
+sceneSwitch('oracle01', true)
