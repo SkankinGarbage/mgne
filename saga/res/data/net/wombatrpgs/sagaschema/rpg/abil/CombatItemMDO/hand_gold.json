@@ -7,7 +7,7 @@
 	"itemDescription" : "Increases defense by 3",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 175,
+	"cost" : 225,
 	"anim" : "None",
 	"equip" : [
 		"GAUNTLET"
