@@ -82,4 +82,12 @@
    H4sIAAAAAAAAC2NgGAWjYBQMRsCDhqlhhjAaJgdQw4xRMApGAfEAPR9TWi6AAHo+JjZPk+sWfPrIdQs+fQCK371g3AgAAA==
   </data>
  </layer>
+ <layer name="Tile Layer 4" width="21" height="27">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgoC2YSmd9o2AUDDdAaV4YzUuoYDQ8R8FQBOjpbjCkw8FcvwMAQdsQ5dwIAAA=
+  </data>
+ </layer>
 </map>

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="36" tilewidth="16" tileheight="16" nextobjectid="21">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" nextobjectid="21">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="Castle of Hero"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="113" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="50" height="36" opacity="0.9">
+ <layer name="Tile Layer 1" width="60" height="40" opacity="0.9">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WOw7DIAxAg3KCbEkneouu2XL/E3UBybXwFyiJxPBUhwbwsxPadVmWdTKZTCaP5w0ICTg2Oj8uX8yRyB75mpsDvUd5HMtvrjFxJfI1vhcz2iMCDpA/5kD3YkZ7BADsA4b77rqZB5enxNM88rwtfb4S0jlQYqRHPg92Z+538YhoPneGSVjzLv2mfUBsfReo886K1wPWYgNxjUeowOsBa7GDuKfHmSjFXo+ac9XicSrp5UG9K3hc249TiKlzrAVS/TGaHlDP1x09OBfKo+bMptA4cv9zqeeKI3ZA41GaV8od1z8wcWs0PaupPfW8WdaUxoOyZ9x+lAvXj1a+VjR7WfbW5l8at3hb1/8X3rpQNfCuZelZTT+9faD2CETcujdSnVp5ts67ZY88e1nx7NejPlKsyb93n7WepdhSI8lbW9cefAEdvricIBwAAA==
+   H4sIAAAAAAAAC+2aUQrDIAyGHT3F3rzCXneCnaD3P8oorCBi07hEk6Z/4YOCTfWrsRhwSSktN2G7HjcBvrGBb2y0fF+TgS98NX2psTwH4dU3D8Kr72cQlr5UrkXzbeVs5PXbmsPI67e1XjXG0tPvTN86x8583wyo5619cwHHdz15X92+Htx72F/BV8e3JLov1ddVfKl/VTRfKR7qI8pXu4bT/KbwhS9nLJz9vmYf1r6ZQT0vnJwo9+iefLn167+xe7wH3x4ksRv5h5Vvb80uiZXMq5Zv7kQSW8db+F4N+MYGvrGBb2x2X+szQrPPI30B8/iKMoAlAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="50" height="36">
+ <layer name="Tile Layer 2" width="60" height="40">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OoQ3AIBRF0T81CaoTsEMHYEhcBYYvaEjTc8wzT9wIAGCX+3QAjzLtV13TAv9UTwck9eSvvVoBAADAygAJNySVIBwAAA==
+   H4sIAAAAAAAAC+3WsQkAIAwEQGe2dRwXdQJBQdToXZkihPDFpwQAEE8enM3uuFUZnM3uYJ9IeVthZd78jlNkD/hBPX0A8L1e53q1i/U6ly4GAACxNUrF8RCAJQAA
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
+ <objectgroup name="Object Layer 1" visible="0">
   <object id="3" name="npc" type="Character" x="592" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
@@ -118,12 +118,12 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="50" height="36">
+ <layer name="Tile Layer 3" width="60" height="40">
   <properties>
    <property name="z" value="1.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BAQEAAACCIP+vbkhAAQAAAAAAAC8GEkQVBiAcAAA=
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQdvoAAAAAAAAAAAAHgMMYCaUYAlAAA=
   </data>
  </layer>
 </map>
