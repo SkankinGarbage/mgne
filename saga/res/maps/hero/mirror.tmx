@@ -1,129 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="40" tilewidth="16" tileheight="16" nextobjectid="21">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="52" tilewidth="16" tileheight="16" nextobjectid="30">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="Castle of Hero"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="113" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="60" height="40" opacity="0.9">
+ <layer name="Tile Layer 1" width="64" height="52">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2aUQrDIAyGHT3F3rzCXneCnaD3P8oorCBi07hEk6Z/4YOCTfWrsRhwSSktN2G7HjcBvrGBb2y0fF+TgS98NX2psTwH4dU3D8Kr72cQlr5UrkXzbeVs5PXbmsPI67e1XjXG0tPvTN86x8583wyo5619cwHHdz15X92+Htx72F/BV8e3JLov1ddVfKl/VTRfKR7qI8pXu4bT/KbwhS9nLJz9vmYf1r6ZQT0vnJwo9+iefLn167+xe7wH3x4ksRv5h5Vvb80uiZXMq5Zv7kQSW8db+F4N+MYGvrGBb2x2X+szQrPPI30B8/iKMoAlAAA=
+   H4sIAAAAAAAAC+2YTY7CMAxGi1hNb8CuV2DLCeYEvf9RZlhEsqwvjktbx6Hf4gmJkp+HHSfpfZqmOyGEEEIIgdwGgP4x/rP6zEKE/wx4f/8MJoO/zIEr+aOxr+Zvze1xEshfxiOq/rX8l5MYxf/3JDL5W7n57f4ox3usf7kPRftbsdH/zVFk8tf53tqbjiCLv87J1tp8OZD9155l8V8EHv/1nx+DFfy+uK2T7S/nFeWPaoEVm+KP2o/kj86+Z/mX3M/qL8/BXn9v/m+pf9H+6N5X8y/zkvFErEb/lr8myl/f+4/a/7a8W+jhr+dY82/dWWfVV83dO8ZI/jVPVFu+1R/lAFrvI/l77i+f1oXWGJH+et2WuS0OdN3y5Iy8Y2T2997fUVy3tM/i/0kM98S/sAB6+m99h3Hb0bZVQ6L8JSgeFnvayvbonNjDvwe1c8OV/HXsr+Rfg/70J4QQQgghdf4Az/gacAA0AAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="60" height="40">
+ <layer name="Tile Layer 2" width="64" height="52">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WsQkAIAwEQGe2dRwXdQJBQdToXZkihPDFpwQAEE8enM3uuFUZnM3uYJ9IeVthZd78jlNkD/hBPX0A8L1e53q1i/U6ly4GAACxNUrF8RCAJQAA
+   H4sIAAAAAAAAC+3WMQ7DIBAEQL85beqUySfyUVeW3IC5k2XQaaaDAiG0nHbbAACg7XOxru53sQY4vAb3omecrTyD34N70TPOzOC5onmuJprnnuxbrjwDIrJvaQY8z78n6zv7AjDRf/YFWFaVLpely62tl89WJ6zUFXv5bHVCXfF+lTKVIVOgL+lLAADAiB0K/kqyADQAAA==
   </data>
  </layer>
- <objectgroup name="Object Layer 1" visible="0">
-  <object id="3" name="npc" type="Character" x="592" y="160" width="16" height="16">
+ <objectgroup name="Object Layer 1">
+  <object id="21" name="tele" type="Event" x="240" y="368" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_knight"/>
-    <property name="face" value="EAST"/>
-    <property name="onInteract" value="speak('Beware! Monsters lurk outside the castle walls.')"/>
+    <property name="onCollide" value="teleport('hero/mirror_interior.tmx', 1, 9)"/>
    </properties>
   </object>
-  <object id="5" name="inn" type="Character" x="320" y="272" width="16" height="16">
+  <object id="22" name="tele" type="Event" x="272" y="304" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_human_m"/>
-    <property name="onInteract" value="inn()"/>
+    <property name="onCollide" value="teleport('hero/mirror_interior.tmx', 4, 3)"/>
    </properties>
   </object>
-  <object id="6" name="npc" type="Character" x="208" y="288" width="16" height="16">
+  <object id="23" name="tele" type="Event" x="320" y="528" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_knight"/>
-    <property name="face" value="WEST"/>
-    <property name="onInteract" value="speak('The Oracle\'s Palace lies at the end of this road. They say a seer once lived there.')"/>
+    <property name="onCollide" value="teleport('hero/mirror_interior.tmx', 12, 23)"/>
    </properties>
   </object>
-  <object id="8" name="npc" type="Character" x="432" y="160" width="16" height="16">
+  <object id="24" name="tele" type="Event" x="384" y="256" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_knight"/>
-    <property name="face" value="WEST"/>
-    <property name="onInteract" value="speak('The Gates of Hero lie at the end of this road.')"/>
+    <property name="onCollide" value="teleport('hero/mirror_interior.tmx', 15, 3)"/>
    </properties>
   </object>
-  <object id="10" name="npc" type="Character" x="416" y="240" width="16" height="16">
+  <object id="25" name="tele" type="Event" x="416" y="528" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_knight"/>
-    <property name="face" value="SOUTH"/>
-    <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('The castle is built into the city walls. Before sages sealed the city, there was an entrance here.')"/>
+    <property name="onCollide" value="teleport('hero/mirror_interior.tmx', 23, 17)"/>
    </properties>
   </object>
-  <object id="11" name="npc" type="Character" x="464" y="288" width="16" height="16">
+  <object id="26" name="tele" type="Event" x="464" y="256" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_knight"/>
-    <property name="face" value="NORTH"/>
-    <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('The knights used to be reinforced by wanderers from the outside.')"/>
+    <property name="onCollide" value="teleport('hero/mirror_interior.tmx', 27, 3)"/>
    </properties>
   </object>
-  <object id="12" name="tele" type="Event" x="272" y="256" width="16" height="16">
+  <object id="27" name="tele" type="Event" x="576" y="320" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/fortress_f2.tmx', 1, 5)"/>
+    <property name="onCollide" value="teleport('hero/mirror_interior.tmx', 37, 9)"/>
    </properties>
   </object>
-  <object id="13" name="tele" type="Event" x="528" y="224" width="16" height="16">
+  <object id="28" name="tele" type="Event" x="656" y="256" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 13, 11)"/>
+    <property name="onCollide" value="teleport('hero/mirror_interior.tmx', 48, 3)"/>
    </properties>
   </object>
-  <object id="14" name="npc" type="Character" x="368" y="208" width="16" height="16">
+  <object id="29" name="tele" type="Event" x="752" y="560" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_knight"/>
-    <property name="face" value="SOUTH"/>
-    <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('We have hardly enough knights to defend the castle.')"/>
-   </properties>
-  </object>
-  <object id="15" name="tele" type="Event" x="400" y="96" width="32" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 18)"/>
-   </properties>
-  </object>
-  <object id="16" name="tele" type="Event" x="176" y="240" width="16" height="96">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 18)"/>
-   </properties>
-  </object>
-  <object id="17" name="tele" type="Event" x="192" y="240" width="32" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 18)"/>
-   </properties>
-  </object>
-  <object id="18" name="tele" type="Event" x="592" y="112" width="32" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 18)"/>
-   </properties>
-  </object>
-  <object id="19" name="tele" type="Event" x="624" y="112" width="16" height="96">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 18)"/>
-   </properties>
-  </object>
-  <object id="20" name="david" type="Character" x="368" y="320" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_david"/>
-    <property name="face" value="EAST"/>
-    <property name="hide" value="return not getSwitch('david_left')"/>
-    <property name="onInteract" value="speak('David', 'In a few days I\'ll be initiated as a Knight of Hero.')"/>
+    <property name="onCollide" value="teleport('hero/mirror_interior.tmx', 59, 23)"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="60" height="40">
+ <layer name="Tile Layer 3" width="64" height="52">
   <properties>
    <property name="z" value="1.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQdvoAAAAAAAAAAAAHgMMYCaUYAlAAA=
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAIBXA4noFz0ANAAA
   </data>
  </layer>
 </map>
