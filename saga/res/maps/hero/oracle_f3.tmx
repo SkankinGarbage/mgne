@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="9" height="14" tilewidth="16" tileheight="16" nextobjectid="25">
  <properties>
-  <property name="bgm" value="ffl3_dungeon"/>
+  <property name="bgm" value="no_change"/>
   <property name="encounter" value="encounterset_level01_danger01"/>
   <property name="name" value="Oracle's Palace"/>
  </properties>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="14">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="15">
  <properties>
   <property name="bgm" value="ffl3_overworld"/>
   <property name="name" value="Home World"/>
@@ -83,6 +83,11 @@
   <object id="13" name="Oracle's Palace" type="Event" x="912" y="288" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/oracle_f1.tmx', 20, 13, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="14" name="Mirror Shrine" type="Event" x="976" y="288" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/mirror.tmx', 30, 40, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>

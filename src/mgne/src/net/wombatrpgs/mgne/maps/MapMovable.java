@@ -260,7 +260,9 @@ public abstract class MapMovable extends MapThing implements PositionSetable {
 	 */
 	public void followPath(List<? extends DirEnum> newSteps) {
 		path.addAll(newSteps);
-		targetNextTile();
+		if (newSteps.size() > 0) {
+			targetNextTile();
+		}
 	}
 	
 	/**

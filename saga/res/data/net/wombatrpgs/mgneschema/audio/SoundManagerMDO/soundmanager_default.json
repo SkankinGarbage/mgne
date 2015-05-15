@@ -27,6 +27,10 @@
 		{
 			"key" : "cure",
 			"file" : "ffl1_10_positive.wav"
+		},
+		{
+			"key" : "rebound",
+			"file" : "ffl1_20_rebound.wav"
 		}
 	],
 	"emuMusicEntries" : [
