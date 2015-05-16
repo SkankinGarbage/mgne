@@ -79,11 +79,6 @@
     <property name="item" value="wpn_bowPoison"/>
    </properties>
   </object>
-  <object id="31" name="chest" type="Chest" x="896" y="176" width="16" height="16">
-   <properties>
-    <property name="item" value="pot_xpotion"/>
-   </properties>
-  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="61" height="25">
   <properties>

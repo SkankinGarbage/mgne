@@ -28,6 +28,7 @@ public class TrackerCam extends OrthographicCamera implements Updateable {
 	protected FinishListener onPanFinish;
 	protected Level constrainedMap;
 	protected float speed; // in px/s
+	protected float offX, offY;
 	
 	/**
 	 * Creates a tracker cam with a given target and speed.
@@ -62,8 +63,8 @@ public class TrackerCam extends OrthographicCamera implements Updateable {
 	@Override
 	public void update(float elapsed) {
 		if (target != null) {
-			position.x = Math.round(target.getX()/zoom)*zoom;// * ratioX;
-			position.y = Math.round(target.getY()/zoom)*zoom;// * ratioY;
+			position.x = Math.round((target.getX()+offX)/zoom)*zoom;// * ratioX;
+			position.y = Math.round((target.getY()+offY)/zoom)*zoom;// * ratioY;
 			if (constrainedMap != null) {
 				int halfWidth = MGlobal.window.getWidth() / 2;
 				int halfHeight = MGlobal.window.getHeight() / 2;
@@ -158,6 +159,17 @@ public class TrackerCam extends OrthographicCamera implements Updateable {
 	 */
 	public void constrainMaps(Level map) {
 		this.constrainedMap = map;
+	}
+	
+	/**
+	 * Perturbs the camera by a small, fixed offset. Meant to be called from
+	 * larger shake routines, not used on its own as a one-off.
+	 * @param	offX			The perturberance x pixels
+	 * @param	offY			The perturberance y pixels
+	 */
+	public void shake(int offX, int offY) {
+		this.offX = offX;
+		this.offY = offY;
 	}
 
 }

@@ -12,5 +12,5 @@ playSound('rebound')
 wait(0.8)
 
 speak(hero4, "It is done.")
-speak(hero1, "Let's see if the gates have changed.")
+speak(hero1, "Let's see if the gate has changed.")
 sceneSwitch('mirror_shatter', true)

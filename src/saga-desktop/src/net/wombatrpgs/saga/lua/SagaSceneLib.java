@@ -32,6 +32,7 @@ public class SagaSceneLib extends TwoArgFunction {
 		env.set("removeMember", new SceneRemoveMember());
 		env.set("reset", new SceneReset());
 		env.set("addItem", new SceneAddItem());
+		env.set("shake", new SceneScreenShake());
 		
 		env.set("sagalib", library);
 		return library;

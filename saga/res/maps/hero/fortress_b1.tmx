@@ -27,7 +27,7 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
-    <property name="hide" value="return getSwitch('spoke_grandmaster01')"/>
+    <property name="hide" value="return getSwitch('spoke_grandmaster01') or getSwitch('mirror_shatter')"/>
     <property name="onInteract" value="play('hero/entry02.lua')"/>
    </properties>
   </object>
@@ -35,6 +35,7 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="EAST"/>
+    <property name="hide" value="return getSwitch('mirror_shatter')"/>
     <property name="onInteract" value="speak('Do the people outside still believe that story about the three artifacts?')"/>
    </properties>
   </object>
@@ -42,6 +43,7 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="WEST"/>
+    <property name="hide" value="return getSwitch('mirror_shatter')"/>
     <property name="onInteract" value="speak('The Knights of Hero have held this fortress since the city was sealed.')"/>
    </properties>
   </object>
@@ -49,7 +51,7 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
-    <property name="hide" value="return not getSwitch('spoke_grandmaster01')"/>
+    <property name="hide" value="return not getSwitch('spoke_grandmaster01') or getSwitch('mirror_shatter')"/>
     <property name="onInteract" value="speak('There have been reports of a similar enemy hiding in the Oracle\'s Palace west of the castle. Any help is welcome.')"/>
    </properties>
   </object>
