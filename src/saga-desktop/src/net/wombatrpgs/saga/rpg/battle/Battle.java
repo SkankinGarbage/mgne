@@ -58,6 +58,7 @@ public class Battle extends AssetQueuer implements Disposable {
 	protected ScreenBattle screen;
 	protected HeroParty player;
 	protected EnemyParty enemy;
+	protected String bgmKey;
 	protected boolean anonymous;
 	protected boolean random;
 	protected boolean fleeable;
@@ -87,14 +88,12 @@ public class Battle extends AssetQueuer implements Disposable {
 	public Battle(HeroParty player, EnemyParty enemy, boolean random) {
 		this.player = player;
 		this.enemy = enemy;
-		this.screen = new ScreenBattle(this);
 		this.random = random;
 		anonymous = false;
 		finished = false;
 		fleeable = true;
 		
 		assets.add(enemy);
-		assets.add(screen);
 		queueInventory(player.getInventory());
 		for (Chara chara : player.getAll()) {
 			queueInventory(chara.getInventory());
@@ -147,6 +146,9 @@ public class Battle extends AssetQueuer implements Disposable {
 	/** @param fleeable True if the party can run from this encounter */
 	public void setFleeable(boolean fleeable) { this.fleeable = fleeable; }
 	
+	/** @param bgmKey The audio manager key of the bgm to use, null default */
+	public void setBGM(String bgmKey) { this.bgmKey = bgmKey; }
+	
 	/** @return True if battle was cut short by hero death */
 	public boolean wasAborted() { return aborted; }
 
@@ -162,6 +164,16 @@ public class Battle extends AssetQueuer implements Disposable {
 		}
 	}
 	
+	/**
+	 * @see net.wombatrpgs.mgne.core.AssetQueuer#queueRequiredAssets(net.wombatrpgs.mgne.core.MAssets)
+	 */
+	@Override
+	public void queueRequiredAssets(MAssets manager) {
+		this.screen = new ScreenBattle(this, bgmKey);
+		assets.add(screen);
+		super.queueRequiredAssets(manager);
+	}
+
 	/**
 	 * @see net.wombatrpgs.mgne.core.AssetQueuer#postProcessing
 	 * (net.wombatrpgs.mgne.core.MAssets, int)
@@ -545,7 +557,7 @@ public class Battle extends AssetQueuer implements Disposable {
 		
 		assets.remove(screen);
 		screen.dispose();
-		screen = new ScreenBattle(this);
+		screen = new ScreenBattle(this, bgmKey);
 		assets.add(screen);
 		MGlobal.assets.loadAsset(screen, "new battle screen");
 		

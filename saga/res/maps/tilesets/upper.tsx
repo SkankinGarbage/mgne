@@ -245,7 +245,27 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="63">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
  <tile id="68">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="72">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="86">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="88">
   <properties>
    <property name="x" value=""/>
   </properties>

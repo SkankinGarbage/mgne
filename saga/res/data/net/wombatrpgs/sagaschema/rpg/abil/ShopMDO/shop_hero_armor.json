@@ -1,0 +1,13 @@
+{
+	"key" : "shop_hero_armor",
+	"subfolder" : "world1",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"body_bronze",
+		"hand_gold",
+		"helm_gold",
+		"hand_gold",
+		"shield_gold"
+	]
+}

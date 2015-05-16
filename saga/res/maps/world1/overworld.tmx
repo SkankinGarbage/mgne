@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="19">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="20">
  <properties>
   <property name="bgm" value="ffl3_overworld"/>
   <property name="name" value="Home World"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="76" height="70">
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZwQrDIAwA0H57r73u1Gth3zkYE0qg21osEX0PRL20QURDnCYAAIDv5uwAADqwfNq8G7dsTf7/fq1Kz7FyVz/CHGoo+2oJc6jlmR0AAFXIQcfh7r7GukF71JvOy64ZAgCMSh5Gj9QT++U9Gdq3ZQcAvMnzz4vnl/Pst7v22Qhvn/Ybd9hCH8fwj/VgfPUbAAAA0KoXoovL7SBTAAA=
+   H4sIAAAAAAAAC+3ZvQrDIBAA4Dx71q6dsga6dW1frz80y0HaJhhO9PtATpfkENFDhwEAAOC7MTsBgAbcn+0UYs2m5P+/5mgMkXXLWX0NYyjh/Im3MIZSLtkJAFCEGrQfzu59zBvUx33Tdtl3hgAAvVKH0SL3ie3yngz1m7MTAN7U+dvF/ct+9ttR66yHt0/rjSPMIcY+/GNa6e/9BgAAANTqAbK7UbkgUwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -108,6 +108,12 @@
   <object id="18" name="Gate" type="Event" x="912" y="256" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate.tmx', 26, 32, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="19" name="block" type="Event" x="960" y="304" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('hero_done')"/>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>

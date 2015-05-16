@@ -1,10 +1,307 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="65">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="71">
  <properties>
   <property name="bgm" value="ffl2_apollo"/>
-  <property name="name" value="Floor 1 Gate"/>
+  <property name="name" value="F1 Gate"/>
  </properties>
- <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="1" name="lower" tilewidth="16" tileheight="16">
+  <image source="../tilesets/lower2.PNG" width="112" height="256"/>
+  <tile id="3">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="17">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="18">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="34">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="52">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="53">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+   <animation>
+    <frame tileid="56" duration="500"/>
+    <frame tileid="63" duration="500"/>
+    <frame tileid="70" duration="500"/>
+    <frame tileid="77" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="58">
+   <animation>
+    <frame tileid="59" duration="500"/>
+    <frame tileid="60" duration="500"/>
+    <frame tileid="61" duration="500"/>
+    <frame tileid="62" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="63">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="65">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="66">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="70">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="73">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="74">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="77">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="84">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="85">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+   <animation>
+    <frame tileid="84" duration="500"/>
+    <frame tileid="91" duration="500"/>
+    <frame tileid="98" duration="500"/>
+    <frame tileid="105" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="91">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="95">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="97">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="98">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="102">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="103">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="104">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="105">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="107">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="109">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="110">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="111">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+ </tileset>
  <tileset firstgid="113" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="52" height="48">
   <properties>
@@ -19,7 +316,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YPQqAMAyG4YI39mfy5xbew9Xbma1T0BCwxrwPZGjo0JbwDS0FAID/2W/WgBUz1EZn3N8r/UFqlJp8x3Gz3mdW+ovUKrX5juNmvQ+qCJlyGPtfdz7oaxkSlZYhb4sw78g1/xnzDXGQmUB8/Em1w9sDAAAAeV1nxL6BACcAAA==
+   H4sIAAAAAAAAC+3YsQmAMBAFUMGNbZ3DPWydQNzKRrASPYzGmPeakCPFJRy/SNMAwP8MJ3uIMkN5tMHz3SNdpBO9T39Qn7d1udFLCtH7sCshU8Zg/eumC/WvZ0jUUYa8rYR5p675rzHfKIfMhPL5k8rH2wMAQL1WWDDFlgAnAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -71,7 +368,7 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
-    <property name="hide" value="return not getSwitch('mirror_shatter')"/>
+    <property name="hide" value="return not getSwitch('mirror_shatter') or getSwitch('hero_done')"/>
     <property name="onInteract" value="play('hero/gate01.lua')"/>
    </properties>
   </object>
@@ -79,7 +376,7 @@
    <properties>
     <property name="appearance" value="4dir_david"/>
     <property name="face" value="NORTH"/>
-    <property name="hide" value="return not getSwitch('mirror_shatter')"/>
+    <property name="hide" value="return not getSwitch('mirror_shatter') or getSwitch('hero_done')"/>
     <property name="onInteract" value="play('hero/gate01.lua')"/>
    </properties>
   </object>
@@ -87,7 +384,7 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
-    <property name="hide" value="return not getSwitch('mirror_shatter')"/>
+    <property name="hide" value="return not getSwitch('mirror_shatter') or getSwitch('hero_done')"/>
     <property name="onInteract" value="play('hero/gate01.lua')"/>
    </properties>
   </object>
@@ -95,7 +392,7 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
-    <property name="hide" value="return not getSwitch('mirror_shatter')"/>
+    <property name="hide" value="return not getSwitch('mirror_shatter') or getSwitch('hero_done')"/>
     <property name="onInteract" value="play('hero/gate01.lua')"/>
    </properties>
   </object>
@@ -114,13 +411,53 @@
     <property name="hide" value="return not getSwitch('shiva_mutate') or getSwitch('hero_done')"/>
    </properties>
   </object>
+  <object id="65" name="npc" type="Character" x="384" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('hero_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('We knights must protect the gate.')"/>
+   </properties>
+  </object>
+  <object id="66" name="npc" type="Character" x="448" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('hero_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('We knights must protect the gate.')"/>
+   </properties>
+  </object>
+  <object id="67" name="david" type="Character" x="400" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_david"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('hero_done')"/>
+    <property name="onInteract" value="speak('David', 'I knew that oracle was trouble!')"/>
+   </properties>
+  </object>
+  <object id="68" name="npc" type="Character" x="432" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return not getSwitch('hero_done')"/>
+    <property name="onInteract" value="speak('Grandmaster', 'The gate is open. Thank you for your help and I hope you can find who you\'re looking for.')"/>
+   </properties>
+  </object>
+  <object id="69" name="gate" type="Event" x="416" y="224" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('hero_done')"/>
+    <property name="onCollide" value="play('hero/gate02.lua')"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="52" height="48">
   <properties>
    <property name="z" value="1.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ43oAAAAAAAAAAAAODPAEjAtC4AJwAA
+   H4sIAAAAAAAAC+3OwQkAIAwAse4/lPp0LDuE0FISuP9FAADAbCvb2Sn++OlWDwAAAAAAAEADD+V1OlQAJwAA
   </data>
  </layer>
 </map>

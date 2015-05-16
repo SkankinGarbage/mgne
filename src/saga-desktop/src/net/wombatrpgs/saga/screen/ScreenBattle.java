@@ -169,8 +169,9 @@ public class ScreenBattle extends SagaScreen {
 	 * Creates a new combat setup. This initializes the screen and passes the
 	 * arguments to the battle.
 	 * @param	battle			The battle this screen will be used for
+	 * @param	bgmKey			The audiomanager bgm key, null defaults
 	 */
-	public ScreenBattle(final Battle battle) {
+	public ScreenBattle(final Battle battle, String bgmKey) {
 		this.battle = battle;
 		pushCommandContext(new CMapMenu());
 		
@@ -285,7 +286,7 @@ public class ScreenBattle extends SagaScreen {
 			lastSelected.put(hero, -1);
 		}
 		
-		bgm = MGlobal.audio.generateMusicForKey(BGM_NAME);
+		bgm = MGlobal.audio.generateMusicForKey(bgmKey == null ? BGM_NAME : bgmKey);
 		victoryBGM = MGlobal.audio.generateMusicForKey(VICTORY_BGM_NAME);
 		assets.add(bgm);
 		assets.add(victoryBGM);

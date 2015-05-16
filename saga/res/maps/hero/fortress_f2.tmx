@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="13" tilewidth="16" tileheight="16" nextobjectid="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="13" tilewidth="16" tileheight="16" nextobjectid="17">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="name" value="Castle of Hero"/>
@@ -28,11 +28,11 @@
     <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 17, 17)"/>
    </properties>
   </object>
-  <object id="13" name="shop" type="Character" x="112" y="80" width="16" height="16">
+  <object id="13" name="shop" type="Character" x="96" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="shop('shop_hero')"/>
+    <property name="onInteract" value="shop('shop_hero_weapons')"/>
    </properties>
   </object>
   <object id="14" name="shop" type="Character" x="240" y="80" width="16" height="16">
@@ -47,6 +47,13 @@
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="play('hero/barkeep.lua')"/>
+   </properties>
+  </object>
+  <object id="16" name="shop" type="Character" x="112" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_hero_armor')"/>
    </properties>
   </object>
  </objectgroup>

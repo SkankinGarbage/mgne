@@ -21,7 +21,7 @@ import org.luaj.vm2.lib.VarArgFunction;
 
 /**
  * Starts a battle against the party specificied by the argument data key.
- * Usage: {@code battle(<mdo>, [fleeable])}
+ * Usage: {@code battle(<mdo>, [fleeable], [bgm])}
  */
 public class SceneBattle extends VarArgFunction {
 
@@ -32,18 +32,16 @@ public class SceneBattle extends VarArgFunction {
 	public Varargs invoke(final Varargs args) {
 		SceneLib.addFunction(new SceneCommand() {
 			
-			String mdoKey;
 			Battle battle;
+			
+			String mdoKey;
 			boolean fleeable;
+			String bgmKey;
 			
 			/* Initializer */ {
 				mdoKey = args.arg(1).checkjstring();
 				fleeable = args.narg() >= 2 ? args.checkboolean(2) : true;
-			}
-
-			@Override protected void addToQueue() {
-				super.addToQueue();
-				// assets.add(battle);
+				bgmKey = args.narg() >= 3 ? args.checkjstring(3) : null;
 			}
 
 			@Override protected void internalRun() {
@@ -57,8 +55,9 @@ public class SceneBattle extends VarArgFunction {
 					EnemyParty party = new EnemyParty(encounterMDO);
 					battle = new Battle(party, true);
 				}
-				MGlobal.assets.loadAsset(battle, "scene battle " + mdoKey);
 				battle.setFleeable(fleeable);
+				battle.setBGM(bgmKey);
+				MGlobal.assets.loadAsset(battle, "scene battle " + mdoKey);
 				battle.start();
 			}
 

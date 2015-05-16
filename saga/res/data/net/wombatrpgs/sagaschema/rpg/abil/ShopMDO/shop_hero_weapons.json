@@ -1,0 +1,15 @@
+{
+	"key" : "shop_hero_weapons",
+	"subfolder" : "world1",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordLong",
+		"wpn_axeBattle",
+		"wpn_bowLong",
+		"wpn_gunMusket",
+		"wpn_whip",
+		"spell_fire",
+		"spell_ice"
+	]
+}

@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "engine searches for this mdo by name",
 	"map" : "world1/parish.tmx",
-	"mapX" : 19,
+	"mapX" : 26,
 	"mapY" : 29,
 	"titleBG" : "bad_title.png"
 }
