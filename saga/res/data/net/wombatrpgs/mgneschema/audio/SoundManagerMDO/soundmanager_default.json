@@ -31,6 +31,10 @@
 		{
 			"key" : "rebound",
 			"file" : "ffl1_20_rebound.wav"
+		},
+		{
+			"key" : "explode",
+			"file" : "ffl1_14_longexplode.wav"
 		}
 	],
 	"emuMusicEntries" : [

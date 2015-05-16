@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WOw7DIAxAg3KCbEkneouu2XL/E3UBybXwFyiJxPBUhwbwsxPadVmWdTKZTCaP5w0ICTg2Oj8uX8yRyB75mpsDvUd5HMtvrjFxJfI1vhcz2iMCDpA/5kD3YkZ7BADsA4b77rqZB5enxNM88rwtfb4S0jlQYqRHPg92Z+538YhoPneGSVjzLv2mfUBsfReo886K1wPWYgNxjUeowOsBa7GDuKfHmSjFXo+ac9XicSrp5UG9K3hc249TiKlzrAVS/TGaHlDP1x09OBfKo+bMptA4cv9zqeeKI3ZA41GaV8od1z8wcWs0PaupPfW8WdaUxoOyZ9x+lAvXj1a+VjR7WfbW5l8at3hb1/8X3rpQNfCuZelZTT+9faD2CETcujdSnVp5ts67ZY88e1nx7NejPlKsyb93n7WepdhSI8lbW9cefAEdvricIBwAAA==
+   H4sIAAAAAAAAC+2WSw6DIBBAIT2BO+0Kb9GtO+9/oqYJJCNhvkDFhMVLp1Rk3oxO+nLOvSaTyWTyeHYAtTYKO8EW8ZH0ndqzg+vv8tjcNdcQSXml7/m1OXd7BMAvnxNhy67NudvDu2vtMQ/qt3MwDypPjqd5pH1L/HxHuDlQ4k6PNA9WY+6jeIRsPzXDOLR5pzzh+R8Qa98FbN5psXrAWiwgrvHwFVg9YC1WEPf0OCKl2OpRM1c1HoeQXh7Yu5KvS/txMDE2x1rA1T9H0gPs+RrRg3LBPGpmNobEkfqfiz1XFKEDEo/SvlLuef09EbdG0rOa2mPPm+ae3LoX9ow6D3Oh+tHKV4vkLM3Z0vxL6xpv7f3/hbUuWA2s99L0rKaf1j5gZ3gkbt0brk6tPFvn3bJHlrO0WM7rUR8uluTfu89Sz1KsqRHnLa1rD75k6F+FIBwAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="50" height="36">
@@ -90,7 +90,7 @@
     <property name="onInteract" value="speak('We have hardly enough knights to defend the castle.')"/>
    </properties>
   </object>
-  <object id="15" name="tele" type="Event" x="400" y="96" width="32" height="16">
+  <object id="15" name="tele" type="Event" x="400" y="112" width="32" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 18)"/>
    </properties>

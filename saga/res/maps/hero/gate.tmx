@@ -45,7 +45,7 @@
   </object>
   <object id="49" name="tele" type="Event" x="512" y="304" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/gate_interior.tmx', 19, 24)"/>
+    <property name="onCollide" value="teleport('hero/gate_interior.tmx', 19, 25)"/>
    </properties>
   </object>
   <object id="50" name="tele" type="Event" x="256" y="368" width="16" height="16">
@@ -99,7 +99,7 @@
     <property name="onInteract" value="play('hero/gate01.lua')"/>
    </properties>
   </object>
-  <object id="60" name="target" type="Event" x="416" y="304" width="16" height="16"/>
+  <object id="60" name="target" type="Event" x="416" y="288" width="16" height="16"/>
   <object id="62" name="shiva" type="Character" x="416" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
@@ -109,7 +109,7 @@
   </object>
   <object id="64" name="shiva_mutate" type="Character" x="416" y="240" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_demon"/>
+    <property name="appearance" value="anim_shiva"/>
     <property name="face" value="SOUTH"/>
     <property name="hide" value="return not getSwitch('shiva_mutate') or getSwitch('hero_done')"/>
    </properties>

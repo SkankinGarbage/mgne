@@ -1,0 +1,21 @@
+{
+	"key" : "abil_5heads",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "5 HEADS",
+	"itemDescription" : "Attacks up to 5 times",
+	"type" : "ABILITY",
+	"uses" : 3,
+	"cost" : 0,
+	"anim" : "banim_punch",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectMultihitMDO",
+		"key" : "anon_CombatItemMDO_-238657914"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

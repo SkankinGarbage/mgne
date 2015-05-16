@@ -1,18 +1,18 @@
 {
-	"key" : "abil_dissolve",
+	"key" : "abil_blizzard",
 	"subfolder" : "abil",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "DISSOLVE",
-	"itemDescription" : "Attacks with typeless damage",
+	"abilityName" : "BLIZZARD",
+	"itemDescription" : "Attacks a party with low ice damage",
 	"type" : "ABILITY",
-	"uses" : 15,
+	"uses" : 10,
 	"cost" : 0,
-	"anim" : "banim_gas",
+	"anim" : "banim_ice",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_-1679809925"
+		"key" : "anon_CombatItemMDO_2000665136"
 	},
 	"tier" : 0,
 	"robostats" : {

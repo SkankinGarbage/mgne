@@ -1,0 +1,32 @@
+{
+	"key" : "enemy_bossShiva",
+	"subfolder" : "boss",
+	"name" : "SHIVA",
+	"description" : "",
+	"gender" : "MALE",
+	"race" : "HUMAN",
+	"family" : "None",
+	"species" : "SHIVA",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/boss_shiva.png",
+	"meatEatLevel" : 5,
+	"meatTargetLevel" : 5,
+	"gp" : 1000,
+	"loot" : "None",
+	"equipped" : [
+		"abil_trident",
+		"abil_5heads",
+		"abil_beam",
+		"abil_blizzard",
+		"abil_opara"
+	],
+	"stats" : {
+		"hp" : 512,
+		"mhp" : 512,
+		"str" : 15,
+		"def" : 7,
+		"agi" : 15,
+		"mana" : 10,
+		"flags" : [ ]
+	}
+}

@@ -1,18 +1,18 @@
 {
-	"key" : "abil_dissolve",
+	"key" : "abil_trident",
 	"subfolder" : "abil",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "DISSOLVE",
-	"itemDescription" : "Attacks with typeless damage",
+	"abilityName" : "TRIDENT",
+	"itemDescription" : "Attacks with weapon damage.",
 	"type" : "ABILITY",
-	"uses" : 15,
+	"uses" : 20,
 	"cost" : 0,
-	"anim" : "banim_gas",
+	"anim" : "banim_slash_double",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_-1679809925"
+		"key" : "anon_CombatItemMDO_-1551087168"
 	},
 	"tier" : 0,
 	"robostats" : {

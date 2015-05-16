@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="24" height="27" tilewidth="16" tileheight="16" nextobjectid="54">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="24" height="28" tilewidth="16" tileheight="16" nextobjectid="54">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="encounter" value="encounterset_level01_danger02"/>
@@ -7,24 +7,24 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="113" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="24" height="27">
+ <layer name="Tile Layer 1" width="24" height="28">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+WVMQrEQAhFp0xh5y22227qaXP/+4TACh/RGGecaj+IssKLa8i3tToNFdUiiB18hqBC7mEEQ39lX8Pho2RnMyKHj/PKzvRcb8QOH+eN+pGi/Uf9SCfE8cvR82fVjd8q+ZZ28/Xu9P6qZO3u3/no172t+feAjLX4T29r/k2Qpb454j8d6hk+Q5ba89cM/8mjd/JH0Fvl00Mvw/dujLxHq/dJ8L0bI/8NQ2b/Jvi3tH+Jh5GK7O1CWd8/q8jerkgXfsQU4CAKAAA=
+   H4sIAAAAAAAAC+WVsQoEMQhEU25h519cd13qtPf//3Mc3MAgul4SU92AKCu8iCxja3UaJqolFCf4SiGF3MsJpf7OvkbAZ2FnK5KAz/NiZ3auX6QBn+fN+pmy/Wf9TC+K65uz91fVnW+VfE+n+XZ3dn9V8nb373z2697q/fvDgf/0tuffgzLX8J9O9QpfKKOO/HWFr5RRV/DvbsBJ/kh6u3y56T0m+NENw3/CgdmfE/zohuFtjtnbBVl/hEeqidnbxTrtX57e4YBm5YAKAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="24" height="27">
+ <layer name="Tile Layer 2" width="24" height="28">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BMQEAAADCoPVP7WkJoAAA4AaiwPakIAoAAA==
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQsvoAAA4Gepgq9rgAoAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="49" name="tele" type="Event" x="304" y="400" width="16" height="16">
+  <object id="49" name="tele" type="Event" x="304" y="416" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate.tmx', 32, 20)"/>
    </properties>
@@ -50,20 +50,20 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="24" height="27">
+ <layer name="Tile Layer 3" width="24" height="28">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBKBjZwInG5vPQ2HxhKpsHAILKlgkgCgAA
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBKBjZwInG5vPQ2HxhGptPbQAAuj+pYoAKAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="24" height="27">
+ <layer name="Tile Layer 4" width="24" height="28">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3MMQEAAAgDoGX2tbwl3AcBSAAAaJryv8/fAR8zyEkgCgAA
+   H4sIAAAAAAAAC+3MMQEAAAgDoGX2tbwl3AcBSAAAaJryv+X/2wHALavpgAoAAA==
   </data>
  </layer>
 </map>

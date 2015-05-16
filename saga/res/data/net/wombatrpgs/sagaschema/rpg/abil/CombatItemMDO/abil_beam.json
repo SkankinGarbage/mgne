@@ -1,18 +1,18 @@
 {
-	"key" : "abil_dissolve",
+	"key" : "abil_beam",
 	"subfolder" : "abil",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "DISSOLVE",
-	"itemDescription" : "Attacks with typeless damage",
+	"abilityName" : "BEAM",
+	"itemDescription" : "Attacks a group with typeless damage",
 	"type" : "ABILITY",
-	"uses" : 15,
+	"uses" : 10,
 	"cost" : 0,
-	"anim" : "banim_gas",
+	"anim" : "banim_beam",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_-1679809925"
+		"key" : "anon_CombatItemMDO_-1619524976"
 	},
 	"tier" : 0,
 	"robostats" : {
