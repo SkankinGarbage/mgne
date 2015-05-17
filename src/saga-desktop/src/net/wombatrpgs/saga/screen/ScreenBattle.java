@@ -962,6 +962,7 @@ public class ScreenBattle extends SagaScreen {
 		showActor = true;
 		miniInserts.awaitSelection(new SelectionListener() {
 			@Override public boolean onSelection(Chara selected) {
+				removeChild(miniInserts);
 				if (selected == null) {
 					listener.onTargetSelection(null);
 				} else {

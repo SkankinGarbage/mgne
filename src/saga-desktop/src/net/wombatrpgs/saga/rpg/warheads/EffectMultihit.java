@@ -51,6 +51,7 @@ public class EffectMultihit extends EffectCombat {
 			lastUsedBattle = battle;
 			seqIndex = 0;
 		}
+		seqIndex = seqIndex % sequence.length;
 		int hits = sequence[seqIndex];
 		battle.println(tab + "Hit " + hits + " times.");
 		return statDamage(user, mdo.attackStat, mdo.power) * hits;

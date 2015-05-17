@@ -119,7 +119,7 @@
    <properties>
     <property name="appearance" value="4dir_david"/>
     <property name="face" value="EAST"/>
-    <property name="hide" value="return not getSwitch('david_left') and (getSwitch('mirror_shatter') and not getSwitch('hero_done'))"/>
+    <property name="hide" value="return not getSwitch('david_leaves') or getSwitch('mirror_shatter')"/>
     <property name="onInteract" value="speak('David', 'In a few days I\'ll be initiated as a Knight of Hero.')"/>
    </properties>
   </object>

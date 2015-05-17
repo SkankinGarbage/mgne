@@ -7,7 +7,7 @@
 	"damType" : "WEAPON",
 	"sideEffects" : [ ],
 	"slayerFlags" : [ ],
-	"power" : 4,
+	"power" : 5,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",
 	"miss" : "CAN_MISS"

@@ -36,7 +36,7 @@
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="EAST"/>
     <property name="hide" value="return getSwitch('mirror_shatter')"/>
-    <property name="onInteract" value="speak('Do the people outside still believe that story about the three artifacts?')"/>
+    <property name="onInteract" value="speak('Do the people outside still believe that story about the four artifacts?')"/>
    </properties>
   </object>
   <object id="3" name="knight" type="Character" x="176" y="160" width="16" height="16">

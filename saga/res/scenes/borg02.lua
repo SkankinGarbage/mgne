@@ -8,7 +8,7 @@ speak("????", "Wait!")
 
 sceneSwitch('opening_borg_visible', true)
 face('hero', 'NORTH')
-path('borg', 20, 27)
+path('borg', 'borg_target')
 face('borg', 'SOUTH')
 wait(.4)
 

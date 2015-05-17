@@ -507,11 +507,6 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="chest" type="Chest" x="256" y="176" width="16" height="16">
-   <properties>
-    <property name="item" value="pot_mana"/>
-   </properties>
-  </object>
   <object id="2" name="tele" type="Event" x="176" y="112" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 54, 52)"/>
@@ -537,7 +532,7 @@
     <property name="onCollide" value="teleport('world1/hq02.tmx', 35, 26)"/>
    </properties>
   </object>
-  <object id="7" name="chest" type="Chest" x="384" y="416" width="16" height="16">
+  <object id="7" name="chest" type="Chest" x="240" y="192" width="16" height="16">
    <properties>
     <property name="item" value="wpn_swordLong"/>
    </properties>

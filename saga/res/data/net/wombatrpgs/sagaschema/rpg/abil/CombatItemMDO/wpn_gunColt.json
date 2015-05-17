@@ -7,7 +7,7 @@
 	"itemDescription" : "Attacks with fixed damage aimed by user strength (tier 1)",
 	"type" : "ITEM",
 	"uses" : 30,
-	"cost" : 140,
+	"cost" : 110,
 	"anim" : "banim_wound",
 	"equip" : [ ],
 	"warhead" : {

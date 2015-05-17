@@ -15,6 +15,6 @@
 	"lethality" : "NON_DEADLY",
 	"recover" : "RECOVER_AFTER_BATTLE",
 	"halvedStats" : [ ],
-	"dot" : 10,
+	"dot" : 8,
 	"dotStat" : "MHP"
 }

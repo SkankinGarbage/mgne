@@ -9,6 +9,6 @@
 	"slayerFlags" : [ ],
 	"power" : 4,
 	"attackStat" : "MANA",
-	"defendStat" : "DEF",
+	"defendStat" : null,
 	"miss" : "ALWAYS_HITS"
 }

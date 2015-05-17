@@ -5,7 +5,7 @@ speak(hero, "I guess so. We're off to find Jonas and Janine... and the lost city
 speak("BORG", "I don't care about Hero, but I miss the twins. I remember the day they left.")
 
 fade('black')
-teleport('world1/parish.tmx', 16, 28, 'SOUTH', false)
+teleport('world1/parish.tmx', 26, 29, 'SOUTH', false)
 sceneSwitch('opening_flashback', true)
 hideHero(true)
 fade('normal')

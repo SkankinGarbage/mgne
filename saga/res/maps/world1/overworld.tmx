@@ -112,6 +112,7 @@
   </object>
   <object id="19" name="block" type="Event" x="960" y="304" width="16" height="16">
    <properties>
+    <property name="appearance" value="anim_mountain"/>
     <property name="hide" value="return getSwitch('hero_done')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>

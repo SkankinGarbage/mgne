@@ -12,7 +12,7 @@
 	"meatEatLevel" : 1,
 	"meatTargetLevel" : 1,
 	"gp" : 60,
-	"loot" : "hand_gold",
+	"loot" : "pot_potion",
 	"equipped" : [
 		"abil_esp",
 		"abil_heal"
