@@ -275,6 +275,7 @@ public class ScreenBattle extends SagaScreen {
 				case MOVE_RIGHT:	moveCursor(1);		break;
 				case UI_CONFIRM:	selectConfirm();	break;
 				case UI_CANCEL:		selectCancel();		break;
+				case UI_FINISH:		selectCancel();		break;
 				default:								break;
 				}
 				return true;
