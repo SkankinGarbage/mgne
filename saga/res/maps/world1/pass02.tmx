@@ -43,7 +43,7 @@
   </object>
   <object id="4" name="gold glove" type="Chest" x="400" y="336" width="16" height="16">
    <properties>
-    <property name="item" value="hand_gold"/>
+    <property name="item" value="helm_bronze"/>
    </properties>
   </object>
   <object id="5" name="str24" type="Chest" x="272" y="336" width="16" height="16">

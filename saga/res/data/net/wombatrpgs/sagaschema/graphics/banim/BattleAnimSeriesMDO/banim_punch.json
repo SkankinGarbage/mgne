@@ -5,8 +5,8 @@
 	"description" : "",
 	"sound" : "ffl1_07_kick.wav",
 	"anim" : "banim_particle_punch",
-	"count" : 7,
-	"concurrent" : 3,
+	"count" : 5,
+	"concurrent" : 2,
 	"span" : 32,
 	"granularity" : 8
 }

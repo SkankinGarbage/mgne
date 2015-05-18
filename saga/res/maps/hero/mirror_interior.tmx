@@ -36,7 +36,7 @@
   </object>
   <object id="22" name="tele" type="Event" x="192" y="384" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/mirror.tmx', 21, 35)"/>
+    <property name="onCollide" value="teleport('hero/mirror.tmx', 20, 34)"/>
    </properties>
   </object>
   <object id="23" name="tele" type="Event" x="240" y="64" width="16" height="16">
@@ -46,7 +46,7 @@
   </object>
   <object id="24" name="tele" type="Event" x="368" y="288" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/mirror.tmx', 27, 34)"/>
+    <property name="onCollide" value="teleport('hero/mirror.tmx', 26, 34)"/>
    </properties>
   </object>
   <object id="25" name="tele" type="Event" x="432" y="64" width="16" height="16">

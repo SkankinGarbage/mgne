@@ -40,7 +40,7 @@
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="hide" value="return not getSwitch('oracle01')"/>
-    <property name="onInteract" value="speak('Oracle', 'One can pass the gates through the shrine east of here.')"/>
+    <property name="onInteract" value="speak('Oracle', 'One can pass the gate through the shrine east of here.')"/>
    </properties>
   </object>
   <object id="23" name="mutant" type="Character" x="64" y="80" width="16" height="16">

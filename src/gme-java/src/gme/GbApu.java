@@ -582,7 +582,11 @@ final class GbWave extends GbOsc
 					if ( (delta = amp - last_amp) != 0 )
 					{
 						last_amp = amp;
-						output.addDelta( time, delta * vol_unit );
+						
+						// vv added by aking, not sure why null here
+						if (output != null) {
+							output.addDelta( time, delta * vol_unit );
+						}
 					}
 				}
 				while ( (time += period) < end_time );
