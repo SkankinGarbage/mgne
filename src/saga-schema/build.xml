@@ -1,100 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- WARNING: Eclipse auto-generated file.
-              Any modifications will be overwritten.
-              To include a user specific buildfile here, simply create one in the same
-              directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="saga-schema">
-    <property environment="env"/>
-    <property name="saga-desktop.location" value="../saga-desktop"/>
-    <property name="ECLIPSE_HOME" value="../../../Desktop/portable_executables/eclipse"/>
-    <property name="jgdb-schema.location" value="../jgdb-schema"/>
-    <property name="jgdbe.location" value="../jgdbe"/>
-    <property name="mgne-schema.location" value="../mgne-schema"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.7"/>
-    <property name="source" value="1.7"/>
-    <path id="jgdb-schema.classpath">
-        <pathelement location="${jgdb-schema.location}/bin"/>
-    </path>
-    <path id="jgdbe.classpath">
-        <pathelement location="${jgdbe.location}/bin"/>
-        <pathelement location="${jgdbe.location}/lib/jackson-annotations-2.0.4.jar"/>
-        <pathelement location="${jgdbe.location}/lib/jackson-core-2.0.4.jar"/>
-        <pathelement location="${jgdbe.location}/lib/jackson-databind-2.0.4.jar"/>
-        <path refid="jgdb-schema.classpath"/>
-    </path>
-    <path id="mgne-schema.classpath">
-        <pathelement location="${mgne-schema.location}/bin"/>
-        <path refid="jgdb-schema.classpath"/>
-        <path refid="jgdbe.classpath"/>
-    </path>
-    <path id="saga-schema.classpath">
-        <pathelement location="bin"/>
-        <path refid="jgdb-schema.classpath"/>
-        <path refid="mgne-schema.classpath"/>
-        <path refid="jgdbe.classpath"/>
-    </path>
-    <target name="init">
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="clean">
-        <delete dir="bin"/>
-    </target>
-    <target depends="clean" name="cleanall">
-        <ant antfile="build.xml" dir="${jgdb-schema.location}" inheritAll="false" target="clean"/>
-        <ant antfile="build.xml" dir="${jgdbe.location}" inheritAll="false" target="clean"/>
-        <ant antfile="build.xml" dir="${mgne-schema.location}" inheritAll="false" target="clean"/>
-    </target>
-    <target depends="build-subprojects,build-project" name="build"/>
-    <target name="build-subprojects">
-        <ant antfile="build.xml" dir="${jgdb-schema.location}" inheritAll="false" target="build-project">
-            <propertyset>
-                <propertyref name="build.compiler"/>
-            </propertyset>
-        </ant>
-        <ant antfile="build.xml" dir="${jgdbe.location}" inheritAll="false" target="build-project">
-            <propertyset>
-                <propertyref name="build.compiler"/>
-            </propertyset>
-        </ant>
-        <ant antfile="build.xml" dir="${mgne-schema.location}" inheritAll="false" target="build-project">
-            <propertyset>
-                <propertyref name="build.compiler"/>
-            </propertyset>
-        </ant>
-    </target>
-    <target depends="init" name="build-project">
-        <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src"/>
-            <classpath refid="saga-schema.classpath"/>
-        </javac>
-    </target>
-    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects">
-        <ant antfile="build.xml" dir="${saga-desktop.location}" inheritAll="false" target="clean"/>
-        <ant antfile="build.xml" dir="${saga-desktop.location}" inheritAll="false" target="build">
-            <propertyset>
-                <propertyref name="build.compiler"/>
-            </propertyset>
-        </ant>
-    </target>
-    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
-        <copy todir="${ant.library.dir}">
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </copy>
-        <unzip dest="${ant.library.dir}">
-            <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </unzip>
-    </target>
-    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
-        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
-        <antcall target="build"/>
+<project default="create_run_jar" name="Create Runnable Jar for Project saga-desktop with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/Users/aking_2/saga/saga/game.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="net.wombatrpgs.saga.core.Main"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ jackson-annotations-2.0.4.jar jackson-core-2.0.4.jar jackson-databind-2.0.4.jar gdx.jar jackson-core-2.0.4.jar jackson-databind-2.0.4.jar luaj-jse-3.0-beta2.jar asm-4.0.jar gdx-backend-lwjgl-natives.jar gdx-backend-lwjgl.jar gdx-natives.jar jackson-annotations-2.0.4.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="C:/Users/aking_2/saga/src/saga-desktop/bin"/>
+            <fileset dir="C:/Users/aking_2/saga/src/mgne/bin"/>
+            <fileset dir="C:/Users/aking_2/saga/src/jgdb-schema/bin"/>
+            <fileset dir="C:/Users/aking_2/saga/src/mgne-schema/bin"/>
+            <fileset dir="C:/Users/aking_2/saga/src/jgdbe/bin"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\jgdbe\lib" includes="jackson-annotations-2.0.4.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\jgdbe\lib" includes="jackson-core-2.0.4.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\jgdbe\lib" includes="jackson-databind-2.0.4.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\mgne\lib" includes="gdx.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\mgne\lib" includes="jackson-core-2.0.4.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\mgne\lib" includes="jackson-databind-2.0.4.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\mgne\lib" includes="luaj-jse-3.0-beta2.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\mgne\lib" includes="asm-4.0.jar"/>
+            <fileset dir="C:/Users/aking_2/saga/src/gme-java/bin"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\saga-desktop\lib" includes="gdx-backend-lwjgl-natives.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\saga-desktop\lib" includes="gdx-backend-lwjgl.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\saga-desktop\lib" includes="gdx-natives.jar"/>
+            <zipfileset dir="C:\Users\aking_2\saga\src\mgne\lib" includes="jackson-annotations-2.0.4.jar"/>
+            <fileset dir="C:/Users/aking_2/saga/src/saga-schema/bin"/>
+        </jar>
     </target>
 </project>
