@@ -2,24 +2,29 @@
 	"key" : "enemy_cat04_BLACK CAT",
 	"subfolder" : "level04",
 	"name" : "BLACK CAT",
-	"description" : "Converted from a report",
+	"description" : "mid danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_cat",
 	"species" : "BLACK CAT",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_rat",
+	"portrait" : "battle_portraits/cat.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 4,
 	"gp" : 240,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_bite",
+		"abil_cgaze"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 126,
+		"mhp" : 126,
+		"str" : 16,
+		"def" : 14,
+		"agi" : 24,
+		"mana" : 16,
+		"flags" : [ ]
 	}
 }

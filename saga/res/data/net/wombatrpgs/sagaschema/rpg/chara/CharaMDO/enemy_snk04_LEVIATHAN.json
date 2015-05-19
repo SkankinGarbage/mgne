@@ -2,24 +2,31 @@
 	"key" : "enemy_snk04_LEVIATHAN",
 	"subfolder" : "level04",
 	"name" : "LEVIATHAN",
-	"description" : "Converted from a report",
+	"description" : "hi danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_snk",
 	"species" : "LEVIATHAN",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_jelly",
+	"portrait" : "battle_portraits/snk.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 4,
 	"gp" : 240,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_bash",
+		"abil_constrict",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 175,
+		"mhp" : 175,
+		"str" : 20,
+		"def" : 15,
+		"agi" : 10,
+		"mana" : 15,
+		"flags" : [
+			"ANIMAL"
+		]
 	}
 }

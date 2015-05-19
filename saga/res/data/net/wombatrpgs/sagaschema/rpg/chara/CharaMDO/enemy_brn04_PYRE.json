@@ -2,24 +2,27 @@
 	"key" : "enemy_brn04_PYRE",
 	"subfolder" : "level04",
 	"name" : "PYRE",
-	"description" : "Converted from a report",
+	"description" : "low danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_brn",
 	"species" : "PYRE",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_ghost",
+	"portrait" : "battle_portraits/brn.png",
 	"meatEatLevel" : 4,
 	"meatTargetLevel" : 4,
 	"gp" : 240,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_burning"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 103,
+		"mhp" : 103,
+		"str" : 6,
+		"def" : 10,
+		"agi" : 17,
+		"mana" : 30,
+		"flags" : [ ]
 	}
 }

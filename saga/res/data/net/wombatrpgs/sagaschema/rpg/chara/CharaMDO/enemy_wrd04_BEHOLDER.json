@@ -1,25 +1,30 @@
 {
 	"key" : "enemy_wrd04_BEHOLDER",
 	"subfolder" : "level04",
-	"name" : "BEHOLDER",
-	"description" : "Converted from a report",
+	"name" : "NEPHIL",
+	"description" : "hi danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_wrd",
-	"species" : "BEHOLDER",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"species" : "NEPHIL",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/wrd.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 4,
 	"gp" : 240,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_punch",
+		"abil_beam",
+		"abil_oelement"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 103,
+		"mhp" : 103,
+		"str" : 16,
+		"def" : 13,
+		"agi" : 16,
+		"mana" : 21,
+		"flags" : [ ]
 	}
 }

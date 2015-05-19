@@ -2,24 +2,32 @@
 	"key" : "enemy_gst04_PHANTOM",
 	"subfolder" : "level04",
 	"name" : "PHANTOM",
-	"description" : "Converted from a report",
+	"description" : "mid danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gst",
 	"species" : "PHANTOM",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_ghost",
+	"portrait" : "battle_portraits/gst.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 4,
 	"gp" : 240,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_chill",
+		"abil_tremble",
+		"abil_touch",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 103,
+		"mhp" : 103,
+		"str" : 2,
+		"def" : 7,
+		"agi" : 9,
+		"mana" : 20,
+		"flags" : [
+			"UNDEAD"
+		]
 	}
 }

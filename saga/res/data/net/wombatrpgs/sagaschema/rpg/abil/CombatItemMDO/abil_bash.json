@@ -1,18 +1,18 @@
 {
-	"key" : "abil_sunburst",
+	"key" : "abil_bash",
 	"subfolder" : "abil",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "SUNBURST",
-	"itemDescription" : "Attacks with fire damage",
+	"abilityName" : "BASH",
+	"itemDescription" : "Attacks with high physical damage",
 	"type" : "ABILITY",
-	"uses" : 10,
+	"uses" : 3,
 	"cost" : 0,
-	"anim" : "banim_flame",
+	"anim" : "banim_punch",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_977923189"
+		"key" : "anon_CombatItemMDO_-2047418087"
 	},
 	"tier" : 0,
 	"robostats" : {

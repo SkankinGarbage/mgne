@@ -1,0 +1,11 @@
+{
+	"key" : "anon_CombatItemMDO_1111641790",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_1111641790",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "GROUP_ENEMY",
+	"status" : "status_curse",
+	"hit" : 70,
+	"accStat" : "MANA",
+	"evadeStat" : "MANA"
+}

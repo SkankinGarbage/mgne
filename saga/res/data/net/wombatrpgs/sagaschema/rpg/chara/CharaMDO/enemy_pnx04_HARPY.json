@@ -2,24 +2,30 @@
 	"key" : "enemy_pnx04_HARPY",
 	"subfolder" : "level04",
 	"name" : "HARPY",
-	"description" : "Converted from a report",
+	"description" : "mid danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_pnx",
 	"species" : "HARPY",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_bird",
+	"portrait" : "battle_portraits/brd.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 4,
 	"gp" : 240,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_gaze"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 150,
+		"mhp" : 150,
+		"str" : 13,
+		"def" : 13,
+		"agi" : 17,
+		"mana" : 17,
+		"flags" : [
+			"ANIMAL"
+		]
 	}
 }

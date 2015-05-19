@@ -2,24 +2,29 @@
 	"key" : "enemy_got04_IBEX",
 	"subfolder" : "level04",
 	"name" : "IBEX",
-	"description" : "Converted from a report",
+	"description" : "low danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_got",
 	"species" : "IBEX",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_horse",
+	"portrait" : "battle_portraits/got.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 4,
 	"gp" : 240,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_kick",
+		"abil_horn",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 150,
+		"mhp" : 150,
+		"str" : 18,
+		"def" : 12,
+		"agi" : 18,
+		"mana" : 16,
+		"flags" : [ ]
 	}
 }

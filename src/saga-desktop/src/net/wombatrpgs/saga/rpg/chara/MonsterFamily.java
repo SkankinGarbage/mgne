@@ -128,9 +128,9 @@ public class MonsterFamily {
 			return null;
 		}
 		
-		// Can't transform into monster we haven't implemented yet
+		// TODO: Can't transform into monster we haven't implemented yet
 		// change this once they're updated
-		if (best.meatEatLevel > 3) {
+		if (best.meatEatLevel > 4) {
 			return null;
 		}
 		

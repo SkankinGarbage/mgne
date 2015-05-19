@@ -6,7 +6,7 @@
 	"abilityName" : "CHILL",
 	"itemDescription" : "Attacks with ice damage",
 	"type" : "ABILITY",
-	"uses" : 20,
+	"uses" : 10,
 	"cost" : 0,
 	"anim" : "banim_ice",
 	"equip" : [ ],

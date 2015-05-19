@@ -2,24 +2,29 @@
 	"key" : "enemy_dem04_FAMILIAR",
 	"subfolder" : "level04",
 	"name" : "FAMILIAR",
-	"description" : "Converted from a report",
+	"description" : "low danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_dem",
 	"species" : "FAMILIAR",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/dem.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 4,
 	"gp" : 240,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_electro",
+		"abil_flame"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 126,
+		"mhp" : 126,
+		"str" : 16,
+		"def" : 14,
+		"agi" : 14,
+		"mana" : 14,
+		"flags" : [ ]
 	}
 }

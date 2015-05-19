@@ -2,24 +2,31 @@
 	"key" : "enemy_brd04_RAVEN",
 	"subfolder" : "level04",
 	"name" : "RAVEN",
-	"description" : "Converted from a report",
+	"description" : "low danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_brd",
 	"species" : "RAVEN",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_bird",
+	"portrait" : "battle_portraits/brd.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 4,
 	"gp" : 240,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_beak",
+		"abil_claw",
+		"abil_warning"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 82,
+		"mhp" : 82,
+		"str" : 15,
+		"def" : 15,
+		"agi" : 30,
+		"mana" : 10,
+		"flags" : [
+			"ANIMAL"
+		]
 	}
 }
