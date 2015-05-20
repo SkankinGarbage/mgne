@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="71">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="77">
  <properties>
   <property name="bgm" value="ffl2_apollo"/>
   <property name="name" value="F1 Gate"/>
  </properties>
  <tileset firstgid="1" name="lower" tilewidth="16" tileheight="16">
-  <image source="../tilesets/lower2.PNG" width="112" height="256"/>
+  <image source="../tilesets/lower2.PNG" width="112" height="272"/>
   <tile id="3">
    <properties>
     <property name="x" value=""/>
@@ -302,7 +302,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="52" height="48">
   <properties>
    <property name="z" value="0"/>
@@ -316,7 +316,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YsQmAMBAFUMGNbZ3DPWydQNzKRrASPYzGmPeakCPFJRy/SNMAwP8MJ3uIMkN5tMHz3SNdpBO9T39Qn7d1udFLCtH7sCshU8Zg/eumC/WvZ0jUUYa8rYR5p675rzHfKIfMhPL5k8rH2wMAQL1WWDDFlgAnAAA=
+   H4sIAAAAAAAAC+3YsQmAMBAFUMGpbZ3DPWydQBzJRrASPYzGmPeakCPFJRy/SNMAwP8MJ3uIMkN5tMHz3SNdpBO9T39Qn7d1udFLCtH7sCshU8Zg/eumC/WvZ0jUUYa8rYR5p675rzHfKIfMhPL5k8rH2wMAQL1WMNTJEQAnAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -345,7 +345,7 @@
     <property name="onCollide" value="teleport('hero/gate_interior.tmx', 19, 25)"/>
    </properties>
   </object>
-  <object id="50" name="tele" type="Event" x="256" y="368" width="16" height="16">
+  <object id="50" name="tele" type="Event" x="240" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate_interior.tmx', 4, 24)"/>
    </properties>
@@ -451,13 +451,19 @@
     <property name="onCollide" value="play('hero/gate02.lua')"/>
    </properties>
   </object>
+  <object id="71" name="target_a" type="Event" x="256" y="384" width="16" height="16"/>
+  <object id="76" name="mem_tele" type="Event" x="256" y="368" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'hero/oracle_f1.tmx', 'ENTRANCE', 'A')"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="52" height="48">
   <properties>
    <property name="z" value="1.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OwQkAIAwAse4/lPp0LDuE0FISuP9FAADAbCvb2Sn++OlWDwAAAAAAAEADD+V1OlQAJwAA
+   H4sIAAAAAAAAC+3OwQkAIAwAse6/l/p0JTuE0FISuP9FAADAbCvb2ake+ehWDwAAAAAAAEADD2ZxpdAAJwAA
   </data>
  </layer>
 </map>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="lower" tilewidth="16" tileheight="16">
- <image source="lower2.PNG" width="112" height="256"/>
+ <image source="lower2.PNG" width="112" height="272"/>
  <tile id="3">
   <properties>
    <property name="x" value=""/>
@@ -210,7 +210,32 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="75">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="76">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
  <tile id="77">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="81">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="82">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="83">
   <properties>
    <property name="x" value=""/>
   </properties>
@@ -230,6 +255,21 @@
    <frame tileid="98" duration="500"/>
    <frame tileid="105" duration="500"/>
   </animation>
+ </tile>
+ <tile id="88">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="89">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="90">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
  </tile>
  <tile id="91">
   <properties>
@@ -277,6 +317,11 @@
   </properties>
  </tile>
  <tile id="107">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="108">
   <properties>
    <property name="x" value=""/>
   </properties>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="43" tilewidth="16" tileheight="16" nextobjectid="37">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="43" tilewidth="16" tileheight="16" nextobjectid="39">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
   <property name="encounter" value="encounterset_level01_danger00"/>
   <property name="name" value="Oracle's Palace"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="41" height="43">
   <properties>
    <property name="z" value="0"/>
@@ -20,11 +20,11 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XMQrAIBAEQH8dSGuVB+S/SZNCGwMheuhMt4VwyLFwKQGwkrPzu5U8f7RXOaI8egC4bY0cwdHIlL723sjetI/zsY//so8wn7r3It8zUbivAXjrAt7hUouMGwAA
+   H4sIAAAAAAAAC+3XMQrAIBAEQF8eSGuVB+SxSZNCGwMheuhMt4VwyLFwKQGwkrPzu5U8f7RXOaI8egC4bY0cwdHIlL723sjetI/zsY//so8wn7r3It8zUbivAXjrAs/YzXiMGwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="15" name="tele" type="Event" x="320" y="192" width="16" height="16">
+  <object id="15" name="tele" type="Event" x="304" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 57, 18)"/>
    </properties>
@@ -82,6 +82,12 @@
     <property name="item" value="wpn_rapier"/>
    </properties>
   </object>
+  <object id="37" name="target_b" type="Event" x="320" y="208" width="16" height="16"/>
+  <object id="38" name="mem_tele" type="Event" x="320" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'hero/gate.tmx', 'ENTRANCE', 'B')"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="41" height="43">
   <properties>
@@ -96,7 +102,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3QoQ0AAAgEMfb37MsACBLst+7sVQEAAAAAyfpotu8jbwHyDAsbFbyMGwAA
+   H4sIAAAAAAAAC+3QoQ0AAAgEMfafgWEZAEGC/dadvSoAAAAAIFkfzfZ95C1AngFg2ilQjBsAAA==
   </data>
  </layer>
 </map>

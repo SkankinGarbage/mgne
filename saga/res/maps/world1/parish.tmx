@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="45" tilewidth="16" tileheight="16" nextobjectid="99">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="45" tilewidth="16" tileheight="16" nextobjectid="100">
  <properties>
   <property name="bgm" value="ffl2_hometown"/>
   <property name="name" value="Forest Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="48" height="45">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XUQ6DIAxAufIO4Q8fzO997Qa74mJCk4ZRRGhLzfqSZjpRHrU0cQ8h7EQ8bxB39ab8V/vM+K92mfFf7fHP/jP3J6GxWv6b0FgPuZCoI26H1vXNwBrOarl1PXXc7+FRi5LaGM290TsXjOvx19wbeC68lhLoOQefHMFYrvFaShI6xv54DdJroXKN54eoebaA52u8j4DmAlec3xHwszT8Z30pNPbuLK26kvSmck75XKn/mj/nXmjVSxzw7PHnqiVNan1tlf+b+P+srsCbI/+jfeaRHSPhH9FxyK7wy+Ut1SNrcPZ+Te+tOJd0f+XgBM83WzeaecfAO5itISv09M0UfnutFc6+/bGrpdy3eifVDy3lfmRfWnE/qNW9Jb8esLeVur4C5zed4ziOQ/MF2LCoXMAhAAA=
+   H4sIAAAAAAAAC+2XUQ6DIAxAOfYO4Q8fzO997QY732JCk4ZRRGhLzfqSZjpRHrU0cQ8h7EQ8bxB39ab8V/vM+K92mfFf7fHP/jP3J6GxWv6b0FgPuZCoI26H1vXNwBrOarl1PXXc7+FRi5LaGM290TsXjOvx19wbeC68lhLoOQefHMFYrvFaShI6xv54DdJroXKN54eoebaA52u8j4DmAlec3xHwszT8Z30pNPbuLK26kvSmck75XKn/mj/nXmjVSxzw7PHnqiVNan1tlf+b+P+srsCbI/+jfeaRHSPhH9FxyK7wy+Ut1SNrcPZ+Te+tOJd0f+XgBM83WzeaecfAO5itISv09M0UfnutFc6+/bGrpdy3eifVDy3lfmRfWnE/qNW9Jb8esLeVur4C5zed4ziOQ/MFu1z+fcAhAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

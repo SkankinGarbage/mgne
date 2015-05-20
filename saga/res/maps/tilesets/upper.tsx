@@ -245,6 +245,16 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="60">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="61">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
  <tile id="63">
   <properties>
    <property name="x" value=""/>
@@ -255,7 +265,17 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="69">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
  <tile id="72">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="80">
   <properties>
    <property name="x" value=""/>
   </properties>
@@ -266,6 +286,26 @@
   </properties>
  </tile>
  <tile id="88">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="89">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="90">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="92">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="98">
   <properties>
    <property name="x" value=""/>
   </properties>
