@@ -2,7 +2,7 @@
 	"key" : "enemy_gst02_GHOST",
 	"subfolder" : "level02",
 	"name" : "GHOST",
-	"description" : "mid danger",
+	"description" : "hi danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gst",
@@ -12,6 +12,7 @@
 	"meatEatLevel" : 3,
 	"meatTargetLevel" : 2,
 	"gp" : 80,
+	"loot" : "None",
 	"equipped" : [
 		"abil_chill",
 		"abil_tremble",

@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl02_JELLYFISH5-7",
+	"subfolder" : "level02",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_jly02_JELLYFISH",
+			"amount" : "5-7"
+		}
+	]
+}

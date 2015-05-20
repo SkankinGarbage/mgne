@@ -2,7 +2,7 @@
 	"key" : "enemy_goo02_GUMMY",
 	"subfolder" : "level02",
 	"name" : "GUMMY",
-	"description" : "hi danger",
+	"description" : "mid danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_goo",
@@ -12,6 +12,7 @@
 	"meatEatLevel" : 3,
 	"meatTargetLevel" : 2,
 	"gp" : 80,
+	"loot" : "None",
 	"equipped" : [
 		"abil_melt",
 		"abil_oweapon",

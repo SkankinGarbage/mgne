@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl02_JACKAL_TENGU_KELPIE1-3",
+	"subfolder" : "level02",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dog02_JACKAL",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_pnx02_TENGU",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_hrs02_KELPIE",
+			"amount" : "1-3"
+		}
+	]
+}

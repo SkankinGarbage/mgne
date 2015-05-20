@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl01_LOCUST4-8",
+	"subfolder" : "level01",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_fly01_LOCUST",
+			"amount" : "4-8"
+		}
+	]
+}

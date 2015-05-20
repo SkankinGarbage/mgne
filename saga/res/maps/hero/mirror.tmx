@@ -2,11 +2,11 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="52" tilewidth="16" tileheight="16" nextobjectid="46">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
-  <property name="encounter" value="encounterset_level01_danger01"/>
+  <property name="encounter" value="encounterset_level01_danger00"/>
   <property name="name" value="Mirror Shrine"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="64" height="52">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WMQ7DIBAEQL85beq0+UT6vNGVJTdg7mQZdJrpoEAILafdNgAAaPtcrKv7XqwBDq/BvegZZyvP4PfgXvSMMzN4rmieq4nmuSf7livPgIjsW5oBz/PvyfrPvgBM9Jt9AZZVpctl6XJr6+Wz1QkrdcVePludUFe8X6VMZcgU6Ev6EgAAMGIH7dzTXQA0AAA=
+   H4sIAAAAAAAAC+3WMQ7DIBAEQH87beq0+UT6/M+VJTdg7mQZdJrpoEAILafdNgAAaPtcrKv7XqwBDq/BvegZZyvP4PfgXvSMMzN4rmieq4nmuSf7livPgIjsW5oBz/PvyfrPvgBM9Jt9AZZVpctl6XJr6+Wz1QkrdcVePludUFe8X6VMZcgU6Ev6EgAAMGIHnsX73QA0AAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

@@ -8,6 +8,8 @@ package net.wombatrpgs.mgnse.editor;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 import javax.swing.JComboBox;
 
@@ -24,6 +26,7 @@ import net.wombatrpgs.mgnse.tree.SchemaNode;
 public class ReferenceField extends FieldPanel {
 
 	private static final long serialVersionUID = 4140236210558060162L;
+	private List<String> inputOptions;
 	private JComboBox<String> input;
 	
 	/**
@@ -40,10 +43,19 @@ public class ReferenceField extends FieldPanel {
 		if (source.isAnnotationPresent(Nullable.class)) {
 			input.addItem("None");
 		}
+		inputOptions = new ArrayList<String>();
 		for (SchemaNode node : nodes) {
 			for (int i = 0; i < node.getChildCount(); i++) {
 				recursivelyAdd((SchemaNode) node.getChildAt(i));
 			}
+		}
+		inputOptions.sort(new Comparator<String>() {
+			@Override public int compare(String arg0, String arg1) {
+				return arg0.compareTo(arg1);
+			}
+		});
+		for (String option : inputOptions) {
+			input.addItem(option);
 		}
 		if (defaultData != null && !defaultData.equals("")) {
 			selectString(input, defaultData);
@@ -66,7 +78,7 @@ public class ReferenceField extends FieldPanel {
 	
 	protected void recursivelyAdd(SchemaNode node) {
 		if (node.isLeaf()) {
-			input.addItem(node.getObjectName());
+			inputOptions.add(node.getObjectName());
 		} else {
 			for (int i = 0; i < node.getChildCount(); i++) {
 				recursivelyAdd((SchemaNode) node.getChildAt(i));

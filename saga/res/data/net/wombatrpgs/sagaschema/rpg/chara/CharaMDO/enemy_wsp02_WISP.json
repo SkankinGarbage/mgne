@@ -12,9 +12,10 @@
 	"meatEatLevel" : 3,
 	"meatTargetLevel" : 2,
 	"gp" : 80,
+	"loot" : "None",
 	"equipped" : [
 		"abil_sunburst",
-		"abil_claw"
+		"abil_chill"
 	],
 	"stats" : {
 		"hp" : 60,

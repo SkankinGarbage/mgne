@@ -1,12 +1,12 @@
 {
-	"key" : "encounter_lvl02_ANGEL",
+	"key" : "encounter_lvl02_WISP1-3",
 	"subfolder" : "level02",
 	"name" : "",
 	"description" : "",
 	"members" : [
 		{
-			"enemy" : "enemy_wrd02_ANGEL",
-			"amount" : "1-1"
+			"enemy" : "enemy_wsp02_WISP",
+			"amount" : "1-3"
 		}
 	]
 }

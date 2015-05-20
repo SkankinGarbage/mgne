@@ -6,30 +6,26 @@
 	"encounters" : [
 		{
 			"encounter" : "encounter_lvl01_ANNIS",
-			"weight" : 48
+			"weight" : 16
 		},
 		{
 			"encounter" : "encounter_lvl01_ASP",
-			"weight" : 48
-		},
-		{
-			"encounter" : "encounter_lvl01_DIVINER",
-			"weight" : 32
+			"weight" : 16
 		},
 		{
 			"encounter" : "encounter_lvl01_NIX",
-			"weight" : 32
+			"weight" : 16
 		},
 		{
 			"encounter" : "encounter_lvl01_VERMIN",
-			"weight" : 32
+			"weight" : 16
 		},
 		{
 			"encounter" : "encounter_lvl01_NIX2-3_VERMIN0-1",
 			"weight" : 32
 		},
 		{
-			"encounter" : "encounter_lvl01_LOCUST",
+			"encounter" : "encounter_lvl01_LOCUST4-8",
 			"weight" : 16
 		},
 		{
@@ -38,15 +34,27 @@
 		},
 		{
 			"encounter" : "encounter_lvl01_ASP2-3_VERMIN0-1",
-			"weight" : 4
+			"weight" : 8
 		},
 		{
-			"encounter" : "encounter_lvl01_LOCUST2-4",
-			"weight" : 2
+			"encounter" : "encounter_lvl01_BACTERIUM",
+			"weight" : 8
 		},
 		{
 			"encounter" : "encounter_lvl01_DIVINER2-3_ANNIS0-1",
-			"weight" : 2
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl01_BACTERIUM2-4",
+			"weight" : 8
+		},
+		{
+			"encounter" : "encounter_lvl01_STALLION",
+			"weight" : 8
+		},
+		{
+			"encounter" : "encounter_lvl01_PUPPET",
+			"weight" : 8
 		}
 	],
 	"steps" : 42

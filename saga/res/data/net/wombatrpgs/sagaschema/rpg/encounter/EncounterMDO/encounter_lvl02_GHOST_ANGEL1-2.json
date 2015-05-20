@@ -1,5 +1,5 @@
 {
-	"key" : "encounter_lvl02_GHOST",
+	"key" : "encounter_lvl02_GHOST_ANGEL1-2",
 	"subfolder" : "level02",
 	"name" : "",
 	"description" : "",
@@ -7,6 +7,10 @@
 		{
 			"enemy" : "enemy_gst02_GHOST",
 			"amount" : "1-1"
+		},
+		{
+			"enemy" : "enemy_wrd02_ANGEL",
+			"amount" : "1-2"
 		}
 	]
 }
