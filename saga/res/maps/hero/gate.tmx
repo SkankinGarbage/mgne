@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="77">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="78">
  <properties>
   <property name="bgm" value="ffl2_apollo"/>
   <property name="name" value="F1 Gate"/>
@@ -345,7 +345,7 @@
     <property name="onCollide" value="teleport('hero/gate_interior.tmx', 19, 25)"/>
    </properties>
   </object>
-  <object id="50" name="tele" type="Event" x="240" y="368" width="16" height="16">
+  <object id="50" name="tele" type="Event" x="256" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate_interior.tmx', 4, 24)"/>
    </properties>
@@ -448,13 +448,7 @@
   <object id="69" name="gate" type="Event" x="416" y="224" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('hero_done')"/>
-    <property name="onCollide" value="play('hero/gate02.lua')"/>
-   </properties>
-  </object>
-  <object id="71" name="target_a" type="Event" x="256" y="384" width="16" height="16"/>
-  <object id="76" name="mem_tele" type="Event" x="256" y="368" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'hero/oracle_f1.tmx', 'ENTRANCE', 'A')"/>
+    <property name="onCollide" value="teleport('tower/f1.tmx', 8, 13, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>

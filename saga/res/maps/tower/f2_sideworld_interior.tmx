@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="12" height="16" tilewidth="16" tileheight="16" nextobjectid="49">
+ <properties>
+  <property name="bgm" value="ffl2_ruins"/>
+  <property name="encounter" value="encounterset_level01_danger00"/>
+  <property name="name" value="Mirror Shrine"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="12" height="16">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC82SIQ4AIAzETs7wFcAA//8ZYMc6DUkNqViaK5JKgn/3rwHkT4B8A370I8iventl/gh6ZT7d95vvW2X7881MvL8eNDPx/tZhAz64e2UAAwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="12" height="16">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGBpgHgH5WhLNayPXIVQAcwfQbmoBQvFBT0BJeAIAKorhAwADAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="22" name="tele" type="Event" x="64" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f2_sideworld.tmx', 16, 17)"/>
+   </properties>
+  </object>
+  <object id="47" name="npc" type="Character" x="48" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="hide" value="return getSwitch('f2_sideworld')"/>
+    <property name="onInteract" value="play('tower/f2.lua')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="12" height="16">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYOAAL4nq9UlUb0ZAHgDW2FGkAAMAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="12" height="16">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYOiAShLVNxGQBwCCQ46VAAMAAA==
+  </data>
+ </layer>
+</map>

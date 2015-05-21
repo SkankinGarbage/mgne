@@ -24,7 +24,7 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="15" name="tele" type="Event" x="304" y="192" width="16" height="16">
+  <object id="15" name="tele" type="Event" x="320" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 57, 18)"/>
    </properties>
@@ -80,12 +80,6 @@
   <object id="34" name="chest" type="Chest" x="464" y="480" width="16" height="16">
    <properties>
     <property name="item" value="wpn_rapier"/>
-   </properties>
-  </object>
-  <object id="37" name="target_b" type="Event" x="320" y="208" width="16" height="16"/>
-  <object id="38" name="mem_tele" type="Event" x="320" y="192" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'hero/gate.tmx', 'ENTRANCE', 'B')"/>
    </properties>
   </object>
  </objectgroup>

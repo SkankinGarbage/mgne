@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="37" tilewidth="16" tileheight="16" nextobjectid="48">
+ <properties>
+  <property name="bgm" value="ffl2_ruins"/>
+  <property name="encounter" value="encounterset_level01_danger00"/>
+  <property name="name" value="Mirror Shrine"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="41" height="37">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3RwQqAIAzGcX289hTZxbpU73/KYMIQpQjchL7DH4WC/ZjknCOEEELdmwYwPPly1hYYdXyjOmHs4xvBec/3wjKngmgx8tb25LmYWlMHn5v4prXf0lQW2UXi3vq3p7M1U+4xVPZYS+Pdy5k7v3PuNHJ92a+l643T2gSjjtPaAqOO09qAEEJ/6QJVfmVstBcAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="41" height="37">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OMQEAAAQAMPX1EVAHB4ctwSIAAGBHXgcAgJG6DgA80l+hVdW0FwAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="46" name="tele" type="Event" x="240" y="256" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f2_sideworld_interior.tmx', 4, 13, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="47" name="tele" type="Event" x="320" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f2.tmx', 6, 15, 'SOUTH')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="41" height="37" visible="0">
+  <properties>
+   <property name="z" value="1.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQ0PoAAAAAAAgAcD/DjLobQXAAA=
+  </data>
+ </layer>
+</map>
