@@ -3,7 +3,7 @@
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
-  <property name="name" value="1"/>
+  <property name="name" value="Floor 4"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="120" source="../tilesets/upper.tsx"/>

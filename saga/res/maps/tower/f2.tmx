@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="47" tilewidth="16" tileheight="16" nextobjectid="70">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="47" tilewidth="16" tileheight="16" nextobjectid="71">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
-  <property name="name" value="1"/>
+  <property name="name" value="Floor 2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="120" source="../tilesets/upper.tsx"/>
@@ -34,6 +34,11 @@
   <object id="69" name="mem_tele" type="Event" x="48" y="704" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/f1.tmx', 'ENTRANCE', 'B')"/>
+   </properties>
+  </object>
+  <object id="70" name="tele" type="Event" x="96" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f2_sideworld.tmx', 20, 28)"/>
    </properties>
   </object>
  </objectgroup>

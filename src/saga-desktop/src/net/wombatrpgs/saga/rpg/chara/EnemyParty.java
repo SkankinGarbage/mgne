@@ -115,16 +115,22 @@ public class EnemyParty extends Party {
 	protected static PartyMDO constructMDO(EncounterMDO encounter) {
 		List<PartyEntryMDO> partyMDOs = new ArrayList<PartyEntryMDO>();
 		for (EncounterMemberMDO memberMDO : encounter.members) {
-			String amt = memberMDO.amount;
-			int min = Integer.valueOf(amt.substring(0, amt.indexOf('-')));
-			int max = Integer.valueOf(amt.substring(amt.indexOf('-') + 1));
 			PartyEntryMDO entryMDO = new PartyEntryMDO();
 			entryMDO.monster = memberMDO.enemy;
-			if (max == min) {
-				entryMDO.count = max;
+			
+			String amt = memberMDO.amount;
+			if (amt.indexOf('-') == -1) {
+				entryMDO.count = Integer.valueOf(amt);
 			} else {
-				entryMDO.count = MGlobal.rand.nextInt(max - min + 1) + min;
+				int min = Integer.valueOf(amt.substring(0, amt.indexOf('-')));
+				int max = Integer.valueOf(amt.substring(amt.indexOf('-') + 1));
+				if (max == min) {
+					entryMDO.count = max;
+				} else {
+					entryMDO.count = MGlobal.rand.nextInt(max - min + 1) + min;
+				}
 			}
+			
 			if (entryMDO.count > 0) {
 				partyMDOs.add(entryMDO);
 			}

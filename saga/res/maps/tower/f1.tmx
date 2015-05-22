@@ -3,7 +3,7 @@
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
-  <property name="name" value="1"/>
+  <property name="name" value="Floor 1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="120" source="../tilesets/upper.tsx"/>
@@ -24,10 +24,10 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="63" name="gate" type="Event" x="112" y="224" width="16" height="16">
+  <object id="63" name="gate" type="Event" x="112" y="208" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_gate"/>
-    <property name="onCollide" value=""/>
+    <property name="onCollide" value="teleport('hero/gate.tmx', 26, 15, 'SOUTH')"/>
    </properties>
   </object>
   <object id="64" name="mem_tele" type="Event" x="112" y="432" width="16" height="16">

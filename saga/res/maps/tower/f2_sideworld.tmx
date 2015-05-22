@@ -3,7 +3,7 @@
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
   <property name="encounter" value="encounterset_level01_danger00"/>
-  <property name="name" value="Mirror Shrine"/>
+  <property name="name" value="Floor 2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="120" source="../tilesets/upper.tsx"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OMQEAAAQAMPX1EVAHB4ctwSIAAGBHXgcAgJG6DgA80l+hVdW0FwAA
+   H4sIAAAAAAAAC+3OMQEAAAQAMPWVkk0HB4ctwSIAAGBHXgcAgJG6DgA80hhU3cm0FwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

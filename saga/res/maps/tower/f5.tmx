@@ -3,7 +3,7 @@
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
-  <property name="name" value="1"/>
+  <property name="name" value="Floor 5"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="120" source="../tilesets/upper.tsx"/>
@@ -30,8 +30,9 @@
     <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/4.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
-  <object id="82" name="gate" type="Event" x="432" y="336" width="16" height="16">
+  <object id="82" name="gate" type="Event" x="432" y="320" width="16" height="32">
    <properties>
+    <property name="appearance" value="anim_gate"/>
     <property name="onCollide" value="teleport('tower/f5.tmx', 28, 23, 'NORTH')"/>
    </properties>
   </object>

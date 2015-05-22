@@ -34,6 +34,7 @@ public class SagaSceneLib extends TwoArgFunction {
 		env.set("addItem", new SceneAddItem());
 		env.set("shake", new SceneScreenShake());
 		env.set("memTele", new SceneMemoryTeleport());
+		env.set("heal", new SceneHeal());
 		
 		env.set("sagalib", library);
 		return library;
