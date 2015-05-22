@@ -8,6 +8,7 @@ package net.wombatrpgs.mgnse.editor;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -49,11 +50,7 @@ public class ReferenceField extends FieldPanel {
 				recursivelyAdd((SchemaNode) node.getChildAt(i));
 			}
 		}
-		inputOptions.sort(new Comparator<String>() {
-			@Override public int compare(String arg0, String arg1) {
-				return arg0.compareTo(arg1);
-			}
-		});
+		Collections.sort(inputOptions);
 		for (String option : inputOptions) {
 			input.addItem(option);
 		}
