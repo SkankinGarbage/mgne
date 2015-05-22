@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="31" height="33" tilewidth="16" tileheight="16" nextobjectid="76">
+ <properties>
+  <property name="bgm" value="ffl1_theme"/>
+  <property name="encounter" value="encounterset_level02_danger00"/>
+  <property name="name" value="1"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="31" height="33">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WsQrAIAxE/bzO3foDLv3/vXQoBInpS6og1cAt5fpOEQ9T4nMAeYcwH+2GPByZTZmtfJHszVA0mzJb+Vb2yp4lu+ybGksT9Vg8ee+l1+qHWxl4ajwtOwsRLlmfxiNn00ue7LOxb+R90z1E/h95338/7x59RXmkr2j/eXiat+RpTKuvKI+edw/fyp4vm97HKLP2nb4J3vrDYmq8L+8Rj2o8Op4sOhdju/30/A8AAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="31" height="33">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAPBsiQQ7YPwPAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="70" name="target_b" type="Event" x="80" y="464" width="16" height="16"/>
+  <object id="71" name="mem_tele" type="Event" x="80" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/f2.tmx', 'ENTRANCE', 'B')"/>
+   </properties>
+  </object>
+  <object id="72" name="target_a" type="Event" x="400" y="464" width="16" height="16"/>
+  <object id="73" name="mem_tele" type="Event" x="400" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/f4.tmx', 'ENTRANCE', 'A')"/>
+   </properties>
+  </object>
+  <object id="74" name="crystal" type="Event" x="80" y="96" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="play('tower/crystal.lua')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="31" height="33">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3NQQ0AQAgEsdXI7/wbQQMJOT6tgJkEAAAAknfYq+X3pHf5/qUBbhiEHvwPAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="31" height="33">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3NsQ0AAAjDsL7NyuU8UYnFPiBJAAAA4Nc89rb8bvcaDt2gtav8DwAA
+  </data>
+ </layer>
+</map>

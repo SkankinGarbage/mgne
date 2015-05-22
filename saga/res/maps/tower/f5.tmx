@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="70" height="47" tilewidth="16" tileheight="16" nextobjectid="83">
+ <properties>
+  <property name="bgm" value="ffl1_theme"/>
+  <property name="encounter" value="encounterset_level02_danger00"/>
+  <property name="name" value="1"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="70" height="47">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YwQ6CMBBE4ed60pNekDsX4/9flcCGcbItqPHQ7rxkQsCEhJfubm3XCSGEEDEYnIjFwxUiL9v6GCFaM9taSRCtmW2toBdbM1GxeklOotaSfTfXENdSNDfmBGvo3r3XUsQ+4/UVTsQ+k+srXp+JBHrx9rvRvZiHB2Sg36PA3/1wwt5ah+ezeekh6CXKvOb5PN/3TsxLa/Pa66X4HxH7askLzutcaoLPDjA8h/e8pMK7avQyZuL9DzI/3qxOhXfV6OXIvu38ymm99nTf4r7vqJe5Fi7rdaL7yF7mWrit14nuW/WSy5HvzZ3H1D6PSvPjWy+5d9ZEaX6gGzxzSZnn3tk4pgVwX/9J/dS2Lj4F9/V7btBJK+uiBLthP/g8ihPD3Hi9GHtsJCcG9mL20lJP/RbPi5CXHHyuKS8LeC5T4x72X+C5jPqtEEIIIX7lCWASieFoMwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="70" height="47">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WMQqAMAwF0F7b1dupm3ogWxx0KYKDKfY9CHQKIUP6UwIAejflGnIt0YM0Zs015tqjBwF+o3Znp0+naEvZSe3Oljvc626e/p71kykAAC4ll83pzG/3d3SvaCWXbenMb/d3dC8AAAAAAADeOwA25J0gaDMAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="78" name="target_b" type="Event" x="432" y="592" width="16" height="16"/>
+  <object id="79" name="mem_tele" type="Event" x="432" y="608" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/4.tmx', 'ENTRANCE', 'A')"/>
+   </properties>
+  </object>
+  <object id="82" name="gate" type="Event" x="432" y="336" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f5.tmx', 28, 23, 'NORTH')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="70" height="47">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OQQ0AIAwEsInkQ/DvAxl3WVoFnQEAAAAAAAAAAADoc9OBUicdKPXSAQBghQ8nIe8NaDMAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="70" height="47">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3ORxEAAAgAIGv7NbkxHAcJiAAAAAAAAAAAAADgipwOLFXTAQDghQZ6vXOxaDMAAA==
+  </data>
+ </layer>
+</map>
