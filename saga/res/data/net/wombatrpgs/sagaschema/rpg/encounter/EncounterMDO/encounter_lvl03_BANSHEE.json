@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl03_BANSHEE",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_hag03_BANSHEE",
+			"amount" : "1"
+		}
+	]
+}

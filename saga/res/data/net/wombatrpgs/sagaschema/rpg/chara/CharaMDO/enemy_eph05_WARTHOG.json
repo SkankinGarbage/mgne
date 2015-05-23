@@ -2,24 +2,29 @@
 	"key" : "enemy_eph05_WARTHOG",
 	"subfolder" : "level05",
 	"name" : "WARTHOG",
-	"description" : "Converted from a report",
+	"description" : "danger 2",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_eph",
 	"species" : "WARTHOG",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_horse",
+	"portrait" : "battle_portraits/eph.png",
 	"meatEatLevel" : 6,
 	"meatTargetLevel" : 5,
 	"gp" : 400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_tusk"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 150,
+		"mhp" : 150,
+		"str" : 26,
+		"def" : 16,
+		"agi" : 25,
+		"mana" : 12,
+		"flags" : [
+			"ANIMAL"
+		]
 	}
 }

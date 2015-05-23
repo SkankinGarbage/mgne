@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl03_BANSHEE_IMP1-3_RED BONE",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_hag03_BANSHEE",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_dem03_IMP",
+			"amount" : "1-3"
+		},
+		{
+			"enemy" : "enemy_skl03_RED BONE",
+			"amount" : "1"
+		}
+	]
+}

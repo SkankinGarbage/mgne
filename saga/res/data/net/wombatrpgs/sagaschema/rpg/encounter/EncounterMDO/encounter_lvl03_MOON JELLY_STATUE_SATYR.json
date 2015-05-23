@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl03_MOON JELLY_STATUE_SATYR",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_jly03_MOON JELLY",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_gol03_STATUE",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_got03_SATYR",
+			"amount" : "1"
+		}
+	]
+}

@@ -8,7 +8,7 @@
 	"family" : "mfamily_zom",
 	"species" : "ZOMBIE",
 	"appearance" : "4dir_skeleton",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/zom.png",
 	"meatEatLevel" : 4,
 	"meatTargetLevel" : 3,
 	"gp" : 120,

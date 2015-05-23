@@ -2,24 +2,29 @@
 	"key" : "enemy_dis05_VIRUS",
 	"subfolder" : "level05",
 	"name" : "VIRUS",
-	"description" : "Converted from a report",
+	"description" : "danger 2",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_dis",
 	"species" : "VIRUS",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_slime",
+	"portrait" : "battle_portraits/dis.png",
 	"meatEatLevel" : 6,
 	"meatTargetLevel" : 5,
 	"gp" : 400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_acid",
+		"abil_poison",
+		"abil_dskin"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 126,
+		"mhp" : 126,
+		"str" : 5,
+		"def" : 14,
+		"agi" : 22,
+		"mana" : 25,
+		"flags" : [ ]
 	}
 }

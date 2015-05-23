@@ -2,24 +2,30 @@
 	"key" : "enemy_brn05_HEATHEN",
 	"subfolder" : "level05",
 	"name" : "HEATHEN",
-	"description" : "Converted from a report",
+	"description" : "danger 3",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_brn",
 	"species" : "HEATHEN",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_ghost",
+	"portrait" : "battle_portraits/brn.png",
 	"meatEatLevel" : 6,
 	"meatTargetLevel" : 5,
 	"gp" : 400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_sword",
+		"abil_flame",
+		"abil_ofire",
+		"abil_xice"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 150,
+		"mhp" : 150,
+		"str" : 24,
+		"def" : 16,
+		"agi" : 22,
+		"mana" : 22,
+		"flags" : [ ]
 	}
 }

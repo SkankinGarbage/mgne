@@ -2,24 +2,28 @@
 	"key" : "enemy_zom05_GHOUL",
 	"subfolder" : "level05",
 	"name" : "GHOUL",
-	"description" : "Converted from a report",
+	"description" : "danger 1",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_zom",
 	"species" : "GHOUL",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_skeleton",
+	"portrait" : "battle_portraits/zom.png",
 	"meatEatLevel" : 6,
 	"meatTargetLevel" : 5,
 	"gp" : 400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_bite",
+		"abil_pfang"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 202,
+		"mhp" : 202,
+		"str" : 23,
+		"def" : 9,
+		"agi" : 16,
+		"mana" : 16,
+		"flags" : [ ]
 	}
 }

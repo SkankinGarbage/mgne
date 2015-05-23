@@ -4,6 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "SELFIX",
+	"itemDescription" : null,
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 0,

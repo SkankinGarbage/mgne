@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl03_GIANT RAT0-2_RED BONE2-3",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rat03_GIANT RAT",
+			"amount" : "0-2"
+		},
+		{
+			"enemy" : "enemy_skl03_RED BONE",
+			"amount" : "1-3"
+		}
+	]
+}

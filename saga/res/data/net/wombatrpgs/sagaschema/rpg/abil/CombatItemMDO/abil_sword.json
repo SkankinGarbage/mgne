@@ -1,0 +1,21 @@
+{
+	"key" : "abil_sword",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "SWORD",
+	"itemDescription" : "Attacks with high weapon damage",
+	"type" : "ABILITY",
+	"uses" : 20,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_-970248072"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

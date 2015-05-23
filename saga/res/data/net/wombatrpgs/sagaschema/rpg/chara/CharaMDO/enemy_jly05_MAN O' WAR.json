@@ -2,7 +2,7 @@
 	"key" : "enemy_jly05_MAN O' WAR",
 	"subfolder" : "level05",
 	"name" : "MAN O' WAR",
-	"description" : "Converted from a report",
+	"description" : "danger 1",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_jly",
@@ -12,14 +12,24 @@
 	"meatEatLevel" : 6,
 	"meatTargetLevel" : 5,
 	"gp" : 400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_tentacle",
+		"abil_sting",
+		"abil_heal",
+		"abil_recover",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 126,
+		"mhp" : 126,
+		"str" : 9,
+		"def" : 16,
+		"agi" : 19,
+		"mana" : 22,
+		"flags" : [
+			"AQUATIC",
+			"ANIMAL"
+		]
 	}
 }

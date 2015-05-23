@@ -1,18 +1,18 @@
 {
-	"key" : "wpn_katana",
+	"key" : "wpn_knifePsi",
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "KATANA",
-	"itemDescription" : "Attacks with weapon damage based on user agility (tier 6)",
+	"abilityName" : "PSI KNIFE",
+	"itemDescription" : "Attacks with weapon damage based on user mana (tier 6)",
 	"type" : "ITEM",
-	"uses" : 50,
-	"cost" : 9800,
+	"uses" : 0,
+	"cost" : 0,
 	"anim" : "banim_slash_agi",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_-1465126635"
+		"key" : "anon_CombatItemMDO_276434505"
 	},
 	"tier" : 6,
 	"robostats" : {
@@ -22,7 +22,7 @@
 				"value" : 54.0
 			},
 			{
-				"stat" : "AGI",
+				"stat" : "MANA",
 				"value" : 12.0
 			}
 		]

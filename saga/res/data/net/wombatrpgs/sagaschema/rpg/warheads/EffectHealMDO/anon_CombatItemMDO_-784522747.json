@@ -1,0 +1,19 @@
+{
+	"key" : "anon_CombatItemMDO_-784522747",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-784522747",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ALLY",
+	"base" : 12,
+	"power" : 3,
+	"powerStat" : "MANA",
+	"heals" : [
+		"status_blind",
+		"status_confuse",
+		"status_curse",
+		"status_paralyze",
+		"status_poison",
+		"status_sleep",
+		"status_stone"
+	]
+}

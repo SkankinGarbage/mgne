@@ -2,24 +2,30 @@
 	"key" : "enemy_dem05_GARGOYLE",
 	"subfolder" : "level05",
 	"name" : "GARGOYLE",
-	"description" : "Converted from a report",
+	"description" : "danger 1",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_dem",
 	"species" : "GARGOYLE",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/dem.png",
 	"meatEatLevel" : 6,
 	"meatTargetLevel" : 5,
 	"gp" : 400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_dive",
+		"abil_thunder",
+		"abil_electro"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 150,
+		"mhp" : 150,
+		"str" : 20,
+		"def" : 20,
+		"agi" : 18,
+		"mana" : 19,
+		"flags" : [ ]
 	}
 }

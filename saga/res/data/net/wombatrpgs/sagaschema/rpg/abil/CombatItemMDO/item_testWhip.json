@@ -4,6 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "WHIP",
+	"itemDescription" : null,
 	"type" : "ITEM",
 	"uses" : 30,
 	"cost" : 30,

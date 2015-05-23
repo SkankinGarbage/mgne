@@ -4,6 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$BSILVER",
+	"itemDescription" : null,
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 5000,

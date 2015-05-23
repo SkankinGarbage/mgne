@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl03_BEETLE",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_arm03_BEETLE",
+			"amount" : "1"
+		}
+	]
+}

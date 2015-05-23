@@ -2,24 +2,31 @@
 	"key" : "enemy_skl05_KNIGHT",
 	"subfolder" : "level05",
 	"name" : "KNIGHT",
-	"description" : "Converted from a report",
+	"description" : "danger 3",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_skl",
 	"species" : "KNIGHT",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/skl.png",
 	"meatEatLevel" : 6,
 	"meatTargetLevel" : 5,
 	"gp" : 400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_sword",
+		"abil_bone",
+		"abil_oweapon"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 150,
+		"mhp" : 150,
+		"str" : 25,
+		"def" : 25,
+		"agi" : 20,
+		"mana" : 20,
+		"flags" : [
+			"UNDEAD"
+		]
 	}
 }

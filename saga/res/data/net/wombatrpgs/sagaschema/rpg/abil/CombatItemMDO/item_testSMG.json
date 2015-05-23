@@ -4,6 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "SMG",
+	"itemDescription" : null,
 	"type" : "ITEM",
 	"uses" : 30,
 	"cost" : 1500,

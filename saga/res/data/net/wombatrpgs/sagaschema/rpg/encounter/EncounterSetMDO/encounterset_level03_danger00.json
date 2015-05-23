@@ -1,0 +1,41 @@
+{
+	"key" : "encounterset_level03_danger00",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl03_BANSHEE",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl03_BEETLE",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl03_IMP1-3",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl03_SOLDIER",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl03_STATUE",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl03_ZOMBIE",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl03_GIANT RAT0-2_RED BONE2-3",
+			"weight" : 8
+		},
+		{
+			"encounter" : "encounter_lvl03_MOON JELLY_STATUE_SATYR",
+			"weight" : 8
+		}
+	],
+	"steps" : 42
+}

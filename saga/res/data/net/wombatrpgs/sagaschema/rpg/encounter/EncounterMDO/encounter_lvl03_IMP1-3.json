@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl03_IMP1-3",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dem03_IMP",
+			"amount" : "1-3"
+		}
+	]
+}

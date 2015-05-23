@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl03_SOLDIER",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_swd03_SOLDIER",
+			"amount" : "1"
+		}
+	]
+}

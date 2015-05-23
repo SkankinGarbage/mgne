@@ -2,25 +2,28 @@
 	"key" : "enemy_psi05_PSYCHOPATH",
 	"subfolder" : "level05",
 	"name" : "PSYCHOPATH",
-	"description" : "Converted from a report",
-	"gender" : "NONE",
-	"race" : "MONSTER",
-	"family" : "mfamily_psi",
+	"description" : "danger 1",
+	"gender" : "MALE",
+	"race" : "HUMAN",
+	"family" : "None",
 	"species" : "PSYCHOPATH",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/psi.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 5,
 	"gp" : 400,
-	"loot" : null,
-	"equipped" : [ ],
+	"loot" : "item_hp400",
+	"equipped" : [
+		"wpn_knifePsi",
+		"wpn_whip"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 150,
+		"mhp" : 150,
+		"str" : 20,
+		"def" : 18,
+		"agi" : 26,
+		"mana" : 26,
+		"flags" : [ ]
 	}
 }
