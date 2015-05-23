@@ -1,0 +1,20 @@
+{
+	"key" : "terrain_world2",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"terrain" : "lower/0",
+			"encounters" : "encounterset_level03_danger00"
+		},
+		{
+			"terrain" : "lower/72",
+			"encounters" : "encounterset_level03_danger00"
+		},
+		{
+			"terrain" : "lower/64",
+			"encounters" : "encounterset_level03_danger01"
+		}
+	]
+}
