@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" nextobjectid="19">
+ <properties>
+  <property name="bgm" value="ffl3_overworld"/>
+  <property name="name" value="Home World"/>
+  <property name="terrainEncounter" value="terrain_world1"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="83" height="47">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3YS47CMBAEUOda7LIkB8j9j8IGS62mP+W/g3pRYmBIJn4p2wx3SumORCKRSCQSiSzJRbL6Wp6cS8jK6zlIVtvwvL9BHWs9DyWt51jtxx1pEMccbVyam3Z8y71Y4cm98s95XG/htRpPxJAfr3kh92am58GMPLPa3yNuyL2wXtfuzwzL7Fg6vhZrxA55rfScOzoi4ysdO50bLdfkdXsHx5Hj9Hpe42atMSMsa8Y6ynLWvdnB0urA9T0n2hX0fuT39rrWnS2pi2fp9QV9b499bYRlqye3RD17zAP+/wM6lhGWrwpPbU3PmWHZ2vVRe3mNp2cpnQsda8+9bebew+d6j/VTWz9KLXvsNzM/E0mWNdd/Cp75XJpfz30ZCR3fa6DlK9V7niSapTbnezrt4Kh1E/U8068nPadk1vMzv7UmcsMZjlo3EU/JUuomHa/3WcDrlmcpOc4wRDw1U+6oWUp2moHXr5L5vMrRmus8kqFk6Xki8/5Iv0aI4WpHq5un8Fjqaa2TnmWJ38y1sbSbp/Ic9ZS6aa2VfG19Sg/Rbkq9tDzzcdZclyKZ7bRHz/akx1h9l76bsOY0d9zd0Bq75SmtBdnyAs7LYzk+yZB2k/ZTsvKS7az9HbHceU0sNS01pJb8uyi0o//m6HlKc13rJjei3eeR9pfVBr09rT3J66bVT+1vPXFt7GHq9ZL28599Wky93OwxHCORSCQSiUSelQ89qO9u9DwAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="83" height="47">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3VwRGDIBAFUNr3mqsnC0gLqSBFZSwAJcKK6HtHDszy2Z1NCQAAAICe3oVnd7L1vn/fPtcUQpi79zD7Snugplf0GVeX69HRdpdZ4+nMQBk5HROdm3+hhSn4/k/w/SPYm9XvKVVAnVfvAi7GDj7P07O2I9pYc5yTPFuRYzx7t97SuwAAAACyfq1wrBr0PAAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="7" name="Babel" type="Event" x="1024" y="416" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f5.tmx', 13, 20, 'SOUTH')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
