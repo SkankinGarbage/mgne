@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="31" height="33" tilewidth="16" tileheight="16" nextobjectid="76">
+<map version="1.0" orientation="orthogonal" width="31" height="33" tilewidth="16" tileheight="16">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WsQqAMAxE9e+c3fyBLv7/Lg5CKUl8iS0U28Atcr4zlB4uC58DyDuE+Wg35OHk2ZRZyxfJ3gxFsymzlq/H7HXQvWd22+yybzSWJOqxePm9z71WP9xKwKPxpOyUiXDJ90k8cjat5Mk+K/t63pvuEHm/573/ft4t+orySF/R/vPwJG/Jk5hWX1EePe8Wvpk9Xja9j1Gm9pz+E7z1h8WUeF/+RzzSeHQ8WXQuob+bIPwPAAA=
+   H4sIAAAAAAAAC+2WsQqAMAxE/TxnN3+gi/+/i4NQShJf2gaKbeAWOd8ZSg+3jc8J5B3CfHUY8nDybMrs5avJ3g3VZlNmL9+I2deke6/s2OyybzSWJOqxePm9z71WPzxKwKPxpOyUiXDJ90k8cjZR8mSXfdPqG3lvukPN+yPv/ffzjugryiN9RfvPw5O8JU9iWn1FefS8I3wre75seh9rmdpz+k/w1R8WU+K1/I94pPHoeLLo3KzhOhn8DwAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="31" height="33">
@@ -23,20 +23,20 @@
    H4sIAAAAAAAAC+3OMQEAAAgDoPXvYz9bzENIQAI/zXUAAACgZAHK3jfJ/A8AAA==
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="70" name="target_b" type="Event" x="80" y="464" width="16" height="16"/>
-  <object id="71" name="mem_tele" type="Event" x="80" y="480" width="16" height="16">
+ <objectgroup name="Object Layer 1" width="0" height="0">
+  <object name="target_b" type="Event" x="80" y="464" width="16" height="16"/>
+  <object name="mem_tele" type="Event" x="80" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/f2.tmx', 'ENTRANCE', 'B')"/>
    </properties>
   </object>
-  <object id="72" name="target_a" type="Event" x="400" y="464" width="16" height="16"/>
-  <object id="73" name="mem_tele" type="Event" x="400" y="480" width="16" height="16">
+  <object name="target_a" type="Event" x="400" y="464" width="16" height="16"/>
+  <object name="mem_tele" type="Event" x="400" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/f4.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
-  <object id="74" name="crystal" type="Event" x="80" y="96" width="16" height="16">
+  <object name="crystal" type="Event" x="80" y="96" width="16" height="16">
    <properties>
     <property name="onInteract" value="play('tower/crystal.lua')"/>
     <property name="passable" value="IMPASSABLE"/>

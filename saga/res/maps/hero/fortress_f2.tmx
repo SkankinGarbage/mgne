@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="13" tilewidth="16" tileheight="16" nextobjectid="17">
+<map version="1.0" orientation="orthogonal" width="18" height="13" tilewidth="16" tileheight="16">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="name" value="Castle of Hero"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="120" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="18" height="13" opacity="0.9">
   <properties>
    <property name="z" value="0"/>
@@ -19,37 +19,37 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgoD2Yh8ZfiMafTwc3DBWwCohXA/EaEvURowdmNr1BLxq/cgDcMNQBACmHGfqoAwAA
+   H4sIAAAAAAAAC2NgoD1YisZfgcZfRgc3DBWwEYg3AfFmEvURowdmNr3BFDR+wwC4YagDACCJZ+KoAwAA
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="12" name="tele" type="Event" x="16" y="96" width="16" height="16">
+ <objectgroup name="Object Layer 1" width="0" height="0">
+  <object name="tele" type="Event" x="16" y="96" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 17, 17)"/>
    </properties>
   </object>
-  <object id="13" name="shop" type="Character" x="96" y="80" width="16" height="16">
+  <object name="shop" type="Character" x="96" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_hero_weapons')"/>
    </properties>
   </object>
-  <object id="14" name="shop" type="Character" x="240" y="80" width="16" height="16">
+  <object name="shop" type="Character" x="240" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_world1_potions')"/>
    </properties>
   </object>
-  <object id="15" name="npc" type="Character" x="176" y="64" width="16" height="16">
+  <object name="npc" type="Character" x="176" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="play('hero/barkeep.lua')"/>
    </properties>
   </object>
-  <object id="16" name="shop" type="Character" x="112" y="80" width="16" height="16">
+  <object name="shop" type="Character" x="112" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>

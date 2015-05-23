@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="26" tilewidth="16" tileheight="16" nextobjectid="63">
+<map version="1.0" orientation="orthogonal" width="43" height="26" tilewidth="16" tileheight="16">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC91WQQ6AMAibX/QR3vb/qycTY0aAdkDw0JtlXcsa5xhjBuEUgHJ3aDoESFql7zVuhX/XC4z3nbWieTFZS1zUM4sHDHflfSetaEaWrBmudw7ThSx3NeevWjN7YDVHuzfThbt69JnRSaslp+zOl6DdO9o/C/dBJ61ZvZ3d+dXvzKO1ak++53veY1UnIDse7d+OXazWWvEvp2XseS/RnYCiu9boTkC13rTDNQ94EQAA
+   H4sIAAAAAAAAC91WOQ7AIAyjX+wjuvH/tRNSh0QJcY6GwRuOjE0s5hhjBuFmYOV6aLoYcFq58xK3wr/nA8T7zlqteSFZc1yrZxoPEC7lfSet1ow0WSPc3TlIF6Jcas6pWjN7gJoj3RvpQq8eXTM6adXklN35HKR7R/un4S500prV23/p/Kw966h1Zx+rOsHyxqP98+j8aq0Vfzkp45198coBzfo0rdGdYNX6Alyp4fl4EQAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="43" height="26">
@@ -22,19 +22,19 @@
    H4sIAAAAAAAAC2NgoD+4BMSXgfgKHvYowA1OAvEpID6NxiZXLy0BJfGLTe9IA9SOa2L1kgOoHdcjoRzAFUfExBe6+koS9GIzhxCgpNxGV99Egl5s5hACjEh4oAG58YsMaKEXmznUqJdpoXeklQmU5mV6lvmU5uWRGL+DvUyAAWrlR1qWCUMJkJsfByKdkJsfh1M7MIhO9gyGMoFYMBjKhKEOAPDwS4V4EQAA
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="59" name="door_a" type="Event" x="432" y="144" width="16" height="16">
+ <objectgroup name="Object Layer 1" width="0" height="0">
+  <object name="door_a" type="Event" x="432" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('', '', 'EXIT', 'B')"/>
    </properties>
   </object>
-  <object id="60" name="door_a" type="Event" x="192" y="240" width="16" height="16">
+  <object name="door_a" type="Event" x="192" y="240" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('', '', 'EXIT', 'A')"/>
    </properties>
   </object>
-  <object id="61" name="target_a" type="Event" x="192" y="256" width="16" height="16"/>
-  <object id="62" name="target_b" type="Event" x="432" y="160" width="16" height="16"/>
+  <object name="target_a" type="Event" x="192" y="256" width="16" height="16"/>
+  <object name="target_b" type="Event" x="432" y="160" width="16" height="16"/>
  </objectgroup>
  <layer name="Tile Layer 3" width="43" height="26">
   <properties>
