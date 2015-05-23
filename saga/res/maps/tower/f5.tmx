@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="70" height="47" tilewidth="16" tileheight="16" nextobjectid="83">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="27" height="41" tilewidth="16" tileheight="16" nextobjectid="87">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
@@ -7,50 +7,55 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="120" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="70" height="47">
+ <layer name="Tile Layer 1" width="27" height="41">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2YwQ6CMBBE4ed60pNekDsX4/9flcCGcbItqPHQ7rxkQsCEhJfubm3XCSGEEDEYnIjFwxUiL9v6GCFaM9taSRCtmW2toBdbM1GxeklOotaSfTfXENdSNDfmBGvo3r3XUsQ+4/UVTsQ+k+srXp+JBHrx9rvRvZiHB2Sg36PA3/1wwt5ah+ezeekh6CXKvOb5PN/3TsxLa/Pa66X4HxH7askLzutcaoLPDjA8h/e8pMK7avQyZuL9DzI/3qxOhXfV6OXIvu38ymm99nTf4r7vqJe5Fi7rdaL7yF7mWrit14nuW/WSy5HvzZ3H1D6PSvPjWy+5d9ZEaX6gGzxzSZnn3tk4pgVwX/9J/dS2Lj4F9/V7btBJK+uiBLthP/g8ihPD3Hi9GHtsJCcG9mL20lJP/RbPi5CXHHyuKS8LeC5T4x72X+C5jPqtEEIIIX7lCWASieFoMwAA
+   H4sIAAAAAAAAC+2WvQ7CMAyEm5djggmWwt6l6vuvUKmWTsc5TVJnqMDSqQRRf9i5/AxDeYxCvWLN/QD1YlkdL1Cv2qymC6hXbVYTsqy2aM5IHFNkHy0X94/7GMEzDvcP+xg1b2qeFC+Kxbln8V0vlueRs7ByXo/0/p7XI72vvK72+Rrvq/dxn2XOAlK8XD4+J1A8H4sQz6eXS50TKMVKIMXyctX6LAnV+vQXWGqvY78nGqvfc56aum4fXbdnonF0D1ff3rfnRONo1urb5/acaFzD8lSSoyZnbp23srycpevc8+c8fNfk5fQC97Ca3j0yOb3AM2KPh5zc/6/hMZPnvZXDPOUX9MFRDvLML8zam/fWUKxe8Wedj2W8I/fcksC7nH3uFXiXa1lXb8p0ewNMEQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="70" height="47">
+ <layer name="Tile Layer 2" width="27" height="41">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WMQqAMAwF0F7b1dupm3ogWxx0KYKDKfY9CHQKIUP6UwIAejflGnIt0YM0Zs015tqjBwF+o3Znp0+naEvZSe3Oljvc626e/p71kykAAC4ll83pzG/3d3SvaCWXbenMb/d3dC8AAAAAAADeOwA25J0gaDMAAA==
+   H4sIAAAAAAAAC+3TMQrAIAyF4Vzb1dupW9oDNeLiIgWJoZT/gweZ8pZE5LuKJVlaQJdasuUO6MK+1S2UAz2rW1DnvrebU8cu4G/6L1YZPzvPJ3b1X7xk/Ow87/DcBQAAgHgPXlCGNkwRAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="78" name="target_b" type="Event" x="432" y="592" width="16" height="16"/>
-  <object id="79" name="mem_tele" type="Event" x="432" y="608" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/4.tmx', 'ENTRANCE', 'A')"/>
-   </properties>
-  </object>
-  <object id="82" name="gate" type="Event" x="432" y="320" width="16" height="32">
+  <object id="82" name="gate" type="Event" x="208" y="288" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_gate"/>
     <property name="onCollide" value="teleport('tower/f5.tmx', 28, 23, 'NORTH')"/>
    </properties>
   </object>
+  <object id="83" name="target_b" type="Event" x="208" y="608" width="16" height="16"/>
+  <object id="84" name="mem_tele" type="Event" x="208" y="624" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/4.tmx', 'ENTRANCE', 'A')"/>
+   </properties>
+  </object>
+  <object id="85" name="door" type="Event" x="208" y="32" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="speak('It won\'t open.')"/>
+   </properties>
+  </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="70" height="47">
+ <layer name="Tile Layer 3" width="27" height="41">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OQQ0AIAwEsInkQ/DvAxl3WVoFnQEAAAAAAAAAAADoc9OBUicdKPXSAQBghQ8nIe8NaDMAAA==
+   H4sIAAAAAAAAC+3NoQ0AAAjAMI7EEP7/gwswCFTrl0UAAAAA7OrxlY+vPnYDGLVyNEwRAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="70" height="47">
+ <layer name="Tile Layer 4" width="27" height="41">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ORxEAAAgAIGv7NbkxHAcJiAAAAAAAAAAAAADgipwOLFXTAQDghQZ6vXOxaDMAAA==
+   H4sIAAAAAAAAC+3NoQ0AAAgEsV8by+TsgCCI1l8uAQAAAPihDl+97AbDaBkLTBEAAA==
   </data>
  </layer>
 </map>

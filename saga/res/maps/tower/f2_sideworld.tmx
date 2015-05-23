@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="37" tilewidth="16" tileheight="16" nextobjectid="48">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="37" tilewidth="16" tileheight="16" nextobjectid="49">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
-  <property name="encounter" value="encounterset_level01_danger00"/>
   <property name="name" value="Floor 2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
@@ -12,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3RwQqAIAzGcX289hTZxbpU73/KYMIQpQjchL7DH4WC/ZjknCOEEELdmwYwPPly1hYYdXyjOmHs4xvBec/3wjKngmgx8tb25LmYWlMHn5v4prXf0lQW2UXi3vq3p7M1U+4xVPZYS+Pdy5k7v3PuNHJ92a+l643T2gSjjtPaAqOO09qAEEJ/6QJVfmVstBcAAA==
+   H4sIAAAAAAAAC+3SQQqAIBCFYT1enqLaWJvq/qsMHBAZMQJnBnqLn4KCPp4F51xACCE0vMmAoeejtC0wyvievAFTz2hxS+tGzmfBSf8cWebUUrQqebmdfC6mttSZr3vxTGrf2lQXsysU9613Rzpb3yx3XJgduSTOvf7mkc+ZupRcX/bVdL1xaptglHFqW2CUcWobEELoL91xwyyKtBcAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="41" height="37">
@@ -20,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OMQEAAAQAMPWVkk0HB4ctwSIAAGBHXgcAgJG6DgA80hhU3cm0FwAA
+   H4sIAAAAAAAAC+3OMQEAIAwDsNlHA16mDQ88PZooyAwA0OqmA9Q56QAA8GXTAYAiD+JtpaK0FwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -32,6 +31,11 @@
   <object id="47" name="tele" type="Event" x="320" y="448" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('tower/f2.tmx', 6, 15, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="48" name="tele" type="Event" x="352" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f2_sideworld_shrine.tmx', 21, 22, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>
