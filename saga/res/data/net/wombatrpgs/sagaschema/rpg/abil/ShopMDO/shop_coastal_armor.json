@@ -1,0 +1,15 @@
+{
+	"key" : "shop_coastal_armor",
+	"subfolder" : "world2",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"hand_gold",
+		"hand_silver",
+		"helm_gold",
+		"helm_silver",
+		"body_gold",
+		"shield_silver",
+		"shoe_leather"
+	]
+}

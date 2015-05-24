@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="59" height="49" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="42">
+ <properties>
+  <property name="bgm" value="ffl3_town"/>
+  <property name="name" value="Castle of Hero"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="59" height="49">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2Yz27CMAyHO5AmgcSNS2/dm43TuJZetj3YrrzaWimRfrOcpnH+wnz4JBqXkK9u7dB913X7B+Jj5iqk9trVVV3VVV3V9bHI5friIfT8EFxzl3R9A9ZisbjmLu3aG2hsGXtl6AVwc/eFXPGaDwa6nmXsBJwN9nz09x1zcw8FXV3XHDkDt5nJEdtyzFHKlcvnzmCPR3D8mvmG2CcZ8x3XdOV+m7puWW8MLbmGcDSEfOeHkNOV1o9dANTxYDh2271L5pXWD6nrgYG6cjW5pKvkeURXlyf1XRxt70Lfms8rlweai62umFfsz6dGXNEP72/0ldzDyxxL/5q6v/22piv6YW/F9blqE9YoWptG+Iz7kZqu1u9GxnF9vr7E1V9bF2htqNlzcE0Iri+mB1Nq9pyQOiyllmtMz4lxfZ+5RHim7jk5icln6642j5ZYzxjXtf/V0ljqPKZwxf0b3cNJYzSfqT2lrrh/o3s4aSxnPmNc1/ZI0lirriOJTQlirbrSvRL3Tik01pKr7/1hKlpwHZ7A9ZKQuyBGx3N5puYuiK19p2XU9TldFUVRFEX5f/wCPyISMiwtAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="59" height="49">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3YWwqAIBCF4fa/kGgNXVYgvbaeeoqgZiAZ80j/B6IyMIwPXrDrAAAAUNpqjNVz59iMsXruEuajpdpFFJQuzYq/mavraxcA4BR1fgxBeVryxzW3ZgnM5d3TtSSjj6B8VyvXBp/aHgIA3E1ObPysihjeX0tuTJn3RsqNAQAAAADwZAculhMCLC0AAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="6" name="npc" type="Character" x="240" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Welcome to our town. We are under the jurisdiction of the world wolf.')"/>
+   </properties>
+  </object>
+  <object id="12" name="tele" type="Event" x="240" y="128" width="64" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld2.tmx', 59, 31)"/>
+   </properties>
+  </object>
+  <object id="22" name="tele" type="Event" x="608" y="128" width="64" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld2.tmx', 59, 31)"/>
+   </properties>
+  </object>
+  <object id="23" name="tele" type="Event" x="336" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 5, 10)"/>
+   </properties>
+  </object>
+  <object id="24" name="tele" type="Event" x="320" y="368" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 33, 11)"/>
+   </properties>
+  </object>
+  <object id="25" name="tele" type="Event" x="640" y="352" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 55, 11)"/>
+   </properties>
+  </object>
+  <object id="26" name="tele" type="Event" x="464" y="528" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 43, 29)"/>
+   </properties>
+  </object>
+  <object id="27" name="tele" type="Event" x="352" y="528" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 24, 29)"/>
+   </properties>
+  </object>
+  <object id="28" name="tele" type="Event" x="240" y="528" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 5, 29)"/>
+   </properties>
+  </object>
+  <object id="29" name="npc" type="Character" x="432" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The world worm constantly threatens to overrun our lands.')"/>
+   </properties>
+  </object>
+  <object id="31" name="npc" type="Character" x="176" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The wolf and worm have been locked in battle for as long as any can remember.')"/>
+   </properties>
+  </object>
+  <object id="32" name="npc" type="Character" x="528" y="544" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Every family must send sons to the war against the worm.')"/>
+   </properties>
+  </object>
+  <object id="33" name="npc" type="Character" x="288" y="560" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I hear there are evil cities to the west that follow the world worm.')"/>
+   </properties>
+  </object>
+  <object id="34" name="npc" type="Character" x="352" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Soldiers from across the east gather in the wolf\'s castle.')"/>
+   </properties>
+  </object>
+  <object id="35" name="npc" type="Character" x="400" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Did you pass through the gate? The wolf forbids us from that place.')"/>
+   </properties>
+  </object>
+  <object id="36" name="npc" type="Character" x="544" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('One day I\'ll be the mightiest soldier in the army of the wolf!')"/>
+   </properties>
+  </object>
+  <object id="37" name="npc" type="Character" x="592" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The world worm is a mighty serpent that will stop at nothing to destroy this world.')"/>
+   </properties>
+  </object>
+  <object id="38" name="npc" type="Character" x="672" y="224" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="WEST"/>
+    <property name="onInteract" value="speak('Our fleet is a mighty weapon in the war against the worm.')"/>
+   </properties>
+  </object>
+  <object id="39" name="npc" type="Character" x="288" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The world wolf is a noble king who will guide us to victory.')"/>
+   </properties>
+  </object>
+  <object id="40" name="npc" type="Character" x="480" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('You look strong. Perhaps you should enlist and help defend us from the world worm.')"/>
+   </properties>
+  </object>
+  <object id="41" name="npc" type="Character" x="192" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_slime"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Many caves run through this region. Be sure to stock up on supplies if you go exploring.')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="59" height="49">
+  <properties>
+   <property name="z" value="1.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAADAnwEKsdlxLC0AAA==
+  </data>
+ </layer>
+</map>

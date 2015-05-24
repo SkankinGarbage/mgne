@@ -1,0 +1,16 @@
+{
+	"key" : "shop_coastal_weapon",
+	"subfolder" : "world2",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordLong",
+		"wpn_swordBattle",
+		"wpn_swordBeast",
+		"wpn_gunSMG",
+		"wpn_gunMusket",
+		"wpn_bowLong",
+		"wpn_saber",
+		"spell_fire"
+	]
+}

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="36">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="37">
  <properties>
   <property name="bgm" value="ffl2_overworld"/>
   <property name="name" value="Wartorn World"/>
   <property name="terrainEncounter" value="terrain_world2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="83" height="47">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3VsRGDMAwFUK1Pm5aKAbJCJmCoXLqkIIEYYTi9N4BP/pasCAAAAICIe+8CCquY/bc7b81jbCmENBX7mk9re6ClV/QZZ7fUo1fbXWaN6szAOnL6T3Zu3oU9DMnnP5LPv4JfszofUgW0ufUu4GTs4OO8Z13xv6x45wyvHMeQ517kmM/ebTf1LgAAAIBFT0e5Ya/0PAAA
+   H4sIAAAAAAAAC+3VsRHCMAwFUO0/RFraVBmAFZiATTg6ckdIIJad4PcG8MnfkhUBAAAAEHFtXUDHesz+052/zWPcUwhpeuxr5rb2wJ5e0Wcc3VKPnm13mTV6Zwa2kdNvsnPzLpQwJJ9/Sz7/DNZm9V6lCqAkO7ie16zf/ZeXWoU0YkeU8cxxDHmWIsd8//631TC1LgAAAIBFD5gnniL0PAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -112,6 +112,11 @@
   <object id="35" name="tele" type="Event" x="608" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_b.tmx', 64, 17, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="36" name="Coast Town" type="Event" x="944" y="496" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/coast_town.tmx', 16, 9, 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>

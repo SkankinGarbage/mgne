@@ -1,0 +1,10 @@
+local hero1 = getHero(0).getName()
+local hero2 = getHero(1).getName()
+
+speak("Governor", "I don't recognize you.")
+speak(hero1, "We come from a world beyond the gate.")
+speak("Governor", "Gate? Stay away from that place. And we don't take very kindly to those that speak about it.")
+speak(hero2, "Why?")
+speak("Governor", "Recently some of the agents of the world worm came through that way.")
+speak("Governor", "The wolf will take care of them, but you don't want people to think you're a traitor like them...")
+speak(hero2, "I see.")

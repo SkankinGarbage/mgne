@@ -1,0 +1,28 @@
+{
+	"key" : "shoe_leather",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$DLEATHER",
+	"itemDescription" : "",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 300,
+	"anim" : "None",
+	"equip" : [
+		"SHOE"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-331187647"
+	},
+	"tier" : 1,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 9.0
+			}
+		]
+	}
+}

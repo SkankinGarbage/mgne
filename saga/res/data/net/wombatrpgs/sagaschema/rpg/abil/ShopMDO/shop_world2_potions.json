@@ -1,0 +1,15 @@
+{
+	"key" : "shop_world2_potions",
+	"subfolder" : "world2",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"pot_potion",
+		"pot_xpotion",
+		"item_str24",
+		"item_agi24",
+		"item_hp200",
+		"item_hp400",
+		"spell_cure"
+	]
+}
