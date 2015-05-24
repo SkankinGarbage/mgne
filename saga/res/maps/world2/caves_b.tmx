@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="146" height="93" tilewidth="16" tileheight="16" nextobjectid="46">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="112" height="82" tilewidth="16" tileheight="16" backgroundcolor="#000000" nextobjectid="72">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level03_danger00_lowrate"/>
-  <property name="name" value="East Tunnels"/>
+  <property name="name" value="South Tunnels"/>
  </properties>
  <tileset firstgid="1" name="lower" tilewidth="16" tileheight="16">
   <properties>
@@ -272,159 +272,106 @@
   </tile>
  </tileset>
  <tileset firstgid="120" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="146" height="93">
+ <layer name="Tile Layer 1" width="112" height="82">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
- <layer name="Tile Layer 2" width="146" height="93">
+ <layer name="Tile Layer 2" width="112" height="82">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQwfoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgb5jJJvAo1AAA
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4G9NfvyugI8AAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="17" name="room" type="Ceiling" x="496" y="656">
+  <object id="58" name="room" type="Ceiling" x="256" y="336">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="-16,0 48,0 48,160 -16,160"/>
+   <polygon points="-16,80 48,80 48,160 -16,160"/>
   </object>
-  <object id="23" name="room" type="Ceiling" x="560" y="656">
+  <object id="59" name="room" type="Ceiling" x="464" y="288">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,0 48,0 48,160 0,160"/>
+   <polygon points="-16,80 48,80 48,160 -16,160"/>
   </object>
-  <object id="24" name="room" type="Ceiling" x="624" y="656">
+  <object id="60" name="room" type="Ceiling" x="512" y="416">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,0 48,0 48,160 0,160"/>
+   <polygon points="-16,80 48,80 48,160 -16,160"/>
   </object>
-  <object id="25" name="room" type="Ceiling" x="688" y="656">
+  <object id="61" name="room" type="Ceiling" x="320" y="448">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,0 48,0 48,160 0,160"/>
+   <polygon points="-16,80 48,80 48,160 -16,160"/>
   </object>
-  <object id="26" name="room" type="Ceiling" x="752" y="656">
+  <object id="62" name="room" type="Ceiling" x="352" y="208">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,0 48,0 48,160 0,160"/>
+   <polygon points="-16,80 32,80 32,176 -16,176"/>
   </object>
-  <object id="27" name="room" type="Ceiling" x="528" y="896">
+  <object id="63" name="room" type="Ceiling" x="1264" y="608">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,32 48,32 48,160 0,160"/>
+   <polygon points="-16,80 64,80 64,208 -16,208"/>
   </object>
-  <object id="28" name="room" type="Ceiling" x="592" y="896">
+  <object id="64" name="room" type="Ceiling" x="1264" y="880">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,32 48,32 48,160 0,160"/>
+   <polygon points="-16,96 64,96 64,208 -16,208"/>
   </object>
-  <object id="29" name="room" type="Ceiling" x="656" y="896">
+  <object id="65" name="room" type="Ceiling" x="1408" y="880">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,32 48,32 48,160 0,160"/>
+   <polygon points="-16,96 64,96 64,208 -16,208"/>
   </object>
-  <object id="30" name="room" type="Ceiling" x="720" y="896">
+  <object id="66" name="room" type="Ceiling" x="1568" y="736">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,32 48,32 48,192 0,192"/>
+   <polygon points="-32,96 64,96 64,208 -32,208"/>
   </object>
-  <object id="31" name="room" type="Ceiling" x="784" y="896">
+  <object id="68" name="room" type="Ceiling" x="1408" y="608">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,32 48,32 48,160 0,160"/>
+   <polygon points="-16,32 64,32 64,208 -16,208"/>
   </object>
-  <object id="32" name="room" type="Ceiling" x="1568" y="464">
+  <object id="69" name="tele" type="Event" x="1424" y="640" width="16" height="16">
    <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,32 48,32 48,160 0,160"/>
-  </object>
-  <object id="33" name="room" type="Ceiling" x="1632" y="464">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,32 48,32 48,160 0,160"/>
-  </object>
-  <object id="34" name="room" type="Ceiling" x="1696" y="464">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,32 64,32 64,160 0,160"/>
-  </object>
-  <object id="35" name="room" type="Ceiling" x="1824" y="736">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,32 160,32 160,192 0,192"/>
-  </object>
-  <object id="36" name="tele" type="Event" x="192" y="832" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 43, 30, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 41, 23, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="39" name="tele" type="Event" x="272" y="384" width="16" height="16">
+  <object id="70" name="tele" type="Event" x="1024" y="256" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 43, 30, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 38, 17, 'EAST')"/>
    </properties>
   </object>
-  <object id="40" name="tele" type="Event" x="912" y="1184" width="16" height="16">
+  <object id="71" name="tele" type="Event" x="176" y="896" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 51, 31, 'SOUTH')"/>
-   </properties>
-  </object>
-  <object id="41" name="tele" type="Event" x="816" y="192" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 50, 22, 'SOUTH')"/>
-   </properties>
-  </object>
-  <object id="42" name="tele" type="Event" x="1088" y="384" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 43, 30, 'WEST')"/>
-   </properties>
-  </object>
-  <object id="43" name="tele" type="Event" x="1312" y="416" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 56, 19, 'NORTH')"/>
-   </properties>
-  </object>
-  <object id="44" name="tele" type="Event" x="1248" y="768" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 60, 24, 'NORTH')"/>
-   </properties>
-  </object>
-  <object id="45" name="tele" type="Event" x="1712" y="288" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 65, 15, 'EAST')"/>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 36, 24, 'WEST')"/>
    </properties>
   </object>
  </objectgroup>

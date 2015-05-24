@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" nextobjectid="27">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="36">
  <properties>
   <property name="bgm" value="ffl2_overworld"/>
   <property name="name" value="Wartorn World"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YS3KDMBAEULgWOy3NAbj/UbKxqqYm82n9hWsWXXYcQ9CjJTl+juN4IpFIJBKJRCJLcpOsvpY35xay8npOktU2PJ9vUMdaz1NJ6zlW+3FHGsQxRxuX5qYd33IvVnhyr/w8j+sjvFbjiRjy4zUv5N7M9DyZkWdW+3vEDbkX1uva/ZlhmR1Lx9dijdghr5Wec0dHZHylY6dzo+WavG7v4DhynF7Pa9ysNWaEZc1YR1nOujc7WFoduL/nRLuC3o/83l7XurMldfEsvb6g7+2xr42wbPXklqhnj3nA/39AxzLC8qrw1Nb0nBmWrV0ftZfXeHqW0rnQsfbc22buPXyu91g/tfWj1LLHfjPzM5FkWXP9SfDM59L8eu7LSOj4roGW11HvmUg0S23O93TawVHrJuqZjv+e9JySWc/P/NaayA1nOGrdRDwlS6mbdLzeZwG0/5ql5DjDEPHUTLmjZinZaQZavxJ5ROfzKkdrrvNIhpKl54nM++yr9VIzXO1odTMJj6We1jrpWUq91fxmro2l3UzKz6in1E1rreRrq/Z8tx6i3ZR6aXnm46y5LkWau/y51sXVbiM86TFW36XvJvg83uVzTu+5bnlKa0G2vIHz8liWbzKk3aT9lKy8ZDtrf0csd14TS01LDakl/y4K7eivOXqe0lzXusmNaPd5pLVxtUFvT2tP8rpp9VP7W29cG3uYer2k/fxlnxZTLw97DMdIJBKJRCKRd+UPAJSpkfQ8AAA=
+   H4sIAAAAAAAAC+3YS27DMAwEUPta3mkZH8D3P0o3EUCwHJL6ywEXg6RprFrPIznNcxzHE4lEIpFIJBJZkptk9bm8ObeQledzkqy24fl843Ws9TxBWsdY7ccdaTyOOWheyA0dj47zXIsVntwrP8/z+giv1Xh6DEuP18ad6XkyI8us9Pd8TiXXQbLUXkfXZ4ZldiydX4u1x87zWumYOzp65lc6d7o2Ws7J6vYOjiPnafW8xk0ab5RnaW9GW866NjtYah24v2N6u+K9Hvm9vc51Z0vqYllaffG+t8d9bYRlqye39Hr2WAf8/wfvXEZYXhWeaE/PmWHZ2vVR9/IaT8tSGss71573tpn3Hr7We+yfaP8otexxv5n5mUiyrDn/JHjmsZBfz/uyJ3R+10DL66j3TCTIEq35nk47OKJuej3T8d+TjimZ9fzMr+2J3HCGI+qmx1OylLpJ52t9FvD2H1lKjjMMPZ7IlDsiS8kOGaB+JfLoXc+rHLW1ziMZSpaWp2fdZ1/US2S42lHrZhIeSz21fdKylHqL/GbujaXdTOBnr6fUTW2v5Hsrer5bD73dlHqpeebjtLUuRVq7/Dnq4mq3EZ70GK3v0ncTfB3v8jmn91rXPKW9IFvejnF5NMs3GdJu0n5KVlaynXZ/91juvCeWmpYaUkv+XZS3o7/maHlKax11kxvR7vNIe+Nqg96e2j3J6qbWT/S33rg39jC1ekn7+cs+LaZWHvYYjpFIJBKJRCLvyh9zOz5P9DwAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="83" height="47">
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3VsRWDMAwFQK9PS0vFAFmBCRiKly4NwWCEAd+VFH7yR7JSAgAAAKCmT+a3N/l3v713H0oKIczbe5htuT1Q0iv6jLtb69Gn7S6zRuvMQB45HROdm//CGbrg86fg859ga1bnS6qAMn3tAm7GDr7Ob9Ytvpct3jnCN8chyfMscoxn75YbaxcAAADAqgU9/+fM9DwAAA==
+   H4sIAAAAAAAAC+3VsRGDMAwFUK1Pm5aKAbJCJmCoXLqkIIEYYTi9N4BP/pasCAAAAICIe+8CCquY/bc7b81jbCmENBX7mk9re6ClV/QZZ7fUo1fbXWaN6szAOnL6T3Zu3oU9DMnnP5LPv4JfszofUgW0ufUu4GTs4OO8Z13xv6x45wyvHMeQ517kmM/ebTf1LgAAAIBFT0e5Ya/0PAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -67,6 +67,51 @@
   <object id="26" name="tele" type="Event" x="1040" y="240" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_c.tmx', 107, 19, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="27" name="tele" type="Event" x="784" y="208" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/caves_a.tmx', 121, 16, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="28" name="tele" type="Event" x="544" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/caves_a.tmx', 73, 36, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="29" name="tele" type="Event" x="592" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/caves_a.tmx', 88, 11, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="30" name="tele" type="Event" x="448" y="272" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/caves_a.tmx', 45, 40, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="31" name="tele" type="Event" x="368" y="320" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/caves_a.tmx', 13, 56, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="32" name="tele" type="Event" x="432" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/caves_a.tmx', 11, 21, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="33" name="tele" type="Event" x="576" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/caves_b.tmx', 11, 57, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="34" name="tele" type="Event" x="656" y="368" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/caves_b.tmx', 89, 41, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="35" name="tele" type="Event" x="608" y="272" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/caves_b.tmx', 64, 17, 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>
