@@ -17,7 +17,8 @@
 		"abil_chill",
 		"abil_tremble",
 		"abil_touch",
-		"abil_opara"
+		"abil_opara",
+		"abil_oice"
 	],
 	"stats" : {
 		"hp" : 103,

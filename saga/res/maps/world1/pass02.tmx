@@ -6,7 +6,7 @@
   <property name="name" value="North Passage"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="40" height="40">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3RsQkAIAwFUVewE+xc3UVFiLWN6CH34Nc5SEqSdFeG3yrHKxi3JImgxohmV4vRrDaa9U9i20T9pySd0l8HbND7JEn/G2/g0PoAGQAA
+   H4sIAAAAAAAAC+3RsQkAIAwFUVewE+zcfwdXEyHWNqKH3INf5yApSdJdGX6rHK9g3JIkghojml0tRrPaaNY/iW0T9Z+SdEp/HbBB75Mk/W8AiqiZxAAZAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

@@ -6,7 +6,7 @@
   <property name="name" value="Mirror Shrine"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="61" height="25">
   <properties>
    <property name="z" value="0"/>

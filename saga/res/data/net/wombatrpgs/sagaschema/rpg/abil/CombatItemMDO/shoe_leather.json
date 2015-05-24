@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$DLEATHER",
-	"itemDescription" : "",
+	"itemDescription" : "Increases defense by 1 and agility by 1",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 300,

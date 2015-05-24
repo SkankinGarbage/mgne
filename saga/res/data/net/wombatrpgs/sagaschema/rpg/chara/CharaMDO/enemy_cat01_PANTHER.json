@@ -23,7 +23,7 @@
 		"str" : 9,
 		"def" : 7,
 		"agi" : 11,
-		"mana" : 5,
+		"mana" : 8,
 		"flags" : [
 			"ANIMAL"
 		]

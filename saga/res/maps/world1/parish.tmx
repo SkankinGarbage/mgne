@@ -5,7 +5,7 @@
   <property name="name" value="Forest Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="48" height="45">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XUQ6DIAxAOfYO4Q8fzO997QY732JCk4ZRRGhLzfqSZjpRHrU0cQ8h7EQ8bxB39ab8V/vM+K92mfFf7fHP/jP3J6GxWv6b0FgPuZCoI26H1vXNwBrOarl1PXXc7+FRi5LaGM290TsXjOvx19wbeC68lhLoOQefHMFYrvFaShI6xv54DdJroXKN54eoebaA52u8j4DmAlec3xHwszT8Z30pNPbuLK26kvSmck75XKn/mj/nXmjVSxzw7PHnqiVNan1tlf+b+P+srsCbI/+jfeaRHSPhH9FxyK7wy+Ut1SNrcPZ+Te+tOJd0f+XgBM83WzeaecfAO5itISv09M0UfnutFc6+/bGrpdy3eifVDy3lfmRfWnE/qNW9Jb8esLeVur4C5zed4ziOQ/MFu1z+fcAhAAA=
+   H4sIAAAAAAAAC+2XUQrDIAxAvT/sEP3xw/V7X7vBLjUKBoIz1moSU5YHYe1q6zONge4hhJ2I5w3irt6U/2qfGf/VLjP+qz3+2X/m/iQ0Vst/ExrrIRcSdcTt0Lq+GVjDWS23rqeO+z08alFSG6O5N3rngnE9/pp7A8+F11ICPefgkyMYyzVeS0lCx9gfr0F6LVSu8fwQNc8W8HyN9xHQXOCK8zsCfpaG/6wvhcbenaVVV5LeVM4pnyv1X/Pn3AuteokDnj3+XLWkSa2vrfJ/E/+f1RV4c+R/tM88smMk/CM6DtkVfrm8pXpkDc7er+m9FeeS7q8cnOD5ZutGM+8YeAezNWSFnr6Zwm+vtcLZtz92tZT7Vu+k+qGl3I/sSyvuB7W6t+TXA/a2UtdX4PymcxzHcWi+nrIpj8AhAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

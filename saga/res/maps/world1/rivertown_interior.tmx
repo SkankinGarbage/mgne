@@ -5,7 +5,7 @@
   <property name="name" value="River Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="38" height="32">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAXDHZThoOkNVgHxaiBeA+XX46BHOqjEIU6teESPB1Ll6QUGiztGwSgYBaNgFIyCUTAKBhr04mAPNgBrv6FjctpzkwjQAwVmE6DxAWLicTDHLy3BSPX3KKAvAACKYLaPABMAAA==
+   H4sIAAAAAAAAC2NgGAXDHUzCQdMbHAPi40B8AsqfjYMe6WAqDnFqxSN6PJAqTy8wWNwxCkbBKBgFo2AUjIJRMNBgJQ72YAOw9hs6Jqc9t44APVBgOwEaHyAmHgdz/NISjFR/jwL6AgAt4Ps9ABMAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -179,7 +179,7 @@
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WsQkAIAxE0cxs6/IuoGBxEND3BghXpPhVAG8Y3QMOZvcAtvwLAAA/SHVvup9T3Xt7ZwEbeaZCABMAAA==
+   H4sIAAAAAAAAC+3WsQkAIAxE0exf2LquCyhYHAT0vQHCFSl+FcAbRveAg9k9gC3/AgDAD1Ldm+7nVPfe3lnImr6WABMAAA==
   </data>
  </layer>
 </map>

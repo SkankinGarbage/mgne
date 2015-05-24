@@ -13,14 +13,19 @@
 	"meatTargetLevel" : 5,
 	"gp" : 400,
 	"loot" : "None",
-	"equipped" : [ ],
+	"equipped" : [
+		"abil_bite",
+		"abil_sting",
+		"abil_honey",
+		"abil_xice"
+	],
 	"stats" : {
-		"hp" : 0,
-		"mhp" : 0,
-		"str" : 0,
-		"def" : 0,
-		"agi" : 0,
-		"mana" : 0,
+		"hp" : 126,
+		"mhp" : 126,
+		"str" : 20,
+		"def" : 13,
+		"agi" : 20,
+		"mana" : 18,
 		"flags" : [ ]
 	}
 }

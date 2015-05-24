@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="31" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="44">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="31" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="45">
  <properties>
   <property name="bgm" value="ffl3_town"/>
-  <property name="name" value="Castle of Hero"/>
+  <property name="name" value="Wolf's Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="141" source="../tilesets/upper.tsx"/>
@@ -76,14 +76,14 @@
   <object id="35" name="npc" type="Character" x="624" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_golem"/>
-    <property name="face" value="WEST"/>
+    <property name="face" value="EAST"/>
     <property name="onInteract" value="speak('I hear security is getting tighter at the wolf\'s castle. Did something happen?')"/>
    </properties>
   </object>
   <object id="36" name="npc" type="Character" x="624" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
-    <property name="face" value="WEST"/>
+    <property name="face" value="EAST"/>
     <property name="onInteract" value="speak('Long ago before the worm came, there were many more settlements in the mountains.')"/>
    </properties>
   </object>
@@ -144,7 +144,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YsREAIQhFQRuw2cvs3tTQABi82S3g/SFlDAAAss2f7N12v6T96r3b7krar96rvgMAAIC3RP4burZOkf+Grq1T5F+gW2sDkULsnRAdAAA=
+   H4sIAAAAAAAAC+3YQQrAIBBDUS/Qw7bdtJ6+LoMgOJLCCP9Blo5KdlMKAADA3s6WSxKh527zu9RhnPW0vJLIfXquLtw9+49oDxF936M4+pz9x6gHh77vUVb67P35DwAAAADA/pz7jayzlHO/kXWWcu4Fss36AFWHpFsQHQAA
   </data>
  </layer>
  <layer name="Tile Layer 4" width="60" height="31">

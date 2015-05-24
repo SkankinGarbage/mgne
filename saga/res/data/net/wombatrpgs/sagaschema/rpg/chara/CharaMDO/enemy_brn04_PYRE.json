@@ -14,7 +14,8 @@
 	"gp" : 240,
 	"loot" : "None",
 	"equipped" : [
-		"abil_burning"
+		"abil_burning",
+		"abil_ofire"
 	],
 	"stats" : {
 		"hp" : 103,

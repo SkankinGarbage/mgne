@@ -6,7 +6,7 @@
   <property name="name" value="Mirror Shrine"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="64" height="52">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WMQ7DIBAEQH87beq0+UT6/M+VJTdg7mQZdJrpoEAILafdNgAAaPtcrKv7XqwBDq/BvegZZyvP4PfgXvSMMzN4rmieq4nmuSf7livPgIjsW5oBz/PvyfrPvgBM9Jt9AZZVpctl6XJr6+Wz1QkrdcVePludUFe8X6VMZcgU6Ev6EgAAMGIHnsX73QA0AAA=
+   H4sIAAAAAAAAC+3WMQ7DIBAEQP+/SJs6bT6RPq9yZckNmDtZBp1mOigQQstptw0AANo+F+vqvhdrgMNrcC96xtnKM/g9uBc948wMniua52qiee7JvuXKMyAi+5ZmwPP8e7L+sy8AE/1mX4BlVelyWbrc2nr5bHXCSl2xl89WJ9QV71cpUxkyBfqSvgQAAIzYAfNlYT4ANAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

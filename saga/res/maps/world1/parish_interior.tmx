@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="37" height="35" tilewidth="16" tileheight="16" nextobjectid="14">
  <properties>
-  <property name="bgm" value="no_change"/>
+  <property name="bgm" value="ffl2_hometown"/>
   <property name="name" value="Forest Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="37" height="35">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XQQqAIBAFUO9cCC3CE7Rp06IbVIdMwUAGNKsfWf0Hw4DKMOBmRimie/Q+EGpQndGHoy/WajPfaZFTzMlejjIiv0ElMlqXuGsi52FPYV+pWl83PN1AoKReiIiIaB9qd8gVm/E2bn4fd97k1JT7wJU9BDW/y33gib1gsjHbWIA10XM48u9QSvg7+p8VocNmnjwUAAA=
+   H4sIAAAAAAAAC+3XQQqAIBAFUO+/KYQW4QnatGnRDapjpWAgA5rVj6z+g2FAZRhwM6MU0T16Hwg1qM7ow9EXa7WZ77TIKeZkL0cZkd+gEhmtS9w1kfOwp7CvVK2vG55uIFBSL0RERLQPtTvkis14Gze/jztvcmrKfeDKHoKa3+U+8MReMNmYbSzAmug5HPl3KCX8Hf3PCje5XFw8FAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -122,7 +122,7 @@
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WsQkAMAwDQc+cNst7gXTBCMzdAELlVwEAG530gYebPgAAQNxEp/5uTnTqlvZtSIKT0zwUAAA=
+   H4sIAAAAAAAAC+3WsQkAMAwDQe9fpM26XiBdMAJzN4BQ+VUAwEYnfeDhpg8AABA30am/mxOduqV9G8aWHrY8FAAA
   </data>
  </layer>
 </map>

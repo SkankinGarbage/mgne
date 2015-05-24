@@ -6,7 +6,7 @@
   <property name="name" value="Floor 5"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="27" height="41">
   <properties>
    <property name="z" value="0"/>
@@ -20,14 +20,14 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3TMQrAIAyF4Vzb1dupW9oDNeLiIgWJoZT/gweZ8pZE5LuKJVlaQJdasuUO6MK+1S2UAz2rW1DnvrebU8cu4G/6L1YZPzvPJ3b1X7xk/Ow87/DcBQAAgHgPXlCGNkwRAAA=
+   H4sIAAAAAAAAC+3TMQrAIAyF4dx/6NrbWbfoLRpxcRFBYijl/+CBOOQtich3JctlyQFdarktNaAL+/LkPx3ome2COvetdk4du4C/abf4SL/Z8X1iVrvFIv1mx/cOz1kAAACI9wKJ15WFTBEAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
   <object id="82" name="gate" type="Event" x="208" y="288" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_gate"/>
-    <property name="onCollide" value="teleport('tower/f5.tmx', 28, 23, 'NORTH')"/>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 64, 26, 'SOUTH')"/>
    </properties>
   </object>
   <object id="83" name="target_b" type="Event" x="208" y="608" width="16" height="16"/>
@@ -55,7 +55,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3NoQ0AAAgEsV8by+TsgCCI1l8uAQAAAPihDl+97AbDaBkLTBEAAA==
+   H4sIAAAAAAAAC+3NoQ0AAAgEsd9fYFmXHRAE0frLJQAAAAA/1OGrl90ApU09R0wRAAA=
   </data>
  </layer>
 </map>

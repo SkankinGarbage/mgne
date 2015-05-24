@@ -6,7 +6,7 @@
   <property name="name" value="Oracle's Palace"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="120" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="21" height="27">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgoC2YQ2d9o2AUjIJRgA9QWraMlk3kg2oopiZooZG51VCzR8HQBAApw6nk3AgAAA==
+   H4sIAAAAAAAAC2NgoC3YSGd9o2AUjIJRgA9QWraMlk3kgwlQTE0wk0bmToCaPQqGJgAAxLDUxNwIAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -87,7 +87,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBQMZjBngPWPglEwCkYBNkBu2UKPMgkA1SmlTNwIAAA=
+   H4sIAAAAAAAAC2NgGAWjYBQMZrBxgPWPglEwCkYBNkBu2UKPMgkA21yIydwIAAA=
   </data>
  </layer>
 </map>

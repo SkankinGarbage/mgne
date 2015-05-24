@@ -6,7 +6,7 @@
   <property name="name" value="Southern Cave"/>
  </properties>
  <tileset firstgid="1" name="lower" tilewidth="16" tileheight="16">
-  <image source="../tilesets/lower2.PNG" width="112" height="256"/>
+  <image source="../tilesets/lower2.PNG" width="112" height="320"/>
   <tile id="3">
    <properties>
     <property name="x" value=""/>
@@ -243,7 +243,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="113" name="upper" tilewidth="16" tileheight="16">
+ <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
   <image source="../tilesets/upper2.PNG" width="144" height="176"/>
   <tile id="1">
    <properties>
@@ -503,7 +503,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3QsQ0AIAwDsP7BxjV8yLvslKFTJSR7yZgoEQAA8I/R1LOvfJkdQ4pWU0/lFwCyAytnrSOAEQAA
+   H4sIAAAAAAAAC+3QsQ0AIAwDsP7BxjX8y4PslKFTJSR7yZgoEQAA8I/R1LOvfJkdQ4pWU0/lFwCyAxUXDfaAEQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

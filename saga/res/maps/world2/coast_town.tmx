@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="59" height="49" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="42">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="59" height="49" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="44">
  <properties>
   <property name="bgm" value="ffl3_town"/>
-  <property name="name" value="Castle of Hero"/>
+  <property name="name" value="Wolf's Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="141" source="../tilesets/upper.tsx"/>
@@ -30,16 +30,6 @@
     <property name="onInteract" value="speak('Welcome to our town. We are under the jurisdiction of the world wolf.')"/>
    </properties>
   </object>
-  <object id="12" name="tele" type="Event" x="240" y="128" width="64" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld2.tmx', 59, 31)"/>
-   </properties>
-  </object>
-  <object id="22" name="tele" type="Event" x="608" y="128" width="64" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld2.tmx', 59, 31)"/>
-   </properties>
-  </object>
   <object id="23" name="tele" type="Event" x="336" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 5, 10)"/>
@@ -47,27 +37,27 @@
   </object>
   <object id="24" name="tele" type="Event" x="320" y="368" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 33, 11)"/>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 33, 10)"/>
    </properties>
   </object>
   <object id="25" name="tele" type="Event" x="640" y="352" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 55, 11)"/>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 55, 10)"/>
    </properties>
   </object>
   <object id="26" name="tele" type="Event" x="464" y="528" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 43, 29)"/>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 43, 28)"/>
    </properties>
   </object>
   <object id="27" name="tele" type="Event" x="352" y="528" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 24, 29)"/>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 24, 28)"/>
    </properties>
   </object>
   <object id="28" name="tele" type="Event" x="240" y="528" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 5, 29)"/>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 5, 28)"/>
    </properties>
   </object>
   <object id="29" name="npc" type="Character" x="432" y="304" width="16" height="16">
@@ -102,7 +92,7 @@
     <property name="onInteract" value="speak('I hear there are evil cities to the west that follow the world worm.')"/>
    </properties>
   </object>
-  <object id="34" name="npc" type="Character" x="352" y="256" width="16" height="16">
+  <object id="34" name="npc" type="Character" x="320" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="face" value="WEST"/>
@@ -162,6 +152,16 @@
     <property name="appearance" value="4dir_slime"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('Many caves run through this region. Be sure to stock up on supplies if you go exploring.')"/>
+   </properties>
+  </object>
+  <object id="42" name="tele" type="Event" x="240" y="128" width="64" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 59, 31)"/>
+   </properties>
+  </object>
+  <object id="43" name="tele" type="Event" x="608" y="128" width="64" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 59, 31)"/>
    </properties>
   </object>
  </objectgroup>

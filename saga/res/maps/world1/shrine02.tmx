@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="11">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="12">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
   <property name="encounter" value="encounterset_level00_danger03"/>
   <property name="name" value="Airseed Shrine"/>
  </properties>
  <tileset firstgid="1" name="lower" tilewidth="16" tileheight="16">
-  <image source="../tilesets/lower2.PNG" width="112" height="256"/>
+  <image source="../tilesets/lower2.PNG" width="112" height="320"/>
   <tile id="3">
    <properties>
     <property name="x" value=""/>
@@ -243,7 +243,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="113" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="32" height="32">
   <properties>
    <property name="z" value="0"/>
@@ -252,12 +252,12 @@
    H4sIAAAAAAAAC9WWywqDMBBFk5Cli4KL/kr//8tKwcD19s4jKoKBodoxc8Z5xVKet7ojd7GWTfj6Kp8US4mnP+oHc1dhu23S4drzbcYHfqfmSA907M/Mu3vcLB9jk4mBYjOjw3+cY29fJgYWX9U/55z9OMqP8jhqsm2/Q7hmLFtH+CuJyjfrZ/neXLPqK6vnerH4Vg+PvZVsWnOvlf8ZENXAeBbjOGKPfK4D5XOj/cNGxK8kGNuhR//4fjX2sM0sH2Ov9Eo432f4GHuVf5ar+fVmvlXLZ/jZ/hs+qLMW7WPPfeB6Ab2az9n5p2Yd8rHnXmXfi5X2KTsR35tlWJc/eZd9L3LdnJ3/Vo6j3rNmc4aPe6JvS68e1bdaxOcYqLNV+aT0fFZm2CoGXEfKJ6VXecws9S2TOe+jM3iZ4HOMZ897vEd72cW5xLnizT/1/Cxb+aHseYLPX7087tPWF54pexIAEAAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="32" height="32" visible="0">
+ <layer name="Tile Layer 2" width="32" height="32">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3NQREAAAQAQa1l0FoGD8NjN8BdBADwQR53a+m/1QUAZhp9S72hABAAAA==
+   H4sIAAAAAAAAC+3NMQ0AAAjAMPy/aMAnGjgIHK2ALQIA+CCPu7X03+oCADMNQulkTQAQAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -276,11 +276,6 @@
     <property name="onCollide" value="teleport('world1/shrine01.tmx', 27, 26)"/>
    </properties>
   </object>
-  <object id="4" name="chest" type="Chest" x="96" y="240" width="16" height="16">
-   <properties>
-    <property name="item" value="wpn_gunMusket"/>
-   </properties>
-  </object>
   <object id="5" name="room" type="Ceiling" x="64" y="288">
    <properties>
     <property name="roofID" value="3"/>
@@ -292,11 +287,6 @@
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_shrineKey"/>
-   </properties>
-  </object>
-  <object id="7" name="chest" type="Chest" x="192" y="80" width="16" height="16">
-   <properties>
-    <property name="item" value="item_hp200"/>
    </properties>
   </object>
   <object id="8" name="chest" type="Chest" x="320" y="80" width="16" height="16">
@@ -315,13 +305,18 @@
     <property name="keyItem" value="key_shrineKey"/>
    </properties>
   </object>
+  <object id="11" name="chest" type="Chest" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="item" value="item_agi24"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="32" height="32">
   <properties>
    <property name="z" value="2"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3SIQ4AMAgEQQSyri/t/02fQBAHtNnRhDVnBgAAgC6rubOL+lUd5Kk3GP1Xb+PV7bn4PnLE99P7v7q2mLutABAAAA==
+   H4sIAAAAAAAAC+3SMQ4AIAgEQQpKO9/tn30CoThAs1MTtjkzAAAAdFnNnV3Ur+ogT73B6L96G69uz8X3kSO+n97/1QVvEDx8ABAAAA==
   </data>
  </layer>
  <layer name="Tile Layer 4" width="32" height="32">
@@ -329,7 +324,7 @@
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3KoQEAAAQAMHerHhdFSbLlRQAAAMDI47+p4/9VA0Ipm7kAEAAA
+   H4sIAAAAAAAAC+3KoQEAAAQAMP8foHpVFCXJlhcBAAAAI4//po7/Vw2JBtO9ABAAAA==
   </data>
  </layer>
 </map>

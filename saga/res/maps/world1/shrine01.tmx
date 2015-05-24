@@ -6,7 +6,7 @@
   <property name="name" value="Airseed Shrine"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="113" name="upper" tilewidth="16" tileheight="16">
+ <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
   <image source="../tilesets/upper2.PNG" width="144" height="176"/>
   <tile id="1">
    <properties>
@@ -266,7 +266,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XMQqAMAyFYc/sIuhScPIAnkG8pa4Wikrzkhb+Dxxs8SV0iHQYAAAomzqvkYTZHjU2YbZnDcDKHvw9nt7Ok/P2NUY3UGmJbgDAZ3PlfrQ1e8//V/m+N/UdTJ2fOs9X34+4f6E1pZlgNSvU+ennemv5pZlgNSvU+ejfcT9ndBMAAMDMBQNgLncAJAAA
+   H4sIAAAAAAAAC+3XMQqAMAyF4d5/cBF0EZw8gGcQ76WrhaDQvMTC/4GDFF9Ch0hKAQDANnZeYxFmR9TYhNmRNQAve/L3eHq7T+471pDdQKM5uwEAn02N59nW6r3+X9Xn0dQ7mDpfvYOp89X7EfsX/saaCV6zQp1vzQSvWaHOt2aC16xQ56N/x/2c2U0AAAA3F6ap+noAJAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

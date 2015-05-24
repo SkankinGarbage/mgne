@@ -8,7 +8,7 @@
   <properties>
    <property name="x" value=""/>
   </properties>
-  <image source="../tilesets/lower2.PNG" width="112" height="256"/>
+  <image source="../tilesets/lower2.PNG" width="112" height="320"/>
   <tile id="3">
    <properties>
     <property name="x" value=""/>
@@ -270,7 +270,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="113" name="upper" tilewidth="16" tileheight="16">
+ <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
   <image source="../tilesets/upper2.PNG" width="144" height="176"/>
   <tile id="1">
    <properties>
@@ -530,7 +530,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XTQqAIBCGYW/dGfIILcroEh4vAhcyG2uMdPJ9QAZx8yn+oHMAAAAYTWgdoELM2hNrqtu7cVS86N+ZSxTVmiu3d3bzY2zWz98optYBlJZUZ9HHt47COG+YDvcnoNfr+dlbB6jQ65qW5HnlXxJ9sbrHAADAf5wZ+56xACQAAA==
+   H4sIAAAAAAAAC+3XTQqAIBCGYe+/7Qx5hBZldAkPFIELmY01Rjr5PiCDuPkUf9A5AAAAjCa0DlAhZu2JNdXt3TgqXvTvzCWKas2V2zu7+TE26+dvFFPrAEpLqrPo41tHYZw3TIf7E9Dr9fzsrQNU6HVNS/K88i+JvljdYwAA4D9Ong77kgAkAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

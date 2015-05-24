@@ -6,7 +6,8 @@
 	"projector" : "USER",
 	"shielding" : 0,
 	"triggerTypes" : [
-		"PHYSICAL"
+		"PHYSICAL",
+		"WEAPON"
 	],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
