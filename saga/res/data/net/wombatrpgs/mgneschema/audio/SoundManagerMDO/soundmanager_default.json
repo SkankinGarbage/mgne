@@ -35,6 +35,10 @@
 		{
 			"key" : "explode",
 			"file" : "ffl1_14_longexplode.wav"
+		},
+		{
+			"key" : "spike",
+			"file" : "ffl1_19_bow.wav"
 		}
 	],
 	"emuMusicEntries" : [

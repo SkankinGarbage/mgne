@@ -14,7 +14,7 @@
 	"gp" : 120,
 	"loot" : "wpn_katana",
 	"equipped" : [
-		"wpn_katana"
+		"helm_gold"
 	],
 	"stats" : {
 		"hp" : 103,

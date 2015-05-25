@@ -394,7 +394,7 @@
   </object>
   <object id="39" name="tele" type="Event" x="272" y="384" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 41, 23, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 46, 28, 'SOUTH')"/>
    </properties>
   </object>
   <object id="40" name="tele" type="Event" x="912" y="1184" width="16" height="16">

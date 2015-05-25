@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="36" tilewidth="16" tileheight="16" nextobjectid="9">
+ <properties>
+  <property name="bgm" value="ffl3_dark"/>
+  <property name="encounter" value="encounterset_level03_danger00"/>
+  <property name="name" value="Ruined Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
+  <image source="../tilesets/upper2.PNG" width="144" height="176"/>
+  <tile id="1">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="o" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="o" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="counter" value=""/>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="o" value=""/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="o" value=""/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="counter" value=""/>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="counter" value=""/>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="counter" value=""/>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="57" height="36">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WQQ6CMBBFMbKhK3eGnR6BW3j/EykJk/z8zEwLaFuTWbwFdGrn8aF2GoZhCoIgCILg6zwVrPtcMxXMae23MitY97kmZeb04vhQsO4jaQOvuaYXR4tkMDpjzHxi/dpeyPLhZXABJNe0XffgJr2NCtJzUrzW8RvUefzaQ1tD+sY+FgJ7txzvBY4yvrfv6w6wT81NYIfFGdfy9mqP5HnEMUfuO2N/pEdHzEBcSvIpRX4X34dU2REzQMdcPqXwHrzX78zeY72XpdnkMtbWquXHa5c68hlAy9/71mr74X5a4pg7A3CWNV08R/HEPQEdOTc8v3n/La3dNEfORGrYwXPEZ9PajR35DIA1WlYyl7Pv0ZE9tf1Ay0rGtDN5ax/P0Rr3HL1n8094jkEQBEEQtOcNiXUPVhAgAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="57" height="36">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WQQqFMAxEc/+9B7DLXuPrvVRwIaEpTSmT6p+BByJV+5pYTSKSCCGEEDKcUrJx/pmkxln3ivaz5tUSvQ7WuuRgv5Z6jUiWGFeU3/o4Rnqi/OR+1u9kO9kF5xkZr2PuJDoez7fmHxyvfN3x2mu/7OjxS/d4L5Hx+s3+XdRB+CF7W/cMyg/576bfJYQfsoYonxKt+43us8UxFlmz3lqW+qyWqJ7sraU1R8t1FqfanDWt183uN2qNoudACCGE1DgA6Jfn0xAgAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="6" name="tele" type="Event" x="160" y="240" width="16" height="64">
+   <properties>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 62, 19)"/>
+   </properties>
+  </object>
+  <object id="7" name="chest" type="Chest" x="480" y="336" width="16" height="16">
+   <properties>
+    <property name="item" value="item_hp400"/>
+   </properties>
+  </object>
+  <object id="8" name="tele" type="Event" x="544" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/east_ruins_interior.tmx', 13, 9)"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

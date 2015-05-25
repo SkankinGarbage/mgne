@@ -4,10 +4,10 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$CGOLD",
-	"itemDescription" : "Increases defense by 3",
+	"itemDescription" : "Increases defense by 4",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 220,
+	"cost" : 320,
 	"anim" : "None",
 	"equip" : [
 		"GAUNTLET"

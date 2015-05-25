@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="38">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="41">
  <properties>
   <property name="bgm" value="ffl2_overworld"/>
   <property name="name" value="Wartorn World"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YS3KDMBAEULgWO5bmANz/KNlYVVOTnp/QD9csuuw4RkGPlnB8b9t2ZzKZTCaTyWSm5CKZfS5vzgUy83x2ktk2PJ9vvI61nruQp2PM9uOONB7HEmlekpt0vHSc51rM8ORe5XmZ1we8VuPpMYwer4070nNnRpZZ9Pd8TpHrgCy116XrM8KyOEbn98TaY+d5LTrmio6e+UXnTtfGk3Oyur2CY895Wj2vcUPj9fKM9qa35ahrs4Kl1oHrO6a3K97rUd7b6lxXtqQulqXVF+97W9zXelg+9eSWXs8W64D//+CdSw/Lo8JT2tNLRlg+7Xqve3mNp2WJxvLOteW9beS9h6/1FvuntH9ELVvcb0Z+JkKWNed/As8yluTX8r7sCZ3f0dHy2Oo9TxLJUlrzLZ1WcJS66fU8t/+edExk1vIzv7YncsMRjlI3PZ7IEnWTf28X/f8V/Q3JEjmOMPR4SqbcUbKUPJGB1K+TPHrX8yxHba3zIENkaXl61n3xlXopGc521Lp5gseop7ZPWpaot5LfyL0x2s1T+NnribrJv2/nrpblij30dhP1UvMsx2lrHQWtXf5c6uJstx6e9Bit7+i7CdTTFT7ntF7rmifaC4rl5RiXR7N8kyHtJu0nsrJS7LT7u8dy5T0xaho1pJb8uyhvR3/N0fJEa13qJjei3edBe+Nsg9ae2j3J6qbWT+lvvXFvbGFq9ZL285d9nphaudljOmYymUwmk8m8K38R050J9DwAAA==
+   H4sIAAAAAAAAC+3YSY6DMBAFULgWO5bhANz/KL2JpVL1rwmPRLX4Ip0GBz+XzXBv23ZnMplMJpPJZKbkIpl9Lm/OBTLzfHaS2TY8n2+8jk89dyG1bcz24440HscSqV+Sm3S8dJxnLGZ4cq/yufTrA7574ukxjB6vtTvSc2dGlln0/7xPkXFAltr30viMsCyO0f7VWHvsPN9F21zR0dO/aN/p3PCcU3Sses7zqGNtrbW20fbna1Zvz2jd9LYcNTYrWGpz5/q2ae0XHY+yb6tzXdmSuliWVr14921xXethWevJLb2eLeYBf37w9qWH5fHAU1rTS0ZY1tZ6r2v5E0/LErXV6z7nSVs97zO9z3GeSOtH1BLN2Rb3TL2fJSPPxSgn8Cxtafd/rerME9q/o6PlsT33PEkkS2nOt5jHnnEZ5SjVptfz3P570jaRWct7fm1N5IYjHKXa9HgiS1Sb/L1d9PkV/YZkiRxHGHo8JVPuKFlKnshAqq+TbL3zeZajNtd5kCGytDw98774SnUpGc521GrzBNuop7ZOWpaobiW/kWtjtDZP4W+vJ6pN/r6du1qWK9ahtzZRXWqe5ThtrqOgucs/S7U4262HJz1Gq3f0bgLV6Qr3Oa3nuuaJ1oJieTna5dEs32RIa5PWJ7KyUuy067vHcuU1MWoaNaSW/F2Ut0Z/zdHyRHNdqk1uRGufB62Nsw1ae2rXJKs2tfqUfuuNa2MLU6suaX3+sk+NqZWbbdMxk8lkMplM5l35A7R8ggj0PAAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="83" height="47">
@@ -122,6 +122,21 @@
   <object id="37" name="Hidden Town" type="Event" x="656" y="416" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/hidden_town.tmx', 34, 11, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="38" name="Ruined Town" type="Event" x="992" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/east_ruins.tmx', 11, 17, 'EAST')"/>
+   </properties>
+  </object>
+  <object id="39" name="Coast Town" type="Event" x="736" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/east_ruins.tmx', 11, 17, 'EAST')"/>
+   </properties>
+  </object>
+  <object id="40" name="Lost Temple" type="Event" x="736" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/west_ruins.tmx', 46, 30, 'WEST')"/>
    </properties>
   </object>
  </objectgroup>

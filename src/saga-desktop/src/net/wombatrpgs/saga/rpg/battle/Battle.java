@@ -796,7 +796,7 @@ public class Battle extends AssetQueuer implements Disposable {
 					return true;
 				}
 				CombatItem item = chara.getInventory().get(selected);
-				if (item == null || !item.isBattleUsable()) {
+				if (item == null || !item.isBattleUsable() || item.getUses() == 0) {
 					return false;
 				}
 				intent.setItem(item);
