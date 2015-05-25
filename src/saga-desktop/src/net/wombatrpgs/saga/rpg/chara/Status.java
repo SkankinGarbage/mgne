@@ -215,6 +215,7 @@ public class Status implements Resistable {
 			battle.println(chara.getName() + mdo.inflictString + ", " + 
 					chara.getName() + " takes " + dot + " damage.");
 			battle.checkDeath(chara, false);
+			battle.checkVictory();
 		} else if (mdo.preventChance > 0) {
 			battle.println(chara.getName() + mdo.inflictString + ".");
 		}

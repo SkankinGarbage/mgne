@@ -574,6 +574,22 @@ public class Battle extends AssetQueuer implements Disposable {
 	}
 	
 	/**
+	 * Checks victory conditions and behaves appropriately.
+	 * @return					True if either side won
+	 */
+	public boolean checkVictory() {
+		if (enemyWon()) {
+			onDefeat();
+			return true;
+		} else if (playerWon()) {
+			onVictory();
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	/**
 	 * The actual changes that need to happen when the battle is finally on
 	 * screen and ready to begin.
 	 */
@@ -704,11 +720,7 @@ public class Battle extends AssetQueuer implements Disposable {
 			@Override public void onFinish() {
 				playbackListener = new FinishListener() {
 					@Override public void onFinish() {
-						if (enemyWon()) {
-							onDefeat();
-							return;
-						} else if (playerWon()) {
-							onVictory();
+						if (checkVictory()) {
 							return;
 						}
 						if (globalTurn.size() > 0) {

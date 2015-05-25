@@ -121,7 +121,7 @@
   </object>
   <object id="37" name="Hidden Town" type="Event" x="656" y="416" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/hidden_town_interior.tmx', 34, 11, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world2/hidden_town.tmx', 34, 11, 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>

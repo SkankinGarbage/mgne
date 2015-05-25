@@ -113,13 +113,13 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 						battle.println(tab + username + " recovers " + damage + " HP.");
 					}
 				}
+				if (effect(OffenseFlag.STUNS_ON_HIT) && victim.isAlive()) {
+					if (battle.cancelAction(victim) && MGlobal.rand.nextFloat() < STUN_CHANCE) {
+						battle.println(tab + "A stunning hit!");
+					}
+				}
 			} else {
 				battle.damagePlayback(victim, 0);
-			}
-			if (effect(OffenseFlag.STUNS_ON_HIT) && victim.isAlive()) {
-				if (battle.cancelAction(victim) && MGlobal.rand.nextFloat() < STUN_CHANCE) {
-					battle.println(tab + "A stunning hit!");
-				}
 			}
 		}
 		

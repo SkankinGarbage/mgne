@@ -106,7 +106,7 @@
   </object>
   <object id="54" name="tele" type="Event" x="640" y="416" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/hidden_town_interior.tmx', 21, 38)"/>
+    <property name="onCollide" value="teleport('world2/hidden_town_interior.tmx', 38, 8)"/>
    </properties>
   </object>
  </objectgroup>
