@@ -6,7 +6,7 @@
 	"abilityName" : "PSI KNIFE",
 	"itemDescription" : "Attacks with weapon damage based on user mana (tier 6)",
 	"type" : "ITEM",
-	"uses" : 0,
+	"uses" : 50,
 	"cost" : 0,
 	"anim" : "banim_slash_agi",
 	"equip" : [ ],

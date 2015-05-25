@@ -1,0 +1,16 @@
+{
+	"key" : "shop_hidden_magic",
+	"subfolder" : "world2",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"spell_fire",
+		"spell_ice",
+		"spell_electric",
+		"spell_fog",
+		"spell_sleep",
+		"spell_prayer",
+		"spell_stone",
+		"spell_death"
+	]
+}

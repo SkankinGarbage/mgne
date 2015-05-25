@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="37">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="38">
  <properties>
   <property name="bgm" value="ffl2_overworld"/>
   <property name="name" value="Wartorn World"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YS3KDMBAEULgWOy3NAbj/UbKxqqYmPR/9hWsWXXYco6BHSzh+juN4IpFIJBKJRCJLcpOsPpc35wZZeT4nyWobns83Xsdaz1NI6xir/bgjjccxR5qX5CYdLx3nuRYrPLlXfp7n9QGv1Xh6DEuP18ad6XkyI8us9Pd8TiXXAVlqr0vXZ4ZldiydX4u1x87zWumYOzp65lc6d7o2Ws7J6vYOjiPnafW8xg2NN8qztDejLWddmx0stQ7c3zG9XfFej/zeXue6syV1sSytvnjf2+O+NsKy1ZNbej17rAP+/4N3LiMsrwpPaU/PmWHZ2vVR9/IaT8sSjeWda89728x7D1/rPfZPaf8otexxv5n5mQhZ1px/Ap55LMmv533ZEzq/a6DlddR7JhLJUlrzPZ12cJS66fVMx39POiYy6/mZX9sTueEMR6mbHk9kibpJ52t9FvD2X7JEjjMMPZ6SKXeULJGdZCD1K5FH73pe5aitdR5kiCwtT8+6z75SLyXD1Y5aNxN4LPXU9knLEvVW8pu5N5Z2Mwk/ez1RN/n37dzVstyxh95uol5qnvk4ba2joLXLn0tdXO02wpMeo/UdfTeBerrD55zea13zRHtBtrwd4/Jolm8ypN2k/URWVrKddn/3WO68J5aalhpSS/5dlLejv+ZoeaK1LnWTG9Hu86C9cbVBb0/tnmR1U+un9LfeuDf2MLV6Sfv5yz4tplYe9hiOkUgkEolEIu/KHyybjeD0PAAA
+   H4sIAAAAAAAAC+3YS3KDMBAEULgWO5bmANz/KNlYVVOTnp/QD9csuuw4RkGPlnB8b9t2ZzKZTCaTyWSm5CKZfS5vzgUy83x2ktk2PJ9vvI61nruQp2PM9uOONB7HEmlekpt0vHSc51rM8ORe5XmZ1we8VuPpMYwer4070nNnRpZZ9Pd8TpHrgCy116XrM8KyOEbn98TaY+d5LTrmio6e+UXnTtfGk3Oyur2CY895Wj2vcUPj9fKM9qa35ahrs4Kl1oHrO6a3K97rUd7b6lxXtqQulqXVF+97W9zXelg+9eSWXs8W64D//+CdSw/Lo8JT2tNLRlg+7Xqve3mNp2WJxvLOteW9beS9h6/1FvuntH9ELVvcb0Z+JkKWNed/As8yluTX8r7sCZ3f0dHy2Oo9TxLJUlrzLZ1WcJS66fU8t/+edExk1vIzv7YncsMRjlI3PZ7IEnWTf28X/f8V/Q3JEjmOMPR4SqbcUbKUPJGB1K+TPHrX8yxHba3zIENkaXl61n3xlXopGc521Lp5gseop7ZPWpaot5LfyL0x2s1T+NnribrJv2/nrpblij30dhP1UvMsx2lrHQWtXf5c6uJstx6e9Bit7+i7CdTTFT7ntF7rmifaC4rl5RiXR7N8kyHtJu0nsrJS7LT7u8dy5T0xaho1pJb8uyhvR3/N0fJEa13qJjei3edBe+Nsg9ae2j3J6qbWT+lvvXFvbGFq9ZL285d9nphaudljOmYymUwmk8m8K38R050J9DwAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="83" height="47">
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3VsRHCMAwFUO0/RFraVBmAFZiATTg6ckdIIJad4PcG8MnfkhUBAAAAEHFtXUDHesz+052/zWPcUwhpeuxr5rb2wJ5e0Wcc3VKPnm13mTV6Zwa2kdNvsnPzLpQwJJ9/Sz7/DNZm9V6lCqAkO7ie16zf/ZeXWoU0YkeU8cxxDHmWIsd8//631TC1LgAAAIBFD5gnniL0PAAA
+   H4sIAAAAAAAAC+3VsRHCMAwFUO0/RFraVBmAFZiATTg6ckdIIJad4PcG8MnfkhUBAAAAEHFtXUDHesz+052/zWPcUwhpeuxr5rb2wJ5e0Wcc3VKPnm13mTV6Zwa2kdNvsnPzLpQyJJ59Szz7LNZm9V6lCqAkO7ie16zf/ZeXWoU0YkeU8cxxDHmWIsd8//631TC1LgAAAIBFD9aARxD0PAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -117,6 +117,11 @@
   <object id="36" name="Coast Town" type="Event" x="944" y="496" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/coast_town.tmx', 16, 9, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="37" name="Hidden Town" type="Event" x="656" y="416" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/hidden_town_interior.tmx', 34, 11, 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>

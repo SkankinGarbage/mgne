@@ -6,7 +6,7 @@
 	"abilityName" : "POISON",
 	"itemDescription" : "Inflicts poison",
 	"type" : "ABILITY",
-	"uses" : 25,
+	"uses" : 10,
 	"cost" : 0,
 	"anim" : "banim_gas",
 	"equip" : [ ],

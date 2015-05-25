@@ -1,18 +1,18 @@
 {
-	"key" : "spell_sleep",
+	"key" : "spell_stone",
 	"subfolder" : "spell",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$HSLEEP",
-	"itemDescription" : "Inflicts sleep",
+	"abilityName" : "$HSTONE",
+	"itemDescription" : "Inflicts stone",
 	"type" : "ITEM",
 	"uses" : 30,
-	"cost" : 1000,
-	"anim" : "banim_spell",
+	"cost" : 5000,
+	"anim" : "banim_fadeout",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
-		"key" : "anon_CombatItemMDO_-1173972220"
+		"key" : "anon_CombatItemMDO_388699121"
 	},
 	"tier" : 0,
 	"robostats" : {

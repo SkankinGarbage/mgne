@@ -7,7 +7,7 @@
 	"itemDescription" : "Inflicts paralysis with a fixed chance",
 	"type" : "ITEM",
 	"uses" : 30,
-	"cost" : 0,
+	"cost" : 940,
 	"anim" : "banim_beam",
 	"equip" : [ ],
 	"warhead" : {

@@ -19,8 +19,8 @@
 		"abil_scream"
 	],
 	"stats" : {
-		"hp" : 103,
-		"mhp" : 103,
+		"hp" : 80,
+		"mhp" : 80,
 		"str" : 13,
 		"def" : 9,
 		"agi" : 9,

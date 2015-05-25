@@ -1,0 +1,21 @@
+{
+	"key" : "shield_fire",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$BFIRE",
+	"itemDescription" : "Grants the party resistance to fire damage",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 2200,
+	"anim" : "banim_defend",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
+		"key" : "anon_CombatItemMDO_891889192"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgoC3YSGd9o2AUjIJRgA9QWraMlk3kgwlQTE0wk0bmToCaPQqGJgAAxLDUxNwIAAA=
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCmgPJkAxNcFMGpk7AWr2KBiaAADIhsTK3AgAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -87,7 +87,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBQMZrBxgPWPglEwCkYBNkBu2UKPMgkA21yIydwIAAA=
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBKBg+AADXVqSe3AgAAA==
   </data>
  </layer>
 </map>

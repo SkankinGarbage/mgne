@@ -1,0 +1,21 @@
+{
+	"key" : "wpn_swordCoral",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$ECORAL",
+	"itemDescription" : "Inflicts weapon damage that slays aquatic (tier 4)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 1220,
+	"anim" : "banim_slash",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_1079349904"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

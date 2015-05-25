@@ -1,0 +1,16 @@
+{
+	"key" : "shop_hidden_weapons",
+	"subfolder" : "world2",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordBattle",
+		"wpn_swordCoral",
+		"wpn_saber",
+		"wpn_gunStun",
+		"wpn_gunFire",
+		"shield_fire",
+		"hand_silver",
+		"body_silver"
+	]
+}
