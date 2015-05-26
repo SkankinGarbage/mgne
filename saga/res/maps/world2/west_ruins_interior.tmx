@@ -258,7 +258,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WQQ6DIBAFUBbuuYAH4Qg9gDvXdMX9140JJD84RZhCccxM8lMc1PgSO+1ijFmYqan1hjmefWNEunlnRLrZMvIU86siTzLXeNGt5v7mfGbW9KSb85lZ05NodrAOMQ76DhJiz0NazXeYYe/Mj/nW83HNNc/+rcrNpfcghWtOsab8XzPf72neojnNI2fOM4vqccx4vSXuWdrvad6jOc0jZ84zi+od1tBoxustcc/Sfk8zPjvOLw/rUDhuMY+uFjMaqeOrTzWr+a7mAEnmq+8xni/R/Gukmf+Z0TXbp2Y1j6rZPjWreVTN9lH5AF1se8e8GQAA
+   H4sIAAAAAAAAC+3WQQqEMAwF0Czc9wJzkB5hDuDOta68/3oYaOFTOyWN7bSRBD5qiuIDjS5EtAjDqdeE+d77Koh28yaIdrMT5CnmNyNPMnO86DZze3M6Mzk97eZ0ZnJ6Gs0e9s8QD30POUNvh9SaZ5hhR+LH/OrtYV9qHv2tSs2l5yBGao5xVP7XTNdbmtdgjvPI03Vm5XoSM57vMtcsrbc0b8Ec55Gn68zK9SRmPN9lrllab2nGe8d3lntcY+5dUrNka2Yzz2yufY/xWKP5brSZ/5neNdpnZjP3qtE+M5u5V4325fIBjw1RYbwZAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="61" height="27">
@@ -292,12 +292,12 @@
   </object>
   <object id="12" name="tele" type="Event" x="48" y="192" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/west_ruins_interior.tmx', 14, 23)"/>
+    <property name="onCollide" value="teleport('world2/west_ruins.tmx', 14, 23)"/>
    </properties>
   </object>
   <object id="13" name="tele" type="Event" x="176" y="192" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/west_ruins_interior.tmx', 22, 23)"/>
+    <property name="onCollide" value="teleport('world2/west_ruins.tmx', 22, 23)"/>
    </properties>
   </object>
   <object id="14" name="tele" type="Event" x="560" y="128" width="16" height="16">
@@ -307,7 +307,7 @@
   </object>
   <object id="15" name="tele" type="Event" x="560" y="128" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/west_ruins_interior.tmx', 14, 9)"/>
+    <property name="onCollide" value="teleport('world2/west_ruins.tmx', 14, 9)"/>
    </properties>
   </object>
   <object id="16" name="spike" type="Event" x="544" y="208" width="16" height="80">

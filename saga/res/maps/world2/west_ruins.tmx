@@ -275,9 +275,9 @@
     <property name="onCollide" value="teleport('world2/overworld.tmx', 46, 14)"/>
    </properties>
   </object>
-  <object id="7" name="chest" type="Chest" x="352" y="240" width="16" height="16">
+  <object id="7" name="chest" type="Chest" x="368" y="288" width="16" height="16">
    <properties>
-    <property name="item" value="item_spellCure"/>
+    <property name="item" value="pot_agility"/>
    </properties>
   </object>
   <object id="8" name="tele" type="Event" x="352" y="352" width="16" height="16">

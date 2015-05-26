@@ -1,0 +1,16 @@
+{
+	"key" : "shop_worm_weapons",
+	"subfolder" : "world2",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_axeBattle",
+		"wpn_swordBattle",
+		"wpn_bowGreat",
+		"wpn_gunMusket",
+		"spell_electric",
+		"spell_sleep",
+		"helm_silver",
+		"body_silver"
+	]
+}
