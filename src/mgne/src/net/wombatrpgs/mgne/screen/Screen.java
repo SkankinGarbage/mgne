@@ -32,6 +32,7 @@ import net.wombatrpgs.mgne.io.ButtonListener;
 import net.wombatrpgs.mgne.io.CommandListener;
 import net.wombatrpgs.mgne.io.CommandMap;
 import net.wombatrpgs.mgne.io.InputEvent;
+import net.wombatrpgs.mgne.maps.Level;
 import net.wombatrpgs.mgneschema.io.data.InputCommand;
 
 /**
@@ -379,6 +380,15 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 	 */
 	public ShaderProgram constructMapShader() {
 		return null;
+	}
+	
+	/**
+	 * Called by a map when it gains focus. Useful for game-specific screen
+	 * actions that depend on a map.
+	 * @param 	map				The map that gained focus.
+	 */
+	public void onMapGainedFocus(Level map) {
+		
 	}
 	
 	/**

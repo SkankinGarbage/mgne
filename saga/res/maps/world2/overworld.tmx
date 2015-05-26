@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="44">
  <properties>
+  <property name="battle_bgm" value="ffl2_battle"/>
   <property name="bgm" value="ffl2_overworld"/>
   <property name="name" value="Wartorn World"/>
   <property name="terrainEncounter" value="terrain_world2"/>
@@ -12,7 +13,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YS5KDMAwEUKi5VXYswwG4/1GyiatUmpbcAn8gpUVXMgw4+Fk2n2NZliOTyWQymUwmMyW7yOxzeXJ2kJnns4rMttF5f8M6nvVcjVxtY7afdpRhHEusfllu1vHWccxYzPDUXuV76dcbbDvjyRhGj/faHem5KqOaWfT/uk+RcUCW3nZrfEZYFsdo/65YM3bMtmibd3Rk+hftu5wbzDlFx6rnPI86Xq211jbe/nrN6u0ZrZvelqPG5g6W3tzZv23W9ouOR9m31bne2VK61Cxr9cLu2+K61sPyqqe2ZD1bzAP9/MD2pYfl64SntaaXjLC8Wuu9ruVnPGuWqK1e9zln2up5n8k+xzGx1o+oJZqzLe6Zej9LRp6LUTbgWdry7v9a1RkT2b9XR8vXct5zE7EsrTnfYh4z4zLK0apN1nNb/nvKNpFZy3t+b03UhiMcrdpkPJElqk393i76/Ip+w7JEjiMMGU/LVDtalpYnMkD19f62vQJLph5HO3pzXQcZIsuaJzPvi69Vl5bhbEevNjfwGfX01smaJapby2/k2hitzc34m/VEtanft2tX5PdHOM62Y2oT1aXnWY7z5joKmrv6u1WLs916eMpjvHpH7yZQnd7hPqf1XPc80VpQLHeiXR3P8kmGsjZlfSKrWoqdd31nLO+8JkZNo4bSUr+LYmv01xxrnmiuW7WpjWTt66C1cbZBa0/vmlSrTa8+rd964trYwrRWl7I+f9nnimkth/pMx0wmk8lkMpln5QOHMSD09DwAAA==
+   H4sIAAAAAAAAC+3YS5KDMAwEUKi5VXYswwG4/1GyiatUmpbcAn8gpUVXMgw4+Fk2n2NZliOTyWQymUwmMyW7yOxzeXJ2kJnns4rMttF5f8M6nvVcjVxtY7afdpRhHEusfllu1vHWccxYzPDUXuV76dcbbDvjyRhGj/faHem5KqOaWfT/uk+RcUCW3nZrfEZYFsdo/65YM3bMtmibd3Rk+hftu5wbzDlFx6rnPI86Xq211jbe/nrN6u0ZrZvelqPG5g6W3tzZv23W9ouOR9m31bne2VK61Cxr9cLu2+K61sPyqqe2ZD1bzAP9/MD2pYfl64SntaaXjLC8Wuu9ruVnPGuWqK1e9zln2up5n8k+xzGx1o+oJZqzLe6Zej9LRp6LUTbgWdry7v9a1RkT2b9XR8vXct5zE7EsrTnfYh4z4zLK0apN1nNb/nvKNpFZy3t+b03UhiMcrdpkPJElqk393i76/Ip+w7JEjiMMGU/LVDtalpYnMkD19f62vQJLph5HO3pzXQcZIsuaJzPvi69Vl5bhbEevNjfwGfX01smaJapby2/k2hitzc34m/VEtanft2tX5PdHOM62Y2oT1aXnWY7z5joKmrv6u1WLs916eMpjvHpH7yZQnd7hPqf1XPc80VpQLHeiXR3P8kmGsjZlfSKrWoqdd31nLO+8JkZNo4bSUh/P1uivOdY80Vy3alMbydrXQWvjbIPWnt41qVab+l0p81tPXBtbmNbqUtbnL/tcMa3lUJ/pmMlkMplMJvOsfADW0LnY9DwAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="83" height="47">
@@ -20,7 +21,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3VsRHCMAwFUO0/RFraVBmAFZiATTg6ckdIIJad4PcG8MnfkhUBAAAAEHFtXUDHesz+052/zWPcUwhpeuxr5rb2wJ5e0Wcc3VKPnm13mTV6Zwa2kdNvsnPzLpQyJJ59Szz7LNZm9V6lCqAkO7ie16zf/ZeXWoU0YkeU8cxxDHmWIsd8//631TC1LgAAAIBFD9aARxD0PAAA
+   H4sIAAAAAAAAC+3VsQ3CMBAF0Nt/CNq0qRggK2QCNkGRKECCYBLbwfF7jTvr8n2XiwAAAACImI4uoGM9Zr/2zb/mMe4phGJ67GtepfbAnl7RZ/y7Tz3a2u4ya/TODKSR0zalc/Mu5HIpePdc8O5WfJvVW5UqgJzs4Hqes373vxxqFXIQOyKPJccx5JmLHGnB9XGefU8AAAC06A529asG9DwAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

@@ -32,6 +32,7 @@ public class SGlobal {
 	
 	/** Miscellaneous globals */
 	public static int saveSlot;
+	public static String battleBGMKey;
 	
 	/**
 	 * Load the game settings. Call immediately after data is initialized.

@@ -4,7 +4,7 @@ local hero2 = getHero(1).getName()
 speak("Lara", "Where is the wolf?")
 speak("Steward", "The world wolf is not here. But I will slay you in his name, traitors!")
 
-battle('party_bossShiva', false)
+battle('party_bossSteward', false)
 sceneSwitch('steward_dead', true)
 wait(0.7)
 

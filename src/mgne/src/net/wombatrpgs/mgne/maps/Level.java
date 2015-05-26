@@ -412,6 +412,7 @@ public abstract class Level extends ScreenObject implements Turnable, Disposable
 	 * Called when hero lands on this map.
 	 */
 	public void onFocusGained() {
+		MGlobal.screens.peek().onMapGainedFocus(this);
 		for (MapThing object : objects) {
 			object.onMapFocusGained(this);
 		}

@@ -3,7 +3,7 @@
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "TODO",
-	"abilityName" : "",
+	"abilityName" : "$GMAGNUM",
 	"itemDescription" : "",
 	"type" : "ITEM",
 	"uses" : 30,

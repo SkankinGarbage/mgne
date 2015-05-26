@@ -18,6 +18,7 @@ public class SMemory extends Memory {
 	
 	// fields to store/unload
 	public PartyMemory partyMemory;
+	public String battleBGMKey;
 	public int saveSlot;
 
 	/**
@@ -28,6 +29,7 @@ public class SMemory extends Memory {
 		super.storeFields();
 		this.partyMemory = new PartyMemory(SGlobal.heroes);
 		this.saveSlot = SGlobal.saveSlot;
+		this.battleBGMKey = SGlobal.battleBGMKey;
 	}
 
 	/**
@@ -37,6 +39,7 @@ public class SMemory extends Memory {
 	protected void unloadFields() {
 		SGlobal.heroes = new HeroParty(this.partyMemory);
 		SGlobal.saveSlot = this.saveSlot;
+		SGlobal.battleBGMKey = this.battleBGMKey;
 		super.unloadFields();
 	}
 

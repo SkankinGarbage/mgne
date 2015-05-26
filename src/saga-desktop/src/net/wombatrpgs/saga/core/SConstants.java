@@ -16,7 +16,7 @@ public class SConstants extends Constants {
 	
 	/** Version info */
 	public static final String VERSION = "0.3";
-	public static final int SAVE_BUILD = 7;
+	public static final int SAVE_BUILD = 8;
 	public static final String GAME_NAME = "saga";
 	
 	/** Battle indent string */

@@ -116,7 +116,6 @@ public class ScreenBattle extends SagaScreen {
 	protected static final float TEXT_FADE_TIME = 0f;
 	protected static final float ADVANCE_DURATION = .2f;
 	protected static final int ADVANCE_LENGTH = 8; // in px
-	protected static final String BGM_NAME = "ffl3_battle";
 	protected static final String VICTORY_BGM_NAME = "ffl1_victory";
 	
 	protected Battle battle;
@@ -287,7 +286,7 @@ public class ScreenBattle extends SagaScreen {
 			lastSelected.put(hero, -1);
 		}
 		
-		bgm = MGlobal.audio.generateMusicForKey(bgmKey == null ? BGM_NAME : bgmKey);
+		bgm = MGlobal.audio.generateMusicForKey(bgmKey == null ? SGlobal.battleBGMKey : bgmKey);
 		victoryBGM = MGlobal.audio.generateMusicForKey(VICTORY_BGM_NAME);
 		assets.add(bgm);
 		assets.add(victoryBGM);

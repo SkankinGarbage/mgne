@@ -10,12 +10,16 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.io.command.CMapGame;
+import net.wombatrpgs.mgne.maps.Level;
 import net.wombatrpgs.mgneschema.io.data.InputCommand;
+import net.wombatrpgs.saga.core.SGlobal;
 
 /**
  * Shows up when you wander the overworld.
  */
 public class ScreenWorld extends SagaScreen {
+	
+	protected static final String KEY_BATTLE_BGM = "battle_bgm";
 	
 	/**
 	 * Constructs the SaGa world screen.
@@ -59,6 +63,17 @@ public class ScreenWorld extends SagaScreen {
 	public void render(SpriteBatch batch) {
 		MGlobal.levelManager.getActive().render(batch);
 		super.render(batch);
+	}
+
+	/**
+	 * @see net.wombatrpgs.mgne.screen.Screen#onMapGainedFocus(net.wombatrpgs.mgne.maps.Level)
+	 */
+	@Override
+	public void onMapGainedFocus(Level map) {
+		super.onMapGainedFocus(map);
+		if (map.getProperty(KEY_BATTLE_BGM) != null) {
+			SGlobal.battleBGMKey = map.getProperty(KEY_BATTLE_BGM);
+		}
 	}
 
 }
