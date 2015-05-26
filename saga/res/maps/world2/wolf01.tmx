@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="68" height="47" tilewidth="16" tileheight="16" nextobjectid="50">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="encounter" value="encounterset_level03_danger00_lowrate"/>
+  <property name="name" value="Wolf's Castle"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="68" height="47">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YMW7DMAxFZcRLgwwFPHT2EXKLbJl7/4u0AUzglyUlU5Vp2eXwkDYFGuqB5JdzSSldDsz8zQOYO6gpfPTDLLB3TVbeGnIT2Pt84cMXaSaI/+jjM8MZfIxGrD7GDs7I5/oK0Hvo42HgCD5q998ZfVgdYJ+czUeLjOQ+pNw4gg9LP5R8kJMx/c7Ns/koeaG6n8r5+e/SmXN4+KiZCyljXkwLz+W15GPKcKT+WEvJh5Xe8sXqrrRPa3wMC55O8JX/bHEi9XwrH55OSki7Y62P3DMc7x+eVz37qO0Pqw/Mq1tnPqzPay18YF5NHfqwzHsLH0OG8BE+Xue+duyD73tiEnxZ7+M8j9EH0YuPAWrGfY97n/vI3cc1cj48+wPvoJoP/nyCSD7+yl7zIt3L8W/kIwfOUksfY/o5L+jGw4X23EI1aLW1dpHbIfS5e/rgPcJrQx/We5uElrlePtbkPH+f90fpbmr53gfhvbGVD/KAny3tBc0J+uBnqskW7bsgLXO39HFf0OZX6g2sTcqbWvj/8uoPQvPwDj6kmrR7QWu87x/aXv9I+j4rucj5szr1zFvuQ9r1a+uznMnixeu+TtmCPu4ClnOtdVEzLx75siZve2WreQmCIAiCIAja8wVahvUc8DEAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="68" height="47">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XsQ7DIAwFM3Ts1v/OmrlblfxkVamReFUFlDgY6J1kiYHBPhkM2zRNW8fxDe+c8NFO4AMf+EjXHMM7X3zUra8E7xrxgQ984AMf4/iYg7V3jS34WIK1d40t+AhZ3+Fdayz2HGuyRuKfPORQ24u3h0fmvlo90yN4UPCh4EPBh3LGTIlxKcxzTm8xoXZvXAvzXNJbTKjt42abvjkl52HUu+NFyd3w+ZYL1/eKuZ/BkXsyfI+HTnrGcobuTnruEes3hfcf7ijWPnZy/5atkeuj5zPwC5ZvixE4Ml9GhN5Q8KHgQ2G+KMwXBR8KPhR8KPhQ8KHgQ3kCYEkNJfAxAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="39" name="tele" type="Event" x="160" y="608" width="752" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 54, 27)"/>
+   </properties>
+  </object>
+  <object id="40" name="tele" type="Event" x="912" y="272" width="16" height="336">
+   <properties>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 54, 27)"/>
+   </properties>
+  </object>
+  <object id="41" name="guard" type="Character" x="816" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onCollide" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+    <property name="onInteract" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+   </properties>
+  </object>
+  <object id="42" name="guard" type="Character" x="368" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onCollide" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+    <property name="onInteract" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+   </properties>
+  </object>
+  <object id="43" name="guard" type="Character" x="496" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onCollide" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+    <property name="onInteract" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+   </properties>
+  </object>
+  <object id="44" name="guard" type="Character" x="496" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+    <property name="onInteract" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+   </properties>
+  </object>
+  <object id="45" name="guard" type="Character" x="624" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+    <property name="onInteract" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+   </properties>
+  </object>
+  <object id="46" name="guard" type="Character" x="752" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+    <property name="onInteract" value="battle('encounter_lvl03_SOLDIER3-5')"/>
+   </properties>
+  </object>
+  <object id="47" name="tele" type="Event" x="272" y="544" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/wolf02.tmx', 14, 20)"/>
+   </properties>
+  </object>
+  <object id="49" name="tele" type="Event" x="816" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/wolf03.tmx', 21, 12)"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="68" height="47">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAHgytmJKhfAxAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="68" height="47">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAHgytmJKhfAxAAA=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="46" tilewidth="16" tileheight="16" nextobjectid="56">
+ <properties>
+  <property name="bgm" value="ffl2_overworld"/>
+  <property name="name" value="Wolf's Pass"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="48" height="46">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YSw7CMAxEW3XHDWBVztEVO+5/Ilg0kmX5M0mcqgUvRkglzjwPpg0s0zQtih5fvfdXbc0oRXgnf/Inf/In/+/yvwTNu+ge88HyvC3uM/NL3FoP0h43Ju/6zNag663s0B60Pbg3wm7VRcwPuoflrzFZ3NpekreXO5q/JYs/Yv578y/XJWm8PF+vvid/lH9lKmu0rDm/Vo/k3zs/5ToV5ffmyqpvnZ/a/C1+ZH56+D3uHn5thqR7Sy1/zex7/Nr3D82/5fuL9IDM/10ROv9Wfc/8o/kj/loPvfw1MxTNX1Mfff+k0vyfRNyTvqfVc5+o5y/XqPwlr6jzz5Xzt5gj8+e9RJ5/VqJR/NRj5PlnVYTyI/Ujzz9HaNT5p/W3o1eLeKNzg2RQfDeAu6WP2uevl7+XO9IDX78Z9aPyR7xb80c+ezR7aQ/kM2j5/wSZfy97qZ+z3n9oP1f//zb5kz/5kz/5/5P/AwI308qAIgAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="48" height="46">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3TsQkAIAwEQPffxkFsncc2hRZpJOgdPASeNIG0BgAAAFBTP8y39nnPCMl05O3+L3P/iv87QzIdAADADxZquqTSgCIAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="39" name="tele" type="Event" x="160" y="128" width="448" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 54, 29, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="40" name="tele" type="Event" x="160" y="592" width="448" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 54, 32, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="41" name="target" type="Event" x="384" y="464" width="16" height="16"/>
+  <object id="43" name="trigger" type="Event" x="352" y="432" width="64" height="16">
+   <properties>
+    <property name="onCollide" value="play('world2/pass_guard.lua')"/>
+   </properties>
+  </object>
+  <object id="46" name="trigger" type="Event" x="352" y="400" width="64" height="16">
+   <properties>
+    <property name="onCollide" value="play('world2/pass_guard.lua')"/>
+   </properties>
+  </object>
+  <object id="47" name="npc" type="Character" x="368" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+  <object id="49" name="npc" type="Character" x="384" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+  <object id="50" name="npc" type="Character" x="240" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+  <object id="51" name="npc" type="Character" x="256" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+  <object id="52" name="npc" type="Character" x="496" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+  <object id="53" name="npc" type="Character" x="512" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+  <object id="54" name="npc" type="Character" x="576" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+  <object id="55" name="npc" type="Character" x="160" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

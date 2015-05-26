@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl03_SATYR",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_got03_SATYR",
+			"amount" : "1"
+		}
+	]
+}

@@ -39,6 +39,14 @@
 		{
 			"encounter" : "encounter_lvl03_STATUE",
 			"weight" : 8
+		},
+		{
+			"encounter" : "encounter_lvl03_IMP0-2_MOON JELLY1-3",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl03_SATYR",
+			"weight" : 8
 		}
 	],
 	"steps" : 42

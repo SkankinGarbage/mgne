@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl03_GIANT RAT",
+	"subfolder" : "level03",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rat03_GIANT RAT",
+			"amount" : "1"
+		}
+	]
+}

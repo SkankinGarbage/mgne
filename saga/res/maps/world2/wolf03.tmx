@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="23" height="15" tilewidth="16" tileheight="16" nextobjectid="59">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="encounter" value="encounterset_level03_danger00"/>
+  <property name="name" value="Wolf's Castle"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="23" height="15">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC4tkYGCIpCHmQcLofErEQVgYCaPzKREHYQ8kjM6nRDwSTc2o2fQ3G10cHZMiLogkh5xG0fmkiMPMlkAyGzmNovNJEcfmJ2phWpUhMLOxhRulGBbu2MKNUgwLdwCSWxJwZAUAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="23" height="15">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglFAKwAAI4wpfGQFAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="52" name="tele" type="Event" x="336" y="208" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/wolf01.tmx', 51, 15)"/>
+   </properties>
+  </object>
+  <object id="56" name="door" type="Event" x="304" y="160" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_bars"/>
+    <property name="onInteract" value="speak('It\'s locked.')"/>
+   </properties>
+  </object>
+  <object id="57" name="door" type="Event" x="112" y="160" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_bars"/>
+    <property name="onInteract" value="speak('It\'s locked.')"/>
+   </properties>
+  </object>
+  <object id="58" name="door" type="Event" x="208" y="160" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_bars"/>
+    <property name="hide" value="return getSwitch('wolf_door_opens')"/>
+    <property name="onInteract" value="speak('It\'s locked.')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="23" height="15">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMgsELImloNg8NzRaG0gC2m+fHZAUAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="23" height="15">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMgpEJ+mho9nQoDQBPGPPfZAUAAA==
+  </data>
+ </layer>
+</map>

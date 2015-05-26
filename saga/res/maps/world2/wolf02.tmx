@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="58" height="37" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="55">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="encounter" value="encounterset_level03_danger00"/>
+  <property name="name" value="Wolf's Castle"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="58" height="37">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XMQ6EQAhFKbd0KzfRynI7uz2C9z+R1TQGENQNoL94iSGYzMsMwzAS0QgAAKAsg5HodZ5lMhK9zrMsRlr+l0GLZ2Fx5swMWjwLVs9Wp9Jea2cgA1bPVqdHPH+JPa11a/F8J/eUvr2en4Kenv/2cuGZy5PrmVy8uifXM7l4dU/vnfxP9npXVc9tbXSkvzWPekazrY2e9LdmVc+XgDRX3s1Tmivv5tnw3h/SPRI9b0p+Ur5lr7ic7PPmVZ4RPRKeNoeriHYBAAAAnsoKNXttOIghAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="58" height="37">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OAQ0AAAgDoPdPYVRjfFNIQAIAAAAAcNe0AwAAwCsLMfNIzIghAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="47" name="room" type="Ceiling" x="528" y="112">
+   <properties>
+    <property name="roofID" value="12"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,16 16,128 96,128 96,16"/>
+  </object>
+  <object id="48" name="room" type="Ceiling" x="624" y="112">
+   <properties>
+    <property name="roofID" value="12"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,16 16,128 96,128 96,16"/>
+  </object>
+  <object id="49" name="room" type="Ceiling" x="144" y="288">
+   <properties>
+    <property name="roofID" value="12"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,16 16,128 128,128 128,16"/>
+  </object>
+  <object id="51" name="tele" type="Event" x="224" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/wolf01.tmx', 17, 3)"/>
+   </properties>
+  </object>
+  <object id="52" name="tele" type="Event" x="752" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/wolf02.tmx', 1, 9)"/>
+   </properties>
+  </object>
+  <object id="53" name="tele" type="Event" x="752" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/wolf03.tmx', 47, 12)"/>
+   </properties>
+  </object>
+  <object id="54" name="chest" type="Chest" x="608" y="432" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_black"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="58" height="37">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3PMQoAIBADQR9y/3+nrY0gVl6cgUDaHQMAALhVy5LV5qfRmUVnFp1ZdGbR2VcdrLuTBp19/NR5MwDgHRNPA8bfiCEAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="58" height="37">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQlPoAAAAAAAAAAAeBgJn0jYiCEAAA==
+  </data>
+ </layer>
+</map>

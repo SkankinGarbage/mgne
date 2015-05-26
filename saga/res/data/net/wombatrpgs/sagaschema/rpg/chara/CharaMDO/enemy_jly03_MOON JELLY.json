@@ -20,8 +20,8 @@
 		"abil_warning"
 	],
 	"stats" : {
-		"hp" : 126,
-		"mhp" : 126,
+		"hp" : 103,
+		"mhp" : 103,
 		"str" : 3,
 		"def" : 6,
 		"agi" : 12,

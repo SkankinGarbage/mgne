@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="11" height="20" tilewidth="16" tileheight="16" nextobjectid="62">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="encounter" value="encounterset_level03_danger00"/>
+  <property name="name" value="Wolf's Castle"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="11" height="20">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC4tkYGCIJAHzEIFhaoWJwDC1HkTgUbWjailVi45xyWFL1x44xLGlaw8c4gCE0jaccAMAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="11" height="20">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGPrgAglqb9LMFfjBGRLEr+JQi0t8oMFw9hu1AQAK6u81cAMAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="61" name="tele" type="Event" x="80" y="272" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/wolf01.tmx', 42, 26)"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="11" height="20">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYOSCSBLU8pCgVhiHOADOfJ2KcAMAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="11" height="20">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBQQA/pIUDsdhzgAbFrHJnADAAA=
+  </data>
+ </layer>
+</map>

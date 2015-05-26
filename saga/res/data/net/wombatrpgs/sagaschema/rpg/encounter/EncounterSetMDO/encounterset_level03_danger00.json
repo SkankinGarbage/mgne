@@ -22,7 +22,7 @@
 		},
 		{
 			"encounter" : "encounter_lvl03_STATUE",
-			"weight" : 32
+			"weight" : 24
 		},
 		{
 			"encounter" : "encounter_lvl03_ZOMBIE",
@@ -35,6 +35,14 @@
 		{
 			"encounter" : "encounter_lvl03_MOON JELLY_STATUE_SATYR",
 			"weight" : 8
+		},
+		{
+			"encounter" : "encounter_lvl03_SATYR",
+			"weight" : 12
+		},
+		{
+			"encounter" : "encounter_lvl03_GIANT RAT",
+			"weight" : 12
 		}
 	],
 	"steps" : 42

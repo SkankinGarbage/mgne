@@ -18,8 +18,8 @@
 		"abil_bite"
 	],
 	"stats" : {
-		"hp" : 150,
-		"mhp" : 150,
+		"hp" : 126,
+		"mhp" : 126,
 		"str" : 15,
 		"def" : 13,
 		"agi" : 14,
