@@ -1,0 +1,36 @@
+{
+	"key" : "chara_lara",
+	"subfolder" : "npcs",
+	"name" : "Lara",
+	"description" : "",
+	"gender" : "FEMALE",
+	"race" : "MUTANT",
+	"family" : "None",
+	"species" : "",
+	"appearance" : "4dir_lara",
+	"portrait" : "None",
+	"meatEatLevel" : 0,
+	"meatTargetLevel" : 0,
+	"gp" : 0,
+	"loot" : "None",
+	"equipped" : [
+		"abil_thunder",
+		"abil_othunder",
+		"abil_mutantBlank",
+		"abil_mutantBlank",
+		"wpn_bowGreat",
+		"spell_cure",
+		"hand_silver"
+	],
+	"stats" : {
+		"hp" : 150,
+		"mhp" : 150,
+		"str" : 9,
+		"def" : 7,
+		"agi" : 18,
+		"mana" : 24,
+		"flags" : [
+			"EQUIPMENT_FIX"
+		]
+	}
+}

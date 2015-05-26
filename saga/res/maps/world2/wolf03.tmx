@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="23" height="15" tilewidth="16" tileheight="16" nextobjectid="59">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="23" height="16" tilewidth="16" tileheight="16" nextobjectid="63">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level03_danger00"/>
@@ -7,62 +7,84 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="141" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="23" height="15">
+ <layer name="Tile Layer 1" width="23" height="16">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC4tkYGCIpCHmQcLofErEQVgYCaPzKREHYQ8kjM6nRDwSTc2o2fQ3G10cHZMiLogkh5xG0fmkiMPMlkAyGzmNovNJEcfmJ2phWpUhMLOxhRulGBbu2MKNUgwLdwCSWxJwZAUAAA==
+   H4sIAAAAAAAAC4tkYGCIpCHmQcLofErEQVgYCaPzKREHYQ8kjM6nRDwSTc2o2cPLbHRxdEyKuCCSHHL6R+eTIg4zWwLJbOT0j84nRRybn6iFaVU+wczGFm6UYli4Yws3SjEs3AGHSKRFwAUAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="23" height="15">
+ <layer name="Tile Layer 2" width="23" height="16">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMglFAKwAAI4wpfGQFAAA=
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwFAEAvkO64sAFAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="52" name="tele" type="Event" x="336" y="208" width="16" height="16">
+  <object id="52" name="tele" type="Event" x="336" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/wolf01.tmx', 51, 15)"/>
    </properties>
   </object>
-  <object id="56" name="door" type="Event" x="304" y="160" width="16" height="16">
+  <object id="56" name="door" type="Event" x="304" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="onInteract" value="speak('It\'s locked.')"/>
    </properties>
   </object>
-  <object id="57" name="door" type="Event" x="112" y="160" width="16" height="16">
+  <object id="57" name="door" type="Event" x="112" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="onInteract" value="speak('It\'s locked.')"/>
    </properties>
   </object>
-  <object id="58" name="door" type="Event" x="208" y="160" width="16" height="16">
+  <object id="58" name="door" type="Event" x="208" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
-    <property name="hide" value="return getSwitch('wolf_door_opens')"/>
     <property name="onInteract" value="speak('It\'s locked.')"/>
+   </properties>
+  </object>
+  <object id="59" name="dunn" type="Character" x="208" y="48" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onInteract" value="speak('Thank you for freeing me.')"/>
+   </properties>
+  </object>
+  <object id="60" name="tele" type="Event" x="16" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/wolf03.tmx', 47, 12)"/>
+   </properties>
+  </object>
+  <object id="61" name="trigger" type="Event" x="144" y="192" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('lara_joins')"/>
+    <property name="onCollide" value="play('world2/lara01.lua')"/>
+   </properties>
+  </object>
+  <object id="62" name="lara" type="Character" x="336" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_lara"/>
+    <property name="hide" value="return getSwitch('lara_joins') or not getSwitch('lara_appears')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="23" height="15">
+ <layer name="Tile Layer 3" width="23" height="16">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMgsELImloNg8NzRaG0gC2m+fHZAUAAA==
+   H4sIAAAAAAAAC2NgGAWjYBSMgpEJImloNg8NzRaG0gArVHRZwAUAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" width="23" height="15">
+ <layer name="Tile Layer 4" width="23" height="16">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMgpEJ+mho9nQoDQBPGPPfZAUAAA==
+   H4sIAAAAAAAAC2NgGAWjYBSMglFAbdBHQ7OnQ2kA0tdgQcAFAAA=
   </data>
  </layer>
 </map>

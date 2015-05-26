@@ -4,26 +4,26 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "SABER",
-	"itemDescription" : "Attacks with weapon damage based on user agility (tier 5)",
+	"itemDescription" : "Attacks with weapon damage based on user agility (tier 4)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 2100,
+	"cost" : 1980,
 	"anim" : "banim_slash_double",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
 		"key" : "anon_CombatItemMDO_776728275"
 	},
-	"tier" : 5,
+	"tier" : 4,
 	"robostats" : {
 		"stats" : [
 			{
 				"stat" : "MHP",
-				"value" : 45.0
+				"value" : 36.0
 			},
 			{
 				"stat" : "AGI",
-				"value" : 10.0
+				"value" : 8.0
 			}
 		]
 	}

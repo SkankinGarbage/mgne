@@ -1,0 +1,21 @@
+{
+	"key" : "wpn_gunMagnum",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "TODO",
+	"abilityName" : "",
+	"itemDescription" : "",
+	"type" : "ITEM",
+	"uses" : 30,
+	"cost" : 0,
+	"anim" : "banim_wound",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_-1821932629"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

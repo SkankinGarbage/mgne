@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_bowGreat",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$SGREAT",
+	"itemDescription" : "Attacks with fixed damage aimed by agility (tier 4)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 1280,
+	"anim" : "banim_arrows",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_-2081180768"
+	},
+	"tier" : 4,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 36.0
+			},
+			{
+				"stat" : "AGI",
+				"value" : 8.0
+			}
+		]
+	}
+}

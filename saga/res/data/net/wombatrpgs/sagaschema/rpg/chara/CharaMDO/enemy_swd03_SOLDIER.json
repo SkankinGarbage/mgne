@@ -12,9 +12,9 @@
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 3,
 	"gp" : 120,
-	"loot" : "wpn_katana",
+	"loot" : "wpn_saber",
 	"equipped" : [
-		"helm_gold"
+		"wpn_saber"
 	],
 	"stats" : {
 		"hp" : 103,

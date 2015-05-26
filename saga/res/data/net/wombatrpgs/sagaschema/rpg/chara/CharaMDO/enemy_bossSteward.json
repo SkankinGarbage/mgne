@@ -1,0 +1,29 @@
+{
+	"key" : "enemy_bossSteward",
+	"subfolder" : "boss",
+	"name" : "STEWARD",
+	"description" : "",
+	"gender" : "MALE",
+	"race" : "HUMAN",
+	"family" : "None",
+	"species" : "STEWARD",
+	"appearance" : "4dir_beetle",
+	"portrait" : "battle_portraits/psi.png",
+	"meatEatLevel" : 5,
+	"meatTargetLevel" : 5,
+	"gp" : 1800,
+	"loot" : "body_silver",
+	"equipped" : [
+		"wpn_gunMagnum",
+		"abil_opara"
+	],
+	"stats" : {
+		"hp" : 396,
+		"mhp" : 396,
+		"str" : 22,
+		"def" : 17,
+		"agi" : 22,
+		"mana" : 5,
+		"flags" : [ ]
+	}
+}

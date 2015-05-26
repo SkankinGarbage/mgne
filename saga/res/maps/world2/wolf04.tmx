@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="11" height="20" tilewidth="16" tileheight="16" nextobjectid="62">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="11" height="20" tilewidth="16" tileheight="16" nextobjectid="64">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level03_danger00"/>
@@ -27,6 +27,13 @@
   <object id="61" name="tele" type="Event" x="80" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/wolf01.tmx', 42, 26)"/>
+   </properties>
+  </object>
+  <object id="62" name="steward" type="Character" x="80" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="hide" value="return getSwitch('steward_dead')"/>
+    <property name="onInteract" value="play('world2/steward.lua')"/>
    </properties>
   </object>
  </objectgroup>

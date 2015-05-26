@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="68" height="47" tilewidth="16" tileheight="16" nextobjectid="50">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="68" height="47" tilewidth="16" tileheight="16" nextobjectid="52">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level03_danger00_lowrate"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2YMW7DMAxFZcRLgwwFPHT2EXKLbJl7/4u0AUzglyUlU5Vp2eXwkDYFGuqB5JdzSSldDsz8zQOYO6gpfPTDLLB3TVbeGnIT2Pt84cMXaSaI/+jjM8MZfIxGrD7GDs7I5/oK0Hvo42HgCD5q998ZfVgdYJ+czUeLjOQ+pNw4gg9LP5R8kJMx/c7Ns/koeaG6n8r5+e/SmXN4+KiZCyljXkwLz+W15GPKcKT+WEvJh5Xe8sXqrrRPa3wMC55O8JX/bHEi9XwrH55OSki7Y62P3DMc7x+eVz37qO0Pqw/Mq1tnPqzPay18YF5NHfqwzHsLH0OG8BE+Xue+duyD73tiEnxZ7+M8j9EH0YuPAWrGfY97n/vI3cc1cj48+wPvoJoP/nyCSD7+yl7zIt3L8W/kIwfOUksfY/o5L+jGw4X23EI1aLW1dpHbIfS5e/rgPcJrQx/We5uElrlePtbkPH+f90fpbmr53gfhvbGVD/KAny3tBc0J+uBnqskW7bsgLXO39HFf0OZX6g2sTcqbWvj/8uoPQvPwDj6kmrR7QWu87x/aXv9I+j4rucj5szr1zFvuQ9r1a+uznMnixeu+TtmCPu4ClnOtdVEzLx75siZve2WreQmCIAiCIAja8wVahvUc8DEAAA==
+   H4sIAAAAAAAAC+2YO27DMAyGZcRLiwwFPHT2EXKLbJl7/4ukBSzgB0uJoiwxssPhQ15ALH7hy7mEEC4HZv3lDqwDnMl9jMPK8OozafloyJXh1fG5D1u4moi8o4+fDGfwMSvR+pgHiJHW9ScQ30MfdwVH8FHb/87oQ+sA8+RsPlrMSOqDmxtH8KHJB8lHdDKH/3PzbD4kL/Hcj0T89DUXcw4LHzV1wc2YP5aNx/Yo+VgyHCk/SpF8aBltvmjdSf20xse0YekEH+lzjRMu51v5sHQiwfWOUh+5eziaP3RejeyjNj+0PnBeXQfzob1fa+ED59UyoA9NvbfwMWV4Zx+xZ7mPtJMRfNB+H1kYX9p9nM7jkfNjgjNjv8e+T33k9vEUkg/00jNe3EFTPuj9CcL52AvXTy3qhdvL8bPoIwfWUksf0QnNjV4+SvYq9MHlbY/coDliVS+lPmiO0LOhD+3exlEyY3r6KNl7crVcsptq/vdBrPIjeqDXpn0h5QR90JhqZkvqvyCr/oE+bhslPZ7bB7h5Uwv3XZbzNuXhK6Tzlfu9esJdp5ePVF//Dul+JrnI+atxajVvqQ+u10uxlv6+e7xY7OtxtqCPG4MmrlIXex329CHN21HpVS+O4ziO4zhOe57JrWMg8DEAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="68" height="47">
@@ -38,6 +38,7 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('steward_dead')"/>
     <property name="onCollide" value="battle('encounter_lvl03_SOLDIER3-5')"/>
     <property name="onInteract" value="battle('encounter_lvl03_SOLDIER3-5')"/>
    </properties>
@@ -46,6 +47,7 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('steward_dead')"/>
     <property name="onCollide" value="battle('encounter_lvl03_SOLDIER3-5')"/>
     <property name="onInteract" value="battle('encounter_lvl03_SOLDIER3-5')"/>
    </properties>
@@ -92,7 +94,12 @@
   </object>
   <object id="49" name="tele" type="Event" x="816" y="224" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/wolf03.tmx', 21, 12)"/>
+    <property name="onCollide" value="teleport('world2/wolf03.tmx', 21, 13)"/>
+   </properties>
+  </object>
+  <object id="50" name="tele" type="Event" x="672" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/wolf04.tmx', 5, 17)"/>
    </properties>
   </object>
  </objectgroup>

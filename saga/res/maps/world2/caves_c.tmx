@@ -277,7 +277,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="146" height="93">
@@ -399,7 +399,7 @@
   </object>
   <object id="40" name="tele" type="Event" x="912" y="1184" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 51, 31, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 51, 31, 'NORTH')"/>
    </properties>
   </object>
   <object id="41" name="tele" type="Event" x="816" y="192" width="16" height="16">
@@ -409,7 +409,7 @@
   </object>
   <object id="42" name="tele" type="Event" x="1088" y="384" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 43, 30, 'WEST')"/>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 53, 17, 'WEST')"/>
    </properties>
   </object>
   <object id="43" name="tele" type="Event" x="1312" y="416" width="16" height="16">
