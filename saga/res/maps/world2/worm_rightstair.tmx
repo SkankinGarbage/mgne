@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="18" tilewidth="16" tileheight="16" nextobjectid="52">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="encounter" value="encounterset_level03_danger01"/>
+  <property name="name" value="Worm's Castle"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="18" height="18">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC53SQQrAMAgEQB/gpfTSax7j/78UAhWsqKsV9tCmHcImRN9ZzaA53zAIsnT9BkGWrglIZa2BU1nWuSjvN7O8cfIUTmRlTifW+vN/5aD7ws7gxEH3xfbJ73PkTM7ZG1NHgOG7Q512+pWkX2T4LiV4V529Gp2p7kLXoGB/NnY2VuMlVhAFAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="18" height="18">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEAAgCc28dnEAUAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1"/>
+ <layer name="Tile Layer 3" width="18" height="18">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBQMJaBIJXN4qGSOMJXMGQwAAO7zzeQQBQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="18" height="18">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMRNBHJXOmU8mcwQAAvQnW1hAFAAA=
+  </data>
+ </layer>
+</map>
