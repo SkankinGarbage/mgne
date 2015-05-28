@@ -1,0 +1,21 @@
+{
+	"key" : "pot_soft",
+	"subfolder" : "potions",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$TSOFT",
+	"itemDescription" : "Cures stone",
+	"type" : "ITEM",
+	"uses" : 1,
+	"cost" : 1100,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_-648774139"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

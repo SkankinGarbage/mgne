@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="27" tilewidth="16" tileheight="16" nextobjectid="52">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="27" tilewidth="16" tileheight="16" nextobjectid="54">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level03_danger01"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC62VSwqAMAxE2727nqCH8f5XEhcDw5BOYlAYsJ887EvBMcbYJpUHe68gVQ7qVxBwKox3/x1kfWCgZlIwV3G0g3rmqKsOQ111GEvmOgydc4xTdpHBOfXC9Ued3/Sua6f+qHO+W7qW9UfdRB4yL38z2Ns0Y8dgd9EYfh2D3UVj+M18ZPdO67p3jOPOnwUMd/4s/P3d/Mk4pbrP+QIj8+p88T/C5QFxgA9NLAcAAA==
+   H4sIAAAAAAAAC7WVSwqAMAxE695dT5DDeP8riYuBMEw+BhUGbGgf9qXUtdayJJ0Hc0+RLgfrtwg4HcYz/xLZLxhYc7ig1nFkYr3nsKsJg11NGJtqEwbXMkYUazJ8ol5kvWHnUS+y3rBzMLhe9YbdKAeVk78Y5uarccWAO/+OMfxWDLjz7xjDb8WozpxaNzljHN6zuhejgMF7VvdiFP/903zJiNKdl/kCo/Ka+fL/iCw3gOuG+ywHAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="17" height="27">
@@ -20,10 +20,16 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAX4wAUqmHGTCmaMglEwFMFZAnxiwDUC/FEwCugBAC8RVpMsBwAA
+   H4sIAAAAAAAAC2NgGAX4wAUqmHGTCmaMglEw1MBZAnxiwDUC/FEwCugFAHe8sGosBwAA
   </data>
  </layer>
- <objectgroup name="Object Layer 1"/>
+ <objectgroup name="Object Layer 1">
+  <object id="53" name="tele" type="Event" x="112" y="400" width="32" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/worm_f2.tmx', 14, 4)"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer name="Tile Layer 3" width="17" height="27">
   <properties>
    <property name="z" value="1.5"/>
@@ -37,7 +43,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMglEwCoYemAbFlID5UEwIAADVTJZ7LAcAAA==
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCoYe+AHFlABGRggmBACxARqxLAcAAA==
   </data>
  </layer>
 </map>

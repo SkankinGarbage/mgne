@@ -474,9 +474,11 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	 */
 	public boolean damage(int damage, boolean physical) {
 		stats.subtract(Stat.HP, damage);
-		mutantManager.recordEvent(MutantEvent.DAMAGED);
-		if (physical) {
-			mutantManager.recordEvent(MutantEvent.DAMAGED_PHYSICALLY);
+		if (mutantManager != null) {
+			mutantManager.recordEvent(MutantEvent.DAMAGED);
+			if (physical) {
+				mutantManager.recordEvent(MutantEvent.DAMAGED_PHYSICALLY);
+			}
 		}
 		if (get(Stat.HP) <= 0) {
 			stats.setStat(Stat.HP, 0);

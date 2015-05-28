@@ -1,0 +1,21 @@
+{
+	"key" : "pot_eyedrop",
+	"subfolder" : "potions",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$TEYEDROP",
+	"itemDescription" : "Cures blindness",
+	"type" : "ITEM",
+	"uses" : 3,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_1609896018"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

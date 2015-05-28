@@ -1,0 +1,21 @@
+{
+	"key" : "wpn_caneFire",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$PFIRE",
+	"itemDescription" : "Attacks with fire damage based on user mana (tier 3)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 620,
+	"anim" : "banim_flame",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_-11044924"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

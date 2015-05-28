@@ -1,0 +1,23 @@
+{
+	"key" : "body_fur",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$AFUR",
+	"itemDescription" : "Increases defense by 5 and grants resistance to ice",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [
+		"ARMOR"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-1948826506"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

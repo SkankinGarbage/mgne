@@ -1,0 +1,13 @@
+{
+	"key" : "anon_CombatItemMDO_1609896018",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_1609896018",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ALLY",
+	"base" : 0,
+	"power" : 0,
+	"powerStat" : null,
+	"heals" : [
+		"status_blind"
+	]
+}
