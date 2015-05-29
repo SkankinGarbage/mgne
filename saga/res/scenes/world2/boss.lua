@@ -1,0 +1,46 @@
+local hero1 = getHero(0).getName()
+local hero2 = getHero(3).getName()
+
+speak(hero1, "Jonas!!")
+face('jonas', 'SOUTH')
+speak("Jonas", hero1 .. "?")
+speak("Wolf", "Friends of yours? Just in time!")
+
+sceneSwitch('jonas_injured', true)
+playSound('knife')
+wait(.5)
+
+speak("Lara", "Jonas! No!")
+speak(hero1, "It can't be!")
+speak("Wolf", "Your friend isn't dead, yet. We'll execute him later and stir up a new wave of bloodshed in this pathetic world.")
+speak(hero2, "The war is a fake?")
+speak("Wolf", "If mortals die then the war is real! We will fight until Babel opens for us once again.")
+speak("Lara", "Then they truly must be 'masters...'")
+speak("Worm", "GRRRR...")
+speak("Wolf", "You tire me. We are hungry.")
+
+face('fenrir', 'WEST')
+playSound('explode')
+shake(.5)
+wait(.25)
+sceneSwitch('bars_retract', true)
+wait(.25)
+face('fenrir', 'SOUTH')
+
+speak("Wolf", "Won't you come die together with your friend?")
+walk('hero', 4, 'NORTH')
+speak(hero1, "You'll pay for this, fiend!")
+
+battle('party_bossWorld2', false, 'ffl1_boss')
+sceneSwitch('fenrir_dead', true)
+sceneSwitch('jorgandr_dead', true)
+face('hero', 'NORTH')
+
+speak(hero1, "Will he make it?")
+speak("Lara", "I'll care for him. Come on, let's get out of here!")
+
+fade('white')
+wait(1.0)
+teleport('world2/coast_town_interior.tmx', 60, 26, 'NORTH', false)
+fade('normal')
+wait(1.0)

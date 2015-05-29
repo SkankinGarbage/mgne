@@ -54,7 +54,7 @@
     <property name="onCollide" value="teleport('world2/worm_f2.tmx', 22, 37)"/>
    </properties>
   </object>
-  <object id="64" name="hp200" type="Chest" x="400" y="624" width="16" height="16">
+  <object id="64" name="chest" type="Chest" x="400" y="624" width="16" height="16">
    <properties>
     <property name="item" value="body_fur"/>
    </properties>
@@ -64,7 +64,7 @@
     <property name="item" value="shoe_leather"/>
    </properties>
   </object>
-  <object id="66" name="hp200" type="Chest" x="32" y="80" width="16" height="16">
+  <object id="66" name="chest" type="Chest" x="32" y="80" width="16" height="16">
    <properties>
     <property name="item" value="pot_strength"/>
    </properties>

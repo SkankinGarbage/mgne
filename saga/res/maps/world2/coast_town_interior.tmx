@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="31" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="45">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="64" height="31" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="51">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="Wolf's Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="141" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="60" height="31">
+ <layer name="Tile Layer 1" width="64" height="31">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+1YQQ6DMAzrcRceC1wGF268e51UpMoQcEMYVIslC1QaOwGhQEK4Fo0hf+l1JocuckrHJlvb4wTnJV6SDnpPG/ul2CWeyWGInNOxydb2OMN5iZekg97zxn4pdolncnhlbCN7WGOo8drSONpjncM7cvyjeu/0uqNerWfN9dbw/lr2ROb91XpZ1ov9qSdyaMO6h2n8GC+2XqR0DfvTSOTwDusepvFjvBhdvP9d2qd5lgyu9ENt1P1q4v0f0j7Ns2RwpR9qo65VDQ6Hw+FwnIX17OaJWqh7NMvRzo8kTVZLiseZVAmW79S9WY52fiRpslpSPM6kSlDyv1KrVg05er1er9fL6bLzhlq1cljOG56qlcNy3vBUrRwfpgS7UxAdAAA=
+   H4sIAAAAAAAAC+2YwQqEMAxEe9yLH6te1Is3v3sr9FDGxo4hZS2bQFCKeZPZInUTQtsYDNNCy7o/pqcp5p6uQ7Z2lzvcP9GSOJL/0rO1niReib/GPNJ1yNbu8oD7J1oSR/JferbWk8Qr8T9ZjjFnWGNSo8UwajXWPS0xtz/2/0utN/gfCmv/5r/H99/yTGbef61WS/94Hs5ET2O4npkaPUZL6x9T+v3xPNyInpZwPTM1eowWw8XA/ZlSnWavmWiph2zklpi4P2uq0+w1Ey31kI1cKw8eHh4eHh69h/Wsq0dWbfalnb9JTJYl1ddmeiwr/86+m31p528Sk2VJ9bWZHst6Mouw+P/5Npb7769n9+/+rf2z8xhG5+0sZFjOY3pg5Yyz1nIe0wMrZ5y1X571Z3YAHwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="60" height="31">
+ <layer name="Tile Layer 2" width="64" height="31">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YMQqAMAyF4d5/U3DRxdXZO6jH0kXokELA0Gf1/yAECg1p2qkpAXizIaBGX8hei7G2XbFncTj31TAVcuvumVuzVlDd79P37KE6GwAAAAD8VaduoLJR3cBHreoGDJH/ORG15sBaANCSEw20AqAQHQAA
+   H4sIAAAAAAAAC+3YMQqAMAyF4d5/U3DRxdXZO6jH0kV0aDBgyivl/yAUCk1T0ikpAWjJUCBnb6xeS2Zvu2J/xeE8pzAZa2vunuR6oVBL///+f49a3goAAAAAaFOnLkBsVBcgUGJ+8WUV3Gmx5neR86+IXHNgLgDA4wQcypLTAB8AAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -138,21 +138,49 @@
     <property name="onInteract" value="shop('shop_coastal_weapon')"/>
    </properties>
   </object>
+  <object id="45" name="jonas" type="Character" x="976" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jonas"/>
+    <property name="hide" value="return not getSwitch('world2_done')"/>
+    <property name="inanimate" value="true"/>
+   </properties>
+  </object>
+  <object id="48" name="lara" type="Character" x="944" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_lara"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('world2_done') or getSwitch('lara03')"/>
+    <property name="onInteract" value="play('world2/lara03.lua')"/>
+   </properties>
+  </object>
+  <object id="49" name="tele" type="Event" x="960" y="464" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/coast_town.tmx', 36, 13)"/>
+   </properties>
+  </object>
+  <object id="50" name="lara" type="Character" x="928" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_lara"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('world2_done') or not getSwitch('lara03')"/>
+    <property name="onInteract" value="speak('Lara', 'The seal on this world may be damaged. I would investigate.')"/>
+   </properties>
+  </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="60" height="31">
+ <layer name="Tile Layer 3" width="64" height="31">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YQQrAIBBDUS/Qw7bdtJ6+LoMgOJLCCP9Blo5KdlMKAADA3s6WSxKh527zu9RhnPW0vJLIfXquLtw9+49oDxF936M4+pz9x6gHh77vUVb67P35DwAAAADA/pz7jayzlHO/kXWWcu4Fss36AFWHpFsQHQAA
+   H4sIAAAAAAAAC+3YQQqAMAxE0V7Aw6ob7entMgRaTBghwn+QZacN6SqtAQAAQGkfdZiKsOdO8btWNmHWNeo2FbnPnuuJu7N9ROcU4f/DrBTzzvYxm5OC/w+zyszb+7IPAAAAAAD+Trn/qZq1otz/VMt6k6Hcm1TL8hkPk+5jDwAfAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="60" height="31">
+ <layer name="Tile Layer 4" width="64" height="31">
   <properties>
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YIQ4AIAwDwP1fYPkuFonYloXcPaBNbSMAACDX+qTvNXcX9Xf3de8AAACAyTL/hqlZt8xfYFrWAfKgJ7UQHQAA
+   H4sIAAAAAAAAC+3YMQ4AEAxAURdwdavr2k0iDQ3vzfJba0sBAIC/tUfm7XZ76Bb35p3+BwAAAJBDXXgTeY/J1lppRN5NsrXmxgCYZV/+AB8AAA==
   </data>
  </layer>
 </map>

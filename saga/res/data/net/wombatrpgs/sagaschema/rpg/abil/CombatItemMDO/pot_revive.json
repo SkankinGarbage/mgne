@@ -1,0 +1,18 @@
+{
+	"key" : "pot_revive",
+	"subfolder" : "potions",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$TREVIVE",
+	"itemDescription" : "Revives",
+	"type" : "ITEM",
+	"uses" : 1,
+	"cost" : 5000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : null,
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

@@ -41,17 +41,17 @@
    </properties>
    <polygon points="0,0 224,0 224,64 0,64"/>
   </object>
-  <object id="57" name="hp200" type="Chest" x="288" y="384" width="16" height="16">
+  <object id="57" name="chest" type="Chest" x="288" y="384" width="16" height="16">
    <properties>
     <property name="item" value="item_str48"/>
    </properties>
   </object>
-  <object id="58" name="hp200" type="Chest" x="336" y="384" width="16" height="16">
+  <object id="58" name="chest" type="Chest" x="336" y="384" width="16" height="16">
    <properties>
     <property name="item" value="wpn_grenade"/>
    </properties>
   </object>
-  <object id="59" name="hp200" type="Chest" x="176" y="576" width="16" height="16">
+  <object id="59" name="chest" type="Chest" x="176" y="576" width="16" height="16">
    <properties>
     <property name="item" value="item_caneFire"/>
    </properties>

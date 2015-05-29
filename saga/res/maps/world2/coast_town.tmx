@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="59" height="49" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="44">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="59" height="49" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="45">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="Wolf's Town"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YWwqAIBCF4fa/kGgNXVYgvbaeeoqgZiAZ80j/B6IyMIwPXrDrAAAAUNpqjNVz59iMsXruEuajpdpFFJQuzYq/mavraxcA4BR1fgxBeVryxzW3ZgnM5d3TtSSjj6B8VyvXBp/aHgIA3E1ObPysihjeX0tuTJn3RsqNAQAAAADwZAculhMCLC0AAA==
+   H4sIAAAAAAAAC+3YzQmAMAyG4e4/iDiDPxMEr86jR0GTQ0lsqu8DxUogfD20FUsBAABAtE2ZZ+9dY1fm2XtHWM4hrUMEksvQ6tb74J4oVm95gS/zOltHpz49+eOae7M69rLu6VZEeXrIfFdnzgZbtj0EALibjdr0Wgof1r+W2lpm1jdSbQ0AAAAAgCcHHV3/jiwtAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -162,6 +162,11 @@
   <object id="43" name="tele" type="Event" x="608" y="128" width="64" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 59, 31)"/>
+   </properties>
+  </object>
+  <object id="44" name="tele" type="Event" x="576" y="208" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 60, 28)"/>
    </properties>
   </object>
  </objectgroup>

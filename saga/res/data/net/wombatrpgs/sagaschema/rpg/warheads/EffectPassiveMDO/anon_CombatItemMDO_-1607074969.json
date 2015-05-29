@@ -6,7 +6,7 @@
 	"stats" : {
 		"stats" : [ ],
 		"flags" : [
-			"RESIST_POISON"
+			"RESIST_STONE"
 		]
 	}
 }

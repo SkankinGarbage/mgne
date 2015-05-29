@@ -1,0 +1,34 @@
+{
+	"key" : "enemy_bossJorgandr",
+	"subfolder" : "boss",
+	"name" : "JORGANDR",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "MONSTER",
+	"family" : "None",
+	"species" : "JORGANDR",
+	"appearance" : "4dir_ffl2_human",
+	"portrait" : "battle_portraits/boss_jorgandr.png",
+	"meatEatLevel" : 5,
+	"meatTargetLevel" : 5,
+	"gp" : 1200,
+	"loot" : "None",
+	"equipped" : [
+		"abil_bite",
+		"abil_tail",
+		"abil_quake",
+		"abil_whirl",
+		"abil_sand",
+		"abil_oelement",
+		"abil_ostone"
+	],
+	"stats" : {
+		"hp" : 600,
+		"mhp" : 600,
+		"str" : 23,
+		"def" : 25,
+		"agi" : 16,
+		"mana" : 20,
+		"flags" : [ ]
+	}
+}

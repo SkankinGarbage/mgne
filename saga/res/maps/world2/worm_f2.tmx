@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="28" height="45" tilewidth="16" tileheight="16" nextobjectid="74">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="28" height="45" tilewidth="16" tileheight="16" nextobjectid="75">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level03_danger01"/>
@@ -46,7 +46,7 @@
   </object>
   <object id="66" name="tele" type="Event" x="208" y="48" width="32" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/worm_throne.tmx', 7, 24)"/>
+    <property name="onCollide" value="teleport('world2/worm_throne.tmx', 7, 25)"/>
    </properties>
   </object>
   <object id="67" name="tele" type="Event" x="352" y="144" width="16" height="16">
@@ -84,6 +84,11 @@
   <object id="73" name="hp200" type="Chest" x="256" y="224" width="16" height="16">
    <properties>
     <property name="item" value="body_silver"/>
+   </properties>
+  </object>
+  <object id="74" name="hp200" type="Chest" x="96" y="512" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_eyedrop"/>
    </properties>
   </object>
  </objectgroup>

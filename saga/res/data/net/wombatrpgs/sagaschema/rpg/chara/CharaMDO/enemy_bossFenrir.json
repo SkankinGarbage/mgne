@@ -1,0 +1,31 @@
+{
+	"key" : "enemy_bossFenrir",
+	"subfolder" : "boss",
+	"name" : "FENRIR",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "MONSTER",
+	"family" : "None",
+	"species" : "FENRIR",
+	"appearance" : "4dir_ffl2_human",
+	"portrait" : "battle_portraits/boss_fenrir.png",
+	"meatEatLevel" : 5,
+	"meatTargetLevel" : 5,
+	"gp" : 1200,
+	"loot" : "None",
+	"equipped" : [
+		"abil_kick",
+		"abil_ice",
+		"abil_blind",
+		"abil_ostone"
+	],
+	"stats" : {
+		"hp" : 600,
+		"mhp" : 600,
+		"str" : 34,
+		"def" : 18,
+		"agi" : 22,
+		"mana" : 32,
+		"flags" : [ ]
+	}
+}

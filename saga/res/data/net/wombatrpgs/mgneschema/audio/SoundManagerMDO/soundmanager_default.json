@@ -39,6 +39,10 @@
 		{
 			"key" : "spike",
 			"file" : "ffl1_19_bow.wav"
+		},
+		{
+			"key" : "knife",
+			"file" : "ffl1_24_knife.wav"
 		}
 	],
 	"emuMusicEntries" : [

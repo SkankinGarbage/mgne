@@ -9,8 +9,8 @@
 	"species" : "STEWARD",
 	"appearance" : "4dir_beetle",
 	"portrait" : "battle_portraits/psi.png",
-	"meatEatLevel" : 5,
-	"meatTargetLevel" : 5,
+	"meatEatLevel" : 4,
+	"meatTargetLevel" : 4,
 	"gp" : 1800,
 	"loot" : "body_silver",
 	"equipped" : [

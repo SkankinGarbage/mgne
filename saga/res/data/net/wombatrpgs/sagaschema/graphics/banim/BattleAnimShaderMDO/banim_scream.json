@@ -3,7 +3,7 @@
 	"subfolder" : "",
 	"name" : "",
 	"description" : "",
-	"sound" : "ffl1_12_lowexplode.wav",
+	"sound" : "ffl1_16_static.wav",
 	"shader" : "shader_fadeout",
 	"duration" : 0.9,
 	"scope" : "PORTRAIT"

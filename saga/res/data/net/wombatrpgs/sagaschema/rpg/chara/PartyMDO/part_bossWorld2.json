@@ -1,0 +1,16 @@
+{
+	"key" : "part_bossWorld2",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"monster" : "enemy_bossFenrir",
+			"count" : 1
+		},
+		{
+			"monster" : "enemy_bossJorgandr",
+			"count" : 1
+		}
+	]
+}

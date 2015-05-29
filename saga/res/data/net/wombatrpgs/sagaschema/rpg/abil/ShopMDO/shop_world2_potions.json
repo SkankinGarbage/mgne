@@ -10,6 +10,7 @@
 		"item_agi24",
 		"item_hp200",
 		"item_hp400",
-		"spell_cure"
+		"spell_cure",
+		"pot_eyedrop"
 	]
 }
