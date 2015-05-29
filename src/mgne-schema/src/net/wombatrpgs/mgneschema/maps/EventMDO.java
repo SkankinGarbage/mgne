@@ -84,5 +84,9 @@ public class EventMDO extends MainSchema {
 	@Desc("onBehavior - lua value, called abritrarily once every couple seconds")
 	@DefaultValue("")
 	public String onBehavior;
+	
+	@Desc("Animate - hack, put something here to be inanimate")
+	@DefaultValue("")
+	public String animate;
 
 }

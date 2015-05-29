@@ -102,7 +102,9 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 			}
 			DirMDO dirMDO = MGlobal.data.getEntryFor(mdoName, DirMDO.class);
 			appearance = FacesAnimationFactory.create(dirMDO);
-			appearance.startMoving();
+			if (!mdoHasProperty(mdo.animate)) {
+				appearance.startMoving();
+			}
 			assets.add(appearance);
 		}
 		

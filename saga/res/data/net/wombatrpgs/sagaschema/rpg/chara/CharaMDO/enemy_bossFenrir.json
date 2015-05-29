@@ -5,7 +5,7 @@
 	"description" : "",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "None",
+	"family" : "mfamily_dog",
 	"species" : "FENRIR",
 	"appearance" : "4dir_ffl2_human",
 	"portrait" : "battle_portraits/boss_fenrir.png",
@@ -20,12 +20,12 @@
 		"abil_ostone"
 	],
 	"stats" : {
-		"hp" : 600,
-		"mhp" : 600,
-		"str" : 34,
+		"hp" : 800,
+		"mhp" : 800,
+		"str" : 70,
 		"def" : 18,
 		"agi" : 22,
-		"mana" : 32,
+		"mana" : 45,
 		"flags" : [ ]
 	}
 }

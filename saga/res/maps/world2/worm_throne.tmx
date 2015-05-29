@@ -44,17 +44,19 @@
   <object id="57" name="jonas" type="Character" x="64" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
+    <property name="face" value="NORTH"/>
     <property name="hide" value="return getSwitch('jonas_injured')"/>
     <property name="onInteract" value="play('world2/boss.lua')"/>
    </properties>
   </object>
-  <object id="60" name="bars" type="Event" x="64" y="192" width="16" height="32">
+  <object id="60" name="bars" type="Event" x="64" y="176" width="16" height="32">
    <properties>
+    <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return getSwitch('bars_retract')"/>
     <property name="onInteract" value="play('world2/boss.lua')"/>
    </properties>
   </object>
-  <object id="62" name="jonas_injured" type="Character" x="80" y="144" width="16" height="16">
+  <object id="62" name="jonas_injured" type="Character" x="64" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_dead"/>
     <property name="hide" value="return not getSwitch('jonas_injured') or getSwitch('world2_done')"/>

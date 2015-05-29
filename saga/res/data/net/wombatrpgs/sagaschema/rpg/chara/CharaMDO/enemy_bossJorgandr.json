@@ -5,7 +5,7 @@
 	"description" : "",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "None",
+	"family" : "mfamily_snk",
 	"species" : "JORGANDR",
 	"appearance" : "4dir_ffl2_human",
 	"portrait" : "battle_portraits/boss_jorgandr.png",
@@ -23,12 +23,12 @@
 		"abil_ostone"
 	],
 	"stats" : {
-		"hp" : 600,
-		"mhp" : 600,
-		"str" : 23,
+		"hp" : 650,
+		"mhp" : 650,
+		"str" : 30,
 		"def" : 25,
 		"agi" : 16,
-		"mana" : 20,
+		"mana" : 14,
 		"flags" : [ ]
 	}
 }

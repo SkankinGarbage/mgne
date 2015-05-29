@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="25" tilewidth="16" tileheight="16" nextobjectid="63">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="25" tilewidth="16" tileheight="16" nextobjectid="65">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level03_danger01"/>
@@ -26,11 +26,12 @@
  <objectgroup name="Object Layer 1">
   <object id="56" name="tele" type="Event" x="144" y="352" width="32" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 32, 33)"/>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 32, 35)"/>
    </properties>
   </object>
   <object id="57" name="tele" type="Event" x="32" y="32" width="16" height="16">
    <properties>
+    <property name="hide" value="return not getSwitch('lara_joins')"/>
     <property name="onCollide" value="teleport('world2/worm_leftstair.tmx', 14, 13)"/>
    </properties>
   </object>
@@ -42,12 +43,25 @@
   </object>
   <object id="59" name="tele" type="Event" x="272" y="32" width="16" height="16">
    <properties>
+    <property name="hide" value="return not getSwitch('lara_joins')"/>
     <property name="onCollide" value="teleport('world2/worm_rightstair.tmx', 3, 13)"/>
    </properties>
   </object>
   <object id="61" name="block" type="Event" x="144" y="48" width="32" height="16">
    <properties>
-    <property name="HIDE" value="return getSwitch('lara_joins')"/>
+    <property name="hide" value="return getSwitch('lara_joins')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="63" name="block" type="Event" x="32" y="32" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('lara_joins')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="64" name="block" type="Event" x="272" y="32" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('lara_joins')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>

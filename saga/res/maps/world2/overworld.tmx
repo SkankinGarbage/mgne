@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="48">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="52">
  <properties>
   <property name="battle_bgm" value="ffl2_battle"/>
   <property name="bgm" value="ffl2_overworld"/>
@@ -160,15 +160,25 @@
     <property name="onCollide" value="teleport('world2/worm_town.tmx', 12, 18, 'EAST')"/>
    </properties>
   </object>
-  <object id="46" name="tele" type="Event" x="512" y="528" width="16" height="16">
+  <object id="46" name="Worm's Castle" type="Event" x="496" y="528" width="48" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/worm_foyer.tmx', 9, 21, 'NORTH')"/>
+    <property name="onCollide" value="teleport('world2/worm_foyer.tmx', 10, 21, 'NORTH')"/>
    </properties>
   </object>
   <object id="47" name="trigger" type="Event" x="256" y="448" width="80" height="16">
    <properties>
     <property name="hide" value="return getSwitch('lara02')"/>
     <property name="onCollide" value="play('world2/lara02.lua')"/>
+   </properties>
+  </object>
+  <object id="50" name="Worm's Castle" type="Event" x="512" y="512" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/worm_foyer.tmx', 10, 21, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="51" name="Worm's Castle" type="Event" x="512" y="544" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/worm_foyer.tmx', 10, 21, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>

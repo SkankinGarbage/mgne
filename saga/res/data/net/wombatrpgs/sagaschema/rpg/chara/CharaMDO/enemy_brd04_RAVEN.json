@@ -16,7 +16,8 @@
 	"equipped" : [
 		"abil_beak",
 		"abil_claw",
-		"abil_warning"
+		"abil_warning",
+		"abil_oquake"
 	],
 	"stats" : {
 		"hp" : 82,

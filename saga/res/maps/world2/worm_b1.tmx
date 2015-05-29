@@ -53,7 +53,7 @@
   </object>
   <object id="59" name="chest" type="Chest" x="176" y="576" width="16" height="16">
    <properties>
-    <property name="item" value="item_caneFire"/>
+    <property name="item" value="wpn_caneFire"/>
    </properties>
   </object>
  </objectgroup>

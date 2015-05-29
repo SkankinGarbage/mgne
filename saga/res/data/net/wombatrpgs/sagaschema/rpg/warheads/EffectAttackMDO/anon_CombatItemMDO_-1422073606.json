@@ -4,7 +4,7 @@
 	"name" : "anon_CombatItemMDO_-1422073606",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "ALL_ENEMY",
-	"damType" : "ICE",
+	"damType" : "THUNDER",
 	"sideEffects" : [ ],
 	"slayerFlags" : [ ],
 	"power" : 4,

@@ -140,9 +140,9 @@
   </object>
   <object id="45" name="jonas" type="Character" x="976" y="368" width="16" height="16">
    <properties>
+    <property name="animate" value="false"/>
     <property name="appearance" value="4dir_jonas"/>
     <property name="hide" value="return not getSwitch('world2_done')"/>
-    <property name="inanimate" value="true"/>
    </properties>
   </object>
   <object id="48" name="lara" type="Character" x="944" y="368" width="16" height="16">
@@ -155,10 +155,10 @@
   </object>
   <object id="49" name="tele" type="Event" x="960" y="464" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/coast_town.tmx', 36, 13)"/>
+    <property name="onCollide" value="teleport('world2/coast_town.tmx', 36, 14)"/>
    </properties>
   </object>
-  <object id="50" name="lara" type="Character" x="928" y="368" width="16" height="16">
+  <object id="50" name="lara" type="Character" x="944" y="368" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="face" value="EAST"/>

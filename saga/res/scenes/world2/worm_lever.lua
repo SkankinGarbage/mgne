@@ -1,6 +1,5 @@
 playSound('explode')
 shake(.7)
-wait(.7)
 
 sceneSwitch('worm_bars_1', true)
 wait(.15)

@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "GRENADE",
-	"itemDescription" : "Attacks with fixed damage aimed by strength (tier 5)",
+	"itemDescription" : "Attacks with fixed damage aimed by strength (tier 4)",
 	"type" : "ITEM",
 	"uses" : 30,
 	"cost" : 2450,
@@ -14,16 +14,16 @@
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
 		"key" : "anon_CombatItemMDO_-1762178902"
 	},
-	"tier" : 5,
+	"tier" : 4,
 	"robostats" : {
 		"stats" : [
 			{
 				"stat" : "MHP",
-				"value" : 45.0
+				"value" : 36.0
 			},
 			{
-				"stat" : "AGI",
-				"value" : 10.0
+				"stat" : "STR",
+				"value" : 8.0
 			}
 		]
 	}
