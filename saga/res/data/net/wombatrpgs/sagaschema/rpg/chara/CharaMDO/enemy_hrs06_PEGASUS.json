@@ -2,7 +2,7 @@
 	"key" : "enemy_hrs06_PEGASUS",
 	"subfolder" : "level06",
 	"name" : "PEGASUS",
-	"description" : "Converted from a report",
+	"description" : "threat 2",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_hrs",
@@ -12,14 +12,20 @@
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_kick",
+		"abil_mirror",
+		"abil_ostone",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 175,
+		"mhp" : 175,
+		"str" : 31,
+		"def" : 18,
+		"agi" : 31,
+		"mana" : 25,
+		"flags" : [ ]
 	}
 }

@@ -2,7 +2,7 @@
 	"key" : "enemy_elf06_FAIRY",
 	"subfolder" : "level06",
 	"name" : "FAIRY",
-	"description" : "Converted from a report",
+	"description" : "threat 2",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_elf",
@@ -12,14 +12,18 @@
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_dive",
+		"abil_flame"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 126,
+		"mhp" : 126,
+		"str" : 12,
+		"def" : 12,
+		"agi" : 32,
+		"mana" : 33,
+		"flags" : [ ]
 	}
 }

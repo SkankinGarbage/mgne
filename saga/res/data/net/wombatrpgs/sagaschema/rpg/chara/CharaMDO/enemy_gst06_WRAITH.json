@@ -2,24 +2,34 @@
 	"key" : "enemy_gst06_WRAITH",
 	"subfolder" : "level06",
 	"name" : "WRAITH",
-	"description" : "Converted from a report",
+	"description" : "threat 2",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gst",
 	"species" : "WRAITH",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_ghost",
+	"portrait" : "battle_portraits/gst.png",
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_chill",
+		"abil_drain",
+		"abil_oice",
+		"abil_opara",
+		"abil_opoison"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 175,
+		"mhp" : 175,
+		"str" : 29,
+		"def" : 19,
+		"agi" : 28,
+		"mana" : 29,
+		"flags" : [
+			"UNDEAD"
+		]
 	}
 }

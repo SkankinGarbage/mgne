@@ -1,0 +1,21 @@
+{
+	"key" : "abil_2claw",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "2 CLAWS",
+	"itemDescription" : "Attacks up to 2 times",
+	"type" : "ABILITY",
+	"uses" : 20,
+	"cost" : 0,
+	"anim" : "banim_slash_double",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectMultihitMDO",
+		"key" : "anon_CombatItemMDO_-1718322700"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

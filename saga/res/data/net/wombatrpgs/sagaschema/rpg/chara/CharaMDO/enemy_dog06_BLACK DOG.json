@@ -2,24 +2,32 @@
 	"key" : "enemy_dog06_BLACK DOG",
 	"subfolder" : "level06",
 	"name" : "BLACK DOG",
-	"description" : "Converted from a report",
+	"description" : "threat 2",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_dog",
 	"species" : "BLACK DOG",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_rat",
+	"portrait" : "battle_portraits/dog.png",
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_bite",
+		"abil_thunder",
+		"abil_dgaze"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 150,
+		"mhp" : 150,
+		"str" : 31,
+		"def" : 18,
+		"agi" : 31,
+		"mana" : 22,
+		"flags" : [
+			"ANIMAL"
+		]
 	}
 }

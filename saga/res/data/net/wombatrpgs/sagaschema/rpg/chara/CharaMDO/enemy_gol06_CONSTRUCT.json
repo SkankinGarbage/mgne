@@ -2,24 +2,29 @@
 	"key" : "enemy_gol06_CONSTRUCT",
 	"subfolder" : "level06",
 	"name" : "CONSTRUCT",
-	"description" : "Converted from a report",
+	"description" : "threat 1",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gol",
 	"species" : "CONSTRUCT",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_golem",
+	"portrait" : "battle_portraits/gol.png",
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_punch",
+		"abil_oelement",
+		"abil_ochange"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 202,
+		"mhp" : 202,
+		"str" : 30,
+		"def" : 30,
+		"agi" : 20,
+		"mana" : 20,
+		"flags" : [ ]
 	}
 }

@@ -130,7 +130,7 @@ public class MonsterFamily {
 		
 		// TODO: Can't transform into monster we haven't implemented yet
 		// change this once they're updated
-		if (best.meatEatLevel > 6) {
+		if (best.meatEatLevel > 7) {
 			return null;
 		}
 		

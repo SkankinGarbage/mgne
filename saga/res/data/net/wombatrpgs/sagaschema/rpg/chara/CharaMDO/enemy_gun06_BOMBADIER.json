@@ -2,25 +2,27 @@
 	"key" : "enemy_gun06_BOMBADIER",
 	"subfolder" : "level06",
 	"name" : "BOMBADIER",
-	"description" : "Converted from a report",
+	"description" : "threat 1",
 	"gender" : "NONE",
-	"race" : "MONSTER",
-	"family" : "mfamily_gun",
+	"race" : "HUMAN",
+	"family" : "None",
 	"species" : "BOMBADIER",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/gun.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"loot" : null,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"wpn_grenade"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 252,
+		"mhp" : 252,
+		"str" : 28,
+		"def" : 22,
+		"agi" : 28,
+		"mana" : 0,
+		"flags" : [ ]
 	}
 }

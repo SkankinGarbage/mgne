@@ -2,7 +2,7 @@
 	"key" : "enemy_gob06_TROLL",
 	"subfolder" : "level06",
 	"name" : "TROLL",
-	"description" : "Converted from a report",
+	"description" : "threat 1",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gob",
@@ -12,14 +12,18 @@
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_punch",
+		"abil_kick"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 295,
+		"mhp" : 295,
+		"str" : 32,
+		"def" : 22,
+		"agi" : 22,
+		"mana" : 10,
+		"flags" : [ ]
 	}
 }

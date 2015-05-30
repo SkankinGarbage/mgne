@@ -7,19 +7,25 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_brd",
 	"species" : "FALCON",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_bird",
+	"portrait" : "battle_portraits/brd.png",
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_beak",
+		"abil_agility",
+		"abil_oquake",
+		"abil_othunder"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 126,
+		"mhp" : 126,
+		"str" : 21,
+		"def" : 17,
+		"agi" : 39,
+		"mana" : 20,
+		"flags" : [ ]
 	}
 }

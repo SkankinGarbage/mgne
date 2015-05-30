@@ -2,24 +2,31 @@
 	"key" : "enemy_hag06_WITCH",
 	"subfolder" : "level06",
 	"name" : "WITCH",
-	"description" : "Converted from a report",
+	"description" : "threat 3",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_hag",
 	"species" : "WITCH",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/hag.png",
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_electro",
+		"abil_cgaze",
+		"abil_sleep",
+		"abil_dgaze",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 126,
+		"mhp" : 126,
+		"str" : 16,
+		"def" : 16,
+		"agi" : 20,
+		"mana" : 33,
+		"flags" : [ ]
 	}
 }

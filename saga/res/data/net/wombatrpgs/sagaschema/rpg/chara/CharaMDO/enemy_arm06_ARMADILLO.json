@@ -7,19 +7,24 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_arm",
 	"species" : "ARMADILLO",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_beetle",
+	"portrait" : "battle_portraits/arm.png",
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_shell",
+		"abil_oweapon"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 202,
+		"mhp" : 202,
+		"str" : 26,
+		"def" : 38,
+		"agi" : 16,
+		"mana" : 15,
+		"flags" : [ ]
 	}
 }

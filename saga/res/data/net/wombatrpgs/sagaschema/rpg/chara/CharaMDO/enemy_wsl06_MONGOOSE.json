@@ -2,24 +2,31 @@
 	"key" : "enemy_wsl06_MONGOOSE",
 	"subfolder" : "level06",
 	"name" : "MONGOOSE",
-	"description" : "Converted from a report",
+	"description" : "threat 1",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_wsl",
 	"species" : "MONGOOSE",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_rat",
+	"portrait" : "battle_portraits/wsl.png",
 	"meatEatLevel" : 7,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_2claw",
+		"abil_bite",
+		"abil_opoison"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 126,
+		"mhp" : 126,
+		"str" : 26,
+		"def" : 17,
+		"agi" : 40,
+		"mana" : 17,
+		"flags" : [
+			"ANIMAL"
+		]
 	}
 }
