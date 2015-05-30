@@ -1,0 +1,49 @@
+{
+	"key" : "encounterset_level04_danger00",
+	"subfolder" : "level04",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl04_CYBER RAT",
+			"weight" : 12
+		},
+		{
+			"encounter" : "encounter_lvl04_HARPY",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl04_IBEX",
+			"weight" : 48
+		},
+		{
+			"encounter" : "encounter_lvl04_LEVIATHAN",
+			"weight" : 48
+		},
+		{
+			"encounter" : "encounter_lvl04_RAVEN",
+			"weight" : 48
+		},
+		{
+			"encounter" : "encounter_lvl04_SUCCUBUS",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl04_PYRE2-3_PHANTOM2-3",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl04_BLACK CAT0-2_FAMILIAR1-2",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl04_IBEX_LEVIATHAN_RAVEN",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl04_BEHOLDER1-3_SUCCUBUS_PHANTOM0-2",
+			"weight" : 16
+		}
+	],
+	"steps" : 42
+}

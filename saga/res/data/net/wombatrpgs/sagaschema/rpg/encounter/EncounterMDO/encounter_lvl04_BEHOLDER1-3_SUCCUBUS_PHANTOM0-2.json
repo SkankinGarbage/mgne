@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl04_BEHOLDER1-3_SUCCUBUS_PHANTOM0-2",
+	"subfolder" : "level04",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wrd04_BEHOLDER",
+			"amount" : "1-3"
+		},
+		{
+			"enemy" : "enemy_tmp04_SUCCUBUS",
+			"amount" : "1-3"
+		},
+		{
+			"enemy" : "enemy_gst04_PHANTOM",
+			"amount" : "0-2"
+		}
+	]
+}

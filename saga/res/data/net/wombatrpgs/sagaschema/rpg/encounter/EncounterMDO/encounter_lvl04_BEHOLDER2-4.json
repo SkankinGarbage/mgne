@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl04_BEHOLDER2-4",
+	"subfolder" : "level04",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wrd04_BEHOLDER",
+			"amount" : "2-4"
+		}
+	]
+}

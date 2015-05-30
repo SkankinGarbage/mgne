@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl04_PYRE2-3",
+	"subfolder" : "level04",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_brn04_PYRE",
+			"amount" : "2-3"
+		}
+	]
+}

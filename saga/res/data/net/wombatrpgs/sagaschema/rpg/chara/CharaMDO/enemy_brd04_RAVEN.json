@@ -2,7 +2,7 @@
 	"key" : "enemy_brd04_RAVEN",
 	"subfolder" : "level04",
 	"name" : "RAVEN",
-	"description" : "low danger",
+	"description" : "mid danger",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_brd",

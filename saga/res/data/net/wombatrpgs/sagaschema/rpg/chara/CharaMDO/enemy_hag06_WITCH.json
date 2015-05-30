@@ -15,7 +15,7 @@
 	"loot" : "None",
 	"equipped" : [
 		"abil_electro",
-		"abil_cgaze",
+		"abil_gaze",
 		"abil_sleep",
 		"abil_dgaze",
 		"abil_opara"

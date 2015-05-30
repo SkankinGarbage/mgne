@@ -2,7 +2,7 @@
 	"key" : "enemy_arm06_ARMADILLO",
 	"subfolder" : "level06",
 	"name" : "ARMADILLO",
-	"description" : "Converted from a report",
+	"description" : "threat 2",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_arm",

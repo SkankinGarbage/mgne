@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl04_IBEX_LEVIATHAN_RAVEN",
+	"subfolder" : "level04",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_got04_IBEX",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_snk04_LEVIATHAN",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_brd04_RAVEN",
+			"amount" : ""
+		}
+	]
+}

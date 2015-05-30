@@ -2,7 +2,7 @@
 	"key" : "enemy_brd06_FALCON",
 	"subfolder" : "level06",
 	"name" : "FALCON",
-	"description" : "Converted from a report",
+	"description" : "threat 1",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_brd",
