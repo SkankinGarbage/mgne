@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="27" height="41" tilewidth="16" tileheight="16" nextobjectid="87">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="27" height="41" tilewidth="16" tileheight="16" nextobjectid="93">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WvQ7CMAyEm5djggmWwt6l6vuvUKmWTsc5TVJnqMDSqQRRf9i5/AxDeYxCvWLN/QD1YlkdL1Cv2qymC6hXbVYTsqy2aM5IHFNkHy0X94/7GMEzDvcP+xg1b2qeFC+Kxbln8V0vlueRs7ByXo/0/p7XI72vvK72+Rrvq/dxn2XOAlK8XD4+J1A8H4sQz6eXS50TKMVKIMXyctX6LAnV+vQXWGqvY78nGqvfc56aum4fXbdnonF0D1ff3rfnRONo1urb5/acaFzD8lSSoyZnbp23srycpevc8+c8fNfk5fQC97Ca3j0yOb3AM2KPh5zc/6/hMZPnvZXDPOUX9MFRDvLML8zam/fWUKxe8Wedj2W8I/fcksC7nH3uFXiXa1lXb8p0ewNMEQAA
+   H4sIAAAAAAAAC+2WwQ6CMBBE6c9x0pNc1DsXwv9flYRNJuO0ZaFtQmSTSVOi+7rbcaXrrmgZT6GarAFUg4V1vEGl67NcVksPwvpK8IxjtSDLnpXqp/WtT8j6WYLFuSfxrBZL6Uws89dW1l4een0L64j30et8dhR6Med99X2cEcyZQYqXysczDsX3MQvxfcZyqRmHUqwAUqxYLq/PgpDXp//AUrOO/R5orz7PeTx13b+6rWugfekeLr59rOtI+9KsxbevdR1p72Fx7z1nSJ0/NzOsX0dYmAelZoX6ncf8OXW/NWEeVCxwhnl6NyRyxgL/I3I85KTO7+Exk+99L4d5yi/oraMc5JlfmJW7972hWLWiNYtVK9R7RK1Q7xFXtI0PnWh3MUwRAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="27" height="41">
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3TMQrAIAyF4dx/6NrbWbfoLRpxcRFBYijl/+CBOOQtich3JctlyQFdarktNaAL+/LkPx3ome2COvetdk4du4C/abf4SL/Z8X1iVrvFIv1mx/cOz1kAAACI9wKJ15WFTBEAAA==
+   H4sIAAAAAAAAC+3TMQoAIAxDUe9/SO2m3kIFXTJKFZT/oFAyNFNDAN6R+phkceaeRkfpUyXPM4+OXdqhsmMX8Jv1/yb7iVvr/6vsOzxvAQAA4L4G16jxOUwRAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -30,15 +30,23 @@
     <property name="onCollide" value="teleport('world2/overworld.tmx', 64, 26, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="83" name="target_b" type="Event" x="208" y="608" width="16" height="16"/>
-  <object id="84" name="mem_tele" type="Event" x="208" y="624" width="16" height="16">
+  <object id="85" name="block" type="Event" x="352" y="400" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('world2_done')"/>
+    <property name="onInteract" value="speak('It won\'t open.')"/>
+   </properties>
+  </object>
+  <object id="87" name="mem_tele" type="Event" x="64" y="416" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/4.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
-  <object id="85" name="door" type="Event" x="208" y="32" width="16" height="16">
+  <object id="88" name="target_b" type="Event" x="64" y="400" width="16" height="16"/>
+  <object id="91" name="target_a" type="Event" x="352" y="416" width="16" height="16"/>
+  <object id="92" name="mem_tele" type="Event" x="352" y="400" width="16" height="16">
    <properties>
-    <property name="onInteract" value="speak('It won\'t open.')"/>
+    <property name="hide" value="return not getSwitch('world2_done')"/>
+    <property name="onCollide" value="memTele('tower/f5_transition.tmx', 'tower/f6.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
  </objectgroup>
@@ -47,7 +55,7 @@
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3NoQ0AAAjAMI7EEP7/gwswCFTrl0UAAAAA7OrxlY+vPnYDGLVyNEwRAAA=
+   H4sIAAAAAAAAC+3NwQkAIAwEwRSZj9h/H7YgeAQfMwXsVgEAwB/WYKdDr5vODr1SHQDeHLaP+chMEQAA
   </data>
  </layer>
  <layer name="Tile Layer 4" width="27" height="41">
@@ -55,7 +63,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3NoQ0AAAgEsd9fYFmXHRAE0frLJQAAAAA/1OGrl90ApU09R0wRAAA=
+   H4sIAAAAAAAAC+3NsREAAAQAMfsXWusagtNIBviPAACAf/KwU0uvrQ4AMw3qZ/H3TBEAAA==
   </data>
  </layer>
 </map>

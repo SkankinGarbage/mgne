@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="35" tilewidth="16" tileheight="16" nextobjectid="94">
+ <properties>
+  <property name="bgm" value="ffl1_theme"/>
+  <property name="encounter" value="encounterset_level04_danger00"/>
+  <property name="name" value="Floor 9"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="51" height="35">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC82YUQrDMAxDu8vtBP0pvf89RmGBzkiOldhrAmLDpMEvbSycbYuN40Flj2vNHSgrzsRYZpivuSdQVpzJe18RZsbyBmLxXYwzee/MMlexnN/f100sztTmM9k8qliabG4o7rFEVcnS4jY3FPdYvPOyCouy36y+Hdsvr8KCnu/tm7LPTOisNKZ7fVBY0POeLzAW1Y/QuJ//9l9hQc97vsBYVD/KHup33t6fZVF9p5JF8QXPX5gfrcjS85cK36hiUWuyF69iUfYzK17BovrLqOz6FSzIX1S/8PyIrV/Bgvwls09h61ewKN/5SJ/y9NlX+pcRP1qBBfnLiB+twJLpR6uwqH70L5Zqf5llQWuyeYq/RHwk2u9E87Zre/um+EvER6L9jpI36j3Zvs2ei17/gvqd6P2YzaXXJ87Wq17/guZH78ei+5rF0tNov4NYenUmy0eUmhzJh9XZyvMy4lPR+zFUZ9X79mpF78ei90yKh2QLjZn7McVDshUdHz7et7XkGwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="51" height="35">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3YMQ6AIBBEUQ7oCTy82qmdllo5F8BkA4Ex/pf8hobtNpASIoZK5w7GSucA/uVUk5rVoo6u05S51ao2taurwZ3OeyGKvQAA/r74TsnhnQIA7bFHALhw+48qmafHf9Qbt3kQ8wBiy0kU5BsAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="90" name="target_b" type="Event" x="768" y="496" width="16" height="32"/>
+  <object id="91" name="mem_tele" type="Event" x="768" y="512" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f5_transition.tmx', 'tower/8.tmx', 'ENTRANCE', 'B')"/>
+   </properties>
+  </object>
+  <object id="92" name="mem_tele" type="Event" x="768" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f5_transition.tmx', 'tower/f10.tmx', 'ENTRANCE', 'A')"/>
+   </properties>
+  </object>
+  <object id="93" name="target_a" type="Event" x="768" y="112" width="16" height="16"/>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="51" height="35">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3YwQkAIAwAsQ7pR9x/DxcoiFAohWSCe18EANTY3QGFVndAodMdAAAAAPBp6mfKuqd+pqx76mea2v1yAR4ABDHkGwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="51" height="35">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3YsQkAIBAEwe8/MLVdcxFMhOdwpoKNtwoA2I3ugIdmdwAAAADAx1I/06k79TOldt8sqfi0cOQbAAA=
+  </data>
+ </layer>
+</map>
