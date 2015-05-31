@@ -554,6 +554,7 @@ public class Battle extends AssetQueuer implements Disposable {
 		resetBoosts();
 		player.fullHeal();
 		enemy.fullHeal();
+		updateLivenessLists();
 		
 		assets.remove(screen);
 		screen.dispose();
