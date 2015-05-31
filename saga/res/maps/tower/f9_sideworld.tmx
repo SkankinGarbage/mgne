@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="33" tilewidth="16" tileheight="16" nextobjectid="63">
+ <properties>
+  <property name="bgm" value="ffl2_overworld"/>
+  <property name="name" value="Floor 9"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="43" height="33">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XPQ7DIAxG6dEyNqdoWJouTe8/NQyWLMuEj2BXpGJ4UoSAPAzmZw0hrINLsHXggPDaue88O3BBWDpwGLTRmhsb42xbpG7KjVuDJ7Un3sr/c2OhvERzk+q3us7Cmbw/okw6LaEuN4/qajHhZeQyC6Q3lXntbdr8yjhxlxLUh7WnjFkuTqgnr28ZWxlP1AX19XK19PR0tfYcrtdz1dZsyxg89oFEOh+icJsYRz6578TD2FOL7wSgnREcL08iBsz3157a3UyuXc255OmRT7m7Wcz8H0WL6dn7Ls8nJNdqHLU+aa6835RLBaU59HD1eP+XxmO9jnvEevyDwT/yBRdB6awsFgAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="43" height="33">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OoREAMAgAMfYfojOwSxeqrYcDk6iXHwEAAFBztwcana9z7QIAYN4Dv/lDTCwWAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="60" name="tele" type="Event" x="432" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f9_shrine.tmx', 8, 16, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="61" name="tele" type="Event" x="384" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f9_sideworld_inn.tmx', 5, 18, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="62" name="tele" type="Event" x="256" y="288" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f9.tmx', 2, 32, 'NORTH')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

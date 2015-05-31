@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="21" tilewidth="16" tileheight="16" nextobjectid="67">
+ <properties>
+  <property name="bgm" value="ffl2_overworld"/>
+  <property name="name" value="Floor 9"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="20" height="21">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGHmAg0p41LxR80bNGzWP1uahA3xy5IDBZB4A4Lt5CZAGAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="20" height="21">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+NlYGDgpTLWpxKGmWdGJQwzj1oA2bxJSOLkspHNm40kTy6blv6ltnmj4Ucd844B8XEgPoFFPSnhRwwgNfxWkmA2NkCM+6ZSYB493EeOeegYnxwhrMeAWc4yYBEjBhsAsSkDZjnLgEWMGGwOxADQbWz9kAYAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="57" name="inn" type="Character" x="80" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onInteract" value="inn()"/>
+   </properties>
+  </object>
+  <object id="58" name="npc" type="Character" x="32" y="224" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="EAST"/>
+    <property name="onInteract" value="speak('Welcome to the clinic.')"/>
+   </properties>
+  </object>
+  <object id="60" name="npc" type="Character" x="160" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Mutants tend to learn better abilities when fighting stronger monsters.')"/>
+   </properties>
+  </object>
+  <object id="61" name="npc" type="Character" x="240" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Mutants get two options when raising stats. One is based on actions in battle, and the other is random.')"/>
+   </properties>
+  </object>
+  <object id="62" name="npc" type="Character" x="112" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('A monster never changes if it eats meat from a monster of its own family.')"/>
+   </properties>
+  </object>
+  <object id="63" name="npc" type="Character" x="240" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Many specialty weapons slay certain monster families. Humans should be well-prepared.')"/>
+   </properties>
+  </object>
+  <object id="64" name="npc" type="Character" x="32" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Agility-based weapons tend to be more expensive and do less damage.')"/>
+   </properties>
+  </object>
+  <object id="66" name="tele" type="Event" x="80" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f9_sideworld.tmx', 24, 19, 'SOUTH')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="20" height="21">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwVAAvlc3Tp7J5ZhToBQDfKHprkAYAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="20" height="21">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwUkEflc2bToFeAG4WXCWQBgAA
+  </data>
+ </layer>
+</map>

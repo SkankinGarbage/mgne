@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="78" height="54" tilewidth="16" tileheight="16" nextobjectid="58">
+ <properties>
+  <property name="bgm" value="ffl1_cave"/>
+  <property name="name" value="Floor 7"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="78" height="54">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WwQ6DIBBE7V/1JwwXL8ZzT/3/e2tSE9OIgCzMgHN42YRqszxHl3kYhlkIIYQQQogCTAQ9tMhC0EOLOIIeWkTe5E3e+OnB2wjAHayhPaQyAXAHay05XHtcALiDNZ9DNpfjr8fXlydB9Tncu2Rxtnj2EMLq+hiHe5dod2fOWCuDu5Cz1JxYrce6Q3ljyE9O7lCzItQba962us2Kms5G4+ePqNusqHlWiTl7sOftP3c1zs6xM8FqbzVyd3TuQ8yEUE585F5vMTM2UDOhhbydVUTeeqi189ZLZcqbNcobrvqeAWPeSu01N//v3e/KW5z71dlj544pb6XfrdyqvOW7V96u3X/3vPkI3ceUN6vvUur/pDorkber7q70bvE/sdeX8GT1rqLzVitXlu5QeUPmq4cZgfRk+b27m6OrXms4Q+9TCCGEEELw8wFkt1O90EEAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="78" height="54">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OMQ0AMAwDsPI/+o7TUI1A3ymqZCNwFQAA/NHpwFInHQAAAAAAAACAwU0HAAAAAABgmQfGaUON0EEAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="50" name="spikes" type="Event" x="672" y="272" width="16" height="16">
+   <properties>
+    <property name="onTurn" value="if (getHero().terrainType() == 100) play('tower/spike.lua')"/>
+   </properties>
+  </object>
+  <object id="55" name="tele" type="Event" x="688" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f7.tmx', 2, 32)"/>
+   </properties>
+  </object>
+  <object id="56" name="crystal" type="Event" x="1040" y="544" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="play('tower/crystal.lua')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

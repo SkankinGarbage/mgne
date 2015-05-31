@@ -654,6 +654,11 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 					return LuaValue.NIL;
 				}
 			});
+			lua.set("terrainType", new ZeroArgFunction() {
+				@Override public LuaValue call() {
+					return LuaValue.valueOf(parent.getTerrainAt(tileX, tileY));
+				}
+			});
 			
 			onAdd = mdoToScene(mdo.onAdd);
 			onRemove = mdoToScene(mdo.onRemove);

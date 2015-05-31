@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="53" height="48" tilewidth="16" tileheight="16" nextobjectid="90">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="53" height="48" tilewidth="16" tileheight="16" nextobjectid="92">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level04_danger00"/>
@@ -34,6 +34,11 @@
   <object id="89" name="mem_tele" type="Event" x="800" y="336" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f5_transition.tmx', 'tower/f8.tmx', 'ENTRANCE', 'A')"/>
+   </properties>
+  </object>
+  <object id="90" name="tele" type="Event" x="32" y="528" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('tower/f7_sideworld.tmx', 43, 10)"/>
    </properties>
   </object>
  </objectgroup>
