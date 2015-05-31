@@ -24,8 +24,6 @@
 		"def" : 4,
 		"agi" : 2,
 		"mana" : 0,
-		"flags" : [
-			"AQUATIC"
-		]
+		"flags" : []
 	}
 }

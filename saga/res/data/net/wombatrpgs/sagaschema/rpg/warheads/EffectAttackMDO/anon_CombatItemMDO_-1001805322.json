@@ -6,9 +6,6 @@
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "WEAPON",
 	"sideEffects" : [ ],
-	"slayerFlags" : [
-		"UNDEAD"
-	],
 	"power" : 8,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",

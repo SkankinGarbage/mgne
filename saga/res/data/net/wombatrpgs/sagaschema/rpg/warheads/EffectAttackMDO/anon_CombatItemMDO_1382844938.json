@@ -1,11 +1,17 @@
 {
-	"key" : "anon_CombatItemMDO_430878548",
+	"key" : "anon_CombatItemMDO_1382844938",
 	"subfolder" : "",
-	"name" : "anon_CombatItemMDO_430878548",
+	"name" : "anon_CombatItemMDO_1382844938",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
-	"damType" : "WEAPON",
+	"damType" : "PHYSICAL",
 	"sideEffects" : [ ],
+	"slayerFamiles" : [
+		"mfamily_gst",
+		"mfamily_skl",
+		"mfamily_zom",
+		"mfamily_skl"
+	],
 	"power" : 5,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",

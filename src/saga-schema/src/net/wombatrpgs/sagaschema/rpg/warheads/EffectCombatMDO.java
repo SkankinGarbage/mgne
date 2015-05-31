@@ -8,9 +8,10 @@ package net.wombatrpgs.sagaschema.rpg.warheads;
 
 import net.wombatrpgs.mgns.core.Annotations.DefaultValue;
 import net.wombatrpgs.mgns.core.Annotations.Desc;
+import net.wombatrpgs.mgns.core.Annotations.SchemaLink;
 import net.wombatrpgs.sagaschema.rpg.abil.data.DamageType;
 import net.wombatrpgs.sagaschema.rpg.abil.data.OffenseFlag;
-import net.wombatrpgs.sagaschema.rpg.stats.Flag;
+import net.wombatrpgs.sagaschema.rpg.chara.MonsterFamilyMDO;
 
 /**
  * Superclass for some common combat data.
@@ -24,8 +25,8 @@ public abstract class EffectCombatMDO extends EffectEnemyTargetMDO {
 	@Desc("Other flags")
 	public OffenseFlag[] sideEffects;
 	
-	@Desc("Slayer flags - anyone with these flags will be weak to this attack "
-			+ "(don't need to mark elementals)")
-	public Flag[] slayerFlags;
+	@Desc("Slayer families - monsters in these families will be weak")
+	@SchemaLink(MonsterFamilyMDO.class)
+	public String[] slayerFamiles;
 
 }

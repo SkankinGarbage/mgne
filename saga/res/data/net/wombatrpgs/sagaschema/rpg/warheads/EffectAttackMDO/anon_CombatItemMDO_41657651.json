@@ -8,7 +8,6 @@
 	"sideEffects" : [
 		"IGNORE_RESISTANCES"
 	],
-	"slayerFlags" : [ ],
 	"power" : 8,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",

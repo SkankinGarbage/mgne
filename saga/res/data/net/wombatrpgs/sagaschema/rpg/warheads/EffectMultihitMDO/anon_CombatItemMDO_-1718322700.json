@@ -6,7 +6,6 @@
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "PHYSICAL",
 	"sideEffects" : [ ],
-	"slayerFlags" : [ ],
 	"power" : 2,
 	"hits" : "2,2,1",
 	"attackStat" : "STR",

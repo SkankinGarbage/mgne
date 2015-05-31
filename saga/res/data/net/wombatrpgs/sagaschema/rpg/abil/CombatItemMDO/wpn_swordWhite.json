@@ -1,18 +1,18 @@
 {
-	"key" : "wpn_swordCoral",
+	"key" : "wpn_swordWhite",
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$ECORAL",
-	"itemDescription" : "Inflicts weapon damage and slays aquatics (tier 4)",
+	"abilityName" : "$EWHITE",
+	"itemDescription" : "Inflicts weapon damage and slays undead (tier 4)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 1100,
+	"cost" : 1770,
 	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_-1918728330"
+		"key" : "anon_CombatItemMDO_1382844938"
 	},
 	"tier" : 0,
 	"robostats" : {

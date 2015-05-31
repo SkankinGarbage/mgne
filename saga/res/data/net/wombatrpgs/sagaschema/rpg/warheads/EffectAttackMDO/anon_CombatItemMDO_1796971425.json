@@ -8,9 +8,6 @@
 	"sideEffects" : [
 		"CRITICAL_ON_WEAKNESS"
 	],
-	"slayerFlags" : [
-		"ANIMAL"
-	],
 	"power" : 5,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",

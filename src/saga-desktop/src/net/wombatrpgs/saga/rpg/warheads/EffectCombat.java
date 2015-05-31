@@ -7,7 +7,6 @@
 package net.wombatrpgs.saga.rpg.warheads;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -42,7 +41,7 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 	 */
 	public EffectCombat(EffectCombatMDO mdo, CombatItem item) {
 		super(mdo, item);
-		if (mdo.slayerFlags == null) mdo.slayerFlags = new Flag[0];
+		if (mdo.slayerFamiles == null) mdo.slayerFamiles = new String[0];
 		this.mdo = mdo;
 	}
 	
@@ -237,7 +236,17 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 	 * @return					True if the target is weak, else false
 	 */
 	protected boolean weak(Chara target) {
-		return target.isWeakTo(mdo.damType) || target.isAny(Arrays.asList(mdo.slayerFlags));
+		if (target.isWeakTo(mdo.damType)) {
+			return true;
+		}
+		if (target.getFamily() != null) {
+			for (String familyKey : mdo.slayerFamiles) {
+				if (target.getFamily().getKey().equals(familyKey)) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	
 	/**

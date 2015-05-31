@@ -6,7 +6,6 @@
 	"projector" : "GROUP_ENEMY",
 	"damType" : "THUNDER",
 	"sideEffects" : [ ],
-	"slayerFlags" : [ ],
 	"power" : 4,
 	"attackStat" : "MANA",
 	"defendStat" : "MANA",

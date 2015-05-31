@@ -6,7 +6,6 @@
 	"projector" : "GROUP_ENEMY",
 	"damType" : "FIRE",
 	"sideEffects" : [ ],
-	"slayerFlags" : [ ],
 	"power" : 6,
 	"attackStat" : "MANA",
 	"defendStat" : "MANA",

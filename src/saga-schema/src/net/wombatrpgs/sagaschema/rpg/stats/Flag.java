@@ -14,10 +14,7 @@ import net.wombatrpgs.mgneschema.rpg.data.FlagStat;
  */
 public enum Flag implements FlagStatLinkable {
 	
-	AQUATIC,
-	DRACONIC,
 	UNDEAD,
-	ANIMAL,
 	
 	RESIST_DAMAGE,
 	RESIST_WEAPON,

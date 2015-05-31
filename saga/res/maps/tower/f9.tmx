@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="35" tilewidth="16" tileheight="16" nextobjectid="95">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="35" tilewidth="16" tileheight="16" nextobjectid="96">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level04_danger00"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC82YUQrDMAxDu8vtBP0pvf89RmGBzkiOldhrAmLDpMEvbSycbYuN40Flj2vNHSgrzsRYZpivuSdQVpzJe18RZsbyBmLxXYwzee/MMlexnN/f100sztTmM9k8qliabG4o7rFEVcnS4jY3FPdYvPOyCouy36y+Hdsvr8KCnu/tm7LPTOisNKZ7fVBY0POeLzAW1Y/QuJ//9l9hQc97vsBYVD/KHup33t6fZVF9p5JF8QXPX5gfrcjS85cK36hiUWuyF69iUfYzK17BovrLqOz6FSzIX1S/8PyIrV/Bgvwls09h61ewKN/5SJ/y9NlX+pcRP1qBBfnLiB+twJLpR6uwqH70L5Zqf5llQWuyeYq/RHwk2u9E87Zre/um+EvER6L9jpI36j3Zvs2ei17/gvqd6P2YzaXXJ87Wq17/guZH78ei+5rF0tNov4NYenUmy0eUmhzJh9XZyvMy4lPR+zFUZ9X79mpF78ei90yKh2QLjZn7McVDshUdHz7et7XkGwAA
+   H4sIAAAAAAAAC82YUQrDMAxDu8vtBP0pvf89RmGBzkiOldhrAmLDpCEvbSzsbYuN40Flj2vNHSgrzsRYZpivuSdQVpzJe18RZsbyBmLxXYwzee/MMlexnN/f100sztTmM9l9VLE02b2huMcSVSVLi9u9objH4t2XVViU82b57dh+eRUW9Hzv3JRzZkJ3pTHd84PCgp73fIGxqH6Exv3+t/8KC3re8wXGovpR9lC/8/b+LIvqO5Usii94/sL8aEWWnr9U+EYVi5qTvXgVi3KeWfEKFtVfRmXXr2BB/qL6hedHbP0KFuQvmXUKW7+CRfnOR+qUp+++Ur+M+NEKLMhfRvxoBZZMP1qFRfWjf7FU+8ssC1qTzVP8JeIj0Xonum+7tnduir9EfCRa7yj7RrUnUsa96NUvqN6J9sfsXqL9qNF81atf0Pxof0w911mWnkbrHcTSyzNZPqLk5Mh+WJ718kyWjyjxaH8M5Vm1316taH8s2mdSPCRbaMz0xxQPyVZ0fABXtzBg5BsAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="51" height="35">
@@ -36,9 +36,9 @@
    </properties>
   </object>
   <object id="93" name="target_a" type="Event" x="768" y="112" width="16" height="16"/>
-  <object id="94" name="tele" type="Event" x="32" y="496" width="16" height="16">
+  <object id="95" name="tele" type="Event" x="32" y="512" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f9.tmx', 2, 32, 'NORTH')"/>
+    <property name="onCollide" value="teleport('tower/f9_sideworld.tmx', 16, 18, 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>

@@ -6,7 +6,6 @@
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "FIRE",
 	"sideEffects" : [ ],
-	"slayerFlags" : [ ],
 	"power" : 3,
 	"attackStat" : "MANA",
 	"defendStat" : "DEF",

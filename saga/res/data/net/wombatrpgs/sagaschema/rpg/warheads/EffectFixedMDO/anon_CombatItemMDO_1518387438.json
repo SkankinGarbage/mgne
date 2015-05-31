@@ -8,7 +8,6 @@
 	"sideEffects" : [
 		"STUNS_ON_HIT"
 	],
-	"slayerFlags" : [ ],
 	"base" : 12,
 	"range" : 6,
 	"defenseStat" : "DEF",

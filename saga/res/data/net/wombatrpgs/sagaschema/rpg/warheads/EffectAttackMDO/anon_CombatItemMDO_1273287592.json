@@ -6,7 +6,6 @@
 	"projector" : "ALL_ENEMY",
 	"damType" : "NONELEMENTAL",
 	"sideEffects" : [ ],
-	"slayerFlags" : [ ],
 	"power" : 8,
 	"attackStat" : "MANA",
 	"defendStat" : "MANA",

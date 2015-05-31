@@ -8,7 +8,6 @@
 	"sideEffects" : [
 		"ONLY_AFFECT_UNDEAD"
 	],
-	"slayerFlags" : [ ],
 	"power" : 8,
 	"attackStat" : "MANA",
 	"defendStat" : "MANA",

@@ -6,7 +6,6 @@
 	"projector" : "GROUP_ENEMY",
 	"damType" : "WEAPON",
 	"sideEffects" : [ ],
-	"slayerFlags" : [ ],
 	"base" : 36,
 	"range" : 6,
 	"defenseStat" : "DEF",
