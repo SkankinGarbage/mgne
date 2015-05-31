@@ -1,0 +1,28 @@
+{
+	"key" : "helm_diamond",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$FDIAMOND",
+	"itemDescription" : "Increases defense by 12",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 2620,
+	"anim" : "None",
+	"equip" : [
+		"HELMET"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-1800476047"
+	},
+	"tier" : 5,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 45.0
+			}
+		]
+	}
+}

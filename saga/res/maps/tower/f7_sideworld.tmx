@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="78" height="54" tilewidth="16" tileheight="16" nextobjectid="58">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="78" height="54" tilewidth="16" tileheight="16" nextobjectid="62">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="name" value="Floor 7"/>
@@ -37,6 +37,26 @@
    <properties>
     <property name="onInteract" value="play('tower/crystal.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="58" name="chest" type="Chest" x="304" y="432" width="16" height="16">
+   <properties>
+    <property name="item" value="shield_samurai"/>
+   </properties>
+  </object>
+  <object id="59" name="chest" type="Chest" x="688" y="656" width="16" height="16">
+   <properties>
+    <property name="item" value="hand_giant"/>
+   </properties>
+  </object>
+  <object id="60" name="chest" type="Chest" x="400" y="656" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_elixir"/>
+   </properties>
+  </object>
+  <object id="61" name="chest" type="Chest" x="288" y="560" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_hp400"/>
    </properties>
   </object>
  </objectgroup>

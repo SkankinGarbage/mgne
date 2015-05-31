@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="35" tilewidth="16" tileheight="16" nextobjectid="96">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="35" tilewidth="16" tileheight="16" nextobjectid="97">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level04_danger00"/>
@@ -39,6 +39,11 @@
   <object id="95" name="tele" type="Event" x="32" y="512" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('tower/f9_sideworld.tmx', 16, 18, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="96" name="chest" type="Chest" x="208" y="80" width="16" height="16">
+   <properties>
+    <property name="item" value="wpn_swordRevenge"/>
    </properties>
   </object>
  </objectgroup>

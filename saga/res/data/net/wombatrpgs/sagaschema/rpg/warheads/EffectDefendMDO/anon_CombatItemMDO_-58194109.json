@@ -1,0 +1,21 @@
+{
+	"key" : "anon_CombatItemMDO_-58194109",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-58194109",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "USER",
+	"shielding" : 0,
+	"triggerTypes" : [
+		"PHYSICAL",
+		"WEAPON"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_EffectDefendMDO_593284740"
+	},
+	"stats" : {
+		"stats" : [ ],
+		"flags" : [ ]
+	},
+	"effects" : [ ]
+}

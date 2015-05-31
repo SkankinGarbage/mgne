@@ -1,0 +1,28 @@
+{
+	"key" : "body_diamond",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$ADIAMOND",
+	"itemDescription" : "Increases defense by 18",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 9800,
+	"anim" : "None",
+	"equip" : [
+		"ARMOR"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_1136743957"
+	},
+	"tier" : 5,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 45.0
+			}
+		]
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_cannonRocket",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "ROCKET",
+	"itemDescription" : "Attacks a party with fixed damage aimed by strength (tier 5)",
+	"type" : "ITEM",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_-1030323830"
+	},
+	"tier" : 5,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 45.0
+			},
+			{
+				"stat" : "STR",
+				"value" : 10.0
+			}
+		]
+	}
+}

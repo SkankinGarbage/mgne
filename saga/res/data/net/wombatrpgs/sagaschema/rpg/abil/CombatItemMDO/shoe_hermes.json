@@ -1,0 +1,28 @@
+{
+	"key" : "shoe_hermes",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$DHERMES",
+	"itemDescription" : "Increases defense by 1 and mana by 4",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 2110,
+	"anim" : "None",
+	"equip" : [
+		"SHOE"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_1571367468"
+	},
+	"tier" : 5,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 45.0
+			}
+		]
+	}
+}

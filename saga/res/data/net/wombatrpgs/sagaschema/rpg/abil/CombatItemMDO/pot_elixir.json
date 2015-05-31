@@ -1,0 +1,21 @@
+{
+	"key" : "pot_elixir",
+	"subfolder" : "potions",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$TELIXIR",
+	"itemDescription" : "Heals by 300",
+	"type" : "ITEM",
+	"uses" : 5,
+	"cost" : 1000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_-238396644"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

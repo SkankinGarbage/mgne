@@ -1,0 +1,21 @@
+{
+	"key" : "shield_samurai",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$BSAMURAI",
+	"itemDescription" : "Raises chance to dodge and grants immunity to status",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 3130,
+	"anim" : "banim_defend",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
+		"key" : "anon_CombatItemMDO_307977689"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

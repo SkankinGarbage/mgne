@@ -1,29 +1,29 @@
 {
-	"key" : "wpn_swordSilver",
+	"key" : "wpn_swordFire",
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$ESILVER",
-	"itemDescription" : "Inflicts weapon damage (tier 6)",
+	"abilityName" : "$EFIRE",
+	"itemDescription" : "Inflicts fire damage (tier 5)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 6440,
+	"cost" : 6000,
 	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_-1001805322"
+		"key" : "anon_CombatItemMDO_-1048979700"
 	},
-	"tier" : 6,
+	"tier" : 5,
 	"robostats" : {
 		"stats" : [
 			{
 				"stat" : "MHP",
-				"value" : 54.0
+				"value" : 45.0
 			},
 			{
 				"stat" : "STR",
-				"value" : 12.0
+				"value" : 10.0
 			}
 		]
 	}

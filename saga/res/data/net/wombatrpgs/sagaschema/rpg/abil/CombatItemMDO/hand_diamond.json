@@ -1,0 +1,28 @@
+{
+	"key" : "hand_diamond",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$CDIAMOND",
+	"itemDescription" : "Increases defense by 8",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 1900,
+	"anim" : "None",
+	"equip" : [
+		"GAUNTLET"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_2094451587"
+	},
+	"tier" : 5,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 45.0
+			}
+		]
+	}
+}
