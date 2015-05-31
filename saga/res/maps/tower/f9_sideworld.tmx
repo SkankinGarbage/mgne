@@ -25,7 +25,7 @@
  <objectgroup name="Object Layer 1">
   <object id="60" name="tele" type="Event" x="432" y="304" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f9_shrine.tmx', 8, 16, 'NORTH')"/>
+    <property name="onCollide" value="teleport('tower/f9_sideworld_shrine.tmx', 8, 16, 'NORTH')"/>
    </properties>
   </object>
   <object id="61" name="tele" type="Event" x="384" y="304" width="16" height="16">

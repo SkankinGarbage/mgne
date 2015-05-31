@@ -81,6 +81,7 @@ public class SceneLib extends TwoArgFunction {
 		if (commands.size() == 0) return;
 		SceneParser parser = new SceneParser();
 		parser.addSceneCommands(commands);
+		commands.clear();
 		MGlobal.assets.loadAsset(parser, "debug commands");
 		parser.run();
 	}

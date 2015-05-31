@@ -17,7 +17,8 @@
 		"abil_kick",
 		"abil_ice",
 		"abil_blind",
-		"abil_ostone"
+		"abil_ostone",
+		"abil_opara"
 	],
 	"stats" : {
 		"hp" : 800,

@@ -27,7 +27,7 @@ sceneSwitch('bars_retract', true)
 wait(.25)
 face('fenrir', 'SOUTH')
 
-speak("Wolf", "Won't you come die together with your friend?")
+speak("Wolf", "Won't you come die with your friend?")
 walk('hero', 3, 'NORTH')
 speak(hero1, "You'll pay for this, fiends!")
 

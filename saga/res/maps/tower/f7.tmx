@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="53" height="48" tilewidth="16" tileheight="16" nextobjectid="104">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="53" height="48" tilewidth="16" tileheight="16" nextobjectid="106">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level04_danger00"/>
@@ -81,13 +81,6 @@
    </properties>
    <polygon points="160,128 0,128 0,0 160,0"/>
   </object>
-  <object id="101" name="room" type="Ceiling" x="512" y="208">
-   <properties>
-    <property name="roofID" value="88"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="160,128 0,128 0,0 160,0 160,32 320,32 320,112 272,112 272,96 160,96"/>
-  </object>
   <object id="102" name="room" type="Ceiling" x="512" y="400">
    <properties>
     <property name="roofID" value="88"/>
@@ -95,12 +88,19 @@
    </properties>
    <polygon points="160,128 0,128 0,0 160,0"/>
   </object>
-  <object id="103" name="room" type="Ceiling" x="16" y="400">
+  <object id="103" name="room" type="Ceiling" x="512" y="208">
    <properties>
     <property name="roofID" value="88"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="160,128 320,128 320,0 160,0 160,32 0,32 0,112 48,112 48,96 160,96"/>
+   <polygon points="160,128 0,128 0,0 160,0 160,32 320,32 320,128 304,128 304,144 288,144 288,128 272,128 272,96 160,96"/>
+  </object>
+  <object id="105" name="room" type="Ceiling" x="16" y="400">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="160,128 320,128 320,0 160,0 160,32 0,32 0,128 16,128 16,144 32,144 32,128 48,128 48,96 160,96"/>
   </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="53" height="48">

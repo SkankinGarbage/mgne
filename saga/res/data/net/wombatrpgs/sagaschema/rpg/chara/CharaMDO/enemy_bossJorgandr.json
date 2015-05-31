@@ -20,7 +20,8 @@
 		"abil_whirl",
 		"abil_sand",
 		"abil_oelement",
-		"abil_ostone"
+		"abil_ostone",
+		"abil_opara"
 	],
 	"stats" : {
 		"hp" : 650,

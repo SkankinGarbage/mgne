@@ -6,11 +6,14 @@
  */
 package net.wombatrpgs.saga.lua;
 
+import net.wombatrpgs.mgne.core.MGlobal;
+import net.wombatrpgs.mgne.scenes.SceneLib;
 import net.wombatrpgs.saga.core.SGlobal;
 
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.OneArgFunction;
 import org.luaj.vm2.lib.TwoArgFunction;
+import org.luaj.vm2.lib.ZeroArgFunction;
 
 /**
  * Crappy library with utility calls for event scripting.
@@ -36,10 +39,23 @@ public class SagaEventLib extends TwoArgFunction {
 			}
 		});
 		
+		env.set("getAvatar", new ZeroArgFunction() {
+			@Override public LuaValue call() {
+				return MGlobal.getHero().toLua();
+			}
+		});
+		
 		env.set("hasItem", new OneArgFunction() {
 			@Override public LuaValue call(LuaValue itemArg) {
 				String key = itemArg.checkjstring();
 				return SGlobal.heroes.isCarryingItemType(key) ? LuaValue.TRUE : LuaValue.FALSE;
+			}
+		});
+		
+		env.set("playScene", new ZeroArgFunction() {
+			@Override public LuaValue call() {
+				SceneLib.runExtraCommands();
+				return LuaValue.NIL;
 			}
 		});
 		

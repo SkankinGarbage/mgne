@@ -47,13 +47,13 @@
     <property name="onInteract" value="speak('The construction of Babel would have been a collosal task, but I believe it was carried out by mortals.')"/>
    </properties>
   </object>
-  <object id="70" name="npc" type="Character" x="176" y="112" width="16" height="16">
+  <object id="70" name="npc" type="Character" x="224" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_slime"/>
     <property name="onInteract" value="speak('We are trying to study the secrets of the universe.')"/>
    </properties>
   </object>
-  <object id="71" name="npc" type="Character" x="224" y="112" width="16" height="16">
+  <object id="71" name="npc" type="Character" x="32" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_slime"/>
     <property name="onInteract" value="speak('Our world has a legend that great evil shall come from Babel, but great heroes as well.')"/>
@@ -71,10 +71,10 @@
     <property name="onInteract" value="speak('I believe there is only one world, and Babel merely allows us to travel between different eons.')"/>
    </properties>
   </object>
-  <object id="74" name="npc" type="Character" x="32" y="112" width="16" height="16">
+  <object id="74" name="npc" type="Character" x="176" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_slime"/>
-    <property name="onInteract" value="speak('I believe that mortals created the gates to Babel, but to create such a place would require the power of a god...')"/>
+    <property name="onInteract" value="speak('I believe that mortals created the gates to Babel, but to create Babel itself? It would require the power of a god...')"/>
    </properties>
   </object>
   <object id="76" name="tele" type="Event" x="128" y="272" width="16" height="16">
