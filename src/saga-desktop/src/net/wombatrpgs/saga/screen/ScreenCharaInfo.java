@@ -182,7 +182,6 @@ public class ScreenCharaInfo extends SagaScreen implements TargetSelectable {
 						MGlobal.audio.playSFX(SConstants.SFX_FAIL);
 						return false;
 					}
-					MGlobal.audio.playSFX(SConstants.SFX_CURE);
 					item.onMapUse(parent);
 				}
 				return false;

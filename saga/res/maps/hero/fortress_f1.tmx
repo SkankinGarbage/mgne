@@ -78,7 +78,7 @@
   </object>
   <object id="8" name="tele" type="Event" x="528" y="224" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 13, 11)"/>
+    <property name="onCollide" value="teleport('hero/fortress_b1.tmx', 13, 11)"/>
    </properties>
   </object>
   <object id="9" name="npc" type="Character" x="368" y="208" width="16" height="16">

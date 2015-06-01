@@ -556,6 +556,10 @@ public class Battle extends AssetQueuer implements Disposable {
 		enemy.fullHeal();
 		updateLivenessLists();
 		
+		for (int i = 0; i < playerAlive.size(); i += 1) {
+			playerAlive.set(i, true);
+		}
+		
 		assets.remove(screen);
 		screen.dispose();
 		screen = new ScreenBattle(this, bgmKey);
@@ -902,6 +906,10 @@ public class Battle extends AssetQueuer implements Disposable {
 			if (dead && isPlayerAlive(i)) {
 				screen.onPlayerDeath(i);
 				playerAlive.set(i, false);
+			}
+			if (!dead && !isPlayerAlive(i)) {
+				screen.onPlayerRevive(i);
+				playerAlive.set(i, true);
 			}
 		}
 		

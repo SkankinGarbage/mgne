@@ -12,13 +12,14 @@
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 0,
 	"gp" : 0,
+	"loot" : "None",
 	"equipped" : [
 		"item_testsword",
 		"item_testFireSword",
 		"item_testLegendSword",
 		"item_testShield",
 		"item_testPetrify",
-		"abil_stench",
+		"item_testRevive",
 		"item_testLonggg"
 	],
 	"stats" : {

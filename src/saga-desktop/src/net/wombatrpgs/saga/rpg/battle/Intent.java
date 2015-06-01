@@ -181,15 +181,17 @@ public class Intent implements Comparable<Intent> {
 			item.assignRandomTargets(this);
 		}
 		
-		// don't attack corpses
-		List<Chara> deads = new ArrayList<Chara>();
-		for (Chara target : targets) {
-			if (target.isDead()) {
-				deads.add(target);
+		// don't attack corpses, probably
+		if (!item.canTargetDead()) {
+			List<Chara> deads = new ArrayList<Chara>();
+			for (Chara target : targets) {
+				if (target.isDead()) {
+					deads.add(target);
+				}
 			}
-		}
-		for (Chara dead : deads) {
-			targets.remove(dead);
+			for (Chara dead : deads) {
+				targets.remove(dead);
+			}
 		}
 		
 		// don't attack empty space

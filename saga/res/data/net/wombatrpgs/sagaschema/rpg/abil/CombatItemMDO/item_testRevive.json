@@ -1,0 +1,21 @@
+{
+	"key" : "item_testRevive",
+	"subfolder" : "test",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$TREVIVE",
+	"itemDescription" : "",
+	"type" : "ITEM",
+	"uses" : 3,
+	"cost" : 0,
+	"anim" : "banim_cure",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectReviveMDO",
+		"key" : "anon_CombatItemMDO_1124857000"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

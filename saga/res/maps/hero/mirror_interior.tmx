@@ -26,7 +26,7 @@
  <objectgroup name="Object Layer 1">
   <object id="16" name="tele" type="Event" x="16" y="160" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('hero/mirror.tmx', 15, 25)"/>
+    <property name="onCollide" value="teleport('hero/mirror.tmx', 15, 24)"/>
    </properties>
   </object>
   <object id="21" name="tele" type="Event" x="64" y="64" width="16" height="16">

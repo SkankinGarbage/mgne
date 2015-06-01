@@ -56,6 +56,14 @@ public abstract class AbilEffect extends AssetQueuer {
 	public abstract boolean isBattleUsable();
 	
 	/**
+	 * Check if this ability can target dead heroes. Defaults to false.
+	 * @return					True if abil can target dead heroes
+	 */
+	public boolean canTargetDead() {
+		return false;
+	}
+	
+	/**
 	 * Construct an intent from the player's input. This should use the battle
 	 * to request user input, set the fields of a new input, then pass it to
 	 * the listener. Could be a new intent or an edit. If the item isn't

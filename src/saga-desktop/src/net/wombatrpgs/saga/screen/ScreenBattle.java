@@ -866,6 +866,14 @@ public class ScreenBattle extends SagaScreen {
 	}
 	
 	/**
+	 * Called by the battle when the character with the given index is revived.
+	 * @param	index			The party slot of the dead character
+	 */
+	public void onPlayerRevive(int index) {
+		sprites.get(index).startMoving();
+	}
+	
+	/**
 	 * Called by the battle when it's time to eat the meat!!
 	 */
 	public void onMeatChoice() {

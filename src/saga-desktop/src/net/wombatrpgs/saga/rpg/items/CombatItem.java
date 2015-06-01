@@ -129,6 +129,9 @@ public class CombatItem extends AssetQueuer {
 	
 	/** @return The item description (for noob mode) */
 	public String getDescription() { return mdo.itemDescription == null ? getName() : mdo.itemDescription; }
+	
+	/** @return True if this item can target the dead */
+	public boolean canTargetDead() { return effect.canTargetDead(); }
 
 	/**
 	 * @see java.lang.Object#toString()
