@@ -28,6 +28,7 @@ public abstract class CharaInsert extends ScreenGraphic {
 	
 	protected TextFormat format;
 	protected Chara chara;
+	protected FacesAnimation appearance;
 	
 	protected float spriteX, spriteY;
 	
@@ -119,17 +120,20 @@ public abstract class CharaInsert extends ScreenGraphic {
 	 */
 	public final void refresh() {
 		FontHolder font = MGlobal.ui.getFont();
+		if (appearance != null) appearance.dispose();
+		appearance = chara.createSprite();
+		MGlobal.assets.loadAsset(appearance, "inset appearance");
 		format.x = (int) (x + PADDING*2 + chara.getAppearance().getWidth());
 		format.y = (int) (y + font.getLineHeight()*2);
 		if (chara.isDead()) {
-			chara.getAppearance().setFacing(OrthoDir.NORTH);
-			chara.getAppearance().stopMoving();
+			appearance.setFacing(OrthoDir.NORTH);
+			appearance.stopMoving();
 		} else {
-			chara.getAppearance().setFacing(OrthoDir.SOUTH);
-			chara.getAppearance().startMoving();
+			appearance.setFacing(OrthoDir.SOUTH);
+			appearance.startMoving();
 		}
 		spriteX = x + PADDING;
-		spriteY = y + getHeight()/2 - chara.getAppearance().getHeight()/2;
+		spriteY = y + getHeight()/2 - appearance.getHeight()/2;
 		coreRefresh();
 	}
 	
