@@ -499,9 +499,9 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 				return true;
 			}
 		} else {
-			List<MapEvent> events = parent.getEventsAt(getTileX(), getTileY());
+			List<MapEvent> events = parent.getEventsAt(targetX, targetY);
 			for (MapEvent event : events) {
-				if (event != this) {
+				if (event != this && !event.isPassable()) {
 					event.onCollide(this);
 				}
 			}
