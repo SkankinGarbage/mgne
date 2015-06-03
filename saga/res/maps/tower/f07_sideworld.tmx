@@ -31,7 +31,7 @@
   </object>
   <object id="55" name="tele" type="Event" x="688" y="144" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f7.tmx', 2, 32)"/>
+    <property name="onCollide" value="teleport('tower/f07.tmx', 2, 32)"/>
    </properties>
   </object>
   <object id="56" name="crystal" type="Event" x="1040" y="544" width="16" height="16">

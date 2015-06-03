@@ -27,18 +27,18 @@
   <object id="86" name="target_b" type="Event" x="416" y="720" width="16" height="16"/>
   <object id="87" name="mem_tele" type="Event" x="416" y="736" width="16" height="16">
    <properties>
-    <property name="onCollide" value="memTele('tower/f5_transition.tmx', 'tower/6.tmx', 'ENTRANCE', 'B')"/>
+    <property name="onCollide" value="memTele('tower/f05_transition.tmx', 'tower/f06.tmx', 'ENTRANCE', 'B')"/>
    </properties>
   </object>
   <object id="88" name="target_a" type="Event" x="800" y="320" width="16" height="16"/>
   <object id="89" name="mem_tele" type="Event" x="800" y="336" width="16" height="16">
    <properties>
-    <property name="onCollide" value="memTele('tower/f5_transition.tmx', 'tower/f8.tmx', 'ENTRANCE', 'A')"/>
+    <property name="onCollide" value="memTele('tower/f05_transition.tmx', 'tower/f08.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
   <object id="90" name="tele" type="Event" x="32" y="528" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f7_sideworld.tmx', 43, 10)"/>
+    <property name="onCollide" value="teleport('tower/f07_sideworld.tmx', 43, 10)"/>
    </properties>
   </object>
   <object id="92" name="chest" type="Chest" x="416" y="80" width="16" height="16">

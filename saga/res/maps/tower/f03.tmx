@@ -27,13 +27,13 @@
   <object id="1" name="target_b" type="Event" x="80" y="464" width="16" height="16"/>
   <object id="2" name="mem_tele" type="Event" x="80" y="480" width="16" height="16">
    <properties>
-    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/f2.tmx', 'ENTRANCE', 'B')"/>
+    <property name="onCollide" value="memTele('tower/f01_transition.tmx', 'tower/f02.tmx', 'ENTRANCE', 'B')"/>
    </properties>
   </object>
   <object id="3" name="target_a" type="Event" x="400" y="464" width="16" height="16"/>
   <object id="4" name="mem_tele" type="Event" x="400" y="480" width="16" height="16">
    <properties>
-    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/f4.tmx', 'ENTRANCE', 'A')"/>
+    <property name="onCollide" value="memTele('tower/f01_transition.tmx', 'tower/f04.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
  </objectgroup>

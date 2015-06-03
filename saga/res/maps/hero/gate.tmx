@@ -448,7 +448,7 @@
   <object id="69" name="gate" type="Event" x="416" y="224" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('hero_done')"/>
-    <property name="onCollide" value="teleport('tower/f1.tmx', 7, 12, 'NORTH')"/>
+    <property name="onCollide" value="teleport('tower/f01.tmx', 7, 12, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>

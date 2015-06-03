@@ -32,7 +32,7 @@
   </object>
   <object id="64" name="mem_tele" type="Event" x="112" y="432" width="16" height="16">
    <properties>
-    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/f2.tmx', 'ENTRANCE', 'A')"/>
+    <property name="onCollide" value="memTele('tower/f01_transition.tmx', 'tower/f02.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
   <object id="65" name="target_a" type="Event" x="112" y="416" width="16" height="16"/>

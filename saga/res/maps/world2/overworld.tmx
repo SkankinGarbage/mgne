@@ -27,7 +27,7 @@
  <objectgroup name="Object Layer 1">
   <object id="7" name="Babel" type="Event" x="1024" y="416" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f5.tmx', 13, 20, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('tower/f05.tmx', 13, 20, 'SOUTH')"/>
    </properties>
   </object>
   <object id="19" name="tele" type="Event" x="688" y="480" width="16" height="16">

@@ -30,7 +30,7 @@
   </object>
   <object id="47" name="tele" type="Event" x="320" y="448" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f2.tmx', 6, 15, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('tower/f02.tmx', 6, 15, 'SOUTH')"/>
    </properties>
   </object>
   <object id="48" name="tele" type="Event" x="352" y="192" width="16" height="16">

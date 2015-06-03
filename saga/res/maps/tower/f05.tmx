@@ -38,15 +38,15 @@
   </object>
   <object id="87" name="mem_tele" type="Event" x="64" y="416" width="16" height="16">
    <properties>
-    <property name="onCollide" value="memTele('tower/f1_transition.tmx', 'tower/4.tmx', 'ENTRANCE', 'A')"/>
+    <property name="onCollide" value="memTele('tower/f01_transition.tmx', 'tower/f04.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
   <object id="88" name="target_b" type="Event" x="64" y="400" width="16" height="16"/>
-  <object id="91" name="target_a" type="Event" x="352" y="416" width="16" height="16"/>
-  <object id="92" name="mem_tele" type="Event" x="352" y="400" width="16" height="16">
+  <object id="91" name="target_a" type="Event" x="352" y="400" width="16" height="16"/>
+  <object id="92" name="mem_tele" type="Event" x="352" y="416" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('world2_done')"/>
-    <property name="onCollide" value="memTele('tower/f5_transition.tmx', 'tower/f6.tmx', 'ENTRANCE', 'A')"/>
+    <property name="onCollide" value="memTele('tower/f05_transition.tmx', 'tower/f06.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
  </objectgroup>
