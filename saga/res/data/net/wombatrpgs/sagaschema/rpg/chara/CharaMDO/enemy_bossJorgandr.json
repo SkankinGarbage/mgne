@@ -5,7 +5,7 @@
 	"description" : "",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_snk",
+	"family" : "mfamily_boss",
 	"species" : "JORGANDR",
 	"appearance" : "4dir_ffl2_human",
 	"portrait" : "battle_portraits/boss_jorgandr.png",

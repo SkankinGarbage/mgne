@@ -5,7 +5,7 @@
 	"description" : "",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "None",
+	"family" : "mfamily_boss",
 	"species" : "FENRIR",
 	"appearance" : "4dir_ffl2_human",
 	"portrait" : "battle_portraits/boss_fenrir.png",
