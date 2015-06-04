@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="53">
+ <properties>
+  <property name="battle_bgm" value="ffl2_battle"/>
+  <property name="bgm" value="ffl2_overworld"/>
+  <property name="name" value="Wartorn World"/>
+  <property name="terrainEncounter" value="terrain_world2"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="89" height="60">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3awU4jMQwG4Mx7cOuTVOylfYBK3BguC5fVvv+JItXCGNuxEyeZTnP4BZqGFfPh+SfT7TmldH6AvA/M6HOfxvvJNJ7Ge8g0nsZ7yDSexnvINJ7Ge8g0/s6pk/GC8ojGLZw54/OdGB+ZbNH5HueYsy0xXoTj2LnG+3ALPe+D8toWjBfFVzLTHCXDk2FNLust9LxX5bXRxpotN8cXpzH9HgLXdW1HjEi0L3WQjKUZpR1Bja3zzPWApXtb9HOtMfW1zrE2o9xrOBZnrgcs3duin6PmeEm/5/hiMKZ+Z8HV68ydq6V7W/Szt9+wJeeL51jztTha07qHa/d5XmNwxt7UPGcc6ctZR3fqCGNtprEzZ/x6zVtD55zFs5ItGmvdwRl/Hf93zf/Bxi9MNONDR2Op++B+SM/z0sHSY7zcPLn1L8rPrY6/YY3xQr7+ecCUOkfNMdcZI+f46/r+e81H+nmtPwvr8fFcJ7c0ljoCQp1HGq/oHPG1Xmp8IOtb9TFYSsalc0yfq3P7Z8t6aQ5hD0F9c8YrcV6FdTXG1FIL/B6SMWfkeS6haz3GsI9YlGOSFTh7n7dLe8HifCHmHm/tvYoS4yfj3+8p47Um//N2Sf9a3PH+OOecM+T+Hl7jt5tfLq9Ovx59LDl7jK2z7J15aQa1RPuWzDGXE+OLjWFv57Gt9dV6tXcijelxbFwzyyW+Pf6frrcxdxy/fywZl8ytZQ/S6rqH320rxpa+0Jxr0momTwX/foSv1djbF1HGkfat98eSb85Y64tI1x7Ga2q/P/YaY2dtjr2963mW7tEhLYzpOebWg7NlBiP2Fdz1PWqvEWVsdc51cqk9rOEs19TvM0FRxtJ5Wme5xjmXkZYtjfGcRXTGMX0/0xxRvPc6KSX7r60YL8afz80yNj6n3+a1xjAP92ps8Ya9HOeKg42pt2RtOefe97+oe56nM2kvU9ecMTfbHrfenR1lbHHGa8E4N7dW4y3e61oYn9BruAvofRGMub4tNX5Pcl/0vL+1MKbedA39Ct/TzxBRVynSOs149PucpcacnWTMHdM+X18SsOQ8R3dI1Dla9sY42meTS4232smRs+RNtPFWM42n8TSextN4G5nG03gaT2NLPgGV0JjGcFMAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="89" height="60">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3ZwQnDIBQGYHfp3r322uaQAbpCJ2gmKaUEJFCQoHnWfh+Il6C/8gKapAQAAAAAjOYeHaBT9gUA+Bctzj3OUlBuig5QyS191pL3PZg2/XLQvK3mWbJW+vyzUZZcRB0/GoxZo47PVRPtN0cH+GK7v3tq51Q10biOePdb67WOKXeJDgAAAD9iztrbKN8MAQAYSy//waBH633uGpoCAAAAqOEFIDPqb3BTAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="52" name="Gate" type="Event" x="640" y="400" width="16" height="32">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
