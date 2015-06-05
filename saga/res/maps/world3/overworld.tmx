@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="53">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="64">
  <properties>
-  <property name="battle_bgm" value="ffl2_battle"/>
-  <property name="bgm" value="ffl2_overworld"/>
-  <property name="name" value="Wartorn World"/>
-  <property name="terrainEncounter" value="terrain_world2"/>
+  <property name="battle_bgm" value="ffl1_battle"/>
+  <property name="bgm" value="ffl1_overworld2"/>
+  <property name="name" value="Angelic World"/>
+  <property name="terrainEncounter" value="terrain_world3"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="141" source="../tilesets/upper.tsx"/>
@@ -21,11 +21,66 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZwQnDIBQGYHfp3r322uaQAbpCJ2gmKaUEJFCQoHnWfh+Il6C/8gKapAQAAAAAjOYeHaBT9gUA+Bctzj3OUlBuig5QyS191pL3PZg2/XLQvK3mWbJW+vyzUZZcRB0/GoxZo47PVRPtN0cH+GK7v3tq51Q10biOePdb67WOKXeJDgAAAD9iztrbKN8MAQAYSy//waBH633uGpoCAAAAqOEFIDPqb3BTAAA=
+   H4sIAAAAAAAAC+3ZSwrCMBQF0O7FfTt1qh10AW7BFdiViJRCCIilJH0xngMhs+YmPEo+wwAAAAAA9OYeHaBR1gUA+Bc19j32UrDdGB2gkNuwzCXtv3lWTbQYs34+YMya48xJi8yRi6jjR4Vv7qnj3Lloov2m6AAf5Ou7p3ZORRP164h/bG2t1jHbXaIDAADAj5iS9tbLnSEAAH1p5R0MWrSe566hKQAAAIASXptCv/hwUwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
   <object id="52" name="Gate" type="Event" x="640" y="400" width="16" height="32">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="53" name="Plutonium Mines" type="Event" x="512" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="54" name="Worker's Village" type="Event" x="752" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="55" name="Island Ruins" type="Event" x="832" y="768" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="56" name="Lab" type="Event" x="928" y="608" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="57" name="Power Plant" type="Event" x="224" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="58" name="Rebel Base" type="Event" x="448" y="736" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="59" name="Island Caves" type="Event" x="848" y="336" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="60" name="Island Caves" type="Event" x="1184" y="336" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="61" name="Seaside Village" type="Event" x="1248" y="416" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="62" name="Prison" type="Event" x="1184" y="384" width="16" height="32">
+   <properties>
+    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+   </properties>
+  </object>
+  <object id="63" name="Old Mine" type="Event" x="208" y="240" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
    </properties>

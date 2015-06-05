@@ -1,0 +1,21 @@
+{
+	"key" : "abil_counter",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "COUNTER",
+	"itemDescription" : "Retaliates with physical damage",
+	"type" : "ABILITY",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_defend",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
+		"key" : "anon_CombatItemMDO_919985276"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_skl",
 	"species" : "WARRIOR",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_skeleton",
+	"portrait" : "battle_portraits/skl.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "None",
+	"equipped" : [
+		"abil_bone",
+		"abil_sword",
+		"abil_counter",
+		"abil_opara",
+		"abil_opoison",
+		"abil_ostone"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 252,
+		"mhp" : 252,
+		"str" : 34,
+		"def" : 24,
+		"agi" : 29,
+		"mana" : 30,
+		"flags" : [
+			"UNDEAD"
+		]
 	}
 }

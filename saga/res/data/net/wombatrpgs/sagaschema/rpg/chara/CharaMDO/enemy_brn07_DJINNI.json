@@ -7,19 +7,25 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_brn",
 	"species" : "DJINNI",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_ghost",
+	"portrait" : "battle_portraits/brn.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "None",
+	"equipped" : [
+		"abil_sword",
+		"abil_flame",
+		"abil_ofire",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 202,
+		"mhp" : 202,
+		"str" : 31,
+		"def" : 19,
+		"agi" : 28,
+		"mana" : 29,
+		"flags" : [ ]
 	}
 }

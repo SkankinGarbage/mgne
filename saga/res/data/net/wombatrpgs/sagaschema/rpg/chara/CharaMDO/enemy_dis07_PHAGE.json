@@ -7,19 +7,25 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_dis",
 	"species" : "PHAGE",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_slime",
+	"portrait" : "battle_portraits/dis.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "None",
+	"equipped" : [
+		"abil_dissolve",
+		"abil_poison",
+		"abil_opoison",
+		"abil_xfire"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 262,
+		"mhp" : 262,
+		"str" : 4,
+		"def" : 18,
+		"agi" : 21,
+		"mana" : 36,
+		"flags" : [ ]
 	}
 }

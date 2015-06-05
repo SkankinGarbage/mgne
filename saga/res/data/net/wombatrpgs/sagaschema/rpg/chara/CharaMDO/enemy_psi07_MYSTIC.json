@@ -5,22 +5,27 @@
 	"description" : "Converted from a report",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_psi",
+	"family" : "None",
 	"species" : "MYSTIC",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/psi.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"loot" : null,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "wpn_knifePsi",
+	"equipped" : [
+		"wpn_knifePsi",
+		"abil_hypnosis",
+		"abil_gaze",
+		"abil_warning"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 202,
+		"mhp" : 202,
+		"str" : 28,
+		"def" : 23,
+		"agi" : 26,
+		"mana" : 37,
+		"flags" : [ ]
 	}
 }

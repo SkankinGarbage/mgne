@@ -17,7 +17,8 @@
 		"abil_beak",
 		"abil_agility",
 		"abil_oquake",
-		"abil_othunder"
+		"abil_othunder",
+		"abil_ambush"
 	],
 	"stats" : {
 		"hp" : 126,

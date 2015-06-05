@@ -18,7 +18,8 @@
 		"abil_sting",
 		"abil_heal",
 		"abil_recover",
-		"abil_opara"
+		"abil_opara",
+		"abil_ambush"
 	],
 	"stats" : {
 		"hp" : 126,
@@ -27,6 +28,6 @@
 		"def" : 16,
 		"agi" : 19,
 		"mana" : 22,
-		"flags" : []
+		"flags" : [ ]
 	}
 }

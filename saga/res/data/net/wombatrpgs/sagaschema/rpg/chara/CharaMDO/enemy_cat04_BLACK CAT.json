@@ -16,7 +16,8 @@
 	"equipped" : [
 		"abil_claw",
 		"abil_bite",
-		"abil_cgaze"
+		"abil_cgaze",
+		"abil_warning"
 	],
 	"stats" : {
 		"hp" : 126,

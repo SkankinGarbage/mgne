@@ -7,19 +7,27 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_wsp",
 	"species" : "WILL 'WISP",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_ghost",
+	"portrait" : "battle_portraits/wsp.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "None",
+	"equipped" : [
+		"abil_sunburst",
+		"abil_gas",
+		"abil_bother",
+		"abil_opara",
+		"abil_ofire",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 202,
+		"mhp" : 202,
+		"str" : 12,
+		"def" : 19,
+		"agi" : 36,
+		"mana" : 31,
+		"flags" : [ ]
 	}
 }

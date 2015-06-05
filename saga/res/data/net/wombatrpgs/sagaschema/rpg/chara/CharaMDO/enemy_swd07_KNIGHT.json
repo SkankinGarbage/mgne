@@ -5,22 +5,26 @@
 	"description" : "Converted from a report",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_swd",
+	"family" : "None",
 	"species" : "KNIGHT",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/swd.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"loot" : null,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "wpn_katana",
+	"equipped" : [
+		"wpn_swordSilver",
+		"shield_silver",
+		"abil_counter"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 0,
+		"mhp" : 0,
+		"str" : 0,
+		"def" : 0,
+		"agi" : 0,
+		"mana" : 0,
+		"flags" : [ ]
 	}
 }

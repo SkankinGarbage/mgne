@@ -7,19 +7,26 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_wrd",
 	"species" : "VIRTUE",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/wrd.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "None",
+	"equipped" : [
+		"abil_flame",
+		"abil_beam",
+		"abil_blind",
+		"abil_ochange",
+		"abil_oelement"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 175,
+		"mhp" : 175,
+		"str" : 16,
+		"def" : 15,
+		"agi" : 31,
+		"mana" : 31,
+		"flags" : [ ]
 	}
 }

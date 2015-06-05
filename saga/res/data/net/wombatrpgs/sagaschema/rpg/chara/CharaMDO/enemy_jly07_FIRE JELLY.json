@@ -7,19 +7,28 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_jly",
 	"species" : "FIRE JELLY",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_slime",
+	"portrait" : "battle_portraits/jly.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "None",
+	"equipped" : [
+		"abil_melt",
+		"abil_flame",
+		"abil_burning",
+		"abil_bother",
+		"abil_ochange",
+		"abil_xthunder",
+		"abil_xice"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 202,
+		"mhp" : 202,
+		"str" : 14,
+		"def" : 25,
+		"agi" : 24,
+		"mana" : 38,
+		"flags" : [ ]
 	}
 }

@@ -7,19 +7,26 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_dem",
 	"species" : "DEMON",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/dem.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "None",
+	"equipped" : [
+		"abil_trident",
+		"abil_sunburst",
+		"abil_sleep",
+		"abil_mirror",
+		"abil_ostone"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 231,
+		"mhp" : 231,
+		"str" : 29,
+		"def" : 20,
+		"agi" : 28,
+		"mana" : 28,
+		"flags" : [ ]
 	}
 }

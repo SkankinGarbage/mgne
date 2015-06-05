@@ -7,19 +7,26 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_pnx",
 	"species" : "CRANE",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_bird",
+	"portrait" : "battle_portraits/pnx.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_beak",
+		"abil_heal",
+		"abil_recover",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 252,
+		"mhp" : 252,
+		"str" : 29,
+		"def" : 21,
+		"agi" : 31,
+		"mana" : 29,
+		"flags" : [ ]
 	}
 }

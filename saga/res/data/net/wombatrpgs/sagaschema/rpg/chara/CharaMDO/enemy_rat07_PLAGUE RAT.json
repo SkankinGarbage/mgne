@@ -7,19 +7,25 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_rat",
 	"species" : "PLAGUE RAT",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_rat",
+	"portrait" : "battle_portraits/rat.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 7,
-	"gp" : 600,
-	"equipped" : [ ],
+	"gp" : 720,
+	"loot" : "None",
+	"equipped" : [
+		"abil_bite",
+		"abil_pfang",
+		"abil_venom",
+		"abil_opoison"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 252,
+		"mhp" : 252,
+		"str" : 31,
+		"def" : 25,
+		"agi" : 35,
+		"mana" : 24,
+		"flags" : [ ]
 	}
 }

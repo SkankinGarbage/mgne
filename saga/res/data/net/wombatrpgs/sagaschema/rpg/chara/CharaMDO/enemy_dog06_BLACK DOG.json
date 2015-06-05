@@ -17,7 +17,8 @@
 		"abil_claw",
 		"abil_bite",
 		"abil_thunder",
-		"abil_dgaze"
+		"abil_dgaze",
+		"abil_warning"
 	],
 	"stats" : {
 		"hp" : 150,
@@ -26,6 +27,6 @@
 		"def" : 18,
 		"agi" : 31,
 		"mana" : 22,
-		"flags" : []
+		"flags" : [ ]
 	}
 }
