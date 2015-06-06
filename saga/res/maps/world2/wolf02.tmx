@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="58" height="39" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="57">
+<map version="1.0" orientation="orthogonal" width="58" height="39" tilewidth="16" tileheight="16" backgroundcolor="#808080">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level03_danger00"/>
@@ -23,44 +23,44 @@
    H4sIAAAAAAAAC+3OAQ0AAAgDoPdPYVRjfDpIQAIAAAAA8Ne0AwAAAJy1c7kqqVgjAAA=
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="47" name="room" type="Ceiling" x="528" y="112">
+ <objectgroup name="Object Layer 1" width="0" height="0">
+  <object name="room" type="Ceiling" x="528" y="112">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
    <polygon points="16,16 16,128 96,128 96,16"/>
   </object>
-  <object id="48" name="room" type="Ceiling" x="624" y="112">
+  <object name="room" type="Ceiling" x="624" y="112">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
    <polygon points="16,16 16,128 96,128 96,16"/>
   </object>
-  <object id="49" name="room" type="Ceiling" x="144" y="288">
+  <object name="room" type="Ceiling" x="144" y="288">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
    <polygon points="16,16 16,128 128,128 128,16"/>
   </object>
-  <object id="51" name="tele" type="Event" x="224" y="304" width="16" height="16">
+  <object name="tele" type="Event" x="224" y="304" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/wolf01.tmx', 17, 3)"/>
+    <property name="onCollide" value="teleport('world2/wolf01.tmx', 17, 33)"/>
    </properties>
   </object>
-  <object id="52" name="tele" type="Event" x="752" y="176" width="16" height="16">
+  <object name="tele" type="Event" x="752" y="176" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/wolf03.tmx', 1, 10)"/>
    </properties>
   </object>
-  <object id="54" name="chest" type="Chest" x="608" y="464" width="16" height="16">
+  <object name="chest" type="Chest" x="608" y="464" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_black"/>
    </properties>
   </object>
-  <object id="55" name="guard" type="Character" x="576" y="256" width="16" height="16">
+  <object name="guard" type="Character" x="576" y="256" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -69,7 +69,7 @@
     <property name="onInteract" value="battle('encounter_lvl03_SOLDIER3-5')"/>
    </properties>
   </object>
-  <object id="56" name="guard" type="Character" x="672" y="256" width="16" height="16">
+  <object name="guard" type="Character" x="672" y="256" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
