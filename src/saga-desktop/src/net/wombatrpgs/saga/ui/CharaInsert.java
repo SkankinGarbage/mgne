@@ -110,8 +110,7 @@ public abstract class CharaInsert extends ScreenGraphic {
 	 */
 	@Override
 	public final void coreRender(SpriteBatch batch) {
-		FacesAnimation sprite = chara.getAppearance();
-		sprite.renderAt(batch, spriteX, spriteY);
+		appearance.renderAt(batch, spriteX, spriteY);
 		renderInserts(batch);
 	}
 

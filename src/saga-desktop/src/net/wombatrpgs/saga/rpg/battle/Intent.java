@@ -182,7 +182,7 @@ public class Intent implements Comparable<Intent> {
 		}
 		
 		// don't attack corpses, probably
-		if (!item.canTargetDead()) {
+		if (item != null && !item.canTargetDead()) {
 			List<Chara> deads = new ArrayList<Chara>();
 			for (Chara target : targets) {
 				if (target.isDead()) {
