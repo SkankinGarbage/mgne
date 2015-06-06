@@ -167,7 +167,7 @@
   </object>
   <object id="47" name="trigger" type="Event" x="256" y="448" width="80" height="16">
    <properties>
-    <property name="hide" value="return getSwitch('lara02')"/>
+    <property name="hide" value="return getSwitch('lara02') or not getSwitch('lara_joins')"/>
     <property name="onCollide" value="play('world2/lara02.lua')"/>
    </properties>
   </object>
