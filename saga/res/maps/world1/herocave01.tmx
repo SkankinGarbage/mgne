@@ -263,7 +263,7 @@
   <object id="4" name="well" type="Event" x="288" y="368" width="16" height="16">
    <properties>
     <property name="hide" value="return not (hasItem('key_artifactScuba') and hasItem('key_artifactFlashlight'))"/>
-    <property name="onInteract" value="play('herowell.lua')"/>
+    <property name="onInteract" value="play('world1/herowell.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>

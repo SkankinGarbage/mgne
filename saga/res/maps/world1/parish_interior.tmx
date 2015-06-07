@@ -38,7 +38,7 @@
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('opening_talked_borg')"/>
-    <property name="onInteract" value="play('borg01.lua')"/>
+    <property name="onInteract" value="play('world1/borg01.lua')"/>
    </properties>
   </object>
   <object id="4" name="borg" type="Character" x="400" y="128" width="16" height="16">
@@ -75,7 +75,7 @@
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="hide" value="return getSwitch('opening_talked_elder')"/>
-    <property name="onInteract" value="play('elder01.lua')"/>
+    <property name="onInteract" value="play('world1/elder01.lua')"/>
    </properties>
   </object>
   <object id="10" name="elder" type="Character" x="64" y="432" width="16" height="16">

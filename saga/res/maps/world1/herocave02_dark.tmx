@@ -31,7 +31,7 @@
   </object>
   <object id="2" name="barrier" type="Event" x="320" y="384" width="48" height="16">
    <properties>
-    <property name="onCollide" value="play('scaldingwater.lua')"/>
+    <property name="onCollide" value="play('world1/scaldingwater.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>

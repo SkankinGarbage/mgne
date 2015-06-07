@@ -65,13 +65,13 @@
   <object id="8" name="trigger" type="Event" x="528" y="192" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('puppet_dead')"/>
-    <property name="onCollide" value="play('borg03.lua')"/>
+    <property name="onCollide" value="play('world1/borg03.lua')"/>
    </properties>
   </object>
   <object id="9" name="trigger" type="Event" x="528" y="144" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('puppet_dead')"/>
-    <property name="onCollide" value="play('borg03.lua')"/>
+    <property name="onCollide" value="play('world1/borg03.lua')"/>
    </properties>
   </object>
  </objectgroup>

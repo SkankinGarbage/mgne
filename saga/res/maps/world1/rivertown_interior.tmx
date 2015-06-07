@@ -118,7 +118,7 @@
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return (getSwitch('mayor01') or getSwitch('shrine_done'))"/>
-    <property name="onInteract" value="play('mayor01.lua')"/>
+    <property name="onInteract" value="play('world1/mayor01.lua')"/>
    </properties>
   </object>
   <object id="16" name="mayor" type="Character" x="480" y="432" width="16" height="16">

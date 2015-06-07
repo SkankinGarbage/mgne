@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="21">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="23">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
   <property name="encounter" value="encounterset_level00_danger03"/>
@@ -293,28 +293,12 @@
    </properties>
    <polygon points="256,-144 320,-144 320,-240 256,-240"/>
   </object>
-  <object id="7" name="shrineboss" type="Event" x="240" y="384" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_demon"/>
-    <property name="face" value="WEST"/>
-    <property name="hide" value="return getSwitch('shrine_dead')"/>
-    <property name="onInteract" value="play('shrineboss.lua')"/>
-   </properties>
-  </object>
   <object id="8" name="shrineboss" type="Event" x="272" y="384" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_horse"/>
+    <property name="appearance" value="4dir_rat"/>
     <property name="face" value="EAST"/>
     <property name="hide" value="return getSwitch('shrine_dead')"/>
-    <property name="onInteract" value="play('shrineboss.lua')"/>
-   </properties>
-  </object>
-  <object id="9" name="shrineboss" type="Event" x="256" y="368" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_rat"/>
-    <property name="face" value="SOUTH"/>
-    <property name="hide" value="return getSwitch('shrine_dead')"/>
-    <property name="onInteract" value="play('shrineboss.lua')"/>
+    <property name="onInteract" value="play('world1/shrineboss.lua')"/>
    </properties>
   </object>
   <object id="10" name="chest" type="Chest" x="256" y="352" width="16" height="16">
@@ -337,14 +321,14 @@
   <object id="13" name="trigger" type="Event" x="256" y="176" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('david01')"/>
-    <property name="onCollide" value="play('david01.lua')"/>
+    <property name="onCollide" value="play('world1/david01.lua')"/>
    </properties>
   </object>
   <object id="14" name="david" type="Character" x="256" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_david"/>
     <property name="hide" value="return getSwitch('shrine_done')"/>
-    <property name="onInteract" value="play('david02.lua')"/>
+    <property name="onInteract" value="play('world1/david02.lua')"/>
    </properties>
   </object>
   <object id="15" name="borg" type="Character" x="256" y="144" width="16" height="16">
@@ -382,6 +366,22 @@
     <property name="hide" value="return not getSwitch('shrine_done')"/>
     <property name="item" value="key_artifactRadio"/>
     <property name="keyItem" value="KEY_ITEM"/>
+   </properties>
+  </object>
+  <object id="21" name="shrineboss" type="Event" x="240" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_horse"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return getSwitch('shrine_dead')"/>
+    <property name="onInteract" value="play('world1/shrineboss.lua')"/>
+   </properties>
+  </object>
+  <object id="22" name="shrineboss" type="Event" x="256" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('shrine_dead')"/>
+    <property name="onInteract" value="play('world1/shrineboss.lua')"/>
    </properties>
   </object>
  </objectgroup>

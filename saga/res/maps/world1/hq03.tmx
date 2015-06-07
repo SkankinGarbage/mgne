@@ -244,7 +244,7 @@
   </tile>
  </tileset>
  <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
-  <image source="../tilesets/upper2.PNG" width="144" height="176"/>
+  <image source="../tilesets/upper2.PNG" width="144" height="240"/>
   <tile id="1">
    <properties>
     <property name="x" value=""/>
@@ -528,7 +528,7 @@
     <property name="appearance" value="4dir_bird"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('hq_dead')"/>
-    <property name="onInteract" value="play('hqboss.lua')"/>
+    <property name="onInteract" value="play('world1/hqboss.lua')"/>
    </properties>
   </object>
  </objectgroup>

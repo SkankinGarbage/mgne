@@ -271,7 +271,7 @@
   </tile>
  </tileset>
  <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
-  <image source="../tilesets/upper2.PNG" width="144" height="176"/>
+  <image source="../tilesets/upper2.PNG" width="144" height="240"/>
   <tile id="1">
    <properties>
     <property name="x" value=""/>
@@ -570,7 +570,7 @@
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="hide" value="return hasItem('key_artifactHeatgoggle')"/>
-    <property name="onInteract" value="play('wiseman01.lua')"/>
+    <property name="onInteract" value="play('world1/wiseman01.lua')"/>
    </properties>
   </object>
   <object id="8" name="shop" type="Character" x="400" y="352" width="16" height="16">
@@ -583,7 +583,7 @@
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="hide" value="return not hasItem('key_artifactHeatgoggle')"/>
-    <property name="onInteract" value="play('wiseman02.lua')"/>
+    <property name="onInteract" value="play('world1/wiseman02.lua')"/>
    </properties>
   </object>
  </objectgroup>

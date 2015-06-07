@@ -185,13 +185,13 @@
 			"level" : 13
 		}
 	],
-	"mutationChance" : 30,
-	"minHealth" : 6,
-	"maxHealth" : 19,
+	"mutationChance" : 20,
+	"minHealth" : 5,
+	"maxHealth" : 12,
 	"weightHp" : 5,
 	"weightStr" : 2,
 	"weightDef" : 1,
 	"weightAgi" : 2,
 	"weightMana" : 2,
-	"weightAbil" : 5
+	"weightAbil" : 4
 }

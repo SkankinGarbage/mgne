@@ -271,7 +271,7 @@
   </tile>
  </tileset>
  <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
-  <image source="../tilesets/upper2.PNG" width="144" height="176"/>
+  <image source="../tilesets/upper2.PNG" width="144" height="240"/>
   <tile id="1">
    <properties>
     <property name="x" value=""/>
@@ -550,18 +550,18 @@
     <property name="onCollide" value="teleport('world1/plainstown.tmx', 39, 27)"/>
    </properties>
   </object>
-  <object id="4" name="champion" type="Character" x="448" y="96" width="16" height="16">
+  <object id="4" name="champion" type="Character" x="448" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="hide" value="return getSwitch('shrine_done')"/>
-    <property name="onInteract" value="play('champion01.lua')"/>
+    <property name="onInteract" value="play('world1/champion01.lua')"/>
    </properties>
   </object>
   <object id="5" name="champion" type="Character" x="448" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_dead"/>
     <property name="hide" value="return (not getSwitch('shrine_done')) or (getSwitch('champion_dead'))"/>
-    <property name="onInteract" value="play('champion02.lua')"/>
+    <property name="onInteract" value="play(world1/'champion02.lua')"/>
    </properties>
   </object>
   <object id="6" name="champion" type="Character" x="448" y="80" width="16" height="16">

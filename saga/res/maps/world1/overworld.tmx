@@ -43,7 +43,7 @@
   <object id="4" name="autostart" type="Event" x="336" y="160" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('borg4')"/>
-    <property name="onEnter" value="play('borg04.lua')"/>
+    <property name="onEnter" value="play('world1/borg04.lua')"/>
    </properties>
   </object>
   <object id="5" name="River Town" type="Event" x="400" y="496" width="16" height="16">
