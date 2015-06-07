@@ -6,7 +6,7 @@
 	"members" : [
 		{
 			"enemy" : "enemy_gob00_GOBLIN",
-			"amount" : ""
+			"amount" : "3-4"
 		}
 	]
 }

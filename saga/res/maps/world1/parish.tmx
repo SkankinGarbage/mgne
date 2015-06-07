@@ -99,7 +99,7 @@
     <property name="appearance" value="lua(return getHero(1).getSpriteName())"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return (not (getSwitch('opening_talked_elder') and getSwitch('opening_talked_borg'))) or getSwitch('opening_finished')"/>
-    <property name="onInteract" value="play('borg02.lua')"/>
+    <property name="onInteract" value="play('world1/borg02.lua')"/>
    </properties>
   </object>
   <object id="85" name="friend1" type="Character" x="416" y="480" width="16" height="16">
@@ -107,7 +107,7 @@
     <property name="appearance" value="lua(return getHero(2).getSpriteName())"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return (not (getSwitch('opening_talked_elder') and getSwitch('opening_talked_borg'))) or getSwitch('opening_finished')"/>
-    <property name="onInteract" value="play('borg02.lua')"/>
+    <property name="onInteract" value="play('world1/borg02.lua')"/>
    </properties>
   </object>
   <object id="86" name="friend2" type="Character" x="432" y="480" width="16" height="16">
@@ -115,7 +115,7 @@
     <property name="appearance" value="lua(return getHero(3).getSpriteName())"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return (not (getSwitch('opening_talked_elder') and getSwitch('opening_talked_borg'))) or getSwitch('opening_finished')"/>
-    <property name="onInteract" value="play('borg02.lua')"/>
+    <property name="onInteract" value="play('world1/borg02.lua')"/>
    </properties>
   </object>
   <object id="87" name="borg" type="Character" x="480" y="416" width="16" height="16">

@@ -6,15 +6,15 @@
 	"members" : [
 		{
 			"enemy" : "enemy_arm00_FIREFLY",
-			"amount" : ""
+			"amount" : "1"
 		},
 		{
 			"enemy" : "enemy_tmp00_MERMAID",
-			"amount" : ""
+			"amount" : "1"
 		},
 		{
 			"enemy" : "enemy_goo00_SLIME",
-			"amount" : ""
+			"amount" : "1"
 		}
 	]
 }

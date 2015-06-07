@@ -121,7 +121,7 @@
   <object id="16" name="well2" type="Event" x="368" y="384" width="16" height="16">
    <properties>
     <property name="hide" value="return not hasItem('key_artifactScuba')"/>
-    <property name="onInteract" value="play('well.lua')"/>
+    <property name="onInteract" value="play('world1/well.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>

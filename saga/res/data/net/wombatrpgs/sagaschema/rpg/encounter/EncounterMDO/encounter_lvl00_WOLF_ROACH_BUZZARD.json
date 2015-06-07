@@ -6,15 +6,15 @@
 	"members" : [
 		{
 			"enemy" : "enemy_dog00_WOLF",
-			"amount" : ""
+			"amount" : "1"
 		},
 		{
 			"enemy" : "enemy_fly00_ROACH",
-			"amount" : ""
+			"amount" : "1"
 		},
 		{
 			"enemy" : "enemy_brd00_BUZZARD",
-			"amount" : ""
+			"amount" : "1"
 		}
 	]
 }

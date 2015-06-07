@@ -50,7 +50,7 @@
    <properties>
     <property name="appearance" value="anim_dead"/>
     <property name="hide" value="return (not getSwitch('shrine_done')) or (getSwitch('champion_dead'))"/>
-    <property name="onInteract" value="play(world1/'champion02.lua')"/>
+    <property name="onInteract" value="play('world1/champion02.lua')"/>
    </properties>
   </object>
   <object id="6" name="champion" type="Character" x="448" y="80" width="16" height="16">

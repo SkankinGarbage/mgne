@@ -5,15 +5,15 @@
 	"description" : "",
 	"members" : [
 		{
-			"enemy" : "chara_borg",
+			"enemy" : "enemy_dog00_WOLF",
 			"amount" : "1"
 		},
 		{
-			"enemy" : "chara_borg",
+			"enemy" : "enemy_skl00_SKELETON",
 			"amount" : "1"
 		},
 		{
-			"enemy" : "chara_borg",
+			"enemy" : "enemy_hag00_HAG",
 			"amount" : "1"
 		}
 	]
