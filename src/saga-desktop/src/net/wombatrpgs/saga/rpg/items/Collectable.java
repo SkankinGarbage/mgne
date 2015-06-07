@@ -48,7 +48,9 @@ public class Collectable {
 	 */
 	@Override
 	public boolean equals(Object other) {
-		return mdo.key.equals(other);
+		Collectable otherCollectable = (Collectable) other;
+		if (otherCollectable == null) return false;
+		return mdo.key.equals(otherCollectable.mdo.key);
 	}
 
 	/**
