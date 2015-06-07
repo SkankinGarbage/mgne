@@ -19,6 +19,7 @@ speak("Lara", "Then they truly must be 'masters...'")
 speak("Worm", "GRRRR...")
 speak("Wolf", "You tire me. We are hungry.")
 
+sceneSwitch('wolf_lever2')
 face('fenrir', 'WEST')
 playSound('explode')
 shake(.5)

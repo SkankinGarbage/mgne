@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="28" tilewidth="16" tileheight="16" nextobjectid="64">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="28" tilewidth="16" tileheight="16" nextobjectid="66">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level03_danger01"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAW0BheoYMZNMvXtpILdo2AUDBQ4S4BPDLhGgD8KRgG9AADghUTpcAcAAA==
+   H4sIAAAAAAAAC2NgGAW0BheoYMZNKpgxCkbBUANnCfCJAdcI8EfBKKAXAAAY8pNNcAcAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -60,6 +60,20 @@
    <properties>
     <property name="appearance" value="anim_dead"/>
     <property name="hide" value="return not getSwitch('jonas_injured') or getSwitch('world2_done')"/>
+   </properties>
+  </object>
+  <object id="64" name="lever" type="Event" x="16" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_switch_a"/>
+    <property name="hide" value="return getSwitch('worm_lever2')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="65" name="lever" type="Event" x="16" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_switch_b"/>
+    <property name="hide" value="return not getSwitch('worm_lever2')"/>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>
