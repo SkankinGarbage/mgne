@@ -1,0 +1,33 @@
+{
+	"key" : "chara_zkauba",
+	"subfolder" : "npcs",
+	"name" : "Zkauba",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "MONSTER",
+	"family" : "None",
+	"species" : "DRAGON",
+	"appearance" : "4dir_zkauba",
+	"portrait" : "None",
+	"meatEatLevel" : 0,
+	"meatTargetLevel" : 0,
+	"gp" : 0,
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_beak",
+		"abil_flame",
+		"abil_oquake"
+	],
+	"stats" : {
+		"hp" : 295,
+		"mhp" : 295,
+		"str" : 33,
+		"def" : 27,
+		"agi" : 34,
+		"mana" : 32,
+		"flags" : [
+			"EQUIPMENT_FIX"
+		]
+	}
+}

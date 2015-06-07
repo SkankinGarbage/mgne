@@ -596,7 +596,7 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	 * @param	dropper			The character dropping the meat we're eating
 	 */
 	public void eat(Chara dropper) {
-		if (getFamily() != null) {
+		if (getFamily() != null && !is(Flag.EQUIPMENT_FIX)) {
 			getFamily().transform(this, dropper);
 		}
 	}
@@ -608,7 +608,7 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	 * @return					The MDO of this character after, or null
 	 */
 	public CharaMDO predictEat(Chara dropper) {
-		if (getFamily() != null) {
+		if (getFamily() != null && !is(Flag.EQUIPMENT_FIX)) {
 			return getFamily().getTransformResult(this, dropper);
 		} else {
 			return null;
@@ -642,13 +642,10 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	 * @return					A list of mutation options, or null
 	 */
 	public List<Mutation> generateMutations() {
-		if (!SGlobal.settings.getMutations().shouldMutate()) {
-			return null;
-		} else if (getRace() != Race.MUTANT) {
-			return null;
-		} else {
-			return mutantManager.produceOptions();
-		}
+		if (!SGlobal.settings.getMutations().shouldMutate()) return null;
+		if (getRace() != Race.MUTANT) return null;
+		if (is(Flag.EQUIPMENT_FIX)) return null;
+		return mutantManager.produceOptions();
 	}
 	
 	/**
