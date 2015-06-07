@@ -32,12 +32,12 @@
   </object>
   <object id="2" name="Pass" type="Event" x="336" y="432" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/pass01.tmx', 32, 7, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world1/pass01.tmx', 38, 10, 'SOUTH')"/>
    </properties>
   </object>
   <object id="3" name="Pass" type="Event" x="368" y="448" width="16" height="16">
    <properties>
-    <property name="onCollide" value="play('pass_teleport.lua')"/>
+    <property name="onCollide" value="play('world1/pass_teleport.lua')"/>
    </properties>
   </object>
   <object id="4" name="autostart" type="Event" x="336" y="160" width="16" height="16">

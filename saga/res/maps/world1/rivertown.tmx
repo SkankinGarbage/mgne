@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="16" tileheight="16" nextobjectid="21">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="49" tilewidth="16" tileheight="16" nextobjectid="21">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="River Town"/>
@@ -271,7 +271,7 @@
   </tile>
  </tileset>
  <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
-  <image source="../tilesets/upper2.PNG" width="144" height="176"/>
+  <image source="../tilesets/upper2.PNG" width="144" height="240"/>
   <tile id="1">
    <properties>
     <property name="x" value=""/>
@@ -517,20 +517,20 @@
    </properties>
   </tile>
  </tileset>
- <layer name="Tile Layer 1" width="48" height="48">
+ <layer name="Tile Layer 1" width="48" height="49">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZTY7CMAwF4AISi4pZwQZ2XIMDcASuMNz/BLAA6cl6ThyKnSB58TajafXlx24bNtM0bQbM/zN3Q3o70z9m0p/+9H/XfzRkJbImf7Pcx9t/UmLxa9dG+s9KLH7t2gi/Ns9amF9mfgXXwcuP87wlsfjZdbNYBy8/Og4kcizM/0eC6xDl372yh+BYND8bdw//vhLNvyPBWojyf1q/2li9/S19p6X/yF50cvK39J0l/rOTv1Z/b69M65rNzv7S/pVe5mdjxHj7ZxLpvZBY9lSE31Kvt2eukBv5H1ZDnv7aumOYX9YEewb/0vyzHhDhL/VP9OPeZ37tee3tr/VPS//pWb+1/lnr/737Z0tGfH4t9dfeP7z8R7i/fG5JV8lfqp+I92f0o1n2cs3f6/2Z+dFc6kdsvbS9H/n9gmb2PTW6v/TtKPePpW5H/n4s1W2UXzvntPi1dUJ31Pnhkv7P5jza/4vnz9q58bfOnzFe5w+1WPyW++TvL+lPf/rT7+t/AA3GWz0AJAAA
+   H4sIAAAAAAAAC+3ZTY7CMAwF4AISi4pZMRvYcQ0OwBG4AnP/E8CCkZ6s58Sh2AnCi7cZTasvP3bbsJmmaTNgbo/8GdLbmf4xk/70p/+9/oMhK5E1+ZvlPt7+oxKLX7s20n9SYvFr10b4tXnWwvwy8zO4Dl5+nOcticXPrpvFOnj50fFLIsfC/D8kuA5R/t0zewiORfOzcffw7yvR/DsSrIUo/6v1q43V29/Sd1r6j+xFRyd/S99Z4j85+Wv19++VaV2z2dlf2r/Sy/xsjBhv/0wivWcSy56K8Fvq9frIBXIl/8NqyNNfW3cM88uaYM/gT5p/1gMi/KX+iX7c+8yvPa+9/bX+aek/Peu31j9r/b93/2zJiM+vpf7a+4eX/wD3l88t6Sr5S/UT8f6MfjTLXq75e70/Mz+aS/2IrZe29yO/X9DMvqdG95e+HeX+sdTtyN+PpbqN8mvnnBa/tk7ojjo/XNL/2ZxH+z/x/Fk7N37X+TPG6/yhFovfcp/8/SX96U9/+r/Tb80dkGvSEsAkAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="48" height="48">
+ <layer name="Tile Layer 2" width="48" height="49">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XTQqAIBCGYe+/7Qx5hBZldAkPFIELmY01Rjr5PiCDuPkUf9A5AAAAjCa0DlAhZu2JNdXt3TgqXvTvzCWKas2V2zu7+TE26+dvFFPrAEpLqrPo41tHYZw3TIf7E9Dr9fzsrQNU6HVNS/K88i+JvljdYwAA4D9Ong77kgAkAAA=
+   H4sIAAAAAAAAC+3XTQqAIBCGYe+/7Qx5hBb90CU8UAQuZDbWGDmD7wMyiJtP8QdDAAAAwGj23gEapKK9sea6fRtHJYr+k7kkUb25c8fgNz/G5v38jWLqHUBpyXUWffzrrIzzhulwfwJ6Vs/P0TtAA6trWlPmlX9J2OJ1jwEAAFhxAZyCH5/AJAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

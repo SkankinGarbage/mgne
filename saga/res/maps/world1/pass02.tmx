@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" nextobjectid="10">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="46" tilewidth="16" tileheight="16" nextobjectid="10">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level00_danger02"/>
@@ -7,68 +7,68 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="141" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="40" height="40">
+ <layer name="Tile Layer 1" width="51" height="46">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2UzQ2DIQiG3cAB9OQUTZfo7dt/lF5qQgnIj/0MaTi8B0XhEYReSumpVOqv9Age63WQzxMrOl89yOeJFZ0ven2Tb5+vBecbhxi986UeYqyOGLV8M97N58kDZJx7Dciz5vzvMs4YA6ijtWSn/O7UqqF7g8gp9r2yU2yrWknC8bCoGmntq1pZc0e9ncuPJn9SPGvuPP2oeT/sG2s8z3/Q8uE+4mql4aPeK6kKdvyvtbnDMbi5Iqkq7Jy4WdkZHxqfXj0/wrnkZiB1nvO50mU4x52l+PB5iu36sfpif8U4OWHOpLuW+bIryKh5F+yx+c9PMWq4YI/Nf343n0c7cz354vOlUha9AY0i8jYAGQAA
+   H4sIAAAAAAAAC+2WQQ4CIQxFuQEHGFacwngJd3P/oxgTTZpaOmVoGYN/8RY4yOdB7VhSSgUAAAC4iNtCWY+JLtFZK7nkiS7RWSu5rFRjcPnNrNf620IudZLPjJ6cg3w2xoyeTH08166MTLxm+EhnembM16XnFV3T3KWyXG0szZdqKrIG6B1wF56rjaX5NX27tGrAu641lyO0+ZYaiLiTlsuZcU8NRN5Jz2/Mcla0J4zkWfYT5SL1jMjfi9aLj8gHz7We4bV/vp/M8q1kw/MWXu9MKc+Sf5b7G6lvj7pIa7fyNfaOea25oy58bcljd6Yon3v5fJzoXVhzot7dHnfUc160j13t0Loj63doH7t6/6NE/0eEC1wAAAD8J0/70HrlqCQAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="40" height="40">
+ <layer name="Tile Layer 2" width="51" height="46">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3RsQkAIAwFUVewE+zcfwdXEyHWNqKH3INf5yApSdJdGX6rHK9g3JIkghojml0tRrPaaNY/iW0T9Z+SdEp/HbBB75Mk/W8AiqiZxAAZAAA=
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQo/oAAAAAAAAAAAAL4G855QlqgkAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="tele" type="Event" x="96" y="96" width="16" height="16">
+  <object id="1" name="tele" type="Event" x="160" y="128" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/pass01.tmx', 15, 28)"/>
+    <property name="onCollide" value="teleport('world1/pass01.tmx', 21, 31)"/>
    </properties>
   </object>
-  <object id="2" name="room" type="Ceiling" x="320" y="288">
+  <object id="2" name="room" type="Ceiling" x="384" y="320">
    <properties>
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="-128,-32 192,-32 192,80 32,80 32,112 16,112 16,80 -128,80"/>
+   <polygon points="-128,-32 176,-32 176,80 32,80 32,112 16,112 16,80 -128,80"/>
   </object>
-  <object id="3" name="potion" type="Chest" x="336" y="544" width="16" height="16">
+  <object id="3" name="potion" type="Chest" x="400" y="576" width="16" height="16">
    <properties>
     <property name="item" value="pot_potion"/>
    </properties>
   </object>
-  <object id="4" name="gold glove" type="Chest" x="400" y="336" width="16" height="16">
+  <object id="4" name="gold glove" type="Chest" x="464" y="368" width="16" height="16">
    <properties>
     <property name="item" value="helm_bronze"/>
    </properties>
   </object>
-  <object id="5" name="str24" type="Chest" x="272" y="336" width="16" height="16">
+  <object id="5" name="str24" type="Chest" x="336" y="368" width="16" height="16">
    <properties>
     <property name="item" value="item_str24"/>
    </properties>
   </object>
-  <object id="6" name="tele" type="Event" x="528" y="96" width="16" height="16">
+  <object id="6" name="tele" type="Event" x="592" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 23, 28, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="7" name="puppet" type="Character" x="528" y="160" width="16" height="16">
+  <object id="7" name="puppet" type="Character" x="592" y="192" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="hide" value="return getSwitch('puppet_dead')"/>
    </properties>
   </object>
-  <object id="8" name="trigger" type="Event" x="528" y="192" width="16" height="16">
+  <object id="8" name="trigger" type="Event" x="592" y="224" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('puppet_dead')"/>
     <property name="onCollide" value="play('world1/borg03.lua')"/>
    </properties>
   </object>
-  <object id="9" name="trigger" type="Event" x="528" y="144" width="16" height="16">
+  <object id="9" name="trigger" type="Event" x="592" y="176" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('puppet_dead')"/>
     <property name="onCollide" value="play('world1/borg03.lua')"/>
