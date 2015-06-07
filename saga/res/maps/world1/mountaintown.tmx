@@ -5,7 +5,7 @@
   <property name="name" value="Mountain Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="48" height="48">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3TOw6AIBBAQe9/EHtb9RImHMjKhgYTsqyfmYbQPcjuNAEAjLc07nDHnB3AL2zZAR2uHSmpFd9RqvON6plovWUNbIlm/sc5sgOC7NkBHcx/HH8KAADAU528jKX4ACQAAA==
+   H4sIAAAAAAAAC+3UsQmAMBAF0LiM+69hb6su4QAiklohXE7xPUiR7udzl1IAAPqbb+7wxJQdgF9YswM0OHdkHK5Du9rjl/us/+bTtyyhaWKZ/3727ABBtuwADcx/HJ0CAADwVgfajt4rACQAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

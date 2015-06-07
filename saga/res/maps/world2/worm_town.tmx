@@ -5,7 +5,7 @@
   <property name="name" value="Worm's Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="60" height="36">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WTQqAIBCA0bn/QTpEtatWXqqiFjZYiFPkz/dgEEVBRxwUAQDg4M6wzsnJtMUcGNdjveoPgflPsZh3+i6nQqTO+42xn6eTax78PoD/jcb1oZqXK6fa2vk1t4T7AWBXUk0GWtbC+9T/rtgz556blDp7tyY1RwAAAPjOCp1F0I3AIQAA
+   H4sIAAAAAAAAC+3WTQqAIBCA0bn/zTpEtatWnqGiFjZYiFPkz/dgEEVBRxwUAQDg4M6wzsnJtMUcGNdjveoPgflPsZh3+i6nQqTO+42xn6eTax78PoD/jcb1oZqXK6fa2vk1t4T7AWBXUk0GWtbC+9T/rtgz556blDp7tyY1RwAAAPjOChoqrunAIQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

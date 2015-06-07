@@ -6,7 +6,7 @@
   <property name="name" value="Floor 7"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="53" height="48">
   <properties>
    <property name="z" value="0"/>
@@ -116,7 +116,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YIQ6AMBBFwd5fYLkd4AAHEhQbVA2YQhrITPJUzcqfpgQAAADAlTXqoj4aoqXqNc/YozGaojnasremykXvamsfAACc/rKr8r10t6u+xF4CAKCEP8UyBzgVqcLAJwAA
+   H4sIAAAAAAAAC+3YIQ6AMBAEwBYc4EDC/zWW13FB1YBpSAOZSdbvuc2lBAAAAMCdJaeUI12kj8y5daN6W9wwRMbIFFmLm/Z2tV5ztC4AAFz+sqvKvfS0q77EXgIAoIafYp0T85L1zsAnAAA=
   </data>
  </layer>
 </map>

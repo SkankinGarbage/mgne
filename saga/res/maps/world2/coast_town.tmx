@@ -5,13 +5,13 @@
   <property name="name" value="Wolf's Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="59" height="49">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2Yz27CMAyHO5AmgcSNS2/dm43TuJZetj3YrrzaWimRfrOcpnH+wnz4JBqXkK9u7dB913X7B+Jj5iqk9trVVV3VVV3V9bHI5friIfT8EFxzl3R9A9ZisbjmLu3aG2hsGXtl6AVwc/eFXPGaDwa6nmXsBJwN9nz09x1zcw8FXV3XHDkDt5nJEdtyzFHKlcvnzmCPR3D8mvmG2CcZ8x3XdOV+m7puWW8MLbmGcDSEfOeHkNOV1o9dANTxYDh2271L5pXWD6nrgYG6cjW5pKvkeURXlyf1XRxt70Lfms8rlweai62umFfsz6dGXNEP72/0ldzDyxxL/5q6v/22piv6YW/F9blqE9YoWptG+Iz7kZqu1u9GxnF9vr7E1V9bF2htqNlzcE0Iri+mB1Nq9pyQOiyllmtMz4lxfZ+5RHim7jk5icln6642j5ZYzxjXtf/V0ljqPKZwxf0b3cNJYzSfqT2lrrh/o3s4aSxnPmNc1/ZI0lirriOJTQlirbrSvRL3Tik01pKr7/1hKlpwHZ7A9ZKQuyBGx3N5puYuiK19p2XU9TldFUVRFEX5f/wCPyISMiwtAAA=
+   H4sIAAAAAAAAC+2Yz27CMAyHO5AmgcSNS2/dm43TuJZetr3prjzJWimRfrOcpnH+wnz4JBqXkK9u7dB913X7B+Jj5iqk9trVVV3VVV3V9bHI5friIfT8EFxzl3R9A9ZisbjmLu3aG2hsGXtl6AVwc/eFXPGaDwa6nmXsBJwN9nz09x1zcw8FXV3XHDkDt5nJEdtyzFHKlcvnzmCPR3D8mvmG2CcZ8x3XdOV+m7puWW8MLbmGcDSEfOeHkNOV1o9dANTxYDh2271L5pXWD6nrgYG6cjW5pKvkeURXlyf1XRxt70Lfms8rlweai62umFfsz6dGXNEP72/0ldzDyxxL/5q6v/22piv6YW/F9blqE9YoWptG+Iz7kZqu1u9GxnF9vr7E1V9bF2htqNlzcE0Iri+mB1Nq9pyQOiyllmtMz4lxfZ+5RHim7jk5icln6642j5ZYzxjXtf/V0ljqPKZwxf0b3cNJYzSfqT2lrrh/o3s4aSxnPmNc1/ZI0lirriOJTQlirbrSvRL3Tik01pKr7/1hKlpwHZ7A9ZKQuyBGx3N5puYuiK19p2XU9TldFUVRFEX5f/wC6wd7wSwtAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="59" height="49">
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YzQmAMAyG4e4/iDiDPxMEr86jR0GTQ0lsqu8DxUogfD20FUsBAABAtE2ZZ+9dY1fm2XtHWM4hrUMEksvQ6tb74J4oVm95gS/zOltHpz49+eOae7M69rLu6VZEeXrIfFdnzgZbtj0EALibjdr0Wgof1r+W2lpm1jdSbQ0AAAAAgCcHHV3/jiwtAAA=
+   H4sIAAAAAAAAC+3YPQ6AIAyGYbyM97+G8Qz+HMHVTR1YUDqQVoq+T0KENGk+BoUYAgAAAKxtmbn33iX2zNx7bwvLOfqudgo7197iyNWl9WATy0xreYEv0/q2jjptmvLHPbdmVewlndO1xDzpU4Pns9pzNsi8vUMAgLtZqE2vpdAh/WsprXkm3ZFKawAAAAAAPDkAgnQpeCwtAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

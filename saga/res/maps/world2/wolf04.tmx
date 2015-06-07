@@ -6,7 +6,7 @@
   <property name="name" value="Wolf's Castle"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="11" height="20">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGPrgAglqb9LMFfjBGRLEr+JQi0t8oMFw9hu1AQAK6u81cAMAAA==
+   H4sIAAAAAAAAC2NgGPrgMwlq/9DMFfjBexLEf+BQi0t8oMFw9hu1AQDRFtEBcAMAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -50,7 +50,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBQQA/pIUDsdhzgAbFrHJnADAAA=
+   H4sIAAAAAAAAC2NgGAWjYBQQAzaSoHYXDnEAA8E0aXADAAA=
   </data>
  </layer>
 </map>

@@ -5,7 +5,7 @@
   <property name="encounter" value="encounterset_level04_danger00"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="42" height="37">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WMQrAIBBEUe9f2OYcaTxOYme8hVsGEZxC3eY/GBhkFSsxhD3ipnNXu7wvAOCIW1jj3QIAAPA1+rPNZpQ9mOMvDE/pF+gey2vJXVdmlL5KsXyW2nVlRukAzmjEv7ZVSBgAAA==
+   H4sIAAAAAAAAC+3WMQrAIAyF4aTd2t7/Hl17Dhdv04wVCr5BzfJ/EHhIDE4SsznuSXNHe7IfAGCJIpzxbwEAAOT629l6Pcod9LELI1P9FHTuZlvU7m1WepQ8yhGzzqjL26z0KBnAGi9m0yEiSBgAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

@@ -5,7 +5,7 @@
   <property name="name" value="Stronghold"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="48" height="40">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XMQrAIAwFUO8/de05ekFXl1pB2ubDe5AlU4bwo60B1HcMtdKv5hxqpQ+7rr8HoIz0/ASAO+k3zh/hO97GvCV1t57ysXp+zjI+If/T7xcAGTolvt2nAB4AAA==
+   H4sIAAAAAAAAC+3XsQnAMAwEQO+/TtrMkXncuoljMEn0cAdqVKkQL7s1gPqOoVb61ZxDrfRh1/X3AJSRnp8AcCf9xvkjfMfbmLek7tZTPlbPz1nGJ+R/+v0CIEMH1tkIUwAeAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

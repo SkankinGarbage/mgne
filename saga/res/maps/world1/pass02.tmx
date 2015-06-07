@@ -6,7 +6,7 @@
   <property name="name" value="North Passage"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="51" height="46">
   <properties>
    <property name="z" value="0"/>

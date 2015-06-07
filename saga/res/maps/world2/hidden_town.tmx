@@ -5,7 +5,7 @@
   <property name="name" value="Hidden Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="55" height="45">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WbQrDIAyGPeq2A2y7Uv+M0t5gH7fogdZCA0FSdaJvdOSBh3V1jLxG1Nk5NysqoVmPZbNslq1PLVufWrY+tWx9KjE1UFes3pRxibGBDFyaa5+UPklMTr9/VENpRuEdOleollK89k9kH49YdonP6jswHvqfh/d7VDapV8vBc+p4DFTvJGiu6VmSj+eguSZrgjofBkCWp/BOez8pAV/DfP2isiF6xxkK1h4z9dw+rZ6Zl8xsLZxxPtfVG/Oemc2BctW4a6XQUs9yke4lqDOg5h0yxD/0TQK1T6L3/40W98mSoLL5vdu+H93/f3nfQjbKRyLWKjJbLG/IFPzeamfLnYON2NmiXXPNfmvXaJqmaZpmHb+ePW7WrCYAAA==
+   H4sIAAAAAAAAC+2WWwrDIBBFXWrbBbRdZH5KSHbQxy7y2wQyMMhEregdLXPg0DSWMtcRdXbOzYpKaNZj2SybZetTy9anlq1PLVufSkwN1BWrN2VcYmwgA5fm2ielTxKT0+8f1VCaUXiHzhWqpRSv/RPZxyOWXeKz+g6Mh/7n4f0elU3q1XLwnDoeA9U7CZprepbk4zlorsmaoM6HAZDlKbzT3k9KwNcwX7+obIjecYaCtcdMPbdPq2fmJTNbC2ecz3X1xrxnZnOgXDXuWim01LNcpHsJ6gyoeYcM8Q99k0Dtk+j9f6PFfbIkqGx+77bvR/f/X963kI3ykYi1iswWyxsyBb+32tly52AjdrZo11yz39o1mqZpmqZZxy/Bg436rCYAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

@@ -6,7 +6,7 @@
   <property name="name" value="Airseed Shrine"/>
  </properties>
  <tileset firstgid="1" name="lower" tilewidth="16" tileheight="16">
-  <image source="../tilesets/lower2.PNG" width="112" height="320"/>
+  <image source="../tilesets/lower2.PNG" width="112" height="400"/>
   <tile id="3">
    <properties>
     <property name="x" value=""/>
@@ -243,7 +243,7 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="32" height="32">
   <properties>
    <property name="z" value="0"/>
@@ -316,7 +316,7 @@
    <property name="z" value="2"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3SMQ4AIAgEQQpKO9/tn30CoThAs1MTtjkzAAAAdFnNnV3Ur+ogT73B6L96G69uz8X3kSO+n97/1QVvEDx8ABAAAA==
+   H4sIAAAAAAAAC+3SoREAMAgEQQQyLv33kBJTAoN4IJlbzXDmzQAAANBlNXd2Ub+qgzz1BqP/6m28uj0X30eO+H56/1cXNb8n7QAQAAA=
   </data>
  </layer>
  <layer name="Tile Layer 4" width="32" height="32">
@@ -324,7 +324,7 @@
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3KoQEAAAQAMP8foHpVFCXJlhcBAAAAI4//po7/Vw2JBtO9ABAAAA==
+   H4sIAAAAAAAAC+3KoQEAAAQAMP9/pLpMFCXJlhcBAAAAI4//po7/Vw0LpsgsABAAAA==
   </data>
  </layer>
 </map>

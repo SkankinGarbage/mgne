@@ -6,7 +6,7 @@
   <property name="name" value="Wolf's Castle"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="68" height="47">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XsQ7DIAwFM3Ts1v/OmrlblfxkVamReFUFlDgY6J1kiYHBPhkM2zRNW8fxDe+c8NFO4AMf+EjXHMM7X3zUra8E7xrxgQ984AMf4/iYg7V3jS34WIK1d40t+AhZ3+Fdayz2HGuyRuKfPORQ24u3h0fmvlo90yN4UPCh4EPBh3LGTIlxKcxzTm8xoXZvXAvzXNJbTKjt42abvjkl52HUu+NFyd3w+ZYL1/eKuZ/BkXsyfI+HTnrGcobuTnruEes3hfcf7ijWPnZy/5atkeuj5zPwC5ZvixE4Ml9GhN5Q8KHgQ2G+KMwXBR8KPhR8KPhQ8KHgQ3kCYEkNJfAxAAA=
+   H4sIAAAAAAAAC+2XMQ7DIAxFM3Ts1vsfImvmblVypqpSI/GrCihxMND3JEsMDPaTwbBN07R1HN/wzgkf7QQ+8IGPdM0xvPPFR936SvCuER/4wAc+8DGOjzlYe9fYgo8lWHvX2IKPkPUd3rXGYs+xJmsk/slDDrW9eHt4ZO6r1TM9ggcFHwo+FHwoZ8yUGJfCPOf0FhNq98a1MM8lvcWE2j5utumbU3IeRr07XpTcDZ9vuXB9r5j7GRy5J8P3eOikZyxn6O6k5x6xflN4/+GOYu1jJ/dv2Rq5Pno+A79g+bYYgSPzZUToDQUfCj4U5ovCfFHwoeBDwYeCDwUfCj6UJ35q3sjwMQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

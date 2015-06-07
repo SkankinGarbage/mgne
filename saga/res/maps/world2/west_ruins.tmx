@@ -6,8 +6,8 @@
   <property name="name" value="Lost Temple"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
-  <image source="../tilesets/upper2.PNG" width="144" height="176"/>
+ <tileset firstgid="176" name="upper" tilewidth="16" tileheight="16">
+  <image source="../tilesets/upper2.PNG" width="144" height="240"/>
   <tile id="1">
    <properties>
     <property name="x" value=""/>
@@ -266,7 +266,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XSwrDMAxEdf8DdFtMd04O0G1v1k0Lwkz8iW3JITPwIFgEz1hYJJuIbIQQQsiCRIW3l9lo5dauTvzleUlZ3l5H9XS/UdZWeftmVmZlVmZFuuJ3R4+8vVtmvVJv/99MPfLOYNFTLdTflf4nUE8fhUy5ekxAtZV6+ixkRfV34R1d98ocCh5r9clkQ3UZ4L2nt0HmZUfy7O3oXtfII2+6r3Veqzus5yVas1Q6x2tpva96r7MKMvbe1+pMVq0AQHX9nM4Bq9wts0n7Qb6Rf73WuoccrM3OmvqZORuOzqo38+yZNvMcWvH2Tggh5D58AcuJBovgJAAA
+   H4sIAAAAAAAAC+2XSwrDMAxEdf8bdVtMd04O0G0P0k0Lwkz8iW3JITPwIFgEz1hYJJuIbIQQQsiCRIW3l9lo5dauTvzleUlZ3l5H9XS/UdZWeftmVmZlVmZFuuJ3R4+8vVtmvVJv/99MPfLOYNFTLdTflf4nUE8fhUy5ekxAtZV6+ixkRfV34R1d98ocCh5r9clkQ3UZ4L2nt0HmZUfy7O3oXtfII2+6r3Veqzus5yVas1Q6x2tpva96r7MKMvbe1+pMVq0AQHX9nM4Bq9wts0n7Qb6Rf73WuoccrM3OmvqZORuOzqo38+yZNvMcWvH2Tggh5D58ARDB2wfgJAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

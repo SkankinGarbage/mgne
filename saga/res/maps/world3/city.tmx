@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="48" tilewidth="16" tileheight="16" nextobjectid="12">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="64">
  <properties>
-  <property name="bgm" value="ffl1_cave"/>
-  <property name="encounter" value="encounterset_level00_danger02"/>
-  <property name="name" value="North Passage"/>
+  <property name="battle_bgm" value="ffl1_battle"/>
+  <property name="bgm" value="ffl1_overworld2"/>
+  <property name="name" value="Angelic World"/>
+  <property name="terrainEncounter" value="terrain_world3"/>
  </properties>
  <tileset firstgid="1" name="lower" tilewidth="16" tileheight="16">
   <image source="../tilesets/lower2.PNG" width="112" height="400"/>
@@ -191,6 +192,16 @@
     <property name="x" value=""/>
    </properties>
   </tile>
+  <tile id="65">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="66">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
   <tile id="70">
    <properties>
     <property name="x" value=""/>
@@ -201,7 +212,37 @@
     <property name="x" value=""/>
    </properties>
   </tile>
+  <tile id="74">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="75">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="76">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
   <tile id="77">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="81">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="82">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="83">
    <properties>
     <property name="x" value=""/>
    </properties>
@@ -222,7 +263,37 @@
     <frame tileid="105" duration="500"/>
    </animation>
   </tile>
+  <tile id="88">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="89">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="90">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
   <tile id="91">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="95">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="96">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="97">
    <properties>
     <property name="x" value=""/>
    </properties>
@@ -232,7 +303,17 @@
     <property name="x" value=""/>
    </properties>
   </tile>
+  <tile id="102">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
   <tile id="103">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="104">
    <properties>
     <property name="x" value=""/>
    </properties>
@@ -242,89 +323,153 @@
     <property name="x" value=""/>
    </properties>
   </tile>
+  <tile id="107">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="108">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="109">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="110">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="111">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="112">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="113">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="114">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="119">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="120">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="121">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="123">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="124">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="125">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="126">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="127">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="128">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="130">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="132">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="133">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="134">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="135">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="136">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="137">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="138">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="139">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
  </tileset>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="50" height="48">
+ <layer name="Tile Layer 1" width="89" height="60">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YMQ6FIBBFUXagnQVWrML9r8zGYkJQR+WNM+QVp4Hkw02I5LOmlFYiIiJyZQP9bhYQ47UZ1FEExHhtAXVMAmK8tV70jnzM35097x3lmL87e19akONPzx47xunIDb3G5Ty6ozT0Gpfz6A5riA4r7PCFHb5Ydmj+X7xl2SG/93IPV/eClmWHXOtsDxHuj1HuwbO1onVc0bwR/L1HDc0bQYQODXb4gXwPsYR+D7Hi5bvKjrE6iIgovh1tmQCkgCUAAA==
+   H4sIAAAAAAAAC+3UMQqAMBBE0T16LEQFD23SrZLOtZH3YC4wxY8AAAAAgPeOyajl4+/5+Fvjz9a3pi3h50rjy63vTNvDx5VmndCLWi3unci9oMazE7kXAAAAAAAAAAAAAAAAAPAXFz/MsYZwUwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="50" height="48">
+ <layer name="Tile Layer 2" width="89" height="60">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OAQ0AAAgDoPdPZDxjfE5IQAIAAAAAADdNOwAAAMB7C29Uh4KAJQAA
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAA/Biv4QEecFMAAA==
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="1" name="tele" type="Event" x="608" y="144" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 21, 27)"/>
-   </properties>
-  </object>
-  <object id="2" name="room" type="Ceiling" x="160" y="160">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,0 48,0 48,80 32,80 32,128 16,128 16,80 0,80"/>
-  </object>
-  <object id="3" name="room" type="Ceiling" x="256" y="160">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,0 48,0 48,80 32,80 32,128 16,128 16,80 0,80"/>
-  </object>
-  <object id="4" name="room" type="Ceiling" x="352" y="160">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,0 48,0 48,80 32,80 32,128 16,128 16,80 0,80"/>
-  </object>
-  <object id="5" name="room" type="Ceiling" x="448" y="160">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,0 48,0 48,80 32,80 32,128 16,128 16,80 0,80"/>
-  </object>
-  <object id="6" name="roof" type="Ceiling" x="480" y="512">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,0 16,0 16,48 32,48 32,128 -16,128 -16,48 0,48"/>
-  </object>
-  <object id="7" name="potion" type="Chest" x="368" y="208" width="16" height="16">
-   <properties>
-    <property name="item" value="pot_potion"/>
-   </properties>
-  </object>
-  <object id="8" name="hp200" type="Chest" x="464" y="208" width="16" height="16">
-   <properties>
-    <property name="item" value="item_hp200"/>
-   </properties>
-  </object>
-  <object id="9" name="bronze shield" type="Chest" x="176" y="208" width="16" height="16">
-   <properties>
-    <property name="item" value="shield_bronze"/>
-   </properties>
-  </object>
-  <object id="10" name="spellbook" type="Chest" x="480" y="608" width="16" height="16">
-   <properties>
-    <property name="item" value="wpn_gunColt"/>
-   </properties>
-  </object>
-  <object id="11" name="tele" type="Event" x="336" y="512" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/pass02.tmx', 10, 9)"/>
-   </properties>
-  </object>
- </objectgroup>
+ <objectgroup name="Object Layer 1"/>
 </map>

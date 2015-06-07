@@ -6,8 +6,8 @@
   <property name="name" value="Ruined Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" name="upper" tilewidth="16" tileheight="16">
-  <image source="../tilesets/upper2.PNG" width="144" height="176"/>
+ <tileset firstgid="176" name="upper" tilewidth="16" tileheight="16">
+  <image source="../tilesets/upper2.PNG" width="144" height="240"/>
   <tile id="1">
    <properties>
     <property name="x" value=""/>
@@ -266,7 +266,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WQQqFMAxEc/+9B7DLXuPrvVRwIaEpTSmT6p+BByJV+5pYTSKSCCGEEDKcUrJx/pmkxln3ivaz5tUSvQ7WuuRgv5Z6jUiWGFeU3/o4Rnqi/OR+1u9kO9kF5xkZr2PuJDoez7fmHxyvfN3x2mu/7OjxS/d4L5Hx+s3+XdRB+CF7W/cMyg/576bfJYQfsoYonxKt+43us8UxFlmz3lqW+qyWqJ7sraU1R8t1FqfanDWt183uN2qNoudACCGE1DgA6Jfn0xAgAAA=
+   H4sIAAAAAAAAC+2WQQqFMAxEc/8TeQC77DW+HkMFFxKa0pQyqf4ZeCBSta+J1SQiiRBCCCHDKSUb559Japx1r2g/a14t0etgrUsO9mup14hkiXFF+a2PY6Qnyk/uZ/1OtpNdcJ6R8TrmTqLj8Xxr/sHxytcdr732y44ev3SP9xIZr9/s30UdhB+yt3XPoPyQ/276XUL4IWuI8inRut/oPlscY5E1661lqc9qierJ3lpac7RcZ3GqzVnTet3sfqPWKHoOhBBCSI0DS2LM7hAgAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

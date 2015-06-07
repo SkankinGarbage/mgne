@@ -5,7 +5,7 @@
   <property name="name" value="Plains Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="58" height="48">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3VMQqAMBAEwPz/FzYWvsFCUCs/ZURs0kZyBmdgSbsh4S4lAAAAgD4dxQnAO8Z0z9Y5ukiwv+yZ637Pm9PGmrMV2XOGyFINTdEFgvU8W5boAnxSz38aAACgxgkV+VesgCsAAA==
+   H4sIAAAAAAAAC+3VMQqAMBAEwPz/XTYWvsFCUCvfYERs0kZyBmdgSbsh4S4lAAAAgD4dxQnAO8Z0z9Y5ukiwv+yZ637Pm9PGmrMV2XOGyFINTdEFgvU8W5boAnxSz38aAACgxgnkVsQNgCsAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

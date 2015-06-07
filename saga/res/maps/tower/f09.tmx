@@ -6,7 +6,7 @@
   <property name="name" value="Floor 9"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="51" height="35">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YMQ6AIBBEUQ7oCTy82qmdllo5F8BkA4Ex/pf8hobtNpASIoZK5w7GSucA/uVUk5rVoo6u05S51ao2taurwZ3OeyGKvQAA/r74TsnhnQIA7bFHALhw+48qmafHf9Qbt3kQ8wBiy0kU5BsAAA==
+   H4sIAAAAAAAAC+3YsQ2AMAxEURs6oIMSNmIC9h+EW4DCECWO+E+6JtWlsmwzRJyF3jO4Cr0D+JfNzVwZlFFZvXWj9w51n5RZWZS9wl8yz4Uo5gIA5NfjnvKEPQUA6mOOAMgi2z3qS58W96ie+iDmBlZ7257kGwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -60,7 +60,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YsQkAIBAEwe8/MLVdcxFMhOdwpoKNtwoA2I3ugIdmdwAAAADAx1I/06k79TOldt8sqfi0cOQbAAA=
+   H4sIAAAAAAAAC+3YsQkAIBAEwe+/G1OrMxfBRHgOZyrYeKsAgN3oDnhodgcAAAAAfCz1M526Uz9TavfNAjacbZ3kGwAA
   </data>
  </layer>
 </map>

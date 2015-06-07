@@ -5,7 +5,7 @@
   <property name="name" value="F1 Gate"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="52" height="48">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YsQmAMBAFUMH9bZ3DPWydQNzDRrASPYzGmPeakCPFJRy/SNMAwP8MJ3uIMkN5tMHz3SNdpBO9T39Qn7d1udFLCtH7sCshU8Zg/eumC/WvZ0jUUYa8rYR5p675rzHfKIfMhPL5k8rH2wMAQL1WSKunugAnAAA=
+   H4sIAAAAAAAAC+3YOwqAMBAFQEUQ738TW8/hPWwtLSysRJf4i5lpQpYUm7C8IlUFAP8zHuwhygy9owme72/p4jrR+ww79bZe165O6SZd9D5scsiUKVj/uvlE/esZErWXIU/LYd4pa/5LzDfyITMhf/6k3uPtAQCgXAvdhPS2ACcAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -160,7 +160,7 @@
    <property name="z" value="1.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OwQkAIAwAse4/ovp0EDuE0FISuP9FAADAbCvb2ake+ehWDwAAAAAAAEADD4DrYysAJwAA
+   H4sIAAAAAAAAC+3OyQkAIBAEwfVl/gF7bBDCgFRB/7sKAAD+trrdnfTIQ3OkDwAAAAAAACDvAp7TDnEAJwAA
   </data>
  </layer>
 </map>

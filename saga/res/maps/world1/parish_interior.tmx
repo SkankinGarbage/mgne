@@ -5,7 +5,7 @@
   <property name="name" value="Forest Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="37" height="35">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XQQqAIBAFUO+/KYQW4QnatGnRDapjpWAgA5rVj6z+g2FAZRhwM6MU0T16Hwg1qM7ow9EXa7WZ77TIKeZkL0cZkd+gEhmtS9w1kfOwp7CvVK2vG55uIFBSL0RERLQPtTvkis14Gze/jztvcmrKfeDKHoKa3+U+8MReMNmYbSzAmug5HPl3KCX8Hf3PCje5XFw8FAAA
+   H4sIAAAAAAAAC+3XQQqAIBAFUO9/nEJoEZ6gTZsW3aC6RAoGMqBZ/cjqPxgGVIYBNzNKEd2j94FQg+qMPhx9sVab+U6LnGJO9nKUEfkNKpHRusRdEzkPewr7StX6uuHpBgIl9UJERET7ULtDrtiMt3Hz+7jzJqem3Aeu7CGo+V3uA0/sBZON2cYCrImew5F/h1LC39H/rDiivaU8FAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -122,7 +122,7 @@
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WsQkAMAwDQe9fpM26XiBdMAJzN4BQ+VUAwEYnfeDhpg8AABA30am/mxOduqV9G8aWHrY8FAAA
+   H4sIAAAAAAAAC+3WsQkAMAwDQe+/TdpM5wXSBSMwdwMIlV8FAGx00gcebvoAAABxE536uznRqVvatwG3NEJWPBQAAA==
   </data>
  </layer>
 </map>

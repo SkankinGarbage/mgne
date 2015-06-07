@@ -6,7 +6,7 @@
   <property name="name" value="Southern Cave"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="35" height="32">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3QsQ0AIAwDsP7BxjX8y4PslKFTJSR7yZgoEQAA8I/R1LOvfJkdQ4pWU0/lFwCyAxUXDfaAEQAA
+   H4sIAAAAAAAAC+3QIQ4AIAwDwP0Dx2v4v+A9eIaYWkJyZyrbNAIAAP4xmnr2lS+zY0jRauqp/AJAdgA5HkyLgBEAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

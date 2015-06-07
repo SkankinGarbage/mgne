@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="upper" tilewidth="16" tileheight="16">
- <image source="upper2.PNG" width="144" height="208"/>
+ <image source="upper2.PNG" width="144" height="240"/>
  <tile id="1">
   <properties>
    <property name="x" value=""/>
@@ -331,6 +331,31 @@
   </properties>
  </tile>
  <tile id="106">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="113">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="114">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="115">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="122">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="124">
   <properties>
    <property name="x" value=""/>
   </properties>

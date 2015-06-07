@@ -7,7 +7,7 @@
   <property name="terrainEncounter" value="terrain_world1"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="76" height="70">
   <properties>
    <property name="z" value="0"/>
@@ -21,7 +21,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZSwrDIBAA0Nz/ENl221W2gV6hJ2hP0g/NZiBtEwwj+h7I6CYZRHTQYQAAAPhuzE4AoAH3ZzuFWLMp+f+vORpDZN1yVl/DGEo4f+ItjKGUS3YCABShBu2Hs3sf8wb1cd+0XfadIQBAr9RhtMh9Yru8J0P95uwEgDd1/nZx/7Kf/XbUOuvh7dN64whziLEP/5hW+nu/AQAAALV6AOiffkYgUwAA
+   H4sIAAAAAAAAC+3ZsQrCMBAA0BT0/7+pq6tT14K/4CyKHTyo2pKSkLy3XLK0RwjJcUkJAADgu7F0AgANOA8pXUKs2VT4/881GkNk3XJX38Mccri+42n4nEMut9IJAJCFGrQf7u59rBvUR79pu9I9QwCAXqnDaJF+Yru8J0P95tIJAC/q/O3i+eU8++2ofdbD26f9xhHmEOMY/jGtjPd+AwAAAGr1AGNHnpIgUwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

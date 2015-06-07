@@ -5,7 +5,7 @@
   <property name="name" value="Castle of Hero"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="15" height="18" opacity="0.9">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGNygH4gn0FjvVCzsGUA8k0x7SQHY7KYHOAbEx4H4BB3tpATQO5xA6WbiAOgdKgAApnoyFjgEAAA=
+   H4sIAAAAAAAAC2NgGNxgExBvprHeHVjYu4F4D5n2kgKw2U0P8BKIXwHxazraSQmgdziB0s2WAdA7VAAAY4DOBDgEAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

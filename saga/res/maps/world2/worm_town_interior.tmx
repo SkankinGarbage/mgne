@@ -5,7 +5,7 @@
   <property name="name" value="Worm's Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="30" height="29">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAX0BOtIFMcHJpAgvh2HWlzi+MBMEsVB4BgQHwfiE2TYR0uzRsEoGAWjYBQMPOAdYfaGAPEkKBudpiWIBuLZUDY6PRzAYGkfgNLVQMQvyN7hHL8jAQAA2f0q6pgNAAA=
+   H4sIAAAAAAAAC2NgGAX0BBdJFMcHNpMgfguHWlzi+MAeEsVB4CUQvwLi12TYR0uzRsEoGAWjYBQMPOAdYfaGAPFWKBudpiWIBuJ9UDY6PRzAYGkfgNLVQMQvyN7hHL8jAQAAIx213JgNAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -72,7 +72,7 @@
    <property name="z" value="3.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBQMJ9A3QGZNp6K91DRrFIyCUTAKRsEoGAXDA1CzjUMKoFe7BAAZ2OnjmA0AAA==
+   H4sIAAAAAAAAC2NgGAWjYBQMJ7BxgMzaRUV7qWnWKBgFo2AUjIJRMAqGB6BmG4cUQK92CQCQis0TmA0AAA==
   </data>
  </layer>
 </map>

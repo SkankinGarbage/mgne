@@ -6,7 +6,7 @@
   <property name="name" value="Floor 2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="12" height="16">
   <properties>
    <property name="z" value="0"/>
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGBpgMwH5SSSaN5tch1ABbBpAu6kFCMUHPQEl4QkAW9Cd5gADAAA=
+   H4sIAAAAAAAAC2NgGBrgGgH5rSSat49ch1ABXB1Au6kFCMUHPQEl4QkARUMkkwADAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -50,7 +50,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYOiAPhLVTycgDwB/Vw7bAAMAAA==
+   H4sIAAAAAAAAC2NgGAWjYOiAjSSq30VAHgCJICscAAMAAA==
   </data>
  </layer>
 </map>

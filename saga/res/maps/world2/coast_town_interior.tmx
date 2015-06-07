@@ -5,7 +5,7 @@
   <property name="name" value="Wolf's Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="64" height="31">
   <properties>
    <property name="z" value="0"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YMQqAMAyF4d5/U3DRxdXZO6jH0kV0aDBgyivl/yAUCk1T0ikpAWjJUCBnb6xeS2Zvu2J/xeE8pzAZa2vunuR6oVBL///+f49a3goAAAAAaFOnLkBsVBcgUGJ+8WUV3Gmx5neR86+IXHNgLgDA4wQcypLTAB8AAA==
+   H4sIAAAAAAAAC+3YMQqAMAyF4d7/PAouurg6ewf1ErqIDg0GTHml/B+EQqFpSjolJQAtGQrk7I3Va8nsbVfsrzic5xQmY23N3ZNcLxRq6f/f/+9Ry1sBAAAAAG3q1AWIjeoCBErML76sgjst1vwucv4VkWsOzAUAeJxU9qtMAB8AAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -180,7 +180,7 @@
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YMQ4AEAxAURdwdavr2k0iDQ3vzfJba0sBAIC/tUfm7XZ76Bb35p3+BwAAAJBDXXgTeY/J1lppRN5NsrXmxgCYZV/+AB8AAA==
+   H4sIAAAAAAAAC+3YMQ4AEAxAURdw/3NYnc5uEmloeG+W31pbCgAA/K09Mm+320O3uDfv9D8AAACAHOrCm8h7TLbWSiPybpKtNTcGm47e5wAfAAA=
   </data>
  </layer>
 </map>

@@ -6,7 +6,7 @@
   <property name="name" value="Worm's Castle"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="141" source="../tilesets/upper.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="18" height="18">
   <properties>
    <property name="z" value="0"/>
@@ -48,7 +48,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBQMV6BIJXN+UMkcRkYqGUQjAADbVz3NEAUAAA==
+   H4sIAAAAAAAAC2NgGAWjYBQMV6BIJXOkGaljjgqVzKEVAABztMGbEAUAAA==
   </data>
  </layer>
 </map>
