@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="97" height="52" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="64">
+ <properties>
+  <property name="bgm" value="ffl3_town2"/>
+  <property name="name" value="City of Angels"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="97" height="52">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+1bQW4DIQx0n9BbH7EP6Lmn3PKpnCKlOfWU9q/tqkV1CJix8S4ky0iWWpYMhlnA4ORIRMeVrYQtcr9nTHpmrV/TFy9uhKdWgxxnrvwjY/OzT4Uh9Ws08OJGeGo1iDlPP3YW2pI0OCgMqV+jwVQwlBvhqdUg5rz82JfQlvQ+9KDBq2LsEG6NBq/kowG3pz/jbe0yhu4nh+hv/v8+UR/pC18zn+l3Hq+lwSlqW7PXcM1yc1mjAfclZ/PYHOh/vQsahPVsT7frG9IXPh9fKD2Pl9LgErWt2WuCZrmx0mrAfcnZPDYH+l/vggbh+Z5u1zePcVpSgxruoFlurLQaaPaC2KT1rfU4teYeGrThzu3Vc9nbgsbHnpf3Ok4e3CWbEmW593VJ0/Ql5bP0vCU3gilR1uM84PHYRHJcxp+fG3MjSGnQ437A47GJ5LiMP/9qzG1FjxpsDcg5OXXWLdnQAAdyTt6T7g77LHAODW6BnJPjsy5ydh4a4Fg7Ph0a3GJo0B49aqDd/61ntJ6443jGiyvHh/RFk8OuGSdNO55+c944R7Az8EgW8yHnzdkvTQ67RgNNO55+c944R7Az8EgW8yHnzdkvzV1ajQat7wN73R+1Y2PJ+aI56i1rMNszlft1In3OF81Rcx9Qbl6f+y6V9Yjg2wuVNbiQPueL5qi5Dyg3r881PgllPaKXNbt2r+EaX4SyHvEoGqT47m0/GBq0w6NogBoCbz7P9tYaJ4Qb+U5c6p4fwRHk89LA0hdLPtmbG/lOXOqeH30HLPcG1vfJ0hdLPtmb2wrkHUfXUJRr4BrIOx40eBJsUnANXAN5xzUaeMQuW4M0vjUaSHUGrqHRAJ0vtRrca2xqRUmDlC/SOQbhQ3yyxI+tua1ANeBxMteAx9ueGljix9bcVpTGLP5NZ3zfy+PtUNdDA/Q+Ycm7irViiZIGud90pozXHRrgQPZkaZ/V1PUcp7DuxXkrhDv12aFB2idEA5630mrAP9uDBqW+ovMV4av1ibflFZu21gAxjQYeMfyWNOgRQ4P2GBq0B7qmeWrgwf1IuNc82iNha3m0b9ErWtjQTgAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="97" height="52">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3asQ6CMBCA4fYJXF111Dd1Ni7GxzBh8glYWHkDdXR1EDRNmiIphHJtw/8llyMY6YXAlUCVAgBgujJ2ARD18ASAce7qd+88YxfSOAqPdxIeLwdn4fEuwuMBQ2y1Uhs9T7bZvwEpGnIdj9V3H+C/XXNu9rqbp3D/H+KYwNyK2AXgi/dvAAAAQFylkwEAaXLXsKTwHR7T+NYpsV4JAACM8YpdANQ7dgHwWmmlKitXsQvKRMj14Ovm3NdWrgMccwkKK5C/tgeZMD0JstoeZML0pNRdPVnC0nvRzZMlhJyT7echsw1Z9vOQ2UZeeLffdXCib1/OUpiTly6FORkAsFwfmtAoX9BOAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1"/>
+ <layer name="Tile Layer 3" width="97" height="52">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3bMQ7DIAwFUM7esVKSA5TctVk6V4AVl/Ke9CckywwMlnApAAAAwMcjISt7ZjfQ4VvPI3eKrr1d2RtzFO8g0utKbcyZ0mmbOnieVRsAAP5B9Cw942yebf/xeiuIng3NmgAAAAAAAAAA3M3frTg9O1QjOe651lR6dqhGMsP+FcCK3s49W33QTgAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="97" height="52">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3awQkAIQwEQK+I+9p/mVZwiCQSPGcKCBvyWkhrAAAAANzqfaoTrJtljuy0c/aXfuANZpkjO+2cDQAAkCG7G57Yzatld0NdEwAAAAAAAAAA7uN3q57fLYB/GTn/E53QTgAA
+  </data>
+ </layer>
+</map>
