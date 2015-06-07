@@ -22,8 +22,8 @@
 		"abil_ambush"
 	],
 	"stats" : {
-		"hp" : 126,
-		"mhp" : 126,
+		"hp" : 150,
+		"mhp" : 150,
 		"str" : 9,
 		"def" : 16,
 		"agi" : 19,

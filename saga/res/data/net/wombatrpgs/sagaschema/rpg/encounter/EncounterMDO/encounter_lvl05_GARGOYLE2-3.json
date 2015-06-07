@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl05_GARGOYLE2-3",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dem05_GARGOYLE",
+			"amount" : "1"
+		}
+	]
+}

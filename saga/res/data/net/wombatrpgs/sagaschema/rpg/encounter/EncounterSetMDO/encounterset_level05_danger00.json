@@ -1,0 +1,53 @@
+{
+	"key" : "encounterset_level05_danger00",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl05_FIREBALL",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl05_GHOUL",
+			"weight" : 48
+		},
+		{
+			"encounter" : "encounter_lvl05_HEATHEN",
+			"weight" : 48
+		},
+		{
+			"encounter" : "encounter_lvl05_KNIGHT",
+			"weight" : 48
+		},
+		{
+			"encounter" : "encounter_lvl05_VIRUS",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl05_WARTHOG",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl05_WERERAT",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl05_PSYCHOPATH3-4",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl05_GARGOYLE2-3",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl05_GARGOYLE_HORNET_HEATHEN",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl05_GHOUL_HORNET3-5",
+			"weight" : 16
+		}
+	],
+	"steps" : 42
+}

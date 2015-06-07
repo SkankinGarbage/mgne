@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl05_HEATHEN",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_brn05_HEATHEN",
+			"amount" : "1"
+		}
+	]
+}

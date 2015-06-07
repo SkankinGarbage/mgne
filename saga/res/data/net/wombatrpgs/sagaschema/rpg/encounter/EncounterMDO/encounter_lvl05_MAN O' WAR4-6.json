@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl05_MAN O' WAR4-6",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_jly05_MAN O' WAR",
+			"amount" : "4-5"
+		}
+	]
+}

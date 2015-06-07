@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl05_FIREBALL",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wsp05_FIREBALL",
+			"amount" : "1"
+		}
+	]
+}

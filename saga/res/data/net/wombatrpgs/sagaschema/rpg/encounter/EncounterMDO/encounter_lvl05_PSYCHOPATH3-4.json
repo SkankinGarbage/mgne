@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl05_PSYCHOPATH3-4",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_psi05_PSYCHOPATH",
+			"amount" : "3-4"
+		}
+	]
+}

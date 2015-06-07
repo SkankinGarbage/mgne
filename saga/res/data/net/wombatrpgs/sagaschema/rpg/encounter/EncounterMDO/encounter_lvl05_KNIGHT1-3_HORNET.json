@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl05_KNIGHT1-3_HORNET",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_skl05_KNIGHT",
+			"amount" : "1-3"
+		},
+		{
+			"enemy" : "enemy_fly05_HORNET",
+			"amount" : "1"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl05_GARGOYLE_HORNET_HEATHEN",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dem05_GARGOYLE",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_fly05_HORNET",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_brn05_HEATHEN",
+			"amount" : "1"
+		}
+	]
+}

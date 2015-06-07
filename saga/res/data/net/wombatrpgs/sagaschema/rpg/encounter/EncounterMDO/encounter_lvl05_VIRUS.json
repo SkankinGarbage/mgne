@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl05_VIRUS",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dis05_VIRUS",
+			"amount" : "1"
+		}
+	]
+}

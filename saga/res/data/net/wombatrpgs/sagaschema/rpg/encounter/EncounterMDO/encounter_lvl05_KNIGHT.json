@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl05_KNIGHT",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_skl05_KNIGHT",
+			"amount" : "1"
+		}
+	]
+}

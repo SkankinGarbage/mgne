@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl05_GHOUL",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_zom05_GHOUL",
+			"amount" : "1"
+		}
+	]
+}

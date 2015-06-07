@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl05_GHOUL1-2_MAN O' WAR_PSYCHOPATH1-2",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_zom05_GHOUL",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_jly05_MAN O' WAR",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_psi05_PSYCHOPATH",
+			"amount" : "1-2"
+		}
+	]
+}

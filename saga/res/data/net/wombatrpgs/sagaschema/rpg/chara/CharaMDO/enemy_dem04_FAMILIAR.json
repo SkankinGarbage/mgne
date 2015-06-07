@@ -19,8 +19,8 @@
 		"abil_flame"
 	],
 	"stats" : {
-		"hp" : 126,
-		"mhp" : 126,
+		"hp" : 150,
+		"mhp" : 150,
 		"str" : 16,
 		"def" : 14,
 		"agi" : 14,

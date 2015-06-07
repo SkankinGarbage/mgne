@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl05_WERERAT",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rat05_WERERAT",
+			"amount" : "1"
+		}
+	]
+}

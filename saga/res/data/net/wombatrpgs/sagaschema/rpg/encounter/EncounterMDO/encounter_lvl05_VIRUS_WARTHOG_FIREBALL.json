@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl05_VIRUS_WARTHOG_FIREBALL",
+	"subfolder" : "level05",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dis05_VIRUS",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_eph05_WARTHOG",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_wsp05_FIREBALL",
+			"amount" : "1"
+		}
+	]
+}

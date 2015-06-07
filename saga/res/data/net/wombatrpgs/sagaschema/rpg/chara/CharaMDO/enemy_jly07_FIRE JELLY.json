@@ -14,19 +14,17 @@
 	"gp" : 720,
 	"loot" : "None",
 	"equipped" : [
-		"abil_melt",
-		"abil_flame",
+		"abil_tentacle",
 		"abil_burning",
-		"abil_bother",
-		"abil_ochange",
-		"abil_xthunder",
-		"abil_xice"
+		"abil_sting",
+		"abil_venom",
+		"abil_recover"
 	],
 	"stats" : {
 		"hp" : 202,
 		"mhp" : 202,
 		"str" : 14,
-		"def" : 25,
+		"def" : 20,
 		"agi" : 24,
 		"mana" : 38,
 		"flags" : [ ]
