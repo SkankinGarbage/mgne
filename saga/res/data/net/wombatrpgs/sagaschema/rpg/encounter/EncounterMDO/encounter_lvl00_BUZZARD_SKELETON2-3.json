@@ -1,5 +1,5 @@
 {
-	"key" : "encounter_lvl00_BUZZARD",
+	"key" : "encounter_lvl00_BUZZARD_SKELETON2-3",
 	"subfolder" : "level00",
 	"name" : "",
 	"description" : "",
@@ -7,6 +7,10 @@
 		{
 			"enemy" : "enemy_brd00_BUZZARD",
 			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_skl00_SKELETON",
+			"amount" : "2-3"
 		}
 	]
 }

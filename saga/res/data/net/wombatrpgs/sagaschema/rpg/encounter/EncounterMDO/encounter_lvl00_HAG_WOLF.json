@@ -1,9 +1,13 @@
 {
-	"key" : "encounter_lvl00_WOLF",
+	"key" : "encounter_lvl00_HAG_WOLF",
 	"subfolder" : "level00",
 	"name" : "",
 	"description" : "",
 	"members" : [
+		{
+			"enemy" : "enemy_hag00_HAG",
+			"amount" : "1"
+		},
 		{
 			"enemy" : "enemy_dog00_WOLF",
 			"amount" : "1"

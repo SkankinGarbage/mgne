@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl00_WOLF_SKELETON_HAG",
+	"subfolder" : "level00",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "chara_borg",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "chara_borg",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "chara_borg",
+			"amount" : "1"
+		}
+	]
+}

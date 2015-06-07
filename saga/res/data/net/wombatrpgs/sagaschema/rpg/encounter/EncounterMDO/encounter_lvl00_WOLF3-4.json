@@ -1,12 +1,12 @@
 {
-	"key" : "encounter_lvl00_CORPSE",
+	"key" : "encounter_lvl00_WOLF3-4",
 	"subfolder" : "level00",
 	"name" : "",
 	"description" : "",
 	"members" : [
 		{
-			"enemy" : "enemy_zom00_CORPSE",
-			"amount" : "1"
+			"enemy" : "enemy_dog00_WOLF",
+			"amount" : ""
 		}
 	]
 }

@@ -1,11 +1,15 @@
 {
-	"key" : "encounter_lvl00_WATCHER",
+	"key" : "encounter_lvl00_WATCHER_BUZZARD",
 	"subfolder" : "level00",
 	"name" : "",
 	"description" : "",
 	"members" : [
 		{
 			"enemy" : "enemy_wrd00_WATCHER",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_brd00_BUZZARD",
 			"amount" : "1"
 		}
 	]

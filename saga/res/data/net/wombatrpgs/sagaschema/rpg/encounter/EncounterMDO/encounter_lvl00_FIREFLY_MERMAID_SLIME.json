@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl00_FIREFLY_MERMAID_SLIME",
+	"subfolder" : "level00",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_arm00_FIREFLY",
+			"amount" : ""
+		},
+		{
+			"enemy" : "enemy_tmp00_MERMAID",
+			"amount" : ""
+		},
+		{
+			"enemy" : "enemy_goo00_SLIME",
+			"amount" : ""
+		}
+	]
+}

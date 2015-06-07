@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl00_WEASEL1-2_SPRITE1-2_GOBLIN1-2",
+	"subfolder" : "level00",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wsl00_WEASEL",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_elf00_SPRITE",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_gob00_GOBLIN",
+			"amount" : "1-2"
+		}
+	]
+}

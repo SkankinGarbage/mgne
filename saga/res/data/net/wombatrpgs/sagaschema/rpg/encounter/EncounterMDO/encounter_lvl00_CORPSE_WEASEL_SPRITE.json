@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl00_CORPSE_WEASEL_SPRITE",
+	"subfolder" : "level00",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_zom00_CORPSE",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_wsl00_WEASEL",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_elf00_SPRITE",
+			"amount" : "1"
+		}
+	]
+}

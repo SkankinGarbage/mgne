@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl00_WOLF_ROACH_BUZZARD",
+	"subfolder" : "level00",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dog00_WOLF",
+			"amount" : ""
+		},
+		{
+			"enemy" : "enemy_fly00_ROACH",
+			"amount" : ""
+		},
+		{
+			"enemy" : "enemy_brd00_BUZZARD",
+			"amount" : ""
+		}
+	]
+}
