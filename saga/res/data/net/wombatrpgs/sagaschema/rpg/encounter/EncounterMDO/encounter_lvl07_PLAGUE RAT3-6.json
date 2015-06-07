@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl07_PLAGUE RAT3-6",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rat07_PLAGUE RAT",
+			"amount" : "3-6"
+		}
+	]
+}

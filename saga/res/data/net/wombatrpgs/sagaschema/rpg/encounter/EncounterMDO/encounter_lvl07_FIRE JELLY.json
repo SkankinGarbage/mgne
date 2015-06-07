@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl07_FIRE JELLY",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_jly07_FIRE JELLY",
+			"amount" : "1"
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+	"key" : "encounter_lvl07_SPECTER2-3_FIRE JELLY_PHAGE",
+	"key" : "encounter_lvl07_SPECTER2-3_FIRE JELLY_PHAGE",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_gst07_SPECTER",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_jly07_FIRE JELLY",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_dis07_PHAGE",
+			"amount" : "1"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl07_WARRIOR",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_skl07_WARRIOR",
+			"amount" : "1"
+		}
+	]
+}

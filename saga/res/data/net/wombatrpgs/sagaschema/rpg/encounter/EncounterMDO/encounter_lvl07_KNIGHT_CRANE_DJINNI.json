@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl07_KNIGHT_CRANE_DJINNI",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_swd07_KNIGHT",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_pnx07_CRANE",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_brn07_DJINNI",
+			"amount" : "1"
+		}
+	]
+}

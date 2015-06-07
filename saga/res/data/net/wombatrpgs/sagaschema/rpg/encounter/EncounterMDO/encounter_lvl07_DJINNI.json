@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl07_DJINNI",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_brn07_DJINNI",
+			"amount" : "1"
+		}
+	]
+}

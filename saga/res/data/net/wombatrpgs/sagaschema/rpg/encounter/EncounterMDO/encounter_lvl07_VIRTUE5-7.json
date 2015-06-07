@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl07_VIRTUE5-7",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wrd07_VIRTUE",
+			"amount" : "4-7"
+		}
+	]
+}

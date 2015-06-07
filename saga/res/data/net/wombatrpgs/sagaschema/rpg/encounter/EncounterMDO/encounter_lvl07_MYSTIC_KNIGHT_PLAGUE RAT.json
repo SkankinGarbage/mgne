@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl07_MYSTIC_KNIGHT_PLAGUE RAT",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_psi07_MYSTIC",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_swd07_KNIGHT",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_rat07_PLAGUE RAT",
+			"amount" : "1"
+		}
+	]
+}

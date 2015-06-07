@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl07_DEMON_WARRIOR_WILL 'WISP",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dem07_DEMON",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_skl07_WARRIOR",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_wsp07_WILL 'WISP",
+			"amount" : "1"
+		}
+	]
+}

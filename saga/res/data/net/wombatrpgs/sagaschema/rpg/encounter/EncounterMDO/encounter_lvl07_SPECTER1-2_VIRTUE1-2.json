@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl07_SPECTER1-2_VIRTUE1-2",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_gst07_SPECTER",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_wrd07_VIRTUE",
+			"amount" : "1-2"
+		}
+	]
+}

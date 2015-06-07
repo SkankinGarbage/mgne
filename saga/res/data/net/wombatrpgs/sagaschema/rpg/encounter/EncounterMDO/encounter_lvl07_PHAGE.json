@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl07_PHAGE",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dis07_PHAGE",
+			"amount" : "1"
+		}
+	]
+}
