@@ -1,0 +1,13 @@
+{
+	"key" : "shop_city_weapons2",
+	"subfolder" : "world3",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_gunMagnum",
+		"wpn_grenade",
+		"wpn_ewhip",
+		"wpn_cannonRocket",
+		"wpn_saw"
+	]
+}

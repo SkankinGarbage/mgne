@@ -1,0 +1,13 @@
+{
+	"key" : "shop_city_spells",
+	"subfolder" : "world3",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"spell_fire",
+		"spell_fog",
+		"spell_prayer",
+		"spell_death",
+		"spell_wand"
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"key" : "shop_world3_potions",
+	"subfolder" : "world3",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"item_hp400",
+		"item_str24",
+		"item_str48",
+		"item_agi24",
+		"item_agi48",
+		"pot_xpotion",
+		"pot_elixir",
+		"spell_cure"
+	]
+}

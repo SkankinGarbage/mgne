@@ -3,7 +3,7 @@
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "PSI KNIFE",
+	"abilityName" : "$WPSI",
 	"itemDescription" : "Attacks with weapon damage based on user mana (tier 6)",
 	"type" : "ITEM",
 	"uses" : 50,

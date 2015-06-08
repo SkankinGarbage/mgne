@@ -1,0 +1,16 @@
+{
+	"key" : "shop_city_armor",
+	"subfolder" : "world3",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"body_silver",
+		"hand_silver",
+		"helm_silver",
+		"body_diamond",
+		"hand_diamond",
+		"helm_diamond",
+		"shield_samurai",
+		"hand_giant"
+	]
+}

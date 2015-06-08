@@ -7,7 +7,7 @@
 	"damType" : "ICE",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
-	"power" : 5,
+	"power" : 6,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",
 	"miss" : "CAN_MISS"

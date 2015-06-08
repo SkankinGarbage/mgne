@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="302">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="326">
  <properties>
   <property name="bgm" value="ffl3_town2"/>
   <property name="name" value="City of Angels"/>
@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="100" height="54">
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3asQrCMBCA4eQJXF111Dd1FhfxMQQnn6CLq2+gjq4OtmggppQYG3O98n9wXKlojtJeoJ4xAACUV0kXAFHXSADI52Jez9VNupC3deH1NoXX02ZbeL1d4fWAPubWmJn9T/b5nwGafHN/p+p6PhC3qK/T0rZzH+H3c/wmIOUgXQBaeDcIAAAAAGVUQQYA6BfOWQ1lHgT5xGbrmLEDAIzdXboAfHhIF4AkE2vMKchIk3P2flpf/3OQkebgBcal6U8u6Ffymv7kgn71G/rVsOTcz/0+5Y612EeyRn6fcsdaHCMZCK2C6DqH8eJ/IjTGuJ9rxn4OANDmCY28XF1gVAAA
+   H4sIAAAAAAAAC+3asQrCMBCA4eQJXF111Dd1FhfxMYROPkEXV99AHV0dbNFAjJRYmya5+H9wXKnYhKa9gJ5SAADEV6eeAJK6eAJAOGf1fK+uqSfyso483ibyeNJsI4+3izweMMRcKzXT42Sb/RkgyTfPd19d7wf8Fs19WurPPIT7/RDXBFKphF+/RGP+Nsh65IX1yAvrAQAA8H9qJwMA5HP7rHLpB0E4vt46euwAILxb6gngzT31BADBJlqpo5PRT8je+2lz/09ORj+VFShLW59MUK/Sa+uTCerVb6hXeQm5n9t1yhxLsfdkiew6ZY6lOHgy4Fo50XUO5eJ/IrRK3M8lYz8HAEjzAOYmQ7VgVAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -137,7 +137,7 @@
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="281" name="npc" type="Character" x="1040" y="496" width="16" height="16">
+  <object id="281" name="npc" type="Character" x="1072" y="496" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="NORTH"/>
@@ -157,7 +157,7 @@
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('The monorail connects the City of Angels to Ermengarde in the east and the power plant to the west.')"/>
+    <property name="onInteract" value="speak('The monorail connects the City of Angels to Ermengarde in the east and to the power plant to the west.')"/>
    </properties>
   </object>
   <object id="284" name="npc" type="Character" x="1104" y="384" width="16" height="16">
@@ -165,7 +165,7 @@
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('The town of Celephais in the middle of the continent. Most of the population there work in the plutonium mines.')"/>
+    <property name="onInteract" value="speak('The town of Celephais is in the middle of the continent. Everyone there works in the plutonium mines.')"/>
    </properties>
   </object>
   <object id="285" name="npc" type="Character" x="1072" y="384" width="16" height="16">
@@ -184,7 +184,7 @@
     <property name="onInteract" value="speak('With the push for nuclear power, the coal mines in the northwest are abandoned now.')"/>
    </properties>
   </object>
-  <object id="287" name="lucifer" type="Character" x="224" y="592" width="16" height="16">
+  <object id="287" name="lucifer" type="Character" x="224" y="576" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lucifer"/>
     <property name="onInteract" value="play('world3/lucifer02.lua')"/>
@@ -202,7 +202,7 @@
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('The prince is a very learned man. Many of the innovations in the city are thanks to him, and he founded the research base.')"/>
+    <property name="onInteract" value="speak('The prince is a very learned man. Many of the innovations in the city are thanks to him.')"/>
    </properties>
   </object>
   <object id="290" name="npc" type="Character" x="368" y="672" width="16" height="16">
@@ -210,7 +210,7 @@
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="WEST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('I\m researching Babel. If we could only get at the power source at Babel\'s core, we wouldn\'t need to mine for coal or plutonium.')"/>
+    <property name="onInteract" value="speak('I\'m researching Babel. If we could only get at the power source at Babel\'s core, we wouldn\'t need to mine for coal or plutonium.')"/>
    </properties>
   </object>
   <object id="291" name="npc" type="Character" x="192" y="672" width="16" height="16">
@@ -284,13 +284,162 @@
     <property name="collectable" value="stone_air"/>
    </properties>
   </object>
+  <object id="302" name="shop" type="Character" x="784" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_world3_potions')"/>
+   </properties>
+  </object>
+  <object id="303" name="shop" type="Character" x="720" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_city_weapons1')"/>
+   </properties>
+  </object>
+  <object id="304" name="shop" type="Character" x="704" y="768" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="shop('shop_city_weapons2')"/>
+   </properties>
+  </object>
+  <object id="305" name="shop" type="Character" x="656" y="768" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="shop('shop_city_armor')"/>
+   </properties>
+  </object>
+  <object id="306" name="shop" type="Character" x="704" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="shop('shop_city_spells')"/>
+   </properties>
+  </object>
+  <object id="307" name="room" type="Ceiling" x="1424" y="432">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 16,64 80,64 80,0"/>
+  </object>
+  <object id="309" name="chest" type="Chest" x="1200" y="736" width="16" height="16">
+   <properties>
+    <property name="item" value="spell_prayer"/>
+   </properties>
+  </object>
+  <object id="310" name="room" type="Ceiling" x="1504" y="432">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 16,64 80,64 80,0"/>
+  </object>
+  <object id="311" name="room" type="Ceiling" x="1408" y="16">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 16,64 96,64 96,0"/>
+  </object>
+  <object id="312" name="room" type="Ceiling" x="1408" y="96">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="-16,-16 -16,64 96,64 96,-16"/>
+  </object>
+  <object id="313" name="npc" type="Character" x="144" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="play('world3/train_city_gate.lua')"/>
+   </properties>
+  </object>
+  <object id="314" name="npc" type="Character" x="320" y="144" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="play('world3/train_city_ermengarde.lua')"/>
+   </properties>
+  </object>
+  <object id="315" name="npc" type="Character" x="176" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('As a special guest of the prince, you may ride the monorail for free.')"/>
+   </properties>
+  </object>
+  <object id="316" name="npc" type="Character" x="48" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The monorail is wonderful! I can visit the power plant in less than a day\'s journey.')"/>
+   </properties>
+  </object>
+  <object id="317" name="npc" type="Character" x="304" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The monorail is relatively new. When construction finished last year, work began on the gate machine.')"/>
+   </properties>
+  </object>
+  <object id="318" name="npc" type="Character" x="400" y="128" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Energy from the power plant keeps the monorail going. Without power, all of our progress these past years would be useless.')"/>
+   </properties>
+  </object>
+  <object id="319" name="npc" type="Character" x="240" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="EAST"/>
+    <property name="onInteract" value="speak('Security is important! In the past, saboteurs have threatened to blow up the monorail.')"/>
+   </properties>
+  </object>
+  <object id="320" name="room" type="Ceiling" x="112" y="16">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 16,80 192,80 192,0"/>
+  </object>
+  <object id="321" name="trigger" type="Event" x="384" y="96" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="sceneSwitch('upper_floor', true)"/>
+   </properties>
+  </object>
+  <object id="323" name="trigger" type="Event" x="384" y="112" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="sceneSwitch('upper_floor', false)"/>
+   </properties>
+  </object>
+  <object id="324" name="block" type="Event" x="336" y="128" width="16" height="32">
+   <properties>
+    <property name="hide" value="return getSwitch('upper_floor')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="325" name="block" type="Event" x="352" y="128" width="16" height="32">
+   <properties>
+    <property name="hide" value="return not getSwitch('upper_floor')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="100" height="54">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3bQQqEMAwF0J59lsLoAax3HcGtIG3txOJ78FeFkC66iJiUAAAAgGifgHCYohuodNV367161P/umQuzJO+jl3VPLswW0mm53HgeXR8AADh39ww/6jeBp5gfXu9t7p5FzbYAAAAAAAAAABDPf2591Oy5tWT5z7WGVbPn1pJRduQAAGr9APfTP71gVAAA
+   H4sIAAAAAAAAC+3aMQrDMAwFUJ+9Y6DpAeLeNYGupcV2jBL7PfhTQMhDBgmlBAAAAER7BISPJbqBSv/6bn1Xj/rPI2thXsn/0ct2JBfmHdJpudz4Pbo+AADw3dkz/F13AlexXrzebM6eRc22AAAAzKT2noE+Rr5nAAAAAIBS7tz6qNkLt8RO+beavXBL7JQBgNHt4LYhBmBUAAA=
   </data>
  </layer>
  <layer name="Tile Layer 4" width="100" height="54">

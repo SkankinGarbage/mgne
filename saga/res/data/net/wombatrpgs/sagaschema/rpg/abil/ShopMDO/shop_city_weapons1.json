@@ -1,0 +1,15 @@
+{
+	"key" : "shop_city_weapons1",
+	"subfolder" : "world3",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordBattle",
+		"wpn_swordFire",
+		"wpn_swordIce",
+		"wpn_swordThunder",
+		"wpn_swordRevenge",
+		"wpn_swordSilver",
+		"wpn_saber"
+	]
+}

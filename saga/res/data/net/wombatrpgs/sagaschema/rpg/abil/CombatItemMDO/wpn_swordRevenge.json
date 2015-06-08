@@ -7,7 +7,7 @@
 	"itemDescription" : "Retaliates with weapon damage (tier 5)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 2400,
+	"cost" : 1990,
 	"anim" : "banim_defend",
 	"equip" : [ ],
 	"warhead" : {

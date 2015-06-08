@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="53" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="80">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="53" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="100">
  <properties>
   <property name="bgm" value="ffl3_town2"/>
   <property name="name" value="City of Angels"/>
@@ -69,6 +69,155 @@
   <object id="79" name="tele" type="Event" x="944" y="448" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_right')"/>
+   </properties>
+  </object>
+  <object id="80" name="npc" type="Character" x="464" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('No city is a beautiful as the City of Angels!')"/>
+   </properties>
+  </object>
+  <object id="81" name="npc" type="Character" x="912" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The shops here are best in class.')"/>
+   </properties>
+  </object>
+  <object id="82" name="npc" type="Character" x="624" y="640" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('This is the prince\'s palace.')"/>
+   </properties>
+  </object>
+  <object id="83" name="npc" type="Character" x="304" y="640" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The prince is the patrician of the city. He took control a long time ago and we\'ve had good times since.')"/>
+   </properties>
+  </object>
+  <object id="84" name="npc" type="Character" x="368" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I was trying to visit family in Ermengarde when a saboteur\'s threat delayed the train. It was terrifying!')"/>
+   </properties>
+  </object>
+  <object id="85" name="npc" type="Character" x="432" y="656" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I\'m visiting from Celephais... There are a lot more humans here than I\'m used to.')"/>
+   </properties>
+  </object>
+  <object id="86" name="npc" type="Character" x="496" y="448" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Are you from Babel? It seems like the entire city is helping the prince in his quest to open the gate.')"/>
+   </properties>
+  </object>
+  <object id="87" name="npc" type="Character" x="640" y="448" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The City of Angels takes a huge amount of energy to run. Under the prince\'s guidance we\'ve adopted nuclear power.')"/>
+   </properties>
+  </object>
+  <object id="88" name="npc" type="Character" x="704" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I\'m studying to become a scientist. It\'s in vogue!')"/>
+   </properties>
+  </object>
+  <object id="89" name="npc" type="Character" x="784" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The chief scientist is a beautiful woman who hails from beyond Babel.')"/>
+   </properties>
+  </object>
+  <object id="90" name="npc" type="Character" x="768" y="512" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Before the prince assumed office, this city was as small as Ermengarde across the strait.')"/>
+   </properties>
+  </object>
+  <object id="91" name="npc" type="Character" x="800" y="624" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('When we finally tap the power source in Babel, perhaps we\'ll have the energy to civilize the rest of this world.')"/>
+   </properties>
+  </object>
+  <object id="92" name="npc" type="Character" x="768" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I\'ve heard the prince is a master. It\'s a term for for the greatest wisemen and scholars who lived in Babel.')"/>
+   </properties>
+  </object>
+  <object id="93" name="npc" type="Character" x="640" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Some malcontents attacked a convoy from the mines recently. Who wouldn\'t be happy with this paradise?')"/>
+   </properties>
+  </object>
+  <object id="94" name="npc" type="Character" x="624" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Celephais is a dirty city. I\'m glad I moved here.')"/>
+   </properties>
+  </object>
+  <object id="95" name="npc" type="Character" x="448" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Many robots like me were created at the research base. It\'s good to be alive!')"/>
+   </properties>
+  </object>
+  <object id="97" name="npc" type="Character" x="576" y="688" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('Guard', 'The gate is closed. Why would anyone want to leave the City of Angels?')"/>
+   </properties>
+  </object>
+  <object id="98" name="npc" type="Character" x="608" y="688" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('Guard', 'The gate is closed. Why would anyone want to leave the City of Angels?')"/>
+   </properties>
+  </object>
+  <object id="99" name="npc" type="Character" x="592" y="688" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('Guard', 'The gate is closed. Why would anyone want to leave the City of Angels?')"/>
    </properties>
   </object>
  </objectgroup>

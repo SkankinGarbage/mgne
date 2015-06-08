@@ -3,11 +3,11 @@
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$ETHUNDER",
+	"abilityName" : "$EELECTRIC",
 	"itemDescription" : "Inflicts thunder damage (tier 5)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 6000,
+	"cost" : 3900,
 	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {

@@ -1,18 +1,18 @@
 {
-	"key" : "wpn_gunMagnum",
+	"key" : "wpn_ewhip",
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$GMAGNUM",
-	"itemDescription" : "Attacks with fixed damage aimed by strength (tier 5)",
+	"abilityName" : "E-WHIP",
+	"itemDescription" : "Stuns with fixed damage aimed by agility (tier 5)",
 	"type" : "ITEM",
-	"uses" : 30,
-	"cost" : 2800,
-	"anim" : "banim_wound",
+	"uses" : 50,
+	"cost" : 6120,
+	"anim" : "banim_slash_agi",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
-		"key" : "anon_CombatItemMDO_-1821932629"
+		"key" : "anon_CombatItemMDO_475373855"
 	},
 	"tier" : 5,
 	"robostats" : {
@@ -22,7 +22,7 @@
 				"value" : 45.0
 			},
 			{
-				"stat" : "STR",
+				"stat" : "AGI",
 				"value" : 10.0
 			}
 		]

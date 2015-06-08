@@ -1,0 +1,21 @@
+{
+	"key" : "ring_bangle",
+	"subfolder" : "ring",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$VBANGLE",
+	"itemDescription" : "Increases defense by 1 and strength by 1",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 900,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_1096752775"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

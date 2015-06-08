@@ -153,7 +153,7 @@ public class SceneParser implements	Updateable,
 		parent.addUChild(this);
 		parent.pushCommandContext(commandMap);
 		parent.pushCommandListener(this);
-		runningCommands = commands.iterator();
+		runningCommands = commands.listIterator();
 		nextCommand();
 		running = true;
 		runningCount += 1;

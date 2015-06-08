@@ -1,16 +1,30 @@
 {
 	"key" : "wpn_saw",
 	"subfolder" : "weapon",
-	"name" : null,
-	"description" : null,
-	"abilityName" : null,
-	"itemDescription" : null,
-	"type" : null,
-	"uses" : null,
-	"cost" : null,
-	"anim" : null,
-	"equip" : null,
-	"warhead" : null,
-	"tier" : null,
-	"robostats" : null
+	"name" : "",
+	"description" : "",
+	"abilityName" : "SAW",
+	"itemDescription" : "Inflicts death based on user strength",
+	"type" : "ITEM",
+	"uses" : 30,
+	"cost" : 5200,
+	"anim" : "banim_saw",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-1522997502"
+	},
+	"tier" : 5,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 45.0
+			},
+			{
+				"stat" : "STR",
+				"value" : 10.0
+			}
+		]
+	}
 }

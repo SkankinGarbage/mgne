@@ -6,6 +6,7 @@
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "WEAPON",
 	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
 	"power" : 3,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",

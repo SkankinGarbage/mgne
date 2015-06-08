@@ -6,6 +6,8 @@
  */
 package net.wombatrpgs.saga.lua;
 
+import net.wombatrpgs.mgne.scenes.commands.SceneChoice;
+
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.TwoArgFunction;
 
@@ -36,6 +38,7 @@ public class SagaSceneLib extends TwoArgFunction {
 		env.set("memTele", new SceneMemoryTeleport());
 		env.set("heal", new SceneHeal());
 		env.set("damage", new SceneDamage());
+		env.set("choice", new SceneChoice());
 		
 		env.set("sagalib", library);
 		return library;

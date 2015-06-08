@@ -8,7 +8,7 @@
 	"type" : "ITEM",
 	"uses" : 30,
 	"cost" : 2450,
-	"anim" : "None",
+	"anim" : "banim_explode",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",

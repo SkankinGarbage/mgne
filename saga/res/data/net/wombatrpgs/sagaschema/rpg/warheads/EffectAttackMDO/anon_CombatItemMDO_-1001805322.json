@@ -7,7 +7,7 @@
 	"damType" : "WEAPON",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
-	"power" : 8,
+	"power" : 7,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",
 	"miss" : "CAN_MISS"

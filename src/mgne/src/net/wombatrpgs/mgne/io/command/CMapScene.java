@@ -29,6 +29,8 @@ public class CMapScene extends EasyCommandMap {
 	@Override
 	protected void initBindings() {
 		bindings.put(new InputEvent(InputButton.BUTTON_A, EventType.PRESS), InputCommand.UI_CONFIRM);
+		bindings.put(new InputEvent(InputButton.UP, EventType.PRESS), InputCommand.MOVE_UP);
+		bindings.put(new InputEvent(InputButton.DOWN, EventType.PRESS), InputCommand.MOVE_DOWN);
 	}
 
 }

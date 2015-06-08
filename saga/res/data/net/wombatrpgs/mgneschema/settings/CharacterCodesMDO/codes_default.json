@@ -87,6 +87,22 @@
 		{
 			"code" : "$U",
 			"ascii" : 230
+		},
+		{
+			"code" : "$V",
+			"ascii" : 214
+		},
+		{
+			"code" : "$W",
+			"ascii" : 215
+		},
+		{
+			"code" : "$X",
+			"ascii" : 216
+		},
+		{
+			"code" : "$Y",
+			"ascii" : 217
 		}
 	]
 }
