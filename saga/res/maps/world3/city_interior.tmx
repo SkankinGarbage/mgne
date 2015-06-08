@@ -1,42 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="97" height="52" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="64">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="280">
  <properties>
   <property name="bgm" value="ffl3_town2"/>
   <property name="name" value="City of Angels"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="97" height="52">
+ <layer name="Tile Layer 1" width="100" height="54">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
- <layer name="Tile Layer 2" width="97" height="52">
+ <layer name="Tile Layer 2" width="100" height="54">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3asQ6CMBCA4fYJXF111Dd1Ni7GxzBh8glYWHkDdXR1EDRNmiIphHJtw/8llyMY6YXAlUCVAgBgujJ2ARD18ASAce7qd+88YxfSOAqPdxIeLwdn4fEuwuMBQ2y1Uhs9T7bZvwEpGnIdj9V3H+C/XXNu9rqbp3D/H+KYwNyK2AXgi/dvAAAAQFylkwEAaXLXsKTwHR7T+NYpsV4JAACM8YpdANQ7dgHwWmmlKitXsQvKRMj14Ovm3NdWrgMccwkKK5C/tgeZMD0JstoeZML0pNRdPVnC0nvRzZMlhJyT7echsw1Z9vOQ2UZeeLffdXCib1/OUpiTly6FORkAsFwfmtAoX9BOAAA=
+   H4sIAAAAAAAAC+3asQrCMBCA4fQJXF111Dd1FhfxMYROPkGXrn0DdXR1sEUDMaXE0pjz4v/BcUWxOdReip4xAACkV0kXAFGXQACI52ye19VVupCXbeL1donX02afeL1D4vWAKZaFMYviO9nlPgdo8sn3e6yh6wNhq/Z9Whf9PIX/+hjnBKSU0gWgh98GAQAAACCNyssAAP38OatfmQdBPKHZOmbsAAC5u0kXgDd36QIwyqwwpnZyLV2QQjFn7+ft59A4uYlwzn9TOoG8dH3Khu1bkNP1KRu2b2Ec+tVvibmfu/dV9liLYyBr5N5X2WMtToEM+DZeDD2GfPE/ETo57ueasZ8DALR5AJN+sT5gVAAA
   </data>
  </layer>
- <objectgroup name="Object Layer 1"/>
- <layer name="Tile Layer 3" width="97" height="52">
+ <objectgroup name="Object Layer 1">
+  <object id="244" name="station_left" type="Target" x="64" y="336" width="16" height="16"/>
+  <object id="245" name="station_right" type="Target" x="384" y="336" width="16" height="16"/>
+  <object id="246" name="house" type="Target" x="1520" y="160" width="16" height="16"/>
+  <object id="247" name="inn_right" type="Target" x="1168" y="176" width="16" height="16"/>
+  <object id="248" name="inn_left" type="Target" x="1040" y="176" width="16" height="16"/>
+  <object id="249" name="store_left" type="Target" x="656" y="176" width="16" height="16"/>
+  <object id="250" name="store_right" type="Target" x="784" y="176" width="16" height="16"/>
+  <object id="251" name="palace" type="Target" x="224" y="736" width="16" height="16"/>
+  <object id="252" name="store_f1_up" type="Target" x="672" y="80" width="16" height="16"/>
+  <object id="253" name="store_f2_down" type="Target" x="640" y="416" width="16" height="16"/>
+  <object id="254" name="store_f2_up" type="Target" x="800" y="416" width="16" height="16"/>
+  <object id="255" name="store_f3_down" type="Target" x="784" y="720" width="16" height="16"/>
+  <object id="256" name="inn_f3_down" type="Target" x="1040" y="720" width="16" height="16"/>
+  <object id="257" name="inn_f2_up" type="Target" x="1024" y="416" width="16" height="16"/>
+  <object id="258" name="inn_f2_down" type="Target" x="1184" y="416" width="16" height="16"/>
+  <object id="259" name="inn_f1_up" type="Target" x="1184" y="80" width="16" height="16"/>
+  <object id="260" name="house_up" type="Target" x="1392" y="96" width="16" height="16"/>
+  <object id="261" name="house_down" type="Target" x="1392" y="416" width="16" height="16"/>
+  <object id="262" name="tele" type="Event" x="64" y="352" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city.tmx', 'station_left')"/>
+   </properties>
+  </object>
+  <object id="263" name="tele" type="Event" x="384" y="352" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city.tmx', 'station_right')"/>
+   </properties>
+  </object>
+  <object id="264" name="tele" type="Event" x="224" y="752" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city.tmx', 'palace')"/>
+   </properties>
+  </object>
+  <object id="265" name="tele" type="Event" x="656" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city.tmx', 'store_left')"/>
+   </properties>
+  </object>
+  <object id="266" name="tele" type="Event" x="784" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city.tmx', 'store_right')"/>
+   </properties>
+  </object>
+  <object id="267" name="tele" type="Event" x="1040" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city.tmx', 'inn_left')"/>
+   </properties>
+  </object>
+  <object id="268" name="tele" type="Event" x="1168" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city.tmx', 'inn_right')"/>
+   </properties>
+  </object>
+  <object id="269" name="tele" type="Event" x="1520" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city.tmx', 'house')"/>
+   </properties>
+  </object>
+  <object id="270" name="tele" type="Event" x="1392" y="80" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'house_down')"/>
+   </properties>
+  </object>
+  <object id="271" name="tele" type="Event" x="1392" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'house_up')"/>
+   </properties>
+  </object>
+  <object id="272" name="tele" type="Event" x="1184" y="64" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_f2_down')"/>
+   </properties>
+  </object>
+  <object id="273" name="tele" type="Event" x="1184" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_f1_up')"/>
+   </properties>
+  </object>
+  <object id="274" name="tele" type="Event" x="1024" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_f3_down')"/>
+   </properties>
+  </object>
+  <object id="275" name="tele" type="Event" x="1040" y="736" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_f2_up')"/>
+   </properties>
+  </object>
+  <object id="276" name="tele" type="Event" x="784" y="736" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_f2_up')"/>
+   </properties>
+  </object>
+  <object id="277" name="tele" type="Event" x="800" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_f3_down')"/>
+   </properties>
+  </object>
+  <object id="278" name="tele" type="Event" x="640" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_f1_up')"/>
+   </properties>
+  </object>
+  <object id="279" name="tele" type="Event" x="672" y="64" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_f2_down')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="100" height="54">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3bMQ7DIAwFUM7esVKSA5TctVk6V4AVl/Ke9CckywwMlnApAAAAwMcjISt7ZjfQ4VvPI3eKrr1d2RtzFO8g0utKbcyZ0mmbOnieVRsAAP5B9Cw942yebf/xeiuIng3NmgAAAAAAAAAA3M3frTg9O1QjOe651lR6dqhGMsP+FcCK3s49W33QTgAA
+   H4sIAAAAAAAAC+3bQQqEMAwF0J59lsLoAax3HcGtIG3txOJ78FeFkC66iJiUAAAAgGifgHCYohuodNV367161P/umQuzJO+jl3VPLswW0mm53HgeXR8AADh39ww/6jeBp5gfXu9t7p5FzbYAAAAAAAAAABDPf2591Oy5tWT5z7WGVbPn1pJRduQAAGr9APfTP71gVAAA
   </data>
  </layer>
- <layer name="Tile Layer 4" width="97" height="52">
+ <layer name="Tile Layer 4" width="100" height="54">
   <properties>
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3awQkAIQwEQK+I+9p/mVZwiCQSPGcKCBvyWkhrAAAAANzqfaoTrJtljuy0c/aXfuANZpkjO+2cDQAAkCG7G57Yzatld0NdEwAAAAAAAAAA7uN3q57fLYB/GTn/E53QTgAA
+   H4sIAAAAAAAAC+3aSwrAIAwFQHsIt97/mF0XFMEPTWDmAOEFV09SCgAAAADEUJ+/E6yZ5d7d6/b8kZb0PWa5d/e6PR8AACCD0100659AFKe7qG4LAAAAAAAAAADw5c4tFnduAAB9L5P5eZxgVAAA
   </data>
  </layer>
 </map>

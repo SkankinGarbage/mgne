@@ -19,6 +19,7 @@ import net.wombatrpgs.mgne.scenes.commands.ScenePlayExternal;
 import net.wombatrpgs.mgne.scenes.commands.SceneSound;
 import net.wombatrpgs.mgne.scenes.commands.SceneSpeak;
 import net.wombatrpgs.mgne.scenes.commands.SceneSwitch;
+import net.wombatrpgs.mgne.scenes.commands.SceneTargetTele;
 import net.wombatrpgs.mgne.scenes.commands.SceneTeleport;
 import net.wombatrpgs.mgne.scenes.commands.SceneTint;
 import net.wombatrpgs.mgne.scenes.commands.SceneWait;
@@ -54,6 +55,7 @@ public class SceneLib extends TwoArgFunction {
 		env.set("path", new ScenePathToTile());
 		env.set("pathEvent", new ScenePathToEvent());
 		env.set("playSound", new SceneSound());
+		env.set("targetTele", new SceneTargetTele());
 		
 		env.set("scenelib", library);
 		return library;

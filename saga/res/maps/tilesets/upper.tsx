@@ -315,6 +315,11 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="93">
+  <properties>
+   <property name="o" value=""/>
+  </properties>
+ </tile>
  <tile id="95">
   <properties>
    <property name="x" value=""/>
@@ -325,6 +330,11 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="102">
+  <properties>
+   <property name="o" value=""/>
+  </properties>
+ </tile>
  <tile id="104">
   <properties>
    <property name="x" value=""/>
@@ -333,6 +343,11 @@
  <tile id="106">
   <properties>
    <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="110">
+  <properties>
+   <property name="o" value=""/>
   </properties>
  </tile>
  <tile id="113">
@@ -351,6 +366,11 @@
   </properties>
  </tile>
  <tile id="122">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="123">
   <properties>
    <property name="x" value=""/>
   </properties>

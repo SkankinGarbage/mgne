@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="53" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="64">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="53" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="80">
  <properties>
   <property name="bgm" value="ffl3_town2"/>
   <property name="name" value="City of Angels"/>
@@ -22,5 +22,54 @@
    H4sIAAAAAAAAC+3ZS26DMBAGYLhE92mUTdIT9OLZepFtj5DHUQKqUIzx2MYeDwP8n2SZtKT88QNcp2nKndr/opHmbDCmua80Z4MxzX2lOduWHLo2/m7zasrc80twZQvVECc9jk7MtcQ4OnflkllTYudztU/KtVKzhepSr+bz7HgmnM89jkLuVrZHQjZtvjL7J/d9Sxr6SeM6RHO2gVS+NbWDtoyas4EO16UDCPt1CvUzmxFJth17uufcIq9ta5lr7nOjtC//Iq9tRjhbTZqzSeDqK/ee7M4x3z07Nte2Po5Cc2xgcsJU5usLzX0Vy6Ytb4rQ+shnLc+1VzPtp5Q9JA4m8nt772jNe0h74Nvv0rIHpjkb5LsSx/BhiOO9WnKcUONVItOc72xM1STp16aOe3M+Twrq73GsVan1sMT6XaqdfErHtcQzesn26Rmey1bH3U4QJznXSrn3MOr/frvmvHYoy8DwXrY6zDUAAKjh2E4LjP200wIAAAC83pxOKrR0PAAA
   </data>
  </layer>
- <objectgroup name="Object Layer 1"/>
+ <objectgroup name="Object Layer 1">
+  <object id="64" name="tele" type="Event" x="480" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'station_left')"/>
+   </properties>
+  </object>
+  <object id="65" name="tele" type="Event" x="704" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'station_right')"/>
+   </properties>
+  </object>
+  <object id="66" name="station_left" type="Target" x="480" y="192" width="16" height="16"/>
+  <object id="67" name="station_right" type="Target" x="704" y="192" width="16" height="16"/>
+  <object id="68" name="inn_right" type="Target" x="320" y="464" width="16" height="16"/>
+  <object id="69" name="inn_left" type="Target" x="240" y="464" width="16" height="16"/>
+  <object id="70" name="palace" type="Target" x="592" y="576" width="16" height="16"/>
+  <object id="71" name="store_left" type="Target" x="864" y="464" width="16" height="16"/>
+  <object id="72" name="store_right" type="Target" x="944" y="464" width="16" height="16"/>
+  <object id="73" name="house" type="Target" x="400" y="400" width="16" height="16"/>
+  <object id="74" name="tele" type="Event" x="400" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'house')"/>
+   </properties>
+  </object>
+  <object id="75" name="tele" type="Event" x="592" y="560" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'palace')"/>
+   </properties>
+  </object>
+  <object id="76" name="tele" type="Event" x="320" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_right')"/>
+   </properties>
+  </object>
+  <object id="77" name="tele" type="Event" x="240" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_left')"/>
+   </properties>
+  </object>
+  <object id="78" name="tele" type="Event" x="864" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_left')"/>
+   </properties>
+  </object>
+  <object id="79" name="tele" type="Event" x="944" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_right')"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
