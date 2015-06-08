@@ -1,0 +1,21 @@
+{
+	"key" : "item_cross",
+	"subfolder" : "potions",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "CROSS",
+	"itemDescription" : "Cures curse",
+	"type" : "ITEM",
+	"uses" : 1,
+	"cost" : 320,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_-644081345"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="280">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="302">
  <properties>
   <property name="bgm" value="ffl3_town2"/>
   <property name="name" value="City of Angels"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3asQrCMBCA4fQJXF111Dd1FhfxMYROPkGXrn0DdXR1sEUDMaXE0pjz4v/BcUWxOdReip4xAACkV0kXAFGXQACI52ye19VVupCXbeL1donX02afeL1D4vWAKZaFMYviO9nlPgdo8sn3e6yh6wNhq/Z9Whf9PIX/+hjnBKSU0gWgh98GAQAAACCNyssAAP38OatfmQdBPKHZOmbsAAC5u0kXgDd36QIwyqwwpnZyLV2QQjFn7+ft59A4uYlwzn9TOoG8dH3Khu1bkNP1KRu2b2Ec+tVvibmfu/dV9liLYyBr5N5X2WMtToEM+DZeDD2GfPE/ETo57ueasZ8DALR5AJN+sT5gVAAA
+   H4sIAAAAAAAAC+3asQrCMBCA4eQJXF111Dd1FhfxMQQnn6CLq2+gjq4OtmggppQYG3O98n9wXKlojtJeoJ4xAACUV0kXAFHXSADI52Jez9VNupC3deH1NoXX02ZbeL1d4fWAPubWmJn9T/b5nwGafHN/p+p6PhC3qK/T0rZzH+H3c/wmIOUgXQBaeDcIAAAAAGVUQQYA6BfOWQ1lHgT5xGbrmLEDAIzdXboAfHhIF4AkE2vMKchIk3P2flpf/3OQkebgBcal6U8u6Ffymv7kgn71G/rVsOTcz/0+5Y612EeyRn6fcsdaHCMZCK2C6DqH8eJ/IjTGuJ9rxn4OANDmCY28XF1gVAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -129,6 +129,159 @@
   <object id="279" name="tele" type="Event" x="672" y="64" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_f2_down')"/>
+   </properties>
+  </object>
+  <object id="280" name="inn" type="Character" x="1040" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onInteract" value="inn()"/>
+   </properties>
+  </object>
+  <object id="281" name="npc" type="Character" x="1040" y="496" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="play('world3/barkeep.lua')"/>
+   </properties>
+  </object>
+  <object id="282" name="npc" type="Character" x="1104" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The machine that opens the gates was developed at the research base on an island south of here.')"/>
+   </properties>
+  </object>
+  <object id="283" name="npc" type="Character" x="1056" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The monorail connects the City of Angels to Ermengarde in the east and the power plant to the west.')"/>
+   </properties>
+  </object>
+  <object id="284" name="npc" type="Character" x="1104" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The town of Celephais in the middle of the continent. Most of the population there work in the plutonium mines.')"/>
+   </properties>
+  </object>
+  <object id="285" name="npc" type="Character" x="1072" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('A cave network connects Ermengarde to the continent, but nowadays everyone just takes the monorail.')"/>
+   </properties>
+  </object>
+  <object id="286" name="npc" type="Character" x="1152" y="448" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('With the push for nuclear power, the coal mines in the northwest are abandoned now.')"/>
+   </properties>
+  </object>
+  <object id="287" name="lucifer" type="Character" x="224" y="592" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_lucifer"/>
+    <property name="onInteract" value="play('world3/lucifer02.lua')"/>
+   </properties>
+  </object>
+  <object id="288" name="room" type="Ceiling" x="144" y="512">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 16,128 160,128 160,0"/>
+  </object>
+  <object id="289" name="npc" type="Character" x="400" y="624" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The prince is a very learned man. Many of the innovations in the city are thanks to him, and he founded the research base.')"/>
+   </properties>
+  </object>
+  <object id="290" name="npc" type="Character" x="368" y="672" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I\m researching Babel. If we could only get at the power source at Babel\'s core, we wouldn\'t need to mine for coal or plutonium.')"/>
+   </properties>
+  </object>
+  <object id="291" name="npc" type="Character" x="192" y="672" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Guard', 'Watch your step.')"/>
+   </properties>
+  </object>
+  <object id="292" name="npc" type="Character" x="256" y="672" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Guard', 'I have my eye on you.')"/>
+   </properties>
+  </object>
+  <object id="293" name="npc" type="Character" x="272" y="672" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Guard', 'The palace is very secure.')"/>
+   </properties>
+  </object>
+  <object id="294" name="npc" type="Character" x="176" y="672" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Guard', 'Don\'t try anything fishy.')"/>
+   </properties>
+  </object>
+  <object id="295" name="room" type="Ceiling" x="304" y="544">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 16,192 144,192 144,0"/>
+  </object>
+  <object id="297" name="npc" type="Character" x="48" y="672" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('No one really remembers where the prince comes from, but he\'s brought wealth to the city.')"/>
+   </properties>
+  </object>
+  <object id="298" name="npc" type="Character" x="80" y="672" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Even if the prince is a \'master,\' why should we care?')"/>
+   </properties>
+  </object>
+  <object id="299" name="npc" type="Character" x="64" y="624" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I don\'t know why we have to open the gate to Babel, but I trust the prince will make the right decisions for the city.')"/>
+   </properties>
+  </object>
+  <object id="300" name="room" type="Ceiling" x="0" y="544">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 16,192 144,192 144,0"/>
+  </object>
+  <object id="301" name="chest" type="Chest" x="1488" y="464" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_air"/>
    </properties>
   </object>
  </objectgroup>
