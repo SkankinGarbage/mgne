@@ -21,7 +21,7 @@ import org.luaj.vm2.lib.VarArgFunction;
 
 /**
  * Oh god, A* pathfinding to another event! Even worse!
- * Usage: {@code path(<event> or <eventname>, <other> or <othername>, [wait])}
+ * Usage: {@code path(<event> or <eventname>, <other> or <othername>, [wait=true])}
  */
 public class ScenePathToEvent extends VarArgFunction {
 	

@@ -202,7 +202,7 @@
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('The prince is a very learned man. Many of the innovations in the city are thanks to him.')"/>
+    <property name="onInteract" value="speak('The prince is a very learned man. Many of the innovations in the city are thanks to his majesty.')"/>
    </properties>
   </object>
   <object id="290" name="npc" type="Character" x="368" y="672" width="16" height="16">
@@ -253,7 +253,7 @@
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('No one really remembers where the prince comes from, but he\'s brought wealth to the city.')"/>
+    <property name="onInteract" value="speak('No one really remembers where his majesty comes from, but he\'s brought wealth to the city.')"/>
    </properties>
   </object>
   <object id="298" name="npc" type="Character" x="80" y="672" width="16" height="16">
@@ -261,7 +261,7 @@
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Even if the prince is a \'master,\' why should we care?')"/>
+    <property name="onInteract" value="speak('Even if his majesty is a \'master,\' why should we care?')"/>
    </properties>
   </object>
   <object id="299" name="npc" type="Character" x="64" y="624" width="16" height="16">
@@ -370,7 +370,7 @@
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="speak('As a special guest of the prince, you may ride the monorail for free.')"/>
+    <property name="onInteract" value="speak('As a special guest of his majesty, you may ride the monorail for free.')"/>
    </properties>
   </object>
   <object id="316" name="npc" type="Character" x="48" y="256" width="16" height="16">

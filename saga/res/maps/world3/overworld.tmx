@@ -27,7 +27,7 @@
  <objectgroup name="Object Layer 1">
   <object id="52" name="Gate" type="Event" x="640" y="400" width="16" height="32">
    <properties>
-    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+    <property name="onCollide" value="teleport('world3/gate.tmx', 33, 36, 'NORTH')"/>
    </properties>
   </object>
   <object id="53" name="Plutonium Mines" type="Event" x="512" y="224" width="16" height="16">

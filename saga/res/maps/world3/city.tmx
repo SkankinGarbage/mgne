@@ -100,7 +100,7 @@
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="NORTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('The prince is the patrician of the city. He took control a long time ago and we\'ve had good times since.')"/>
+    <property name="onInteract" value="speak('The prince is the patrician of the city. His majesty took control a long time ago and we\'ve had good times since.')"/>
    </properties>
   </object>
   <object id="84" name="npc" type="Character" x="368" y="480" width="16" height="16">
@@ -156,7 +156,7 @@
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="EAST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Before the prince assumed office, this city was as small as Ermengarde across the strait.')"/>
+    <property name="onInteract" value="speak('Before his majesty assumed office, this city was as small as Ermengarde across the strait.')"/>
    </properties>
   </object>
   <object id="91" name="npc" type="Character" x="800" y="624" width="16" height="16">
