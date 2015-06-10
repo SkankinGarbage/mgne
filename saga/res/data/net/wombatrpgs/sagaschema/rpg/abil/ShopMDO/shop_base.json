@@ -1,0 +1,17 @@
+{
+	"key" : "shop_base",
+	"subfolder" : "world3",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordIce",
+		"wpn_swordThunder",
+		"wpn_saber",
+		"wpn_ewhip",
+		"spell_fire",
+		"body_silver",
+		"helm_silver",
+		"shield_silver",
+		"shield_dragon"
+	]
+}

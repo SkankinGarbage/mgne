@@ -37,7 +37,7 @@
   </object>
   <object id="54" name="Worker's Village" type="Event" x="752" y="480" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world3/celephais.tmx', 20, 10)"/>
+    <property name="onCollide" value="teleport('world3/celephais.tmx', 20, 10, 'SOUTH')"/>
    </properties>
   </object>
   <object id="55" name="Island Ruins" type="Event" x="832" y="768" width="16" height="16">
@@ -57,7 +57,7 @@
   </object>
   <object id="58" name="Rebel Base" type="Event" x="448" y="736" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+    <property name="onCollide" value="teleport('world3/base.tmx', 13, 18, 'EAST')"/>
    </properties>
   </object>
   <object id="59" name="Island Caves" type="Event" x="848" y="336" width="16" height="16">

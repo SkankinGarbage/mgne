@@ -1,0 +1,21 @@
+{
+	"key" : "shield_dragon",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$BDRAGON",
+	"itemDescription" : "Grants resistance to fire, ice, thunder, and quake",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 3100,
+	"anim" : "banim_defend",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
+		"key" : "anon_CombatItemMDO_1362215143"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}
