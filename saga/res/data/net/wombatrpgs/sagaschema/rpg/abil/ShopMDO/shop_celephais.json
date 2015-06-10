@@ -1,0 +1,17 @@
+{
+	"key" : "shop_celephais",
+	"subfolder" : "world3",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordFire",
+		"wpn_bowGreat",
+		"wpn_grenade",
+		"wpn_gunMagnum",
+		"spell_ice",
+		"body_silver",
+		"hand_giant",
+		"helm_diamond",
+		"ring_bangle"
+	]
+}
