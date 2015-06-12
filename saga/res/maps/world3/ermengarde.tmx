@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="66" height="36" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="148">
+ <properties>
+  <property name="bgm" value="ffl1_town"/>
+  <property name="name" value="Ermengard"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="66" height="36">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YQU7DMBBFgyqxqMSOXbrqNbgE7Fi2LICD9AjABrgrrhRLo2Fm8sfxxAV58aSQkIn/y9ixuhmGYQOyJaD3ILWiau4SryBLx45kQe6LqBnt4a5CNo0ata8mWvaDd6yUmrXW8KA9V8ti/f8cS+pFeliSaW2iPFwzWuds5eGG0Tpn94A5iPJwy6DPtebM2teyhzHIw2fia+KbPddytPa17GEf5MHqQ8vR2tfovEDnRi0PNTlVrHVpHk5OSp7xkHhM3BMHLT149xhadm8dyQO6VkZ4sL6tUjbNg1THciN5OK+VL408WOu4lE3zINWxHL8l3hMfxMMuwAO6r85rubSOS9k0D1IdyzH3kF1c4n5SyuZZGy3Hf8mDxJJvRAsPyB6uhOeJ/HepB6lXIjxoeziaaWTHCNnDOPx2pDlG3UTuH+h75Jn37Bghe6D3Sk74+RYepDHld+jJPOeBwvuGnqcu5noI8eCZx3xM0ti37NgL6o73i9VDiAd0DkvvnHqI+A1fckzPa73CzyP7qNJervXNLMUz1toeWme3XBwST8KYD4CDM8d/gpYHcdDpdDqdTsfHD+ljTiUgJQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="66" height="36">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WzQ5EMBDA8XoBR29nPbmP066rPa6LCpI9MDTVdhL/XzIXaobBpMYAOgw2vorz+dQubbzWqIRjs5+NUcjtkutKvpBS1tbM9R3GyoXwPkqjD/nQwI48W+Lp3ub4/5N6FPscAKQizcl/7U31Goe128zUNDsL4V5qzzydsF5TD85IPfK5XuP3kAo9iIs9HAAAAAAA100j7qonICUAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="127" name="npc" type="Character" x="256" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Welcome to Ermengarde.')"/>
+   </properties>
+  </object>
+  <object id="130" name="npc" type="Character" x="288" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I wish they\'d extend monorail service this far out to the coast.')"/>
+   </properties>
+  </object>
+  <object id="131" name="npc" type="Character" x="320" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Many here work at the prison. I wonder why there always so many people in there?')"/>
+   </properties>
+  </object>
+  <object id="132" name="npc" type="Character" x="448" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('We\'re working hard to rig up powerlines to the town.')"/>
+   </properties>
+  </object>
+  <object id="133" name="npc" type="Character" x="560" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('In my grandfather\'s time, we passed in and out of Babel freely.')"/>
+   </properties>
+  </object>
+  <object id="134" name="npc" type="Character" x="416" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Be careful if you visit the caves up north. Monsters abound!')"/>
+   </properties>
+  </object>
+  <object id="135" name="npc" type="Character" x="784" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_ghost"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The first settlers here arrived by cave. Then we built a bridge from the City of Angels.')"/>
+   </properties>
+  </object>
+  <object id="136" name="npc" type="Character" x="544" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Ever since the prince founded the research base, scholars have been in high demand.')"/>
+   </properties>
+  </object>
+  <object id="137" name="npc" type="Character" x="576" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Temples used to line the coast, but they\'ve slowly been replaced with more useful facilities.')"/>
+   </properties>
+  </object>
+  <object id="138" name="npc" type="Character" x="784" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Ermengarde used to be a fishing town, but we\'ve been doing much better since industrialization.')"/>
+   </properties>
+  </object>
+  <object id="139" name="tele" type="Event" x="160" y="176" width="16" height="96">
+   <properties>
+    <property name="onCollide" value="teleport('world3/overworld.tmx', 78, 26)"/>
+   </properties>
+  </object>
+  <object id="140" name="pub" type="Target" x="720" y="304" width="16" height="16"/>
+  <object id="141" name="tele" type="Event" x="720" y="288" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/ermengarde_interior.tmx', 'pub')"/>
+   </properties>
+  </object>
+  <object id="142" name="pots" type="Target" x="640" y="288" width="16" height="16"/>
+  <object id="143" name="tele" type="Event" x="640" y="272" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/ermengarde_interior.tmx', 'pots')"/>
+   </properties>
+  </object>
+  <object id="144" name="pub" type="Target" x="464" y="304" width="16" height="16"/>
+  <object id="145" name="tele" type="Event" x="464" y="288" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/ermengarde_interior.tmx', 'weapons')"/>
+   </properties>
+  </object>
+  <object id="146" name="inn" type="Target" x="352" y="288" width="16" height="16"/>
+  <object id="147" name="tele" type="Event" x="352" y="272" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/ermengarde_interior.tmx', 'inn')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,17 @@
+{
+	"key" : "shop_ermengarde",
+	"subfolder" : "world3",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordIce",
+		"wpn_swordRevenge",
+		"wpn_ewhip",
+		"spell_fog",
+		"spell_electric",
+		"body_silver",
+		"helm_silver",
+		"shoe_hermes",
+		"hand_giant"
+	]
+}
