@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="upper" tilewidth="16" tileheight="16">
- <image source="upper2.PNG" width="144" height="240"/>
+ <image source="upper2.PNG" width="144" height="256"/>
  <tile id="1">
   <properties>
    <property name="x" value=""/>
@@ -365,6 +365,16 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="120">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="121">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
  <tile id="122">
   <properties>
    <property name="x" value=""/>
@@ -376,6 +386,64 @@
   </properties>
  </tile>
  <tile id="124">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="126">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="127">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="128">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="129">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="130">
+  <properties>
+   <property name="counter" value=""/>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="131">
+  <properties>
+   <property name="counter" value=""/>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="132">
+  <properties>
+   <property name="counter" value=""/>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="135">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="136">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="137">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="138">
   <properties>
    <property name="x" value=""/>
   </properties>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="326">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="328">
  <properties>
   <property name="bgm" value="ffl3_town2"/>
   <property name="name" value="City of Angels"/>
@@ -439,7 +439,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3aMQrDMAwFUJ+9Y6DpAeLeNYGupcV2jBL7PfhTQMhDBgmlBAAAAER7BISPJbqBSv/6bn1Xj/rPI2thXsn/0ct2JBfmHdJpudz4Pbo+AADw3dkz/F13AlexXrzebM6eRc22AAAAzKT2noE+Rr5nAAAAAIBS7tz6qNkLt8RO+beavXBL7JQBgNHt4LYhBmBUAAA=
+   H4sIAAAAAAAAC+3aMQrDMAwFUF++S6DpAeLeNYGupcV2jBL7PfhTQMhDBgmlBAAAAER7BISPJbqBSv/6bn1Xj/rPI2thXsn/0ct2JBfmHdJpudz4Pbo+AADw3dkz/F13AlexXrzebM6eRc22AAAAzKT2noE+Rr5nAAAAAIBS7tz6qNkLt8RO+beavXBL7JQBgNHtTlcwFGBUAAA=
   </data>
  </layer>
  <layer name="Tile Layer 4" width="100" height="54">

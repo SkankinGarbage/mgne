@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="35" height="31" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="135">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="35" height="31" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="136">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Celephais"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjABNsxUHDwA46umUfDhoGXgLxKyB+jUUMGQ9lgM2PQz2ORgIgFEejYBSMglEwCkbBKBj84DAan9J2DS7918g0bxSMglGAHwAAdIFubPQQAAA=
+   H4sIAAAAAAAAC2NgGAWjABNsxUHDwA46umUfDhoGjBgZGIyB2IQRUwwZD2WAzY9DPY5GAiAUR6NgFIyCUTAKRsEoGPzgMBqf0nYNLv3XyDNuFIyCUUAAAAC5nQHE9BAAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
