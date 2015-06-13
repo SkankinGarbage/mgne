@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="48" tilewidth="16" tileheight="16" nextobjectid="99">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="48" tilewidth="16" tileheight="16" nextobjectid="101">
  <properties>
   <property name="bgm" value="ffl2_apollo"/>
-  <property name="name" value="F3 Gate"/>
+  <property name="name" value="F10 Gate"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
@@ -116,6 +116,12 @@
   <object id="98" name="tele" type="Event" x="176" y="624" width="560" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 40, 26, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="99" name="door" type="Target" x="528" y="176" width="16" height="16"/>
+  <object id="100" name="tele" type="Event" x="528" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/gate_depot.tmx', 'door')"/>
    </properties>
   </object>
  </objectgroup>
