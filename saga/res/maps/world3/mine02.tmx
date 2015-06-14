@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="93" height="17" tilewidth="16" tileheight="16" nextobjectid="53">
+ <properties>
+  <property name="bgm" value="ffl3_dark"/>
+  <property name="encounter" value="encounterset_level05_danger01"/>
+  <property name="name" value="Forgotten Mines"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" name="upper" tilewidth="16" tileheight="16">
+  <image source="../tilesets/upper2.PNG" width="144" height="256"/>
+  <tile id="1">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="o" value=""/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="13">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="14">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="15">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="16">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="19">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="o" value=""/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="counter" value=""/>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="29">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="30">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="31">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="32">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="33">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="36">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="37">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="38">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="39">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="o" value=""/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="45">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="46">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="47">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="48">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="49">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="50">
+   <properties>
+    <property name="o" value=""/>
+   </properties>
+  </tile>
+  <tile id="51">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="54">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="55">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="56">
+   <properties>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="counter" value=""/>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="58">
+   <properties>
+    <property name="counter" value=""/>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+  <tile id="59">
+   <properties>
+    <property name="counter" value=""/>
+    <property name="x" value=""/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="93" height="17">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+XQwQkAIRAEQZ/mcL6M0+APM9gVBhp6YZ5CtWuMscKrXNpActyd4DqtX3AkB+nPd3Akx90MrtNqcZhaKQ5TK8VhaqU4TK0Uh6mV4jC1UhymVorD1EpxmFopDlMrxdHdy7tqq8VxmpsPbypncphaKY4f/S12pbQYAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="93" height="17">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQwfoAAAAAAAAP4GzrTJ6LQYAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="44" name="chest" type="Chest" x="736" y="96" width="16" height="16">
+   <properties>
+    <property name="item" value="spell_wand"/>
+   </properties>
+  </object>
+  <object id="45" name="chest" type="Chest" x="1104" y="208" width="16" height="16">
+   <properties>
+    <property name="item" value="ring_bangle"/>
+   </properties>
+  </object>
+  <object id="46" name="chest" type="Chest" x="1280" y="48" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_revive"/>
+   </properties>
+  </object>
+  <object id="47" name="door1" type="Target" x="192" y="224" width="16" height="16"/>
+  <object id="48" name="door2" type="Target" x="736" y="224" width="16" height="16"/>
+  <object id="49" name="door3" type="Target" x="1280" y="224" width="16" height="16"/>
+  <object id="50" name="tele" type="Event" x="192" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/mine01.tmx', 'door1')"/>
+   </properties>
+  </object>
+  <object id="51" name="tele" type="Event" x="736" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/mine01.tmx', 'door2')"/>
+   </properties>
+  </object>
+  <object id="52" name="tele" type="Event" x="1280" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/mine01.tmx', 'door3')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="93" height="17">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3PQQ0AIBADwROCVMTzQcCFBHh0xkC3VQAAAAAAd43fAVtSx3yw0ZHUkfS146RjAdKSM6O0GAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="93" height="17">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OsREAIAgAMfbfhtbpbBjASg5NFviPAAAAAADgNdk9UH76WBcaJyZ/bHYLGCu0GAAA
+  </data>
+ </layer>
+</map>

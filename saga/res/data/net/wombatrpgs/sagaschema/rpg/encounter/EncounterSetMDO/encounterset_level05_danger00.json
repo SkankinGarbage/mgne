@@ -2,7 +2,7 @@
 	"key" : "encounterset_level05_danger00",
 	"subfolder" : "level05",
 	"name" : "",
-	"description" : "",
+	"description" : "overworld",
 	"encounters" : [
 		{
 			"encounter" : "encounter_lvl05_FIREBALL",

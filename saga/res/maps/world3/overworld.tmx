@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="65">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="67">
  <properties>
   <property name="battle_bgm" value="ffl1_battle"/>
   <property name="bgm" value="ffl1_overworld2"/>
@@ -13,7 +13,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="89" height="60">
@@ -21,7 +21,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZMQqDMBQGYIXeoaOFzt5/7tq1kwfoFToXkYBYSy1qkqbfB49MwT/hEYKpKgAAAACgNPfUATJlXwCAf7HHvcdditwc6/kxB01GWdY41cNaxuMnhwhrD/sbxjbSfu/xnb5v21Et6eNY603Rx48Vc8/1UFOhf3tzfRzmjWvqsiLXlrrUAd5o6tf61nn7WEWKccbuLdc+Zrlr6gAAAPAjulH1SvlnCABAWXJ5B4McedeK55Y6AAAAAMV7AoZqWbtwUwAA
+   H4sIAAAAAAAAC+3ZMQqDMBQGYIXeoaOFzt5/7tq1kwfoFToXkUCwllrUJLXfB49MwT/hISGpKgAAAABgb+65AxTKvgAA/2KLc4+zFKU51tNjCZqCsixxqoe1xOMnhwRrD/sbxjbRfm/xnb5v26jm9HGq9ebo48eCued6qLHQv72pPg7z4hq7LMi1pi53gDea+rW+dV4/1i6l+MdurdQ+Zr5r7gAAAPAjuqh6e7kzLEm4x5m6zwEAYJ5S3sGgRN610rnlDgAAAMDuPQEej/+CcFMAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -82,7 +82,12 @@
   </object>
   <object id="63" name="Old Mine" type="Event" x="208" y="240" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+    <property name="onCollide" value="teleport('world3/mine01.tmx', 32, 37, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="65" name="block" type="Event" x="864" y="400" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>

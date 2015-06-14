@@ -2,7 +2,7 @@
 	"key" : "encounterset_level05_danger02",
 	"subfolder" : "level05",
 	"name" : "",
-	"description" : "",
+	"description" : "coal plant, power plant",
 	"encounters" : [
 		{
 			"encounter" : "encounter_lvl05_GARGOYLE_HORNET_HEATHEN",

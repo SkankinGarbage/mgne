@@ -2,7 +2,7 @@
 	"key" : "encounterset_level05_danger01",
 	"subfolder" : "level05",
 	"name" : "",
-	"description" : "",
+	"description" : "most dungeons",
 	"encounters" : [
 		{
 			"encounter" : "encounter_lvl05_GARGOYLE2-3",
