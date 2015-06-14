@@ -21,7 +21,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZMQqDMBQGYIXeoaOFzt5/7tq1kwfoFToXkYBYSy1qkqbfB49MwT/hEaJWFQAAAABQmnvqAJmyLwDAv9jj3uMuRW6O9fyYgyajLGuc6mEt4/GTQ4S1h/0NYxtpv/d4Tt+37aiW9HGs9abo48eKued6qKnQv725Pg7zxjV1WZFrS13qAG809Wt967x9rCLFOGP3lmsfs9w1dQAAAPgR3ah6pXwzBACgLLn8B4Mchfe5W9IUAAAAwBaeUjMFA3BTAAA=
+   H4sIAAAAAAAAC+3ZMQqDMBQGYIXeoaOFzt5/7tq1kwfoFToXkYBYSy1qkqbfB49MwT/hEYKpKgAAAACgNPfUATJlXwCAf7HHvcdditwc6/kxB01GWdY41cNaxuMnhwhrD/sbxjbSfu/xnb5v21Et6eNY603Rx48Vc8/1UFOhf3tzfRzmjWvqsiLXlrrUAd5o6tf61nn7WEWKccbuLdc+Zrlr6gAAAPAjulH1SvlnCABAWXJ5B4McedeK55Y6AAAAAMV7AoZqWbtwUwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -40,9 +40,9 @@
     <property name="onCollide" value="teleport('world3/celephais.tmx', 20, 10, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="55" name="Island Ruins" type="Event" x="832" y="768" width="16" height="16">
+  <object id="55" name="Island Ruins" type="Event" x="832" y="784" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+    <property name="onCollide" value="teleport('world3/ruins01.tmx', 11, 10)"/>
    </properties>
   </object>
   <object id="56" name="Lab" type="Event" x="928" y="608" width="16" height="16">
