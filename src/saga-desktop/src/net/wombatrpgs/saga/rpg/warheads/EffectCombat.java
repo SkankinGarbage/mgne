@@ -113,7 +113,7 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 					}
 				}
 				if (effect(OffenseFlag.STUNS_ON_HIT) && victim.isAlive()) {
-					if (battle.cancelAction(victim) && MGlobal.rand.nextFloat() < STUN_CHANCE) {
+					if (MGlobal.rand.nextFloat() < STUN_CHANCE && battle.cancelAction(victim)) {
 						battle.println(tab + "A stunning hit!");
 					}
 				}

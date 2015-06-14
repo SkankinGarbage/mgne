@@ -14,7 +14,7 @@
 	"gp" : 0,
 	"loot" : "None",
 	"equipped" : [
-		"item_testsword",
+		"abil_counter",
 		"item_testFireSword",
 		"item_testLegendSword",
 		"item_testShield",

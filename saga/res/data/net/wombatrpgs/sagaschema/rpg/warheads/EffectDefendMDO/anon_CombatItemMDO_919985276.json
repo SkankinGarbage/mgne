@@ -5,7 +5,9 @@
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "USER",
 	"shielding" : 0,
-	"triggerTypes" : [ ],
+	"triggerTypes" : [
+		"PHYSICAL"
+	],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
 		"key" : "anon_EffectDefendMDO_-2048125226"

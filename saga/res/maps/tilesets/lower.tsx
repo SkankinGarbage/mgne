@@ -406,11 +406,6 @@
    <property name="x" value=""/>
   </properties>
  </tile>
- <tile id="132">
-  <properties>
-   <property name="x" value=""/>
-  </properties>
- </tile>
  <tile id="133">
   <properties>
    <property name="x" value=""/>

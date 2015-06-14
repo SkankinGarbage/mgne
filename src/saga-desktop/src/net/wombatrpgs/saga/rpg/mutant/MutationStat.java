@@ -35,7 +35,7 @@ public class MutationStat extends Mutation {
 	 * @param	stat			The stat to raise
 	 */
 	public MutationStat(Chara chara, Stat stat) {
-		this(chara, stat, stat == Stat.DEF ? 1 : 2);
+		this(chara, stat, 2);
 	}
 
 	/**

@@ -23,7 +23,7 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="128" name="inn" type="Character" x="80" y="112" width="16" height="16">
+  <object id="128" name="innkeep" type="Character" x="80" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="onInteract" value="inn()"/>

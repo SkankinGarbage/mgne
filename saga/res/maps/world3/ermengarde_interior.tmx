@@ -47,7 +47,7 @@
     <property name="onCollide" value="targetTele('world3/ermengarde.tmx', 'pub')"/>
    </properties>
   </object>
-  <object id="167" name="inn" type="Character" x="80" y="112" width="16" height="16">
+  <object id="167" name="innkeep" type="Character" x="80" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="onInteract" value="inn()"/>

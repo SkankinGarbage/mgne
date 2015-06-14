@@ -26,7 +26,7 @@
  <objectgroup name="Object Layer 1">
   <object id="1" name="tele" type="Event" x="64" y="224" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f2_sideworld.tmx', 15, 16)"/>
+    <property name="onCollide" value="teleport('tower/f02_sideworld.tmx', 15, 16)"/>
    </properties>
   </object>
   <object id="2" name="npc" type="Character" x="48" y="64" width="16" height="16">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" nextobjectid="17">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="40" tilewidth="16" tileheight="16" nextobjectid="17">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level00_danger05"/>
@@ -7,20 +7,20 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="40" height="40" opacity="0.9">
+ <layer name="Tile Layer 1" width="43" height="40" opacity="0.9">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WMQ7DIAxFuUK3DpwgW7aeoPc/UjPEkoX8TZEMWNEfnliAPOwYU0splRBCSAifBA4erwQOiOPifY+7XSy38+J7j5kctZuQybF104673SpwE3a70W+uX4Ya8fxW1ojXu3oxtIj26/UuL4YW0X7Su9DZvRiuqB0dixE/NHeGH/rmMRijSL82n9beVo/rnTXKT3q9YN1ryA3Va6RfW4P6faKdrbjpde38Gf8dujdQTr35UX5WXv6t1dW9eXTfbG8FQgghz+cH7WYGUQAZAAA=
+   H4sIAAAAAAAAC+2WMQ7DMAhFfYVuHXKCbN16gt7/SM0QJIQA28MvVPrDkxdHfvkOgWOMcRBCCPkL3g0cVnk0cFjhvHjea7XLzPN18bnXrr7aU+jqaz21b7WbxfMUqt3oWu/arb4y16r6yvrnLFsPpOusf2bZeiBdpX9GmWTZ/rrudEY7rtFetGt0/rmZHcrV3rl3jtdnZ++NcJU5RPD+m5FnVPcoV1vLeo7S/l6e+jm7H/2dRv+i6N6z/QhX7+5Wa75yVtg9o/McQwghhKD4AmnsCb/gGgAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="40" height="40">
+ <layer name="Tile Layer 2" width="43" height="40">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAAAAwJcBSxPzAQAZAAA=
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ43oAAAAAAAAODHAIeUGlXgGgAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

@@ -26,7 +26,7 @@
 		},
 		{
 			"encounter" : "encounter_lvl00_SKELETON",
-			"weight" : 8
+			"weight" : 16
 		},
 		{
 			"encounter" : "encounter_lvl00_SLIME",
@@ -34,11 +34,11 @@
 		},
 		{
 			"encounter" : "encounter_lvl00_HAG_WOLF",
-			"weight" : 16
+			"weight" : 24
 		},
 		{
 			"encounter" : "encounter_lvl00_WATCHER_BUZZARD",
-			"weight" : 16
+			"weight" : 24
 		},
 		{
 			"encounter" : "encounter_lvl00_WOLF3-4",

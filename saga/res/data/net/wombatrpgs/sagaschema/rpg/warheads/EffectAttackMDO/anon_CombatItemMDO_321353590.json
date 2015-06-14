@@ -5,7 +5,10 @@
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "NONELEMENTAL",
-	"sideEffects" : [ ],
+	"sideEffects" : [
+		"DRAIN_LIFE"
+	],
+	"slayerFamiles" : [ ],
 	"power" : 5,
 	"attackStat" : "MANA",
 	"defendStat" : "MANA",

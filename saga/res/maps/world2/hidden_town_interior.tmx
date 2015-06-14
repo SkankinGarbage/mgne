@@ -104,7 +104,7 @@
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Learn enemy weaknesses and target them with elemntal magic or specialty weapons.')"/>
+    <property name="onInteract" value="speak('Learn enemy weaknesses and target them with elemental magic or specialty weapons.')"/>
    </properties>
   </object>
   <object id="60" name="npc" type="Character" x="608" y="352" width="16" height="16">

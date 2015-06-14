@@ -17,6 +17,7 @@ import net.wombatrpgs.mgne.maps.Level;
 import net.wombatrpgs.mgne.maps.TiledMapObject;
 import net.wombatrpgs.mgne.maps.events.Avatar;
 import net.wombatrpgs.mgne.maps.events.MapEvent;
+import net.wombatrpgs.mgne.scenes.SceneParser;
 import net.wombatrpgs.mgneschema.maps.EventMDO;
 import net.wombatrpgs.saga.core.SConstants;
 import net.wombatrpgs.saga.rpg.battle.Battle;
@@ -98,6 +99,9 @@ public abstract class EventEncounter extends MapEvent {
 	 * Called each time the hero finishes a step.
 	 */
 	protected final void onStep() {
+		if (SceneParser.anyRunning()) {
+			return;
+		}
 		Avatar hero = MGlobal.getHero();
 		int terrainID = MGlobal.levelManager.getActive().getTerrainAt(
 				hero.getTileX(),

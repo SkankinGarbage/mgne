@@ -140,12 +140,14 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 			}
 			return new DefendResult(blocked, new PostDefend() {
 				@Override public void onTriggerResolve(Chara victim, Intent attackIntent) {
-					if (blocked) {
-						battle.print(tab + "but");
-					}
-					battle.println(victimname + " counters by " + itemname + ".");
-					if (counterIntent.getItem() != null) {
-						counterIntent.resolve();
+					if (victim.isAlive()) {
+						if (blocked) {
+							battle.print(tab + "but");
+						}
+						battle.println(victimname + " counters by " + itemname + ".");
+						if (counterIntent.getItem() != null) {
+							counterIntent.resolve();
+						}
 					}
 				}
 			});

@@ -47,7 +47,7 @@
     <property name="onCollide" value="targetTele('world3/celephais.tmx', 'shop_right')"/>
    </properties>
   </object>
-  <object id="128" name="inn" type="Character" x="400" y="80" width="16" height="16">
+  <object id="128" name="innkeep" type="Character" x="400" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="onInteract" value="inn()"/>

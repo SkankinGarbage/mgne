@@ -31,12 +31,12 @@
   </object>
   <object id="5" name="tele" type="Event" x="320" y="368" width="48" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f2_sideworld.tmx', 22, 12)"/>
+    <property name="onCollide" value="teleport('tower/f02_sideworld.tmx', 22, 12)"/>
    </properties>
   </object>
   <object id="6" name="tele" type="Event" x="160" y="176" width="16" height="48">
    <properties>
-    <property name="onCollide" value="teleport('tower/f2_sideworld.tmx', 22, 12)"/>
+    <property name="onCollide" value="teleport('tower/f02_sideworld.tmx', 22, 12)"/>
    </properties>
   </object>
  </objectgroup>

@@ -7,7 +7,7 @@
 	"itemDescription" : "Increases defense by 5 and grants resistance to ice",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 0,
+	"cost" : 1300,
 	"anim" : "None",
 	"equip" : [
 		"ARMOR"

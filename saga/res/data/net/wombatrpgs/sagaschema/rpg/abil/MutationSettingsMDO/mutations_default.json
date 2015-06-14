@@ -185,9 +185,9 @@
 			"level" : 13
 		}
 	],
-	"mutationChance" : 20,
-	"minHealth" : 5,
-	"maxHealth" : 12,
+	"mutationChance" : 25,
+	"minHealth" : 6,
+	"maxHealth" : 13,
 	"weightHp" : 5,
 	"weightStr" : 2,
 	"weightDef" : 1,

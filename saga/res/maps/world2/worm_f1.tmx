@@ -81,15 +81,15 @@
   <object id="68" name="lever" type="Event" x="272" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_switch_a"/>
-    <property name="hide" value="return getSwitch('worm_lever')"/>
+    <property name="hide" value="return getSwitch('worm_levers')"/>
     <property name="onInteract" value="play('world2/worm_lever.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="69" name="lever" type="Event" x="288" y="416" width="16" height="16">
+  <object id="69" name="lever" type="Event" x="272" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_switch_b"/>
-    <property name="hide" value="return not getSwitch('worm_lever')"/>
+    <property name="hide" value="return not getSwitch('worm_levers')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>

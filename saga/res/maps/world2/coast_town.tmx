@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="59" height="49" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="45">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="59" height="49" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="59">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="Wolf's Town"/>
@@ -28,36 +28,6 @@
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('Welcome to our town. We are under the jurisdiction of the world wolf.')"/>
-   </properties>
-  </object>
-  <object id="23" name="tele" type="Event" x="336" y="224" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 5, 10)"/>
-   </properties>
-  </object>
-  <object id="24" name="tele" type="Event" x="320" y="368" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 33, 10)"/>
-   </properties>
-  </object>
-  <object id="25" name="tele" type="Event" x="640" y="352" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 55, 10)"/>
-   </properties>
-  </object>
-  <object id="26" name="tele" type="Event" x="464" y="528" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 43, 28)"/>
-   </properties>
-  </object>
-  <object id="27" name="tele" type="Event" x="352" y="528" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 24, 28)"/>
-   </properties>
-  </object>
-  <object id="28" name="tele" type="Event" x="240" y="528" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 5, 28)"/>
    </properties>
   </object>
   <object id="29" name="npc" type="Character" x="432" y="304" width="16" height="16">
@@ -164,11 +134,48 @@
     <property name="onCollide" value="teleport('world2/overworld.tmx', 59, 31)"/>
    </properties>
   </object>
-  <object id="44" name="tele" type="Event" x="576" y="208" width="16" height="16">
+  <object id="45" name="tele" type="Event" x="336" y="224" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/coast_town_interior.tmx', 60, 28)"/>
+    <property name="onCollide" value="targetTele('world2/coast_town_interior.tmx', 'inn')"/>
    </properties>
   </object>
+  <object id="46" name="inn" type="Target" x="336" y="240" width="16" height="16"/>
+  <object id="47" name="tele" type="Event" x="576" y="208" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world2/coast_town_interior.tmx', 'house')"/>
+   </properties>
+  </object>
+  <object id="48" name="house" type="Target" x="576" y="224" width="16" height="16"/>
+  <object id="49" name="tele" type="Event" x="640" y="352" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world2/coast_town_interior.tmx', 'mansion')"/>
+   </properties>
+  </object>
+  <object id="50" name="mansion" type="Target" x="640" y="368" width="16" height="16"/>
+  <object id="51" name="tele" type="Event" x="464" y="528" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world2/coast_town_interior.tmx', 'weapons')"/>
+   </properties>
+  </object>
+  <object id="52" name="weapons" type="Target" x="464" y="544" width="16" height="16"/>
+  <object id="53" name="tele" type="Event" x="352" y="528" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world2/coast_town_interior.tmx', 'pots')"/>
+   </properties>
+  </object>
+  <object id="54" name="pots" type="Target" x="352" y="544" width="16" height="16"/>
+  <object id="55" name="tele" type="Event" x="240" y="528" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world2/coast_town_interior.tmx', 'armor')"/>
+   </properties>
+  </object>
+  <object id="56" name="armor" type="Target" x="240" y="544" width="16" height="16"/>
+  <object id="57" name="tele" type="Event" x="320" y="368" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world2/coast_town_interior.tmx', 'pub')"/>
+   </properties>
+  </object>
+  <object id="58" name="pub" type="Target" x="320" y="384" width="16" height="16"/>
  </objectgroup>
  <layer name="Tile Layer 3" width="59" height="49">
   <properties>

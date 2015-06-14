@@ -8,7 +8,7 @@
 	"type" : "ABILITY",
 	"uses" : 20,
 	"cost" : 0,
-	"anim" : "None",
+	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",

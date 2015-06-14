@@ -79,7 +79,7 @@
   </object>
   <object id="76" name="tele" type="Event" x="128" y="272" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f9_sideworld.tmx', 27, 19, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('tower/f09_sideworld.tmx', 27, 19, 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>

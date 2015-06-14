@@ -14,7 +14,7 @@
 		},
 		{
 			"enemy" : "enemy_brd04_RAVEN",
-			"amount" : ""
+			"amount" : "1"
 		}
 	]
 }

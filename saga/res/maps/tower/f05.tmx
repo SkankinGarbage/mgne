@@ -34,6 +34,7 @@
    <properties>
     <property name="hide" value="return getSwitch('world2_done')"/>
     <property name="onInteract" value="speak('It won\'t open.')"/>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
   <object id="87" name="mem_tele" type="Event" x="64" y="416" width="16" height="16">

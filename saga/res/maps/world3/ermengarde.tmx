@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="66" height="36" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="148">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="66" height="40" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="148">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Ermengard"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="66" height="36">
+ <layer name="Tile Layer 1" width="66" height="40">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2YQU7DMBBFgyp1UYkdu3TVa3AJ2LFsWQAH6RGADXBXjBRLo2Fm8sfxxAV58aSQkIn/y9ixuhmGYQOyI6D3ILWiau4TLyBLx45kQe6LqBnt4bZCNo0ata8mWvaDd6yUmrXW8KA9V8ti/f8cS+pFeliSaW2iPGwZrXO28nDNaJ2ze8AcRHm4YdDnWnNm7WvZwxjk4SPxOfHFnms5Wvta9nAI8mD1oeVo7Wt0XqBzo5aHmpwr1ro0D2cnJc+4Tzwk7oiDlh68ewwtu7eO5AFdKyM8WN9WKZvmQapjuZE8oGtlhAdrHZeyaR6kOpbj18Rb4p14iJgX6L46r+XSOi5l0zxIdSzH3EN2cYn7SSmbZ220HP8lDxJLvhEtPCB7uBKeJvLfpR6kXonwoO3haKaRHSNkD+Pw25HmGHUTuX+g75FnPrBjhOyB3is54edbeJDGlN+hJ/OcBwrvG3qeupjrIcSDZx7zMUlj37FjL6g73i9WDyEe0DksvXPqIeI3fMkxPa/1Cj//DHgo7eVa38xSPGOt7aF1dsvFMfEojPkIOPjh9E/Q8iAOOp1Op9Pp+PgG9FEGISAlAAA=
+   H4sIAAAAAAAAC+2YQU7DMBBFgyp1UYkdu3TVa3AJ2LFsWQAH6RGADXBXjBRLo2Fm8u144oJm8aSQkIn/y9ixuhmGYQOyI6D3ILW8au4TLyBLx45kQe7zqOnt4bZBNo0Wta8mevZD6VgpLWut4UF7rpbF+v85ltTz9LAk09p4edgyeufs5eGa0TtneMAceHm4YdDnWnNm7WvZw+jk4SPxOfHFnms5Wvta9nBw8mD1oeVo7Wt0XqBzo5WHlpwb1ro0D+dCap5xn3hI3BEHPT2U7jG07KV1JA/oWunhwfq2Stk0D1Idy43kAV0rPTxY67iUTfMg1bEcvybeEu/Eg8e8QPfVeS2X1nEpm+ZBqmM55h6yi0vcT0rZStZGy/Ff8iCx5BvRwwOyh6vhaSL/XetB6hUPD9oejmYa2TFC9jAOvx1pjlE3nvsH+h555gM7Rsge6L2SE36+hwdpTPkdlmSe80DhfUPPUxdzPYR4KJnHfEzS2HfsuBTUHe8Xq4cQD+gclt459eDxG77kmJ7XeoWffwY81PZyq29mLSVjbe2hd3bLxTHxKIz5CDj44fRP0PIgDoIgCIIgCIIgaMM3CPQhMEApAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="66" height="36">
+ <layer name="Tile Layer 2" width="66" height="40">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WOw6DMAyA4fQCjD1HVw5DOTmPiXZtR7oQXhIDGKKQYKn/J3mBYIMJFsYAOnxsfBXn86md2XhOkQvHeq2Nn5DbJdeRfCFdWVsz13cYKxfCeymNd8iHBlYktzH+XWO2vz+pR7HPAb0H+2OQ0oeopDm5VJ1Ur3RYO89MTbPzLtxL4ZmnFtZr6sEeqUc+12vcD1ehB3HxDwcAAAAAwHEdyezSSCAlAAA=
+   H4sIAAAAAAAAC+3WsQ6CMBDG8foCjDyHqw+DPLliHMQVRlgsFhMHPVpryyX8f8ktcFzlAxqNAXTobPWK58WsXdk6zlULxyaDrVGYHTLLZ15Ka66tWegzzDUL6bVK657ypoEPip2rrbuZ79+flFHuc8Bkz/vxdCCHrKR98l3zp/XOAb2vPVPT3lkKv+UUOeci9GvKYImUUcz1Gt+HtZBBXvyHAwDgN1fPnqU+nx7NyMEhB4ccAADAlj0ADgPsq0ApAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

@@ -46,7 +46,7 @@
   <object id="99" name="gate" type="Event" x="224" y="176" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_gate"/>
-    <property name="onCollide" value="teleport('tower/f10.tmx', 14, 17, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world3/gate.tmx', 33, 30, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>

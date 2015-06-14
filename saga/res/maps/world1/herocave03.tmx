@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" nextobjectid="6">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="40" tilewidth="16" tileheight="16" nextobjectid="6">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level00_danger05"/>
@@ -7,20 +7,20 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="40" height="40" opacity="0.9">
+ <layer name="Tile Layer 1" width="41" height="40" opacity="0.9">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2VSwrAIAxE4z08gTsv4X277em6UQiS4o/UtJ3FgxAYM4aQeCLyAAAAADBNyBwsHtWGCW0vMXOyeFQbJ7S9JIEntCM1HGPU36x2pYbrZJc/a/2zPH+8ltbbX/ZX9moivR27QtmricXSPWjltP4mzTi/B6VuK6d5P+odIXlt5TTvx12NOi/5r9/aNac9PbK6A+DvH/4AAAC8lwuMl8DjABkAAA==
+   H4sIAAAAAAAAC+2VQQoAIQhF6x6doF2X6L6zndPNpkDCoaxxjPiLByL8/IZocM4FAAAAABxFLFwklmrjhFZCKtwklmrThFZCZvhDK/XoCVKPs9pVj34QS487/uPu80jrab5/use6e7PT3cMr1N2bSczdjV5Osz9u7undqLV7Oe070+4Pzm8vp31n3uq0ea6H9i3LuR35K2uPo31Ye4BHAAAA4Bsem1kN+qAZAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="40" height="40">
+ <layer name="Tile Layer 2" width="41" height="40">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3VoQ0AIBRDQfYfCItlLEb4JFBBuHNPVLc1AIAzvejUdtcoOrXdNYtObQFekviHmxL/cJN/AAB+tAASUe6yABkAAA==
+   H4sIAAAAAAAAC+3VoQ0AIBAEQfovCIulLEr4fMIhyIxbcfrGAAB4bxad2nasolPbjl10agvwk9SP3JT6kZv8CABAzwFJns8qoBkAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -56,12 +56,12 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="40" height="40">
+ <layer name="Tile Layer 3" width="41" height="40">
   <properties>
    <property name="z" value="1.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WMQ0AAAgEsReCf51IAAa2NjkPlwAAwE0tAwCYeAYAvjRQxd5HABkAAA==
+   H4sIAAAAAAAAC+3WMQ0AAAgEsReCf51YYIEwtMl5uAQAAG7VMACADT4DgA8aCdYtw6AZAAA=
   </data>
  </layer>
 </map>
