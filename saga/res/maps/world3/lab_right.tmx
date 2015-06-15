@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="36" tilewidth="16" tileheight="16" nextobjectid="99">
+ <properties>
+  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="encounter" value="encounterset_level05_danger01"/>
+  <property name="name" value="Research Base"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="25" height="36">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2VUQuAIAyE9bfna/nUU/lfm6RwyJC0jUQafA8yuCPWbcbctQDShdp78ZZkIzxxEmt6Y+8NWSdqB8IRR3pj7w1ZxzHUei2UOnZCjzh7r+wRZx+UPKyA7kjzmM2DQ9qD2z/SHtz+0Z6HpAfmHHMj6YE5l/bgcq71HdibxUPrv/oy5613qyfnrXfr67373/Ox5qHl8bTX44F6tXz3guWMfml5XD2o3SkQDgAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="25" height="36">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgoC8QZaS9HXJ0sGO4A2tG7DQysGFEpUfBKBgFEGAEzBPGOPAooB/AFQ8mo/FAV4ArL4zGw8CC0fwxCigB6G1AbG1BYtqSo2BwAABib0xNEA4AAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="68" name="room" type="Ceiling" x="128" y="32">
+   <properties>
+    <property name="roofID" value="130"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="-16,0 256,0 256,496 -16,496 -16,352 80,352 80,176 -16,176"/>
+  </object>
+  <object id="69" name="room" type="Ceiling" x="112" y="224">
+   <properties>
+    <property name="roofID" value="130"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 80,0 80,144 0,144"/>
+  </object>
+  <object id="84" name="npc" type="Character" x="320" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world3/scientist.lua')"/>
+   </properties>
+  </object>
+  <object id="85" name="npc" type="Character" x="320" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world3/scientist.lua')"/>
+   </properties>
+  </object>
+  <object id="86" name="npc" type="Character" x="256" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world3/scientist.lua')"/>
+   </properties>
+  </object>
+  <object id="88" name="npc" type="Character" x="256" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world3/scientist.lua')"/>
+   </properties>
+  </object>
+  <object id="91" name="chest" type="Chest" x="352" y="80" width="16" height="16">
+   <properties>
+    <property name="item" value="helm_diamond"/>
+   </properties>
+  </object>
+  <object id="92" name="lab_foyer" type="Target" x="48" y="528" width="16" height="16"/>
+  <object id="93" name="tele" type="Event" x="48" y="544" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/lab_foyer.tmx', 'lab_right')"/>
+   </properties>
+  </object>
+  <object id="94" name="guard" type="Character" x="64" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="95" name="guard" type="Character" x="32" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="96" name="guard" type="Character" x="64" y="144" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="97" name="guard" type="Character" x="32" y="144" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="98" name="chest" type="Chest" x="160" y="304" width="16" height="16">
+   <properties>
+    <property name="item" value="key_storeKey"/>
+    <property name="keyItem" value="KEY_ITEM"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="25" height="36">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3MwQ0AEBQFQb07owD06jXxLzKT7HVbAwAA+FMv+o40C1tpp1PYTQ+i+223EA4AAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="25" height="36">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3NMQ0AAAgDMBDBi3+ZeCDZ1xpoFQAAAF/T+WNDxwEbr6HvEA4AAA==
+  </data>
+ </layer>
+</map>

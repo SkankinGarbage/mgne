@@ -1,0 +1,30 @@
+{
+	"key" : "enemy_swd06_HATAMOTO",
+	"subfolder" : "level06",
+	"name" : "HATAMOTO",
+	"description" : "",
+	"gender" : "MALE",
+	"race" : "HUMAN",
+	"family" : "None",
+	"species" : "HATAMOTO",
+	"appearance" : "4dir_aven",
+	"portrait" : "battle_portraits/swd.png",
+	"meatEatLevel" : 0,
+	"meatTargetLevel" : 6,
+	"gp" : 600,
+	"loot" : "wpn_katana",
+	"equipped" : [
+		"wpn_katana",
+		"wpn_swordWhite",
+		"shield_samurai"
+	],
+	"stats" : {
+		"hp" : 202,
+		"mhp" : 202,
+		"str" : 31,
+		"def" : 18,
+		"agi" : 33,
+		"mana" : 0,
+		"flags" : [ ]
+	}
+}

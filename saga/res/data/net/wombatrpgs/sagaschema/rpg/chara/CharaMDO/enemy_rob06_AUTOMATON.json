@@ -12,7 +12,7 @@
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"loot" : "None",
+	"loot" : "ring_bangle",
 	"equipped" : [
 		"abil_punch",
 		"abil_bash",

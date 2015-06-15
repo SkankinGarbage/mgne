@@ -1,6 +1,6 @@
 {
 	"key" : "enemy_gun06_BOMBADIER",
-	"subfolder" : "level06",
+	"subfolder" : "level07",
 	"name" : "BOMBADIER",
 	"description" : "threat 1",
 	"gender" : "NONE",
@@ -14,7 +14,7 @@
 	"gp" : 600,
 	"loot" : "None",
 	"equipped" : [
-		"wpn_grenade"
+		"wpn_cannonRocket"
 	],
 	"stats" : {
 		"hp" : 252,

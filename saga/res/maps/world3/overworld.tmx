@@ -47,7 +47,7 @@
   </object>
   <object id="56" name="Lab" type="Event" x="928" y="608" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+    <property name="onCollide" value="teleport('world3/lab_foyer.tmx', 7, 12, 'NORTH')"/>
    </properties>
   </object>
   <object id="57" name="Power Plant" type="Event" x="224" y="400" width="16" height="16">

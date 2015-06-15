@@ -1,0 +1,21 @@
+{
+	"key" : "key_storeKey",
+	"subfolder" : "key",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "STORE KEY",
+	"itemDescription" : "Opens storerooms in the research base",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectNothingMDO",
+		"key" : "anon_CombatItemMDO_1579518228"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

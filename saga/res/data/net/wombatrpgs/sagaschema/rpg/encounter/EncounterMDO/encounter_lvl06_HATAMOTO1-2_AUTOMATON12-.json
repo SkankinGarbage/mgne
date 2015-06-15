@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl06_HATAMOTO1-2_AUTOMATON12-",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_swd06_HATAMOTO",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_rob06_AUTOMATON",
+			"amount" : "1-2"
+		}
+	]
+}
