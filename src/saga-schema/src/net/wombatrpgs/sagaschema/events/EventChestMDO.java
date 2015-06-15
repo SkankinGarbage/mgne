@@ -15,6 +15,7 @@ import net.wombatrpgs.mgns.core.Annotations.SchemaLink;
 import net.wombatrpgs.sagaschema.events.data.KeyItemType;
 import net.wombatrpgs.sagaschema.rpg.abil.CollectableMDO;
 import net.wombatrpgs.sagaschema.rpg.abil.CombatItemMDO;
+import net.wombatrpgs.sagaschema.rpg.encounter.EncounterMDO;
 
 /**
  * SaGa generic treasure chest event.
@@ -34,5 +35,10 @@ public class EventChestMDO extends EventMDO {
 	@Desc("Key item - for keys and plot items that can be found in chests")
 	@DefaultValue("GENERIC")
 	public KeyItemType keyItem;
+	
+	@Desc("Encounter - for booby-trapped chests")
+	@SchemaLink(EncounterMDO.class)
+	@Nullable
+	public String encounter;
 
 }

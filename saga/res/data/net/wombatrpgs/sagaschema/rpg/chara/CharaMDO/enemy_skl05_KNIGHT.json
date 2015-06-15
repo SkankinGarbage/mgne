@@ -16,7 +16,8 @@
 	"equipped" : [
 		"abil_sword",
 		"abil_bone",
-		"abil_oweapon"
+		"abil_oweapon",
+		"abil_oice"
 	],
 	"stats" : {
 		"hp" : 150,

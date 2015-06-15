@@ -7,7 +7,7 @@
 	"itemDescription" : "Heals by 300",
 	"type" : "ITEM",
 	"uses" : 3,
-	"cost" : 1000,
+	"cost" : 1200,
 	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {

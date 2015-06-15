@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="35" height="31" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="136">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="35" height="32" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="151">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Celephais"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="35" height="31">
+ <layer name="Tile Layer 1" width="35" height="32">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WMQqAMBAEr0yTh/trKxs54k4IXpQd2CaYZaq4PSI6jALtvHKAEBfau5tLAyEutNcudrHLGpdRsu9Ul1HHzJvbkjOFp46ZvOlijFlH5cbM7lbsui+4VPwb7WKXv7mo2051UXfdHbKnFMiW2tHlBPbONNT0EAAA
+   H4sIAAAAAAAAC+2WMQqAMBAEr0yTh/trKxs54k4QL4Yd2CaYZaq4PSI6jALtvHKAEBfau5pLAyEutNcudrHLOy6jZN+pLqOOmTe3JWcKTx0z+dLFGLMnlXs3u1uxMf/gUvGftotddnNRd6bqom7MO2TbKZBdt6LLCRJr08SAEQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="35" height="31">
+ <layer name="Tile Layer 2" width="35" height="32">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjABNsxUHDwA46umUfDhoGjBgZGIyB2IQRUwwZD2WAzY9DPY5GAiAUR6NgFIyCUTAKRsEoGPzgMBqf0nYNLv3XyDNuFIyCUUAAAAC5nQHE9BAAAA==
+   H4sIAAAAAAAAC2NgGAWjABNsxUHDwA46umUfDhoGjBgZGIyB2IQRUwwZD2WAzY9DPY5GAiAUR6NgFIyCUTAKRsEoGAWkgMNofErbWLj0XyPPuFEwCkYBAQAADNM4SIARAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="119" name="pub" type="Target" x="128" y="160" width="16" height="16"/>
-  <object id="120" name="inn" type="Target" x="400" y="160" width="16" height="16"/>
-  <object id="121" name="shop_right" type="Target" x="400" y="448" width="16" height="16"/>
-  <object id="122" name="shop_left" type="Target" x="144" y="448" width="16" height="16"/>
-  <object id="123" name="tele" type="Event" x="128" y="176" width="16" height="16">
+  <object id="136" name="pub" type="Target" x="128" y="160" width="16" height="16"/>
+  <object id="137" name="inn" type="Target" x="400" y="160" width="16" height="16"/>
+  <object id="138" name="shop_right" type="Target" x="400" y="464" width="16" height="16"/>
+  <object id="139" name="shop_left" type="Target" x="144" y="464" width="16" height="16"/>
+  <object id="140" name="tele" type="Event" x="128" y="176" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/celephais.tmx', 'pub')"/>
    </properties>
   </object>
-  <object id="124" name="tele" type="Event" x="400" y="176" width="16" height="16">
+  <object id="141" name="tele" type="Event" x="400" y="176" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/celephais.tmx', 'inn')"/>
    </properties>
   </object>
-  <object id="125" name="tele" type="Event" x="144" y="464" width="16" height="16">
+  <object id="142" name="tele" type="Event" x="144" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/celephais.tmx', 'shop_left')"/>
    </properties>
   </object>
-  <object id="126" name="tele" type="Event" x="400" y="464" width="16" height="16">
+  <object id="143" name="tele" type="Event" x="400" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/celephais.tmx', 'shop_right')"/>
    </properties>
   </object>
-  <object id="128" name="innkeep" type="Character" x="400" y="80" width="16" height="16">
+  <object id="144" name="innkeep" type="Character" x="400" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="129" name="shop" type="Character" x="400" y="368" width="16" height="16">
+  <object id="145" name="shop" type="Character" x="400" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_world3_potions')"/>
    </properties>
   </object>
-  <object id="130" name="shop" type="Character" x="144" y="368" width="16" height="16">
+  <object id="146" name="shop" type="Character" x="144" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_celephais')"/>
    </properties>
   </object>
-  <object id="131" name="shop" type="Character" x="128" y="64" width="16" height="16">
+  <object id="147" name="shop" type="Character" x="128" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('Enjoy your stay in Celephais... But please don\'t bother the guards.')"/>
    </properties>
   </object>
-  <object id="132" name="shop" type="Character" x="32" y="112" width="16" height="16">
+  <object id="148" name="shop" type="Character" x="32" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
     <property name="onInteract" value="speak('How am I supposed to enjoy a meal with those robots in here?')"/>
    </properties>
   </object>
-  <object id="133" name="shop" type="Character" x="96" y="96" width="16" height="16">
+  <object id="149" name="shop" type="Character" x="96" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('Guard', 'I\'m keeping an eye out for suspicious behavior.')"/>
    </properties>
   </object>
-  <object id="134" name="shop" type="Character" x="80" y="96" width="16" height="16">
+  <object id="150" name="shop" type="Character" x="80" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
@@ -96,20 +96,20 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="35" height="31">
+ <layer name="Tile Layer 3" width="35" height="32">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WwQkAIBADwWvAwu1argPBIPeYKSDkuVUATLKGbLQ9ZCO1k/oCAHDrtctSXddeWyjZUr++HHzggLn0EAAA
+   H4sIAAAAAAAAC+3W0QkAIAxDQRdwcLeWztAgFe4GCPl8awEwyR6yUc6QjdRO6gsAwI+6jZhqzNLtsmTXvfpyAY1Jil2AEQAA
   </data>
  </layer>
- <layer name="Tile Layer 4" width="35" height="31">
+ <layer name="Tile Layer 4" width="35" height="32">
   <properties>
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WIQ4AIAwEwf7/N1heR+oRJK0oyYy/0xsBAHdryEfaQz4AAH5V7bKurkvVLnvdH4xTGL70EAAA
+   H4sIAAAAAAAAC+3WoQ0AMAwDwey/TWmnq8ILKrkg4I7b+KsA4G4N+Wh7yAcAALm0EX81Zksb8XV/AL/laqiAEQAA
   </data>
  </layer>
 </map>

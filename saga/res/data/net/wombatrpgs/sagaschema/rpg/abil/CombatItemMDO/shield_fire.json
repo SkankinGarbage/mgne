@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$BFIRE",
-	"itemDescription" : "Grants the party resistance to fire damage",
+	"itemDescription" : "Grants the party resistance to fire damage (tier 3)",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 2200,
@@ -14,7 +14,7 @@
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
 		"key" : "anon_CombatItemMDO_891889192"
 	},
-	"tier" : 0,
+	"tier" : 3,
 	"robostats" : {
 		"stats" : [ ]
 	}

@@ -255,6 +255,16 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	}
 	
 	/**
+	 * TODO: Returns the base value of the requested stat, not taking into account
+	 * any temporary boosts or things from armor etc.
+	 * @param	stat			The stat to get the value of
+	 * @return					The base value of the requested stat
+	 */
+	public int getBase(Stat stat) {
+		return get(stat);
+	}
+	
+	/**
 	 * Determines this character's species to use for transformation info. For
 	 * monsters, this will be GOBLIN etc, the monster type. Others can just
 	 * return their race name.

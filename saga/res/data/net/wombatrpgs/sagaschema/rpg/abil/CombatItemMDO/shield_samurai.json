@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$BSAMURAI",
-	"itemDescription" : "Raises chance to dodge and grants immunity to status",
+	"itemDescription" : "Raises chance to dodge and grants immunity to status (tier 4)",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 3130,
@@ -16,6 +16,15 @@
 	},
 	"tier" : 5,
 	"robostats" : {
-		"stats" : [ ]
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 45.0
+			},
+			{
+				"stat" : "DEF",
+				"value" : 10.0
+			}
+		]
 	}
 }

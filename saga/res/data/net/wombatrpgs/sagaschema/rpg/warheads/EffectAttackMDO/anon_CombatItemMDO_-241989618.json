@@ -1,16 +1,14 @@
 {
-	"key" : "anon_CombatItemMDO_-1111477419",
+	"key" : "anon_CombatItemMDO_-241989618",
 	"subfolder" : "",
-	"name" : "anon_CombatItemMDO_-1111477419",
+	"name" : "anon_CombatItemMDO_-241989618",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
-	"damType" : "THUNDER",
-	"sideEffects" : [
-		"CRITICAL_ON_WEAKNESS"
-	],
+	"damType" : "WEAPON",
+	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"power" : 6,
-	"attackStat" : "STR",
+	"attackStat" : "AGI",
 	"defendStat" : "DEF",
 	"miss" : "CAN_MISS"
 }

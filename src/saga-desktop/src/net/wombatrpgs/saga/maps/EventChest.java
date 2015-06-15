@@ -13,20 +13,20 @@ import net.wombatrpgs.mgne.maps.TiledMapObject;
 import net.wombatrpgs.mgne.maps.events.MapEvent;
 import net.wombatrpgs.saga.core.SConstants;
 import net.wombatrpgs.saga.core.SGlobal;
+import net.wombatrpgs.saga.rpg.battle.Battle;
+import net.wombatrpgs.saga.rpg.chara.EnemyParty;
 import net.wombatrpgs.saga.rpg.items.Collectable;
 import net.wombatrpgs.saga.rpg.items.CombatItem;
 import net.wombatrpgs.sagaschema.events.EventChestMDO;
 import net.wombatrpgs.sagaschema.events.data.KeyItemType;
 import net.wombatrpgs.sagaschema.rpg.abil.CombatItemMDO;
+import net.wombatrpgs.sagaschema.rpg.encounter.EncounterMDO;
 
 /**
  * Because scripting them is just... *effort*.
  */
 public class EventChest extends MapEvent {
 	
-	protected static String PROPERTY_ITEM_KEY = "item";
-	protected static String PROPERTY_COLLECTABLE_KEY = "collectable";
-	protected static String PROPERTY_KEY_ITEM = "keyItem";
 	protected static String KEY_ANIM_CLOSED = "anim_chest_closed";
 	protected static String KEY_ANIM_OPEN = "anim_chest_open";
 	
@@ -35,6 +35,7 @@ public class EventChest extends MapEvent {
 	protected String switchName;
 	protected CombatItem item;
 	protected Collectable collectable;
+	protected Battle encounter;
 	protected boolean keyItem;
 	
 	/**
@@ -54,6 +55,11 @@ public class EventChest extends MapEvent {
 			assets.add(item);
 		} else if (mdoHasProperty(mdo.collectable)) {
 			collectable = new Collectable(mdo.collectable);
+		} else if (mdoHasProperty(mdo.encounter)) {
+			EncounterMDO encounterMDO = MGlobal.data.getEntryFor(mdo.encounter, EncounterMDO.class);
+			EnemyParty party = new EnemyParty(encounterMDO);
+			encounter = new Battle(party, true);
+			encounter.setFleeable(false);
 		}
 		
 		switchName = "chest_" + object.getLevel().getKeyName();
@@ -70,37 +76,44 @@ public class EventChest extends MapEvent {
 	@Override
 	public boolean onInteract() {
 		if (!chestOpened()) {
-			if (item == null && collectable == null) {
-				MGlobal.ui.getBlockingBox().blockText(
-						MGlobal.levelManager.getScreen(), "Empty.");
+			if (encounter != null) {
+				MGlobal.assets.loadAsset(encounter, "chest encounter");
 				MGlobal.memory.setSwitch(switchName);
 				setAppearance();
-			} else {
+				MGlobal.audio.playSFX(SConstants.SFX_BATTLE);
+				encounter.start();
+			} else if (item != null) {
 				if (SGlobal.heroes.getInventory().isFull()) {
 					MGlobal.ui.getBlockingBox().blockText(
 							MGlobal.levelManager.getScreen(), "No more room for items!");
 				} else {
-					if (item != null) {
-						if (keyItem) {
-							MGlobal.ui.getBlockingBox().blockText(
-									MGlobal.levelManager.getScreen(),
-									"Retrieved the " + item.getName() + ".");
-						} else {
-							MGlobal.ui.getBlockingBox().blockText(
-									MGlobal.levelManager.getScreen(),
-									"Retrieved a " + item.getName() + ".");
-						}
-						SGlobal.heroes.getInventory().add(item);
-					} else if (collectable != null) {
+					if (keyItem) {
 						MGlobal.ui.getBlockingBox().blockText(
 								MGlobal.levelManager.getScreen(),
-								"Retrieved a " + collectable.getName() + ".");
-						SGlobal.heroes.getCollection().addCollectable(collectable);
+								"Retrieved the " + item.getName() + ".");
+					} else {
+						MGlobal.ui.getBlockingBox().blockText(
+								MGlobal.levelManager.getScreen(),
+								"Retrieved a " + item.getName() + ".");
 					}
-					MGlobal.audio.playSFX(SConstants.SFX_GET);
+					SGlobal.heroes.getInventory().add(item);
 					MGlobal.memory.setSwitch(switchName);
+					MGlobal.audio.playSFX(SConstants.SFX_GET);
 					setAppearance();
 				}
+			} else if (collectable != null) {
+				MGlobal.ui.getBlockingBox().blockText(
+						MGlobal.levelManager.getScreen(),
+						"Retrieved a " + collectable.getName() + ".");
+				SGlobal.heroes.getCollection().addCollectable(collectable);
+				MGlobal.memory.setSwitch(switchName);
+				MGlobal.audio.playSFX(SConstants.SFX_GET);
+				setAppearance();
+			} else {
+				MGlobal.ui.getBlockingBox().blockText(
+						MGlobal.levelManager.getScreen(), "Empty.");
+				MGlobal.memory.setSwitch(switchName);
+				setAppearance();
 			}
 		}
 		return true;

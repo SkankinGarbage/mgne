@@ -5,7 +5,9 @@
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "ICE",
-	"sideEffects" : [ ],
+	"sideEffects" : [
+		"CRITICAL_ON_WEAKNESS"
+	],
 	"slayerFamiles" : [ ],
 	"power" : 6,
 	"attackStat" : "STR",

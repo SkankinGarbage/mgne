@@ -7,7 +7,7 @@
 	"itemDescription" : "Raises human strength by 2 up to 48",
 	"type" : "ITEM",
 	"uses" : 1,
-	"cost" : 800,
+	"cost" : 1200,
 	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {

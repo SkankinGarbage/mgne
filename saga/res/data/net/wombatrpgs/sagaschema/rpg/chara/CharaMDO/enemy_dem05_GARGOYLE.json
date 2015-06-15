@@ -17,15 +17,17 @@
 		"abil_claw",
 		"abil_dive",
 		"abil_thunder",
-		"abil_electro"
+		"abil_electro",
+		"abil_othunder",
+		"abil_oice"
 	],
 	"stats" : {
 		"hp" : 176,
 		"mhp" : 176,
-		"str" : 20,
-		"def" : 20,
-		"agi" : 18,
-		"mana" : 19,
+		"str" : 23,
+		"def" : 23,
+		"agi" : 21,
+		"mana" : 22,
 		"flags" : [ ]
 	}
 }

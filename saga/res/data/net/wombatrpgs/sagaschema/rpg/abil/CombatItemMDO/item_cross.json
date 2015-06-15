@@ -7,7 +7,7 @@
 	"itemDescription" : "Cures curse",
 	"type" : "ITEM",
 	"uses" : 1,
-	"cost" : 320,
+	"cost" : 520,
 	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {

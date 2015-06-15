@@ -7,7 +7,7 @@
 	"damType" : "PHYSICAL",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
-	"base" : 50,
+	"base" : 65,
 	"range" : 15,
 	"defenseStat" : "DEF",
 	"accuracy" : 60,

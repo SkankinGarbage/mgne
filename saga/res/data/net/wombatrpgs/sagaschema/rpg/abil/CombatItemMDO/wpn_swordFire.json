@@ -7,7 +7,7 @@
 	"itemDescription" : "Inflicts fire damage (tier 5)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 3700,
+	"cost" : 5700,
 	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {

@@ -1,276 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="55" height="47" tilewidth="16" tileheight="16" nextobjectid="61">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="53" height="39" tilewidth="16" tileheight="16" nextobjectid="75">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
   <property name="name" value="Forgotten Mines"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
- <tileset firstgid="176" name="upper" tilewidth="16" tileheight="16">
-  <image source="../tilesets/upper2.PNG" width="144" height="256"/>
-  <tile id="1">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="2">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="3">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="4">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="5">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="6">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="7">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="10">
-   <properties>
-    <property name="o" value=""/>
-   </properties>
-  </tile>
-  <tile id="11">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="12">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="13">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="14">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="15">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="16">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="19">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="20">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="21">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="22">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="23">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="24">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="25">
-   <properties>
-    <property name="o" value=""/>
-   </properties>
-  </tile>
-  <tile id="27">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="28">
-   <properties>
-    <property name="counter" value=""/>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="29">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="30">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="31">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="32">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="33">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="36">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="37">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="38">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="39">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="40">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="41">
-   <properties>
-    <property name="o" value=""/>
-   </properties>
-  </tile>
-  <tile id="42">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="45">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="46">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="47">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="48">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="49">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="50">
-   <properties>
-    <property name="o" value=""/>
-   </properties>
-  </tile>
-  <tile id="51">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="54">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="55">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="56">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="57">
-   <properties>
-    <property name="counter" value=""/>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="58">
-   <properties>
-    <property name="counter" value=""/>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="59">
-   <properties>
-    <property name="counter" value=""/>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
- </tileset>
- <layer name="Tile Layer 1" width="55" height="47">
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="53" height="39">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2VMRIDIQhFvUK6FB4kR/BQHj4tMSC4BiQ7v3iFMyA+WN1aSqkAAAAAABfohOjaL+f8k24P5/xGiPChvXxu7qXln3Sz1KTx3NkzuTWhZjfA7aXFRXnNakk+s95ndNMcJLRvgIvL4ibFz9y0/aPdrHOZIZ37pNsVuDnP3HZ6lsHNeu4MbvTcllmsuI19iZyBVvvf3axv/Wq9yPu38x/7VX1PN835bm6WWd/NrRvcevl8J8Z1pFtfpC3kjW7cXlnc6D20xFQl5/Q7uYOlhpebd7+4NQAAAAAAAACAb94REZ79ZCgAAA==
+   H4sIAAAAAAAAC+2VQRLDIAhFvUJ3XXiQHsFDcfhsrYOAVSDN/MVbZAaEBzGppZQKAAAAABXqiKr5cc7PcHo557eOqPfhvXmWlp/hZKnVx3M938GpTWqRAe4sLc7bR6ox85BmfScnrfcZ2s65uGynWbzkpJ0f5WTdg8Ss3wynX+D2KjntzCrTydpvplPfr2X2K07jPCJmrtX8VyfrN3u1XsT92vkPnarv4aS5PsXJstunOJHBicr3/R+fI5xokbaQNzpxZ2U79ffMElOVnKzv3g6WGqedPJCcsnsDAAAATnMBc5zZ7EwgAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="55" height="47">
+ <layer name="Tile Layer 2" width="53" height="39">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BgQAAAADDoPlTH+AKVQEAAAAAAAAAAAC8AaibY6NkKAAA
+   H4sIAAAAAAAAC+3BMQEAAADCoPVP7WkJoAAAAAAAAAAAbjVAwP9MIAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="54" name="lever" type="Event" x="336" y="256" width="16" height="16">
+  <object id="65" name="lever" type="Event" x="368" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_switch_a"/>
     <property name="hide" value="return getSwitch('mine02')"/>
@@ -278,50 +32,62 @@
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="55" name="lever" type="Event" x="336" y="256" width="16" height="16">
+  <object id="66" name="lever" type="Event" x="368" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_switch_b"/>
     <property name="hide" value="return not getSwitch('mine02')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="56" name="gate" type="Event" x="336" y="400" width="16" height="32">
+  <object id="67" name="gate" type="Event" x="368" y="384" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
-    <property name="hide" value="return getSwitch('mine01')"/>
+    <property name="hide" value="return getSwitch('mine02')"/>
    </properties>
   </object>
-  <object id="57" name="gate" type="Event" x="352" y="400" width="16" height="32">
+  <object id="68" name="gate" type="Event" x="384" y="384" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
-    <property name="hide" value="return getSwitch('mine01')"/>
+    <property name="hide" value="return getSwitch('mine02')"/>
    </properties>
   </object>
-  <object id="59" name="chest" type="Chest" x="240" y="384" width="16" height="16">
+  <object id="69" name="chest" type="Chest" x="272" y="368" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_fire"/>
    </properties>
   </object>
-  <object id="60" name="chest" type="Chest" x="576" y="192" width="16" height="16">
+  <object id="70" name="chest" type="Chest" x="608" y="176" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_white"/>
    </properties>
   </object>
+  <object id="71" name="right_stairs" type="Target" x="464" y="160" width="16" height="16"/>
+  <object id="72" name="tele" type="Event" x="464" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/mine01.tmx', 'right_stairs')"/>
+   </properties>
+  </object>
+  <object id="73" name="tele" type="Event" x="208" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/mine01.tmx', 'left_stairs')"/>
+   </properties>
+  </object>
+  <object id="74" name="left_stairs" type="Target" x="208" y="160" width="16" height="16"/>
  </objectgroup>
- <layer name="Tile Layer 3" width="55" height="47">
+ <layer name="Tile Layer 3" width="53" height="39">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BgQAAAADDoPlTH+AKVQEAAAAAAAAAAAC8AaibY6NkKAAA
+   H4sIAAAAAAAAC+3BMQEAAADCoPVP7WkJoAAAAAAAAAAAbjVAwP9MIAAA
   </data>
  </layer>
- <layer name="Tile Layer 4" width="55" height="47">
+ <layer name="Tile Layer 4" width="53" height="39">
   <properties>
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BgQAAAADDoPlTH+AKVQEAAAAAAAAAAAC8AaibY6NkKAAA
+   H4sIAAAAAAAAC+3BMQEAAADCoPVP7WkJoAAAAAAAAAAAbjVAwP9MIAAA
   </data>
  </layer>
 </map>

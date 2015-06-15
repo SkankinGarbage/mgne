@@ -7,7 +7,7 @@
 	"itemDescription" : "Increases defense by 12",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 2620,
+	"cost" : 5620,
 	"anim" : "None",
 	"equip" : [
 		"HELMET"

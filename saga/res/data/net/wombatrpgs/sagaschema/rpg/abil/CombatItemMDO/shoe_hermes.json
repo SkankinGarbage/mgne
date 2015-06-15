@@ -7,7 +7,7 @@
 	"itemDescription" : "Increases defense by 1 and mana by 4",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 1570,
+	"cost" : 2570,
 	"anim" : "None",
 	"equip" : [
 		"SHOE"

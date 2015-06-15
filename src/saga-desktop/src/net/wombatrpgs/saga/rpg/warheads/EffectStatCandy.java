@@ -51,7 +51,7 @@ public class EffectStatCandy extends EffectBattleUnusable {
 					if (!allowed.contains(selected.getRace())) {
 						MGlobal.audio.playSFX(SConstants.SFX_FAIL);
 					} else if (mdo.maxValue != 0 &&
-							selected.get(mdo.stat) > mdo.maxValue) {
+							selected.getBase(mdo.stat) > mdo.maxValue) {
 						MGlobal.audio.playSFX(SConstants.SFX_FAIL);
 						// TODO: polish: maybe print an error message?
 					} else {

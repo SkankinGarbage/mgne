@@ -16,7 +16,8 @@
 	"equipped" : [
 		"abil_acid",
 		"abil_poison",
-		"abil_dskin"
+		"abil_dskin",
+		"abil_xfire"
 	],
 	"stats" : {
 		"hp" : 126,

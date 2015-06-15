@@ -15,7 +15,7 @@
 	"loot" : "item_hp400",
 	"equipped" : [
 		"wpn_knifePsi",
-		"wpn_whip"
+		"wpn_ewhip"
 	],
 	"stats" : {
 		"hp" : 150,

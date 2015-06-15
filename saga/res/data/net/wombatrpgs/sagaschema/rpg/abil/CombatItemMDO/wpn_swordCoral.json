@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$ECORAL",
-	"itemDescription" : "Inflicts weapon damage and slays aquatics (tier 4)",
+	"itemDescription" : "Inflicts weapon damage and slays jellyfish (tier 4)",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 1100,
