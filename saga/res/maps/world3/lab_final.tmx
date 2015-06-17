@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="27" tilewidth="16" tileheight="16" nextobjectid="104">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="27" tilewidth="16" tileheight="16" nextobjectid="110">
  <properties>
   <property name="bgm" value="ffl3_final_dungeon"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
@@ -68,6 +68,29 @@
   <object id="103" name="janine" type="Character" x="384" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_janine"/>
+   </properties>
+  </object>
+  <object id="105" name="trigger" type="Event" x="320" y="208" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="play('world3/janine01.lua')"/>
+   </properties>
+  </object>
+  <object id="107" name="guard1" type="Character" x="288" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="hide" value="return not getSwitch('lab_guards')"/>
+   </properties>
+  </object>
+  <object id="108" name="guard3" type="Character" x="256" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="hide" value="return not getSwitch('lab_guards')"/>
+   </properties>
+  </object>
+  <object id="109" name="guard2" type="Character" x="272" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="hide" value="return not getSwitch('lab_guards')"/>
    </properties>
   </object>
  </objectgroup>
