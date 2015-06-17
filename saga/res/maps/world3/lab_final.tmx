@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="27" tilewidth="16" tileheight="16" nextobjectid="104">
+ <properties>
+  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="encounter" value="encounterset_level05_danger01"/>
+  <property name="name" value="Research Base"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="29" height="27">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC71VWw6DMAwrV9p2Q/rLOADjrls/KoUstR32iGQkgiUjp27mUspM0IvxLBdV490BvKbKZZoPAK+pcplmBfDeMW5GcwrQ+ks5eoe4ZzTtP/f3rRy9Q9xvaXrv/qFp56hyFbAZRZqIy/Kkntua4LI8ZbxQesp/LaIfPjdr0LN95P8m+uFzswc9228al9fj+sJtej/bih/oewR2byjnMZOFrOYod5ks/EJTmT3bA1lNJaNsr6vzbLlQsoC8X50mO7ctFzYLI0+Q97vRVO6cSCPSVCray9Gd47PwiWa0l6M7J5O/TKHZquf2jKa6V1AWMuX3REcd9EdZyJTfEx110B9lAdUTSFAxjTwMAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="29" height="27">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjgLrgDQlqzRipY+dXEtTaU8nOUTAKRsHgBgYDkNctR8uXQQFIqYeoBUiph0bBKBjKAAC4AjQ+PAwAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="95" name="room" type="Ceiling" x="16" y="16">
+   <properties>
+    <property name="roofID" value="130"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 128,0 128,144 0,144"/>
+  </object>
+  <object id="96" name="room" type="Ceiling" x="192" y="16">
+   <properties>
+    <property name="roofID" value="130"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 112,0 112,160 0,160"/>
+  </object>
+  <object id="97" name="room" type="Ceiling" x="32" y="176">
+   <properties>
+    <property name="roofID" value="130"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 112,0 112,160 0,160"/>
+  </object>
+  <object id="98" name="room" type="Ceiling" x="192" y="240">
+   <properties>
+    <property name="roofID" value="130"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 128,0 128,144 0,144"/>
+  </object>
+  <object id="99" name="room" type="Ceiling" x="320" y="128">
+   <properties>
+    <property name="roofID" value="130"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 128,0 128,144 0,144"/>
+  </object>
+  <object id="100" name="door" type="Target" x="160" y="384" width="16" height="16"/>
+  <object id="102" name="tele" type="Event" x="160" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/lab_center.tmx', 'back')"/>
+   </properties>
+  </object>
+  <object id="103" name="janine" type="Character" x="384" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_janine"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="29" height="27">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBKBgFo2DkgeYBsLNvAOycQ0WzAKU4gkQ8DAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="29" height="27">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3NMREAAAgEIA3hav+YlvB+ggJUAQAACdP5cx/PA5DoKoA8DAAA
+  </data>
+ </layer>
+</map>

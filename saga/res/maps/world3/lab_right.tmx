@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="36" tilewidth="16" tileheight="16" nextobjectid="99">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="36" tilewidth="16" tileheight="16" nextobjectid="105">
  <properties>
   <property name="bgm" value="ffl3_final_dungeon"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
@@ -7,20 +7,20 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="25" height="36">
+ <layer name="Tile Layer 1" width="41" height="36">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2VUQuAIAyE9bfna/nUU/lfm6RwyJC0jUQafA8yuCPWbcbctQDShdp78ZZkIzxxEmt6Y+8NWSdqB8IRR3pj7w1ZxzHUei2UOnZCjzh7r+wRZx+UPKyA7kjzmM2DQ9qD2z/SHtz+0Z6HpAfmHHMj6YE5l/bgcq71HdibxUPrv/oy5613qyfnrXfr67373/Ox5qHl8bTX44F6tXz3guWMfml5XD2o3SkQDgAA
+   H4sIAAAAAAAAC+2XQQvDIAyF9bfX69bTTpv/dZMZCBJitFZfoYF30KL9hMRnnPvHxjQztka9OtZYVGP8KKI9nj/tee6Rx/zbEVkYgyLiSGwxz70Lfu2MFlkZvSDOqPFrZ7RoNKN3N+NoxlQ7Ozhjqp3o5jHW6poz+sqaMxi5gjC3Oh/pPiaFYrwDMNJ9TArFOAIwWqLGqOUGCqPkv2iMkv+iMUr/RGHkPlPe+yiM3GfQGCWfQWOU8vFmHMOIWtdX9pnWd+8Kn2l9967Ix1bN8hlUxln9TA/j7H6mh/FK+YjKWO6NxFjrbY9qZITB+50RqIxfzkj36RAXAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="25" height="36">
+ <layer name="Tile Layer 2" width="41" height="36">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgoC8QZaS9HXJ0sGO4A2tG7DQysGFEpUfBKBgFEGAEzBPGOPAooB/AFQ8mo/FAV4ArL4zGw8CC0fwxCigB6G1AbG1BYtqSo2BwAABib0xNEA4AAA==
+   H4sIAAAAAAAAC+3YMQrAIAyFYXOIrj2E7dbe/1y6WgxWEEPC/4FkkwzhDS8lXw6x3mDsdLAjxl5p54xH+nPV/wAQVa6ZeCkP2EW7w5s7xEZaFnKHsEQ+An59O4heF/GnywAiKB8eh5wQFwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -119,21 +119,45 @@
     <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
+  <object id="99" name="chest" type="Chest" x="576" y="80" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_white"/>
+   </properties>
+  </object>
+  <object id="100" name="interior" type="Target" x="576" y="144" width="16" height="16"/>
+  <object id="101" name="tele" type="Event" x="576" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/lab_right.tmx', 'exterior')"/>
+   </properties>
+  </object>
+  <object id="102" name="block" type="Event" x="48" y="32" width="16" height="16">
+   <properties>
+    <property name="hide" value="return hasItem('key_labKey')"/>
+    <property name="onInteract" value="speak('It\'s locked.')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="103" name="exterior" type="Target" x="48" y="48" width="16" height="16"/>
+  <object id="104" name="tele" type="Event" x="48" y="32" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/lab_right.tmx', 'interior')"/>
+   </properties>
+  </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="25" height="36">
+ <layer name="Tile Layer 3" width="41" height="36">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3MwQ0AEBQFQb07owD06jXxLzKT7HVbAwAA+FMv+o40C1tpp1PYTQ+i+223EA4AAA==
+   H4sIAAAAAAAAC+3XsQ3AIBAEwe/dMXYBxr06oAGCR4/EjHT5phcBADmu6oAJd3XAhF4dAAAAcLBdv22L8WlX7UlofGN82lX7Ehp/ij0f8BAXAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="25" height="36">
+ <layer name="Tile Layer 4" width="41" height="36">
   <properties>
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3NMQ0AAAgDMBDBi3+ZeCDZ1xpoFQAAAF/T+WNDxwEbr6HvEA4AAA==
+   H4sIAAAAAAAAC+3XMQ0AMAgAQSqCFf8ykdCEhTS9U/DrRwDAP/JsF9zVA40AAADs8bZzDYuyPw8QFwAA
   </data>
  </layer>
 </map>
