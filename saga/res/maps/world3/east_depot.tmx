@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="62" height="51" tilewidth="16" tileheight="16" nextobjectid="22">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="62" height="51" tilewidth="16" tileheight="16" nextobjectid="28">
  <properties>
   <property name="bgm" value="ffl1_overworld"/>
   <property name="name" value="East Depot"/>
@@ -95,6 +95,30 @@
     <property name="onCollide" value="play('world3/guard.lua')"/>
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
+  </object>
+  <object id="22" name="prison_door" type="Target" x="624" y="448" width="16" height="16"/>
+  <object id="23" name="tele" type="Event" x="624" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/prison02.tmx', 'door')"/>
+   </properties>
+  </object>
+  <object id="24" name="tele" type="Event" x="448" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/east_depot_interior.tmx', 'door')"/>
+   </properties>
+  </object>
+  <object id="25" name="depot_door" type="Target" x="448" y="464" width="16" height="16"/>
+  <object id="26" name="encounter" type="Encounter" x="352" y="144">
+   <properties>
+    <property name="mdo" value="encounterset_level05_danger01"/>
+   </properties>
+   <polygon points="-16,16 208,16 208,224 -16,224"/>
+  </object>
+  <object id="27" name="encounter" type="Encounter" x="576" y="336">
+   <properties>
+    <property name="mdo" value="encounterset_level05_danger01"/>
+   </properties>
+   <polygon points="-16,-176 224,-176 224,224 -16,224"/>
   </object>
  </objectgroup>
 </map>

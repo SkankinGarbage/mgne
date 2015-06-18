@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="45" tilewidth="16" tileheight="16" nextobjectid="56">
+ <properties>
+  <property name="bgm" value="ffl1_cave"/>
+  <property name="encounter" value="encounterset_level05_danger01"/>
+  <property name="name" value="Prison"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="65" height="45">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XQQoDIQxFvcLseqRu5gS9Tlc9dXERCMHEpOI0Yf6DIBQVfU1GbQ0AAMAuPj/G6lwZ4Os5g2E5WBl/NbTe3r6CYTlYGX81tN7ePoNh5bh3fAZovbz1RO9r5bhnfGYHnjrufbUc93wLsjqg8NSxleOeb0FGB/w/ek/CqpvZWDlPBkZ57XUwqpHKDnh4HYxqpLID3nodjM462c+qkeoOtLPuTg60s+5ODrSzbpYv8vcM7P4eZEer6dm5770fVHEga1q72/K9WX0rOpA1rd1t+d6svhUdRN/L0bd1dqLv5UjAARxUc3C0PQ5o3uz0NT7aHgc0b3Z27F0GAAAAAAAAAAAA/scXd4Vrh7QtAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="65" height="45">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3TwQkAMAwDsey/adsl6i0SggT398dVAAAA0Oukm173EBjAHwAAAAAAAGCfD0d6zaS0LQAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="36" name="tele" type="Event" x="288" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/prison01.tmx', 'left')"/>
+   </properties>
+  </object>
+  <object id="37" name="left" type="Target" x="288" y="432" width="16" height="16"/>
+  <object id="38" name="right" type="Target" x="640" y="432" width="16" height="16"/>
+  <object id="39" name="tele" type="Event" x="640" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/prison01.tmx', 'right')"/>
+   </properties>
+  </object>
+  <object id="44" name="room" type="Ceiling" x="496" y="192">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="32,-96 32,-48 128,-48 128,0 112,0 112,144 0,144 0,-48 -144,-48 -144,-16 -160,-16 -160,-96"/>
+  </object>
+  <object id="45" name="tele" type="Event" x="736" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/east_depot.tmx', 'prison_door')"/>
+   </properties>
+  </object>
+  <object id="46" name="door" type="Target" x="736" y="288" width="16" height="16"/>
+  <object id="47" name="room" type="Ceiling" x="624" y="80">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 176,0 176,80 0,80"/>
+  </object>
+  <object id="48" name="room" type="Ceiling" x="144" y="112">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="160,0 176,0 176,80 224,80 224,224 160,224"/>
+  </object>
+  <object id="49" name="guard" type="Character" x="480" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="EAST"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="50" name="guard" type="Character" x="464" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="51" name="guard" type="Character" x="448" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="WEST"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="52" name="guard" type="Character" x="608" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="53" name="guard" type="Character" x="624" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="54" name="guard" type="Character" x="640" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onCollide" value="play('world3/guard.lua')"/>
+    <property name="onInteract" value="play('world3/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="55" name="chest" type="Chest" x="464" y="208" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_mana"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="65" height="45">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WsQ0AIAwDwSzIBGzE1IyQJlIiuJO+d+kIAAAAAHjX6R7QYCX9YCcBADBP9mMrmi77sRUBAADQ4wK5s+nstC0AAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="65" height="45">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3QQQ0AAAjEMNDBF/8akXEJaRUsqwIAAAAAPptOF+StBwAAAAAAQNABaudLXbQtAAA=
+  </data>
+ </layer>
+</map>
