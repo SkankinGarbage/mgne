@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="15" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="181">
  <properties>
-  <property name="bgm" value="ffl1_overworld2"/>
+  <property name="bgm" value="ffl1_overworld"/>
   <property name="name" value="F10 Gate"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+NlYGDgpQLuowDDzJhDAYa5wYMC3Ac1ixIzQPpbqYB5KXQHLw3NMGJkYDAGYhNG7Hx6uWOgzMCHiVHXy4A/P3gQkO8H4tkM+PODBwH5uUAMADtbKIf8AwAA
+   H4sIAAAAAAAAC+NlYGDgpQLuowDDzJhDAYa5wYMC3Ac1ixIzQPpbqYB5KXQH76gZNDMDHyZGXS8D/vzgQUC+H4hnM+DPDx4E5OcCMQAFtjXo/AMAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="17" height="15">
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjgDDYMQBmYFNPrBlnyLRzJAEADeCusPwDAAA=
+   H4sIAAAAAAAAC2NgGAWjgDDYgcQ2YmRgMAZiE0bsfGLMINVOUs04Q6adIwkAAHO9RQ78AwAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

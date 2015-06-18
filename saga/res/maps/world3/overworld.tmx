@@ -2,7 +2,7 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="67">
  <properties>
   <property name="battle_bgm" value="ffl1_battle"/>
-  <property name="bgm" value="ffl1_overworld2"/>
+  <property name="bgm" value="ffl1_overworld"/>
   <property name="name" value="Angelic World"/>
   <property name="terrainEncounter" value="terrain_world3"/>
  </properties>
@@ -77,7 +77,7 @@
   </object>
   <object id="62" name="Prison" type="Event" x="1184" y="384" width="16" height="32">
    <properties>
-    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
+    <property name="onCollide" value="teleport('world3/east_depot.tmx', 28, 40, 'NORTH')"/>
    </properties>
   </object>
   <object id="63" name="Old Mine" type="Event" x="208" y="240" width="16" height="16">
