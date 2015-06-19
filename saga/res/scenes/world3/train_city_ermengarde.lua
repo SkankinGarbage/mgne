@@ -1,4 +1,4 @@
-speak('Conductor', 'Would like to take the monorail to Babel?')
+speak('Conductor', 'Would like to take the monorail to Ermengarde?')
 choice()
 
 fade('white')

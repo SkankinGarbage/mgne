@@ -138,8 +138,9 @@ public class Avatar extends MapEvent implements CommandListener {
 			int targetX = (int) (getTileX() + dir.getVector().x);
 			int targetY = (int) (getTileY() + dir.getVector().y);
 			for (MapEvent event : parent.getEventsAt(targetX, targetY)) {
-				if (event == this) continue;
-				event.onCollide(this);
+				if (event != this && !event.isPassable()) {
+					event.onCollide(this);
+				}
 			}
 		}
 	}

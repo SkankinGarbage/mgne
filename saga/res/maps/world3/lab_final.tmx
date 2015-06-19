@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC71VWw6DMAwrV9p2Q/rLOADjrls/KoUstR32iGQkgiUjp27mUspM0IvxLBdV490BvKbKZZoPAK+pcplmBfDeMW5GcwrQ+ks5eoe4ZzTtP/f3rRy9Q9xvaXrv/qFp56hyFbAZRZqIy/Kkntua4LI8ZbxQesp/LaIfPjdr0LN95P8m+uFzswc9228al9fj+sJtej/bih/oewR2byjnMZOFrOYod5ks/EJTmT3bA1lNJaNsr6vzbLlQsoC8X50mO7ctFzYLI0+Q97vRVO6cSCPSVCray9Gd47PwiWa0l6M7J5O/TKHZquf2jKa6V1AWMuX3REcd9EdZyJTfEx110B9lAdUTSFAxjTwMAAA=
+   H4sIAAAAAAAAC8WVUQ6DMAxD2yuN3RB+Nw6w7a6jH0gh8mKn60YlIxEsHqR1O5dSZqJ9MJ/1RqP57oE8U/Uy5jOQZ6pexlwC+d4xb4ZZgVr9Vo69i7w9TPvN+/2jHHsXeUcxfe/+wbTzqHoVsTlCzMjL8qSu2yXhZXnK9EKpqXlS+uFzs4KarbM8Kf3wuXmBmq03xmW7TJuuFTNZP6LnSMp/Ml8mC1nmp9xlsvALpjL3yrrNMJWMsnNdnc+WCzULbKjrtuXCZuHbfV7ZcxCjl4n+Ge05PgujmWjPyeSvh8nOGJaFLBOpBs9QFkaMOvBdZzDfS4vO3zwMAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="29" height="27">
@@ -83,13 +83,13 @@
   </object>
   <object id="108" name="guard3" type="Character" x="256" y="208" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_robot"/>
+    <property name="appearance" value="4dir_guard"/>
     <property name="hide" value="return not getSwitch('lab_guards')"/>
    </properties>
   </object>
   <object id="109" name="guard2" type="Character" x="272" y="208" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_guard"/>
+    <property name="appearance" value="4dir_robot"/>
     <property name="hide" value="return not getSwitch('lab_guards')"/>
    </properties>
   </object>
@@ -99,7 +99,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBKBgFo2DkgeYBsLNvAOycQ0WzAKU4gkQ8DAAA
+   H4sIAAAAAAAAC2NgGAWjYBSMgpEHegfAztkDYOcoGAWDEfThwf00snMOHjyXRnYSA0BlEczv9AKgsgjm95EOmmloNnLckoPJyQvIcUsOJiYvAAAikSQ8PAwAAA==
   </data>
  </layer>
  <layer name="Tile Layer 4" width="29" height="27">

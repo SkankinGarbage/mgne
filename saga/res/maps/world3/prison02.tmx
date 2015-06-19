@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XQQoDIQxFvcLseqRu5gS9Tlc9dXERCMHEpOI0Yf6DIBQVfU1GbQ0AAMAuPj/G6lwZ4Os5g2E5WBl/NbTe3r6CYTlYGX81tN7ePoNh5bh3fAZovbz1RO9r5bhnfGYHnjrufbUc93wLsjqg8NSxleOeb0FGB/w/ek/CqpvZWDlPBkZ57XUwqpHKDnh4HYxqpLID3nodjM462c+qkeoOtLPuTg60s+5ODrSzbpYv8vcM7P4eZEer6dm5770fVHEga1q72/K9WX0rOpA1rd1t+d6svhUdRN/L0bd1dqLv5UjAARxUc3C0PQ5o3uz0NT7aHgc0b3Z27F0GAAAAAAAAAAAA/scXd4Vrh7QtAAA=
+   H4sIAAAAAAAAC+2XQQrEMAhFc4XZzZFm0xP0Ol311CULQUI02mDH0P9AAh0j+quTphQAAABRnDdtNlYGeD6b0zQNZvY/DeVb191pmgYz+5+G8q3rz2laj1v3Z4Dy5avFqq/W45b9mTWwzHH11Xp8FCOrBmSWOdZ6fDPEyKgBf0fHwLS5qb/vhhgUJwO9vrZq0JsRS+1ZNeBm1aA3IytrwFerBr2zrvU7lZirayCddW/SQDrr3qSBdNaN+qV9noHo/4OWI66UW0gzLb0/6/fBahq0My192/LaNN+M867RzrV2B+C1ab4rauC9L3vv1tnx3pc9Bg2gwWoafEqMBhQ3OzXHb4nRgOJmJ6L21gAAAAAAAAAAAPA/LjWkrq20LQAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="65" height="45">
@@ -41,7 +41,7 @@
     <property name="roofID" value="137"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="32,-96 32,-48 128,-48 128,0 112,0 112,144 0,144 0,-48 -144,-48 -144,-16 -160,-16 -160,-96"/>
+   <polygon points="32,-96 32,-48 128,-48 128,16 112,16 112,144 0,144 0,-48 -144,-48 -144,-16 -160,-16 -160,-96"/>
   </object>
   <object id="45" name="tele" type="Event" x="736" y="304" width="16" height="16">
    <properties>

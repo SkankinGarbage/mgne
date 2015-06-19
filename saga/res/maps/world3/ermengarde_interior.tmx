@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="31" height="35" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="175">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="31" height="35" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="176">
  <properties>
   <property name="bgm" value="ffl1_town"/>
-  <property name="name" value="Celephais"/>
+  <property name="name" value="Ermengarde"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAUDBbYSoEkFhwnQyPbug7Kx0eTaTwzYR6H8KKAMvATiV0D8epCaNwpGwSgYBaNgFAw2sJkATUuwhwA9CogDO6A0ertlB3blwwbg8h8+fw+Hth05/h4FwxsAACJJqf30EAAA
+   H4sIAAAAAAAAC2NgGAUDBbYSoEkFhwnQyPbug7Kx0eTaTwzYR6H8cAAvgfgVEL8epOaNglEwCkbBKBgFowABNhOgaQn2EKBHAXFgB5RGbzPtwK58wAG12na4/DdY/U0tMFL9PQpwAwDFyC1x9BAAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -47,22 +47,22 @@
     <property name="onCollide" value="targetTele('world3/ermengarde.tmx', 'pub')"/>
    </properties>
   </object>
-  <object id="167" name="innkeep" type="Character" x="80" y="112" width="16" height="16">
+  <object id="167" name="innkeep" type="Character" x="80" y="96" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_rat"/>
+    <property name="appearance" value="4dir_human_m"/>
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="168" name="shop" type="Character" x="400" y="112" width="16" height="16">
+  <object id="168" name="shop" type="Character" x="400" y="96" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_rat"/>
+    <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_world3_potions')"/>
    </properties>
   </object>
-  <object id="169" name="shop" type="Character" x="80" y="448" width="16" height="16">
+  <object id="169" name="shop" type="Character" x="80" y="432" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_rat"/>
+    <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_ermengarde')"/>
    </properties>
@@ -103,7 +103,7 @@
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="WEST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Naturally learned mutant spells are weaker than their spellbook equivalents, but at least they\'re free.')"/>
+    <property name="onInteract" value="speak('A mutant\'s learned abilities are weaker than their spellbook equivalents, but at least they\'re free.')"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="15" tilewidth="16" tileheight="16" nextobjectid="74">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="15" tilewidth="16" tileheight="16" nextobjectid="76">
  <properties>
   <property name="bgm" value="ffl3_final_dungeon"/>
   <property name="name" value="Research Base"/>
@@ -55,28 +55,12 @@
     <property name="onInteract" value="speak('Sorry, restricted access past this point.')"/>
    </properties>
   </object>
-  <object id="59" name="guard" type="Character" x="208" y="112" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_robot"/>
-    <property name="face" value="WEST"/>
-    <property name="hide" value="return not getSwitch('aven01')"/>
-    <property name="onInteract" value="play('world3/lab01.lua')"/>
-   </properties>
-  </object>
   <object id="62" name="guard" type="Character" x="208" y="128" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('aven01')"/>
     <property name="onInteract" value="speak('Sorry, restricted access past this point.')"/>
-   </properties>
-  </object>
-  <object id="63" name="guard" type="Character" x="208" y="128" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_guard"/>
-    <property name="face" value="WEST"/>
-    <property name="hide" value="return not getSwitch('aven01')"/>
-    <property name="onInteract" value="play('world3/lab01.lua')"/>
    </properties>
   </object>
   <object id="64" name="guard" type="Character" x="208" y="144" width="16" height="16">
@@ -91,7 +75,7 @@
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
-    <property name="hide" value="return not getSwitch('aven01')"/>
+    <property name="hide" value="return not getSwitch('aven01') or getSwitch('lab01')"/>
     <property name="onInteract" value="play('world3/lab01.lua')"/>
    </properties>
   </object>
@@ -124,6 +108,22 @@
   <object id="71" name="lab_center" type="Target" x="352" y="112" width="16" height="16"/>
   <object id="72" name="lab_right" type="Target" x="416" y="112" width="16" height="16"/>
   <object id="73" name="lab_left" type="Target" x="288" y="112" width="16" height="16"/>
+  <object id="74" name="guard" type="Character" x="208" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return not getSwitch('aven01') or getSwitch('lab01')"/>
+    <property name="onInteract" value="play('world3/lab01.lua')"/>
+   </properties>
+  </object>
+  <object id="75" name="guard" type="Character" x="208" y="128" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_guard"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return not getSwitch('aven01') or getSwitch('lab01')"/>
+    <property name="onInteract" value="play('world3/lab01.lua')"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="30" height="15">
   <properties>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="66" height="40" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="148">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="66" height="40" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="149">
  <properties>
   <property name="bgm" value="ffl1_town"/>
-  <property name="name" value="Ermengard"/>
+  <property name="name" value="Ermengarde"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
@@ -44,7 +44,7 @@
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="NORTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Many here work at the prison. I wonder why there always so many people in there?')"/>
+    <property name="onInteract" value="speak('Ermengarde Fortress was turned into a prison. I wonder why there are always so many people in there.')"/>
    </properties>
   </object>
   <object id="132" name="npc" type="Character" x="448" y="384" width="16" height="16">
@@ -120,7 +120,7 @@
     <property name="onCollide" value="targetTele('world3/ermengarde_interior.tmx', 'pots')"/>
    </properties>
   </object>
-  <object id="144" name="pub" type="Target" x="464" y="304" width="16" height="16"/>
+  <object id="144" name="weapons" type="Target" x="464" y="304" width="16" height="16"/>
   <object id="145" name="tele" type="Event" x="464" y="288" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/ermengarde_interior.tmx', 'weapons')"/>
@@ -130,6 +130,11 @@
   <object id="147" name="tele" type="Event" x="352" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/ermengarde_interior.tmx', 'inn')"/>
+   </properties>
+  </object>
+  <object id="148" name="block" type="Event" x="816" y="208" width="48" height="48">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>
