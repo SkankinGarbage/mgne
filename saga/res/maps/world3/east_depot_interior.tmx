@@ -27,7 +27,7 @@
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
-    <property name="hide" value="return getSwitch('janine01')"/>
+    <property name="hide" value="return getSwitch('janine01') and not getSwitch('escaped_jail')"/>
     <property name="onInteract" value="play('world3/train_ermengarde_city.lua')"/>
    </properties>
   </object>
@@ -43,21 +43,21 @@
   <object id="25" name="npc" type="Character" x="128" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
-    <property name="hide" value="return not getSwitch('janine01')"/>
+    <property name="hide" value="return not getSwitch('janine01') and not getSwitch('escaped_jail')"/>
     <property name="onInteract" value="play('world3/depot_guard.lua')"/>
    </properties>
   </object>
   <object id="26" name="npc" type="Character" x="112" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
-    <property name="hide" value="return not getSwitch('janine01')"/>
+    <property name="hide" value="return not getSwitch('janine01') and not getSwitch('escaped_jail')"/>
     <property name="onInteract" value="play('world3/depot_guard.lua')"/>
    </properties>
   </object>
   <object id="27" name="npc" type="Character" x="144" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
-    <property name="hide" value="return not getSwitch('janine01')"/>
+    <property name="hide" value="return not getSwitch('janine01') and not getSwitch('escaped_jail')"/>
     <property name="onInteract" value="play('world3/depot_guard.lua')"/>
    </properties>
   </object>
