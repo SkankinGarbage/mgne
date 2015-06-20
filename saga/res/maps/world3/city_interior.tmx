@@ -187,6 +187,7 @@
   <object id="287" name="lucifer" type="Character" x="224" y="576" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lucifer"/>
+    <property name="hide" value="return getSwitch('escaped_jail')"/>
     <property name="onInteract" value="play('world3/lucifer02.lua')"/>
    </properties>
   </object>
@@ -217,6 +218,7 @@
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('escaped_jail')"/>
     <property name="onInteract" value="speak('Guard', 'Watch your step.')"/>
    </properties>
   </object>
@@ -224,6 +226,7 @@
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('escaped_jail')"/>
     <property name="onInteract" value="speak('Guard', 'I have my eye on you.')"/>
    </properties>
   </object>
@@ -231,6 +234,7 @@
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('escaped_jail')"/>
     <property name="onInteract" value="speak('Guard', 'The palace is very secure.')"/>
    </properties>
   </object>
@@ -238,6 +242,7 @@
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('escaped_jail')"/>
     <property name="onInteract" value="speak('Guard', 'Don\'t try anything fishy.')"/>
    </properties>
   </object>
