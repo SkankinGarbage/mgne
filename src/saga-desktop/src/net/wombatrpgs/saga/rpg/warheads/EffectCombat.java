@@ -18,11 +18,13 @@ import net.wombatrpgs.saga.rpg.chara.Chara;
 import net.wombatrpgs.saga.rpg.items.CombatItem;
 import net.wombatrpgs.saga.rpg.warheads.EffectDefend.DefendResult;
 import net.wombatrpgs.saga.rpg.warheads.EffectDefend.PostDefend;
+import net.wombatrpgs.sagaschema.rpg.abil.CombatItemMDO;
 import net.wombatrpgs.sagaschema.rpg.abil.data.OffenseFlag;
 import net.wombatrpgs.sagaschema.rpg.chara.data.Race;
 import net.wombatrpgs.sagaschema.rpg.stats.Flag;
 import net.wombatrpgs.sagaschema.rpg.stats.Stat;
 import net.wombatrpgs.sagaschema.rpg.warheads.EffectCombatMDO;
+import net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO;
 
 /**
  * Superclass for some common combat ability effects. Specifically, the ones
@@ -33,6 +35,7 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 	protected static final float STUN_CHANCE = .6f;
 	
 	protected EffectCombatMDO mdo;
+	protected List<EffectDefend> riderEffects;
 
 	/**
 	 * Inherited constructor.
@@ -43,6 +46,21 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 		super(mdo, item);
 		if (mdo.slayerFamiles == null) mdo.slayerFamiles = new String[0];
 		this.mdo = mdo;
+		
+		riderEffects = new ArrayList<EffectDefend>();
+		if (mdo.riders != null) {
+			for (EffectDefendMDO riderMDO : mdo.riders) {
+				EffectDefend rider = new EffectDefend(riderMDO);
+				assets.add(rider);
+				
+				CombatItemMDO newMDO = new CombatItemMDO();
+				newMDO.abilityName = item.getName();
+				newMDO.uses = 0;
+				new CombatItem(newMDO, rider);
+				
+				riderEffects.add(rider);
+			}
+		}
 	}
 	
 	/**
@@ -198,6 +216,20 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 	 * @return					True if effect is physical, false otherwise
 	 */
 	protected abstract boolean isPhysical();
+	
+	/**
+	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#onRoundStart
+	 * (net.wombatrpgs.saga.rpg.battle.Intent)
+	 */
+	@Override
+	public void onRoundStart(Intent intent) {
+		super.onRoundStart(intent);
+		for (EffectDefend rider : riderEffects) {
+			List<Chara> targets = new ArrayList<Chara>();
+			targets.add(intent.getActor());
+			rider.setDefenders(intent.getBattle(), targets);
+		}
+	}
 	
 	/**
 	 * @see net.wombatrpgs.saga.rpg.warheads.EffectEnemyTarget#onResolveComplete

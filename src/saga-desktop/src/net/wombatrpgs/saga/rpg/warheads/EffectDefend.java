@@ -6,6 +6,8 @@
  */
 package net.wombatrpgs.saga.rpg.warheads;
 
+import java.util.List;
+
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.saga.core.SConstants;
 import net.wombatrpgs.saga.rpg.battle.Battle;
@@ -26,6 +28,7 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 
 	protected EffectDefendMDO mdo;
 	protected CombatItem counterItem;
+	protected boolean silent;
 	
 	/**
 	 * Inherited constructor.
@@ -44,6 +47,15 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 			newMDO.uses = 0;
 			counterItem = new CombatItem(newMDO, counter);
 		}
+	}
+	
+	/**
+	 * Creates a new silent rider defense effect.
+	 * @param	mdo				The data to create from
+	 */
+	public EffectDefend(EffectDefendMDO mdo) {
+		this(mdo, null);
+		silent = true;
 	}
 
 	/** @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#isMapUsable() */
@@ -75,28 +87,30 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 	 */
 	@Override
 	public void resolve(Intent intent) {
-		Battle battle = intent.getBattle();
-		Chara user = intent.getActor();
-		String username = user.getName();
-		CombatItem item = intent.getItem();
-		String itemname = item.getName();
-		Chara victim = intent.getTargets().get(0);
-		String defendname = "'";
-		switch (mdo.projector) {
-		case ALLY_PARTY:
-			defendname = "all ";
-			break;
-		case PLAYER_PARTY_ENEMY_GROUP:
-			defendname = "group ";
-			break;
-		case SINGLE_ALLY:
-			defendname = victim.getName() + " ";
-			break;
-		case USER:
-			defendname = "";
-			break;
+		if (!silent) {
+			Battle battle = intent.getBattle();
+			Chara user = intent.getActor();
+			String username = user.getName();
+			CombatItem item = intent.getItem();
+			String itemname = item.getName();
+			Chara victim = intent.getTargets().get(0);
+			String defendname = "'";
+			switch (mdo.projector) {
+			case ALLY_PARTY:
+				defendname = "all ";
+				break;
+			case PLAYER_PARTY_ENEMY_GROUP:
+				defendname = "group ";
+				break;
+			case SINGLE_ALLY:
+				defendname = victim.getName() + " ";
+				break;
+			case USER:
+				defendname = "";
+				break;
+			}
+			battle.println(username + " defends " + defendname + "by " + itemname + ".");
 		}
-		battle.println(username + " defends " + defendname + "by " + itemname + ".");
 	}
 
 	/**
@@ -106,8 +120,16 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 	@Override
 	public void onRoundStart(Intent intent) {
 		super.onRoundStart(intent);
-		Battle battle = intent.getBattle();
-		for (Chara target : intent.getTargets()) {
+		setDefenders(intent.getBattle(), intent.getTargets());
+	}
+	
+	/**
+	 * Covers the targets with this defense's effect.
+	 * @param	battle			The context to apply the effect in
+	 * @param	targets			The targets to protect
+	 */
+	public void setDefenders(Battle battle, List<Chara> targets) {
+		for (Chara target : targets) {
 			battle.applyDefendBoost(target, new SagaStats(mdo.stats));
 			battle.applyDefense(target, this);
 		}

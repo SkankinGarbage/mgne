@@ -47,7 +47,7 @@ public class Annotations {
 	@Target(ElementType.FIELD)
 	@Retention(RetentionPolicy.RUNTIME)
 	public @interface InlineSchema {
-		Class<? extends HeadlessSchema> value();
+		Class<? extends Schema> value();
 	}
 	
 	@Target(ElementType.FIELD)

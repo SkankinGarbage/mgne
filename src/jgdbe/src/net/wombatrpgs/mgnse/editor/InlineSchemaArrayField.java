@@ -10,7 +10,6 @@ import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 
 import net.wombatrpgs.mgns.core.Annotations.InlineSchema;
-import net.wombatrpgs.mgns.core.HeadlessSchema;
 import net.wombatrpgs.mgns.core.Schema;
 import net.wombatrpgs.mgnse.Global;
 
@@ -37,7 +36,7 @@ public class InlineSchemaArrayField extends ArrayField<EditorPanel> {
 	@Override
 	protected EditorPanel genInput() {
 		try {
-			HeadlessSchema s = source.getAnnotation(InlineSchema.class).value().newInstance();
+			Schema s = source.getAnnotation(InlineSchema.class).value().newInstance();
 			return genInput(s);
 		} catch (InstantiationException e) {
 			Global.instance().err("Couldn't make a new schema for field " + source, e);

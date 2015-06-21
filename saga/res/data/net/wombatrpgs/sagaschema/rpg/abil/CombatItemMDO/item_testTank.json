@@ -1,0 +1,21 @@
+{
+	"key" : "item_testTank",
+	"subfolder" : "test",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$GTANK",
+	"itemDescription" : "",
+	"type" : "ITEM",
+	"uses" : 30,
+	"cost" : 0,
+	"anim" : "banim_missile",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_-431973588"
+	},
+	"tier" : 7,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

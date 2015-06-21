@@ -12,11 +12,13 @@
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 0,
 	"gp" : 0,
+	"loot" : "None",
 	"equipped" : [
 		"item_testsword",
 		"item_testDefend",
 		"item_testSMG",
-		"abil_dgaze"
+		"abil_dgaze",
+		"item_testTank"
 	],
 	"stats" : {
 		"hp" : 40,

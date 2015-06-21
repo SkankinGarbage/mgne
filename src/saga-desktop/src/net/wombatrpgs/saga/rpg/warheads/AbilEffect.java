@@ -64,6 +64,15 @@ public abstract class AbilEffect extends AssetQueuer {
 	}
 	
 	/**
+	 * Sets the item parent of this abil effect. Shouldn't used except for weird
+	 * multi-effect rider setups.
+	 * @param	item			The item to set as owner
+	 */
+	public void setItem(CombatItem item) {
+		this.item = item;
+	}
+	
+	/**
 	 * Construct an intent from the player's input. This should use the battle
 	 * to request user input, set the fields of a new input, then pass it to
 	 * the listener. Could be a new intent or an edit. If the item isn't

@@ -86,6 +86,8 @@ public class CombatItem extends AssetQueuer {
 		this.effect = effect;
 		if (effect == null) {
 			MGlobal.reporter.err("Null effect for mdo: " + mdo);
+		} else {
+			effect.setItem(this);
 		}
 	}
 	

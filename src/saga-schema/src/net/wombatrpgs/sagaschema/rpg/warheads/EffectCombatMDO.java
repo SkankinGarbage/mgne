@@ -6,6 +6,7 @@
  */
 package net.wombatrpgs.sagaschema.rpg.warheads;
 
+import net.wombatrpgs.mgns.core.Annotations.InlineSchema;
 import net.wombatrpgs.mgns.core.Annotations.DefaultValue;
 import net.wombatrpgs.mgns.core.Annotations.Desc;
 import net.wombatrpgs.mgns.core.Annotations.SchemaLink;
@@ -28,5 +29,9 @@ public abstract class EffectCombatMDO extends EffectEnemyTargetMDO {
 	@Desc("Slayer families - monsters in these families will be weak")
 	@SchemaLink(MonsterFamilyMDO.class)
 	public String[] slayerFamiles;
+	
+	@Desc("Riders - an invisible defensive ability that also applies")
+	@InlineSchema(EffectDefendMDO.class)
+	public EffectDefendMDO[] riders;
 
 }
