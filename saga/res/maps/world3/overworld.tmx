@@ -94,7 +94,7 @@
   </object>
   <object id="70" name="Island Caves" type="Event" x="848" y="336" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world3/sea_caves.tmx', 18, 14)"/>
+    <property name="onCollide" value="teleport('world3/sea_caves.tmx', 18, 14, 'SOUTH')"/>
    </properties>
   </object>
   <object id="71" name="block" type="Event" x="272" y="400" width="16" height="16">
@@ -105,7 +105,7 @@
   <object id="74" name="Gate" type="Event" x="640" y="400" width="16" height="32">
    <properties>
     <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate')"/>
-    <property name="onCollide" value="teleport('world3/gate.tmx', 33, 36, 'NORTH')"/>
+    <property name="onCollide" value="teleport('world3/gate.tmx', 33, 37, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>

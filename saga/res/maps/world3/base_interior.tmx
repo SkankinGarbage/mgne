@@ -119,7 +119,7 @@
    <properties>
     <property name="appearance" value="4dir_aven"/>
     <property name="face" value="SOUTH"/>
-    <property name="hide" value="return not getSwitch('aven03') or getSwitch('aven04')"/>
+    <property name="hide" value="return not getSwitch('aven03') or getSwitch('mines_done')"/>
     <property name="onInteract" value="speak('Aven', 'The City of Angels runs a plutonium mine and refinery in the northeast. Sabotage it.')"/>
    </properties>
   </object>
@@ -133,7 +133,7 @@
   </object>
   <object id="162" name="chest" type="Chest" x="176" y="400" width="16" height="16">
    <properties>
-    <property name="hide" value="return not getSwitch('aven04')"/>
+    <property name="hide" value="return not getSwitch('aven04') or hasItem('key_railCard')"/>
     <property name="item" value="key_railCard"/>
     <property name="keyItem" value="KEY_ITEM"/>
    </properties>
@@ -142,15 +142,15 @@
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="NORTH"/>
-    <property name="hide" value="return not getSwitch('machine_dead')"/>
+    <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate')"/>
     <property name="onInteract" value="speak('Thank you again.')"/>
    </properties>
   </object>
   <object id="165" name="aven" type="Character" x="400" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
-    <property name="face" value="SOUTh"/>
-    <property name="hide" value="return not getSwitch('machine_dead')"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate')"/>
     <property name="onInteract" value="play('world3/aven05.lua')"/>
    </properties>
   </object>

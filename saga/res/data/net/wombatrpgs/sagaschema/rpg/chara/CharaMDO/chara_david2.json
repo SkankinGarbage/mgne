@@ -1,0 +1,34 @@
+{
+	"key" : "chara_david2",
+	"subfolder" : "npcs",
+	"name" : "David",
+	"description" : "",
+	"gender" : "MALE",
+	"race" : "HUMAN",
+	"family" : "None",
+	"species" : "",
+	"appearance" : "4dir_david",
+	"portrait" : "None",
+	"meatEatLevel" : 0,
+	"meatTargetLevel" : 0,
+	"gp" : 0,
+	"loot" : "None",
+	"equipped" : [
+		"wpn_axeRune",
+		"shield_dragon",
+		"wpn_gunVulcan",
+		"helm_diamond",
+		"hand_diamond"
+	],
+	"stats" : {
+		"hp" : 320,
+		"mhp" : 320,
+		"str" : 43,
+		"def" : 0,
+		"agi" : 32,
+		"mana" : 0,
+		"flags" : [
+			"EQUIPMENT_FIX"
+		]
+	}
+}

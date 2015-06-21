@@ -265,6 +265,11 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="67">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
  <tile id="68">
   <properties>
    <property name="x" value=""/>
@@ -368,6 +373,11 @@
  <tile id="115">
   <properties>
    <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="116">
+  <properties>
+   <property name="o" value=""/>
   </properties>
  </tile>
  <tile id="120">

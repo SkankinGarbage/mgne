@@ -1,5 +1,5 @@
 local hero1 = getHero(0).getName()
-local hero2 = getHero(4).getName()
+local hero2 = getHero(3).getName()
 
 speak("Zkauba", "Aven! These traitors let the scientist go!")
 speak(hero1, "Her name's Janine. She's Jonas's twin.")

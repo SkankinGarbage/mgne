@@ -1,0 +1,21 @@
+{
+	"key" : "wpn_cannonMissile",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$YMISSILE",
+	"itemDescription" : "",
+	"type" : "ITEM",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_missile",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_-1453740790"
+	},
+	"tier" : 8,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

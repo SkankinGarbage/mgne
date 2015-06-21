@@ -1,0 +1,21 @@
+{
+	"key" : "wpn_axeRune",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$RRUNE",
+	"itemDescription" : "Attacks with weapon damage and reflects elemental damage (tier 7)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 22000,
+	"anim" : "banim_slash",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_-563182277"
+	},
+	"tier" : 7,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

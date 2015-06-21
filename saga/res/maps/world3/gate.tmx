@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="48" tilewidth="16" tileheight="16" nextobjectid="109">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="48" tilewidth="16" tileheight="16" nextobjectid="110">
  <properties>
   <property name="bgm" value="ffl2_apollo"/>
   <property name="name" value="F10 Gate"/>
@@ -133,31 +133,41 @@
   <object id="102" name="aven" type="Character" x="512" y="608" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
-    <property name="hide" value="return not getSwitch('machine_dead')"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate')"/>
    </properties>
   </object>
   <object id="103" name="zkauba" type="Character" x="544" y="608" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
-    <property name="hide" value="return not getSwitch('machine_dead')"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate')"/>
    </properties>
   </object>
   <object id="104" name="david" type="Character" x="528" y="480" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_david"/>
-    <property name="hide" value="return not getSwitch('visitors_appear')"/>
+    <property name="hide" value="return not getSwitch('visitors_appear') or getSwitch('world3_gate')"/>
    </properties>
   </object>
   <object id="105" name="lara" type="Character" x="528" y="480" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
-    <property name="hide" value="return not getSwitch('visitors_appear')"/>
+    <property name="hide" value="return not getSwitch('visitors_appear') or getSwitch('world3_gate')"/>
    </properties>
   </object>
   <object id="107" name="autostart" type="Event" x="496" y="480" width="16" height="16">
    <properties>
-    <property name="hide" value="return getSwitch('world3_gate.lua')"/>
+    <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate.lua')"/>
     <property name="onEnter" value="play('world3/gate.lua')"/>
+   </properties>
+  </object>
+  <object id="109" name="zkauba" type="Character" x="544" y="512" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_zkauba"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return not getSwitch('world3_gate')"/>
+    <property name="onInteract" value="speak('Zkauba', 'Good luck!')"/>
    </properties>
   </object>
  </objectgroup>

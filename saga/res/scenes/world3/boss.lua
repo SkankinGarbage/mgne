@@ -9,6 +9,8 @@ speak("????", "INTRUDER ALERT. GET THEM! GET THEM!")
 
 sceneSwitch('machine_dead', true)
 battle('party_bossMachine', false, 'ffl1_boss')
+face('hero', 'NORTH')
+playBGM('ffl3_ruins')
 
 speak("Zkauba", "You saved me. I underestimated you, " .. hero1 .. ".")
 speak(hero1, "It was nothing.")

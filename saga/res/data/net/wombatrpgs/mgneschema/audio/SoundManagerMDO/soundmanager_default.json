@@ -43,6 +43,10 @@
 		{
 			"key" : "knife",
 			"file" : "ffl1_24_knife.wav"
+		},
+		{
+			"key" : "flare",
+			"file" : "ffl1_02_flare.wav"
 		}
 	],
 	"emuMusicEntries" : [

@@ -1,0 +1,21 @@
+{
+	"key" : "abil_dbeam",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "DEATH BEAM",
+	"itemDescription" : "Inflicts fixed damage aimed by user strength",
+	"type" : "ABILITY",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_beam",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_-1396451924"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

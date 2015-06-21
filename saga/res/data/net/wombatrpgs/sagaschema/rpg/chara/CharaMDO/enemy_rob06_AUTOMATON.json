@@ -16,7 +16,7 @@
 	"equipped" : [
 		"abil_punch",
 		"abil_bash",
-		"abil_beam",
+		"wpn_gunVulcan",
 		"abil_xthunder",
 		"abil_xice"
 	],
