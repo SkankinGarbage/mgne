@@ -1,0 +1,34 @@
+{
+	"key" : "enemy_bossMachine",
+	"subfolder" : "boss",
+	"name" : "MACHINE",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "ROBOT",
+	"family" : "None",
+	"species" : "MACHINE",
+	"appearance" : "4dir_aven",
+	"portrait" : "battle_portraits/boss_machine.png",
+	"meatEatLevel" : 8,
+	"meatTargetLevel" : 8,
+	"gp" : 5000,
+	"loot" : "wpn_cannonRocket",
+	"equipped" : [
+		"abil_bash",
+		"abil_beam",
+		"wpn_cannonRocket",
+		"abil_bash",
+		"abil_oweapon",
+		"abil_opara",
+		"abil_ostone"
+	],
+	"stats" : {
+		"hp" : 1800,
+		"mhp" : 1800,
+		"str" : 45,
+		"def" : 25,
+		"agi" : 35,
+		"mana" : 0,
+		"flags" : [ ]
+	}
+}

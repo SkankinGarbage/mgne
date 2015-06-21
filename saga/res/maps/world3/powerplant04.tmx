@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="21" tilewidth="16" tileheight="16" nextobjectid="92">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="21" tilewidth="16" tileheight="16" nextobjectid="93">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="name" value="Power Plant"/>
@@ -27,6 +27,12 @@
   <object id="91" name="tele" type="Event" x="144" y="304" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/powerplant03.tmx', 'stairs2')"/>
+   </properties>
+  </object>
+  <object id="92" name="zkauba" type="Character" x="144" y="160" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('left_power_plant')"/>
+    <property name="onInteract" value="play('world3/boss.lua')"/>
    </properties>
   </object>
  </objectgroup>
