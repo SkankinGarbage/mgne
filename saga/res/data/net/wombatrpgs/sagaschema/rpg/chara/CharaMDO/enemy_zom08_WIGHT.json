@@ -2,7 +2,7 @@
 	"key" : "enemy_zom08_WIGHT",
 	"subfolder" : "level08",
 	"name" : "WIGHT",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_zom",
@@ -12,14 +12,22 @@
 	"meatEatLevel" : 9,
 	"meatTargetLevel" : 8,
 	"gp" : 900,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_touch",
+		"abil_opara",
+		"abil_oice"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 43,
+		"def" : 20,
+		"agi" : 34,
+		"mana" : 36,
+		"flags" : [
+			"UNDEAD"
+		]
 	}
 }

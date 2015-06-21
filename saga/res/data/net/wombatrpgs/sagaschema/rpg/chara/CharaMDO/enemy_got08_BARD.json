@@ -2,7 +2,7 @@
 	"key" : "enemy_got08_BARD",
 	"subfolder" : "level08",
 	"name" : "BARD",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_got",
@@ -12,14 +12,18 @@
 	"meatEatLevel" : 9,
 	"meatTargetLevel" : 8,
 	"gp" : 900,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_horn",
+		"abil_sleep"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 295,
+		"mhp" : 295,
+		"str" : 42,
+		"def" : 29,
+		"agi" : 39,
+		"mana" : 36,
+		"flags" : [ ]
 	}
 }

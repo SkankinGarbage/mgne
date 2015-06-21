@@ -1,0 +1,21 @@
+{
+	"key" : "abil_sing",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "SING",
+	"itemDescription" : "Inflicts confusion on a party",
+	"type" : "ABILITY",
+	"uses" : 3,
+	"cost" : 0,
+	"anim" : "banim_riddle",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-1733511300"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

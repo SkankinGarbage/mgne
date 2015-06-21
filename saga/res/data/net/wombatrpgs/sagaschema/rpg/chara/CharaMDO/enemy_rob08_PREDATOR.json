@@ -2,25 +2,29 @@
 	"key" : "enemy_rob08_PREDATOR",
 	"subfolder" : "level08",
 	"name" : "PREDATOR",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_rob",
+	"family" : "None",
 	"species" : "PREDATOR",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/rob.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 8,
 	"gp" : 900,
-	"loot" : null,
-	"equipped" : [ ],
+	"loot" : "wpn_cannonRocket",
+	"equipped" : [
+		"wpn_cannonRocket",
+		"abil_ambush",
+		"abil_opoison"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 265,
+		"mhp" : 265,
+		"str" : 40,
+		"def" : 30,
+		"agi" : 40,
+		"mana" : 0,
+		"flags" : [ ]
 	}
 }

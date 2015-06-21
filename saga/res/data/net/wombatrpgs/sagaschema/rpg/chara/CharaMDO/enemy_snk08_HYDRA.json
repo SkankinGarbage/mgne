@@ -2,24 +2,30 @@
 	"key" : "enemy_snk08_HYDRA",
 	"subfolder" : "level08",
 	"name" : "HYDRA",
-	"description" : "Converted from a report",
+	"description" : "HIGH",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_snk",
 	"species" : "HYDRA",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_jelly",
+	"portrait" : "battle_portraits/snk.png",
 	"meatEatLevel" : 9,
 	"meatTargetLevel" : 8,
 	"gp" : 900,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_5heads",
+		"abil_tail",
+		"abil_constrict",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 330,
+		"mhp" : 330,
+		"str" : 39,
+		"def" : 26,
+		"agi" : 41,
+		"mana" : 21,
+		"flags" : [ ]
 	}
 }

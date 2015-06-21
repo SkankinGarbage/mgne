@@ -2,24 +2,28 @@
 	"key" : "enemy_tmp08_SIREN",
 	"subfolder" : "level08",
 	"name" : "SIREN",
-	"description" : "Converted from a report",
+	"description" : "MED",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_tmp",
 	"species" : "SIREN",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/tmp.png",
 	"meatEatLevel" : 9,
 	"meatTargetLevel" : 8,
 	"gp" : 900,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_tail",
+		"abil_sing"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 231,
+		"mhp" : 231,
+		"str" : 27,
+		"def" : 27,
+		"agi" : 39,
+		"mana" : 34,
+		"flags" : [ ]
 	}
 }

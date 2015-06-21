@@ -2,24 +2,31 @@
 	"key" : "enemy_goo08_TORORO",
 	"subfolder" : "level08",
 	"name" : "TORORO",
-	"description" : "Converted from a report",
+	"description" : "HI",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_goo",
 	"species" : "TORORO",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_slime",
+	"portrait" : "battle_portraits/goo.png",
 	"meatEatLevel" : 9,
 	"meatTargetLevel" : 8,
 	"gp" : 900,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_melt",
+		"abil_gas",
+		"abil_oweapon",
+		"abil_ostone",
+		"abil_xthunder"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 295,
+		"mhp" : 295,
+		"str" : 5,
+		"def" : 30,
+		"agi" : 32,
+		"mana" : 45,
+		"flags" : [ ]
 	}
 }

@@ -1,15 +1,15 @@
 {
-	"key" : "anon_CombatItemMDO_-1718322700",
+	"key" : "anon_CombatItemMDO_-1655516155",
 	"subfolder" : "",
-	"name" : "anon_CombatItemMDO_-1718322700",
+	"name" : "anon_CombatItemMDO_-1655516155",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
-	"damType" : "PHYSICAL",
+	"damType" : "WEAPON",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],
-	"power" : 2,
-	"hits" : "2,2,1",
+	"power" : 4,
+	"hits" : "1,2",
 	"attackStat" : "STR",
 	"defendStat" : "DEF"
 }

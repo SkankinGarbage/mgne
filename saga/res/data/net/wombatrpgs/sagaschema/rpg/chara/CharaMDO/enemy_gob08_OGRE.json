@@ -2,24 +2,29 @@
 	"key" : "enemy_gob08_OGRE",
 	"subfolder" : "level08",
 	"name" : "OGRE",
-	"description" : "Converted from a report",
+	"description" : "MED",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gob",
 	"species" : "OGRE",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_elf",
+	"portrait" : "battle_portraits/gob.png",
 	"meatEatLevel" : 9,
 	"meatTargetLevel" : 8,
 	"gp" : 900,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_punch",
+		"abil_bite",
+		"abil_sleep"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 330,
+		"mhp" : 330,
+		"str" : 49,
+		"def" : 34,
+		"agi" : 28,
+		"mana" : 23,
+		"flags" : [ ]
 	}
 }
