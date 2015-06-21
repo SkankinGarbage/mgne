@@ -2,7 +2,7 @@
 	"key" : "enemy_gun06_BOMBADIER",
 	"subfolder" : "level07",
 	"name" : "BOMBADIER",
-	"description" : "threat 1",
+	"description" : "MED",
 	"gender" : "NONE",
 	"race" : "HUMAN",
 	"family" : "None",
@@ -12,7 +12,7 @@
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 6,
 	"gp" : 600,
-	"loot" : "None",
+	"loot" : "wpn_cannonRocket",
 	"equipped" : [
 		"wpn_cannonRocket"
 	],

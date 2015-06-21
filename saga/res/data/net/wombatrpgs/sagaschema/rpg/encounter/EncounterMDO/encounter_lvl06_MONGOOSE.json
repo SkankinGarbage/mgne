@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl06_MONGOOSE",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wsl06_MONGOOSE",
+			"amount" : "1"
+		}
+	]
+}

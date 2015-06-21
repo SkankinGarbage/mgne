@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl06_TROLL",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_gob06_TROLL",
+			"amount" : "1"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl06_OOZE",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_goo06_OOZE",
+			"amount" : "1"
+		}
+	]
+}

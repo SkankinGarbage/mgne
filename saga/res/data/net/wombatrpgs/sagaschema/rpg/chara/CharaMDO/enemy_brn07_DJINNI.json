@@ -2,7 +2,7 @@
 	"key" : "enemy_brn07_DJINNI",
 	"subfolder" : "level07",
 	"name" : "DJINNI",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_brn",
@@ -24,7 +24,7 @@
 		"mhp" : 202,
 		"str" : 31,
 		"def" : 19,
-		"agi" : 28,
+		"agi" : 34,
 		"mana" : 29,
 		"flags" : [ ]
 	}

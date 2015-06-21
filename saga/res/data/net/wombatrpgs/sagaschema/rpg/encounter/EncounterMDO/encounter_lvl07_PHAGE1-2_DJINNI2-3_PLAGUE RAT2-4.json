@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl07_PHAGE1-2_DJINNI2-3_PLAGUE RAT2-4",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dis07_PHAGE",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_brn07_DJINNI",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_rat07_PLAGUE RAT",
+			"amount" : "3-4"
+		}
+	]
+}

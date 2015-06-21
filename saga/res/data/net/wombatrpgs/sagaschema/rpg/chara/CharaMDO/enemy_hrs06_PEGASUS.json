@@ -22,10 +22,10 @@
 	"stats" : {
 		"hp" : 175,
 		"mhp" : 175,
-		"str" : 31,
+		"str" : 35,
 		"def" : 18,
-		"agi" : 31,
+		"agi" : 39,
 		"mana" : 25,
-		"flags" : []
+		"flags" : [ ]
 	}
 }

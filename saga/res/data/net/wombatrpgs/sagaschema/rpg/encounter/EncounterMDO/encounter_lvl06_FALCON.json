@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl06_FALCON",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_brd06_FALCON",
+			"amount" : "1"
+		}
+	]
+}

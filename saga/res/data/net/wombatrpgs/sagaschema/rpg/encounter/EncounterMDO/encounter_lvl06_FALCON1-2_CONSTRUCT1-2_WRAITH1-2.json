@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl06_FALCON1-2_CONSTRUCT1-2_WRAITH1-2",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_brd06_FALCON",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_gol06_CONSTRUCT",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_gst06_WRAITH",
+			"amount" : "1-2"
+		}
+	]
+}

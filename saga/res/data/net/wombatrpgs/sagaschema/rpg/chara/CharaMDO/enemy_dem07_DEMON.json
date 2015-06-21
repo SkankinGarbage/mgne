@@ -2,7 +2,7 @@
 	"key" : "enemy_dem07_DEMON",
 	"subfolder" : "level07",
 	"name" : "DEMON",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_dem",

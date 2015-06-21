@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl06_CONSTRUCT",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "chara_borg",
+			"amount" : ""
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl06_FAIRY1-2_TROLL1-2_WITCH1-2",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_elf06_FAIRY",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_gob06_TROLL",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_hag06_WITCH",
+			"amount" : "1-2"
+		}
+	]
+}

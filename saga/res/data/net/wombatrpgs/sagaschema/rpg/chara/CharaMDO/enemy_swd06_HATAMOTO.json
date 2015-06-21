@@ -2,7 +2,7 @@
 	"key" : "enemy_swd06_HATAMOTO",
 	"subfolder" : "level06",
 	"name" : "HATAMOTO",
-	"description" : "",
+	"description" : "threat 1",
 	"gender" : "MALE",
 	"race" : "HUMAN",
 	"family" : "None",

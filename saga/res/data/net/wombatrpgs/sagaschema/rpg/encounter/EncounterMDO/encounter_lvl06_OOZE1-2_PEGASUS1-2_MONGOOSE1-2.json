@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl06_OOZE1-2_PEGASUS1-2_MONGOOSE1-2",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_goo06_OOZE",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_hrs06_PEGASUS",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_wsl06_MONGOOSE",
+			"amount" : "1-2"
+		}
+	]
+}

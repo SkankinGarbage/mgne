@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl06_PEGASUS2-5",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_hrs06_PEGASUS",
+			"amount" : "2-5"
+		}
+	]
+}

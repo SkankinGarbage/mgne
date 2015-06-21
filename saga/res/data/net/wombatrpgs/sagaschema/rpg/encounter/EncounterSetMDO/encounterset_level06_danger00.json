@@ -1,0 +1,61 @@
+{
+	"key" : "encounterset_level06_danger00",
+	"subfolder" : "level06",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl06_TROLL",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl06_OOZE",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl06_MONGOOSE",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl06_FALCON",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl06_AUTOMATON2-3_WRAITH",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl06_BLACK DOG1-2_FAIRY1-2",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl06_CONSTRUCT_WITCH",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl06_HATAMOTO1-2_AUTOMATON1-2",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl06_PEGASUS2-5",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl06_OOZE1-2_PEGASUS1-2_MONGOOSE1-2",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl06_FALCON1-2_CONSTRUCT1-2_WRAITH1-2",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl06_FAIRY1-2_TROLL1-2_WITCH1-2",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl06_ARMADILLO3-4_CONSTRUCT_BLACK DOG",
+			"weight" : 12
+		}
+	],
+	"steps" : 38
+}
