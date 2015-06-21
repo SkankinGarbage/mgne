@@ -11,6 +11,7 @@ import java.util.List;
 
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.core.lua.LoadableScript;
+import net.wombatrpgs.mgne.scenes.commands.SceneBGM;
 import net.wombatrpgs.mgne.scenes.commands.SceneFace;
 import net.wombatrpgs.mgne.scenes.commands.SceneHideAvatar;
 import net.wombatrpgs.mgne.scenes.commands.ScenePathToEvent;
@@ -56,6 +57,7 @@ public class SceneLib extends TwoArgFunction {
 		env.set("pathEvent", new ScenePathToEvent());
 		env.set("playSound", new SceneSound());
 		env.set("targetTele", new SceneTargetTele());
+		env.set("playBGM", new SceneBGM());
 		
 		env.set("scenelib", library);
 		return library;

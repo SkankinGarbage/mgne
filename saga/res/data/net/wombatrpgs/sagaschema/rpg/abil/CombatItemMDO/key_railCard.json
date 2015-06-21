@@ -1,0 +1,21 @@
+{
+	"key" : "key_railCard",
+	"subfolder" : "key",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "RAIL CARD",
+	"itemDescription" : "Allows access to the power plant via monorail",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectNothingMDO",
+		"key" : "anon_CombatItemMDO_877698937"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

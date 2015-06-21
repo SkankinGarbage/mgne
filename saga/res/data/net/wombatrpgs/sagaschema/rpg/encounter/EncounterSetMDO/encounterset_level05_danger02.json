@@ -31,6 +31,10 @@
 		{
 			"encounter" : "encounter_lvl05_GHOUL",
 			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl05_FIREBALL_WERERAT0-3",
+			"weight" : 32
 		}
 	],
 	"steps" : 42

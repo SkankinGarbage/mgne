@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="71">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="74">
  <properties>
   <property name="battle_bgm" value="ffl1_battle"/>
   <property name="bgm" value="ffl1_overworld"/>
@@ -50,11 +50,6 @@
     <property name="onCollide" value="teleport('world3/lab_foyer.tmx', 7, 12, 'NORTH')"/>
    </properties>
   </object>
-  <object id="57" name="Power Plant" type="Event" x="224" y="400" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world3/xxx.tmx', 0, 0)"/>
-   </properties>
-  </object>
   <object id="58" name="Rebel Base" type="Event" x="448" y="736" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/base.tmx', 13, 18, 'EAST')"/>
@@ -99,6 +94,11 @@
   <object id="70" name="Island Caves" type="Event" x="848" y="336" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/sea_caves.tmx', 18, 14)"/>
+   </properties>
+  </object>
+  <object id="71" name="block" type="Event" x="272" y="400" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>

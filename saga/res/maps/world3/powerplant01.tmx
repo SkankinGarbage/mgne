@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="24" height="17" tilewidth="16" tileheight="16" nextobjectid="93">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="name" value="Power Plant"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="24" height="17">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgwA66qIDxAZB8HwWYGPPnUICJMd+DAtxHY/Pn4DEXhlspxLjMt6CC+3GFP0jcf9T8YWk+LF36M6CmU2zYgwg16KAXiPuBuAXKxlW2EKsGHcwG4rlQvSA2rrKFWDUMUHW0xN40xgDWsZ3lYAYAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="24" height="17">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSQAowYGRiMgdiEESF2ZuCcMwpGwaAFAATvKIxgBgAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="90" name="npc" type="Character" x="224" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="play('world3/train_powerplant_gate.lua')"/>
+   </properties>
+  </object>
+  <object id="91" name="tele" type="Event" x="80" y="96" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/powerplant02.tmx', 'stairs1')"/>
+   </properties>
+  </object>
+  <object id="92" name="stairs" type="Target" x="80" y="112" width="16" height="16"/>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="24" height="17">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCqgPAD56KvlgBgAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="24" height="17">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCqgPAD56KvlgBgAA
+  </data>
+ </layer>
+</map>

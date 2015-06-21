@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="21" tilewidth="16" tileheight="16" nextobjectid="92">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="name" value="Power Plant"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="19" height="21">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC83UwQ2AMAwDwLJWB+lC4cPW8KkUWbbT/IjkJydTSsbQEyTdyc8+KR1TGZjKVMadoszKuU2cF8KYJMyM5AQ4+7n15UpZxMTzwz5oYBbppzqdWKpbp5Pq9ncrwJqFM8HK597txjrh3T3p5joN802Zxc5oO9vC++v+R7ZPBvGcqXYSG7VT8H0qx5lsd3WHWW5eJZAcGTwGAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="19" height="21">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCkgDAITB1j48BgAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="90" name="stairs" type="Target" x="144" y="288" width="16" height="16"/>
+  <object id="91" name="tele" type="Event" x="144" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/powerplant03.tmx', 'stairs2')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="19" height="21">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglFAb9A80A6gEAAAORy7ujwGAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="19" height="21">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwlIE0I/XMUiHSLAD2lJvGPAYAAA==
+  </data>
+ </layer>
+</map>

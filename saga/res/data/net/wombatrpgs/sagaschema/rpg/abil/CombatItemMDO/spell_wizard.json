@@ -1,0 +1,21 @@
+{
+	"key" : "spell_wizard",
+	"subfolder" : "spell",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$QWIZARD",
+	"itemDescription" : "Attacks a party with fire damage",
+	"type" : "ITEM",
+	"uses" : 17,
+	"cost" : 11700,
+	"anim" : "banim_flame",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_1715220309"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

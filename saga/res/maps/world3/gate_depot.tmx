@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="15" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="181">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="15" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="182">
  <properties>
   <property name="bgm" value="ffl1_overworld"/>
   <property name="name" value="F10 Gate"/>
@@ -49,13 +49,22 @@
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="play('world3/train_gate_powerplant.lua')"/>
+    <property name="hide" value="return hasItem('key_railCard')"/>
+    <property name="onInteract" value="speak('Conductor', 'Sorry, access to the power plant is restricted.')"/>
    </properties>
   </object>
   <object id="179" name="door" type="Target" x="128" y="192" width="16" height="16"/>
   <object id="180" name="tele" type="Event" x="128" y="208" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/gate.tmx', 'door')"/>
+   </properties>
+  </object>
+  <object id="181" name="npc" type="Character" x="96" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return not hasItem('key_railCard')"/>
+    <property name="onInteract" value="play('world3/train_gate_powerplant.lua')"/>
    </properties>
   </object>
  </objectgroup>

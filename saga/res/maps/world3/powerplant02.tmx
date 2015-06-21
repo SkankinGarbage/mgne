@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="49" height="26" tilewidth="16" tileheight="16" nextobjectid="98">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="name" value="Power Plant"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="49" height="26">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2UOwoDMQxE9wrpcpTcwcVeKo1z6lQCMehr5E8gAyqyDKs3Ga+vq1bvwJwqzvhh84DfJ2bR2GmeyvNTsljs0dmZo4J/d44qfp6jgil6j1R24HUR5bKYNH8lv9ZFlCvyn2b9FV1kuKI8/N0z+Ef3/DP8ZoaZ38Lonqy3LcqQ2UMZuuPr0LHnH53sHvKTV/P3gXdXZohwYQ5ppHu7Ooe1x+Nqjp/7LuaflQH3ZLm0IR+pugvsgJTlasageBdejleAHzsY5cpK6llivB12rYMVss6rlcE716uF51X69m7luXWuV4vOppYFMyD7bn4uKYt1n5zEjrLukVnsXy377H7oEwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="49" height="26">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3PMQEAIAzEwKKDtf411gALLPxwpyCpAgAAeLfX74Kzm64OfUjtAiDTAMKzARfoEwAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="90" name="stairs1" type="Target" x="384" y="16" width="16" height="16"/>
+  <object id="91" name="tele" type="Event" x="384" y="32" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/powerplant01.tmx', 'stairs')"/>
+   </properties>
+  </object>
+  <object id="92" name="stairs2" type="Target" x="384" y="320" width="16" height="16"/>
+  <object id="93" name="tele" type="Event" x="384" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/powerplant04.tmx', 'stairs')"/>
+   </properties>
+  </object>
+  <object id="94" name="tele" type="Event" x="80" y="272" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/powerplant03.tmx', 'left')"/>
+   </properties>
+  </object>
+  <object id="95" name="left" type="Target" x="80" y="288" width="16" height="16"/>
+  <object id="96" name="tele" type="Event" x="688" y="272" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/powerplant03.tmx', 'right')"/>
+   </properties>
+  </object>
+  <object id="97" name="right" type="Target" x="688" y="288" width="16" height="16"/>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="49" height="26">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ43oAAAAACAdwOJt8D86BMAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="49" height="26">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ43oAAAAACAdwOJt8D86BMAAA==
+  </data>
+ </layer>
+</map>
