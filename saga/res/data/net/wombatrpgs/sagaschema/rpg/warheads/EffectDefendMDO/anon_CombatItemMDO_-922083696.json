@@ -1,0 +1,17 @@
+{
+	"key" : "anon_CombatItemMDO_-922083696",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-922083696",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "ALLY_PARTY",
+	"shielding" : 0,
+	"triggerTypes" : [ ],
+	"warhead" : null,
+	"stats" : {
+		"stats" : [ ],
+		"flags" : [
+			"RESIST_THUNDER"
+		]
+	},
+	"effects" : [ ]
+}

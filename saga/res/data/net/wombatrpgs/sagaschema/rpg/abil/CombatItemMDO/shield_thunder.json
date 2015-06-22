@@ -1,0 +1,30 @@
+{
+	"key" : "shield_thunder",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$BTHUNDER",
+	"itemDescription" : "Grants the party thunder resistance (tier 6)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 4000,
+	"anim" : "banim_defend",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
+		"key" : "anon_CombatItemMDO_-922083696"
+	},
+	"tier" : 6,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 54.0
+			},
+			{
+				"stat" : "DEF",
+				"value" : 12.0
+			}
+		]
+	}
+}

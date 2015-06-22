@@ -43,13 +43,13 @@
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="92" name="target_a" type="Event" x="368" y="416" width="16" height="16"/>
+  <object id="92" name="target_a" type="Target" x="368" y="416" width="16" height="16"/>
   <object id="93" name="door_a" type="Event" x="368" y="400" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('', '', 'EXIT', 'A')"/>
    </properties>
   </object>
-  <object id="94" name="target_b" type="Event" x="480" y="144" width="16" height="16"/>
+  <object id="94" name="target_b" type="Target" x="480" y="144" width="16" height="16"/>
   <object id="95" name="door_a" type="Event" x="480" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('', '', 'EXIT', 'B')"/>

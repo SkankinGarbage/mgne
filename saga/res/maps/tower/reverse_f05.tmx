@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="29" tilewidth="16" tileheight="16" nextobjectid="127">
+ <properties>
+  <property name="bgm" value="ffl1_theme"/>
+  <property name="encounter" value="encounterset_level06_danger00"/>
+  <property name="name" value="Floor 6 Reverse"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="15" height="29">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC92UQQqAMAwE857e8hUveYQf6nOlh0JcskkRUXRhLzGjqV0iclZPXGn0bIGfYC3wn1h2J5Y882wLbKSOrAY2Uu+OY2dk9rM30rOTenOsLvT7usq1eXHut1jPr5zX/2P2bfaeyWnCZvMOToRndiXPmNUoz5j5KcxqlGfMfKSv7I07WXZHlbKdUynbOagDy8gsfswGAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="15" height="29">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCoY2AABYxU7QzAYAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="90" name="target_b" type="Target" x="112" y="416" width="16" height="32"/>
+  <object id="91" name="mem_tele" type="Event" x="112" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/reverse_transition.tmx', 'tower/reverse_f06.tmx', 'ENTRANCE', 'B')"/>
+   </properties>
+  </object>
+  <object id="126" name="gate" type="Event" x="112" y="208" width="16" height="32">
+   <properties>
+    <property name="appearance" value="anim_gate"/>
+    <property name="onCollide" value="teleport('tower/reverse_f05.tmx', 7, 17, 'SOUTH')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="15" height="29">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCogDMyjQq0WBXkMC8gD1GyCHzAYAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="15" height="29">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMglEwCmgPpBnJ16tCQC8AYcjkP8wGAAA=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="29" tilewidth="16" tileheight="16" nextobjectid="105">
+ <properties>
+  <property name="bgm" value="ffl1_theme"/>
+  <property name="encounter" value="encounterset_level06_danger00"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="43" height="29">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC8WXwQ0CMQwETTv8KOOugUtplIvucVJkWSFZZ5LHCl7ReBnL4jKzC8q3+nxNSP0uEYr1DYRi/QDxv9ksVu9bEUJ6G71HepvpN2IlvS0J1mh20ttier/R7KS3xfR+o9lJbz3rSL+tnSW89awj/bZ2lvA2w9ra2RneRlFZWzu70lvF113eqr7u8Fb1Nbo1RGb4+u/WEN5mfI1uDelt1lc/O+lt1tdoZylvs7762ckcHRn5T0r4+qSHdWT2p+eVrGf1XdlZkrVm81F2lui3x4HMrVnJelru1pCskQvKuzt6vfMDAddMY3wTAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="43" height="29">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3UwQ2AIBBEUajDq/14tFNroCyOJoaEFdhhD/81wBg/pAS8nt0Dfii7B8DkyP5nrOr2FGylWy1Ff6O+3Sr6G0W38alaX/HeerTe+v6o3Sru+u1/hFmvzUuwwdpt798otkbtFgAwpwKcdAFmfBMAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="101" name="door_a" type="Event" x="416" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('', '', 'EXIT', 'A')"/>
+   </properties>
+  </object>
+  <object id="102" name="target_a" type="Target" x="416" y="256" width="16" height="16"/>
+  <object id="103" name="target_b" type="Target" x="336" y="320" width="16" height="16"/>
+  <object id="104" name="door_a" type="Event" x="336" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('', '', 'EXIT', 'B')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="43" height="29">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQo/oAAAAACAhwE1Wn42fBMAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="43" height="29">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQo/oAAAAACAhwE1Wn42fBMAAA==
+  </data>
+ </layer>
+</map>
