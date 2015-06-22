@@ -24,6 +24,8 @@
 		"def" : 9,
 		"agi" : 16,
 		"mana" : 16,
-		"flags" : [ ]
+		"flags" : [
+			"UNDEAD"
+		]
 	}
 }
