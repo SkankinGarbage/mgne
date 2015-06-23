@@ -2,24 +2,34 @@
 	"key" : "enemy_gst09_STALKER",
 	"subfolder" : "level09",
 	"name" : "STALKER",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gst",
 	"species" : "STALKER",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_ghost",
+	"portrait" : "battle_portraits/gst.png",
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_chill",
+		"abil_ice",
+		"abil_tremble",
+		"abil_kinesis",
+		"abil_opara",
+		"abil_oice"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 295,
+		"mhp" : 295,
+		"str" : 34,
+		"def" : 35,
+		"agi" : 54,
+		"mana" : 48,
+		"flags" : [
+			"UNDEAD"
+		]
 	}
 }

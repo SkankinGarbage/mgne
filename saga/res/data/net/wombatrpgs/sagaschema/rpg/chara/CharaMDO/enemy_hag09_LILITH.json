@@ -2,24 +2,32 @@
 	"key" : "enemy_hag09_LILITH",
 	"subfolder" : "level09",
 	"name" : "LILITH",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_hag",
 	"species" : "LILITH",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/dem.png",
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_kick",
+		"abil_blind",
+		"abil_cgaze",
+		"abil_scream",
+		"abil_warning",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 295,
+		"mhp" : 295,
+		"str" : 32,
+		"def" : 29,
+		"agi" : 38,
+		"mana" : 42,
+		"flags" : [ ]
 	}
 }

@@ -2,7 +2,7 @@
 	"key" : "enemy_eph09_MAMMOTH",
 	"subfolder" : "level09",
 	"name" : "MAMMOTH",
-	"description" : "Converted from a report",
+	"description" : "HI",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_eph",
@@ -12,14 +12,19 @@
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_tusk",
+		"abil_bash",
+		"abil_oice"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 365,
+		"mhp" : 365,
+		"str" : 60,
+		"def" : 39,
+		"agi" : 40,
+		"mana" : 35,
+		"flags" : [ ]
 	}
 }

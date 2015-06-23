@@ -2,25 +2,29 @@
 	"key" : "enemy_psi09_PSYCHIC",
 	"subfolder" : "level09",
 	"name" : "PSYCHIC",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_psi",
+	"family" : "None",
 	"species" : "PSYCHIC",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/psi.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"loot" : null,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"wpn_knifePsi",
+		"abil_kinesis",
+		"abil_warning"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 330,
+		"mhp" : 330,
+		"str" : 46,
+		"def" : 35,
+		"agi" : 56,
+		"mana" : 70,
+		"flags" : [ ]
 	}
 }

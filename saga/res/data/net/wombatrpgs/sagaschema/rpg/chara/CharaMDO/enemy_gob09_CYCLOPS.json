@@ -2,24 +2,31 @@
 	"key" : "enemy_gob09_CYCLOPS",
 	"subfolder" : "level09",
 	"name" : "CYCLOPS",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gob",
 	"species" : "CYCLOPS",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_elf",
+	"portrait" : "battle_portraits/gob.png",
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_punch",
+		"abil_bite",
+		"abil_beam",
+		"abil_othunder",
+		"abil_ostone"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 368,
+		"mhp" : 368,
+		"str" : 51,
+		"def" : 39,
+		"agi" : 48,
+		"mana" : 42,
+		"flags" : [ ]
 	}
 }

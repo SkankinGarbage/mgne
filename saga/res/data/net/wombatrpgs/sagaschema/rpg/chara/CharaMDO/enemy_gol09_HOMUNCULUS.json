@@ -2,24 +2,31 @@
 	"key" : "enemy_gol09_HOMUNCULUS",
 	"subfolder" : "level09",
 	"name" : "HOMUNCULUS",
-	"description" : "Converted from a report",
+	"description" : "HI",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gol",
 	"species" : "HOMUNCULUS",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_golem",
+	"portrait" : "battle_portraits/gol.png",
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_punch",
+		"abil_sleep",
+		"abil_power",
+		"abil_opara",
+		"abil_ostone"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 330,
+		"mhp" : 330,
+		"str" : 49,
+		"def" : 55,
+		"agi" : 34,
+		"mana" : 32,
+		"flags" : [ ]
 	}
 }

@@ -2,24 +2,30 @@
 	"key" : "enemy_arm09_RHINO",
 	"subfolder" : "level09",
 	"name" : "RHINO",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_arm",
 	"species" : "RHINO",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_beetle",
+	"portrait" : "battle_portraits/arm.png",
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_horn",
+		"abil_shell",
+		"abil_oweapon",
+		"abil_xice"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 330,
+		"mhp" : 330,
+		"str" : 52,
+		"def" : 45,
+		"agi" : 45,
+		"mana" : 48,
+		"flags" : [ ]
 	}
 }

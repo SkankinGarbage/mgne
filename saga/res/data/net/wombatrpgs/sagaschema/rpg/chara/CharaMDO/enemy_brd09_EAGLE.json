@@ -2,24 +2,30 @@
 	"key" : "enemy_brd09_EAGLE",
 	"subfolder" : "level09",
 	"name" : "EAGLE",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_brd",
 	"species" : "EAGLE",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_bird",
+	"portrait" : "battle_portraits/brd.png",
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_beak",
+		"abil_warning",
+		"abil_stench",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 265,
+		"mhp" : 265,
+		"str" : 36,
+		"def" : 34,
+		"agi" : 60,
+		"mana" : 42,
+		"flags" : [ ]
 	}
 }

@@ -2,24 +2,28 @@
 	"key" : "enemy_elf09_GNOME",
 	"subfolder" : "level09",
 	"name" : "GNOME",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_elf",
 	"species" : "GNOME",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_elf",
+	"portrait" : "battle_portraits/elf.png",
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_gas",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 295,
+		"mhp" : 295,
+		"str" : 26,
+		"def" : 28,
+		"agi" : 48,
+		"mana" : 65,
+		"flags" : [ ]
 	}
 }

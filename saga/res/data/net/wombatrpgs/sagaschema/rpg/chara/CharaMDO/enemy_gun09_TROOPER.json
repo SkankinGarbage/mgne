@@ -2,25 +2,28 @@
 	"key" : "enemy_gun09_TROOPER",
 	"subfolder" : "level09",
 	"name" : "TROOPER",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_gun",
+	"family" : "None",
 	"species" : "TROOPER",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/gun.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
-	"loot" : null,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"wpn_gunMagnum",
+		"wpn_saw"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 330,
+		"mhp" : 330,
+		"str" : 50,
+		"def" : 36,
+		"agi" : 48,
+		"mana" : 10,
+		"flags" : [ ]
 	}
 }
