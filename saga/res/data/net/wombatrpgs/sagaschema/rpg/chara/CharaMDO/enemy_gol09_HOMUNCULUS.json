@@ -17,8 +17,7 @@
 		"abil_punch",
 		"abil_sleep",
 		"abil_power",
-		"abil_opara",
-		"abil_ostone"
+		"abil_ochange"
 	],
 	"stats" : {
 		"hp" : 330,

@@ -15,6 +15,7 @@
 	"loot" : "None",
 	"equipped" : [
 		"abil_gas",
+		"abil_cure",
 		"abil_oquake"
 	],
 	"stats" : {

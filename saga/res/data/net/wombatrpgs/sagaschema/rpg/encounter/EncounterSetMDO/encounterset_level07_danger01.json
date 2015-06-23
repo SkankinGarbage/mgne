@@ -1,0 +1,41 @@
+{
+	"key" : "encounterset_level07_danger01",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl07_VIRTUE5-7",
+			"weight" : 20
+		},
+		{
+			"encounter" : "encounter_lvl07_SPECTER2-3_FIRE JELLY_PHAGE",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl07_SPECTER1-2_VIRTUE1-2",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl07_PHAGE1-2_DJINNI2-3_PLAGUE RAT2-4",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl07_MYSTIC2-3_WILL 'WISP0-3",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl07_KNIGHT2-3_CRANE2-3",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl07_WARRIOR",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl07_PLAGUE RAT3-6",
+			"weight" : 16
+		}
+	],
+	"steps" : 42
+}
