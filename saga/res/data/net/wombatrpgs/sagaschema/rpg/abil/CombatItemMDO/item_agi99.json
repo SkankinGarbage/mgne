@@ -7,7 +7,7 @@
 	"itemDescription" : "Raises human agility by 2 up to 99",
 	"type" : "ITEM",
 	"uses" : 1,
-	"cost" : 3200,
+	"cost" : 9000,
 	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {

@@ -1,18 +1,20 @@
 {
-	"key" : "ring_bangle",
+	"key" : "hand_ninja",
 	"subfolder" : "armor",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$VBANGLE",
-	"itemDescription" : "Increases defense by 1 and strength by 1",
+	"abilityName" : "$CNINJA",
+	"itemDescription" : "Increases defense by 8 and agility by 4",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 900,
+	"cost" : 18000,
 	"anim" : "None",
-	"equip" : [ ],
+	"equip" : [
+		"GAUNTLET"
+	],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
-		"key" : "anon_CombatItemMDO_1096752775"
+		"key" : "anon_CombatItemMDO_976653584"
 	},
 	"tier" : 0,
 	"robostats" : {

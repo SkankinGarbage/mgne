@@ -1,13 +1,13 @@
 {
-	"key" : "anon_CombatItemMDO_1571367468",
+	"key" : "anon_CombatItemMDO_976653584",
 	"subfolder" : "",
-	"name" : "anon_CombatItemMDO_1571367468",
+	"name" : "anon_CombatItemMDO_976653584",
 	"description" : "auto-generated anonymous polymorph",
 	"stats" : {
 		"stats" : [
 			{
 				"stat" : "DEF",
-				"value" : 1.0
+				"value" : 8.0
 			},
 			{
 				"stat" : "AGI",

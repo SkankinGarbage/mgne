@@ -1,0 +1,30 @@
+{
+	"key" : "enemy_bossAresInvincible",
+	"subfolder" : "boss",
+	"name" : "ARES",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "MONSTER",
+	"family" : "mfamily_boss",
+	"species" : "ARES",
+	"appearance" : "4dir_aven",
+	"portrait" : "battle_portraits/boss_ares.png",
+	"meatEatLevel" : 11,
+	"meatTargetLevel" : 11,
+	"gp" : 0,
+	"loot" : "None",
+	"equipped" : [
+		"special_aresSpear",
+		"special_aresQuake",
+		"abil_ochange"
+	],
+	"stats" : {
+		"hp" : 1,
+		"mhp" : 1,
+		"str" : 60,
+		"def" : 99,
+		"agi" : 45,
+		"mana" : 45,
+		"flags" : [ ]
+	}
+}

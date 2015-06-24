@@ -1,0 +1,43 @@
+{
+	"key" : "anon_CombatItemMDO_-530739037",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-530739037",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "ALL_ENEMY",
+	"damType" : "EARTH",
+	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
+	"riders" : [
+		{
+			"key" : "",
+			"subfolder" : "",
+			"name" : "",
+			"description" : "",
+			"projector" : "USER",
+			"defendName" : "$BAEGIS",
+			"shielding" : 200,
+			"triggerTypes" : [
+				"PHYSICAL",
+				"WEAPON",
+				"FIRE",
+				"ICE",
+				"EARTH",
+				"THUNDER",
+				"NONELEMENTAL"
+			],
+			"warhead" : {
+				"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+				"key" : "anon_EffectDefendMDO_-1070902388"
+			},
+			"stats" : {
+				"stats" : [ ],
+				"flags" : [ ]
+			},
+			"effects" : [ ]
+		}
+	],
+	"power" : 4,
+	"attackStat" : "MANA",
+	"defendStat" : "MANA",
+	"miss" : "CAN_MISS"
+}

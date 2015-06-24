@@ -1,18 +1,18 @@
 {
-	"key" : "item_hp600",
+	"key" : "pot_cure",
 	"subfolder" : "potions",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "HP600",
-	"itemDescription" : "Raises human HP up to 600",
+	"abilityName" : "$XCURE",
+	"itemDescription" : "Cures status",
 	"type" : "ITEM",
 	"uses" : 1,
 	"cost" : 2000,
 	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {
-		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatCandyMDO",
-		"key" : "anon_CombatItemMDO_910254282"
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_-513775864"
 	},
 	"tier" : 0,
 	"robostats" : {

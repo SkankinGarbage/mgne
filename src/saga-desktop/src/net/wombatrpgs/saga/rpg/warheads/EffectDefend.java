@@ -9,6 +9,7 @@ package net.wombatrpgs.saga.rpg.warheads;
 import java.util.List;
 
 import net.wombatrpgs.mgne.core.MGlobal;
+import net.wombatrpgs.mgne.maps.MapThing;
 import net.wombatrpgs.saga.core.SConstants;
 import net.wombatrpgs.saga.rpg.battle.Battle;
 import net.wombatrpgs.saga.rpg.battle.Intent;
@@ -28,6 +29,7 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 
 	protected EffectDefendMDO mdo;
 	protected CombatItem counterItem;
+	protected String defendName;
 	protected boolean silent;
 	
 	/**
@@ -46,6 +48,11 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 			newMDO.abilityName = item.getName();
 			newMDO.uses = 0;
 			counterItem = new CombatItem(newMDO, counter);
+		}
+		if (MapThing.mdoHasProperty(mdo.defendName)) {
+			defendName = mdo.defendName;
+		} else {
+			defendName = item.getName();
 		}
 	}
 	
@@ -146,7 +153,7 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 	public DefendResult onAttack(Chara victim, Intent attackIntent, DamageType damType) {
 		final Battle battle = attackIntent.getBattle();
 		final String victimname = victim.getName();
-		final String itemname = item.getName();
+		final String itemname = defendName;
 		final String tab = SConstants.TAB;
 		if (hasFlag(mdo.triggerTypes, damType)) {
 			final boolean blocked = hasFlag(mdo.effects, DefenseFlag.BLOCKS_TRIGGERING_DAMAGE);

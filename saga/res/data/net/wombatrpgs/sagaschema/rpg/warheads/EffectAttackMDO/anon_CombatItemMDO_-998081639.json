@@ -1,7 +1,7 @@
 {
-	"key" : "anon_CombatItemMDO_-563182277",
+	"key" : "anon_CombatItemMDO_-998081639",
 	"subfolder" : "",
-	"name" : "anon_CombatItemMDO_-563182277",
+	"name" : "anon_CombatItemMDO_-998081639",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "WEAPON",
@@ -14,25 +14,31 @@
 			"name" : "",
 			"description" : "",
 			"projector" : "USER",
-			"defendName" : "",
-			"shielding" : 0,
+			"defendName" : "$BAEGIS",
+			"shielding" : 200,
 			"triggerTypes" : [
+				"PHYSICAL",
+				"WEAPON",
 				"FIRE",
 				"ICE",
 				"EARTH",
-				"THUNDER"
+				"THUNDER",
+				"NONELEMENTAL"
 			],
-			"warhead" : null,
+			"warhead" : {
+				"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+				"key" : "anon_EffectDefendMDO_-241982890"
+			},
 			"stats" : {
 				"stats" : [ ],
 				"flags" : [ ]
 			},
 			"effects" : [
-				"REFLECTS_TRIGGERING_ATTACK"
+				"BLOCKS_TRIGGERING_DAMAGE"
 			]
 		}
 	],
-	"power" : 8,
+	"power" : 6,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",
 	"miss" : "CAN_MISS"

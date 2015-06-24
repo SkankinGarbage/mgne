@@ -22,6 +22,10 @@ import net.wombatrpgs.sagaschema.rpg.stats.StatModMDO;
  */
 public class EffectDefendMDO extends EffectAllyTargetMDO {
 	
+	@Desc("Defend item name - as in, \"<char> blocks by <name>\", leave blank to use parent item")
+	@DefaultValue("")
+	public String defendName;
+	
 	@Desc("Shield value - raises evasion rate by this amount, usually 0-100")
 	@DefaultValue("0")
 	public Integer shielding;

@@ -1,18 +1,20 @@
 {
-	"key" : "ring_bangle",
+	"key" : "helm_samurai",
 	"subfolder" : "armor",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$VBANGLE",
-	"itemDescription" : "Increases defense by 1 and strength by 1",
+	"abilityName" : "",
+	"itemDescription" : "Increases defense by 12 and resists stone",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 900,
+	"cost" : 16500,
 	"anim" : "None",
-	"equip" : [ ],
+	"equip" : [
+		"HELMET"
+	],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
-		"key" : "anon_CombatItemMDO_1096752775"
+		"key" : "anon_CombatItemMDO_136121675"
 	},
 	"tier" : 0,
 	"robostats" : {

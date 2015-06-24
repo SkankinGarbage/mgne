@@ -1,0 +1,11 @@
+{
+	"key" : "anon_EffectDefendMDO_-1070902388",
+	"subfolder" : "",
+	"name" : "anon_EffectDefendMDO_-1070902388",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ENEMY",
+	"status" : "status_blind",
+	"hit" : 100,
+	"accStat" : "MANA",
+	"evadeStat" : "MANA"
+}

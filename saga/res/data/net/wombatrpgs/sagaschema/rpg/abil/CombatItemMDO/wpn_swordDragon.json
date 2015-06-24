@@ -1,18 +1,18 @@
 {
-	"key" : "wpn_axeRune",
+	"key" : "wpn_swordDragon",
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$RRUNE",
-	"itemDescription" : "Attacks with weapon damage and reflects elemental damage (tier 7)",
+	"abilityName" : "$EDRAGON",
+	"itemDescription" : "Inflicts weapon damage (tier 7)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 28000,
-	"anim" : "banim_slash",
+	"cost" : 19000,
+	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_-563182277"
+		"key" : "anon_CombatItemMDO_1578013115"
 	},
 	"tier" : 7,
 	"robostats" : {

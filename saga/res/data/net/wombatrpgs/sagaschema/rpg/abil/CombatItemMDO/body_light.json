@@ -1,18 +1,20 @@
 {
-	"key" : "ring_bangle",
+	"key" : "body_light",
 	"subfolder" : "armor",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$VBANGLE",
-	"itemDescription" : "Increases defense by 1 and strength by 1",
+	"abilityName" : "$ALIGHT",
+	"itemDescription" : "Increases defense by 21",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 900,
+	"cost" : 31100,
 	"anim" : "None",
-	"equip" : [ ],
+	"equip" : [
+		"ARMOR"
+	],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
-		"key" : "anon_CombatItemMDO_1096752775"
+		"key" : "anon_CombatItemMDO_1421512477"
 	},
 	"tier" : 0,
 	"robostats" : {

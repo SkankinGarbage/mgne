@@ -4,6 +4,7 @@
 	"name" : "anon_CombatItemMDO_307977689",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "USER",
+	"defendName" : "",
 	"shielding" : 60,
 	"triggerTypes" : [ ],
 	"warhead" : null,

@@ -1,18 +1,18 @@
 {
-	"key" : "wpn_axeRune",
+	"key" : "wpn_swordOgre",
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$RRUNE",
-	"itemDescription" : "Attacks with weapon damage and reflects elemental damage (tier 7)",
+	"abilityName" : "$EOGRE",
+	"itemDescription" : "Inflicts weapon damage and slays goblins (tier 7)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 28000,
+	"cost" : 22000,
 	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_-563182277"
+		"key" : "anon_CombatItemMDO_156510000"
 	},
 	"tier" : 7,
 	"robostats" : {

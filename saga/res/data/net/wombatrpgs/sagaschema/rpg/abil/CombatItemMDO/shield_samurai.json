@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$BSAMURAI",
-	"itemDescription" : "Raises chance to dodge and grants immunity to status (tier 4)",
+	"itemDescription" : "Raises chance to dodge and resists status (tier 4)",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 3130,
