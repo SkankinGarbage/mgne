@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="31" height="15" tilewidth="16" tileheight="16" nextobjectid="96">
+<map version="1.0" orientation="orthogonal" width="31" height="15" tilewidth="16" tileheight="16">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level05_danger02"/>
@@ -23,25 +23,25 @@
    H4sIAAAAAAAAC2NgGAWjgP7AjBE/n1RgwIifjwzsGfHzSQWWjPj5o2AUjILhCwAt/LIeRAcAAA==
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="90" name="left" type="Target" x="80" y="192" width="16" height="16"/>
-  <object id="91" name="tele" type="Event" x="80" y="208" width="16" height="16">
+ <objectgroup name="Object Layer 1" width="0" height="0">
+  <object name="left" type="Target" x="80" y="192" width="16" height="16"/>
+  <object name="tele" type="Event" x="80" y="208" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/powerplant02.tmx', 'left')"/>
    </properties>
   </object>
-  <object id="92" name="right" type="Target" x="400" y="192" width="16" height="16"/>
-  <object id="93" name="tele" type="Event" x="400" y="208" width="16" height="16">
+  <object name="right" type="Target" x="400" y="192" width="16" height="16"/>
+  <object name="tele" type="Event" x="400" y="208" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world3/powerplant02.tmx', 'left')"/>
+    <property name="onCollide" value="targetTele('world3/powerplant02.tmx', 'right')"/>
    </properties>
   </object>
-  <object id="94" name="chest" type="Chest" x="400" y="112" width="16" height="16">
+  <object name="chest" type="Chest" x="400" y="112" width="16" height="16">
    <properties>
     <property name="item" value="item_agi99"/>
    </properties>
   </object>
-  <object id="95" name="chest" type="Chest" x="80" y="112" width="16" height="16">
+  <object name="chest" type="Chest" x="80" y="112" width="16" height="16">
    <properties>
     <property name="item" value="spell_wizard"/>
    </properties>
