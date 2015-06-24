@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="21" tilewidth="16" tileheight="16" nextobjectid="93">
+<map version="1.0" orientation="orthogonal" width="19" height="21" tilewidth="16" tileheight="16">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level05_danger02"/>
@@ -23,14 +23,14 @@
    H4sIAAAAAAAAC2NgGAWjYBSMglEwCkgDAITB1j48BgAA
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
-  <object id="90" name="stairs" type="Target" x="144" y="288" width="16" height="16"/>
-  <object id="91" name="tele" type="Event" x="144" y="304" width="16" height="16">
+ <objectgroup name="Object Layer 1" width="0" height="0">
+  <object name="stairs" type="Target" x="144" y="288" width="16" height="16"/>
+  <object name="tele" type="Event" x="144" y="304" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world3/powerplant03.tmx', 'stairs2')"/>
+    <property name="onCollide" value="targetTele('world3/powerplant02.tmx', 'stairs2')"/>
    </properties>
   </object>
-  <object id="92" name="zkauba" type="Character" x="144" y="160" width="16" height="16">
+  <object name="zkauba" type="Character" x="144" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="hide" value="return getSwitch('left_power_plant')"/>
