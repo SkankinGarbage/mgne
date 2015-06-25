@@ -7,6 +7,7 @@
 package net.wombatrpgs.saga.lua;
 
 import net.wombatrpgs.mgne.scenes.commands.SceneChoice;
+import net.wombatrpgs.mgne.scenes.commands.SceneMemoryTeleport;
 
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.TwoArgFunction;

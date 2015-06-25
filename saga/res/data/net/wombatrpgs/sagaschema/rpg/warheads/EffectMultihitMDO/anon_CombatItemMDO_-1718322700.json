@@ -8,7 +8,7 @@
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],
-	"power" : 2,
+	"power" : 3,
 	"hits" : "2,2,1",
 	"attackStat" : "STR",
 	"defendStat" : "DEF"

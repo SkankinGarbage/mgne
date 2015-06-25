@@ -15,7 +15,7 @@
 	"loot" : "None",
 	"equipped" : [
 		"abil_punch",
-		"abil_oelement",
+		"abil_oweapon",
 		"abil_ochange"
 	],
 	"stats" : {

@@ -8,6 +8,8 @@ package net.wombatrpgs.mgne.core;
 
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 import net.wombatrpgs.mgne.core.lua.Lua;
 import net.wombatrpgs.mgne.io.json.PerfectPrinter;
@@ -15,6 +17,8 @@ import net.wombatrpgs.mgne.maps.Level;
 import net.wombatrpgs.mgne.maps.events.Avatar;
 import net.wombatrpgs.mgne.maps.events.AvatarMemory;
 import net.wombatrpgs.mgne.rpg.SwitchMap;
+import net.wombatrpgs.mgne.scenes.commands.SceneMemoryTeleport;
+import net.wombatrpgs.mgne.scenes.commands.SceneMemoryTeleport.DoorSet;
 import net.wombatrpgs.mgne.screen.Screen;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,6 +41,7 @@ public class Memory {
 	/** Stuff to be serialized */
 	public String levelKey;
 	public AvatarMemory heroMemory;
+	public Map<DoorSet, String> mapSet;
 	
 	/**
 	 * Creates a new memory holder! This is great! It should also probably only
@@ -44,6 +49,7 @@ public class Memory {
 	 */
 	public Memory() {
 		switches = new SwitchMap();
+		mapSet = new HashMap<DoorSet, String>();
 	}
 	
 	/**
@@ -152,6 +158,7 @@ public class Memory {
 	protected void storeFields() {
 		levelKey = MGlobal.levelManager.getActive().getKeyName();
 		heroMemory = new AvatarMemory(MGlobal.getHero());
+		mapSet = SceneMemoryTeleport.mapSet;
 	}
 
 	/**
@@ -160,6 +167,7 @@ public class Memory {
 	protected void unloadFields() {
 		
 		MGlobal.memory.switches = switches;
+		SceneMemoryTeleport.mapSet = mapSet;
 		
 		// this is needed to prevent lua calls from becoming stale?
 		MGlobal.lua = new Lua();

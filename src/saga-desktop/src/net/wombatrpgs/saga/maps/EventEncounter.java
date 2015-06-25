@@ -83,6 +83,7 @@ public abstract class EventEncounter extends MapEvent {
 	public void encounter(EncounterSetMDO mdo) {
 		MGlobal.audio.playSFX(SConstants.SFX_BATTLE);
 		List<EncounterMDO> encounters = new ArrayList<EncounterMDO>();
+		// this is a terrible algorithm
 		for (EncounterSetMemberMDO member : mdo.encounters) {
 			EncounterMDO encMDO = MGlobal.data.getEntryFor(member.encounter, EncounterMDO.class);
 			for (int i = 0; i < member.weight; i += 1) {

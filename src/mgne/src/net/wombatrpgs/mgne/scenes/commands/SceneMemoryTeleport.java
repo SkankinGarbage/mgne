@@ -4,7 +4,7 @@
  *  Author: psy_wombats
  *  Contact: psy_wombats@wombatrpgs.net
  */
-package net.wombatrpgs.saga.lua;
+package net.wombatrpgs.mgne.scenes.commands;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,10 +37,11 @@ public class SceneMemoryTeleport extends VarArgFunction {
 	
 	// global state is unfortunately the path of least resistance here
 	// this has to be shared by separate mark teleports
-	private static Map<DoorSet, String> mapSet = new HashMap<DoorSet, String>();
+	// public so it can be saved in a dumb way
+	public static Map<DoorSet, String> mapSet = new HashMap<DoorSet, String>();
 	
-	private enum DoorType { ENTRANCE, EXIT };
-	private enum DoorSet { A, B };
+	public enum DoorType { ENTRANCE, EXIT };
+	public enum DoorSet { A, B };
 
 	/**
 	 * @see org.luaj.vm2.lib.VarArgFunction#invoke(org.luaj.vm2.Varargs)

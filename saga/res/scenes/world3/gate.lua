@@ -37,6 +37,8 @@ speak("Aven", "Then stand back.")
 walk('lara', 1, 'SOUTH', false)
 walk('david', 1, 'SOUTH', true)
 face('lara', 'NORTH')
+face('david', 'NORTH')
+wait(0.5)
 
 playSound('flare')
 shake(.7)

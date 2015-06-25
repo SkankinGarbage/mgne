@@ -23,9 +23,9 @@
 	"stats" : {
 		"hp" : 320,
 		"mhp" : 320,
-		"str" : 43,
+		"str" : 41,
 		"def" : 0,
-		"agi" : 32,
+		"agi" : 29,
 		"mana" : 0,
 		"flags" : [
 			"EQUIPMENT_FIX"

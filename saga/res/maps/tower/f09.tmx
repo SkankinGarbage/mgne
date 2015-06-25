@@ -24,7 +24,7 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="90" name="target_b" type="Event" x="768" y="496" width="16" height="32"/>
+  <object id="90" name="target_b" type="Event" x="768" y="496" width="16" height="16"/>
   <object id="91" name="mem_tele" type="Event" x="768" y="512" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f05_transition.tmx', 'tower/f08.tmx', 'ENTRANCE', 'B')"/>

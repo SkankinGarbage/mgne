@@ -20,7 +20,7 @@ public class SMemory extends Memory {
 	public PartyMemory partyMemory;
 	public String battleBGMKey;
 	public int saveSlot;
-
+	
 	/**
 	 * @see net.wombatrpgs.mgne.core.Memory#storeFields()
 	 */
