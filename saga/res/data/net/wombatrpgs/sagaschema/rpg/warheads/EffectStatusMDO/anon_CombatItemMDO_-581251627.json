@@ -5,7 +5,7 @@
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
 	"status" : "status_stone",
-	"hit" : 80,
+	"hit" : 200,
 	"accStat" : "MANA",
 	"evadeStat" : "MANA"
 }

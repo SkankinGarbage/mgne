@@ -667,7 +667,6 @@ public class ScreenBattle extends SagaScreen {
 		deathShader.dispose();
 		shakeShader.dispose();
 		monsterinShader.dispose();
-		bgm.dispose();
 	}
 	
 	/**

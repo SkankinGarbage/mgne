@@ -23,8 +23,8 @@
 		"item_testLonggg"
 	],
 	"stats" : {
-		"hp" : 60,
-		"mhp" : 60,
+		"hp" : 101,
+		"mhp" : 101,
 		"str" : 7,
 		"def" : 0,
 		"agi" : 5,

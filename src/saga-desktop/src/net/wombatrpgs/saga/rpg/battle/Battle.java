@@ -70,6 +70,7 @@ public class Battle extends AssetQueuer implements Disposable {
 	protected List<Boolean> enemyAlive, playerAlive;
 	protected List<TempStats> boosts, defendBoosts;
 	protected Map<Chara, List<EffectDefend>> defendEffects;
+	protected List<SagaScreen> screensToRemove;
 	protected Chara meatDropper;
 	protected int actorIndex;
 	protected int mutateIndex;
@@ -107,6 +108,7 @@ public class Battle extends AssetQueuer implements Disposable {
 		boosts = new ArrayList<TempStats>();
 		defendBoosts = new ArrayList<TempStats>();
 		defendEffects = new HashMap<Chara, List<EffectDefend>>();
+		screensToRemove = new ArrayList<SagaScreen>();
 		
 		updateLivenessLists();
 	}
@@ -216,6 +218,9 @@ public class Battle extends AssetQueuer implements Disposable {
 	 */
 	public void finish() {
 		final Battle battle = this;
+		for (SagaScreen screen : screensToRemove) {
+			MGlobal.screens.removeScreen(screen);
+		}
 		player.reorderDeadHeroes();
 		screen.transitonOff(TransitionType.WHITE, new FinishListener() {
 			@Override public void onFinish() {
@@ -551,20 +556,22 @@ public class Battle extends AssetQueuer implements Disposable {
 	 * hero died and had to restart.
 	 */
 	public void restart() {
+		globalTurn.clear();
 		resetBoosts();
 		player.fullHeal();
 		enemy.fullHeal();
 		updateLivenessLists();
 		
+		initialized = false;
 		for (int i = 0; i < playerAlive.size(); i += 1) {
 			playerAlive.set(i, true);
 		}
 		
 		assets.remove(screen);
 		screen.dispose();
+		MGlobal.screens.removeScreen(screen);
 		screen = new ScreenBattle(this, bgmKey);
 		assets.add(screen);
-		MGlobal.assets.loadAsset(screen, "new battle screen");
 		
 		start();
 	}
@@ -980,6 +987,7 @@ public class Battle extends AssetQueuer implements Disposable {
 		playbackListener = new FinishListener() {
 			@Override public void onFinish() {
 				SagaScreen deathScreen = new ScreenDeath(battle);
+				screensToRemove.add(deathScreen);
 				MGlobal.assets.loadAsset(deathScreen, "death screen");
 				deathScreen.transitonOn(TransitionType.WHITE, null);
 			}

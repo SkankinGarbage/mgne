@@ -78,6 +78,15 @@ public class ScreenStack implements	Disposable,
 	}
 	
 	/**
+	 * Removes a screen from the stack. Because pop/push aren't actually good
+	 * methods for dealing with a screen stack.
+	 * @param	screen			The screen to evict
+	 */
+	public void removeScreen(Screen screen) {
+		screens.remove(screen);
+	}
+	
+	/**
 	 * Resets like it's a new game.
 	 */
 	public void reset() {

@@ -51,8 +51,10 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 		}
 		if (MapThing.mdoHasProperty(mdo.defendName)) {
 			defendName = mdo.defendName;
-		} else {
+		} else if (item != null) {
 			defendName = item.getName();
+		} else {
+			silent = true;
 		}
 	}
 	
@@ -62,7 +64,6 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 	 */
 	public EffectDefend(EffectDefendMDO mdo) {
 		this(mdo, null);
-		silent = true;
 	}
 
 	/** @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#isMapUsable() */
