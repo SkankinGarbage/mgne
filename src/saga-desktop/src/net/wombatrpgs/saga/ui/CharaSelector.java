@@ -439,7 +439,7 @@ public class CharaSelector extends ScreenGraphic implements	CommandListener {
 	protected void moveCursorVert(int delta) {
 		selectedY += delta;
 		if (selectedY < 0) {
-			selectedY = (int) Math.floor(allInserts.size() / cols);
+			selectedY = (int) Math.floor(allInserts.size() / cols) - 1;
 		}
 		if (selectedY >= rows) {
 			selectedY = 0;
