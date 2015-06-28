@@ -33,7 +33,7 @@
   <object id="126" name="gate" type="Event" x="112" y="208" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_gate"/>
-    <property name="onCollide" value="teleport('tower/reverse_f05.tmx', 7, 17, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world3.5/gate.tmx', 26, 15, 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>

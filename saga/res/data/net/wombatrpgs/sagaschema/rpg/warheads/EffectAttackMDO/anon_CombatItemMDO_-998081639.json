@@ -17,8 +17,6 @@
 			"defendName" : "$BAEGIS",
 			"shielding" : 200,
 			"triggerTypes" : [
-				"PHYSICAL",
-				"WEAPON",
 				"FIRE",
 				"ICE",
 				"EARTH",

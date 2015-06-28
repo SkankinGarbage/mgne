@@ -17,8 +17,6 @@
 			"defendName" : "$BAEGIS",
 			"shielding" : 200,
 			"triggerTypes" : [
-				"PHYSICAL",
-				"WEAPON",
 				"FIRE",
 				"ICE",
 				"EARTH",
@@ -33,7 +31,9 @@
 				"stats" : [ ],
 				"flags" : [ ]
 			},
-			"effects" : [ ]
+			"effects" : [
+				"BLOCKS_TRIGGERING_DAMAGE"
+			]
 		}
 	],
 	"power" : 4,

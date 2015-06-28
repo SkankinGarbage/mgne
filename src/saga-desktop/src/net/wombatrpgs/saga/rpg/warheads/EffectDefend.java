@@ -40,21 +40,25 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 	public EffectDefend(EffectDefendMDO mdo, CombatItem item) {
 		super(mdo, item);
 		this.mdo = mdo;
+		
+		if (MapThing.mdoHasProperty(mdo.defendName)) {
+			defendName = MGlobal.charConverter.convert(mdo.defendName);
+		} else if (item != null) {
+			defendName = item.getName();
+		} else {
+			silent = true;
+		}
+		
 		if (mdo.warhead != null) {
 			AbilEffect counter = AbilEffectFactory.create(mdo.warhead.key, null);
 			assets.add(counter);
 			
 			CombatItemMDO newMDO = new CombatItemMDO();
-			newMDO.abilityName = item.getName();
+			newMDO.abilityName = defendName;
 			newMDO.uses = 0;
 			counterItem = new CombatItem(newMDO, counter);
-		}
-		if (MapThing.mdoHasProperty(mdo.defendName)) {
-			defendName = mdo.defendName;
-		} else if (item != null) {
-			defendName = item.getName();
-		} else {
-			silent = true;
+			
+			counter.setItem(counterItem);
 		}
 	}
 	
@@ -79,6 +83,15 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 	@Override
 	public void onMapUse(TargetSelectable caller) {
 		MGlobal.reporter.err("Unusable ability");
+	}
+
+	/**
+	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#setItem(net.wombatrpgs.saga.rpg.items.CombatItem)
+	 */
+	@Override
+	public void setItem(CombatItem item) {
+		super.setItem(item);
+		defendName = item.getName();
 	}
 
 	/**
@@ -154,7 +167,6 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 	public DefendResult onAttack(Chara victim, Intent attackIntent, DamageType damType) {
 		final Battle battle = attackIntent.getBattle();
 		final String victimname = victim.getName();
-		final String itemname = defendName;
 		final String tab = SConstants.TAB;
 		if (hasFlag(mdo.triggerTypes, damType)) {
 			final boolean blocked = hasFlag(mdo.effects, DefenseFlag.BLOCKS_TRIGGERING_DAMAGE);
@@ -174,7 +186,7 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 						if (blocked) {
 							battle.print(tab + "but");
 						}
-						battle.println(victimname + " counters by " + itemname + ".");
+						battle.println(victimname + " counters by " + defendName + ".");
 						if (counterIntent.getItem() != null) {
 							counterIntent.resolve();
 						}
@@ -186,6 +198,16 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 		}
 	}
 	
+	/**
+	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#onBlockedWith(Battle, Chara)
+	 */
+	@Override
+	public void onBlockedWith(Battle battle, Chara victim) {
+		final String tab = SConstants.TAB;
+		final String victimname = victim.getName();
+		battle.println(tab + victimname + " deflects by " + defendName + ".");
+	}
+
 	/**
 	 * Struct to return to EffectCombat.
 	 */

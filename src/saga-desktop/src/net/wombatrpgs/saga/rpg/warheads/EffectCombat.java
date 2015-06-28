@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 import net.wombatrpgs.mgne.core.MGlobal;
+import net.wombatrpgs.mgne.maps.MapThing;
 import net.wombatrpgs.saga.core.SConstants;
 import net.wombatrpgs.saga.rpg.battle.Battle;
 import net.wombatrpgs.saga.rpg.battle.Intent;
@@ -50,6 +51,9 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 		riderEffects = new ArrayList<EffectDefend>();
 		if (mdo.riders != null) {
 			for (EffectDefendMDO riderMDO : mdo.riders) {
+				if (!MapThing.mdoHasProperty(riderMDO.defendName)) {
+					riderMDO.defendName = item.getName();
+				}
 				EffectDefend rider = new EffectDefend(riderMDO);
 				assets.add(rider);
 				
@@ -169,14 +173,12 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 			
 		} else if (!combatHits(battle, user, victim, roll)) {
 			// We missed... why?
-			// TODO: battle: something is buggy with shield+counter?
 			if (shielding(battle, victim) > 0) {
 				List<EffectDefend> defenses = battle.getDefenses(victim);
 				Collections.sort(defenses);
 				EffectDefend blocker = defenses.get(0);
 				CombatItem shield = blocker.getItem();
-				String shieldname = shield.getName();
-				battle.println(tab + victimname + " deflects by " + shieldname + ".");
+				shield.onBlockedWith(battle, victim);
 			} else {
 				battle.println(tab + username + " misses " + victimname + ".");
 			}
@@ -231,6 +233,15 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 		}
 	}
 	
+	/**
+	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#onBlockedWith
+	 * (net.wombatrpgs.saga.rpg.battle.Battle, net.wombatrpgs.saga.rpg.chara.Chara)
+	 */
+	@Override
+	public void onBlockedWith(Battle battle, Chara victim) {
+		riderEffects.get(0).onBlockedWith(battle, victim);
+	}
+
 	/**
 	 * @see net.wombatrpgs.saga.rpg.warheads.EffectEnemyTarget#onResolveComplete
 	 * (Battle, Chara)

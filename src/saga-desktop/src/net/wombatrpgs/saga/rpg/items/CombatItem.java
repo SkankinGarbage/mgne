@@ -11,8 +11,10 @@ import java.util.EnumSet;
 import net.wombatrpgs.mgne.core.AssetQueuer;
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.maps.MapThing;
+import net.wombatrpgs.saga.rpg.battle.Battle;
 import net.wombatrpgs.saga.rpg.battle.Intent;
 import net.wombatrpgs.saga.rpg.battle.Intent.IntentListener;
+import net.wombatrpgs.saga.rpg.chara.Chara;
 import net.wombatrpgs.saga.rpg.mutant.MutantEvent;
 import net.wombatrpgs.saga.rpg.stats.SagaStats;
 import net.wombatrpgs.saga.rpg.warheads.AbilEffect;
@@ -151,6 +153,15 @@ public class CombatItem extends AssetQueuer {
 	public void onAddedTo(Inventory inventory) {
 		this.container = inventory;
 		usesWhenAdded = uses;
+	}
+	
+	/**
+	 * Called when this item is used to block. Only relevant for shields really.
+	 * @param	battle			The battle where the block occurred
+	 * @param	victim			The victim being attacked
+	 */
+	public void onBlockedWith(Battle battle, Chara victim) {
+		effect.onBlockedWith(battle, victim);
 	}
 
 	/**

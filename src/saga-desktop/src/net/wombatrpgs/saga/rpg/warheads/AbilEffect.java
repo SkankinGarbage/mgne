@@ -12,6 +12,7 @@ import java.util.List;
 
 import net.wombatrpgs.mgne.core.AssetQueuer;
 import net.wombatrpgs.mgne.core.MGlobal;
+import net.wombatrpgs.saga.rpg.battle.Battle;
 import net.wombatrpgs.saga.rpg.battle.Intent;
 import net.wombatrpgs.saga.rpg.battle.Intent.IntentListener;
 import net.wombatrpgs.saga.rpg.chara.Chara;
@@ -118,6 +119,16 @@ public abstract class AbilEffect extends AssetQueuer {
 	 * @param	caller			The screen that invoked this call
 	 */
 	public abstract void onMapUse(TargetSelectable caller);
+	
+	/**
+	 * Called when this ability is used to block. Really only relevant for
+	 * shields probably.
+	 * @param	battle			The battle where blocking occurs
+	 * @param	victim			The victim being attacked
+	 */
+	public void onBlockedWith(Battle battle, Chara victim) {
+		MGlobal.reporter.warn(mdo.key + " used to block");
+	}
 	
 	/**
 	 * Array containment test.
