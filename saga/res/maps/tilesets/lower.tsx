@@ -501,6 +501,11 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="153">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
  <tile id="154">
   <properties>
    <property name="x" value=""/>
@@ -527,6 +532,31 @@
   </properties>
  </tile>
  <tile id="159">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="160">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="161">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="162">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="168">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="169">
   <properties>
    <property name="x" value=""/>
   </properties>

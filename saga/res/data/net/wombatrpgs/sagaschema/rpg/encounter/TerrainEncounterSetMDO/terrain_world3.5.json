@@ -1,0 +1,24 @@
+{
+	"key" : "terrain_world3.5",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"terrain" : "lower/0",
+			"encounters" : "encounterset_level07_danger00"
+		},
+		{
+			"terrain" : "lower/72",
+			"encounters" : "encounterset_level07_danger00"
+		},
+		{
+			"terrain" : "lower/64",
+			"encounters" : "encounterset_level07_danger01"
+		},
+		{
+			"terrain" : "lower/146",
+			"encounters" : "encounterset_level07_danger01"
+		}
+	]
+}

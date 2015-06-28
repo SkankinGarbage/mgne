@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="19">
+ <properties>
+  <property name="battle_bgm" value="ffl3_battle"/>
+  <property name="bgm" value="ffl1_sky"/>
+  <property name="name" value="Home World"/>
+  <property name="terrainEncounter" value="terrain_world3.5"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="76" height="70">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2aS3LbMBBEyaN5SZ0iyYqrVA7inS8cu0pTaU/NlwCJYYRFFyEKgoDHnsFHeizL8jhR+8nt/2+avCavyauOJq/Ja/Kqo8nru96fOovXFrx3BxGnN0WtvDaQde8u0jh9aX1e92e5hZWl0Qwy3rJYIS8aW4ZblNcdmHmcVqi3L/889qq8NG4ajyM57FV4oShmMSZ7s4q0SX3B62hWUq4nIS/KYyuU8d665Hl5zDgra/0zghnxojoZf9GYMpy8drnvK/oL62bzFzHzuFF971lU4EXj0nJYCy9q2/Iar2+9h/xHxqPkM+nZHV3jSz7Leh7Zvy3+/u1qZr38hbyidSP8RrPSmOHzzfLCuImOT4pH7ENF9eB1hBXxkjyF7WB8jmbFx4vPNcoL10c9xvTOVCV/cV78XoRXdq734kzyWLUcJvGi/XZPVtL38Ne4XubzZSVl58cjrKSx88/faR8e5dWy3vbWMHc8v6AxSDHZc29itTGa10dA0jh2dr+FlbSnwDKee1TlJe1pUcSrl68wf0nfx8+KRnCzPIV5RON1hJO0p9HmO8lfeK3Eiudei1eUm8fK+j6N2ZU+a+VlxQ/nty4xXp6vub8q+CzKi/9W5KkHr9GxaeWuyLPO8Iowi7QxMo9JzKx+87PNLK9WjfaXxCvT/7N48ediMSON8tlRXtF46q2rOUk+O8qrF7PHTbhpvLT46BWPWmxV55Xtp/b/JmSg5RuN1bbk+7Eu3/e6I7nhlcv6P5jFTGKE1yPPrgIviQ+e5/B4xLoeq8ge527+0vy0C/JyiMZGKkuftThJ508jxL2DvCSOkba0/0/8+NSvRH+4p6vwwisvZ3h5+v2pP+yedzY3ko3Hy+onj80z+hI5C67iL0/kr+0kXndgxX2V5cU/Z+Xs6LlfZVaez6R1K84F0jqqxcMSnw/23mhOHi/0l6WvOpqHIrwkRrxcRZl4xLgk9eDF1w2jmWS9JflKW8d6c2d2XXB3Xptw3YzXrbyqS1urRrx0hr+qC+d7LKN3PF/hfa7Rv/GfIT5uylVHeEXqXTWunxdqV8rS62y9K8cwNTU1NTU1NTU1NTX1ivoLJm3BkSBTAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="76" height="70">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3ZMQqDQBAFUIVcK23ubZvWylbIFVJHAhYuMSYSmd3se82sjXyWYRi0aQAAAN7rogMA/IFL+7rmaogOMDm3y8q6+Y7uyTP80klfAYW6RQeAStgV6mGu7uPeID/X6AAFyuGbIQBAjexhQEn66ADApjE6APBkz/9eOr/Ms21H9VkN/z71G0cYk5qe4RPDynnvOwAAACBXD4pahCQgUwAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1"/>
+</map>
