@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="31" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="350">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="31" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="351">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="Wolf's Town"/>
@@ -117,14 +117,14 @@
    <properties>
     <property name="animate" value="false"/>
     <property name="appearance" value="4dir_jonas"/>
-    <property name="hide" value="return not getSwitch('world2_done')"/>
+    <property name="hide" value="return not getSwitch('world2_done') or getSwitch('world3_gate')"/>
    </properties>
   </object>
   <object id="329" name="lara" type="Character" x="1008" y="368" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="face" value="EAST"/>
-    <property name="hide" value="return not getSwitch('world2_done') or getSwitch('lara03')"/>
+    <property name="hide" value="return not getSwitch('world2_done') or getSwitch('lara03') or getSwitch('world3_gate')"/>
     <property name="onInteract" value="play('world2/lara03.lua')"/>
    </properties>
   </object>
@@ -132,7 +132,7 @@
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="face" value="EAST"/>
-    <property name="hide" value="return not getSwitch('world2_done') or not getSwitch('lara03')"/>
+    <property name="hide" value="return not getSwitch('world2_done') or not getSwitch('lara03') or getSwitch('world3_gate')"/>
     <property name="onInteract" value="speak('Lara', 'The seal on this world may be damaged. I would investigate.')"/>
    </properties>
   </object>

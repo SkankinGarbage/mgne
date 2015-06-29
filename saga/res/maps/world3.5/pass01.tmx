@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="48" tilewidth="16" tileheight="16" nextobjectid="12">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="48" tilewidth="16" tileheight="16" nextobjectid="19">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
-  <property name="encounter" value="encounterset_level00_danger02"/>
+  <property name="encounter" value="encounterset_level07_danger00"/>
   <property name="name" value="North Passage"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YMQ6FIBBFUXagnQVWrML9r8zGYkJQR+WNM+QVp4Hkw02I5LOmlFYiIiJyZQP9bhYQ47UZ1FEExHhtAXVMAmK8tV70jnzM35097x3lmL87e19akONPzx47xunIDb3G5Ty6ozT0Gpfz6A5riA4r7PCFHb5Ydmj+X7xl2SG/93IPV/eClmWHXOtsDxHuj1HuwbO1onVc0bwR/L1HDc0bQYQODXb4gXwPsYR+D7Hi5bvKjrE6iIgovh1tmQCkgCUAAA==
+   H4sIAAAAAAAAC+2YMRKEIAxFucFuZ4EVp/D+J9vGIuPgGld+BPcVr0kYw2MQJswppRkAAAC6YhF9NxsU8S1vkUcxKOJbJpHHy6CI1+qN7pHX/NHe692jrPmjvXfFRRk/u/fweI5HrtAqbvNqj1KhVdzm1R7RRP4fyvXCAw887vPw9Be/Eulhz3s7h2/3gpdID1trbw4j3B9PuQf3ao3g4e39PeOizr4a3t7fM+5Oj5bg0Q/K95BI1O8hUajPVTz+0wMAAMbnA8QgVa+AJQAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="50" height="48">
@@ -20,15 +20,10 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OAQ0AAAgDoPdPZDxjfE5IQAIAAAAAADdNOwAAAMB7C29Uh4KAJQAA
+   H4sIAAAAAAAAC+3SQQ3AMAwEQTMIgOZV/iDzKgJHujSaQbCWrwoAAACAjicdsMmbDthkpAOa7Oksf9/Txx2kjbrjfzMdAAAAHGkBK1UMzoAlAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="tele" type="Event" x="608" y="144" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 21, 27)"/>
-   </properties>
-  </object>
   <object id="2" name="room" type="Ceiling" x="160" y="160">
    <properties>
     <property name="roofID" value="27"/>
@@ -64,30 +59,34 @@
    </properties>
    <polygon points="0,0 16,0 16,48 32,48 32,128 -16,128 -16,48 0,48"/>
   </object>
-  <object id="7" name="potion" type="Chest" x="368" y="208" width="16" height="16">
+  <object id="7" name="chest" type="Chest" x="368" y="208" width="16" height="16">
    <properties>
-    <property name="item" value="pot_potion"/>
+    <property name="item" value="pot_elixir"/>
    </properties>
   </object>
-  <object id="8" name="hp200" type="Chest" x="464" y="208" width="16" height="16">
+  <object id="8" name="chest" type="Chest" x="464" y="208" width="16" height="16">
    <properties>
-    <property name="item" value="item_hp200"/>
+    <property name="item" value="item_hp600"/>
    </properties>
   </object>
-  <object id="9" name="bronze shield" type="Chest" x="176" y="208" width="16" height="16">
+  <object id="10" name="chest" type="Chest" x="240" y="464" width="16" height="16">
    <properties>
-    <property name="item" value="shield_bronze"/>
+    <property name="item" value="wpn_swordDragon"/>
    </properties>
   </object>
-  <object id="10" name="spellbook" type="Chest" x="480" y="608" width="16" height="16">
+  <object id="12" name="chest" type="Chest" x="176" y="208" width="16" height="16"/>
+  <object id="13" name="chest" type="Chest" x="480" y="608" width="16" height="16"/>
+  <object id="14" name="stairs_up" type="Target" x="176" y="496" width="16" height="16"/>
+  <object id="15" name="tele" type="Event" x="176" y="512" width="16" height="16">
    <properties>
-    <property name="item" value="wpn_gunColt"/>
+    <property name="onCollide" value="targetTele('world3.5/pass02.tmx', 'entry')"/>
    </properties>
   </object>
-  <object id="11" name="tele" type="Event" x="336" y="512" width="16" height="16">
+  <object id="16" name="tele" type="Event" x="608" y="144" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/pass02.tmx', 10, 9)"/>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 21, 27)"/>
    </properties>
   </object>
+  <object id="17" name="entry" type="Target" x="608" y="160" width="16" height="16"/>
  </objectgroup>
 </map>

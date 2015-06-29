@@ -1,0 +1,15 @@
+local hero1 = getHero(0).getName()
+local hero2 = getHero(1).getName()
+
+speak("Elder", hero1 .. "! You're back!")
+speak(hero1, "Hello again, Elder. What happened to BORG?")
+speak("Elder", "It's a tragedy... He went with Jonas and Janine to the southern cave...")
+speak("Elder", "But forces from the gate overpowered them! I found BORG wandering around. He has no memory of who he was.")
+speak(hero2, "Didn't you fix up BORG years ago?")
+speak("Elder", "BORG needs ROM to get his memories back. But those beasts took it from him and left him for scrap!")
+speak("Elder", "Maybe Jonas will find BORG's ROM, but...")
+speak("Elder", "I'm so sad. First I lose BORG, and now the twins are each other's worst enemy. Growing up they were inseperable!")
+speak(hero1, "We'll try to find a way to bring BORG back. I owe him a lot.")
+speak("Elder", "Thank you, " .. hero1 .. ". And I'm glad you're home.")
+
+sceneSwitch('world3.5_elder01', true)
