@@ -1,0 +1,16 @@
+{
+	"key" : "shop_river2_armor",
+	"subfolder" : "world3.5",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"body_diamond",
+		"body_light",
+		"hand_diamond",
+		"hand_ninja",
+		"helm_diamond",
+		"helm_samurai",
+		"shield_dragon",
+		"shoe_hermes"
+	]
+}

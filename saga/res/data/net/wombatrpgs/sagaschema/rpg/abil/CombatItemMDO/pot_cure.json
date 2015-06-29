@@ -3,7 +3,7 @@
 	"subfolder" : "potions",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$XCURE",
+	"abilityName" : "$TCURE",
 	"itemDescription" : "Cures status",
 	"type" : "ITEM",
 	"uses" : 1,

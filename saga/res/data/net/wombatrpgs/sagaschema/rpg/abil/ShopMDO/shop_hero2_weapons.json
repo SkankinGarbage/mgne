@@ -1,0 +1,16 @@
+{
+	"key" : "shop_hero2_weapons",
+	"subfolder" : "world3.5",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordSilver",
+		"wpn_swordDragon",
+		"wpn_swordOgre",
+		"wpn_swordRevenge",
+		"wpn_knifeCat",
+		"wpn_knifePsi",
+		"spell_ice",
+		"spell_stone"
+	]
+}

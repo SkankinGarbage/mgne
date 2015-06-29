@@ -1,0 +1,15 @@
+{
+	"key" : "shop_hero2_armor",
+	"subfolder" : "world3.5",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"body_diamond",
+		"hand_diamond",
+		"hand_giant",
+		"hand_ninja",
+		"helm_diamond",
+		"shield_dragon",
+		"ring_brooch"
+	]
+}

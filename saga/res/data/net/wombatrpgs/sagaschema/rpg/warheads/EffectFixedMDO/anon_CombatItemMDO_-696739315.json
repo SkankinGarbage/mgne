@@ -7,6 +7,7 @@
 	"damType" : "WEAPON",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"base" : 70,
 	"range" : 15,
 	"defenseStat" : "DEF",

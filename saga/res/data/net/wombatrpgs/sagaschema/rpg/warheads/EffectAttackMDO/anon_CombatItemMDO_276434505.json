@@ -7,6 +7,7 @@
 	"damType" : "PHYSICAL",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"power" : 4,
 	"attackStat" : "MANA",
 	"defendStat" : "DEF",

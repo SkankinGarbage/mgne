@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="37" height="35" tilewidth="16" tileheight="16" nextobjectid="22">
+ <properties>
+  <property name="bgm" value="ffl2_hometown"/>
+  <property name="name" value="Forest Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="37" height="35">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XMQrDMAxFNXoKZMsNSpa2S5v736zxYGoMlvUt2cmgD4IM9tdDwUIiciFaBGHpJckTv19MoEzp3lrxquUrmb5MoEzp3lbxquUrmQITKBPn9ThjF+SZyfQ547gZkzRP8llvyLRNYFqYMyWTZX+yYIpvgetP+wVM8S1w/ekAmfK8vX3cUk/61zcQX/8y3oOY8poH4uuv+R8ul8s1WyP6vtaztRv07Alaz9Zu0LMnaD2RmRBh0ng6kzNZMyFzqpRJ45nvBq05VbonaD2ROVU6l47wvFo/zK+6OjwUAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="37" height="35">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XQQqAIBAFUO9/nEJoEZ6gTZsW3aC6RAoGMqBZ/cjqPxgGVIYBNzNKEd2j94FQg+qMPhx9sVab+U6LnGJO9nKUEfkNKpHRusRdEzkPewr7StX6uuHpBgIl9UJERET7ULtDrtiMt3Hz+7jzJqem3Aeu7CGo+V3uA0/sBZON2cYCrImew5F/h1LC39H/rDiivaU8FAAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="1" type="Event" x="64" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/parish_interior.tmx', 24, 4)"/>
+   </properties>
+  </object>
+  <object id="2" type="Event" x="384" y="48" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/parish_interior.tmx', 4, 8)"/>
+   </properties>
+  </object>
+  <object id="8" name="innkeep" type="Character" x="384" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onInteract" value="inn()"/>
+   </properties>
+  </object>
+  <object id="11" name="room" type="Ceiling" x="480" y="48">
+   <properties>
+    <property name="roofID" value="13"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 0,144 96,144 96,0"/>
+  </object>
+  <object id="14" name="inn" type="Target" x="384" y="496" width="16" height="16"/>
+  <object id="15" name="tele" type="Event" x="384" y="512" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3.5/hometown.tmx', 'inn')"/>
+   </properties>
+  </object>
+  <object id="16" name="elder" type="Target" x="48" y="496" width="16" height="16"/>
+  <object id="17" name="tele" type="Event" x="48" y="512" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3.5/hometown.tmx', 'elder')"/>
+   </properties>
+  </object>
+  <object id="20" name="borg" type="Target" x="384" y="192" width="16" height="16"/>
+  <object id="21" name="tele" type="Event" x="384" y="208" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3.5/hometown.tmx', 'borg')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="37" height="35">
+  <properties>
+   <property name="z" value="2"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WsQ0AIAhEUSZwFLUR999MCydQLhT+l1xLfokZAAB4VbIDjrrXLtdFTWPPLzdFTQAAAL9Q/KmvN1tIRexND6nQ38ywAJBkYp08FAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="37" height="35">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WsQkAMAwDQe+/TdpM5wXSBSMwdwMIlV8FAGx00gcebvoAAABxE536uznRqVvatwG3NEJWPBQAAA==
+  </data>
+ </layer>
+</map>
