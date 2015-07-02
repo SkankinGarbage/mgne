@@ -264,6 +264,23 @@ public abstract class Level extends ScreenObject implements Turnable, Disposable
 	}
 	
 	/**
+	 * Gets the value of a given property key at the given tile. Undefined
+	 * behavior if multiple layers implement.
+	 * @param	tileX			The checked x-coord (in tiles)
+	 * @param	tileY			The checked y-coord (in tiles)
+	 * @param	property		The name of the property to check
+	 * @return					The value of that property, or null if none
+	 */
+	public String getTileProperty(int tileX, int tileY, String property) {
+		for (GridLayer layer : gridLayers) {
+			if (layer.hasPropertyAt(tileX, tileY, property)) {
+				return layer.getPropertyAt(tileX, tileY, property);
+			}
+		}
+		return null;
+	}
+	
+	/**
 	 * Checks if there are any tiles at all at the given space.
 	 * @param 	tileX			The checked x-coord (in tiles)
 	 * @param 	tileY			The checked y-coord (in tiles)

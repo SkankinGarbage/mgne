@@ -139,4 +139,10 @@ public class GeneratedGridLayer extends GridLayer {
 		parent.getBatch().end();
 		parent.getBatch().setColor(old);
 	}
+
+	@Override
+	public String getPropertyAt(int tileX, int tileY, String property) {
+		// TODO generate maps: getPropertyAt
+		return null;
+	}
 }

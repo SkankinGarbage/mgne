@@ -50,6 +50,15 @@ public abstract class GridLayer extends Layer implements Comparable<GridLayer> {
 	public abstract boolean hasPropertyAt(int tileX, int tileY, String property);
 	
 	/**
+	 * Gets the value of a given property key at the given tile.
+	 * @param	tileX			The checked x-coord (in tiles)
+	 * @param	tileY			The checked y-coord (in tiles)
+	 * @param	property		The name of the property to check
+	 * @return					The value of that property, or null if none
+	 */
+	public abstract String getPropertyAt(int tileX, int tileY, String property);
+	
+	/**
 	 * Fetches the terrain ID (defined in Tiled usually) of the tile located
 	 * at the given coordiantes.
 	 * @param	tileX			The location to check (in tiles)

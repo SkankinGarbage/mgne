@@ -97,6 +97,14 @@ public class TiledGridLayer extends GridLayer {
 	}
 
 	/**
+	 * @see net.wombatrpgs.mgne.maps.layers.GridLayer#getPropertyAt(int, int, java.lang.String)
+	 */
+	@Override
+	public String getPropertyAt(int tileX, int tileY, String property) {
+		return getTileProperty(tileX, tileY, property);
+	}
+
+	/**
 	 * @see net.wombatrpgs.mgne.maps.layers.Layer#hasTileAt(int, int)
 	 */
 	@Override

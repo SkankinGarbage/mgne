@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="31">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="32">
  <properties>
   <property name="battle_bgm" value="ffl3_battle"/>
   <property name="bgm" value="ffl1_overworld2"/>
@@ -63,6 +63,11 @@
   <object id="30" name="tele" type="Event" x="368" y="448" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/pass02.tmx', 'exit')"/>
+   </properties>
+  </object>
+  <object id="31" name="Airseed Shrine" type="Event" x="400" y="704" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/shrine01.tmx', 11, 39, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>

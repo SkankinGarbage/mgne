@@ -551,6 +551,17 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="163">
+  <properties>
+   <property name="force" value="NORTH"/>
+  </properties>
+  <animation>
+   <frame tileid="163" duration="150"/>
+   <frame tileid="164" duration="150"/>
+   <frame tileid="165" duration="150"/>
+   <frame tileid="166" duration="150"/>
+  </animation>
+ </tile>
  <tile id="168">
   <properties>
    <property name="x" value=""/>
@@ -560,5 +571,16 @@
   <properties>
    <property name="x" value=""/>
   </properties>
+ </tile>
+ <tile id="170">
+  <properties>
+   <property name="force" value="SOUTH"/>
+  </properties>
+  <animation>
+   <frame tileid="166" duration="150"/>
+   <frame tileid="165" duration="150"/>
+   <frame tileid="164" duration="150"/>
+   <frame tileid="163" duration="150"/>
+  </animation>
  </tile>
 </tileset>
