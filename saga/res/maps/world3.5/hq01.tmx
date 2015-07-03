@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="47" tilewidth="16" tileheight="16" nextobjectid="25">
+ <properties>
+  <property name="bgm" value="ffl1_cave"/>
+  <property name="encounter" value="encounterset_level07_danger01"/>
+  <property name="name" value="Southern Cave"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="43" height="47">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YsQ3DMAwEuYI7A3aVKTKCdvWSgYoAgiEyoUTxXXxxzSOQLoUPhk8ROQkhhDySo2Fmz/B8NRyDewb1vtLwvd+zZ7mWDnefXzvS1QvSdWRH+M7s0bwNX+//W+lZn+NN+r28lF3ra+nskZ71Od6l38tL2bW+FlnX16iOZvQ1qqMZHYjqKMo1cl/pu2Jf4evZN+fvo9C6qPW1sjvOifTsdVHrq/ecSKJ6ieqrtXvPoevzXe/3/LN7z8nCey/K0+ou4v3V8rS6i3h/1eD3gTxXL0jXkR3hO7MTQgjB8AGGaPnxlB8AAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="43" height="47">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3RMQqAMAyF4dfb6PXVsZuri2tP42AnQWrR0qb+H4RACORBJAAA3ttrB8gQMvcHJ43u7ADQuqV2gIdm2cnqY6GcKZYFVnICKGPr7A7wd+ulp+bo092f+T8A4EsHQFVpqJQfAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="14" name="tele" type="Event" x="192" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/overworld.tmx', 54, 52)"/>
+   </properties>
+  </object>
+  <object id="15" name="chest" type="Chest" x="288" y="448" width="16" height="16">
+   <properties>
+    <property name="item" value="wpn_swordDragon"/>
+   </properties>
+  </object>
+  <object id="16" name="stairs_down" type="Target" x="384" y="368" width="16" height="16"/>
+  <object id="17" name="tele" type="Event" x="384" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3.5/hq02.tmx', 'stairs_up')"/>
+   </properties>
+  </object>
+  <object id="18" name="guard" type="Character" x="288" y="320" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3.5/guard.lua')"/>
+    <property name="onInteract" value="play('world3.5/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="20" name="guard" type="Character" x="480" y="576" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3.5/guard.lua')"/>
+    <property name="onInteract" value="play('world3.5/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="21" name="guard" type="Character" x="192" y="448" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3.5/guard.lua')"/>
+    <property name="onInteract" value="play('world3.5/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="22" name="guard" type="Character" x="384" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3.5/guard.lua')"/>
+    <property name="onInteract" value="play('world3.5/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="23" name="guard" type="Character" x="288" y="576" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3.5/guard.lua')"/>
+    <property name="onInteract" value="play('world3.5/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="24" name="guard" type="Character" x="480" y="320" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3.5/guard.lua')"/>
+    <property name="onInteract" value="play('world3.5/guard.lua')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

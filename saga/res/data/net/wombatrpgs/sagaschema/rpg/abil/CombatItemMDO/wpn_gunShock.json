@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_gunShock",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$GSHOCK",
+	"itemDescription" : "Attacks with fixed thunder damage aimed by strength (tier 8)",
+	"type" : "ITEM",
+	"uses" : 30,
+	"cost" : 24000,
+	"anim" : "banim_lightning",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_-1700814524"
+	},
+	"tier" : 8,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 72.0
+			},
+			{
+				"stat" : "STR",
+				"value" : 16.0
+			}
+		]
+	}
+}
