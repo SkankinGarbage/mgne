@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="32" tilewidth="16" tileheight="16" nextobjectid="25">
+ <properties>
+  <property name="bgm" value="no_change"/>
+  <property name="name" value="River Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="38" height="32">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XsQ6DMAxEw14mvilSN/7/bxBDRIqOxHeJEW1z0i0erCdxDvYcQpgFW6T0zf0izXCxvVP/3QtphovtnfrvjqQZLrZ36j+4Dk+Zv5Er91VdfSdUrvOMRlBDbuGyfI/zjEZQQ/bm8lQpB7W8eKqUg1pePFXKQS0vQ0P/KnWfvIPLa2dt5UJvyBO43sA9dmkPrl47mJpdby41u3m+1vD5D+vBpd5bT7s9BtfvcdWM9l4rl3pvWWYX7b0WtdxbltlFe69F6r21AX2N56cAEwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="38" height="32">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WzQmAMAwF4O4/jj8gWJ3Ai1c3UJewQoVSjDFF2gjvg0cSFRVyqTGgSe0T9tzMaYkq0bhY39sg1FzdvGN12Vx2P49ElRiEz/cJ38itI65/scdTvAfp/Vy0/AcAAABAaRPRa3Od3+KknOdmppayMPXJmz1q3i/A3x1aHQzuABMAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="1" name="inn" type="Character" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="inn()"/>
+   </properties>
+  </object>
+  <object id="2" type="Event" x="480" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/rivertown.tmx', 31, 17)"/>
+   </properties>
+  </object>
+  <object id="3" type="Event" x="448" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/rivertown.tmx', 32, 26)"/>
+   </properties>
+  </object>
+  <object id="4" type="Event" x="64" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/rivertown.tmx', 17, 16)"/>
+   </properties>
+  </object>
+  <object id="5" type="Event" x="160" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/rivertown.tmx', 20, 35)"/>
+   </properties>
+  </object>
+  <object id="6" name="shop" type="Character" x="480" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_river2_weapons')"/>
+   </properties>
+  </object>
+  <object id="7" name="shop" type="Character" x="416" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_river2_armor')"/>
+   </properties>
+  </object>
+  <object id="8" name="shop" type="Character" x="544" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_world3.5_potions')"/>
+   </properties>
+  </object>
+  <object id="9" name="npc" type="Character" x="160" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Business is rough these days. Travelers are scarce.')"/>
+   </properties>
+  </object>
+  <object id="10" name="npc" type="Character" x="192" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('The plains town was annhilated by monsters from the south.')"/>
+   </properties>
+  </object>
+  <object id="11" name="npc" type="Character" x="208" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="WEST"/>
+    <property name="onInteract" value="speak('Our governor passed away recently.')"/>
+   </properties>
+  </object>
+  <object id="12" name="npc" type="Character" x="192" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('The army of Ares garrisoned the mountain town. Who knows if any who lived there are still alive?')"/>
+   </properties>
+  </object>
+  <object id="14" name="npc" type="Character" x="80" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_slime"/>
+    <property name="face" value="EAST"/>
+    <property name="onInteract" value="speak('Be careful at the high floors of Babel. Many monsters are equipped with fatal magic. Best win in one round!')"/>
+   </properties>
+  </object>
+  <object id="24" name="chest" type="Chest" x="576" y="432" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_white"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="38" height="32">
+  <properties>
+   <property name="z" value="1.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WwQkAMAgEQQtIXvbfqxUIEQ4OyU4Bcg8fGwEAM9c9oHHcAxrpHmDGv8z8/i8AAABbqbpX3c+q7lX3s6p7X+8U+Z7iBwATAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="38" height="32">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WsQkAIAxE0ey/ja3TuYCCxUFA3xsgXJHiVwG8YXQPOJjdA9jyLwAA/CDVvel+TnXv7Z0F3TPq7QATAAA=
+  </data>
+ </layer>
+</map>
