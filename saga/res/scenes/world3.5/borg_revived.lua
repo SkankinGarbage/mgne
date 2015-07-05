@@ -1,0 +1,30 @@
+local hero1 = getHero(0).getName()
+local hero2 = getHero(1).getName()
+local hero3 = getHero(2).getName()
+local hero4 = getHero(3).getName()
+
+removeItem('key_rom')
+
+speak("Elder", "Is that...? It is! You've found BORG's ROM!")
+speak(hero4, "Can you fix him?")
+speak("Elder", "Last time I did this I was quite a bit younger but... Give me a short while.")
+
+fade('white')
+wait(1.0)
+sceneSwitch('borg_revived', true)
+fade('normal')
+wait(1.0)
+
+speak(hero1, "BORG! Do you remember me?")
+speak("BORG", hero1 .. "! And Elder!")
+speak("Elder", "Then it was the right ROM.")
+speak("BORG", "You've saved me again. It's all coming back... and more.")
+speak("BORG", "But where are Jonas and Janine?")
+speak(hero2, "Jonas left to find your ROM, and Janine went to Ares's castle.")
+speak("BORG", "No! She'll be killed!")
+speak(hero1, "What should we do?")
+speak("BORG", "Come with me. I remember the secret way into the castle. Let's hope it's not too late!")
+
+pathEvent('borg', 'hero')
+sceneSwitch('borg_joins_again', true)
+addMember('chara_borg2')

@@ -46,5 +46,4 @@ wait(0.7)
 speak(hero1, "How could we pick sides?")
 speak(hero2, "Maybe we should talk to Elder.")
 
-
 sceneSwitch('twins01', true)
