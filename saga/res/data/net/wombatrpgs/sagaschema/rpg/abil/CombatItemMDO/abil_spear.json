@@ -1,16 +1,21 @@
 {
 	"key" : "abil_spear",
 	"subfolder" : "abil",
-	"name" : null,
-	"description" : null,
-	"abilityName" : null,
-	"itemDescription" : null,
-	"type" : null,
-	"uses" : null,
-	"cost" : null,
-	"anim" : null,
-	"equip" : null,
-	"warhead" : null,
-	"tier" : null,
-	"robostats" : null
+	"name" : "",
+	"description" : "",
+	"abilityName" : "SPEAR",
+	"itemDescription" : "Attacks with high weapon damage",
+	"type" : "ABILITY",
+	"uses" : 30,
+	"cost" : 0,
+	"anim" : "banim_wound",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_806545459"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
 }

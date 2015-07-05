@@ -46,6 +46,7 @@
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="hide" value="return getSwitch('twins02')"/>
+    <property name="onInteract" value="play('world3.5/twins02.lua')"/>
    </properties>
   </object>
   <object id="22" name="borg" type="Character" x="176" y="464" width="16" height="16">

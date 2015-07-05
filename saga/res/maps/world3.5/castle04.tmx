@@ -131,7 +131,7 @@
   <object id="54" name="stairs_n" type="Target" x="192" y="32" width="16" height="16"/>
   <object id="55" name="tele" type="Event" x="192" y="16" width="16" height="16">
    <properties>
-    <property name="onCollide" value="sceneSwitch('entered_via_throne', true); targetTele('world3.5/castle06.tmx', 'stairs_n')"/>
+    <property name="onCollide" value="sceneSwitch('entered_via_throne', true); targetTele('world3.5/castle05.tmx', 'stairs_n')"/>
    </properties>
   </object>
  </objectgroup>

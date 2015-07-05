@@ -14,11 +14,11 @@ sceneSwitch('borg_leaves_again', true)
 removeMember()
 walk('borg', 1, 'EAST')
 face('borg', 'WEST')
+face('hero', 'EAST')
 
 speak("BORG", "Be careful!")
 
 walk('janine', 1, 'SOUTH')
-face('hero', 'EAST')
 
 pathEvent('borg', 'corner1', false)
 pathEvent('janine', 'corner2', true)

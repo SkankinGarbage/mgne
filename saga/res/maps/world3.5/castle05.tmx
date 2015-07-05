@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="43" tilewidth="16" tileheight="16" nextobjectid="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="43" tilewidth="16" tileheight="16" nextobjectid="35">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level07_danger01"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2W0QrDIAxF1T/Y2/aWfs9+xf9/HkIDabhTN2oaSi4cKMXCwdiYlCKR+2Tr4CHs8gJ48WQ/ArCnhcOI5lMAZOiI6ihpPu+dLJ6LoSMNaC5192OqsSOqoyYDrB1755FrLf2saz3jWNPxPF5R69G/LWte1Der/WYdeV0G61c7cm+R94Y3R0rHfuzRUfaXOzg2HuCdN8fnBY7f9uYXLBzR3ozmDDlDWjgiaBKr/qjnan1Oe1j1R0bPjF4c9VzNeHX8hyv7o5cZt9cfvTmi/uip1mewMrN3yYiVoZOIRCKRSMR7PguDO/uMGwAA
+   H4sIAAAAAAAAC+2WQQrEIAxF1RvMbmaXnmeu4v3Xg9BAGlJ1oKafkg8PSrHwMJompUjkOdk6IIRdPgYonuxHBuzp4TCi+RQDcnS06ihpPt+dLJ6LoyMNaC5192Oqs6NVR0028HbsnUeutfTzrvWMY03H83hHrUd3W9a8qG9W+8068rpsrF/tyL1F/jfQHCkd+zGio+wvT3BsvIx3aI7vGxzP9uYfPBytvRnNGXKG9HC0oEm8+qOeq/U57eHVHxk9MyLMPXq/pC+qI+L82OuPSI5n/RHN0eqPSPf6ClZm9l8yYmXoIiKRSCQSQc8PIjBCfYwbAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="41" height="43">
@@ -27,7 +27,7 @@
   <object id="20" name="guard" type="Character" x="128" y="256" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
-    <property name="face" value="NORTH"/>
+    <property name="face" value="SOUTH"/>
     <property name="hide" value="return getSwitch('entered_via_throne') or not getSwitch('twins02')"/>
     <property name="onCollide" value="play('world3.5/castle_guard.lua')"/>
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
@@ -35,21 +35,21 @@
   </object>
   <object id="21" name="tele" type="Event" x="304" y="304" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world3.5/castle03.tmx', 'stairs_n')"/>
+    <property name="onCollide" value="targetTele('world3.5/castle04.tmx', 'stairs_n')"/>
    </properties>
   </object>
   <object id="22" name="stairs_n" type="Target" x="304" y="288" width="16" height="16"/>
   <object id="23" name="tele" type="Event" x="128" y="336" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world3.5/castle03.tmx', 'stairs_n'); sceneSwitch('entered_via_throne', false)"/>
+    <property name="onCollide" value="targetTele('world3.5/castle04.tmx', 'stairs_nw'); sceneSwitch('entered_via_throne', false)"/>
    </properties>
   </object>
-  <object id="24" name="stairs_n" type="Target" x="128" y="320" width="16" height="16"/>
+  <object id="24" name="stairs_nw" type="Target" x="128" y="320" width="16" height="16"/>
   <object id="25" name="ares" type="Character" x="304" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_golem"/>
     <property name="hide" value="return getSwitch('twins02')"/>
-    <property name="onInteract" value="play('ares02.lua')"/>
+    <property name="onInteract" value="play('world3.5/ares02.lua')"/>
    </properties>
   </object>
   <object id="26" name="chest" type="Chest" x="304" y="432" width="16" height="16">
@@ -61,16 +61,16 @@
    <properties>
     <property name="appearance" value="4dir_golem"/>
     <property name="hide" value="return not getSwitch('twins02') or getSwitch('ares_dead')"/>
-    <property name="onInteract" value="play('ares03.lua')"/>
+    <property name="onInteract" value="play('world3.5/ares03.lua')"/>
    </properties>
   </object>
-  <object id="28" name="borg" type="Character" x="128" y="160" width="16" height="16">
+  <object id="28" name="borg" type="Character" x="128" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="hide" value="return not getSwitch('ambush_arrives')"/>
    </properties>
   </object>
-  <object id="29" name="janine" type="Character" x="128" y="176" width="16" height="16">
+  <object id="29" name="janine" type="Character" x="128" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="hide" value="return not getSwitch('ambush_arrives')"/>
@@ -78,5 +78,11 @@
   </object>
   <object id="30" name="janine_target" type="Target" x="256" y="160" width="16" height="16"/>
   <object id="31" name="borg_target" type="Target" x="240" y="160" width="16" height="16"/>
+  <object id="33" name="tele" type="Event" x="128" y="464" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3.5/castle04.tmx', 'stairs_sw'); sceneSwitch('entered_via_throne', false)"/>
+   </properties>
+  </object>
+  <object id="34" name="stairs_sw" type="Target" x="128" y="448" width="16" height="16"/>
  </objectgroup>
 </map>
