@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="43" tilewidth="16" tileheight="16" nextobjectid="32">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="encounter" value="encounterset_level07_danger01"/>
+  <property name="name" value="Ares Castle"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="41" height="43">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2W0QrDIAxF1T/Y2/aWfs9+xf9/HkIDabhTN2oaSi4cKMXCwdiYlCKR+2Tr4CHs8gJ48WQ/ArCnhcOI5lMAZOiI6ihpPu+dLJ6LoSMNaC5192OqsSOqoyYDrB1755FrLf2saz3jWNPxPF5R69G/LWte1Der/WYdeV0G61c7cm+R94Y3R0rHfuzRUfaXOzg2HuCdN8fnBY7f9uYXLBzR3ozmDDlDWjgiaBKr/qjnan1Oe1j1R0bPjF4c9VzNeHX8hyv7o5cZt9cfvTmi/uip1mewMrN3yYiVoZOIRCKRSMR7PguDO/uMGwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="41" height="43">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OIRYAEBRFwbf/zQqKIMjSVxzCTLvtJgCQ9NcDB+brAQCAy1rRPxhFAwAAuwVjskEsjBsAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="20" name="guard" type="Character" x="128" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return getSwitch('entered_via_throne') or not getSwitch('twins02')"/>
+    <property name="onCollide" value="play('world3.5/castle_guard.lua')"/>
+    <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
+   </properties>
+  </object>
+  <object id="21" name="tele" type="Event" x="304" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3.5/castle03.tmx', 'stairs_n')"/>
+   </properties>
+  </object>
+  <object id="22" name="stairs_n" type="Target" x="304" y="288" width="16" height="16"/>
+  <object id="23" name="tele" type="Event" x="128" y="336" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3.5/castle03.tmx', 'stairs_n'); sceneSwitch('entered_via_throne', false)"/>
+   </properties>
+  </object>
+  <object id="24" name="stairs_n" type="Target" x="128" y="320" width="16" height="16"/>
+  <object id="25" name="ares" type="Character" x="304" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_golem"/>
+    <property name="hide" value="return getSwitch('twins02')"/>
+    <property name="onInteract" value="play('ares02.lua')"/>
+   </properties>
+  </object>
+  <object id="26" name="chest" type="Chest" x="304" y="432" width="16" height="16">
+   <properties>
+    <property name="item" value="spell_stone"/>
+   </properties>
+  </object>
+  <object id="27" name="ares" type="Character" x="304" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_golem"/>
+    <property name="hide" value="return not getSwitch('twins02') or getSwitch('ares_dead')"/>
+    <property name="onInteract" value="play('ares03.lua')"/>
+   </properties>
+  </object>
+  <object id="28" name="borg" type="Character" x="128" y="160" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="hide" value="return not getSwitch('ambush_arrives')"/>
+   </properties>
+  </object>
+  <object id="29" name="janine" type="Character" x="128" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_janine"/>
+    <property name="hide" value="return not getSwitch('ambush_arrives')"/>
+   </properties>
+  </object>
+  <object id="30" name="janine_target" type="Target" x="256" y="160" width="16" height="16"/>
+  <object id="31" name="borg_target" type="Target" x="240" y="160" width="16" height="16"/>
+ </objectgroup>
+</map>

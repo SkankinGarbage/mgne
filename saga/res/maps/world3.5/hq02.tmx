@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="49" height="50" tilewidth="16" tileheight="16" nextobjectid="31">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="49" height="50" tilewidth="16" tileheight="16" nextobjectid="32">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level07_danger00"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XQQqEMAxFewV3gq56ijlC7zqXHAQXJTRgNflNnb94m0do8hcmuKeUdkIIIQTMJ8AMNVvFVb901re85fy5Yrvo18566S053i0Vuerr5a0zlAayr7VHZPAGkQHhPXMgvUeOEd6KY398U3uva7501re85fz57NHa65ovnfXSW6Ltb29v/R3MvpeYIUYG2QfpPXKM8FbwPtx7xxL+P9zziAzeIDIgvGcOpB9NtHl60e7DLGj3YSYQ+94b1J5hhvdnkDlGz/KEJcAMT1kDzEAIIeQ/+QHkiJt1SCYAAA==
+   H4sIAAAAAAAAC+2XMQ7EIAwE+UK6SEnFK+4JPPS6fDKKlIJDWAeKvZi7LaYZobBbYCt7CGEnhBBCwLwcZMjZMlr90nm+5jXzx4yt0a+d50uvyfXdlBGze628dodUobxX2yM6WIPogPCWPZDeoscIr8U1P96hPtclnwR/dHjN/PHOWpvrkk+CPxq9JtL8tvba72D2ucQOPjqU9yC9RY8RXgvuh0/vZT/w/+G7R3SwBtEB4S17IP1ovOXpRdoPsyDth5lAzHtrUHOGHX6/Q9ljdJYnLA4yPGV1kIEQQsh/cgKMKDh7SCYAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="49" height="50">

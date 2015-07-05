@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl07_DEMON1-2_WARRIOR1-2_BOMBADIER1-2",
+	"subfolder" : "level07",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dem07_DEMON",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_skl07_WARRIOR",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_gun07_BOMBADIER",
+			"amount" : "1-2"
+		}
+	]
+}

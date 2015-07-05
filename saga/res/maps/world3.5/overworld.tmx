@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="34">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="36">
  <properties>
   <property name="battle_bgm" value="ffl3_battle"/>
   <property name="bgm" value="ffl1_overworld2"/>
@@ -13,7 +13,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="76" height="70">
@@ -21,7 +21,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZMQqDQBAFUIVcK23ubZvWylbIFVJHAhYuMSYSmd3se82sjXyWYRi0aQAAAN7rogMA/IFL+7rmaogOMDm3y8q6+Y7uyTP80klfAYW6RQeAStgV6mGu7uPeID/X6AAFyuGbIQBAjexhQEn66ADApjE6APBkz/9eOr/Ms21H9VkN/z71G0cYk5qe4RPDynnvOwAAACBXD4pahCQgUwAA
+   H4sIAAAAAAAAC+3ZMQrCQBAF0AS8loWN97a1tUob8ArWimDhYoyKcWbd95rZNOGzDMOQdB0AAMBzu+gAAH9g2z+uWQ3RAS7W/X1l2u2OTsUzfNNKX0Eam+gAlTG+4DfsCu04RgeolHuDfPbRASqU4ZshAECL7GFATQ7RAYBZY3QA4Mqe/75yfpln85bqsxb+feo3ljAWtTzDK4aJ86fvAAAAgKzOSwR52yBTAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -75,9 +75,21 @@
     <property name="onCollide" value="teleport('world3.5/rivertown.tmx', 24, 9, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="33" name="Airseed Shrine" type="Event" x="864" y="832" width="16" height="16">
+  <object id="33" name="Southern Cave" type="Event" x="864" y="832" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/hq01.tmx', 12, 16, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="34" name="block" type="Event" x="944" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_mountain"/>
+    <property name="hide" value="return getSwitch('twins01')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="35" name="Ares Castle" type="Event" x="800" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/castle01.tmx', 24, 28, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>

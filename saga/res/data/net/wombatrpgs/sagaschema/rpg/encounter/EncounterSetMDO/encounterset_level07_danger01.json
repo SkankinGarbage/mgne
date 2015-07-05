@@ -35,6 +35,14 @@
 		{
 			"encounter" : "encounter_lvl07_PLAGUE RAT3-6",
 			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl07_PHAGE",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl07_FIRE JELLY",
+			"weight" : 16
 		}
 	],
 	"steps" : 42
