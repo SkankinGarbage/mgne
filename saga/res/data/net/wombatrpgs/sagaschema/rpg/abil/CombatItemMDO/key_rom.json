@@ -1,6 +1,6 @@
 {
 	"key" : "key_rom",
-	"subfolder" : "",
+	"subfolder" : "key",
 	"name" : "",
 	"description" : "",
 	"abilityName" : "ROM",

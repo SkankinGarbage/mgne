@@ -110,14 +110,14 @@
    <properties>
     <property name="appearance" value="4dir_jonas"/>
     <property name="face" value="EAST"/>
-    <property name="hide" value="return getSwitch('twins')"/>
+    <property name="hide" value="return getSwitch('twins01')"/>
    </properties>
   </object>
   <object id="121" name="janine" type="Event" x="448" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="face" value="WEST"/>
-    <property name="hide" value="return getSwitch('twins')"/>
+    <property name="hide" value="return getSwitch('twins01')"/>
    </properties>
   </object>
   <object id="123" name="jonas_target1" type="Target" x="416" y="336" width="16" height="16"/>

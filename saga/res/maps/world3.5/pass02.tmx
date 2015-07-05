@@ -47,7 +47,7 @@
   <object id="15" name="exit" type="Target" x="560" y="144" width="16" height="16"/>
   <object id="16" name="tele" type="Event" x="560" y="128" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 23, 28, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world3.5/overworld.tmx', 23, 28, 'SOUTH')"/>
    </properties>
   </object>
   <object id="17" name="chest" type="Chest" x="448" y="384" width="16" height="16">

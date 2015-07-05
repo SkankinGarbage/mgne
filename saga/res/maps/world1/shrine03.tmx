@@ -109,7 +109,7 @@
   </object>
   <object id="17" name="door" type="Event" x="256" y="432" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/shrine01.tmx', 23, 20)"/>
+    <property name="onCollide" value="teleport('world1/shrine01.tmx', 25, 20)"/>
    </properties>
   </object>
   <object id="18" name="door" type="Door" x="256" y="160" width="16" height="16">

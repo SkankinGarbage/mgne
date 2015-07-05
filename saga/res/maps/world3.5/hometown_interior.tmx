@@ -66,8 +66,10 @@
   </object>
   <object id="22" name="borg_disabled" type="Character" x="96" y="432" width="16" height="16">
    <properties>
+    <property name="animate" value="false"/>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('borg_revived')"/>
     <property name="onInteract" value="speak('BORG', 'Beep... Beep...'); face('borg_disabled', 'SOUTH')"/>
    </properties>
   </object>
@@ -75,7 +77,7 @@
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="NORTH"/>
-    <property name="hide" value="return getSwitch('world3.5_elder01')"/>
+    <property name="hide" value="return getSwitch('world3.5_elder01') or hasItem('key_rom') or getSwitch('borg_revived')"/>
     <property name="onInteract" value="play('world3.5/elder01.lua')"/>
    </properties>
   </object>
@@ -83,7 +85,7 @@
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="WEST"/>
-    <property name="hide" value="return not getSwitch('world3.5_elder01') or hasItem('key_rom')"/>
+    <property name="hide" value="return not getSwitch('world3.5_elder01') or hasItem('key_rom') or getSwitch('borg_revived')"/>
     <property name="onInteract" value="speak('Elder', 'Have you found Borg\'s ROM?')"/>
    </properties>
   </object>
@@ -107,7 +109,7 @@
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
-    <property name="hide" value="return getSwitch('borg_joins_again')"/>
+    <property name="hide" value="return not getSwitch('borg_revived') or getSwitch('borg_joins_again')"/>
    </properties>
   </object>
  </objectgroup>

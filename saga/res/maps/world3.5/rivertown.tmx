@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="49" tilewidth="16" tileheight="16" nextobjectid="22">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="49" tilewidth="16" tileheight="16" nextobjectid="23">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="River Town"/>
@@ -33,7 +33,7 @@
   </object>
   <object id="4" type="Event" x="320" y="112" width="144" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 31)"/>
+    <property name="onCollide" value="teleport('world3.5/overworld.tmx', 25, 31)"/>
    </properties>
   </object>
   <object id="5" name="npc" type="Character" x="464" y="432" width="16" height="16">
@@ -72,7 +72,7 @@
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Bandits seem to have abandoned the shrine to the south. I wonder why?')"/>
+    <property name="onInteract" value="speak('Bandits seem to have abandoned the shrine to the south. I wonder why.')"/>
    </properties>
   </object>
   <object id="12" name="npc" type="Character" x="336" y="176" width="16" height="16">
@@ -109,9 +109,9 @@
     <property name="onCollide" value="teleport('world3.5/rivertown_interior.tmx', 28, 30)"/>
    </properties>
   </object>
-  <object id="21" type="Event" x="320" y="656" width="144" height="16">
+  <object id="22" type="Event" x="320" y="656" width="144" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 31)"/>
+    <property name="onCollide" value="teleport('world3.5/overworld.tmx', 25, 31)"/>
    </properties>
   </object>
  </objectgroup>

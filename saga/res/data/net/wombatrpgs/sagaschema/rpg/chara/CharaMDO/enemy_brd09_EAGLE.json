@@ -15,8 +15,8 @@
 	"loot" : "None",
 	"equipped" : [
 		"abil_beak",
+		"abil_ambush",
 		"abil_warning",
-		"abil_stench",
 		"abil_oquake"
 	],
 	"stats" : {

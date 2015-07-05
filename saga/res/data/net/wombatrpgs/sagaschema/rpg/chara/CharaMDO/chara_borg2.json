@@ -1,7 +1,7 @@
 {
 	"key" : "chara_borg2",
 	"subfolder" : "npcs",
-	"name" : "BORG",
+	"name" : "BORG Mk2",
 	"description" : "",
 	"gender" : "NONE",
 	"race" : "ROBOT",
@@ -17,7 +17,7 @@
 		"wpn_swordOgre",
 		"wpn_gunVulcan",
 		"wpn_saw",
-		"wpn_cannonRocket",
+		"wpn_cannonMissile",
 		"wpn_knifeCat",
 		"hand_ninja",
 		"hand_ninja",

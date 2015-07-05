@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="49" tilewidth="16" tileheight="16" nextobjectid="7">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="49" tilewidth="16" tileheight="16" nextobjectid="7">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
   <property name="encounter" value="encounterset_level00_danger03"/>
@@ -7,51 +7,51 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="48" height="49">
+ <layer name="Tile Layer 1" width="51" height="49">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2YMVLEMAxFk2HL7Xyi7dLlCkCz0AD3r2ALzQiNvixLSmYLF78gJPL7siQbbsuy3DpagS5Jobirg8kra40s/xkejmQ/2sPRuffwRz30Yp7JH/FQzZjxFs394/srUCWjtUZ0L4i/AVXyW2tE6ofnfwOq5LfWiPTAs/J7PMgZczS75SFaP7z+n4W/sn5oZlRwXzvrZPtXyw+tm/XAY6D9jbKvnfhtiZ8H/LsG4tPvI/Of3mtG/E3x0PMh320insxPG2BGHu4G/8bWsXxo3A3Eo58/A3nXaqjH3/NhcY/yRzwgfjQzNB+IG8XS+KM9rPFbM0/6QNyyV8+sH17fFltPvD+q8i89a/xUHxe23ig3z73cI8k/Ont69U978NC+/J81qJ6ldhZD84f61+OH3rPuJ7QHnMM6A+Q79B2aR/z8jfYvXxf1qMbv0Q7Y+d5G7m/8fX4OemYN3xd01o7Ek/yjHqLzRftbMDqfoj2c4a9SpH4q8n8E/xH5z9z9Pedf5P4/kn9tLo7Iy189//lz9L8bjzzxo7W/ilzx+Pz5R0Ke+JH+JR9o/vHnGX5P/Mz87+me5LfuOF7uN4feQcyvP30n9GPwvjrZqvNUpezeTv7JX8n/crIm/+Sf/JN/8k9+S7+mhgwRwCQAAA==
+   H4sIAAAAAAAAC+2YMXLDMAwEpYlLd3yRO3X+QpLGSZPk/1XigjMIBgcSOlB2weIK2xKA5RGg5MuyLJdOrUAnUijuGqgtIi8fy3I0z0iOI3lGe9LDksHTin8kC8uTXS/DmeHJPdYZKLNeL0eGR5WlAGWyeDnYPSZ92YAyWbwcbM88K0uUR8+q0RweT8Yek/3yLCyj9lidPRkM50aezN631q3WwPLIGMj3DI61kass+88beV8B8evvuvf39n9xcm0GT4tJX1tUPL1WZWf9iOfmsGwip8dkMRQQr37+JP2w9lmLpcXkMURZWB7EgmaPxYQYUCyLJaP/LRZvjmomxKD7/FF7TPaDV2dLsp9G+KLXwmKpe+gkckcZpCfaO83CzLBWv1Rv7rou/2cW2v9aVxHDYkW9H2Wr93jPS9UbWZN3xuhr6n1orslzP6P3ZQ2ovy2WHl0Bh/ScfbaU98rzt2dmSb/QGR+Jp1kYnr1zynrf3TvnMvqfYckSu8cyfBnBMtoX5t2l56xl318ivlizNqJeFqb/JUvr7EP/bfWoJ35Gr6xqDWUu+f0HoZ74bO9XJjRT5fcMS098Zn9pbzzdSBbvmSvC8BbQO4j/9advQj9O7a+B+katX5ZYzyfLZHkky8vBmiyTZbJMlskyWR7N8guPNNCtDCcAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="48" height="49">
+ <layer name="Tile Layer 2" width="51" height="49">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XsQmAQAyFYfffxkbQRrByAGcQx9DCxoOgcHmJB/8HFnL4Eq6IpOsAALANjdeYhdkRNVZhdmQNwMuW/D2e3u6T+47VZzdQacpuAMBnY+V5tqV4L/9X5Xk09Q6mzlfvYOp89X7E/oW/sWaC16xQ51szwWtWqPOtmeA1K9T5aN9+PUd2EwAAALcTDBvMk8AkAAA=
+   H4sIAAAAAAAAC+3XwQmAMAyF4e6/jRdBL4KnDuAM4hiaWykUBZOm1v8DD1JMgkLkhQAAgL+xkx5i6aSHiJ30ALxszs/jmbv3zHdow+A9gKLZewAAVUwvz1uyZvf5vzE/92Sd+2rlSmGd+2rlSmGd+8iV+LrSbtHaOdb1U6XdorVzrOunSrtFa+dY18c/7Nd1eA8BAADQmBPC3vvFDCcAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="spellbook" type="Chest" x="576" y="160" width="16" height="16">
+  <object id="1" name="spellbook" type="Chest" x="608" y="160" width="16" height="16">
    <properties>
     <property name="item" value="spell_fire"/>
    </properties>
   </object>
-  <object id="2" name="tele" type="Event" x="160" y="640" width="448" height="16">
+  <object id="2" name="tele" type="Event" x="192" y="640" width="448" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 44)"/>
    </properties>
   </object>
-  <object id="3" name="door" type="Event" x="368" y="304" width="16" height="16">
+  <object id="3" name="door" type="Event" x="400" y="304" width="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_shrineKey')"/>
     <property name="onInteract" value="speak('It\'s locked.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="4" name="tele" type="Event" x="304" y="400" width="16" height="16">
+  <object id="4" name="tele" type="Event" x="336" y="400" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/shrine02.tmx', 10, 27)"/>
    </properties>
   </object>
-  <object id="5" name="tele" type="Event" x="432" y="400" width="16" height="16">
+  <object id="5" name="tele" type="Event" x="464" y="400" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/shrine02.tmx', 22, 27)"/>
    </properties>
   </object>
-  <object id="6" name="tele" type="Event" x="368" y="304" width="16" height="16">
+  <object id="6" name="tele" type="Event" x="400" y="304" width="16" height="16">
    <properties>
     <property name="hide" value="return not hasItem('key_shrineKey')"/>
     <property name="onCollide" value="teleport('world1/shrine03.tmx', 16, 25)"/>

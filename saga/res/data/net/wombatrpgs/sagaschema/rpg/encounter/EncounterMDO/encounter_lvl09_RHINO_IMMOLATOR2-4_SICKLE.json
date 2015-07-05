@@ -3,5 +3,18 @@
 	"subfolder" : "level09",
 	"name" : "",
 	"description" : "",
-	"members" : [ ]
+	"members" : [
+		{
+			"enemy" : "enemy_arm09_RHINO",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_brn09_IMMOLATOR",
+			"amount" : "2-4"
+		},
+		{
+			"enemy" : "enemy_wsl09_SICKLE",
+			"amount" : "1"
+		}
+	]
 }

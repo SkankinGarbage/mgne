@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2YMRKEIAxFucFuZ4EVp/D+J9vGIuPgGld+BPcVr0kYw2MQJswppRkAAAC6YhF9NxsU8S1vkUcxKOJbJpHHy6CI1+qN7pHX/NHe692jrPmjvXfFRRk/u/fweI5HrtAqbvNqj1KhVdzm1R7RRP4fyvXCAw887vPw9Be/Eulhz3s7h2/3gpdID1trbw4j3B9PuQf3ao3g4e39PeOizr4a3t7fM+5Oj5bg0Q/K95BI1O8hUajPVTz+0wMAAMbnA8QgVa+AJQAA
+   H4sIAAAAAAAAC+2YMRKEIAxFuYHbWWDFKfb+J7OxyDCorPIiuL94TTITeE4gg0sIYRFCCCFEV3yhutFAxHM+kEcyEPGcGfKYDES8tN7oHnHLn/Ve7x5py5/13h0XMv5r78njPR6xQKu4zdMeqUCruM3THt54ng/ye5Hn4w0e1Gzy9vDoLdIjQnW9PVJWt+Z9cRXSI69r73u7h6O5UIunh11rbw89zo8jj5Hn4N5aI3jUvv1r9uB195Vo+fZ/0qMl8ugH8n+IJ/T/EC/oe1Ue/+khhBBifFa+/8a4gCUAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="50" height="48">
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3SQQ3AMAwEQTMIgOZV/iDzKgJHujSaQbCWrwoAAACAjicdsMmbDthkpAOa7Oksf9/Txx2kjbrjfzMdAAAAHGkBK1UMzoAlAAA=
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQdvoAAAAAAAAAAAAHgMMYCaUYAlAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -71,7 +71,7 @@
   </object>
   <object id="10" name="chest" type="Chest" x="240" y="464" width="16" height="16">
    <properties>
-    <property name="item" value="wpn_swordDragon"/>
+    <property name="item" value="wpn_knifeCat"/>
    </properties>
   </object>
   <object id="12" name="chest" type="Chest" x="176" y="208" width="16" height="16"/>
@@ -84,7 +84,7 @@
   </object>
   <object id="16" name="tele" type="Event" x="608" y="144" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/overworld.tmx', 21, 27)"/>
+    <property name="onCollide" value="teleport('world3.5/overworld.tmx', 21, 27)"/>
    </properties>
   </object>
   <object id="17" name="entry" type="Target" x="608" y="160" width="16" height="16"/>

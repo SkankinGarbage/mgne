@@ -31,12 +31,12 @@
   </object>
   <object id="2" name="tele" type="Event" x="160" y="448" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/shrine01.tmx', 19, 26)"/>
+    <property name="onCollide" value="teleport('world1/shrine01.tmx', 21, 26)"/>
    </properties>
   </object>
   <object id="3" name="tele" type="Event" x="352" y="448" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/shrine01.tmx', 27, 26)"/>
+    <property name="onCollide" value="teleport('world1/shrine01.tmx', 29, 26)"/>
    </properties>
   </object>
   <object id="5" name="room" type="Ceiling" x="64" y="288">
