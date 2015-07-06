@@ -13,7 +13,7 @@ face('ares', 'WEST')
 playSound('ding')
 wait(0.7)
 
-speak("Janine", "Let's see what you're made of without your shield!")
+speak("Janine", "Now let's see how tough you are without your shield!")
 
 sceneSwitch('ares_dead', true)
 battle('party_bossAres', false, 'ffl1_boss')

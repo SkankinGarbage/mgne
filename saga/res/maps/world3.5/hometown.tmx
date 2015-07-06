@@ -106,14 +106,14 @@
     <property name="onEnter" value="play('world3.5/twins01.lua')"/>
    </properties>
   </object>
-  <object id="120" name="jonas" type="Event" x="400" y="304" width="16" height="16">
+  <object id="120" name="jonas" type="Character" x="400" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
     <property name="face" value="EAST"/>
     <property name="hide" value="return getSwitch('twins01')"/>
    </properties>
   </object>
-  <object id="121" name="janine" type="Event" x="448" y="304" width="16" height="16">
+  <object id="121" name="janine" type="Character" x="448" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="face" value="WEST"/>
