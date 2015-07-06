@@ -2,7 +2,7 @@
 	"key" : "enemy_tmp10_GORGON",
 	"subfolder" : "level10",
 	"name" : "GORGON",
-	"description" : "Converted from a report",
+	"description" : "HI",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_tmp",
@@ -12,14 +12,19 @@
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_tusk",
+		"abil_tail",
+		"abil_sgaze"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 46,
+		"def" : 43,
+		"agi" : 50,
+		"mana" : 48,
+		"flags" : [ ]
 	}
 }

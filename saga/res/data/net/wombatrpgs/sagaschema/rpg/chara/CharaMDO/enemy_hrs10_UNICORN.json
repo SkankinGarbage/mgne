@@ -2,24 +2,29 @@
 	"key" : "enemy_hrs10_UNICORN",
 	"subfolder" : "level10",
 	"name" : "UNICORN",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_hrs",
 	"species" : "UNICORN",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_horse",
+	"portrait" : "battle_portraits/hrs.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_kick",
+		"abil_horn",
+		"abil_heal"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 454,
+		"mhp" : 454,
+		"str" : 60,
+		"def" : 48,
+		"agi" : 62,
+		"mana" : 61,
+		"flags" : [ ]
 	}
 }

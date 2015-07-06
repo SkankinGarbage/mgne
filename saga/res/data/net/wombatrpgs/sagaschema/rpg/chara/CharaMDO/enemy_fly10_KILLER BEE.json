@@ -2,24 +2,28 @@
 	"key" : "enemy_fly10_KILLER BEE",
 	"subfolder" : "level10",
 	"name" : "KILLER BEE",
-	"description" : "Converted from a report",
+	"description" : "HI",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_fly",
 	"species" : "KILLER BEE",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_bird",
+	"portrait" : "battle_portraits/fly.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_dsting"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 330,
+		"mhp" : 330,
+		"str" : 42,
+		"def" : 36,
+		"agi" : 47,
+		"mana" : 40,
+		"flags" : [ ]
 	}
 }

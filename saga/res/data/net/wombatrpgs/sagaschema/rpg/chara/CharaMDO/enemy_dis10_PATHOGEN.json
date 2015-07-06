@@ -2,24 +2,30 @@
 	"key" : "enemy_dis10_PATHOGEN",
 	"subfolder" : "level10",
 	"name" : "PATHOGEN",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_dis",
 	"species" : "PATHOGEN",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_slime",
+	"portrait" : "battle_portraits/goo.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_poison",
+		"abil_sleep",
+		"abil_pskin",
+		"abil_xfire"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 18,
+		"def" : 39,
+		"agi" : 62,
+		"mana" : 80,
+		"flags" : [ ]
 	}
 }

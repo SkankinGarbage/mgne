@@ -2,24 +2,31 @@
 	"key" : "enemy_rat10_RAT KING",
 	"subfolder" : "level10",
 	"name" : "RAT KING",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_rat",
 	"species" : "RAT KING",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_rat",
+	"portrait" : "battle_portraits/rat.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_bite",
+		"abil_tail",
+		"abil_poison",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 454,
+		"mhp" : 454,
+		"str" : 61,
+		"def" : 50,
+		"agi" : 62,
+		"mana" : 48,
+		"flags" : [ ]
 	}
 }

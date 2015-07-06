@@ -2,24 +2,32 @@
 	"key" : "enemy_goo10_PUDDING",
 	"subfolder" : "level10",
 	"name" : "PUDDING",
-	"description" : "Converted from a report",
+	"description" : "HI",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_goo",
 	"species" : "PUDDING",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_slime",
+	"portrait" : "battle_portraits/goo.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_melt",
+		"abil_dissolve",
+		"abil_bother",
+		"abil_oweapon",
+		"abil_ostone",
+		"abil_xthunder"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 11,
+		"def" : 51,
+		"agi" : 49,
+		"mana" : 65,
+		"flags" : [ ]
 	}
 }

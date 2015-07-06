@@ -2,24 +2,29 @@
 	"key" : "enemy_pnx10_THUNDER",
 	"subfolder" : "level10",
 	"name" : "THUNDER",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_pnx",
 	"species" : "THUNDER",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_bird",
+	"portrait" : "battle_portraits/pnx.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_beak",
+		"abil_thunder",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 58,
+		"def" : 36,
+		"agi" : 55,
+		"mana" : 55,
+		"flags" : [ ]
 	}
 }

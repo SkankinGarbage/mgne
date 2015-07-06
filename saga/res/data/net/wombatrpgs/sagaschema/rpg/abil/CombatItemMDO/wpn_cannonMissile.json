@@ -3,7 +3,7 @@
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$YMISSILE",
+	"abilityName" : "$YBAZOOKA",
 	"itemDescription" : "",
 	"type" : "ITEM",
 	"uses" : 10,

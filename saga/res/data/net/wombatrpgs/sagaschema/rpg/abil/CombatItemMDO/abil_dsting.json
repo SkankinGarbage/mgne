@@ -1,0 +1,21 @@
+{
+	"key" : "abil_dsting",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "DEATHSTING",
+	"itemDescription" : "Inflicts death",
+	"type" : "ABILITY",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_wound",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-969609694"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}
