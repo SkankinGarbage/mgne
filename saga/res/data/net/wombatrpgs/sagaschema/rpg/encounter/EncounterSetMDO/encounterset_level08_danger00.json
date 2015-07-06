@@ -1,0 +1,61 @@
+{
+	"key" : "encounterset_level08_danger00",
+	"subfolder" : "level08",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl08_BARD",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl08_HYDRA",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl08_OGRE",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl08_TORORO",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl08_WIGHT",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl08_LIGHTNING3-5",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl08_PREDATOR2-5",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl08_SIREN2-4_BARD0-2",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl08_MANTIS1-2_LIGHTNING1-2",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl08_OGRE2-3_LYNX1-3",
+			"weight" : 8
+		},
+		{
+			"encounter" : "encounter_lvl08_WIGHT2-3_SIREN_MANTIS2-3",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl08_LYNX_MANTIS_TORORO",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl08_BARD1-2_HYDRA1-2_LIGHTNING1-2",
+			"weight" : 16
+		}
+	],
+	"steps" : 38
+}
