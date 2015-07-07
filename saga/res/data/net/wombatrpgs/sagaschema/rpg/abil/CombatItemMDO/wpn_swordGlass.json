@@ -1,0 +1,21 @@
+{
+	"key" : "wpn_swordGlass",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$EGLASS",
+	"itemDescription" : "Inflicts weapon damage (tier 11)",
+	"type" : "ITEM",
+	"uses" : 1,
+	"cost" : 2,
+	"anim" : "banim_slash",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_-2097077909"
+	},
+	"tier" : 11,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

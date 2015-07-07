@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="92">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="93">
  <properties>
   <property name="bgm" value="ffl2_apollo"/>
   <property name="name" value="F1 Gate"/>
@@ -45,6 +45,7 @@
   </object>
   <object id="78" name="tele" type="Event" x="416" y="224" width="16" height="16">
    <properties>
+    <property name="hide" value="return getSwitch('ares_dead')"/>
     <property name="onCollide" value="teleport('tower/reverse_f05.tmx', 7, 12, 'NORTH')"/>
    </properties>
   </object>
@@ -106,6 +107,12 @@
   <object id="89" name="target_hero" type="Target" x="416" y="368" width="16" height="16"/>
   <object id="90" name="target_middle" type="Target" x="416" y="320" width="16" height="16"/>
   <object id="91" name="gate" type="Target" x="416" y="208" width="16" height="16"/>
+  <object id="92" name="tele" type="Event" x="416" y="224" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('ares_dead')"/>
+    <property name="onCollide" value="teleport('tower/f10.tmx', 14, 10, 'NORTH')"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="52" height="48">
   <properties>

@@ -1,0 +1,16 @@
+{
+	"key" : "shop_library",
+	"subfolder" : "world3.5",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"spell_cure",
+		"spell_sleep",
+		"spell_wand",
+		"spell_death",
+		"spell_stone",
+		"spell_wizard",
+		"spell_heal",
+		"spell_flare"
+	]
+}

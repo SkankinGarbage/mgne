@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="29" tilewidth="16" tileheight="16" nextobjectid="100">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="29" tilewidth="16" tileheight="16" nextobjectid="101">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level04_danger00"/>
@@ -29,17 +29,17 @@
     <property name="onCollide" value="memTele('tower/f05_transition.tmx', 'tower/f09.tmx', 'ENTRANCE', 'B')"/>
    </properties>
   </object>
-  <object id="95" name="target_b" type="Event" x="16" y="400" width="16" height="16"/>
-  <object id="96" name="target_a" type="Event" x="432" y="400" width="16" height="16"/>
+  <object id="95" name="target_b" type="Target" x="16" y="400" width="16" height="16"/>
+  <object id="96" name="target_a" type="Target" x="432" y="400" width="16" height="16"/>
   <object id="97" name="mem_tele" type="Event" x="432" y="416" width="16" height="16">
    <properties>
-    <property name="hide" value="return not getSwitch('world3_done')"/>
+    <property name="hide" value="return not getSwitch('ares_dead')"/>
     <property name="onCollide" value="memTele('tower/f10_transition.tmx', 'tower/f11.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
   <object id="98" name="block" type="Event" x="432" y="400" width="16" height="16">
    <properties>
-    <property name="hide" value="return getSwitch('world3_done')"/>
+    <property name="hide" value="return getSwitch('ares_dead')"/>
     <property name="onInteract" value="speak('It won\'t open.')"/>
    </properties>
   </object>

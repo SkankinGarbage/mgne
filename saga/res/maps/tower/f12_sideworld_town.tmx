@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="45" tilewidth="16" tileheight="16" nextobjectid="81">
+ <properties>
+  <property name="bgm" value="ffl1_overworld2"/>
+  <property name="name" value="Floor 12"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="65" height="45">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XQQrDMAwEXdJL/YY8KLf+/zc9BZZUOJHdIKzOYS4GgXewbHkppSwAAAAAAAA387iR6GwjDupAbq2NztbroAo9+V9SG53N66Ae0CxnubVmVge6f+XqWbDqZ3NgnQNvL1hnJzqb14F1Fz4v0KqPztbjwMq/NTh6yOiglV89ZJwPcICDvad77oNsDtby/QZsxtqa2MHuQXkba9next5/QjYHnhnZ8pdhTvT+FTR/llnZ0w+tP+OsDkbugSy98GuiswEAAAAAAPwrH2w0ccy0LQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="65" height="45">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XTQrDIBAGUO9/nSY0izT0AD1Hfy9RCwbS7BolIn0PPsaNMgxuJgQAAAD2dEj56Aq81aJ5Bn3Im8EQMxbpaH9jyhRz2nB/SPWyOPO//AEAgG/H2g1k6kL+vngu0EdNy915i35VWzTvjY+YZ8zrx/vTqrboGnOLudduBAAAAAp4A/kq3su0LQAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="65" name="entry" type="Target" x="320" y="352" width="16" height="16"/>
+  <object id="67" name="npc" type="Character" x="368" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Soon our world will be covered in lava.')"/>
+   </properties>
+  </object>
+  <object id="68" name="npc" type="Character" x="352" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Our only hope is to flee to Babel.')"/>
+   </properties>
+  </object>
+  <object id="69" name="npc" type="Character" x="480" y="464" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('One day the gate came open and lava poured out!')"/>
+   </properties>
+  </object>
+  <object id="73" name="npc" type="Character" x="624" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('All of our towns are dead. This is the only high ground left.')"/>
+   </properties>
+  </object>
+  <object id="74" name="npc" type="Character" x="592" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('We are not warriors. We will die in Babel.')"/>
+   </properties>
+  </object>
+  <object id="75" name="chest" type="Chest" x="480" y="336" width="16" height="16">
+   <properties>
+    <property name="item" value="wpn_swordGlass"/>
+   </properties>
+  </object>
+  <object id="76" name="town" type="Event" x="288" y="176" width="16" height="352">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/f12_sideworld.tmx', 'town')"/>
+   </properties>
+  </object>
+  <object id="77" name="town" type="Event" x="672" y="176" width="16" height="352">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/f12_sideworld.tmx', 'town')"/>
+   </properties>
+  </object>
+  <object id="78" name="town" type="Event" x="304" y="176" width="368" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/f12_sideworld.tmx', 'town')"/>
+   </properties>
+  </object>
+  <object id="79" name="town" type="Event" x="304" y="512" width="368" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/f12_sideworld.tmx', 'town')"/>
+   </properties>
+  </object>
+  <object id="80" name="npc" type="Character" x="496" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Once long ago, a powerful sword was kept here.')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="54" height="30" tilewidth="16" tileheight="16" nextobjectid="120">
+ <properties>
+  <property name="bgm" value="ffl1_theme"/>
+  <property name="encounter" value="encounterset_level08_danger00"/>
+  <property name="name" value="Floor 14"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="54" height="30">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2X6w2DMAyEGSD/ugabdAL2X6RCIsK1bOfs0Di0Pekk0ubxXYAkLMu7HoJnU4TxnytPmbk20BH9ci4+jtQmwnJ1Li/j7nLYakPrZOTyMm7sP60Nvba0HkZz1foteRlp31abWqck5fIwRnK11hGaH/GoXK15RS2NLdnbL8LIy8i8ZudCGHkuZPy9/tNwNJfVJ9ovZfTeC3Td8LolL6P3WUDXjcxclVG779LvLbWeJ82RfiOMyBxmK8J491zauejOuSJ7bpY8jNZ5QyrPYIRRKpfl3NPqNXrW+qR7GenerX2zlcHuZdSeN14PPSNd5V5Gqw2tN1q9jFabWRRh/OZc2ho6iyKM9L1bWXkWRRj5N1rmWqEJZXwBWQOt6FAZAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="54" height="30">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3PsQkAIBAEQb8DUzG1/xoNvgDBRF5m4PK91gDgHzNeF5zdNK4Cvyo0VtUj95sROQAAAKhgA6icwNtQGQAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="114" name="mem_tele" type="Event" x="752" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f10_transition.tmx', 'tower/f15.tmx', 'ENTRANCE', 'A')"/>
+   </properties>
+  </object>
+  <object id="115" name="target_a" type="Target" x="752" y="432" width="16" height="16"/>
+  <object id="116" name="target_b" type="Target" x="96" y="432" width="16" height="16"/>
+  <object id="117" name="mem_tele" type="Event" x="96" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="memTele('tower/f10_transition.tmx', 'tower/f13.tmx', 'ENTRANCE', 'B')"/>
+   </properties>
+  </object>
+  <object id="118" name="tele" type="Event" x="416" y="192" width="32" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/f14_sideworld.tmx', 'entry')"/>
+   </properties>
+  </object>
+  <object id="119" name="sideworld" type="Target" x="416" y="208" width="16" height="16"/>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="54" height="30">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OUQkAIBAFsAvgn+nsX8QGIscDEbYEqwIAAAAAgP+s14ELneOIL/I6xxlf5J2OG70QMONQGQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="54" height="30">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3PwQ0AIAgAMZjDr/vPyAaa8EGTdoK7CAAAAAAA4BUrpwvuOo37g69TYwHSN0loUBkAAA==
+  </data>
+ </layer>
+</map>
