@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="48" tilewidth="16" tileheight="16" nextobjectid="109">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="48" tilewidth="16" tileheight="16" nextobjectid="110">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level08_danger00"/>
-  <property name="name" value="Floor 13"/>
+  <property name="name" value="Floor 15"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgIAwM8WBqgVE7Ru2gtR0b6WDHLjrY4T9qB17ACsVlSBgmRk07yrDgUTuGtx20TlewvLAEiKuhNK3y4KgdhMFoWTK87WBlwIxPYuzApo8Y97IiieNLV7j0kWIHofwxGO1Ax8TagU0fNoCrrUnIDlLaqLjUEkpXo3ZQzw5saQIfLiNDz2C0YxSP4pGEAYV0qvXAEgAA
+   H4sIAAAAAAAAC2NgIAwM8WBqgVE7Ru2gtR0b6WDHLjrY4T9qB17ACsVlSBgmRk07yrDgUTuGtx20TlewvFANxEugNK3y4KgdhMFoWTK87WBlwIxPYuzApo8Y97IiieNLV7j0kWIHofwxGO1Ax8TagU0fNoCrrUnIDlLaqLjUEkpXo3ZQzw5saQIfLiNDz2C0YxSP4pGEAb4ZEpHAEgAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="25" height="48">
@@ -34,6 +34,12 @@
    <properties>
     <property name="appearance" value="anim_gate"/>
     <property name="onCollide" value="teleport('tower/f15.tmx', 12, 17, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="109" name="block" type="Event" x="192" y="128" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="speak('It won\'t open.')"/>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>

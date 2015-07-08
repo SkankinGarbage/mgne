@@ -1,7 +1,20 @@
 {
 	"key" : "encounter_lvl08_LYNX_MANTIS_TORORO",
 	"subfolder" : "level08",
-	"name" : null,
-	"description" : null,
-	"members" : null
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_cat08_LYNX",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_fly08_MANTIS",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_goo08_TORORO",
+			"amount" : "1"
+		}
+	]
 }

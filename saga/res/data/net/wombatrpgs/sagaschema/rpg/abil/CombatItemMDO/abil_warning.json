@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "WARNING",
-	"itemDescription" : "Prevents ambush encounters",
+	"itemDescription" : "Prevents enemy ambush encounters",
 	"type" : "ABILITY",
 	"uses" : 0,
 	"cost" : 0,

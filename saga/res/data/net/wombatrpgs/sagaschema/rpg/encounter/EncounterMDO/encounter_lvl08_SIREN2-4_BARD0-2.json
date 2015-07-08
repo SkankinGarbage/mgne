@@ -1,7 +1,16 @@
 {
 	"key" : "encounter_lvl08_SIREN2-4_BARD0-2",
 	"subfolder" : "level08",
-	"name" : null,
-	"description" : null,
-	"members" : null
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_tmp08_SIREN",
+			"amount" : "2-4"
+		},
+		{
+			"enemy" : "enemy_got08_BARD",
+			"amount" : "0-2"
+		}
+	]
 }

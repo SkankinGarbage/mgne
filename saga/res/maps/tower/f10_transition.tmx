@@ -2,7 +2,7 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="46" tilewidth="16" tileheight="16" nextobjectid="109">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
-  <property name="encounter" value="encounterset_level06_danger00"/>
+  <property name="encounter" value="encounterset_level08_danger00"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YUQrDIAwGYA/Qt16jF/J+vnnJUmihFBN/jdXGRggM2dZvmfnL5lx6rWBtQB3Pi8TrA7FPLe0uf17bM1XjkvbCn9ecwbV0cHG9uFfvfiEutO/aXdys3d9rhIs608Fc1XOUcyHZ+3RJ87BVxpmrPHtnc6Xua2+5pPPYKntLSnqmSzLuLy7ku/6qS3K/0eTiMgSZtRGu6HS5ctnbwsVVJB736BfiQmbDXLpcSK58zRXcv1zSs1PzP4S52hc3X9RvrRGukNjT7EJXrbP084925WbDXOaa0UVl7rWHrh1xX2oIUBsAAA==
+   H4sIAAAAAAAAC+3YMQ7DIAwFUA7QrdfgQtyPjUtmyYAi43xjAjHxYLWqGvLq4o/aGEKIRP3Boq6l1iqN67NwXeuudL4/MdXj0vYinffcwfWb4OJ6UdfsfiEutO/WXdys1WutcLX2dHZX9xzduZDsvbq0eTgq49wlz97dXNS59pRLO4+jsldS2j0tybivuJDv+q0uzXljycVlCDJrK1wl2HLdZe8IF1el8XxGvxAXMhvusuVCcuVtrhy+5dLunZ7/Idw1vrj5av3WWuHKxGuWXWj+9jqln3+1S3ouuctdO7hamRurR6QOkXKJAVAbAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="38" height="46">

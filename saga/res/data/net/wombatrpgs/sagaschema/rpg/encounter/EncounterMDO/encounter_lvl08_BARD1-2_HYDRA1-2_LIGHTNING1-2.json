@@ -1,7 +1,20 @@
 {
 	"key" : "encounter_lvl08_BARD1-2_HYDRA1-2_LIGHTNING1-2",
 	"subfolder" : "level08",
-	"name" : null,
-	"description" : null,
-	"members" : null
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_got08_BARD",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_snk08_HYDRA",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_wsp08_LIGHTNING",
+			"amount" : "1-2"
+		}
+	]
 }

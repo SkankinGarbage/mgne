@@ -3,7 +3,7 @@
 	"subfolder" : "spell",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$QFLARE",
+	"abilityName" : "$HFLARE",
 	"itemDescription" : "Attacks a party with typeless damage",
 	"type" : "ITEM",
 	"uses" : 30,

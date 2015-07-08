@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="48" tilewidth="16" tileheight="16" nextobjectid="113">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="48" tilewidth="16" tileheight="16" nextobjectid="114">
  <properties>
   <property name="bgm" value="ffl2_apollo"/>
   <property name="name" value="F10 Gate"/>
@@ -166,14 +166,20 @@
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="WEST"/>
-    <property name="hide" value="return not getSwitch('world3_gate')"/>
+    <property name="hide" value="return not getSwitch('world3_gate') or getSwitch('ares_dead')"/>
     <property name="onInteract" value="speak('Zkauba', 'Good luck!')"/>
    </properties>
   </object>
   <object id="110" name="tele" type="Event" x="528" y="480" width="16" height="16">
    <properties>
-    <property name="hide" value="return not getSwitch('world3_gate')"/>
+    <property name="hide" value="return not getSwitch('world3_gate') or getSwitch('ares_dead')"/>
     <property name="onCollide" value="targetTele('tower/reverse_f10.tmx', 'entry', 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="113" name="tele" type="Event" x="528" y="480" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('ares_dead')"/>
+    <property name="onCollide" value="teleport('tower/f10.tmx', 14, 13, 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>

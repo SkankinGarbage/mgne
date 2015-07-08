@@ -41,6 +41,7 @@
    <properties>
     <property name="hide" value="return getSwitch('ares_dead')"/>
     <property name="onInteract" value="speak('It won\'t open.')"/>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
   <object id="99" name="gate" type="Event" x="224" y="176" width="16" height="32">

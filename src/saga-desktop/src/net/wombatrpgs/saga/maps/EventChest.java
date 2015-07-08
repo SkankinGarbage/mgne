@@ -18,6 +18,7 @@ import net.wombatrpgs.saga.rpg.chara.EnemyParty;
 import net.wombatrpgs.saga.rpg.items.Collectable;
 import net.wombatrpgs.saga.rpg.items.CombatItem;
 import net.wombatrpgs.sagaschema.events.EventChestMDO;
+import net.wombatrpgs.sagaschema.events.data.ChestInvisibilityType;
 import net.wombatrpgs.sagaschema.events.data.KeyItemType;
 import net.wombatrpgs.sagaschema.rpg.abil.CombatItemMDO;
 import net.wombatrpgs.sagaschema.rpg.encounter.EncounterMDO;
@@ -36,7 +37,7 @@ public class EventChest extends MapEvent {
 	protected CombatItem item;
 	protected Collectable collectable;
 	protected Battle encounter;
-	protected boolean keyItem;
+	protected boolean keyItem, invisible;
 	
 	/**
 	 * Creates a new event from data.
@@ -66,6 +67,8 @@ public class EventChest extends MapEvent {
 		switchName += "(" + object.getTileX() + "," + object.getTileY() + ")";
 		
 		keyItem = (mdo.keyItem == KeyItemType.KEY_ITEM);
+		
+		invisible = (mdo.invisible == ChestInvisibilityType.INVISIBLE);
 		
 		setAppearance();
 	}
@@ -132,10 +135,12 @@ public class EventChest extends MapEvent {
 	 * Sets appearance based on switch status.
 	 */
 	protected void setAppearance() {
-		if (MGlobal.memory.getSwitch(switchName)) {
-			setAppearance(openSprite);
-		} else {
-			setAppearance(closedSprite);
+		if (!invisible) {
+			if (MGlobal.memory.getSwitch(switchName)) {
+				setAppearance(openSprite);
+			} else {
+				setAppearance(closedSprite);
+			}
 		}
 	}
 	

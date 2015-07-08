@@ -1,7 +1,12 @@
 {
 	"key" : "encounter_lvl08_OGRE",
 	"subfolder" : "level08",
-	"name" : null,
-	"description" : null,
-	"members" : null
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_gob08_OGRE",
+			"amount" : "1"
+		}
+	]
 }

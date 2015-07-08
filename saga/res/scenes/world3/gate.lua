@@ -23,7 +23,7 @@ face('lara', 'SOUTH')
 speak(hero3, "David?")
 speak("Aven", "And Lara. Where have you been?")
 speak("David", hero1 .. "! Our home world is under attack!")
-speak("Lara", "The prince broke a sealed gate and another master is tearing through the world.
+speak("Lara", "The prince broke a sealed gate and another master is tearing through the world.")
 speak("Lara", "Jonas is there now trying to hold him off.")
 speak("David", "It's chaos! The city of Hero is in ruins!")
 speak(hero4, "It can't be!")

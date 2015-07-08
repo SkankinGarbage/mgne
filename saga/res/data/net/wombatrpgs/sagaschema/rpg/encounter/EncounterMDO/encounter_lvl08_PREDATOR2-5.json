@@ -1,7 +1,12 @@
 {
 	"key" : "encounter_lvl08_PREDATOR2-5",
 	"subfolder" : "level08",
-	"name" : null,
-	"description" : null,
-	"members" : null
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rob08_PREDATOR",
+			"amount" : "2-5"
+		}
+	]
 }

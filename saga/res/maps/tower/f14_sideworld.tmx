@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="49" height="31" tilewidth="16" tileheight="16" nextobjectid="143">
  <properties>
-  <property name="bgm" value="ffl1_theme"/>
+  <property name="bgm" value="ffl1_overworld2"/>
   <property name="name" value="Floor 14"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
