@@ -2,24 +2,28 @@
 	"key" : "enemy_elf11_SYLPH",
 	"subfolder" : "level11",
 	"name" : "SYLPH",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_elf",
 	"species" : "SYLPH",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_elf",
+	"portrait" : "battle_portraits/elf.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_thunder",
+		"abil_electro"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 501,
+		"mhp" : 501,
+		"str" : 46,
+		"def" : 47,
+		"agi" : 72,
+		"mana" : 70,
+		"flags" : [ ]
 	}
 }

@@ -1,0 +1,18 @@
+{
+	"key" : "abil_teleport",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "TODO",
+	"abilityName" : "TELEPORT",
+	"itemDescription" : "Teleport to any visited floor in Babel",
+	"type" : "ABILITY",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : null,
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

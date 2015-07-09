@@ -2,24 +2,31 @@
 	"key" : "enemy_gol11_GOLEM",
 	"subfolder" : "level11",
 	"name" : "GOLEM",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_gol",
 	"species" : "GOLEM",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_golem",
+	"portrait" : "battle_portraits/gol.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_punch",
+		"abil_beam",
+		"abil_oweapon",
+		"abil_oice",
+		"abil_ostone"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 551,
+		"mhp" : 551,
+		"str" : 68,
+		"def" : 60,
+		"agi" : 40,
+		"mana" : 42,
+		"flags" : [ ]
 	}
 }

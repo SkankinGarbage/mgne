@@ -2,24 +2,32 @@
 	"key" : "enemy_brd11_IBIS",
 	"subfolder" : "level11",
 	"name" : "IBIS",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_brd",
 	"species" : "IBIS",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_bird",
+	"portrait" : "battle_portraits/brd.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_beak",
+		"abil_heal",
+		"abil_revive",
+		"abil_warning",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 551,
+		"mhp" : 551,
+		"str" : 53,
+		"def" : 48,
+		"agi" : 58,
+		"mana" : 74,
+		"flags" : [ ]
 	}
 }

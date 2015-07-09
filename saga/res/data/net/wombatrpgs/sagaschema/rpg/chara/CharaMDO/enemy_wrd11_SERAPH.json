@@ -2,24 +2,31 @@
 	"key" : "enemy_wrd11_SERAPH",
 	"subfolder" : "level11",
 	"name" : "SERAPH",
-	"description" : "Converted from a report",
+	"description" : "HI",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_wrd",
 	"species" : "SERAPH",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_ghost",
+	"portrait" : "battle_portraits/wrd.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_sunburst",
+		"abil_flame",
+		"abil_blind",
+		"abil_oelement",
+		"abil_ochange"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 56,
+		"def" : 40,
+		"agi" : 56,
+		"mana" : 68,
+		"flags" : [ ]
 	}
 }

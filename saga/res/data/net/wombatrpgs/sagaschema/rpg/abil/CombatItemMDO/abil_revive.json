@@ -1,0 +1,21 @@
+{
+	"key" : "abil_revive",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "REVIVE",
+	"itemDescription" : "Revives and heals",
+	"type" : "ABILITY",
+	"uses" : 1,
+	"cost" : 0,
+	"anim" : "banim_cure",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectReviveMDO",
+		"key" : "anon_CombatItemMDO_587722052"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}
