@@ -4,10 +4,10 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$YBAZOOKA",
-	"itemDescription" : "",
+	"itemDescription" : "Attacks a party with fixed damage aimed by strength (tier 8)",
 	"type" : "ITEM",
 	"uses" : 10,
-	"cost" : 0,
+	"cost" : 18000,
 	"anim" : "banim_missile",
 	"equip" : [ ],
 	"warhead" : {

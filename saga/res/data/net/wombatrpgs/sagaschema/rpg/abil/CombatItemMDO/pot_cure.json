@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$TCURE",
-	"itemDescription" : "Cures status",
+	"itemDescription" : "Cures all status",
 	"type" : "ITEM",
 	"uses" : 1,
 	"cost" : 2000,
