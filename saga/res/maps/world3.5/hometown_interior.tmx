@@ -25,12 +25,12 @@
  <objectgroup name="Object Layer 1">
   <object id="1" type="Event" x="64" y="144" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world3.5/parish_interior.tmx', 24, 4)"/>
+    <property name="onCollide" value="teleport('world3.5/hometown_interior.tmx', 24, 4)"/>
    </properties>
   </object>
   <object id="2" type="Event" x="384" y="48" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world3.5/parish_interior.tmx', 4, 8)"/>
+    <property name="onCollide" value="teleport('world3.5/hometown_interior.tmx', 4, 8)"/>
    </properties>
   </object>
   <object id="8" name="innkeep" type="Character" x="384" y="432" width="16" height="16">
