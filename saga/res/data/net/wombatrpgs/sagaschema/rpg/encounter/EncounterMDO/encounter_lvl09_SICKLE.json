@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl09_SICKLE",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wsl09_SICKLE",
+			"amount" : "1"
+		}
+	]
+}

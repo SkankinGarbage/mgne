@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl09_CYCLOPS",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_gob09_CYCLOPS",
+			"amount" : "1"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl09_EAGLE",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_brd09_EAGLE",
+			"amount" : "1"
+		}
+	]
+}
