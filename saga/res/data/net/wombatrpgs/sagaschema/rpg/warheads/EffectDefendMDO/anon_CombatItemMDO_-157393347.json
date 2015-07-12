@@ -4,15 +4,13 @@
 	"name" : "anon_CombatItemMDO_-157393347",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "USER",
+	"defendName" : "",
 	"shielding" : 0,
 	"triggerTypes" : [
 		"PHYSICAL",
 		"WEAPON"
 	],
-	"warhead" : {
-		"clazz" : "net.wombatrpgs.sagaschema.rpg.abil.data.warheads.EffectAttackMDO",
-		"key" : "anon_EffectDefendMDO_-1047945818"
-	},
+	"warhead" : null,
 	"stats" : {
 		"stats" : [ ],
 		"flags" : [ ]

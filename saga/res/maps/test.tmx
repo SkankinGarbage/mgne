@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="14">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="20">
  <properties>
   <property name="battle_bgm" value="ffl1_battle"/>
   <property name="bgm" value="ffl1_overworld"/>
@@ -125,6 +125,33 @@
    <properties>
     <property name="appearance" value="lua(return getHero(1).getSpriteName())"/>
     <property name="onInteract" value="speak('wow I look an awful lot like you!!')"/>
+   </properties>
+  </object>
+  <object id="14" name="mix" type="Character" x="208" y="128" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_ffl2_human"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="mix('mixset_test')"/>
+   </properties>
+  </object>
+  <object id="16" name="chest" type="Chest" x="224" y="64" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_black"/>
+   </properties>
+  </object>
+  <object id="17" name="chest" type="Chest" x="240" y="64" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_white"/>
+   </properties>
+  </object>
+  <object id="18" name="chest" type="Chest" x="256" y="64" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_white"/>
+   </properties>
+  </object>
+  <object id="19" name="chest" type="Chest" x="208" y="64" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_black"/>
    </properties>
   </object>
  </objectgroup>

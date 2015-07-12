@@ -8,6 +8,8 @@
 	"sideEffects" : [
 		"IGNORE_RESISTANCES"
 	],
+	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"power" : 8,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",

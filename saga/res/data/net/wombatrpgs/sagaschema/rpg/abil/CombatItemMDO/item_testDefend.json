@@ -4,12 +4,12 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$EDEFEND",
-	"itemDescription" : null,
+	"itemDescription" : "Test defend",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 9800,
-	"anim" : null,
-	"equip" : null,
+	"anim" : "None",
+	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
 		"key" : "anon_CombatItemMDO_-157393347"

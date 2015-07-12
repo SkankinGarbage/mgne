@@ -1,0 +1,13 @@
+{
+	"key" : "mixset_test",
+	"subfolder" : "test",
+	"name" : "",
+	"description" : "",
+	"combinations" : [
+		"mix_test1",
+		"mix_test2",
+		"mix_test3",
+		"mix_test4",
+		"mix_test5"
+	]
+}

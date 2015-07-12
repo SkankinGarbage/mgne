@@ -1,0 +1,17 @@
+{
+	"key" : "mix_test5",
+	"subfolder" : "test",
+	"name" : "",
+	"description" : "",
+	"ingredients" : [
+		{
+			"item" : "stone_white",
+			"quantity" : 2
+		},
+		{
+			"item" : "stone_black",
+			"quantity" : 1
+		}
+	],
+	"result" : "item_testLonggg"
+}

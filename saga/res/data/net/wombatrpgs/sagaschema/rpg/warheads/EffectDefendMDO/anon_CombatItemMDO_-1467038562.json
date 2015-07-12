@@ -4,6 +4,7 @@
 	"name" : "anon_CombatItemMDO_-1467038562",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "ALLY_PARTY",
+	"defendName" : "",
 	"shielding" : 0,
 	"triggerTypes" : [ ],
 	"warhead" : null,

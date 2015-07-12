@@ -8,6 +8,8 @@
 	"sideEffects" : [
 		"CRITICAL_ON_WEAKNESS"
 	],
+	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"power" : 5,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",

@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$EDUREND",
-	"itemDescription" : "DURENDAL",
+	"itemDescription" : "Test legend sword",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 0,

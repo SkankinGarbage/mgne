@@ -29,7 +29,7 @@ public class CollectableSet {
 	}
 	
 	/**
-	 * Adds a collectable to the collection.
+	 * Adds a single collectable to the collection.
 	 * @param	collectable		The collectable to add
 	 */
 	public void addCollectable(Collectable collectable) {
@@ -39,7 +39,7 @@ public class CollectableSet {
 	}
 	
 	/**
-	 * Adds a collectable based on its data key.
+	 * Adds a single collectable based on its data key.
 	 * @param	mdoKey			The key of the mdo of the collectable to add
 	 */
 	public void addCollectable(String mdoKey) {
@@ -47,16 +47,20 @@ public class CollectableSet {
 	}
 	
 	/**
+	 * Copies the value of a collectable in one collection to this one.
+	 * @param	collection		The collection to copy value from
+	 * @param	collectable		The collectable to copy the value of
+	 */
+	public void copyCollectableValue(CollectableSet collection, Collectable collectable) {
+		quantities.put(collectable, collection.getQuantity(collectable));
+	}
+	
+	/**
 	 * Removes a single collectable from the collection.
 	 * @param	collectable		A collectable to remove
 	 */
 	public void removeCollectable(Collectable collectable) {
-		int quantity = quantities.get(collectable);
-		if (quantity > 0) {
-			quantities.put(collectable, quantity - 1);
-		} else {
-			MGlobal.reporter.warn("Not enough collectable: " + collectable);
-		}
+		subtractCollectable(collectable, 1);
 	}
 	
 	/**
@@ -68,6 +72,45 @@ public class CollectableSet {
 	public int getQuantity(Collectable collectable) {
 		Integer quantity = quantities.get(collectable);
 		return (quantity == null) ? 0 : quantity;
+	}
+	
+	/**
+	 * Checks the quantity of a collectable in the collection with the given
+	 * key.
+	 * @param	collectableKey	The key of the collectable to check
+	 * @return					The number of that collectable in stock
+	 */
+	@JsonIgnore
+	public int getQuantity(String collectableKey) {
+		return getQuantity(new Collectable(collectableKey));
+	}
+	
+	/**
+	 * Removes some collectables from the set.
+	 * @param	collectable		The collectable to remove
+	 * @param	quantity		How many of that type to remove
+	 */
+	public void subtractCollectable(Collectable collectable, int quantity) {
+		int haveQuantity = quantities.get(collectable);
+		if (haveQuantity >= quantity) {
+			int result = haveQuantity - quantity;
+			if (result == 0) {
+				quantities.remove(collectable);
+			} else {
+				quantities.put(collectable, result);
+			}
+		} else {
+			MGlobal.reporter.warn("Not enough collectable: " + collectable);
+		}
+	}
+	
+	/**
+	 * Removes some collectables from the set by key.
+	 * @param	collectableKey	The key of the CollectableItem to remove
+	 * @param	quantity		How many of that type to remove
+	 */
+	public void subtractCollectable(String collectableKey, int quantity) {
+		subtractCollectable(new Collectable(collectableKey), quantity);
 	}
 	
 	/**

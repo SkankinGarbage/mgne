@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$EFIRE",
-	"itemDescription" : null,
+	"itemDescription" : "Test fire sword",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 12200,

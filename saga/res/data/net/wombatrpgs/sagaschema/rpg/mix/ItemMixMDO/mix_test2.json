@@ -1,0 +1,13 @@
+{
+	"key" : "mix_test2",
+	"subfolder" : "test",
+	"name" : "",
+	"description" : "",
+	"ingredients" : [
+		{
+			"item" : "stone_white",
+			"quantity" : 2
+		}
+	],
+	"result" : "item_testDragonShield"
+}

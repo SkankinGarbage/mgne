@@ -16,6 +16,7 @@ import net.wombatrpgs.mgne.ui.Nineslice;
 import net.wombatrpgs.mgne.ui.text.FontHolder;
 import net.wombatrpgs.mgne.ui.text.TextFormat;
 import net.wombatrpgs.saga.rpg.items.CombatItem;
+import net.wombatrpgs.sagaschema.rpg.abil.CombatItemMDO;
 
 /**
  * Specialized SaGa description box used to display item/chara descriptions on
@@ -28,7 +29,7 @@ public class DescriptionBox extends ScreenGraphic {
 	protected Nineslice bg;
 	protected TextFormat format;
 	protected String text;
-	protected int width, height;
+	protected int width, height, padding;
 	
 	/**
 	 * Creates a new description box with no text and the given dimensions.
@@ -55,6 +56,12 @@ public class DescriptionBox extends ScreenGraphic {
 
 	/** @see net.wombatrpgs.mgne.graphics.ScreenGraphic#getHeight() */
 	@Override public int getHeight() { return height; }
+	
+	/** @param padding The new horiz offset for the text */
+	public void setPadding(int padding) {
+		this.padding = padding;
+		format.width = width - bg.getBorderWidth()*2 - padding*2;
+	}
 
 	/**
 	 * @see net.wombatrpgs.mgne.graphics.ScreenGraphic#coreRender
@@ -73,7 +80,7 @@ public class DescriptionBox extends ScreenGraphic {
 	 */
 	@Override public void postProcessing(MAssets manager, int pass) {
 		super.postProcessing(manager, pass);
-		format.x = (int) (x + bg.getBorderWidth());
+		format.x = (int) (x + bg.getBorderWidth() + padding);
 		format.y = (int) (y + height - bg.getBorderHeight());
 	}
 
@@ -86,6 +93,18 @@ public class DescriptionBox extends ScreenGraphic {
 			text = "";
 		} else {
 			text = item.getDescription();
+		}
+	}
+	
+	/**
+	 * Sets the text to describe an item described by an MDO.
+	 * @param	itemMDO			The data of the item to display
+	 */
+	public void describe(CombatItemMDO itemMDO) {
+		if (itemMDO == null) {
+			text = "";
+		} else {
+			text = MGlobal.charConverter.convert(itemMDO.itemDescription);
 		}
 	}
 
