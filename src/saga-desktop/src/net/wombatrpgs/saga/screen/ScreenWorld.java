@@ -20,6 +20,7 @@ import net.wombatrpgs.saga.core.SGlobal;
 public class ScreenWorld extends SagaScreen {
 	
 	protected static final String KEY_BATTLE_BGM = "battle_bgm";
+	protected static final String KEY_FLOOR = "floor";
 	
 	/**
 	 * Constructs the SaGa world screen.

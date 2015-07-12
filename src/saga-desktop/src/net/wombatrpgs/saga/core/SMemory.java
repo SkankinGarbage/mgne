@@ -6,6 +6,8 @@
  */
 package net.wombatrpgs.saga.core;
 
+import java.util.List;
+
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.core.Memory;
 import net.wombatrpgs.saga.rpg.chara.HeroParty;
@@ -19,6 +21,7 @@ public class SMemory extends Memory {
 	// fields to store/unload
 	public PartyMemory partyMemory;
 	public String battleBGMKey;
+	public List<String> teleportLocations;
 	public int saveSlot;
 	
 	/**

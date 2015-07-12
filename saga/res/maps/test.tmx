@@ -131,7 +131,7 @@
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="face" value="NORTH"/>
-    <property name="onInteract" value="mix('mixset_magic')"/>
+    <property name="onInteract" value="mix('mixset_weapons')"/>
    </properties>
   </object>
   <object id="16" name="chest" type="Chest" x="224" y="64" width="16" height="16">
