@@ -47,6 +47,10 @@
 		{
 			"key" : "flare",
 			"file" : "ffl1_02_flare.wav"
+		},
+		{
+			"key" : "ding",
+			"file" : "ffl1_01_ding.wav"
 		}
 	],
 	"emuMusicEntries" : [

@@ -1,0 +1,17 @@
+{
+	"key" : "shop_river2_weapons",
+	"subfolder" : "world3.5",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordSilver",
+		"wpn_swordDragon",
+		"wpn_spearWhite",
+		"wpn_axeRune",
+		"wpn_knifeCat",
+		"wpn_gunVulcan",
+		"spell_fire",
+		"spell_wand",
+		"spell_wizard"
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"key" : "shop_world3.5_potions",
+	"subfolder" : "world3.5",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"item_hp400",
+		"item_hp600",
+		"item_str48",
+		"item_str99",
+		"item_agi48",
+		"item_agi99",
+		"pot_xpotion",
+		"pot_elixir",
+		"spell_cure",
+		"pot_cure"
+	]
+}

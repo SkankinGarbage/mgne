@@ -41,7 +41,7 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 		super(mdo, item);
 		this.mdo = mdo;
 		
-		if (MapThing.mdoHasProperty(mdo.defendName)) {
+		if (MapThing.mdoHasProperty(mdo.defendName) && !mdo.defendName.isEmpty()) {
 			defendName = MGlobal.charConverter.convert(mdo.defendName);
 		} else if (item != null) {
 			defendName = item.getName();
@@ -86,12 +86,15 @@ public class EffectDefend extends EffectAllyTarget implements Comparable<EffectD
 	}
 
 	/**
-	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#setItem(net.wombatrpgs.saga.rpg.items.CombatItem)
+	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#setItem
+	 * (net.wombatrpgs.saga.rpg.items.CombatItem)
 	 */
 	@Override
 	public void setItem(CombatItem item) {
+		if (defendName == null || this.item != null && this.item.getName().equals(defendName)) {
+				defendName = item.getName();
+		}
 		super.setItem(item);
-		defendName = item.getName();
 	}
 
 	/**

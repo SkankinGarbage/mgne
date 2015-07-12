@@ -1,0 +1,36 @@
+{
+	"key" : "enemy_bossAres",
+	"subfolder" : "boss",
+	"name" : "ARES",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "MONSTER",
+	"family" : "mfamily_boss",
+	"species" : "ARES",
+	"appearance" : "4dir_aven",
+	"portrait" : "battle_portraits/boss_ares.png",
+	"meatEatLevel" : 11,
+	"meatTargetLevel" : 11,
+	"gp" : 7200,
+	"loot" : "None",
+	"equipped" : [
+		"abil_spear",
+		"abil_spear",
+		"abil_mirror",
+		"abil_counter",
+		"abil_power",
+		"abil_armor",
+		"abil_quake",
+		"abil_quake",
+		"abil_ochange"
+	],
+	"stats" : {
+		"hp" : 4000,
+		"mhp" : 4000,
+		"str" : 60,
+		"def" : 45,
+		"agi" : 45,
+		"mana" : 45,
+		"flags" : [ ]
+	}
+}

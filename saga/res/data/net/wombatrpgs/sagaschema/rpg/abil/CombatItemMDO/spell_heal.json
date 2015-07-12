@@ -1,0 +1,21 @@
+{
+	"key" : "spell_heal",
+	"subfolder" : "spell",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$QHEAL",
+	"itemDescription" : "Heals the party",
+	"type" : "ITEM",
+	"uses" : 13,
+	"cost" : 30500,
+	"anim" : "banim_cure",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_-502768426"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

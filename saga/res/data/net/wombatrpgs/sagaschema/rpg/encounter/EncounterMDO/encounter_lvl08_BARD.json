@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl08_BARD",
+	"subfolder" : "level08",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_got08_BARD",
+			"amount" : "1"
+		}
+	]
+}

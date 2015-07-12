@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl08_OGRE2-3_LYNX1-3",
+	"subfolder" : "level08",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_gob08_OGRE",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_cat08_LYNX",
+			"amount" : "2-3"
+		}
+	]
+}

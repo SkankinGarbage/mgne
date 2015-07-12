@@ -14,6 +14,8 @@ import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.core.interfaces.FinishListener;
 import net.wombatrpgs.mgne.graphics.FacesAnimationFactory;
 import net.wombatrpgs.mgne.io.CommandListener;
+import net.wombatrpgs.mgne.io.Keymap.KeyState;
+import net.wombatrpgs.mgneschema.io.data.InputButton;
 import net.wombatrpgs.mgneschema.io.data.InputCommand;
 import net.wombatrpgs.mgneschema.maps.EventMDO;
 import net.wombatrpgs.mgneschema.maps.data.OrthoDir;
@@ -27,6 +29,7 @@ public class Avatar extends MapEvent implements CommandListener {
 	
 	protected List<FinishListener> stepListeners;
 	protected String parentName;
+	protected OrthoDir forceDir;
 	protected boolean paused;
 
 	/**
@@ -38,6 +41,12 @@ public class Avatar extends MapEvent implements CommandListener {
 		super(MGlobal.data.getEntryFor(HERO_DEFAULT, EventMDO.class));
 		stepListeners = new ArrayList<FinishListener>();
 		addStepTracker();
+		
+		stepListeners.add(new FinishListener() {
+			@Override public void onFinish() {
+				updateForceDir();
+			}
+		});
 	}
 	
 	/**
@@ -72,12 +81,57 @@ public class Avatar extends MapEvent implements CommandListener {
 	}
 
 	/**
+	 * @see net.wombatrpgs.mgne.maps.events.MapEvent#update(float)
+	 */
+	@Override
+	public void update(float elapsed) {
+		float oldVX = vx;
+		float oldVY = vy;
+		if (forceDir != null) {
+			if (!tracking) {
+				move(forceDir);
+			}
+			OrthoDir heldDir = null;
+			if (MGlobal.keymap.getButtonState(InputButton.DOWN) == KeyState.DOWN) {
+				heldDir = OrthoDir.SOUTH;
+			} else if (MGlobal.keymap.getButtonState(InputButton.LEFT) == KeyState.DOWN) {
+				heldDir = OrthoDir.WEST;
+			} else if (MGlobal.keymap.getButtonState(InputButton.RIGHT) == KeyState.DOWN) {
+				heldDir = OrthoDir.EAST;
+			} else if (MGlobal.keymap.getButtonState(InputButton.UP) == KeyState.DOWN) {
+				heldDir = OrthoDir.NORTH;
+			}
+			if (heldDir != null) {
+				setFacing(heldDir);
+			}
+			float mult;
+			if (forceDir == heldDir) {
+				mult = 2f;
+			} else if (OrthoDir.getOpposite(forceDir) == heldDir) {
+				mult = .5f;
+			} else {
+				mult = 1f;
+			}
+			vx *= mult;
+			vy *= mult;
+		}
+		super.update(elapsed);
+		if (forceDir != null) {
+			updateForceDir();
+			if (forceDir != null) {
+				vx = oldVX;
+				vy = oldVY;
+			}
+		}
+	}
+
+	/**
 	 * @see net.wombatrpgs.mgne.io.CommandListener#onCommand
 	 * (net.wombatrpgs.mgneschema.io.data.InputCommand)
 	 */
 	@Override
 	public boolean onCommand(InputCommand command) {
-		if (!tracking && !paused) {
+		if (!tracking && !paused && forceDir == null) {
 			switch (command) {
 			case MOVE_LEFT:			move(OrthoDir.WEST);	break;
 			case MOVE_UP:			move(OrthoDir.NORTH);	break;
@@ -132,11 +186,11 @@ public class Avatar extends MapEvent implements CommandListener {
 	 * @param	dir				The direction to move
 	 */
 	protected void move(OrthoDir dir) {
+		int targetX = (int) (getTileX() + dir.getVector().x);
+		int targetY = (int) (getTileY() + dir.getVector().y);
 		if (attemptStep(dir)) {
 			parent.onTurn();
 		} else {
-			int targetX = (int) (getTileX() + dir.getVector().x);
-			int targetY = (int) (getTileY() + dir.getVector().y);
 			for (MapEvent event : parent.getEventsAt(targetX, targetY)) {
 				if (event != this && !event.isPassable()) {
 					event.onCollide(this);
@@ -185,5 +239,18 @@ public class Avatar extends MapEvent implements CommandListener {
 				addStepTracker();
 			}
 		});
+	}
+	
+	/**
+	 * Checks the direction that this tile is being forced towards
+	 */
+	protected void updateForceDir() {
+		forceDir = null;
+		if (parent.tileHasProperty(tileX, tileY, Constants.PROPERTY_FORCE)) {
+			String dirString = parent.getTileProperty(tileX, tileY, Constants.PROPERTY_FORCE);
+			if (dirString != null) {
+				forceDir = OrthoDir.valueOf(dirString);
+			}
+		}
 	}
 }

@@ -2,24 +2,32 @@
 	"key" : "enemy_skl11_LICH",
 	"subfolder" : "level11",
 	"name" : "LICH",
-	"description" : "Converted from a report",
+	"description" : "HI",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_skl",
 	"species" : "LICH",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_skeleton",
+	"portrait" : "battle_portraits/skl.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_bone",
+		"abil_sword",
+		"abil_touch",
+		"abil_dgaze",
+		"abil_oweapon",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 606,
+		"mhp" : 606,
+		"str" : 63,
+		"def" : 52,
+		"agi" : 54,
+		"mana" : 58,
+		"flags" : [ ]
 	}
 }

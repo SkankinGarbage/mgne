@@ -2,24 +2,30 @@
 	"key" : "enemy_jly11_MEDUSA",
 	"subfolder" : "level11",
 	"name" : "MEDUSA",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_jly",
 	"species" : "MEDUSA",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_jelly",
+	"portrait" : "battle_portraits/jly.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_tentacle",
+		"abil_sskin",
+		"abil_recover",
+		"abil_ambush"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 501,
+		"mhp" : 501,
+		"str" : 49,
+		"def" : 58,
+		"agi" : 56,
+		"mana" : 57,
+		"flags" : [ ]
 	}
 }

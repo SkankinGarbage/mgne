@@ -3,7 +3,7 @@
 	"subfolder" : "armor",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "",
+	"abilityName" : "$FSAMURAI",
 	"itemDescription" : "Increases defense by 12 and resists stone",
 	"type" : "ITEM",
 	"uses" : 0,

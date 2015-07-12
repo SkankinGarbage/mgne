@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl09_RHINO",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_arm09_RHINO",
+			"amount" : "1"
+		}
+	]
+}

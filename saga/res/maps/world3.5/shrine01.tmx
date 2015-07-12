@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="49" tilewidth="16" tileheight="16" nextobjectid="14">
+ <properties>
+  <property name="bgm" value="ffl2_ruins"/>
+  <property name="encounter" value="encounterset_level07_danger00"/>
+  <property name="name" value="Airseed Shrine"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="51" height="49">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YPW7DMAyFbTSjN50omzdfoe2Sdml7/6nNQIAlSErUo5wMGh6C/JjkpydSdq7LslwbtRq6gLLiroHaIvLyoSxn84zkOJNntCctLBk8tfhnsqA82fUinBme3GNthjLr9XJkeEQsxVAmi5cD3WPcl91QJouXA+2ZZ2WJ8shZNZrD48nYY7xfnoVl1B6j2ZPBsFXyZPa+tm5UA8rDY1i+Z3CslVxl6T9v+HXFiE/fy97v7f/i5NoVnhqT/G0R8eRalc76LZ6bw7KznB6TxlCMePT+E/RD22c1lhqTxxBlQXksFmv2aEwWgxVLY8nof43Fm6Ocib96Z/vW6MtIlhpPTbyfRvgi10JjoT10YbmjDNwT6Z1kQWZYrV/Im7uO5f/Msva/1MFiaKxW70fZ6Brvfom84TV5Z4z8DV1nzTV+7mf0Pq/B6m+NpUWHwcE9R+8t+bX8/K3NLC7vbInEkywIT++c0p53e+dcRv8jLFlC91iGLyNYRvuCPLu0nLXo80vEF23WRtTKgvQ/Z6mdfdZ/Wy1qiZ/RK6tYQ56Lf/4BqCU+2vvEZM1U/jnC0hIf2V/SG083kMW754owvAX0bsT/+tM3oB+n9tdAfaPWL0uo55NlsjyS5eVkTZbJMlkmy2SZLI9m+QU30q28DCcAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="51" height="49">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XQQqAIBBA0e5/mzZBbYJWHaAzlMeoWQQiiEKOU/YfuEhrxhImpusAALA3NJJDzI3kEGsjOQArm/HzyJP6zpzDO4zWGyhosd4AgCr6h+tvMgXX4b8xXLek3ffV6iuFdt9Xq68U2n0ffSW+LlZbStUc7fi+WG0pVXO04/vu2rJf47iGC+ZLxc+dRx45L5e8qx1/e18AAIAcJ1QxtOUMJwAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="2" name="tele" type="Event" x="192" y="640" width="448" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/overworld.tmx', 25, 44)"/>
+   </properties>
+  </object>
+  <object id="6" name="tele" type="Event" x="400" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/shrine03.tmx', 16, 25)"/>
+   </properties>
+  </object>
+  <object id="7" name="chest" type="Chest" x="176" y="160" width="16" height="16">
+   <properties>
+    <property name="item" value="item_hp400"/>
+   </properties>
+  </object>
+  <object id="8" name="chest" type="Chest" x="208" y="160" width="16" height="16">
+   <properties>
+    <property name="item" value="item_agi48"/>
+   </properties>
+  </object>
+  <object id="11" name="door" type="Event" x="336" y="400" width="16" height="16">
+   <properties>
+    <property name="hide" value="return hasItem('key_cryptKey')"/>
+    <property name="onInteract" value="speak('It\'s locked.')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="12" name="door" type="Event" x="464" y="400" width="16" height="16">
+   <properties>
+    <property name="hide" value="return hasItem('key_cryptKey')"/>
+    <property name="onInteract" value="speak('It\'s locked.')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="13" name="chest" type="Chest" x="192" y="176" width="16" height="16">
+   <properties>
+    <property name="item" value="item_str48"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

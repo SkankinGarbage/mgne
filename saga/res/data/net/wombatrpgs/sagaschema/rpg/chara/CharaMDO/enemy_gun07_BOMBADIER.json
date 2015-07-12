@@ -1,5 +1,5 @@
 {
-	"key" : "enemy_gun06_BOMBADIER",
+	"key" : "enemy_gun07_BOMBADIER",
 	"subfolder" : "level07",
 	"name" : "BOMBADIER",
 	"description" : "MED",
@@ -11,7 +11,7 @@
 	"portrait" : "battle_portraits/gun.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 6,
-	"gp" : 600,
+	"gp" : 720,
 	"loot" : "wpn_cannonRocket",
 	"equipped" : [
 		"wpn_cannonRocket"

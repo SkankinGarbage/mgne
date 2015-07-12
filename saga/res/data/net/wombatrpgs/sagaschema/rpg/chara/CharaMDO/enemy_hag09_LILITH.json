@@ -16,10 +16,10 @@
 	"equipped" : [
 		"abil_kick",
 		"abil_blind",
-		"abil_cgaze",
 		"abil_scream",
+		"abil_cgaze",
 		"abil_warning",
-		"abil_oquake"
+		"abil_ostone"
 	],
 	"stats" : {
 		"hp" : 295,

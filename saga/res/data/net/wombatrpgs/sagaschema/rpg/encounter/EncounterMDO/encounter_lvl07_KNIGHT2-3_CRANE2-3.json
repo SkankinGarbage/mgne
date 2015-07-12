@@ -5,7 +5,7 @@
 	"description" : "",
 	"members" : [
 		{
-			"enemy" : "enemy_swd07_KNIGHT",
+			"enemy" : "enemy_gun07_BOMBADIER",
 			"amount" : "2-3"
 		},
 		{

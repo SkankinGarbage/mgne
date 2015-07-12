@@ -23,208 +23,14 @@
    </properties>
   </tile>
  </tileset>
- <tileset firstgid="7" name="lower" tilewidth="16" tileheight="16">
-  <image source="tilesets/lower2.PNG" width="112" height="320"/>
-  <tile id="3">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="4">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="5">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="6">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="10">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="11">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="12">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="13">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="17">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="18">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="19">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="20">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="24">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="26">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="27">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="31">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="33">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="34">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="38">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="39">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="41">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="45">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="46">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="48">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="52">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="53">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="56">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="57">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-   <animation>
-    <frame tileid="56" duration="500"/>
-    <frame tileid="63" duration="500"/>
-    <frame tileid="70" duration="500"/>
-    <frame tileid="77" duration="500"/>
-   </animation>
-  </tile>
-  <tile id="63">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="70">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="77">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="84">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="85">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-   <animation>
-    <frame tileid="84" duration="500"/>
-    <frame tileid="91" duration="500"/>
-    <frame tileid="98" duration="500"/>
-    <frame tileid="105" duration="500"/>
-   </animation>
-  </tile>
-  <tile id="91">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="98">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
-  <tile id="105">
-   <properties>
-    <property name="x" value=""/>
-   </properties>
-  </tile>
- </tileset>
- <tileset firstgid="147" source="tilesets/upper.tsx"/>
+ <tileset firstgid="7" source="tilesets/lower.tsx"/>
+ <tileset firstgid="182" source="tilesets/upper.tsx"/>
  <layer name="Tile Layer 1" width="20" height="15">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJyt1L8KgCAQwGHHskEIGhyLhv4N1dLag/T+z5EHCnKc5wkOH9ry82xQK6V0ZaaSkvM6D/YvIe71jNA7Pdh/hLhnGaH3eJL7hu+GQP3fAa2pHtXsmXmgN2V6uGmZFu61gh43W+l8qdaK5Hom0xsRSY+zIFRvc/aEQ3hO3LucO2EWdmu/K+AHKXgWlg==
+   eJyt1L8KgCAQwGHHskEQGhyLhv4N1dLag/SEbb1hCgpynOcFDh/i8vN0UAohZGGqEO55j9V4r3Uh4p4mhN7mud6NiHuGEHqnx7lv2FcI7H1bsKZ6WFMT87hen+nBpiFasFczetRsf+dLtSYg11OZXgdwepQRwHqztSSszHPi3m4dCQOzW/pfcT5tWRmr
   </data>
  </layer>
  <layer name="Tile Layer 2" width="20" height="15">
@@ -232,7 +38,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBic4NhAO2AUjIJRMOgAAC9tAMc=
+   eJxjYBic4OVAO2AUjIJRMOgAAL61AOo=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -296,7 +102,7 @@
     <property name="onInteract" value="shop('item_testWhip', 'item_hp200', 'item_str24', 'item_testCure', 'body_bronze', 'hand_bronze')"/>
    </properties>
   </object>
-  <object id="10" name="party4" type="Character" x="144" y="80" width="16" height="16">
+  <object id="10" name="party4" type="Character" x="176" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="face" value="NORTH"/>

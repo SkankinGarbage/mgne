@@ -2,25 +2,30 @@
 	"key" : "enemy_swd10_SAMURAI",
 	"subfolder" : "level10",
 	"name" : "SAMURAI",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_swd",
+	"family" : "None",
 	"species" : "SAMURAI",
 	"appearance" : "4dir_ffl2_human",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
-	"loot" : null,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"wpn_swordOgre",
+		"wpn_spearWhite",
+		"shield_dragon",
+		"abil_ostone"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 46,
+		"def" : 42,
+		"agi" : 58,
+		"mana" : 0,
+		"flags" : [ ]
 	}
 }

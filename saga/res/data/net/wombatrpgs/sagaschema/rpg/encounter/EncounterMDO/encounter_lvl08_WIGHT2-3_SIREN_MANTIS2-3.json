@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl08_WIGHT2-3_SIREN_MANTIS2-3",
+	"subfolder" : "level08",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_zom08_WIGHT",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_tmp08_SIREN",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_fly08_MANTIS",
+			"amount" : "2-3"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl09_IMMOLATOR1-2_EAGLE1-2_PSYCHIC1-2",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_brn09_IMMOLATOR",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_brd09_EAGLE",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_psi09_PSYCHIC",
+			"amount" : "1-2"
+		}
+	]
+}

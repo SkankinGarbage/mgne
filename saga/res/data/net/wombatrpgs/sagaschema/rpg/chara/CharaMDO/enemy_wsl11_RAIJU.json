@@ -2,24 +2,31 @@
 	"key" : "enemy_wsl11_RAIJU",
 	"subfolder" : "level11",
 	"name" : "RAIJU",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_wsl",
 	"species" : "RAIJU",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_rat",
+	"portrait" : "battle_portraits/wsl.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_2sword",
+		"abil_thunder",
+		"abil_electro",
+		"abil_othunder",
+		"abil_electro"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 63,
+		"def" : 50,
+		"agi" : 90,
+		"mana" : 66,
+		"flags" : [ ]
 	}
 }

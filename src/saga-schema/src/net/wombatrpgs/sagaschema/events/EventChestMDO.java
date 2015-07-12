@@ -12,6 +12,7 @@ import net.wombatrpgs.mgns.core.Annotations.Desc;
 import net.wombatrpgs.mgns.core.Annotations.Nullable;
 import net.wombatrpgs.mgns.core.Annotations.Path;
 import net.wombatrpgs.mgns.core.Annotations.SchemaLink;
+import net.wombatrpgs.sagaschema.events.data.ChestInvisibilityType;
 import net.wombatrpgs.sagaschema.events.data.KeyItemType;
 import net.wombatrpgs.sagaschema.rpg.abil.CollectableMDO;
 import net.wombatrpgs.sagaschema.rpg.abil.CombatItemMDO;
@@ -40,5 +41,9 @@ public class EventChestMDO extends EventMDO {
 	@SchemaLink(EncounterMDO.class)
 	@Nullable
 	public String encounter;
+	
+	@Desc("Invisible - invisible chests don't appear")
+	@DefaultValue("VISIBLE")
+	public ChestInvisibilityType invisible;
 
 }

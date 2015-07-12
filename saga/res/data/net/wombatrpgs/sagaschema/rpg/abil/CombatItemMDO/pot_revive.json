@@ -10,7 +10,10 @@
 	"cost" : 5000,
 	"anim" : "None",
 	"equip" : [ ],
-	"warhead" : null,
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectReviveMDO",
+		"key" : "anon_CombatItemMDO_1874575302"
+	},
 	"tier" : 0,
 	"robostats" : {
 		"stats" : [ ]

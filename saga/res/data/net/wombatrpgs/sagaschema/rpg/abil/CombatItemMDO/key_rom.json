@@ -1,0 +1,21 @@
+{
+	"key" : "key_rom",
+	"subfolder" : "key",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "ROM",
+	"itemDescription" : "Part of BORG",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectNothingMDO",
+		"key" : "anon_CombatItemMDO_-2032305170"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl09_HOMUNCULUS",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_gol09_HOMUNCULUS",
+			"amount" : "1"
+		}
+	]
+}

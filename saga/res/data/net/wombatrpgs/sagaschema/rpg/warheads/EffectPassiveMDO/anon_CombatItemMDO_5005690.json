@@ -8,7 +8,6 @@
 		"flags" : [
 			"RESIST_SLEEP",
 			"RESIST_PARALYZE",
-			"RESIST_STONE",
 			"RESIST_DEATH"
 		]
 	}

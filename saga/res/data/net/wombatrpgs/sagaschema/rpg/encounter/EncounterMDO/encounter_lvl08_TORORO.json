@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl08_TORORO",
+	"subfolder" : "level08",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_goo08_TORORO",
+			"amount" : "1"
+		}
+	]
+}

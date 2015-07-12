@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="49" tilewidth="16" tileheight="16" nextobjectid="23">
+ <properties>
+  <property name="bgm" value="ffl3_town"/>
+  <property name="name" value="River Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="48" height="49">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3ZPa7CQAwE4AASRcSroIEu1+AAHIErPO5/AihAGlnjXUOwdyNcTIMI+vbHTrJshmHYdJj/R26GtHamv8+kP/3p/67/aMhKZE0+s/yOt/+kxOLXro30T0osfu3aCL82z1qYX2Z8BtfBy4/zvCWx+Nl1o1gHLz86DiRyLMz/R4LrEOXfPbOH4Fg0Pxt3C/++Es2/I8FaiPJ/Wr/aWJfir/Wik7Pf0nfm+Cdnv1Z/L6/Mu2s2OvtL+1d6mZ+NEePtH0mk90xi2VMRfku9Xh+5QK7kO6yGovy1PfDyr8Ava4Ldg5c0/6wHRPhL/RP9uPeZX7tfe/tr/dPSf1rWb61/1vp/6/75Tnq8f831154/Iu9fmqvkL9VPxPMn+tEse7nmb/38jH40l/oRWy9t70c+/6OZvU/17i+9O8r9Y6nbnt+/SnUb5dfOOS1+bZ3QHXV+OKf/szmP9i/x/Fk7N/7W+TPGwz8ZYvFbfif/f0l/+tOf/t/0W3MHKfOLgsAkAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="48" height="49">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3YTQ7CIBCGYbrlIt7/GD2CC3+iSXXpzrjTJkNEEqS0Fob4PsmElrD4SICGGgMAAG5eTenX5uHVlH7gUDvAApvuXTl20u5/nihf7z3H5jO86iL1bVwrxty9aTc//pOV1q3b1tavTQ/5cFolxXzW5M9BE5e9k4rZSnsO3lFWav2P37B7iSArqXV8tXp+Ahpo3T/H2gEWaPFOFWZ2d8lrMG4oGQpRWvctdOD/MwAAaU9800YZwCQAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="2" name="npc" type="Character" x="576" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('So far we haven\'t been attacked, but I hear the village to the north was almost destroyed.')"/>
+   </properties>
+  </object>
+  <object id="4" type="Event" x="320" y="112" width="144" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/overworld.tmx', 25, 31)"/>
+   </properties>
+  </object>
+  <object id="5" name="npc" type="Character" x="464" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('The mountain town was completely overwhelmed by the forces of the masters.')"/>
+   </properties>
+  </object>
+  <object id="6" name="npc" type="Character" x="320" y="448" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_bird"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Vicious beasts from Hero took over a cave to the southeast. I hear they\'re after robots and artifacts.')"/>
+   </properties>
+  </object>
+  <object id="8" name="npc" type="Character" x="432" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Welcome to the river city! It\'s become much more dangerous outside.')"/>
+   </properties>
+  </object>
+  <object id="10" name="npc" type="Character" x="384" y="560" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Some of the monster from the gate are made of metal, but they move and attack on their own! Be wary!')"/>
+   </properties>
+  </object>
+  <object id="11" name="npc" type="Character" x="288" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Bandits seem to have abandoned the shrine to the south. I wonder why.')"/>
+   </properties>
+  </object>
+  <object id="12" name="npc" type="Character" x="336" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="onInteract" value="speak('We\'ve had to tighten security with Ares threatening the east.')"/>
+   </properties>
+  </object>
+  <object id="13" name="npc" type="Character" x="448" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Trade with Hero isn\'t worth the price of the monster attacks.')"/>
+   </properties>
+  </object>
+  <object id="14" type="Event" x="272" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/rivertown_interior.tmx', 4, 7)"/>
+   </properties>
+  </object>
+  <object id="15" type="Event" x="496" y="256" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/rivertown_interior.tmx', 30, 11)"/>
+   </properties>
+  </object>
+  <object id="16" type="Event" x="320" y="544" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/rivertown_interior.tmx', 10, 30)"/>
+   </properties>
+  </object>
+  <object id="17" type="Event" x="512" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/rivertown_interior.tmx', 28, 30)"/>
+   </properties>
+  </object>
+  <object id="22" type="Event" x="320" y="656" width="144" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world3.5/overworld.tmx', 25, 31)"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

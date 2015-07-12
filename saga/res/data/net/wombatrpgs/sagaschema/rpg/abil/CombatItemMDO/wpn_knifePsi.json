@@ -7,7 +7,7 @@
 	"itemDescription" : "Attacks with weapon damage based on user mana (tier 6)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 0,
+	"cost" : 14000,
 	"anim" : "banim_slash_agi",
 	"equip" : [ ],
 	"warhead" : {

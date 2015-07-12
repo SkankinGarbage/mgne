@@ -230,5 +230,22 @@ public abstract class Inventory {
 		}
 		return false;
 	}
+	
+	/**
+	 * Removes the first instance of an item that matches the given mdo key. No
+	 * effect if item is not present.
+	 * @param	itemKey			The key of the item to remove
+	 * @return					True if an instance was removed, false if none
+	 */
+	public final boolean removeItemByKey(String itemKey) {
+		for (int slot = 0; slot < capacity; slot += 1) {
+			CombatItem toCheck = items[slot];
+			if (toCheck != null && itemKey.equals(toCheck.getKey())) {
+				remove(slot);
+				return true;
+			}
+		}
+		return false;
+	}
 
 }

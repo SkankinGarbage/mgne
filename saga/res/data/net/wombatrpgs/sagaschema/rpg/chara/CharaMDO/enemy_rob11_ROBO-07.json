@@ -2,25 +2,28 @@
 	"key" : "enemy_rob11_ROBO-07",
 	"subfolder" : "level11",
 	"name" : "ROBO-07",
-	"description" : "Converted from a report",
+	"description" : "LOW",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_rob",
+	"family" : "None",
 	"species" : "ROBO-07",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/rob.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"loot" : null,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"wpn_gunShock",
+		"wpn_cannonMissile"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 551,
+		"mhp" : 551,
+		"str" : 65,
+		"def" : 65,
+		"agi" : 65,
+		"mana" : 0,
+		"flags" : [ ]
 	}
 }

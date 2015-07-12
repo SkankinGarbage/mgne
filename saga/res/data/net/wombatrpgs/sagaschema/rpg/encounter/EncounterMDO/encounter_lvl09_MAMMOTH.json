@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl09_MAMMOTH",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_eph09_MAMMOTH",
+			"amount" : "1"
+		}
+	]
+}

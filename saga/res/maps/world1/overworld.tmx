@@ -53,7 +53,7 @@
   </object>
   <object id="6" name="River Town" type="Event" x="400" y="704" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world1/shrine01.tmx', 11, 39, 'NORTH')"/>
+    <property name="onCollide" value="teleport('world1/shrine01.tmx', 13, 39, 'NORTH')"/>
    </properties>
   </object>
   <object id="7" name="Plains Town" type="Event" x="928" y="672" width="16" height="16">

@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl09_PSYCHIC3-4",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_psi09_PSYCHIC",
+			"amount" : "3-4"
+		}
+	]
+}

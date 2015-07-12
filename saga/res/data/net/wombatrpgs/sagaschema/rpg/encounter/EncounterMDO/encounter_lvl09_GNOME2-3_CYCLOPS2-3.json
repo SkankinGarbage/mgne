@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl09_GNOME2-3_CYCLOPS2-3",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_elf09_GNOME",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_gob09_CYCLOPS",
+			"amount" : "2-3"
+		}
+	]
+}

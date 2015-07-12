@@ -2,24 +2,31 @@
 	"key" : "enemy_dem10_DEMON LORD",
 	"subfolder" : "level10",
 	"name" : "DEMON LORD",
-	"description" : "Converted from a report",
+	"description" : "MID",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_dem",
 	"species" : "DEMON LORD",
-	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"appearance" : "4dir_demon",
+	"portrait" : "battle_portraits/dem.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_flame",
+		"abil_ice",
+		"abil_heal",
+		"abil_ofire"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 70,
+		"def" : 48,
+		"agi" : 52,
+		"mana" : 64,
+		"flags" : [ ]
 	}
 }

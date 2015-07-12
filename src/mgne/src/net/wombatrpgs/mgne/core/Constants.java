@@ -58,6 +58,7 @@ public class Constants {
 	public static final String PROPERTY_Z = "z";
 	public static final String PROPERTY_FIRST_GID = "firstgid";
 	public static final String PROPERTY_COUNTER = "counter";
+	public static final String PROPERTY_FORCE = "force";
 	
 	/** Strings could be null or else this */
 	public static final String NULL_MDO = "None";

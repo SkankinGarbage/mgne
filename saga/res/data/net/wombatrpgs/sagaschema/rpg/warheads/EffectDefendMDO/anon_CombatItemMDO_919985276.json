@@ -4,9 +4,11 @@
 	"name" : "anon_CombatItemMDO_919985276",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "USER",
+	"defendName" : "",
 	"shielding" : 0,
 	"triggerTypes" : [
-		"PHYSICAL"
+		"PHYSICAL",
+		"WEAPON"
 	],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
