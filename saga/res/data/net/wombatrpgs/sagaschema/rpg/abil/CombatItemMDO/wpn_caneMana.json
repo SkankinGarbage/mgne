@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_caneMana",
+	"subfolder" : "mix",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$PMANA",
+	"itemDescription" : "Boosts user mana to 99",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 50000,
+	"anim" : "banim_buff",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectBoostMDO",
+		"key" : "anon_CombatItemMDO_-1325909735"
+	},
+	"tier" : 10,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 90.0
+			},
+			{
+				"stat" : "STR",
+				"value" : 20.0
+			}
+		]
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"key" : "mix_armor_WHITE1_BLACK2",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"ingredients" : [
+		{
+			"item" : "stone_white",
+			"quantity" : 1
+		},
+		{
+			"item" : "stone_black",
+			"quantity" : 2
+		}
+	],
+	"result" : "wpn_spearGungnir"
+}

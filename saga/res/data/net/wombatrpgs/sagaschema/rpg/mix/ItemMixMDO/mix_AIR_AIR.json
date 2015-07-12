@@ -1,0 +1,13 @@
+{
+	"key" : "mix_AIR_AIR",
+	"subfolder" : "magic",
+	"name" : "",
+	"description" : "",
+	"ingredients" : [
+		{
+			"item" : "stone_air",
+			"quantity" : 2
+		}
+	],
+	"result" : "spell_exit"
+}

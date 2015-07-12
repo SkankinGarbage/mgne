@@ -1,0 +1,14 @@
+{
+	"key" : "mixset_armor",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"combinations" : [
+		"mix_armor_WHITE1_BLACK1",
+		"mix_armor_WHITE2_BLACK1",
+		"mix_armor_WHITE3_BLACK1",
+		"mix_armor_WHITE1_BLACK2",
+		"mix_armor_WHITE1_BLACK3",
+		"mix_armor_WHITE2_BLACK2"
+	]
+}

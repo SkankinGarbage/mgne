@@ -1,0 +1,28 @@
+{
+	"key" : "shoe_hecate",
+	"subfolder" : "mix",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$DHECATE",
+	"itemDescription" : "Raises mana by 20",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 50000,
+	"anim" : "None",
+	"equip" : [
+		"SHOE"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_135980618"
+	},
+	"tier" : 10,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 90.0
+			}
+		]
+	}
+}

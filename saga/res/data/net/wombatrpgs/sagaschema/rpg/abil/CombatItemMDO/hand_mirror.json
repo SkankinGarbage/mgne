@@ -1,0 +1,28 @@
+{
+	"key" : "hand_mirror",
+	"subfolder" : "mix",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$CMIRROR",
+	"itemDescription" : "Increases defense by 10 and resists fire, ice, thunder, and quake",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 50000,
+	"anim" : "None",
+	"equip" : [
+		"GAUNTLET"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_1046453015"
+	},
+	"tier" : 10,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 90.0
+			}
+		]
+	}
+}

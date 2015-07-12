@@ -1,0 +1,13 @@
+{
+	"key" : "mix_WATER_WATER",
+	"subfolder" : "magic",
+	"name" : "",
+	"description" : "",
+	"ingredients" : [
+		{
+			"item" : "stone_water",
+			"quantity" : 2
+		}
+	],
+	"result" : "spell_lifeB"
+}

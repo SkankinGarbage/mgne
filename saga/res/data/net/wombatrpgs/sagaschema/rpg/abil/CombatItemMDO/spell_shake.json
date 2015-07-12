@@ -1,0 +1,21 @@
+{
+	"key" : "spell_shake",
+	"subfolder" : "mix",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$HSHAKE",
+	"itemDescription" : "Inflicts paralysis on a party",
+	"type" : "ITEM",
+	"uses" : 30,
+	"cost" : 50000,
+	"anim" : "banim_quake",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_683351229"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

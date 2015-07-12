@@ -1,0 +1,13 @@
+{
+	"key" : "mix_FIRE_FIRE",
+	"subfolder" : "magic",
+	"name" : "",
+	"description" : "",
+	"ingredients" : [
+		{
+			"item" : "stone_fire",
+			"quantity" : 2
+		}
+	],
+	"result" : "spell_flare2"
+}

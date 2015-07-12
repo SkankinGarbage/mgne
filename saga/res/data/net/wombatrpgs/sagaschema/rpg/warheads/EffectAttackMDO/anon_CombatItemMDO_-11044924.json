@@ -6,6 +6,8 @@
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "FIRE",
 	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"power" : 3,
 	"attackStat" : "MANA",
 	"defendStat" : "DEF",

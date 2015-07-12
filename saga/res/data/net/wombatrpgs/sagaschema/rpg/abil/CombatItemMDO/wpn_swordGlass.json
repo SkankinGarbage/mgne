@@ -16,6 +16,15 @@
 	},
 	"tier" : 11,
 	"robostats" : {
-		"stats" : [ ]
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 99.0
+			},
+			{
+				"stat" : "STR",
+				"value" : 22.0
+			}
+		]
 	}
 }

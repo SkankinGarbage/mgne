@@ -1,0 +1,31 @@
+{
+	"key" : "body_power",
+	"subfolder" : "mix",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$APOWER",
+	"itemDescription" : "Increases defense by 70 but can't wear other armor",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 50000,
+	"anim" : "None",
+	"equip" : [
+		"ARMOR",
+		"GAUNTLET",
+		"HELMET",
+		"SHOE"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_1792821966"
+	},
+	"tier" : 10,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 90.0
+			}
+		]
+	}
+}

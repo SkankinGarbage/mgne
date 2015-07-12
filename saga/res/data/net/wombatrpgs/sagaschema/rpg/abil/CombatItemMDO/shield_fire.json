@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$BFIRE",
-	"itemDescription" : "Grants the party resistance to fire damage (tier 3)",
+	"itemDescription" : "Grants the party resistance to fire damage",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 2200,

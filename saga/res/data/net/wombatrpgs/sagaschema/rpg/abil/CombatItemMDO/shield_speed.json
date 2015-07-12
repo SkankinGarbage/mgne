@@ -1,0 +1,30 @@
+{
+	"key" : "shield_speed",
+	"subfolder" : "mix",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$BSPEED",
+	"itemDescription" : "Increases party chance to dodge and increases party speed",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 50000,
+	"anim" : "banim_defend",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
+		"key" : "anon_CombatItemMDO_833622194"
+	},
+	"tier" : 10,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 90.0
+			},
+			{
+				"stat" : "DEF",
+				"value" : 20.0
+			}
+		]
+	}
+}

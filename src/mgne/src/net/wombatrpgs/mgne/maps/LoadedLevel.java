@@ -35,7 +35,6 @@ import net.wombatrpgs.mgneschema.maps.LoadedMapMDO;
  */
 public class LoadedLevel extends Level {
 	
-	protected static final String KEY_NAME = "name";
 	protected static final String KEY_BGM = "bgm";
 	
 	protected LoadedMapMDO mdo;

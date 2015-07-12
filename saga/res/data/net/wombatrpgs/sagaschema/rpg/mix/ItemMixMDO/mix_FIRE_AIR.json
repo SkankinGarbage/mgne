@@ -1,0 +1,17 @@
+{
+	"key" : "mix_FIRE_AIR",
+	"subfolder" : "magic",
+	"name" : "",
+	"description" : "",
+	"ingredients" : [
+		{
+			"item" : "stone_fire",
+			"quantity" : 1
+		},
+		{
+			"item" : "stone_air",
+			"quantity" : 1
+		}
+	],
+	"result" : "spell_fire2"
+}

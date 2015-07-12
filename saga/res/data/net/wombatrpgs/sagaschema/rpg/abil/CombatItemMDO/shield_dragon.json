@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$BDRAGON",
-	"itemDescription" : "Grants resistance to fire, ice, thunder, and quake (tier 5)",
+	"itemDescription" : "Grants resistance to fire, ice, thunder, and quake",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 3100,

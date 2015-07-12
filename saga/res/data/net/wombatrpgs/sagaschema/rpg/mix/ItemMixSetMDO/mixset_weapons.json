@@ -1,0 +1,14 @@
+{
+	"key" : "mixset_weapons",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"combinations" : [
+		"mix_weapons_WHITE1_BLACK1",
+		"mix_weapons_WHITE2_BLACK1",
+		"mix_weapons_WHITE3_BLACK1",
+		"mix_weapons_WHITE1_BLACK2",
+		"mix_weapons_WHITE1_BLACK3",
+		"mix_weapons_WHITE2_BLACK2"
+	]
+}

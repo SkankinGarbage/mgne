@@ -1,0 +1,37 @@
+{
+	"key" : "anon_CombatItemMDO_-2006010865",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-2006010865",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ENEMY",
+	"damType" : "WEAPON",
+	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
+	"riders" : [
+		{
+			"key" : "",
+			"subfolder" : "",
+			"name" : "",
+			"description" : "",
+			"projector" : "USER",
+			"defendName" : "",
+			"shielding" : 0,
+			"triggerTypes" : [ ],
+			"warhead" : null,
+			"stats" : {
+				"stats" : [
+					{
+						"stat" : "AGI",
+						"value" : 40.0
+					}
+				],
+				"flags" : [ ]
+			},
+			"effects" : [ ]
+		}
+	],
+	"power" : 11,
+	"attackStat" : "STR",
+	"defendStat" : "DEF",
+	"miss" : "CAN_MISS"
+}

@@ -1,0 +1,20 @@
+{
+	"key" : "anon_CombatItemMDO_1046453015",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_1046453015",
+	"description" : "auto-generated anonymous polymorph",
+	"stats" : {
+		"stats" : [
+			{
+				"stat" : "DEF",
+				"value" : 10.0
+			}
+		],
+		"flags" : [
+			"RESIST_FIRE",
+			"RESIST_ICE",
+			"RESIST_THUNDER",
+			"RESIST_EARTH"
+		]
+	}
+}

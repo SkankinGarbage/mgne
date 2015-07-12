@@ -1,0 +1,19 @@
+{
+	"key" : "anon_CombatItemMDO_-1473190338",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-1473190338",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "ALLY_PARTY",
+	"base" : 0,
+	"power" : 0,
+	"powerStat" : null,
+	"heals" : [
+		"status_blind",
+		"status_confuse",
+		"status_curse",
+		"status_paralyze",
+		"status_poison",
+		"status_sleep",
+		"status_stone"
+	]
+}

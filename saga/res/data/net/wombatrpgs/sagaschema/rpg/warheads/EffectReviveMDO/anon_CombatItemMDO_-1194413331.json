@@ -1,0 +1,10 @@
+{
+	"key" : "anon_CombatItemMDO_-1194413331",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-1194413331",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ALLY",
+	"base" : 0,
+	"power" : 500,
+	"powerStat" : "MANA"
+}

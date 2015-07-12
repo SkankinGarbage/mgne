@@ -38,7 +38,7 @@ public class ScreenPause extends SagaScreen implements Disposable {
 	protected static final int INFO_MARGINS = 10;
 	protected static final int GLOBAL_Y = 88;
 	
-	protected OptionSelector menu, saveSelector;
+	protected OptionSelector menu;
 	protected CharaSelector inserts;
 	protected TextFormat format;
 	protected Nineslice infoBG;
@@ -75,31 +75,6 @@ public class ScreenPause extends SagaScreen implements Disposable {
 			}
 		});
 		assets.add(menu);
-		saveSelector = new OptionSelector(
-				new Option("Really save") {
-					@Override public boolean onSelect() {
-						Screen menuScreen = MGlobal.screens.pop();
-						MGlobal.memory.save("alpha_save.sav");
-						silentAdd = true;
-						MGlobal.screens.push(menuScreen);
-						silentAdd = false;
-						refocusMain();
-						return true;
-					}
-				},
-				new Option("Cancel") {
-					@Override public boolean onSelect() {
-						refocusMain();
-						return true;
-					}
-				});
-		saveSelector.setCancel(new FinishListener() {
-			@Override public void onFinish() {
-				saveSelector.close();
-				refocusMain();
-			}
-		});
-		assets.add(saveSelector);
 		
 		infoBG = new Nineslice();
 		assets.add(infoBG);
@@ -214,8 +189,6 @@ public class ScreenPause extends SagaScreen implements Disposable {
 	 * @return					False to keep menu open
 	 */
 	protected boolean onSave() {
-//		menu.unfocus();
-//		saveSelector.showAt(0, 0);
 		SagaScreen screen = new ScreenSaves(true);
 		MGlobal.assets.loadAsset(screen, "save screen");
 		MGlobal.screens.push(screen);
@@ -245,9 +218,6 @@ public class ScreenPause extends SagaScreen implements Disposable {
 			menu.focus();
 		} else {
 			menu.showAt(0, 0);
-		}
-		if (containsChild(saveSelector)) {
-			saveSelector.close();
 		}
 	}
 	

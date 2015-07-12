@@ -1,0 +1,17 @@
+{
+	"key" : "mix_WATER_AIR",
+	"subfolder" : "magic",
+	"name" : "",
+	"description" : "",
+	"ingredients" : [
+		{
+			"item" : "stone_water",
+			"quantity" : 1
+		},
+		{
+			"item" : "stone_air",
+			"quantity" : 1
+		}
+	],
+	"result" : "spell_haze"
+}

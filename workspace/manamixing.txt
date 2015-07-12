@@ -1,0 +1,28 @@
+FIRE	FIRE	Flare 2				Attack all fire damage
+FIRE	WATER	Lightning			Attack group lightning damage
+FIRE	EARTH	Magma				Attack all earth damage
+FIRE	AIR		Fire 2				Attack group fire damage
+WATER	WATER	Life B				Full restore to ally
+WATER	EARTH	Cycle				Cures status on all allies 
+WATER	AIR		Haze				Confusion to all enemies
+EARTH	EARTH	Life A				Restores life to all allies
+EARTH	AIR		Shake				Paralysis to all enemies
+AIR		AIR		Exit				Improved death
+
+WHITE1	BLACK1	Petrify hammer		Inflicts stone
+WHITE2	BLACK1	Laser bow			Hits group
+WHITE3	BLACK1	Speed sword			Attacks with agi
+WHITE1	BLACK2	Gungnir spear		Hits group
+WHITE1	BLACK3	Para axe			Grants o-para
+WHITE2	BLACK2	Mana cane			Increases mana
+
+WHITE1	BLACK1	Hecate shoe			Increases mana
+WHITE2	BLACK1	Speed shield		Increases speed
+WHITE3	BLACK1	Mirror glove		Resists elements
+WHITE1	BLACK2	Army helm			Increases strength
+WHITE1	BLACK3	Power armor			Good def, no other armor
+WHITE2	BLACK2	Ribbon bangle		Grants o-status
+
+tier 8 - ruins
+tier 9 - endgame worthy
+tier 10 - mix + legend

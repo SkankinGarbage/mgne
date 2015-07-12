@@ -1,0 +1,18 @@
+{
+	"key" : "mixset_magic",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"combinations" : [
+		"mix_FIRE_FIRE",
+		"mix_FIRE_WATER",
+		"mix_FIRE_EARTH",
+		"mix_FIRE_AIR",
+		"mix_WATER_WATER",
+		"mix_WATER_EARTH",
+		"mix_WATER_AIR",
+		"mix_EARTH_EARTH",
+		"mix_EARTH_AIR",
+		"mix_AIR_AIR"
+	]
+}

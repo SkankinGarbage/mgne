@@ -1,0 +1,21 @@
+{
+	"key" : "ring_ribbon",
+	"subfolder" : "mix",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$VRIBBON",
+	"itemDescription" : "Resists all status",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 50000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_1844109636"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

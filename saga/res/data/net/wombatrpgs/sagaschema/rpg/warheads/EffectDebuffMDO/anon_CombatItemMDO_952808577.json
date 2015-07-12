@@ -1,0 +1,11 @@
+{
+	"key" : "anon_CombatItemMDO_952808577",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_952808577",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ENEMY",
+	"power" : 15,
+	"drainStat" : "STR",
+	"attackStat" : "MANA",
+	"defendStat" : "MANA"
+}

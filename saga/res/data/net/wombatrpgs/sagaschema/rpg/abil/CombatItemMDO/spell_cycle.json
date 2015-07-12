@@ -1,0 +1,21 @@
+{
+	"key" : "spell_cycle",
+	"subfolder" : "mix",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$HCYCLE",
+	"itemDescription" : "Cures all status of the party",
+	"type" : "ITEM",
+	"uses" : 30,
+	"cost" : 50000,
+	"anim" : "banim_cure",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_-1473190338"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

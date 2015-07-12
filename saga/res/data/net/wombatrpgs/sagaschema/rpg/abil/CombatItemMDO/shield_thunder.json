@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$BTHUNDER",
-	"itemDescription" : "Grants the party thunder resistance (tier 6)",
+	"itemDescription" : "Grants the party thunder resistance",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 4000,
