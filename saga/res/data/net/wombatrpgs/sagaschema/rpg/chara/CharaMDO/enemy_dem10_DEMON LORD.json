@@ -18,6 +18,7 @@
 		"abil_flame",
 		"abil_ice",
 		"abil_heal",
+		"abil_teleport",
 		"abil_ofire"
 	],
 	"stats" : {

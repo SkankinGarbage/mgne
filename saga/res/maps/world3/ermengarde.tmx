@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="66" height="40" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="149">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="66" height="40" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="150">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Ermengarde"/>
@@ -135,6 +135,11 @@
   <object id="148" name="block" type="Event" x="816" y="208" width="48" height="48">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="149" name="memory" type="Teleport Memory" x="272" y="224" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Ermengarde"/>
    </properties>
   </object>
  </objectgroup>

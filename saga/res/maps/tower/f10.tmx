@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="29" tilewidth="16" tileheight="16" nextobjectid="101">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="29" tilewidth="16" tileheight="16" nextobjectid="102">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level04_danger00"/>
@@ -48,6 +48,11 @@
    <properties>
     <property name="appearance" value="anim_gate"/>
     <property name="onCollide" value="teleport('world3/gate.tmx', 33, 30, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="101" name="memory" type="Teleport Memory" x="224" y="208" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Angelic World"/>
    </properties>
   </object>
  </objectgroup>

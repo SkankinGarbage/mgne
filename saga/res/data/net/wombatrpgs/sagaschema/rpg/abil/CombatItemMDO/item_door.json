@@ -1,18 +1,18 @@
 {
-	"key" : "abil_teleport",
-	"subfolder" : "abil",
+	"key" : "item_door",
+	"subfolder" : "misc",
 	"name" : "",
-	"description" : "TODO",
-	"abilityName" : "TELEPORT",
+	"description" : "",
+	"abilityName" : "DOOR",
 	"itemDescription" : "Teleports to visited locations",
-	"type" : "ABILITY",
-	"uses" : 0,
-	"cost" : 0,
+	"type" : "ITEM",
+	"uses" : 5,
+	"cost" : 5000,
 	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectTeleportMDO",
-		"key" : "anon_CombatItemMDO_383672944"
+		"key" : "anon_CombatItemMDO_-1273526040"
 	},
 	"tier" : 0,
 	"robostats" : {

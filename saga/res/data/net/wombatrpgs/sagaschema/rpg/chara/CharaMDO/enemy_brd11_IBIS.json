@@ -16,8 +16,7 @@
 	"equipped" : [
 		"abil_claw",
 		"abil_beak",
-		"abil_heal",
-		"abil_revive",
+		"abil_blind",
 		"abil_warning",
 		"abil_oquake"
 	],
@@ -26,8 +25,8 @@
 		"mhp" : 551,
 		"str" : 53,
 		"def" : 48,
-		"agi" : 58,
-		"mana" : 74,
+		"agi" : 74,
+		"mana" : 58,
 		"flags" : [ ]
 	}
 }

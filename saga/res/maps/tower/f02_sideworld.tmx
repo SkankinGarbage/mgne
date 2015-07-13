@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="37" tilewidth="16" tileheight="16" nextobjectid="49">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="37" tilewidth="16" tileheight="16" nextobjectid="51">
  <properties>
   <property name="bgm" value="ffl3_overworld"/>
   <property name="name" value="Floor 2"/>
@@ -36,6 +36,11 @@
   <object id="48" name="tele" type="Event" x="352" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('tower/f02_sideworld_shrine.tmx', 21, 22, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="50" name="memory" type="Teleport Memory" x="320" y="432" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Crystal World"/>
    </properties>
   </object>
  </objectgroup>

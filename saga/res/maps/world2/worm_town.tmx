@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="36" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="61">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="36" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="63">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="Worm's Town"/>
@@ -116,6 +116,11 @@
   <object id="60" name="tele" type="Event" x="576" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_town_interior.tmx', 24, 7)"/>
+   </properties>
+  </object>
+  <object id="61" name="memory" type="Teleport Memory" x="560" y="240" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Worm's Town"/>
    </properties>
   </object>
  </objectgroup>

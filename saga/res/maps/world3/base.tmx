@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="42" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="146">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="42" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="147">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Rebel Base"/>
@@ -111,6 +111,11 @@
   <object id="145" name="tele" type="Event" x="464" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/base_interior.tmx', 'shop_right')"/>
+   </properties>
+  </object>
+  <object id="146" name="memory" type="Teleport Memory" x="544" y="320" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Rebel Base"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="59" height="49" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="59">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="59" height="49" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="60">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="Wolf's Town"/>
@@ -176,6 +176,11 @@
    </properties>
   </object>
   <object id="58" name="pub" type="Target" x="320" y="384" width="16" height="16"/>
+  <object id="59" name="memory" type="Teleport Memory" x="512" y="288" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Wolf's Town"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="59" height="49">
   <properties>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="53" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="100">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="53" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="101">
  <properties>
   <property name="bgm" value="ffl3_town2"/>
   <property name="name" value="City of Angels"/>
@@ -218,6 +218,11 @@
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="speak('Guard', 'The gate is closed. Why would anyone want to leave the City of Angels?')"/>
+   </properties>
+  </object>
+  <object id="100" name="memory" type="Teleport Memory" x="592" y="320" width="16" height="16">
+   <properties>
+    <property name="displayName" value="City of Angels"/>
    </properties>
   </object>
  </objectgroup>

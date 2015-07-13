@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="29" tilewidth="16" tileheight="16" nextobjectid="69">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="29" tilewidth="16" tileheight="16" nextobjectid="70">
  <properties>
   <property name="bgm" value="ffl1_theme"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
@@ -48,6 +48,11 @@
     <property name="appearance" value="anim_gate"/>
     <property name="hide" value="return not getSwitch('ares_dead')"/>
     <property name="onCollide" value="teleport('world3.5/gate.tmx', 26, 15, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="69" name="memory" type="Teleport Memory" x="112" y="240" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Home World"/>
    </properties>
   </object>
  </objectgroup>

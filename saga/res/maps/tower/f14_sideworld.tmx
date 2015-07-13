@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="49" height="31" tilewidth="16" tileheight="16" nextobjectid="143">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="49" height="31" tilewidth="16" tileheight="16" nextobjectid="144">
  <properties>
   <property name="bgm" value="ffl1_overworld2"/>
   <property name="name" value="Floor 14"/>
@@ -107,6 +107,11 @@
    <properties>
     <property name="item" value="spell_flare"/>
     <property name="visible" value="INVISIBLE"/>
+   </properties>
+  </object>
+  <object id="143" name="memory" type="Teleport Memory" x="144" y="288" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Library of Babel"/>
    </properties>
   </object>
  </objectgroup>

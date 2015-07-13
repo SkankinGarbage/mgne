@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="24" tilewidth="16" tileheight="16" nextobjectid="65">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="29" height="24" tilewidth="16" tileheight="16" nextobjectid="66">
  <properties>
   <property name="bgm" value="ffl1_overworld2"/>
   <property name="name" value="Floor 12"/>
@@ -31,6 +31,11 @@
   <object id="64" name="town" type="Event" x="256" y="176" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f12_sideworld_town.tmx', 'entry', 'EAST')"/>
+   </properties>
+  </object>
+  <object id="65" name="memory" type="Teleport Memory" x="208" y="176" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Lava World"/>
    </properties>
   </object>
  </objectgroup>

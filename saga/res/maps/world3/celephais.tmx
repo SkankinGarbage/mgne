@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="127">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="128">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Celephais"/>
@@ -174,6 +174,11 @@
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('Guard', 'I\'m an elite soldier from the City of Angels.')"/>
+   </properties>
+  </object>
+  <object id="127" name="memory" type="Teleport Memory" x="240" y="432" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Celephais"/>
    </properties>
   </object>
  </objectgroup>

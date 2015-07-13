@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="33" tilewidth="16" tileheight="16" nextobjectid="63">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="33" tilewidth="16" tileheight="16" nextobjectid="64">
  <properties>
   <property name="bgm" value="ffl2_overworld"/>
   <property name="name" value="Floor 9"/>
@@ -36,6 +36,11 @@
   <object id="62" name="tele" type="Event" x="256" y="288" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('tower/f09.tmx', 2, 32, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="63" name="memory" type="Teleport Memory" x="256" y="304" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Studious World"/>
    </properties>
   </object>
  </objectgroup>
