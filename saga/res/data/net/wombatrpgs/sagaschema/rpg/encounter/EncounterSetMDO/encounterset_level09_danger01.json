@@ -5,23 +5,15 @@
 	"description" : "",
 	"encounters" : [
 		{
-			"encounter" : "encounter_lvl09_RHINO_IMMOLATOR2-4_SICKLE",
+			"encounter" : "encounter_lvl09_RHINO",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl09_EAGLE",
 			"weight" : 16
 		},
 		{
-			"encounter" : "encounter_lvl09_LILITH_RHINO2-4_PSYCHIC",
-			"weight" : 16
-		},
-		{
-			"encounter" : "encounter_lvl09_IMMOLATOR1-2_EAGLE1-2_PSYCHIC1-2",
-			"weight" : 16
-		},
-		{
-			"encounter" : "encounter_lvl09_HOMUNCULUS2-3_TROOPER2-3_SICKLE0-3",
-			"weight" : 16
-		},
-		{
-			"encounter" : "encounter_lvl09_GNOME2-3_CYCLOPS2-3",
+			"encounter" : "encounter_lvl09_CYCLOPS",
 			"weight" : 32
 		},
 		{
@@ -29,20 +21,28 @@
 			"weight" : 32
 		},
 		{
-			"encounter" : "encounter_lvl09_STALKER_GNOME",
-			"weight" : 32
+			"encounter" : "encounter_lvl09_STALKER2-3_MAMMOTH",
+			"weight" : 16
 		},
 		{
 			"encounter" : "encounter_lvl09_PSYCHIC3-4",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl09_IMMOLATOR2-5",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl09_SICKLE_TROOPER_HOMUNCULUS",
 			"weight" : 24
 		},
 		{
-			"encounter" : "encounter_lvl09_MAMMOTH",
-			"weight" : 24
+			"encounter" : "encounter_lvl09_GNOME2-3_CYCLOPS2-3",
+			"weight" : 16
 		},
 		{
-			"encounter" : "encounter_lvl09_EAGLE",
-			"weight" : 32
+			"encounter" : "encounter_lvl09_LILITH_RHINO2-4_PSYCHIC",
+			"weight" : 16
 		}
 	],
 	"steps" : 42

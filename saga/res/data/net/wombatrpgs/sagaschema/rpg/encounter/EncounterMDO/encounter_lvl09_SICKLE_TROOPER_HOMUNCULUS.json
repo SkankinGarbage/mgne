@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_level09_SICKLE_TROOPER_HOMUNCULUS",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wsl09_SICKLE",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_gun09_TROOPER",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_gol09_HOMUNCULUS",
+			"amount" : "1"
+		}
+	]
+}
