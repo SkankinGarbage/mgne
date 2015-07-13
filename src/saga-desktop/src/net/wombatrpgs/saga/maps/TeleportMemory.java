@@ -15,8 +15,25 @@ public class TeleportMemory {
 	public String displayName;
 	public int tileX, tileY;
 	
-	public TeleportMemory(String mapKey, String displayName, int tileX, int tileY) {
+	/**
+	 * Serialization constructor.
+	 */
+	public TeleportMemory() {
 		
+	}
+	
+	/**
+	 * Creates a new teleport memory. Does not insert it into the save data.
+	 * @param	mapKey			The key that the target map is loaded by
+	 * @param	displayName		The display name of this teleport in selection
+	 * @param	tileX			The x-coord to teleport to, in tiles
+	 * @param	tileY			The y-coord to teleport to, in tiles
+	 */
+	public TeleportMemory(String mapKey, String displayName, int tileX, int tileY) {
+		this.mapKey = mapKey;
+		this.displayName = displayName;
+		this.tileX = tileX;
+		this.tileY = tileY;
 	}
 
 }

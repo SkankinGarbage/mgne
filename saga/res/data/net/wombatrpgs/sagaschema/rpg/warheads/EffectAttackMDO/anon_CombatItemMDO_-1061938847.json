@@ -13,7 +13,7 @@
 			"subfolder" : "",
 			"name" : "",
 			"description" : "",
-			"projector" : "USER",
+			"projector" : "ALLY_PARTY",
 			"defendName" : "",
 			"shielding" : 0,
 			"triggerTypes" : [ ],

@@ -312,6 +312,9 @@ public class ScreenItemMix extends SagaScreen {
 	 */
 	protected void cancel() {
 		MGlobal.screens.pop();
+		instructionsBG.dispose();
+		constructionBG.dispose();
+		collectionBG.dispose();
 		done = true;
 	}
 

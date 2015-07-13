@@ -21,7 +21,7 @@
 		"abil_testExplode",
 		"abil_testInk",
 		"abil_testCare",
-		"abil_ambush"
+		"abil_testTeleport"
 	],
 	"stats" : {
 		"hp" : 101,

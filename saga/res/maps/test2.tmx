@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="7">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="name" value="saga testmap 2"/>
@@ -46,32 +46,37 @@
   </data>
  </layer>
  <objectgroup name="Event">
-  <object type="Event" x="0" y="128" width="16" height="16">
+  <object id="1" type="Event" x="0" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('test.tmx', 18, 7)"/>
    </properties>
   </object>
-  <object name="test walk" type="Character" x="144" y="112" width="16" height="16">
+  <object id="2" name="test walk" type="Character" x="144" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="walk(this, 3, 'NORTH')"/>
    </properties>
   </object>
-  <object name="room" type="Ceiling" x="208" y="48">
+  <object id="3" name="room" type="Ceiling" x="208" y="48">
    <properties>
     <property name="roofID" value="3"/>
     <property name="roofTileset" value="welp"/>
    </properties>
    <polygon points="0,0 0,96 32,96 32,112 48,112 48,96 80,96 80,0 0,0"/>
   </object>
-  <object name="autostart" type="Event" x="0" y="0" width="16" height="16">
+  <object id="4" name="autostart" type="Event" x="0" y="0" width="16" height="16">
    <properties>
     <property name="onEnter" value="speak('this is an autostart event!')"/>
    </properties>
   </object>
-  <object name="potion" type="Chest" x="144" y="160" width="16" height="16">
+  <object id="5" name="potion" type="Chest" x="144" y="160" width="16" height="16">
    <properties>
     <property name="item" value="pot_potion"/>
+   </properties>
+  </object>
+  <object id="6" name="memory" type="Teleport Memory" x="240" y="96" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Other Test Room"/>
    </properties>
   </object>
  </objectgroup>

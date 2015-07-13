@@ -1,0 +1,21 @@
+{
+	"key" : "abil_testTeleport",
+	"subfolder" : "test",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "TELEPORT",
+	"itemDescription" : "",
+	"type" : "ABILITY",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectTeleportMDO",
+		"key" : "anon_CombatItemMDO_-1844975403"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

@@ -6,10 +6,12 @@
  */
 package net.wombatrpgs.saga.core;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.core.Memory;
+import net.wombatrpgs.saga.maps.TeleportMemory;
 import net.wombatrpgs.saga.rpg.chara.HeroParty;
 import net.wombatrpgs.saga.rpg.chara.PartyMemory;
 
@@ -21,8 +23,15 @@ public class SMemory extends Memory {
 	// fields to store/unload
 	public PartyMemory partyMemory;
 	public String battleBGMKey;
-	public List<String> teleportLocations;
+	public List<TeleportMemory> teleportLocations;
 	public int saveSlot;
+	
+	/**
+	 * Creates a new, empty memory.
+	 */
+	public SMemory() {
+		teleportLocations = new ArrayList<TeleportMemory>();
+	}
 	
 	/**
 	 * @see net.wombatrpgs.mgne.core.Memory#storeFields()
@@ -33,6 +42,7 @@ public class SMemory extends Memory {
 		this.partyMemory = new PartyMemory(SGlobal.heroes);
 		this.saveSlot = SGlobal.saveSlot;
 		this.battleBGMKey = SGlobal.battleBGMKey;
+		this.teleportLocations = SGlobal.teleports;
 	}
 
 	/**
@@ -43,6 +53,7 @@ public class SMemory extends Memory {
 		SGlobal.heroes = new HeroParty(this.partyMemory);
 		SGlobal.saveSlot = this.saveSlot;
 		SGlobal.battleBGMKey = this.battleBGMKey;
+		SGlobal.teleports = this.teleportLocations;
 		super.unloadFields();
 	}
 

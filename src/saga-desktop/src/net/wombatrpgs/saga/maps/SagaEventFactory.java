@@ -16,6 +16,7 @@ import net.wombatrpgs.sagaschema.events.EventCeilingMDO;
 import net.wombatrpgs.sagaschema.events.EventChestMDO;
 import net.wombatrpgs.sagaschema.events.EventDoorMDO;
 import net.wombatrpgs.sagaschema.events.EventEncounterMDO;
+import net.wombatrpgs.sagaschema.events.EventTeleportMemoryMDO;
 import net.wombatrpgs.sagaschema.rpg.encounter.EncounterSetMDO;
 import net.wombatrpgs.sagaschema.rpg.encounter.TerrainEncounterSetMDO;
 
@@ -28,6 +29,7 @@ public class SagaEventFactory extends EventFactory {
 	protected static final String TYPE_CEILING = "Ceiling";
 	protected static final String TYPE_CHEST = "Chest";
 	protected static final String TYPE_DOOR = "Door";
+	protected static final String TYPE_TELEPORT_MEMORY = "Teleport Memory";
 	
 	protected static final String PROPERTY_ENCOUNTER = "encounter";
 	protected static final String PROPERTY_TERRAIN_ENCOUNTER = "terrainEncounter";
@@ -47,6 +49,8 @@ public class SagaEventFactory extends EventFactory {
 			return new EventChest(object.generateMDO(EventChestMDO.class), object);
 		} else if (TYPE_DOOR.equals(type)) {
 			return new EventDoor(object.generateMDO(EventDoorMDO.class));
+		} else if (TYPE_TELEPORT_MEMORY.equals(type)) {
+			return new EventTeleportMemory(object.generateMDO(EventTeleportMemoryMDO.class));
 		}
 		return super.createEvent(object);
 	}

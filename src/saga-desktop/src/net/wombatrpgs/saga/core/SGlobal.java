@@ -13,6 +13,7 @@ import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.core.interfaces.Queueable;
 import net.wombatrpgs.saga.SagaSettings;
 import net.wombatrpgs.saga.graphics.SGraphics;
+import net.wombatrpgs.saga.maps.TeleportMemory;
 import net.wombatrpgs.saga.rpg.chara.HeroParty;
 import net.wombatrpgs.sagaschema.rpg.chara.PartyMDO;
 
@@ -23,6 +24,7 @@ public class SGlobal {
 	
 	/** RPG information */
 	public static HeroParty heroes;
+	public static List<TeleportMemory> teleports;
 	
 	/** Settings and default keys */
 	public static SagaSettings settings;
@@ -39,6 +41,7 @@ public class SGlobal {
 	 */
 	public static void preLoad() {
 		settings = new SagaSettings();
+		teleports = new ArrayList<TeleportMemory>();
 	}
 	
 	/**
