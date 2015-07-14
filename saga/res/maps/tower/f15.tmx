@@ -33,7 +33,7 @@
   <object id="108" name="gate" type="Event" x="192" y="224" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_gate"/>
-    <property name="onCollide" value="teleport('tower/f15.tmx', 12, 17, 'NORTH')"/>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'gate')"/>
    </properties>
   </object>
   <object id="109" name="block" type="Event" x="192" y="128" width="16" height="16">

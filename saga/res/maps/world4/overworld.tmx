@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="75">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="79">
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
@@ -13,7 +13,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3aS1LCQBAGYLiWO7acQq0sdGN5kGwoLixWOWXbTj/m3TPpxV9RDCT58tMEcD+dTvtBcjWQ0QbuvW5GW7u3e7v3Ohlt7d7u7d6/uWfkDPL8yMsjrwa878QSR7tebe9S6+98PPL2E8781sg75xikWPaG5u+MM15a9k417+l9AeafCudS7xvI0fp9Qcuz0js13Pk6ar9TvLU91tw/1XDmfsei9Yr1V9Pro/cbJ2xf4025S/OntfdM/Za8cf+ledLiGFbpN9w+1dMd/c7NEanbR+33Htk+5Sf1l+t1L2/L/ZZsKONc7yPP71iXpbmg8ebmCPxZei05L+QNt6Pp5FV5PsK618j94ONqrHPNrXnHZjXXTbx/MVMp+DHd+3+XtY7a44LrtvRONW/pHdsW9Ob2SesNZxY+v9S6q/Y7xxtvN6ezJeYr9xvPFGrbMW9q/peaz9xvbn7Hrk3CtcQlssSm1Doab85+5n7j9+3cdUnwjjme0XrcOr29LfU7Z1u9+43NZ+137HjC9qj9kLqb0u/cns/Yb+1rE47U3ZR+p7rneqc+l1K84TFrvFOsg3ftfmvNLc6TcDycd3jccO5jpqPCmVucJ9p+w+da6syoMU+4v83knTPbUmeGNCtK77+qNzW/rfY77O+K3rn91LxeSv0OqeXd8vWy1jwZ2W9ppni/6/e7preVfnPeI68HKfNw+6z9puaJpazU7xm8sbl79zV37/6Z2Xs289xjtOSdcj4056vVPpTcfyZvC6lxHt27b9zbvVPTal7P6r2BfK9z+1nC2927jveG/g4/p4C3l5i7919rzWdEJebu/d87XBfX9m59zT2LN+625J1jXvO93yre0EL6rNmyN9UR9+5nnePe2/sCUuqNzXt325I3NKe+U6x1fdIy3HfPOeY9vbfT335vE3lja9wXC97QfGNi1Vrb76cE897v56mMdq3Rb415D2/KfrRlrX5b9p4xOf/D4t7jvW/u3c083Obe7d1hanu7OZ29kbeHjnu798pxb/deOe7t3ivHvd175bi3Te8vgFioe5BxAAA=
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="92" height="79">
@@ -21,8 +21,29 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3cMQ6CMBQGYEi8hyfRkXuzunoGr+BsHEwIIYhIXyn9vuVNhJefR5c2bRoAAAAA9qJrc3cAAAAA6dxyNwBQsHvuBip1aafr0LWdrqwj8ziyjifzOKVl/cj36s2UlnlKR/ietZmb3yVz++/zNVqT2fDfkvly5juezOPIOp7MAQAAAAB+0zfOT0d6Z93nboJNPHM3sDPfzqKc7atwIKcC5/lzR8i4ko6s43SjPXyZp2e+41i/AQAAAACO6QXgS+7TkHEAAA==
+   H4sIAAAAAAAAC+3cMQ6CMBQGYJp4D0+iI/dmdfUMXsHZOJgQQhQrfbXwfcubCC8/jy5t2nUAAADk6lPtDgAAAACgHZfaDQA07Fq7gZ06pfk6dk7zlTwyjyPreDKP01rWt3qvXk1rmZe0he+5N+/md8nc/vr8HuVkNv63ZL6c+Y4n8ziyjidzAAAAAIDvDJ3z05GeWQ+1m2AV99oN/JlPZ1GO9lXYkEOD8/y6e2haKUfWcfrJHr7MyzPfcazfAAAAAADb9ACWyCsZkHEAAA==
   </data>
  </layer>
- <objectgroup name="Object Layer 1"/>
+ <objectgroup name="Object Layer 1">
+  <object id="75" name="gate" type="Event" x="624" y="896" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/f15.tmx', 'gate')"/>
+   </properties>
+  </object>
+  <object id="76" name="barrier" type="Event" x="304" y="816" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="play('world4/barrier.lua')"/>
+   </properties>
+  </object>
+  <object id="77" name="radiation" type="Event" x="656" y="896" width="16" height="16">
+   <properties>
+    <property name="onTurn" value="if (getAvatar().terrainType() == 146) then play('world4/radiation.lua'); playScene(); end"/>
+   </properties>
+  </object>
+  <object id="78" name="tele" type="Event" x="688" y="560" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/city.tmx', 'entry')"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
