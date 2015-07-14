@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$FDIAMOND",
-	"itemDescription" : "Increases defense by 12",
+	"itemDescription" : "Increases defense by 14",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 5620,

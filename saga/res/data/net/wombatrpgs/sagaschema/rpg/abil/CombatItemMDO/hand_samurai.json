@@ -1,0 +1,23 @@
+{
+	"key" : "hand_samurai",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$CSAMURAI",
+	"itemDescription" : "Increases defense by 12 and resists weapon damage",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 40000,
+	"anim" : "None",
+	"equip" : [
+		"GAUNTLET"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_529017010"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

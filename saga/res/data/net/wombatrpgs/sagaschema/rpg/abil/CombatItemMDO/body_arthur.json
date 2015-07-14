@@ -1,0 +1,28 @@
+{
+	"key" : "body_arthur",
+	"subfolder" : "legend",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$AARTHUR",
+	"itemDescription" : "Increases defense by 38",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 1,
+	"anim" : "None",
+	"equip" : [
+		"ARMOR"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-818275589"
+	},
+	"tier" : 10,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 90.0
+			}
+		]
+	}
+}

@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$ESILVER",
-	"itemDescription" : "Inflicts weapon damage (tier 6)",
+	"itemDescription" : "Attacks with weapon damage (tier 6)",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 11800,

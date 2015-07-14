@@ -1,0 +1,34 @@
+{
+	"key" : "anon_CombatItemMDO_1153381572",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_1153381572",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "GROUP_ENEMY",
+	"damType" : "PHYSICAL",
+	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
+	"riders" : [
+		{
+			"key" : "",
+			"subfolder" : "",
+			"name" : "",
+			"description" : "",
+			"projector" : "USER",
+			"defendName" : "",
+			"shielding" : 60,
+			"triggerTypes" : [ ],
+			"warhead" : null,
+			"stats" : {
+				"stats" : [ ],
+				"flags" : [ ]
+			},
+			"effects" : [ ]
+		}
+	],
+	"base" : 120,
+	"range" : 40,
+	"defenseStat" : "DEF",
+	"accuracy" : 70,
+	"accStat" : "STR",
+	"dodgeStat" : "AGI"
+}

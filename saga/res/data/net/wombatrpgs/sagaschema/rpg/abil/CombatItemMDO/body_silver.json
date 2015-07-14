@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$ASILVER",
-	"itemDescription" : "Increases defense by 13",
+	"itemDescription" : "Increases defense by 12",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 2200,

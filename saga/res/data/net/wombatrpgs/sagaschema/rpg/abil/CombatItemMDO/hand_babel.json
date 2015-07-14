@@ -1,0 +1,28 @@
+{
+	"key" : "hand_babel",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$CBABEL",
+	"itemDescription" : "Increases defense by 12",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 26000,
+	"anim" : "None",
+	"equip" : [
+		"GAUNTLET"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_807783451"
+	},
+	"tier" : 8,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 72.0
+			}
+		]
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"key" : "ring_fire",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$VFIRE",
+	"itemDescription" : "Resists fire",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 10000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-1133990017"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

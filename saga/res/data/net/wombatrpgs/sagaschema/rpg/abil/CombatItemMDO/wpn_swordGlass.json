@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$EGLASS",
-	"itemDescription" : "Inflicts weapon damage (tier 11)",
+	"itemDescription" : "Attacks with weapon damage (tier 11)",
 	"type" : "ITEM",
 	"uses" : 1,
 	"cost" : 2,

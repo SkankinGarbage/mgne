@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$EWHITE",
-	"itemDescription" : "Inflicts weapon damage and slays undead (tier 4)",
+	"itemDescription" : "Attacks with weapon damage and slays undead (tier 4)",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 1770,

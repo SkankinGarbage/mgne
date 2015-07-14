@@ -8,7 +8,7 @@
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],
-	"base" : 130,
+	"base" : 140,
 	"range" : 50,
 	"defenseStat" : "MANA",
 	"accuracy" : 70,

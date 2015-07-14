@@ -1,0 +1,28 @@
+{
+	"key" : "helm_babel",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "",
+	"itemDescription" : "Increases defense by 20",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 35800,
+	"anim" : "None",
+	"equip" : [
+		"HELMET"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_653931125"
+	},
+	"tier" : 8,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 72.0
+			}
+		]
+	}
+}

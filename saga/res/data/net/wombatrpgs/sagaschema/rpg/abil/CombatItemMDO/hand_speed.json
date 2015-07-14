@@ -1,0 +1,23 @@
+{
+	"key" : "hand_speed",
+	"subfolder" : "legend",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$CSPEED",
+	"itemDescription" : "Increases defense by 15 and agility by 7",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 1,
+	"anim" : "None",
+	"equip" : [
+		"GAUNTLET"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_383330638"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"key" : "shoe_geta",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$DGETA",
+	"itemDescription" : "Increases defense by 7 and strength by 7",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 29000,
+	"anim" : "None",
+	"equip" : [
+		"SHOE"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-597856164"
+	},
+	"tier" : 9,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 81.0
+			}
+		]
+	}
+}

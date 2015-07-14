@@ -9,6 +9,7 @@
 		"CRITICAL_ON_WEAKNESS"
 	],
 	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"power" : 6,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",

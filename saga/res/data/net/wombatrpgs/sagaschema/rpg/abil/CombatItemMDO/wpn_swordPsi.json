@@ -1,0 +1,26 @@
+{
+	"key" : "wpn_swordPsi",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$EPSI",
+	"itemDescription" : "Attacks with weapon damage based on user mana (tier 8)",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_629127378"
+	},
+	"tier" : 8,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 72.0
+			}
+		]
+	}
+}

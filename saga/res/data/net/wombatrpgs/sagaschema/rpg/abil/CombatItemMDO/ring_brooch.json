@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$VBROOCH",
-	"itemDescription" : "Resists death",
+	"itemDescription" : "Resists death and stone",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 4900,

@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_legendDurend",
+	"subfolder" : "legend",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$EDUREND",
+	"itemDescription" : "Attacks with weapon damage and ignores damage resistance (tier 10)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 1,
+	"anim" : "banim_slash_legend",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_-1614045478"
+	},
+	"tier" : 10,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 90.0
+			},
+			{
+				"stat" : "STR",
+				"value" : 20.0
+			}
+		]
+	}
+}

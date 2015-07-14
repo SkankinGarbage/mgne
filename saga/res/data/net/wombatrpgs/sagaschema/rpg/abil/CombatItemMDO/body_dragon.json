@@ -1,0 +1,28 @@
+{
+	"key" : "body_dragon",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$ADRAGON",
+	"itemDescription" : "Increases defense by 23 and resists fire and ice",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 60000,
+	"anim" : "None",
+	"equip" : [
+		"ARMOR"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-538901509"
+	},
+	"tier" : 9,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 81.0
+			}
+		]
+	}
+}

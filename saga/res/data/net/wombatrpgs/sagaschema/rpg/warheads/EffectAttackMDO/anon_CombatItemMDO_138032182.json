@@ -7,6 +7,7 @@
 	"damType" : "WEAPON",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"power" : 3,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",

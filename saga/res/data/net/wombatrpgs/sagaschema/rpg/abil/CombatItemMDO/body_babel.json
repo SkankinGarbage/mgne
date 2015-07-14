@@ -1,0 +1,28 @@
+{
+	"key" : "body_babel",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$ABABEL",
+	"itemDescription" : "Increases defense by 25",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 40000,
+	"anim" : "None",
+	"equip" : [
+		"ARMOR"
+	],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-439273580"
+	},
+	"tier" : 8,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 72.0
+			}
+		]
+	}
+}

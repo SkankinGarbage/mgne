@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$FSILVER",
-	"itemDescription" : "Increases defense by 8",
+	"itemDescription" : "Increases defense by 9",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 900,

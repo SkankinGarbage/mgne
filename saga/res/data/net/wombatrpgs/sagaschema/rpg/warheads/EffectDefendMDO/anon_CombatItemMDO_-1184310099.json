@@ -1,0 +1,24 @@
+{
+	"key" : "anon_CombatItemMDO_-1184310099",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-1184310099",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "USER",
+	"defendName" : "",
+	"shielding" : 80,
+	"triggerTypes" : [ ],
+	"warhead" : null,
+	"stats" : {
+		"stats" : [ ],
+		"flags" : [
+			"RESIST_BLIND",
+			"RESIST_CURSE",
+			"RESIST_CONFUSE",
+			"RESIST_SLEEP",
+			"RESIST_PARALYZE",
+			"RESIST_STONE",
+			"RESIST_DEATH"
+		]
+	},
+	"effects" : [ ]
+}

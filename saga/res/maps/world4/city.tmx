@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="170">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="32" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="172">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Underground City"/>
@@ -141,5 +141,11 @@
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'city')"/>
    </properties>
   </object>
+  <object id="170" name="tele" type="Event" x="416" y="336" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/city_interior.tmx', 'house')"/>
+   </properties>
+  </object>
+  <object id="171" name="house" type="Target" x="416" y="352" width="16" height="16"/>
  </objectgroup>
 </map>

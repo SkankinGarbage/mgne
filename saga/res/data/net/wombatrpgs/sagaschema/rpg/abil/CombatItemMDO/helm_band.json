@@ -1,0 +1,26 @@
+{
+	"key" : "helm_band",
+	"subfolder" : "legend",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$FBAND",
+	"itemDescription" : "Increases defense by 25",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 1,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_1963606960"
+	},
+	"tier" : 10,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 90.0
+			}
+		]
+	}
+}

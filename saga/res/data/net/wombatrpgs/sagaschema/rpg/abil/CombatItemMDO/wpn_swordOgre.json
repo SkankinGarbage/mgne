@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$EOGRE",
-	"itemDescription" : "Inflicts weapon damage and slays goblins (tier 7)",
+	"itemDescription" : "Attacks with weapon damage and slays goblins (tier 7)",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 22000,

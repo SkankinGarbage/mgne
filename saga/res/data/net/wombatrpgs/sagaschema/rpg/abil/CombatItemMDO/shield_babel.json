@@ -1,0 +1,30 @@
+{
+	"key" : "shield_babel",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$BBABEL",
+	"itemDescription" : "Raises chance to dodge significantly and resists status",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 7800,
+	"anim" : "banim_defend",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
+		"key" : "anon_CombatItemMDO_-1184310099"
+	},
+	"tier" : 8,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 72.0
+			},
+			{
+				"stat" : "DEF",
+				"value" : 16.0
+			}
+		]
+	}
+}

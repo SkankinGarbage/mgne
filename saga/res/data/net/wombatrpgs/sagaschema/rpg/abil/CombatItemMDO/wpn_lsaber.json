@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_lsaber",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "L-SABER",
+	"itemDescription" : "Attacks with weapon damage based on user agility (tier 8)",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 36000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_-1971347162"
+	},
+	"tier" : 8,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 72.0
+			},
+			{
+				"stat" : "AGI",
+				"value" : 16.0
+			}
+		]
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"key" : "anon_CombatItemMDO_1623528238",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_1623528238",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "USER",
+	"defendName" : "",
+	"shielding" : 60,
+	"triggerTypes" : [
+		"FIRE",
+		"ICE",
+		"EARTH",
+		"THUNDER"
+	],
+	"warhead" : null,
+	"stats" : {
+		"stats" : [ ],
+		"flags" : [ ]
+	},
+	"effects" : [
+		"BLOCKS_TRIGGERING_DAMAGE",
+		"REFLECTS_TRIGGERING_ATTACK"
+	]
+}

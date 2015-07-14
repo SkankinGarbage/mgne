@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_gunTank",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$GTANK",
+	"itemDescription" : "Attacks a group with fixed damage and raises chance to dodge (tier 8)",
+	"type" : "ITEM",
+	"uses" : 30,
+	"cost" : 37500,
+	"anim" : "banim_missile",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_1153381572"
+	},
+	"tier" : 8,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 72.0
+			},
+			{
+				"stat" : "STR",
+				"value" : 16.0
+			}
+		]
+	}
+}

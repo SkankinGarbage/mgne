@@ -11,6 +11,7 @@
 	"slayerFamiles" : [
 		"mfamily_jly"
 	],
+	"riders" : [ ],
 	"power" : 5,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",
