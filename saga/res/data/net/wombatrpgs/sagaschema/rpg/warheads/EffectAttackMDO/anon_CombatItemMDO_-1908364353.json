@@ -1,0 +1,40 @@
+{
+	"key" : "anon_CombatItemMDO_-1908364353",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-1908364353",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ENEMY",
+	"damType" : "WEAPON",
+	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
+	"riders" : [
+		{
+			"key" : "",
+			"subfolder" : "",
+			"name" : "",
+			"description" : "",
+			"projector" : "USER",
+			"defendName" : "",
+			"shielding" : 0,
+			"triggerTypes" : [
+				"FIRE",
+				"ICE",
+				"EARTH",
+				"THUNDER"
+			],
+			"warhead" : null,
+			"stats" : {
+				"stats" : [ ],
+				"flags" : [ ]
+			},
+			"effects" : [
+				"BLOCKS_TRIGGERING_DAMAGE",
+				"REFLECTS_TRIGGERING_ATTACK"
+			]
+		}
+	],
+	"power" : 9,
+	"attackStat" : "STR",
+	"defendStat" : "DEF",
+	"miss" : "CAN_MISS"
+}

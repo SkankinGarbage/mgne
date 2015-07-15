@@ -1,0 +1,21 @@
+{
+	"key" : "wpn_swordRune",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$ERUNE",
+	"itemDescription" : "Attacks with weapon damage and reflects elemental damage (tier 9)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 46000,
+	"anim" : "banim_slash",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_-1908364353"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

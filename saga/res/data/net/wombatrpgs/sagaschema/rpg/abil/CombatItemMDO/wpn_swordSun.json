@@ -1,0 +1,16 @@
+{
+	"key" : "wpn_swordSun",
+	"subfolder" : "weapon",
+	"name" : null,
+	"description" : null,
+	"abilityName" : null,
+	"itemDescription" : null,
+	"type" : null,
+	"uses" : null,
+	"cost" : null,
+	"anim" : null,
+	"equip" : null,
+	"warhead" : null,
+	"tier" : null,
+	"robostats" : null
+}

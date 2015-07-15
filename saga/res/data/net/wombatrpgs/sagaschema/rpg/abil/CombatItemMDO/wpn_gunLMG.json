@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_gunLMG",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$GVULCAN",
+	"itemDescription" : "Attacks a group with fixed damage aimed by strength (tier 9)",
+	"type" : "ITEM",
+	"uses" : 30,
+	"cost" : 45000,
+	"anim" : "banim_smg",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_-1410325959"
+	},
+	"tier" : 9,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 81.0
+			},
+			{
+				"stat" : "STR",
+				"value" : 18.0
+			}
+		]
+	}
+}

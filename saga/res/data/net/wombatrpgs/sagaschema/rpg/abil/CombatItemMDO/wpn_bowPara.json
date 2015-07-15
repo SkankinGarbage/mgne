@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_bowPara",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$SPOISON",
+	"itemDescription" : "Stuns with fixed damage aimed by agility (tier 5)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 40000,
+	"anim" : "banim_arrows",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_1565112220"
+	},
+	"tier" : 9,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 81.0
+			},
+			{
+				"stat" : "AGI",
+				"value" : 18.0
+			}
+		]
+	}
+}
