@@ -1,0 +1,17 @@
+{
+	"key" : "shop_world4_potions",
+	"subfolder" : "world4",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"item_hp600",
+		"item_hp999",
+		"item_str99",
+		"item_agi99",
+		"pot_elixir",
+		"pot_xcure",
+		"spell_cure",
+		"pot_revive",
+		"item_door"
+	]
+}

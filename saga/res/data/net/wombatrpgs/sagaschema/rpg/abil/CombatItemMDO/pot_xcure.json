@@ -1,0 +1,18 @@
+{
+	"key" : "pot_xcure",
+	"subfolder" : "potions",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$TX-CURE",
+	"itemDescription" : "Heals by 400 and restores status",
+	"type" : "ITEM",
+	"uses" : 3,
+	"cost" : 5000,
+	"anim" : "banim_cure",
+	"equip" : [ ],
+	"warhead" : null,
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

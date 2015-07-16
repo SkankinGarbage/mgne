@@ -1,16 +1,21 @@
 {
 	"key" : "wpn_swordSun",
 	"subfolder" : "weapon",
-	"name" : null,
-	"description" : null,
-	"abilityName" : null,
-	"itemDescription" : null,
-	"type" : null,
-	"uses" : null,
-	"cost" : null,
-	"anim" : null,
-	"equip" : null,
-	"warhead" : null,
-	"tier" : null,
-	"robostats" : null
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$ESUN",
+	"itemDescription" : "Attacks with weapon damage and slays undead (tier 9)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 42000,
+	"anim" : "banim_slash",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_471657967"
+	},
+	"tier" : 9,
+	"robostats" : {
+		"stats" : [ ]
+	}
 }

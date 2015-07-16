@@ -1,16 +1,21 @@
 {
 	"key" : "wpn_swordDefend",
 	"subfolder" : "weapon",
-	"name" : null,
-	"description" : null,
-	"abilityName" : null,
-	"itemDescription" : null,
-	"type" : null,
-	"uses" : null,
-	"cost" : null,
-	"anim" : null,
-	"equip" : null,
-	"warhead" : null,
-	"tier" : null,
-	"robostats" : null
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$EDEFEND",
+	"itemDescription" : "Attacks with weapon damage and retaliates (tier 9)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 43000,
+	"anim" : "banim_slash",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_-664421863"
+	},
+	"tier" : 9,
+	"robostats" : {
+		"stats" : [ ]
+	}
 }

@@ -1,16 +1,21 @@
 {
 	"key" : "wpn_axeThunder",
 	"subfolder" : "weapon",
-	"name" : null,
-	"description" : null,
-	"abilityName" : null,
-	"itemDescription" : null,
-	"type" : null,
-	"uses" : null,
-	"cost" : null,
-	"anim" : null,
-	"equip" : null,
-	"warhead" : null,
-	"tier" : null,
-	"robostats" : null
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$RTHUNDER",
+	"itemDescription" : "Attacks with thunder damage (tier 9)",
+	"type" : "ITEM",
+	"uses" : 50,
+	"cost" : 49000,
+	"anim" : "banim_slash",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_201838425"
+	},
+	"tier" : 9,
+	"robostats" : {
+		"stats" : [ ]
+	}
 }

@@ -1,0 +1,38 @@
+{
+	"key" : "anon_CombatItemMDO_-664421863",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-664421863",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ENEMY",
+	"damType" : "WEAPON",
+	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
+	"riders" : [
+		{
+			"key" : "",
+			"subfolder" : "",
+			"name" : "",
+			"description" : "",
+			"projector" : "USER",
+			"defendName" : "",
+			"shielding" : 0,
+			"triggerTypes" : [
+				"PHYSICAL",
+				"WEAPON"
+			],
+			"warhead" : {
+				"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+				"key" : "anon_EffectDefendMDO_-788589172"
+			},
+			"stats" : {
+				"stats" : [ ],
+				"flags" : [ ]
+			},
+			"effects" : [ ]
+		}
+	],
+	"power" : 10,
+	"attackStat" : "STR",
+	"defendStat" : "DEF",
+	"miss" : "CAN_MISS"
+}

@@ -1,0 +1,16 @@
+{
+	"key" : "shop_underground_armor",
+	"subfolder" : "world4",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"hand_ninja",
+		"helm_samurai",
+		"body_light",
+		"shield_dragon",
+		"hand_babel",
+		"helm_babel",
+		"body_babel",
+		"shield_babel"
+	]
+}

@@ -1,16 +1,21 @@
 {
 	"key" : "wpn_cannonBazooka",
 	"subfolder" : "weapon",
-	"name" : null,
-	"description" : null,
-	"abilityName" : null,
-	"itemDescription" : null,
-	"type" : null,
-	"uses" : null,
-	"cost" : null,
-	"anim" : null,
-	"equip" : null,
-	"warhead" : null,
-	"tier" : null,
-	"robostats" : null
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$YMISSILE",
+	"itemDescription" : "Attacks a party with fixed damage aimed by strength (tier 9)",
+	"type" : "ITEM",
+	"uses" : 10,
+	"cost" : 37000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_633634124"
+	},
+	"tier" : 9,
+	"robostats" : {
+		"stats" : [ ]
+	}
 }

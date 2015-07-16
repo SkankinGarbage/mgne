@@ -1,0 +1,11 @@
+local hero1 = getHero(0).getName()
+local hero2 = getHero(1).getName()
+local hero3 = getHero(2).getName()
+
+speak(hero3, "Old man, they say you know where to find the town of Elan.")
+speak("Man", "Cough...")
+speak(hero3, "Is it true?")
+speak("Man", "I grew up near the mutant town, in a city called Sarnath.")
+speak("Man", "Maybe if I had an old relic from that wrecked town...")
+speak("Man", "Maybe then.")
+speak(hero2, "He seems a little off.")

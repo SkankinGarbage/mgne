@@ -1,0 +1,16 @@
+{
+	"key" : "shop_underground_weapons",
+	"subfolder" : "world4",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordDragon",
+		"wpn_swordBabel",
+		"wpn_swordPsi",
+		"wpn_gunShock",
+		"wpn_gunTank",
+		"wpn_cannonMissile",
+		"spell_wand",
+		"spell_stone"
+	]
+}

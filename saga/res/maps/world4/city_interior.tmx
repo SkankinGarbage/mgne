@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="30" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="189">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="30" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="194">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Underground City"/>
@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2YQQrAIAwEfZ34vOKl9OJbSw6FUtSahRAiO7AXA4tzsk1LKTVlVtB2rvYiSPehiMbRohdBuk9FNI4WvQjSnRXROFr0ItCRjh69CHTcx7GXPJl59iKM3uQ8mXn2Ioze5DyZefYSQgjxx+p/3aq3Aom2B5A7X6/Uztl3Hm0PgDpG+iaXO5dXHpcyCB1jOP5lB8faOaPjvo6R9gCjd75MZtwD7LEHuAGKCKmMuBoAAA==
+   H4sIAAAAAAAAC+2YQQrAIAwEfYjvEZ9XvJT+tuRQKEWtWQghsgN7MbA4J9vklFJWZgVt52ovgnQfimgcLXoRpPtURONo0Ysg3UURjaNFLwId6ejRi0DHfRx7KZOZZy/C6E0uk5lnL8LoTS6TmWcvIYQQf6z+1616G5BoewC58/VK65x959H2AKhjpG9yuXN95XGpg9AxhuNfdnBsnTM67usYaQ8weufrZMY9wB57gBtrM4McuBoAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="57" height="30">
@@ -45,16 +45,16 @@
   </object>
   <object id="173" name="npc" type="Character" x="512" y="96" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_demon"/>
+    <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="speak('Hss... You would make a good sacrifice to Moloch. Be careful not to wander alone.')"/>
+    <property name="onInteract" value="speak('There is an old man in the southern house who knows the location of Elan.')"/>
    </properties>
   </object>
   <object id="174" name="npc" type="Character" x="496" y="112" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="EAST"/>
-    <property name="onInteract" value="speak('The humans in this town wonder why mutants sacrifice them to Moloch. If they can\'t even deal with the surface poison, let them die.')"/>
+    <property name="onInteract" value="speak('Be careful you\'re not in town when Moloch\'s men come.')"/>
    </properties>
   </object>
   <object id="175" name="npc" type="Character" x="400" y="112" width="16" height="16">
@@ -115,13 +115,40 @@
    </properties>
   </object>
   <object id="188" name="house" type="Target" x="800" y="432" width="16" height="16"/>
+  <object id="189" name="shop" type="Character" x="80" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_underground_weapons')"/>
+   </properties>
+  </object>
+  <object id="190" name="shop" type="Character" x="112" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_underground_armor')"/>
+   </properties>
+  </object>
+  <object id="191" name="shop" type="Character" x="448" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_world4_potions')"/>
+   </properties>
+  </object>
+  <object id="193" name="npc" type="Character" x="848" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="onInteract" value="play('world4/man01.lua')"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="57" height="30">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YIQ4AIRADQP6vyBmC4a0nUZga2GQmWblNatsaAMC2iuUmerHcxCiWCwAAwB3VdoAv+Hl1B5jBnby6AyQdf9PO9SK4GgAA
+   H4sIAAAAAAAAC+3YMQoAIRADQB/iow8b8bdXWtmk0YUZ2HIDadMaAMDWi+UmvmK5iVksFwAAgDuq7QAj+Hl1B1jBnby6AyQdf/75opa4GgAA
   </data>
  </layer>
  <layer name="Tile Layer 4" width="57" height="30">
