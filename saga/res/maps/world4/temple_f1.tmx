@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="60" tilewidth="16" tileheight="16" nextobjectid="25">
+ <properties>
+  <property name="bgm" value="ffl2_ruins"/>
+  <property name="encounter" value="encounterset_level09_danger00"/>
+  <property name="name" value="Temple"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="43" height="60">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XwQ7CIAwGYJbduBhvPoovsJs7ycXxKL68kkDSEOgAB+1MD39wZpXPWQjOSqlZIpFIJJLCTN+8QKaGxPWjrLXeVO0oq6m0msHWMJ8b7TdLRWxU39sa5qt1xl47wBq8LU7oDZ/V2/qLM4TaCtfNAkau1rsfryewBuPtBNZghL3A0bqCcQXXHK0GjAZcc7Ry3LOwPiwJPPMc6dORtWTd7DmpzoStztFWbJ3n9omR1oef043YOs/tE7C+t/Xp53SjOy+9K2Kj+t7Wzc+5qbb/W3F9T+vRobZemFl1Ipg1dy+FtfS5UlpbeoDCWtOvOvNarO37ANYvYsV/15oeEOu+NWXgai19rrkabmuL0ortrRytOa9W+e+TqqOywvdT91BaMQu355oyY71BYT0yYpVIJBLJv+YDiCa7ZVAoAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="43" height="60">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3VsRGAQAgEwPtE7b84K7CQNzYyEpXdGYaU4IAEAKCP/dIBgGf4wQD9LCNZz9pG9STJUT1AU2/KADVkgLsZcKfh2+wwAPzLBBF4QHpQKAAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1"/>
+ <layer name="Tile Layer 3" width="43" height="60">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3UuQ0AMAgDQPZfMbPkYYR0BOVOcu/CEAEAAAAAQAczszK7ukga1QU+9dIGqGED3G7An4be3DAAUOUAE3hPVlAoAAA=
+  </data>
+ </layer>
+</map>

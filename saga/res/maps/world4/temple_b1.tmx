@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="30" tilewidth="16" tileheight="16" nextobjectid="25">
+ <properties>
+  <property name="bgm" value="ffl2_ruins"/>
+  <property name="encounter" value="encounterset_level09_danger00"/>
+  <property name="name" value="Temple"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="51" height="30">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WSw6DMAxEfYXuehSUPTu6q5Ao979HS9VIxnI+TZM4qmbxhJDBmcEfsRHRBgAA4M29AGvNIfYCrDVr9VhezAUsBvW5KfB6PJg+x64x5s97e+Y5LfvHx/h3dpRXj1Xc55xTC02PFpMav/USO6elF98DIY2xPNKLlqunF98DNbxouXp6SdEyT495cUr8YBLPyh1hPS+p2ed79ULneRht9lNe+F690nkeLL3k+vx1J1vzT164p0Nj6r8ltB9GYoR9CwAAANTmCSyO3bfoFwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="51" height="30">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WMQrAIAyF4ecZ2rG9/wm69hg5Tzt0KEKlQ2IU/g8kuMQEgioBADAHyy7AiVVxdqP3Ya8lxdV7fMRoS5HW4pvrfPZ1jLbdZ+9OvXjmGk3vGYvUe8bQlnWPYfy39C/+OAAA5LkAzVkCdugXAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1"/>
+</map>

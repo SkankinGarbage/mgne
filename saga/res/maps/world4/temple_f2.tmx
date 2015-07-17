@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="20" tilewidth="16" tileheight="16" nextobjectid="25">
+ <properties>
+  <property name="bgm" value="ffl2_ruins"/>
+  <property name="encounter" value="encounterset_level09_danger00"/>
+  <property name="name" value="Temple"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="19" height="20">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NggIBICjA6AIn5koEj0cyA4WgyMLobQeb7ALErGdgHyX0w90SRaVYUmvvIMQMd09MskJwgWthSYpYEFc1Cx4PBLOT0HQKlyTULWzofDGmCHLMoMRM9X/tSaBbMDFxlBykYZgYMkFMOwjA6IKccRHcPAALQymTwBQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="19" height="20">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGBqAnxGBieHjAxKMCEwMf6SCM0C8g0Q9O6D6RgFlAFvYY0vvyICUsMeW3kfB8AcAYXq9CPAFAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1"/>
+</map>
