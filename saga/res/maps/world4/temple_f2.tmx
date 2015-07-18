@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="20" tilewidth="16" tileheight="16" nextobjectid="25">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="20" tilewidth="16" tileheight="16" nextobjectid="38">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
   <property name="encounter" value="encounterset_level09_danger00"/>
@@ -23,5 +23,32 @@
    H4sIAAAAAAAAC2NgGBqAnxGBieHjAxKMCEwMf6SCM0C8g0Q9O6D6RgFlAFvYY0vvyICUsMeW3kfB8AcAYXq9CPAFAAA=
   </data>
  </layer>
- <objectgroup name="Object Layer 1"/>
+ <objectgroup name="Object Layer 1">
+  <object id="25" name="stairs_down" type="Target" x="128" y="112" width="16" height="16"/>
+  <object id="26" name="tele" type="Event" x="128" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/temple_f1.tmx', 'stairs_up')"/>
+   </properties>
+  </object>
+  <object id="28" name="chest" type="Chest" x="48" y="48" width="16" height="16"/>
+  <object id="30" name="chest" type="Chest" x="112" y="48" width="16" height="16"/>
+  <object id="31" name="chest" type="Chest" x="176" y="48" width="16" height="16"/>
+  <object id="32" name="chest" type="Chest" x="240" y="48" width="16" height="16"/>
+  <object id="33" name="chest" type="Chest" x="272" y="80" width="16" height="16"/>
+  <object id="34" name="chest" type="Chest" x="16" y="80" width="16" height="16"/>
+  <object id="35" name="chest" type="Chest" x="144" y="208" width="16" height="16"/>
+  <object id="36" name="npc" type="Character" x="144" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_dead"/>
+    <property name="onInteract" value="play('world4/monk.lua')"/>
+   </properties>
+  </object>
+  <object id="37" name="jonas" type="Character" x="176" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jonas"/>
+    <property name="hide" value="return getSwitch('jonas01')"/>
+    <property name="onInteract" value="play('world4/jonas01.lua')"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>

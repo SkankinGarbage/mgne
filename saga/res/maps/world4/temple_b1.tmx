@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="30" tilewidth="16" tileheight="16" nextobjectid="25">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="30" tilewidth="16" tileheight="16" nextobjectid="32">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
   <property name="encounter" value="encounterset_level09_danger00"/>
@@ -23,5 +23,36 @@
    H4sIAAAAAAAAC+3WMQrAIAyF4ecZ2rG9/wm69hg5Tzt0KEKlQ2IU/g8kuMQEgioBADAHyy7AiVVxdqP3Ya8lxdV7fMRoS5HW4pvrfPZ1jLbdZ+9OvXjmGk3vGYvUe8bQlnWPYfy39C/+OAAA5LkAzVkCdugXAAA=
   </data>
  </layer>
- <objectgroup name="Object Layer 1"/>
+ <objectgroup name="Object Layer 1">
+  <object id="25" name="stairs_up" type="Target" x="416" y="256" width="16" height="16"/>
+  <object id="26" name="tele" type="Event" x="416" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/temple_f1.tmx', 'stairs_down')"/>
+   </properties>
+  </object>
+  <object id="27" name="room" type="Ceiling" x="560" y="144">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 0,144 96,144 96,0"/>
+  </object>
+  <object id="28" name="room" type="Ceiling" x="160" y="144">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 0,144 96,144 96,0"/>
+  </object>
+  <object id="29" name="chest" type="Chest" x="208" y="176" width="16" height="16">
+   <properties>
+    <property name="item" value="wpn_swordBabel"/>
+   </properties>
+  </object>
+  <object id="31" name="chest" type="Chest" x="512" y="176" width="16" height="16">
+   <properties>
+    <property name="item" value="hand_babel"/>
+   </properties>
+  </object>
+ </objectgroup>
 </map>
