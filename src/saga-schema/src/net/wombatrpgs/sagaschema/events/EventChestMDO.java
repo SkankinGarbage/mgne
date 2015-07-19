@@ -44,6 +44,6 @@ public class EventChestMDO extends EventMDO {
 	
 	@Desc("Invisible - invisible chests don't appear")
 	@DefaultValue("VISIBLE")
-	public ChestInvisibilityType invisible;
+	public ChestInvisibilityType visible;
 
 }

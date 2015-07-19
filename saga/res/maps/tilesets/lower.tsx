@@ -578,4 +578,12 @@
    <frame tileid="163" duration="150"/>
   </animation>
  </tile>
+ <tile id="171">
+  <animation>
+   <frame tileid="171" duration="150"/>
+   <frame tileid="172" duration="150"/>
+   <frame tileid="173" duration="150"/>
+   <frame tileid="174" duration="150"/>
+  </animation>
+ </tile>
 </tileset>

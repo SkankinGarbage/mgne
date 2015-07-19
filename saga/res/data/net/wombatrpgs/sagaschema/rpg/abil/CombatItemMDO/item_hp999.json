@@ -7,7 +7,7 @@
 	"itemDescription" : "Raises human HP up to 999",
 	"type" : "ITEM",
 	"uses" : 1,
-	"cost" : 6400,
+	"cost" : 7000,
 	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {

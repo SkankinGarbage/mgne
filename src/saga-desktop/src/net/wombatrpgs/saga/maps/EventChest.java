@@ -68,7 +68,7 @@ public class EventChest extends MapEvent {
 		
 		keyItem = (mdo.keyItem == KeyItemType.KEY_ITEM);
 		
-		invisible = (mdo.invisible == ChestInvisibilityType.INVISIBLE);
+		invisible = (mdo.visible == ChestInvisibilityType.INVISIBLE);
 		
 		setAppearance();
 	}
@@ -135,12 +135,10 @@ public class EventChest extends MapEvent {
 	 * Sets appearance based on switch status.
 	 */
 	protected void setAppearance() {
-		if (!invisible) {
-			if (MGlobal.memory.getSwitch(switchName)) {
-				setAppearance(openSprite);
-			} else {
-				setAppearance(closedSprite);
-			}
+		if (MGlobal.memory.getSwitch(switchName)) {
+			setAppearance(openSprite);
+		} else if (!invisible) {
+			setAppearance(closedSprite);
 		}
 	}
 	

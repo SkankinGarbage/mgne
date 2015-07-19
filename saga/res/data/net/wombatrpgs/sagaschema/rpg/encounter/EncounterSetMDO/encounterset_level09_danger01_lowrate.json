@@ -1,0 +1,49 @@
+{
+	"key" : "encounterset_level09_danger01_lowrate",
+	"subfolder" : "level09",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl09_RHINO",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl09_EAGLE",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl09_CYCLOPS",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl09_TROOPER_LILITH",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl09_STALKER2-3_MAMMOTH",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl09_PSYCHIC3-4",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl09_IMMOLATOR2-5",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl09_SICKLE_TROOPER_HOMUNCULUS",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl09_GNOME2-3_CYCLOPS2-3",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl09_LILITH_RHINO2-4_PSYCHIC",
+			"weight" : 16
+		}
+	],
+	"steps" : 64
+}

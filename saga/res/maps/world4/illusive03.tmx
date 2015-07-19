@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="81">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="36" height="40" tilewidth="16" tileheight="16" nextobjectid="72">
  <properties>
-  <property name="battle_bgm" value="ffl3_boss"/>
-  <property name="bgm" value="ffl3_talon"/>
-  <property name="name" value="Gamma World"/>
-  <property name="terrainEncounter" value="terrain_world4"/>
+  <property name="bgm" value="ffl1_cave"/>
+  <property name="encounter" value="encounterset_level09_danger01_lowrate"/>
+  <property name="name" value="Illusive Cave"/>
  </properties>
  <tileset firstgid="1" name="lower" tilewidth="16" tileheight="16">
   <image source="../tilesets/lower2.PNG" width="112" height="400"/>
@@ -619,52 +618,59 @@
   </tile>
  </tileset>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="92" height="79">
+ <layer name="Tile Layer 1" width="36" height="40">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3aTW7bQAwFYPla3XnrU7SFFu2m6EG0MXLh2oAHpenhkPPPobh4UOLIlvTphZKdHNu2HSfJTUFmG7i33cy2dm/3dm87mW3t3u7t3v/zVZDLI9fX8vsjPx75qcD7i1jiSNdr7V1r/Vz+eeTXKynzeyfvkmPgos0bml+A+e+EM15q9s41H+GN8zT/K3Cu9b6DnKnfVLBHbJmb1Pk6a79DWvVb+vxcQ2v9lnrF+ivptff7PWH7Em/KnZs/vb1X6jfnjfvPzZMex2Cl33D7VE8P9H1qjnDdPmu/j8j2KT+uv6lej/LW3G/OhjIu9T7z/I51mZsLEu/UHIFfc9eSiyFvuB1JJ2/C8xHWvUWeB19XYl1qrs07NqtT3cT7FzPlgl/TvT+7nLvfEvPwdU/vXPOe3rFtQe/UPkn3H84sfH6pda32u8Qbb7fErsZ85X5L5/dt+7zGcebU/K81X7nfKe/YvUm4l7hGltiUWkfinbK30m/unjl4xxwvaL3UOqO9NfW7ZFuj+43NV+137HjC9qj94Lqb0+/Snq/Yb+m1CYfrbk6/c91LO577u5TjDY9Z4p1jHbxb91tqrnGehONJeYfXDec+ZjorKXON80Tab/i7ljszWsyT1M9W8s5NyczgZkXt8616U/Nba7/D/lr0Lu2n5HrJ9TuklXfP62WreTKz39xM8X6373dLby39TnnPvB+kzMPjq/abmieaYqnfK3hjc/cea+7e47Oy92rmpceoybsmNQYjt2PFe6Xz6t5j497ubTkjvHeQ5zr31xI+XnMMo66XK3jv6Ofwcwr4eI25e79bSz4jqjF370/v8F6htXeL9yEWvHG3Oe8S85bv/ax4Qwvus2bN3lRH3HucdYn7aO8rSK03Nh/dbU3e0Jz6m2Kr+5OeSf3tucR8pPe+vfd7X8gbW+O+aPCG5nsiWq2l/f6WYT76/TyV2a4t+i0xH+FN2c+2bNVvzd4rpuR/WNx7vvfdvYeZh8fcu787TGtvN6dzdPL20HFv97Yc93Zvy3Fv97Yc93Zvy3Fvnd7/ACN6FDqQcQAA
+   H4sIAAAAAAAAC+2VwQ2DMAxFvQe3njMAEzFHOZUpMgFDokpY+rIsl0MS0/YfnoTBIk8/UVxFpBJCyJcw38BhAhZTez2W1j4PYDG112Np7bOfbPCsaAb2PdLL5816orVmkOUTZZWZT8Qon+fFPGx2I328DP/Nx7p9+r5d6PslH7z7i8TzAn1GzIsi8bxAn17zogTgPo06z5GPN78yfXRPXkDv+znyKc76mT7e+aFPro916/l/+hBCyP04AA2Li/KAFgAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="92" height="79">
+ <layer name="Tile Layer 2" width="36" height="40">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3cMQ6CMBQGYJp4D0+iI/dmdfUMXsHZOJgQQhQrfbXwfcubCC8/jy5t2nUAAADk6lPtDgAAAACgHZfaDQA07Fq7gZ06pfk6dk7zlTwyjyPreDKP01rWt3qvXk1rmZe0he+5N+/md8nc/vr8HuVkNv63ZL6c+Y4n8ziyjidzAAAAAIDvDJ3z05GeWQ+1m2AV99oN/JlPZ1GO9lXYkEOD8/y6e2haKUfWcfrJHr7MyzPfcazfAAAAAADb9ACWyCsZkHEAAA==
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQlPoAAAAAAA4G/05LgQgBYAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="75" name="gate" type="Event" x="624" y="896" width="16" height="16">
+  <object id="65" name="room" type="Ceiling" x="160" y="144">
    <properties>
-    <property name="onCollide" value="targetTele('tower/f15.tmx', 'gate')"/>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,-16 0,176 128,176 128,320 256,320 256,-16"/>
+  </object>
+  <object id="66" name="entry" type="Target" x="208" y="480" width="16" height="16"/>
+  <object id="67" name="tele" type="Event" x="208" y="496" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/illusive02.tmx', 'exit')"/>
    </properties>
   </object>
-  <object id="76" name="barrier" type="Event" x="304" y="816" width="16" height="16">
+  <object id="68" name="exit" type="Target" x="208" y="144" width="16" height="16"/>
+  <object id="69" name="tele" type="Event" x="208" y="128" width="16" height="16">
    <properties>
-    <property name="onCollide" value="play('world4/barrier.lua')"/>
+    <property name="onCollide" value="targetTele('world4/illusive04.tmx', 'entry')"/>
    </properties>
   </object>
-  <object id="77" name="radiation" type="Event" x="656" y="896" width="16" height="16">
+  <object id="70" name="chest" type="Chest" x="256" y="272" width="16" height="16">
    <properties>
-    <property name="onTurn" value="if (getAvatar().terrainType() == 146) then play('world4/radiation.lua'); playScene(); end"/>
+    <property name="item" value="item_hp999"/>
    </properties>
   </object>
-  <object id="78" name="city" type="Event" x="688" y="560" width="16" height="16">
+  <object id="71" name="chest" type="Chest" x="160" y="176" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world4/city.tmx', 'entry')"/>
-   </properties>
-  </object>
-  <object id="79" name="temple" type="Event" x="544" y="416" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="targetTele('world4/temple.tmx', 'entry')"/>
-   </properties>
-  </object>
-  <object id="80" name="tele" type="Event" x="1280" y="496" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="targetTele('world4/illusive01.tmx', 'entry', 'SOUTH')"/>
+    <property name="item" value="spell_speed"/>
    </properties>
   </object>
  </objectgroup>
+ <layer name="Tile Layer 3" width="36" height="40">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OQREAAAwCIPuHWNal8PxAAhIAAAAA1m4dACh4D/Sy4IAWAAA=
+  </data>
+ </layer>
 </map>
