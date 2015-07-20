@@ -22,6 +22,7 @@ import net.wombatrpgs.sagaschema.rpg.warheads.EffectReviveMDO;
 import net.wombatrpgs.sagaschema.rpg.warheads.EffectStatCandyMDO;
 import net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO;
 import net.wombatrpgs.sagaschema.rpg.warheads.EffectTeleportMDO;
+import net.wombatrpgs.sagaschema.rpg.warheads.EffectTransformMDO;
 
 /**
  * Constructs the item effect for combat items based on their MDO.
@@ -61,6 +62,8 @@ public class AbilEffectFactory {
 			return new EffectRevive((EffectReviveMDO) mdo, item);
 		} else if (EffectTeleportMDO.class.isAssignableFrom(mdo.getClass())) {
 			return new EffectTeleport((EffectTeleportMDO) mdo, item);
+		} else if (EffectTransformMDO.class.isAssignableFrom(mdo.getClass())) {
+			return new EffectTransform((EffectTransformMDO) mdo, item);
 		} else {
 			MGlobal.reporter.err("Unimplemented abil effect type: " +
 					mdo.getClass());

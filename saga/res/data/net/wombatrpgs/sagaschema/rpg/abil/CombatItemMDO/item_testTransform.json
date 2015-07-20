@@ -1,18 +1,18 @@
 {
-	"key" : "key_transform",
-	"subfolder" : "key",
+	"key" : "item_testTransform",
+	"subfolder" : "test",
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$HTRANSFORM",
-	"itemDescription" : "Disguises the party",
-	"type" : "ABILITY",
+	"itemDescription" : "",
+	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 0,
 	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectTransformMDO",
-		"key" : "anon_CombatItemMDO_-363054389"
+		"key" : "anon_CombatItemMDO_-1904078925"
 	},
 	"tier" : 0,
 	"robostats" : {
