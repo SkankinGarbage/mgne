@@ -55,7 +55,7 @@
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Moloch is the master of the wastes. He demands we sacrifice lives to him or we\'ll all be destroyed.')"/>
+    <property name="onInteract" value="speak('Moloch is the master of the wastes. He demands we sacrifice to him or we\'ll all be destroyed.')"/>
    </properties>
   </object>
   <object id="153" name="npc" type="Character" x="608" y="176" width="16" height="16">
@@ -70,7 +70,7 @@
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('I\'m not with the Elan mutants. They raid the city for sacrifices to Moloch!')"/>
+    <property name="onInteract" value="speak('The mutants of Elan hide from Moloch.')"/>
    </properties>
   </object>
   <object id="155" name="npc" type="Character" x="528" y="352" width="16" height="16">
@@ -83,7 +83,7 @@
   </object>
   <object id="156" name="npc" type="Character" x="272" y="336" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_skeleton_m"/>
+    <property name="appearance" value="4dir_skeleton"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="speak('The grand city is in ruins, but the nearby temple still stands. I hear monks live there even now.')"/>

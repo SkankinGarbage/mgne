@@ -393,13 +393,25 @@
  </tile>
  <tile id="127">
   <properties>
-   <property name="x" value=""/>
+   <property name="force" value="EAST"/>
   </properties>
+  <animation>
+   <frame tileid="171" duration="150"/>
+   <frame tileid="172" duration="150"/>
+   <frame tileid="173" duration="150"/>
+   <frame tileid="174" duration="150"/>
+  </animation>
  </tile>
  <tile id="128">
   <properties>
-   <property name="x" value=""/>
+   <property name="force" value="SOUTH"/>
   </properties>
+  <animation>
+   <frame tileid="171" duration="150"/>
+   <frame tileid="172" duration="150"/>
+   <frame tileid="173" duration="150"/>
+   <frame tileid="174" duration="150"/>
+  </animation>
  </tile>
  <tile id="130">
   <properties>
@@ -413,13 +425,25 @@
  </tile>
  <tile id="134">
   <properties>
-   <property name="x" value=""/>
+   <property name="force" value="NORTH"/>
   </properties>
+  <animation>
+   <frame tileid="171" duration="150"/>
+   <frame tileid="172" duration="150"/>
+   <frame tileid="173" duration="150"/>
+   <frame tileid="174" duration="150"/>
+  </animation>
  </tile>
  <tile id="135">
   <properties>
-   <property name="x" value=""/>
+   <property name="force" value="WEST"/>
   </properties>
+  <animation>
+   <frame tileid="171" duration="150"/>
+   <frame tileid="172" duration="150"/>
+   <frame tileid="173" duration="150"/>
+   <frame tileid="174" duration="150"/>
+  </animation>
  </tile>
  <tile id="136">
   <properties>

@@ -6,9 +6,9 @@
 	"abilityName" : "$EPSI",
 	"itemDescription" : "Attacks with weapon damage based on user mana (tier 8)",
 	"type" : "ITEM",
-	"uses" : 0,
-	"cost" : 0,
-	"anim" : "None",
+	"uses" : 50,
+	"cost" : 36000,
+	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",

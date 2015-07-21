@@ -46,6 +46,7 @@
   <object id="37" name="jonas" type="Character" x="176" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
+    <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('jonas01')"/>
     <property name="onInteract" value="play('world4/jonas01.lua')"/>
    </properties>

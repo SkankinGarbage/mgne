@@ -4,7 +4,7 @@
 	"name" : "anon_CombatItemMDO_-1918728330",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
-	"damType" : "PHYSICAL",
+	"damType" : "WEAPON",
 	"sideEffects" : [
 		"CRITICAL_ON_WEAKNESS"
 	],

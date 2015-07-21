@@ -8,6 +8,8 @@
 	"sideEffects" : [
 		"STUNS_ON_HIT"
 	],
+	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"base" : 12,
 	"range" : 6,
 	"defenseStat" : "DEF",

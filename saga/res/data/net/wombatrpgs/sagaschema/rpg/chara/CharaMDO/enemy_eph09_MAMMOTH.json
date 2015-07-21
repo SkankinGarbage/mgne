@@ -8,7 +8,7 @@
 	"family" : "mfamily_eph",
 	"species" : "MAMMOTH",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/eph.png",
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
 	"gp" : 1200,
@@ -22,7 +22,7 @@
 		"hp" : 365,
 		"mhp" : 365,
 		"str" : 60,
-		"def" : 39,
+		"def" : 45,
 		"agi" : 40,
 		"mana" : 35,
 		"flags" : [ ]

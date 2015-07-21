@@ -10,7 +10,10 @@
 	"cost" : 5000,
 	"anim" : "banim_cure",
 	"equip" : [ ],
-	"warhead" : null,
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_444612069"
+	},
 	"tier" : 0,
 	"robostats" : {
 		"stats" : [ ]

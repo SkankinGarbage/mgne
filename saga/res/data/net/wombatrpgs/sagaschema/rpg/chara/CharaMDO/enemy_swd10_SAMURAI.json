@@ -8,7 +8,7 @@
 	"family" : "None",
 	"species" : "SAMURAI",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/swd.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,

@@ -132,6 +132,14 @@ public class EventChest extends MapEvent {
 	}
 
 	/**
+	 * @see net.wombatrpgs.mgne.maps.events.MapEvent#isPassable()
+	 */
+	@Override
+	public boolean isPassable() {
+		return false;
+	}
+
+	/**
 	 * Sets appearance based on switch status.
 	 */
 	protected void setAppearance() {

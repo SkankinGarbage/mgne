@@ -88,9 +88,7 @@ public class Avatar extends MapEvent implements CommandListener {
 		float oldVX = vx;
 		float oldVY = vy;
 		if (forceDir != null) {
-			if (!tracking) {
-				move(forceDir);
-			}
+			move(forceDir);
 			OrthoDir heldDir = null;
 			if (MGlobal.keymap.getButtonState(InputButton.DOWN) == KeyState.DOWN) {
 				heldDir = OrthoDir.SOUTH;
@@ -250,6 +248,7 @@ public class Avatar extends MapEvent implements CommandListener {
 			String dirString = parent.getTileProperty(tileX, tileY, Constants.PROPERTY_FORCE);
 			if (dirString != null) {
 				forceDir = OrthoDir.valueOf(dirString);
+				halt();
 			}
 		}
 	}

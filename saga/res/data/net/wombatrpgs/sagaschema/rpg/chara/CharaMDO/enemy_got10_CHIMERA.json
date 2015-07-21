@@ -8,7 +8,7 @@
 	"family" : "mfamily_got",
 	"species" : "CHIMERA",
 	"appearance" : "4dir_horse",
-	"portrait" : "battle_portraits/hrs.png",
+	"portrait" : "battle_portraits/got.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 10,
 	"gp" : 1600,
