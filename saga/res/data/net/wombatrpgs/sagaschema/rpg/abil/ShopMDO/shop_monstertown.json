@@ -1,0 +1,18 @@
+{
+	"key" : "shop_monstertown",
+	"subfolder" : "world4",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_axeRune",
+		"wpn_swordBabel",
+		"wpn_hammerFire",
+		"wpn_lsaber",
+		"wpn_gunShock",
+		"wpn_cannonBazooka",
+		"body_light",
+		"hand_samurai",
+		"spell_wizard",
+		"spell_death"
+	]
+}

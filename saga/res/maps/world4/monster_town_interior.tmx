@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="45" tilewidth="16" tileheight="16" nextobjectid="50">
+ <properties>
+  <property name="bgm" value="ffl1_town"/>
+  <property name="name" value="Excaliber Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="48" height="45">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WzQ2DMAxGQzkxAje6Ridggi7FFGxacbBkvtqG/thJKx+eKqUBXhLbcV9K6ZMkSZLkj7kadCex3kF4+o8KZ/215wlv/0lhYI6DAP2nPU94+0tuR+44x5oX5S/Fxs0A17H9zkC0/wCOdwM+j9Yr+Y8B/jwGLGcNesci+E9B/nQO3MuqO5L/Kvh3Ffd/G7sIaP60B0vZx6WX/1ie45+fA/nzfef+mMO073QO3v7Tl/yt/PX0x5j+xF+rnxH+C4D+Wvxj7rTob9UfKW957kb48++iP95ReLeh/1r2NbSmv9TrHI3XiB++bwTmtJbnONZC/dG8tT6vdv18pRd+p5eO8kesnOBjOK+Gv3Tukj/vDyx/jCvv+Jf6Xst/NvylHPk1f1yDtz+/c8gfayr6r8a86P0/qpVSnbHGov29Sf8kSZIkaZsHhnf1ncAhAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="48" height="45">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3UoRWAMBBEwaMZ+m/jigi0EoNARBzJ48XM6BVfbQQAAAAAjF27AxacR0TujgB4aYXN/XvFnOqn5rMFAOC7DvMC3zvAIQAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="44" name="tele" type="Event" x="160" y="128" width="16" height="464">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'monster_town')"/>
+   </properties>
+  </object>
+  <object id="45" name="tele" type="Event" x="592" y="128" width="16" height="464">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'monster_town')"/>
+   </properties>
+  </object>
+  <object id="46" name="tele" type="Event" x="176" y="128" width="416" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'monster_town')"/>
+   </properties>
+  </object>
+  <object id="47" name="tele" type="Event" x="176" y="576" width="416" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'monster_town')"/>
+   </properties>
+  </object>
+  <object id="48" name="entry" type="Target" x="544" y="528" width="16" height="16"/>
+  <object id="49" name="memory" type="Teleport Memory" x="352" y="416" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Excaliber Town"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="48" height="45">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQwfoAAAAAAAAAAAeBqUcDdbwCEAAA==
+  </data>
+ </layer>
+</map>
