@@ -14,6 +14,7 @@ import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.OneArgFunction;
 import org.luaj.vm2.lib.TwoArgFunction;
 import org.luaj.vm2.lib.ZeroArgFunction;
+import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 /**
  * Crappy library with utility calls for event scripting.
@@ -56,6 +57,12 @@ public class SagaEventLib extends TwoArgFunction {
 			@Override public LuaValue call() {
 				SceneLib.runExtraCommands();
 				return LuaValue.NIL;
+			}
+		});
+		
+		env.set("inventoryFull", new ZeroArgFunction() {
+			@Override public LuaValue call() {
+				return CoerceJavaToLua.coerce(SGlobal.heroes.getInventory().isFull());
 			}
 		});
 		

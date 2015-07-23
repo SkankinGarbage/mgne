@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="45" tilewidth="16" tileheight="16" nextobjectid="50">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="45" tilewidth="16" tileheight="16" nextobjectid="77">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Excaliber Town"/>
@@ -47,6 +47,182 @@
   <object id="49" name="memory" type="Teleport Memory" x="352" y="416" width="16" height="16">
    <properties>
     <property name="displayName" value="Excaliber Town"/>
+   </properties>
+  </object>
+  <object id="50" name="tele" type="Event" x="464" y="512" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/monster_town.tmx', 'inn')"/>
+   </properties>
+  </object>
+  <object id="51" name="tele" type="Event" x="320" y="512" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/monster_town.tmx', 'weapons')"/>
+   </properties>
+  </object>
+  <object id="52" name="tele" type="Event" x="240" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/monster_town.tmx', 'potions')"/>
+   </properties>
+  </object>
+  <object id="53" name="inn" type="Target" x="464" y="528" width="16" height="16"/>
+  <object id="54" name="weapons" type="Target" x="320" y="528" width="16" height="16"/>
+  <object id="55" name="potions" type="Target" x="240" y="416" width="16" height="16"/>
+  <object id="56" name="npc" type="Character" x="512" y="512" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world4/werewolf.lua')"/>
+   </properties>
+  </object>
+  <object id="57" name="npc" type="Character" x="544" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world4/werewolf.lua')"/>
+   </properties>
+  </object>
+  <object id="58" name="npc" type="Character" x="400" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world4/werewolf.lua')"/>
+   </properties>
+  </object>
+  <object id="59" name="npc" type="Character" x="304" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world4/werewolf.lua')"/>
+   </properties>
+  </object>
+  <object id="60" name="npc" type="Character" x="224" y="496" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return getSwitch('transformed')"/>
+    <property name="onInteract" value="play('world4/werewolf.lua')"/>
+   </properties>
+  </object>
+  <object id="61" name="npc" type="Character" x="208" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world4/werewolf.lua')"/>
+   </properties>
+  </object>
+  <object id="62" name="npc" type="Character" x="496" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('world4/werewolf.lua')"/>
+   </properties>
+  </object>
+  <object id="63" name="guard" type="Character" x="352" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('transformed') or getSwitch('excaliber01')"/>
+    <property name="onInteract" value="play('world4/werewolf.lua')"/>
+   </properties>
+  </object>
+  <object id="64" name="npc" type="Character" x="512" y="512" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Welcome, friends.')"/>
+   </properties>
+  </object>
+  <object id="65" name="npc" type="Character" x="544" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('transformed')"/>
+    <property name="onInteract" value="speak('EXCALIBER is enchanted to protect it from Moloch.')"/>
+   </properties>
+  </object>
+  <object id="66" name="npc" type="Character" x="208" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return not getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('We were human once, but living above ground has its downsides.')"/>
+   </properties>
+  </object>
+  <object id="67" name="npc" type="Character" x="224" y="496" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('transformed')"/>
+    <property name="onInteract" value="play('We live to defend EXCALIBER.')"/>
+   </properties>
+  </object>
+  <object id="68" name="npc" type="Character" x="400" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return not getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="play('Humans are too weak to protect this world\'s treasures.')"/>
+   </properties>
+  </object>
+  <object id="69" name="npc" type="Character" x="304" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('transformed')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Generations ago, a great sage put the spell on EXCALIBER.')"/>
+   </properties>
+  </object>
+  <object id="70" name="guard" type="Character" x="352" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return not getSwitch('transformed') or getSwitch('excaliber01')"/>
+    <property name="onInteract" value="play('world4/excaliber01.lua')"/>
+   </properties>
+  </object>
+  <object id="72" name="npc" type="Character" x="336" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('transformed') and getSwitch('excaliber01')"/>
+    <property name="onInteract" value="play('world4/excaliber03.lua')"/>
+   </properties>
+  </object>
+  <object id="73" name="npc" type="Character" x="336" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('transformed') and getSwitch('excaliber01')"/>
+    <property name="onInteract" value="play('world4/werewolf.lua')"/>
+   </properties>
+  </object>
+  <object id="74" name="sword" type="Event" x="352" y="304" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('excaliber02') or inventoryFull()"/>
+    <property name="onInteract" value="play('world4/excaliber02.lua')"/>
+   </properties>
+  </object>
+  <object id="75" name="sword" type="Event" x="352" y="304" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('excaliber02') or not inventoryFull()"/>
+    <property name="onInteract" value="speak('Inventory full.')"/>
    </properties>
   </object>
  </objectgroup>
