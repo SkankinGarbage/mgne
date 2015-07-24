@@ -12,15 +12,8 @@
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 0,
 	"gp" : 0,
-	"equipped" : [
-		"item_testRapier",
-		"item_testWhip",
-		"item_testDragonShield",
-		"item_testStun",
-		"item_testPGun",
-		"item_testPotion",
-		"wpn_hammerBronze"
-	],
+	"loot" : "None",
+	"equipped" : [ ],
 	"stats" : {
 		"hp" : 60,
 		"mhp" : 60,

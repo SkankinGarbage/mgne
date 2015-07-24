@@ -247,5 +247,19 @@ public abstract class Inventory {
 		}
 		return false;
 	}
+	
+	/**
+	 * Checks if any battle-useable items exist in this inventory.
+	 * @return					True if at least one item exists
+	 */
+	public final boolean containsBattleUseableItems() {
+		for (int slot = 0; slot < capacity; slot += 1) {
+			CombatItem toCheck = items[slot];
+			if (toCheck != null && toCheck.isBattleUsable()) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 }

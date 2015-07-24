@@ -801,23 +801,28 @@ public class Battle extends AssetQueuer implements Disposable {
 	 */
 	protected void modifyIntent(final Intent intent, final IntentListener listener) {
 		final Chara chara = intent.getActor();
-		SlotListener slotListener = new SlotListener() {
-			@Override public boolean onSelection(int selected) {
-				if (selected == -1) {
-					listener.onIntent(null);
+		if (chara.getInventory().containsBattleUseableItems()) {
+			SlotListener slotListener = new SlotListener() {
+				@Override public boolean onSelection(int selected) {
+					if (selected == -1) {
+						listener.onIntent(null);
+						return true;
+					}
+					CombatItem item = chara.getInventory().get(selected);
+					if (item == null || !item.isBattleUsable() || item.getUses() == 0) {
+						return false;
+					}
+					intent.setItem(item);
+					item.modifyIntent(intent, listener);
 					return true;
 				}
-				CombatItem item = chara.getInventory().get(selected);
-				if (item == null || !item.isBattleUsable() || item.getUses() == 0) {
-					return false;
-				}
-				intent.setItem(item);
-				item.modifyIntent(intent, listener);
-				return true;
-			}
-		};
-		int slot = chara.getInventory().slotFor(intent.getItem());
-		screen.selectItem(chara, slot, slotListener);
+			};
+			int slot = chara.getInventory().slotFor(intent.getItem());
+			screen.selectItem(chara, slot, slotListener);
+		} else {
+			intent.setItem(null);
+			listener.onIntent(intent);
+		}
 	}
 	
 	/**

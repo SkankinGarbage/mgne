@@ -155,7 +155,9 @@ public class Intent implements Comparable<Intent> {
 	 * hands off to the effect.
 	 */
 	public void onRoundStart() {
-		item.onRoundStart(this);
+		if (item != null) {
+			item.onRoundStart(this);
+		}
 	}
 	
 	/**
