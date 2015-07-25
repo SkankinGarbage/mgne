@@ -163,6 +163,7 @@ public class ScreenBattle extends SagaScreen {
 	protected float sinceStart;
 	protected boolean moveRetreat;
 	protected boolean monsteredIn;
+	protected boolean playedSound;
 	
 	/**
 	 * Creates a new combat setup. This initializes the screen and passes the
@@ -303,6 +304,9 @@ public class ScreenBattle extends SagaScreen {
 	
 	/** @return True if all death animations are finished playing */
 	public boolean isDeathFinished() { return deathTimers.size() == 0; }
+	
+	/** @return True if a sfx has been cued for this animation step */
+	public boolean playedSoundThisStep() { return playedSound; }
 	
 	/**
 	 * @see net.wombatrpgs.mgne.screen.Screen#update(float)
@@ -717,6 +721,7 @@ public class ScreenBattle extends SagaScreen {
 				addUChild(anim);
 			}
 			MGlobal.assets.loadAssets(anims, "battle animation " + animMDO);
+			playedSound = false;
 			for (PortraitAnim anim : anims) {
 				anim.start(this);
 			}
@@ -737,6 +742,7 @@ public class ScreenBattle extends SagaScreen {
 		List<Integer> groups = constructGroups(targets);
 		anims.add(anim);
 		addUChild(anim);
+		playedSound = false;
 		for (Integer index : groups) {
 			animsOnGroups.put(index, anim);
 		}

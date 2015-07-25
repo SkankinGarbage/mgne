@@ -55,7 +55,9 @@ public abstract class BattleAnim extends PortraitAnim {
 	@Override
 	public void start(ScreenBattle screen) {
 		super.start(screen);
-		playSound();
+		if (!screen.playedSoundThisStep()) {
+			playSound();
+		}
 	}
 
 	/**
