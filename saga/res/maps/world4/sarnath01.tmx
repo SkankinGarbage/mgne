@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="51" tilewidth="16" tileheight="16" nextobjectid="49">
+ <properties>
+  <property name="bgm" value="ffl3_dark"/>
+  <property name="encounter" value="encounterset_level09_danger01"/>
+  <property name="name" value="Sarnath"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="69" height="51">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2ZQU7DMBBFHXGK7sJRvOMkvQwBDlDY0FU5JY2UUX+n820nEbaRZvGU1EkHz4vjqfFTCOHJcRzHcZx/x/NKhgXWrlkb36KFk5cVDIl2izWxLVo6KX1mE2nfM04OALb34ORQwETamZOSmCOAbnpwMhYwkXbmpCTmfF9U9/fihOUlTAvWtbhciwVxrO/q77V0cjCcWLlNIe0kl3POs/6bLZ2MyomV+2Rg5Vdai6zxpWO3dDKEeyfSR+nzt8pzWtrOcMw5wRjnRFz8uz3PJ5crP6rv0ibHnJPT8hnv13F7mk9yTuZ8PlWe0jbzRb5nvVN4/2k5Z+9Zj07YvJirPZq183FvTgTMzzrXNeI1A/PGXAitneD6IvcMxcsWJ6Xjo/Z6J/dc5nZWK87hsd6UOLHmXyseG7dCDSe47jiG29pFasWMrhW63mxxwuoX9sNaS9VwMgLH5ahzwFqB9UbmhLcr74SPhBOrfmE/hNpOtoL1B3PT6Fpd+puY0cpJDI91Iarz0tysWHvWTrXnWJzTdB5WrnufuQXrT20nqVps1QY9N6AfHAcyRqwYrIbl+lPTCR7xulUbUutfPW4iicFqWK4/tZ1gLRas2sCcWLXFqi+s5gzhVot7cjKq62u4GE5K5iScu8bOnOh3IIZ0Tjpn/J2n3ykdC+cga37u0YmVM8srN35iSNdky30vTnLj4i9gTqVfLX7bo5M9sJz3xJz7NYb7sVTDifzffi/Myd64es6p4WTc+Sy3jBO9D8r2RgWcg2s4iaFs/zIHc5LaC03tjSIR4tVwwvY61xIJ1r3y3PXnkn3XGk62wPIfyLl1n34upevHXp20xJ3Uc+I4juM4juO04RfPOYoP/DYAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="69" height="51">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3ZwQmAMAwF0HQAh9Cj7j+ME7iGHgtF8BAt1Peg5JrmkH9IBAAAtf3m/dlcIpbS1j9br/9vpa0A0NvRu4GXTHIWIM2oWZFF5jxXz8rcgC+MkGFZ+9LeBSCL22jLbbTlNgoAAEBPJ8/CUyb8NgAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="45" name="block" type="Event" x="512" y="112" width="96" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="46" name="block" type="Event" x="512" y="544" width="96" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="48" name="block" type="Event" x="416" y="128" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="69" height="51">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAADgywDtyFi9/DYAAA==
+  </data>
+ </layer>
+</map>

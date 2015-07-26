@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="32" tilewidth="16" tileheight="16" nextobjectid="49">
+ <properties>
+  <property name="bgm" value="ffl3_dark"/>
+  <property name="encounter" value="encounterset_level09_danger01"/>
+  <property name="name" value="Sarnath"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="33" height="32">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WQQrAIAwE8wVvPikfLHjoY4uHgAjSXUxKS7Owl6LTOck2EWlEkTA86wGWcWCYvSdYxoFh9ipYxoFhIuebpEOUw8hEz5cAB2Oi52uAgzHn6uL7zhvFMhX8DxOW+QaHTCaTsbC7L4KZe/Jbe/JPDuj28XKYt00h7nk6jHuyEvc8HVZ78m4Hog5eG9Vrg+1wnnK4AEUfhXCAEAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="33" height="32">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAXDHWwlQNMD7CNAYwNGjAwMxjgwPcEOHDQlAOY3Ezr7ZRSMglEwCkbBKBgFAw82DbQDgGA3ieqv0cQV9AfUaoONtuVGwSggDwAAyxxlOoAQAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1"/>
+ <layer name="Tile Layer 3" width="33" height="32">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WwQkAIAxD0e5/tiJYd7UjRFCk8B/kmvYYMwCoY3zobBkX08Wbp50zE2KW+MOLTgAAgEpubUv2pNa5AYax4zuAEAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="33" height="32">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WsQ0AIAwDwTAHLfvPyAagiEQ0dwO8XDoCgIw5/jdXw4aOJgAAZ1Xf8qVT9QNvnQ10Q6qpgBAAAA==
+  </data>
+ </layer>
+</map>
