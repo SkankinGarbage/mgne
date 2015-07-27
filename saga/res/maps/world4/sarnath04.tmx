@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="17" height="15" tilewidth="16" tileheight="16" nextobjectid="57">
+ <properties>
+  <property name="bgm" value="ffl3_dark"/>
+  <property name="encounter" value="encounterset_level09_danger01"/>
+  <property name="name" value="Sarnath"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="17" height="15">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC5vBwMAwgwq4Dw8mRh6E5+DBxMiDsAceTIw8CAviUYtPXBDJDAkyzZBgwB3GHiSKo4d7P1RtL5Hi2OJlLlTtbCLFiYkXQniwmUFpvGADHiSKU8MMABryB8P8AwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="17" height="15">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMRAAAhq+7Z/wDAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="49" name="stairs_left" type="Target" x="16" y="64" width="16" height="16"/>
+  <object id="50" name="stairs_right" type="Target" x="240" y="64" width="16" height="16"/>
+  <object id="51" name="door_left" type="Target" x="80" y="192" width="16" height="16"/>
+  <object id="52" name="door_right" type="Target" x="176" y="192" width="16" height="16"/>
+  <object id="53" name="tele" type="Event" x="16" y="80" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath05.tmx', 'stairs_left')"/>
+   </properties>
+  </object>
+  <object id="54" name="tele" type="Event" x="240" y="80" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath05.tmx', 'stairs_right')"/>
+   </properties>
+  </object>
+  <object id="55" name="tele" type="Event" x="80" y="208" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath01.tmx', 'door_left')"/>
+   </properties>
+  </object>
+  <object id="56" name="tele" type="Event" x="176" y="208" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath01.tmx', 'door_right')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="17" height="15">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBRQAmaQKN4LxH0U4H4gng3EcyjAc4EYAMDj+D38AwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="17" height="15">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBQMNJBmJE0cG1DBoRaXOABPIdDR/AMAAA==
+  </data>
+ </layer>
+</map>

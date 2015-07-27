@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl10_DEMON LORD1-2_RAT KING0-1",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rat10_RAT KING",
+			"amount" : "0-1"
+		},
+		{
+			"enemy" : "enemy_dem10_DEMON LORD",
+			"amount" : "1-2"
+		}
+	]
+}

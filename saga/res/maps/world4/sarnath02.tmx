@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="32" tilewidth="16" tileheight="16" nextobjectid="49">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="32" tilewidth="16" tileheight="16" nextobjectid="67">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
   <property name="encounter" value="encounterset_level09_danger01"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WQQrAIAwE8wVvPikfLHjoY4uHgAjSXUxKS7Owl6LTOck2EWlEkTA86wGWcWCYvSdYxoFh9ipYxoFhIuebpEOUw8hEz5cAB2Oi52uAgzHn6uL7zhvFMhX8DxOW+QaHTCaTsbC7L4KZe/Jbe/JPDuj28XKYt00h7nk6jHuyEvc8HVZ78m4Hog5eG9Vrg+1wnnK4AEUfhXCAEAAA
+   H4sIAAAAAAAAC+2WMQrAMAwD/YVseZJf1zlDH1syGEIgVCJ2aakFWkpyvSmoiUgjioThWQ+wjAPD7D3BMg4Ms1fBMg4MEznfJB2iHEYmer4EOBgTPV8DHIw5Vxffd94olqngf5iwzDc4ZDKZjIXdfRHM3JPf2pN/ckC3j5fDvG0Kcc/TYdyTlbjn6bDak3c7EHXw2qheG2yH85TDBay+0euAEAAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="33" height="32">
@@ -23,13 +23,62 @@
    H4sIAAAAAAAAC2NgGAXDHWwlQNMD7CNAYwNGjAwMxjgwPcEOHDQlAOY3Ezr7ZRSMglEwCkbBKBgFAw82DbQDgGA3ieqv0cQV9AfUaoONtuVGwSggDwAAyxxlOoAQAAA=
   </data>
  </layer>
- <objectgroup name="Object Layer 1"/>
+ <objectgroup name="Object Layer 1">
+  <object id="49" name="stairs_nw" type="Target" x="160" y="112" width="16" height="16"/>
+  <object id="51" name="stairs_ne" type="Target" x="496" y="112" width="16" height="16"/>
+  <object id="52" name="stairs_se" type="Target" x="496" y="432" width="16" height="16"/>
+  <object id="53" name="stairs_sw" type="Target" x="16" y="432" width="16" height="16"/>
+  <object id="55" name="house_sw" type="Target" x="112" y="464" width="16" height="16"/>
+  <object id="56" name="house_se" type="Target" x="400" y="464" width="16" height="16"/>
+  <object id="57" name="house_nw" type="Target" x="64" y="144" width="16" height="16"/>
+  <object id="58" name="house_ne" type="Target" x="400" y="144" width="16" height="16"/>
+  <object id="59" name="tele" type="Event" x="64" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath01.tmx', 'house_nw')"/>
+   </properties>
+  </object>
+  <object id="60" name="tele" type="Event" x="400" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath01.tmx', 'house_ne')"/>
+   </properties>
+  </object>
+  <object id="61" name="tele" type="Event" x="400" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath01.tmx', 'house_se')"/>
+   </properties>
+  </object>
+  <object id="62" name="tele" type="Event" x="112" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath01.tmx', 'house_sw')"/>
+   </properties>
+  </object>
+  <object id="63" name="tele" type="Event" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath03.tmx', 'stairs_nw')"/>
+   </properties>
+  </object>
+  <object id="64" name="tele" type="Event" x="496" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath03.tmx', 'stairs_ne')"/>
+   </properties>
+  </object>
+  <object id="65" name="tele" type="Event" x="496" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath03.tmx', 'stairs_se')"/>
+   </properties>
+  </object>
+  <object id="66" name="tele" type="Event" x="16" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath03.tmx', 'stairs_sw')"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer name="Tile Layer 3" width="33" height="32">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WwQkAIAxD0e5/tiJYd7UjRFCk8B/kmvYYMwCoY3zobBkX08Wbp50zE2KW+MOLTgAAgEpubUv2pNa5AYax4zuAEAAA
+   H4sIAAAAAAAAC+3WwQkAIAxD0e4P1qtg3dWOEEGRwn+Qa9pjzACgjvGhs2VcTBdvnnbOTIhZ4g8vOgEAACq5tS3Zk1rnBkGwhwOAEAAA
   </data>
  </layer>
  <layer name="Tile Layer 4" width="33" height="32">

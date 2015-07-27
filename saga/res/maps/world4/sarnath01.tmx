@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="51" tilewidth="16" tileheight="16" nextobjectid="49">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="51" tilewidth="16" tileheight="16" nextobjectid="68">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
   <property name="encounter" value="encounterset_level09_danger01"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2ZQU7DMBBFHXGK7sJRvOMkvQwBDlDY0FU5JY2UUX+n820nEbaRZvGU1EkHz4vjqfFTCOHJcRzHcZx/x/NKhgXWrlkb36KFk5cVDIl2izWxLVo6KX1mE2nfM04OALb34ORQwETamZOSmCOAbnpwMhYwkXbmpCTmfF9U9/fihOUlTAvWtbhciwVxrO/q77V0cjCcWLlNIe0kl3POs/6bLZ2MyomV+2Rg5Vdai6zxpWO3dDKEeyfSR+nzt8pzWtrOcMw5wRjnRFz8uz3PJ5crP6rv0ibHnJPT8hnv13F7mk9yTuZ8PlWe0jbzRb5nvVN4/2k5Z+9Zj07YvJirPZq183FvTgTMzzrXNeI1A/PGXAitneD6IvcMxcsWJ6Xjo/Z6J/dc5nZWK87hsd6UOLHmXyseG7dCDSe47jiG29pFasWMrhW63mxxwuoX9sNaS9VwMgLH5ahzwFqB9UbmhLcr74SPhBOrfmE/hNpOtoL1B3PT6Fpd+puY0cpJDI91Iarz0tysWHvWTrXnWJzTdB5WrnufuQXrT20nqVps1QY9N6AfHAcyRqwYrIbl+lPTCR7xulUbUutfPW4iicFqWK4/tZ1gLRas2sCcWLXFqi+s5gzhVot7cjKq62u4GE5K5iScu8bOnOh3IIZ0Tjpn/J2n3ykdC+cga37u0YmVM8srN35iSNdky30vTnLj4i9gTqVfLX7bo5M9sJz3xJz7NYb7sVTDifzffi/Myd64es6p4WTc+Sy3jBO9D8r2RgWcg2s4iaFs/zIHc5LaC03tjSIR4tVwwvY61xIJ1r3y3PXnkn3XGk62wPIfyLl1n34upevHXp20xJ3Uc+I4juM4juO04RfPOYoP/DYAAA==
+   H4sIAAAAAAAAC+2ZQU7DMBBFHfUU3YWjeMdJehkCHKCwoatyShopI36n820nEbaRZvGU1EkHz4vjqfEhhHBwHMdxHOff8bSSYYG1a9bGt2jh5HkFQ6LdYk1si5ZOSp/ZRNr3jJMjgO09ODkWMJF25qQk5gigmx6cjAVMpJ05KYk53xfV/b04YXkJ04J1LS7XYkEc67v6ey2dHA0nVm5TSDvJ5ZzzrP9mSyejcmLlPhlY+ZXWImt86dgtnQzh3on0Ufr8pfKclrYLHHNOMMYlERf/bs/zyfXGt8pT2uSYc3JePuP9Om5P80nOyZzPh8pT2mY+yfesdwrvPy/n7D3r0QmbF3O1R7N2Pu7NiYD5Wee6RrxkYN6YC6G1E1xf5J6heNnipHR81F7v5J7L3M5qxSU81psSJ9b8a8Vj41ao4QTXHafwu3aRWjGja4WuN1ucTCQe9sNaS9VwMgKn5ahzwFqB9UbmhNcbb4T3hBOrfmE/hNpOtoL1B3PT6Fpd+puY0cpJDI91Iarz0tysWHvWTrXnWJzTdB5WrnufuQXrT20nqVps1QY9N6AfHAcyRqwYrIbl+lPTCR7xulUbUutfPW4iicFqWK4/tZ1gLRas2sCcWLWF1Re2ZpJa3JOTUV1fw9VwUjIn4dw1duZEvwMxpHPSOePvPP1O6Vg4B1nzc49OrJxZXrnxE0O6Jlvue3GSGxd/AXMq/Wrx2x6d7IHlvCfm3K8x3I+lGk7k//Z7YU72xtVzTg0n485nuWWc6H1Qtjcq4Bxcw0kMZfuXOZiT1F5oam8UiRCvhhO217mWSLDuleeuP5fsu9ZwsgWW/0DOrfv0cyldP/bqpCXupJ4Tx3Ecx3Ecpw0/0356p/w2AAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="69" height="51">
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZwQmAMAwF0HQAh9Cj7j+ME7iGHgtF8BAt1Peg5JrmkH9IBAAAtf3m/dlcIpbS1j9br/9vpa0A0NvRu4GXTHIWIM2oWZFF5jxXz8rcgC+MkGFZ+9LeBSCL22jLbbTlNgoAAEBPJ8/CUyb8NgAA
+   H4sIAAAAAAAAC+3ZwQmAIBiAUR2gIQq61P7DNEFrVIeg0KCDIdh7IHaS8vIRfwgAAFwtD+vP+hjCENP9z6b9++eY7gBQ21r7BT7S7Z0dtRagiFZbUcLRmi7Tm7NBY7w/vzmv5X5d7yp3bwCltdCwEv82uV613hwAvmM2mjIbTZmNAgAAUNMG/q1dW/w2AAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -37,6 +37,68 @@
   <object id="48" name="block" type="Event" x="416" y="128" width="16" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="49" name="house_ne" type="Target" x="448" y="288" width="16" height="16"/>
+  <object id="50" name="house_nw" type="Target" x="432" y="384" width="16" height="16"/>
+  <object id="51" name="house_sw" type="Target" x="368" y="480" width="16" height="16"/>
+  <object id="52" name="house_se" type="Target" x="656" y="480" width="16" height="16"/>
+  <object id="53" name="entry" type="Target" x="560" y="640" width="16" height="16"/>
+  <object id="55" name="door_left" type="Target" x="528" y="400" width="16" height="16"/>
+  <object id="56" name="door_right" type="Target" x="576" y="400" width="16" height="16"/>
+  <object id="57" name="tele" type="Event" x="160" y="320" width="64" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
+   </properties>
+  </object>
+  <object id="58" name="tele" type="Event" x="880" y="320" width="64" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
+   </properties>
+  </object>
+  <object id="59" name="tele" type="Event" x="160" y="336" width="16" height="352">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
+   </properties>
+  </object>
+  <object id="60" name="tele" type="Event" x="928" y="336" width="16" height="352">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
+   </properties>
+  </object>
+  <object id="61" name="tele" type="Event" x="176" y="672" width="752" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
+   </properties>
+  </object>
+  <object id="62" name="tele" type="Event" x="368" y="464" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'house_sw')"/>
+   </properties>
+  </object>
+  <object id="63" name="tele" type="Event" x="432" y="368" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'house_nw')"/>
+   </properties>
+  </object>
+  <object id="64" name="tele" type="Event" x="448" y="272" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'house_ne')"/>
+   </properties>
+  </object>
+  <object id="65" name="tele" type="Event" x="656" y="464" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'house_se')"/>
+   </properties>
+  </object>
+  <object id="66" name="tele" type="Event" x="528" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath04.tmx', 'door_left')"/>
+   </properties>
+  </object>
+  <object id="67" name="tele" type="Event" x="576" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/sarnath04.tmx', 'door_right')"/>
    </properties>
   </object>
  </objectgroup>

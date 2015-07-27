@@ -1,0 +1,21 @@
+{
+	"key" : "key_antique",
+	"subfolder" : "key",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "ANTIQUE",
+	"itemDescription" : "Antique from Sarnath",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectNothingMDO",
+		"key" : "anon_CombatItemMDO_373874561"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}
