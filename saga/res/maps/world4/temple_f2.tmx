@@ -37,18 +37,16 @@
   <object id="33" name="chest" type="Chest" x="272" y="80" width="16" height="16"/>
   <object id="34" name="chest" type="Chest" x="16" y="80" width="16" height="16"/>
   <object id="35" name="chest" type="Chest" x="144" y="208" width="16" height="16"/>
-  <object id="36" name="npc" type="Character" x="144" y="240" width="16" height="16">
+  <object id="36" name="npc" type="Character" x="64" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_dead"/>
     <property name="onInteract" value="play('world4/monk.lua')"/>
    </properties>
   </object>
-  <object id="37" name="jonas" type="Character" x="176" y="240" width="16" height="16">
+  <object id="37" name="jonas" type="Character" x="192" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
-    <property name="face" value="WEST"/>
-    <property name="hide" value="return getSwitch('jonas01')"/>
-    <property name="onInteract" value="play('world4/jonas01.lua')"/>
+    <property name="hide" value="return not getSwitch('temple_jonas')"/>
    </properties>
   </object>
  </objectgroup>

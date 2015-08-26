@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="33" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="173">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="38" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="178">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Underground City"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="50" height="33">
+ <layer name="Tile Layer 1" width="50" height="38">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3UzQnAIAwFYAdxIHfqEtKLuG0vEaTEEP+CtO/wHYwEfDSpd855AACATSJp3bXqFxnpbd3NSCQypHrJMdKbNuQIJDGkepjs3ZXDGnL05bgr3Fmi6UWOf+bIFe4s0fSetuc938lyz0fnR5oj67nSvOmrOerZPynHeyelHJlxwp5r3rTK6hwr/lknZLDOsjMDAABA8QAzcILyyBkAAA==
+   H4sIAAAAAAAAC+2UQQrEIAxFPUgP1DvNJUo30tuWAQdEYoi2SQvzFm+hIejDfJeU0gIAAODEVujVevufwkxvr3aFXNgEtP2fx0xvdvBYC1lA218v9np5RIPHmMdeIa01LL14/KfHUSGtNSy95NzmMTI/b52rXThzxguP+zzaTM54PJ3zQzhz5J96U87vRHvLKA/LjLd5stbweMajzpa3R8/Fkvf2X7DWPBwi8u79DpE+UfcHAAD4cgJJJCuvsB0AAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="50" height="33">
+ <layer name="Tile Layer 2" width="50" height="38">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WTQqAIBCGYb1B207Q/Vdt23aIfo5SYkKIGqKGyvuARMN8zBARCQEA6Mkg9WndKPWp0XTvdT5Xu3446nbP5snuH9nc1KzVs4urniuLvs0J/bHZkpaE/tgs4rm+PX9kgV6o996c2sTsFfofCd2XZua959b4rAEAQDsuSPrz8MgZAAA=
+   H4sIAAAAAAAAC+3XTQqAIBCA0bpB207Q/Vdu3XaIfo5SUUEMIwVaTvI9kBFr1M0MVVUAgJI09T7+rq33YVG33ms+olyflHX5zhDIHW9yU9vO6gN30dZT5aJMTsSYPXLyIsbsgfdoveeL3K+5wPxvfGAOaLaajK3L3HV+nnc913KvgV0pvq8s8CKmcvaL3PX1pOdofeH6jH8oAACwANaQPoiwHQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="134" name="npc" type="Character" x="416" y="224" width="16" height="16">
+  <object id="134" name="npc" type="Character" x="384" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="face" value="NORTH"/>
@@ -36,7 +36,7 @@
     <property name="displayName" value="Underground City"/>
    </properties>
   </object>
-  <object id="150" name="npc" type="Character" x="368" y="256" width="16" height="16">
+  <object id="150" name="npc" type="Character" x="368" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
@@ -47,7 +47,7 @@
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="WEST"/>
-    <property name="onInteract" value="speak('I have old memories of what it was like to live aboveground in the grand city.')"/>
+    <property name="onInteract" value="speak('Moloch\'s men go where they please.')"/>
    </properties>
   </object>
   <object id="152" name="npc" type="Character" x="512" y="176" width="16" height="16">
@@ -58,19 +58,19 @@
     <property name="onInteract" value="speak('Moloch is the master of the wastes. He demands we sacrifice to him or we\'ll all be destroyed.')"/>
    </properties>
   </object>
-  <object id="153" name="npc" type="Character" x="608" y="176" width="16" height="16">
+  <object id="153" name="npc" type="Character" x="624" y="272" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
-    <property name="onInteract" value="speak('Mutants have a hidden city named Elan somewhere in the southeast. The waste amplifies their powers instead of harming them.')"/>
+    <property name="onInteract" value="speak('Mutants have a hidden city named Elan somewhere in the southeast.')"/>
    </properties>
   </object>
-  <object id="154" name="npc" type="Character" x="592" y="352" width="16" height="16">
+  <object id="154" name="npc" type="Character" x="448" y="336" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('The mutants of Elan hide from Moloch.')"/>
+    <property name="onInteract" value="speak('Moloch himself destroyed EXCALIBER so that no one could use it against him.')"/>
    </properties>
   </object>
   <object id="155" name="npc" type="Character" x="528" y="352" width="16" height="16">
@@ -81,7 +81,7 @@
     <property name="onInteract" value="speak('Before all the surface cities were wiped out, we traded with Sarnath in the southeast and Dagon in the northwest.')"/>
    </properties>
   </object>
-  <object id="156" name="npc" type="Character" x="272" y="336" width="16" height="16">
+  <object id="156" name="npc" type="Character" x="304" y="400" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_skeleton"/>
     <property name="face" value="SOUTH"/>
@@ -96,7 +96,7 @@
     <property name="onInteract" value="speak('Be careful in the wastes! Poison will harm you each step you take unless you go prepared.')"/>
    </properties>
   </object>
-  <object id="158" name="npc" type="Character" x="192" y="272" width="16" height="16">
+  <object id="158" name="npc" type="Character" x="192" y="336" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="SOUTH"/>
@@ -104,11 +104,11 @@
     <property name="onInteract" value="speak('Moloch\'s base is in the crater to the southwest. The poison is strongest there.')"/>
    </properties>
   </object>
-  <object id="159" name="npc" type="Character" x="192" y="176" width="16" height="16">
+  <object id="159" name="npc" type="Character" x="160" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="speak('In the days of the grand city, there were a lot more people in this world.')"/>
+    <property name="onInteract" value="speak('Moloch arrived with the destruction of the city.')"/>
    </properties>
   </object>
   <object id="160" name="inn" type="Target" x="320" y="176" width="16" height="16"/>
@@ -141,17 +141,37 @@
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'city')"/>
    </properties>
   </object>
-  <object id="170" name="tele" type="Event" x="432" y="336" width="16" height="16">
+  <object id="170" name="tele" type="Event" x="544" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/city_interior.tmx', 'house')"/>
    </properties>
   </object>
-  <object id="171" name="house" type="Target" x="432" y="352" width="16" height="16"/>
-  <object id="172" name="npc" type="Character" x="416" y="352" width="16" height="16">
+  <object id="171" name="house" type="Target" x="544" y="448" width="16" height="16"/>
+  <object id="172" name="npc" type="Character" x="512" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('The man in this house lived in Sarnath, but he used to travel all over the world, even to the secret town of Elan!')"/>
+   </properties>
+  </object>
+  <object id="173" name="demon" type="Character" x="384" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="hide" value="return getSwitch('moloch01')"/>
+   </properties>
+  </object>
+  <object id="174" name="trigger" type="Event" x="368" y="176" width="64" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('moloch01')"/>
+    <property name="onCollide" value="play('world4/moloch01.lua')"/>
+   </properties>
+  </object>
+  <object id="177" name="npc" type="Character" x="448" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I\'ve never seen anyone stand up to Moloch\'s men!')"/>
    </properties>
   </object>
  </objectgroup>

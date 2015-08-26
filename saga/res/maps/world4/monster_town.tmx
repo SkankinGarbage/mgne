@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="45" tilewidth="16" tileheight="16" nextobjectid="77">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="45" tilewidth="16" tileheight="16" nextobjectid="78">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Excaliber Town"/>
@@ -213,16 +213,10 @@
     <property name="onInteract" value="play('world4/werewolf.lua')"/>
    </properties>
   </object>
-  <object id="74" name="sword" type="Event" x="352" y="304" width="16" height="16">
+  <object id="77" name="chest" type="Chest" x="352" y="304" width="16" height="16">
    <properties>
-    <property name="hide" value="return getSwitch('excaliber02') or inventoryFull()"/>
-    <property name="onInteract" value="play('world4/excaliber02.lua')"/>
-   </properties>
-  </object>
-  <object id="75" name="sword" type="Event" x="352" y="304" width="16" height="16">
-   <properties>
-    <property name="hide" value="return getSwitch('excaliber02') or not inventoryFull()"/>
-    <property name="onInteract" value="speak('Inventory full.')"/>
+    <property name="item" value="key_excaliber1"/>
+    <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
  </objectgroup>
