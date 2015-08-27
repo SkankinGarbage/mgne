@@ -1,0 +1,16 @@
+{
+	"key" : "shop_elan_forge",
+	"subfolder" : "world4",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordDragon",
+		"wpn_swordBabel",
+		"wpn_swordSun",
+		"wpn_hammerFire",
+		"body_babel",
+		"body_dragon",
+		"shield_babel",
+		"shield_mirror"
+	]
+}

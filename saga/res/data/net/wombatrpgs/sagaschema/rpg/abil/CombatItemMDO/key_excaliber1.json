@@ -1,16 +1,21 @@
 {
 	"key" : "key_excaliber1",
 	"subfolder" : "key",
-	"name" : null,
-	"description" : null,
-	"abilityName" : null,
-	"itemDescription" : null,
-	"type" : null,
-	"uses" : null,
-	"cost" : null,
-	"anim" : null,
-	"equip" : null,
-	"warhead" : null,
-	"tier" : null,
-	"robostats" : null
+	"name" : "",
+	"description" : "",
+	"abilityName" : "EXCALIBER1",
+	"itemDescription" : "Part of a mystic sword",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectNothingMDO",
+		"key" : "anon_CombatItemMDO_-1287860873"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
 }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="30" tilewidth="16" tileheight="16" nextobjectid="85">
+ <properties>
+  <property name="bgm" value="ffl1_town"/>
+  <property name="name" value="Elan"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="45" height="30">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WOw7DIBBEEafLQXKgdHTOVVOttJnMfkggUDDSNAbMA9ZjSjk6Ojo6+oeuhHeSMD0c78SteZvjXbiRtzrehTvLy7hX6SqfvDdi5F7NzHifyox7F2bNe1dm3DsxIy9yR8xepo/Ke2RmvOKIWWdQLe8Zw/J/JTMyyTeN2Yj5P4rZ4rbqGfcPM6ipPtg2gtnitnKD7R/LdFkPPh/FnMlnqxa8/xDrM5LZs2Zl5937rtnMuLe9653FHN2fhbd3vbOZvTt0c8ZG5zOT2btDe2NXMveMtZyps1+YcY6svBqqQbv4G7E5svJqqAbtrNZ659VzZPUCr3zDIhgVAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="45" height="30">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OsQkAIAxE0ey/ka21tTuYKbQUu4hyiP/BFWnCNwMAAADwq6QO2JDVATimXPjZxny6fRniqjog6LVeADodxz2OExgVAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="83" name="room" type="Ceiling" x="176" y="272">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 0,160 80,160 80,0"/>
+  </object>
+  <object id="84" name="shop" type="Character" x="224" y="320" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_elan_forge')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="45" height="30">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3NsQkAMAwEMe9fuUuXWbPEEzCWBrirAgAAAIB97sBHh3s/HifcS3kRzvAYGBUAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="45" height="30">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3NsQkAIAxE0ey/jaUpncwFrEIICO/19y8CAAAAAPjBGvjYzb1s7r2cwuYCdRw4lBgVAAA=
+  </data>
+ </layer>
+</map>

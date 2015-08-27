@@ -1,0 +1,15 @@
+{
+	"key" : "shop_elan",
+	"subfolder" : "world4",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordBabel",
+		"wpn_swordPsi",
+		"spell_stone",
+		"spell_death",
+		"spell_wand",
+		"spell_wizard",
+		"spell_heal"
+	]
+}

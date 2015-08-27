@@ -6,11 +6,15 @@
  */
 package net.wombatrpgs.saga.maps;
 
+import org.luaj.vm2.LuaValue;
+
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.graphics.FacesAnimation;
 import net.wombatrpgs.mgne.graphics.FacesAnimationFactory;
 import net.wombatrpgs.mgne.maps.TiledMapObject;
 import net.wombatrpgs.mgne.maps.events.MapEvent;
+import net.wombatrpgs.mgne.scenes.SceneParser;
+import net.wombatrpgs.mgne.scenes.StringSceneParser;
 import net.wombatrpgs.saga.core.SConstants;
 import net.wombatrpgs.saga.core.SGlobal;
 import net.wombatrpgs.saga.rpg.battle.Battle;
@@ -37,6 +41,7 @@ public class EventChest extends MapEvent {
 	protected CombatItem item;
 	protected Collectable collectable;
 	protected Battle encounter;
+	protected SceneParser scene;
 	protected boolean keyItem, invisible;
 	
 	/**
@@ -67,8 +72,11 @@ public class EventChest extends MapEvent {
 		switchName += "(" + object.getTileX() + "," + object.getTileY() + ")";
 		
 		keyItem = (mdo.keyItem == KeyItemType.KEY_ITEM);
-		
 		invisible = (mdo.visible == ChestInvisibilityType.INVISIBLE);
+		if (mdo.scene != null && !mdo.scene.isEmpty()) {
+			scene = new StringSceneParser(mdo.scene, LuaValue.NIL);
+			assets.add(scene);
+		}
 		
 		setAppearance();
 	}
@@ -117,6 +125,9 @@ public class EventChest extends MapEvent {
 						MGlobal.levelManager.getScreen(), "Empty.");
 				MGlobal.memory.setSwitch(switchName);
 				setAppearance();
+			}
+			if (scene != null) {
+				scene.run();
 			}
 		}
 		return true;

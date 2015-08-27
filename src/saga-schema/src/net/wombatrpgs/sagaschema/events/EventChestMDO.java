@@ -9,6 +9,7 @@ package net.wombatrpgs.sagaschema.events;
 import net.wombatrpgs.mgneschema.maps.EventMDO;
 import net.wombatrpgs.mgns.core.Annotations.DefaultValue;
 import net.wombatrpgs.mgns.core.Annotations.Desc;
+import net.wombatrpgs.mgns.core.Annotations.FileLink;
 import net.wombatrpgs.mgns.core.Annotations.Nullable;
 import net.wombatrpgs.mgns.core.Annotations.Path;
 import net.wombatrpgs.mgns.core.Annotations.SchemaLink;
@@ -45,5 +46,9 @@ public class EventChestMDO extends EventMDO {
 	@Desc("Invisible - invisible chests don't appear")
 	@DefaultValue("VISIBLE")
 	public ChestInvisibilityType visible;
+	
+	@Desc("Scene - plays after the chest is opened")
+	@FileLink("scenes")
+	public String scene;
 
 }
