@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="42" height="38" tilewidth="16" tileheight="16" nextobjectid="94">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="42" height="38" tilewidth="16" tileheight="16" nextobjectid="102">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Elan"/>
@@ -62,16 +62,58 @@
    </properties>
   </object>
   <object id="88" name="potions" type="Target" x="256" y="240" width="16" height="16"/>
-  <object id="90" name="tele" type="Event" x="256" y="368" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="targetTele('world4/elan_cave.tmx', 'forge')"/>
-   </properties>
-  </object>
   <object id="91" name="forge" type="Target" x="256" y="384" width="16" height="16"/>
   <object id="92" name="house" type="Target" x="400" y="144" width="16" height="16"/>
   <object id="93" name="tele" type="Event" x="400" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/elan_interior.tmx', 'house')"/>
+   </properties>
+  </object>
+  <object id="94" name="itamor" type="Character" x="336" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_itamor"/>
+    <property name="hide" value="return getSwitch('itamor03')"/>
+   </properties>
+  </object>
+  <object id="95" name="trigger" type="Event" x="320" y="400" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('itamor03')"/>
+    <property name="onEnter" value="play('world4/itamor03.lua')"/>
+   </properties>
+  </object>
+  <object id="96" name="npc" type="Character" x="304" y="160" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Moloch\'s men keep trying to find our town, so we have to keep it hidden by magic.')"/>
+   </properties>
+  </object>
+  <object id="97" name="npc" type="Character" x="448" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The contagion on the surface increases mutans\'s power. How can you stand being up here?')"/>
+   </properties>
+  </object>
+  <object id="99" name="npc" type="Character" x="240" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Legend holds that EXCALIBER was crafted in Elan\'s forge.')"/>
+   </properties>
+  </object>
+  <object id="100" name="npc" type="Character" x="352" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('...How did you find us here? You\'re not a spy of Moloch?')"/>
+   </properties>
+  </object>
+  <object id="101" name="tele" type="Event" x="256" y="368" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/elan_cave.tmx', 'forge')"/>
    </properties>
   </object>
  </objectgroup>

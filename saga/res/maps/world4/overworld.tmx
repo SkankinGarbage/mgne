@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="85">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="89">
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
@@ -68,6 +68,12 @@
   <object id="84" name="elan" type="Event" x="1136" y="1056" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/elan.tmx', 'entry', 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="88" name="trigger" type="Event" x="1104" y="944" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('itamor02') or not getSwitch('itamor01')"/>
+    <property name="onEnter" value="play('world4/itamor02.lua')"/>
    </properties>
   </object>
  </objectgroup>

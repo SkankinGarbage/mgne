@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="40" tilewidth="16" tileheight="16" nextobjectid="69">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="40" tilewidth="16" tileheight="16" nextobjectid="80">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
   <property name="encounter" value="encounterset_level09_danger01"/>
@@ -92,12 +92,6 @@
    </properties>
    <polygon points="0,0 0,192 112,192 112,0"/>
   </object>
-  <object id="64" name="chest" type="Chest" x="384" y="448" width="16" height="16">
-   <properties>
-    <property name="item" value="key_antique"/>
-    <property name="keyItem" value="KEY_ITEM"/>
-   </properties>
-  </object>
   <object id="65" name="chest" type="Chest" x="512" y="448" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_black"/>
@@ -116,6 +110,66 @@
   <object id="68" name="chest" type="Chest" x="176" y="176" width="16" height="16">
    <properties>
     <property name="item" value="pot_revive"/>
+   </properties>
+  </object>
+  <object id="69" name="guard01" type="Character" x="288" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return getSwitch('sarnath_guard01')"/>
+    <property name="onInteract" value="sceneSwitch('sarnath_guard01', true); play('world4/sarnath_guard.lua')"/>
+   </properties>
+  </object>
+  <object id="70" name="guard02" type="Character" x="384" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return getSwitch('sarnath_guard02')"/>
+    <property name="onInteract" value="sceneSwitch('sarnath_guard02', true); play('world4/sarnath_guard.lua')"/>
+   </properties>
+  </object>
+  <object id="71" name="guard03" type="Character" x="512" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return getSwitch('sarnath_guard03')"/>
+    <property name="onInteract" value="sceneSwitch('sarnath_guard03', true); play('world4/sarnath_guard.lua')"/>
+   </properties>
+  </object>
+  <object id="73" name="guard04" type="Character" x="608" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return getSwitch('sarnath_guard04')"/>
+    <property name="onInteract" value="sceneSwitch('sarnath_guard04', true); play('world4/sarnath_guard.lua')"/>
+   </properties>
+  </object>
+  <object id="74" name="demon01" type="Character" x="336" y="448" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('itamor01')"/>
+   </properties>
+  </object>
+  <object id="76" name="demon02" type="Character" x="368" y="464" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('itamor01')"/>
+   </properties>
+  </object>
+  <object id="77" name="demon03" type="Character" x="384" y="496" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return getSwitch('itamor01')"/>
+   </properties>
+  </object>
+  <object id="78" name="itamor" type="Character" x="336" y="496" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_itamor"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return getSwitch('itamor_freed')"/>
    </properties>
   </object>
  </objectgroup>
