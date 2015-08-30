@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="51" tilewidth="16" tileheight="16" nextobjectid="68">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="51" tilewidth="16" tileheight="16" nextobjectid="69">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
   <property name="encounter" value="encounterset_level09_danger01"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2ZQU7DMBBFHfUU3YWjeMdJehkCHKCwoatyShopI36n820nEbaRZvGU1EkHz4vjqfEhhHBwHMdxHOff8bSSYYG1a9bGt2jh5HkFQ6LdYk1si5ZOSp/ZRNr3jJMjgO09ODkWMJF25qQk5gigmx6cjAVMpJ05KYk53xfV/b04YXkJ04J1LS7XYkEc67v6ey2dHA0nVm5TSDvJ5ZzzrP9mSyejcmLlPhlY+ZXWImt86dgtnQzh3on0Ufr8pfKclrYLHHNOMMYlERf/bs/zyfXGt8pT2uSYc3JePuP9Om5P80nOyZzPh8pT2mY+yfesdwrvPy/n7D3r0QmbF3O1R7N2Pu7NiYD5Wee6RrxkYN6YC6G1E1xf5J6heNnipHR81F7v5J7L3M5qxSU81psSJ9b8a8Vj41ao4QTXHafwu3aRWjGja4WuN1ucTCQe9sNaS9VwMgKn5ahzwFqB9UbmhNcbb4T3hBOrfmE/hNpOtoL1B3PT6Fpd+puY0cpJDI91Iarz0tysWHvWTrXnWJzTdB5WrnufuQXrT20nqVps1QY9N6AfHAcyRqwYrIbl+lPTCR7xulUbUutfPW4iicFqWK4/tZ1gLRas2sCcWLWF1Re2ZpJa3JOTUV1fw9VwUjIn4dw1duZEvwMxpHPSOePvPP1O6Vg4B1nzc49OrJxZXrnxE0O6Jlvue3GSGxd/AXMq/Wrx2x6d7IHlvCfm3K8x3I+lGk7k//Z7YU72xtVzTg0n485nuWWc6H1Qtjcq4Bxcw0kMZfuXOZiT1F5oam8UiRCvhhO217mWSLDuleeuP5fsu9ZwsgWW/0DOrfv0cyldP/bqpCXupJ4Tx3Ecx3Ecpw0/0356p/w2AAA=
+   H4sIAAAAAAAAC+2ZQXLDIAxF8eQU2dGjsOtJcpnS9gBpN80qPWXjGTRVFH3AZgp0Ros3drCjomeMQjk45w6GYRiGYfw7njayJFC7ZGt8jRFOnjewZNo1tsTWGOmk9plF0N4yTo4M3j6Dk2MFEbQjJzUxPYO7mcGJryCCduSkJuZ6XxD3z+IE5UXEhHYtpGuhIo72Xfm9kU6OihMtt+jyTko5lzzLvznSiRdOtNyjgpZfbS3SxpeMPdLJ4u6dUB+pz18iz5jaLuxYcsJjXDJx+d+deT653vgWeVIbHUtOzukzv1/GnWk+KTlZ8/kQeVLbyif4nvZO8fvP6Ry9ZzM6QfNiqfZIts7HszkheH7auawRLwWQN+SCGO2Ery9Kz5C87HFSOz56r3dKz2VtR7Xi4h7rTY0Tbf7V4qFxS/RwwtcdJ/e7dqFasSJrhaw3e5xEEI/3Q1tL9XDiGad0lDnwWsHrDc0JrzfeAO8ZJ1r94v0gejvZC68/PDeJrNW1v4kRo5wE91gXgjivzU2L1bJ26j3H8jlN5qHl2vrMNVB/ejvJ1WKtNsi5gfvh44DGiBYD1bBSf3o64Ud+XasNufWvHDcBxEA1rNSf3k54LSa02oCcaLUF1Re0ZqJaPJMTL65v4ao4qZmT+NzlJ3Mi34Hg8jnJnPnvPPlOyVh8DtLm5xmdaDmjvErjJ7h8Tdbcz+KkNC7+AuSU+jXitz130gLKuSXm2i/v7sdSDyf0f/tWkJPWuHLO6eHENz7LPeNE7oOivVGit5Pg6vYvSyAnub3Q3N4oJ7i+7w7a69xKAGj30jOXn2v2XXs42QPKfwHn2n3yudSuH2d1MhJz0s+JYRiGYRiGMYYfDniY4Pw2AAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="69" height="51">
@@ -99,6 +99,11 @@
   <object id="67" name="tele" type="Event" x="576" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath04.tmx', 'door_right')"/>
+   </properties>
+  </object>
+  <object id="68" name="block" type="Event" x="224" y="240" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>

@@ -28,22 +28,22 @@
   <object id="50" name="stairs_nw" type="Target" x="304" y="176" width="16" height="16"/>
   <object id="51" name="stairs_ne" type="Target" x="656" y="176" width="16" height="16"/>
   <object id="57" name="stairs_sw" type="Target" x="160" y="464" width="16" height="16"/>
-  <object id="59" name="tele" type="Event" x="304" y="192" width="16" height="16">
+  <object id="59" name="tele" type="Event" x="304" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'stairs_nw')"/>
    </properties>
   </object>
-  <object id="60" name="tele" type="Event" x="656" y="192" width="16" height="16">
+  <object id="60" name="tele" type="Event" x="656" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'stairs_ne')"/>
    </properties>
   </object>
-  <object id="61" name="tele" type="Event" x="656" y="480" width="16" height="16">
+  <object id="61" name="tele" type="Event" x="656" y="448" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'stairs_se')"/>
    </properties>
   </object>
-  <object id="62" name="tele" type="Event" x="160" y="480" width="16" height="16">
+  <object id="62" name="tele" type="Event" x="160" y="448" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'stairs_sw')"/>
    </properties>
@@ -93,22 +93,22 @@
   <object id="71" name="guard" type="Character" x="192" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
-    <property name="hide" value="return getSwitch('guard_sw')"/>
-    <property name="onInteract" value="sceneSwitch('guard_sw', true); play('world4/sarnath_guard.lua')"/>
+    <property name="hide" value="return getSwitch('guard_nw')"/>
+    <property name="onInteract" value="sceneSwitch('guard_nw', true); play('world4/sarnath_guard.lua')"/>
    </properties>
   </object>
   <object id="72" name="guard" type="Character" x="544" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
-    <property name="hide" value="return getSwitch('guard_sw')"/>
-    <property name="onInteract" value="sceneSwitch('guard_sw', true); play('world4/sarnath_guard.lua')"/>
+    <property name="hide" value="return getSwitch('guard_ne')"/>
+    <property name="onInteract" value="sceneSwitch('guard_ne', true); play('world4/sarnath_guard.lua')"/>
    </properties>
   </object>
   <object id="73" name="guard" type="Character" x="544" y="496" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
-    <property name="hide" value="return getSwitch('guard_sw')"/>
-    <property name="onInteract" value="sceneSwitch('guard_sw', true); play('world4/sarnath_guard.lua')"/>
+    <property name="hide" value="return getSwitch('guard_se')"/>
+    <property name="onInteract" value="sceneSwitch('guard_se', true); play('world4/sarnath_guard.lua')"/>
    </properties>
   </object>
   <object id="74" name="chest" type="Chest" x="544" y="144" width="16" height="16">

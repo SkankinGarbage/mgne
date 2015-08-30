@@ -29,14 +29,14 @@
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="84" name="shop" type="Character" x="80" y="64" width="16" height="16">
+  <object id="84" name="shop" type="Character" x="400" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_world4_potions')"/>
    </properties>
   </object>
-  <object id="85" name="shop" type="Character" x="400" y="64" width="16" height="16">
+  <object id="85" name="shop" type="Character" x="80" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
@@ -77,7 +77,7 @@
   <object id="97" name="chest" type="Chest" x="464" y="368" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('elan_elder02')"/>
-    <property name="item" value="key_excaliber1"/>
+    <property name="item" value="key_excaliber2"/>
     <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>

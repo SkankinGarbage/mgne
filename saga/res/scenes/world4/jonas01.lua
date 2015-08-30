@@ -3,6 +3,8 @@ local hero2 = getHero(1).getName()
 local hero3 = getHero(2).getName()
 local hero4 = getHero(3).getName()
 
+sceneSwitch('temple_jonas', true)
+
 walk('jonas', 9, 'SOUTH')
 face('hero', 'EAST')
 walk('jonas', 1, 'WEST')
@@ -13,7 +15,7 @@ speak("Jonas", "You don't know? The monks here kept a shard of EXCALIBER, the my
 speak("Jonas", "But it seems Moloch came after them. They were doomed.")
 speak(hero3, "And the piece is gone.")
 speak("Jonas", "We're too late to help the monks, but at least we met up. I'm under orders from Aven to find and destroy the EXCALIBER parts.")
-speak("Jonas", "Will you help me and the brotherhood? Or has Janine told you to actually use the sword?")
+speak("Jonas", "Will you help me and the brotherhood? Don't tell me Janine got to you.")
 speak(hero4, "Well...")
 speak("Jonas", "It doesn't matter. Let's work together if we can.")
 speak(hero2, "Have you found parts of EXCALIBER?")
@@ -26,4 +28,5 @@ speak("Jonas", "Me too.")
 walk('jonas', 1, 'EAST')
 walk('jonas', 9, 'NORTH')
 
+sceneSwitch('temple_jonas', false)
 sceneSwitch('jonas01', true)

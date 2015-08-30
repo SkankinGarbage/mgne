@@ -37,6 +37,7 @@ public class SceneSpeak extends VarArgFunction {
 				} else if (args.narg() == 2) {
 					text = args.checkjstring(1) + ":  " + args.checkjstring(2);
 				}
+				text = MGlobal.charConverter.convert(text);
 			}
 			
 			@Override protected void internalRun() {

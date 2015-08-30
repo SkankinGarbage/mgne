@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC83XMQ7DIAwFUMTpuvUSPVA2tvSqbaRasqzvj2lA2JLVgaS8BAcnpeyPM5DZ4jIdJLOaG8lsZln7SjJTfYjlWn9mPkoOt/Ze68/MreRwR73IvSvkudOuB0jr3m1G3vc3n79f5M5i1t6XSuTOZLZe6+6ZWe+c1VetGXkle2a7Z+o9Ro/d7aszzNYkz7TdG2Xsbl9F9ex5kdneP7sHNXWMHZth9tzevoHun9c/UY+dZY7sz14tsD6EjplpjrwnSZ1G+6f3X6vN9t6OXu8qc+87Rbyj17vazL5VGjm3tz4rzexbhZ270zxyrpeROrtjtnNEg9VQ7YxL/hNojmiwGqqdcVRro/PqOaLxASMEN5yUEQAA
+   H4sIAAAAAAAAC83XUQrCMAwG4OLpfPMSHmhvfdOrasFA+En+pmtnUwiCs/PbmiVrKfvHKxDZRjMdJLKaK4lsZln7G4lM+SGWtv7MfJQcbu1t68/MteRwR72We9eQ50677kage7fZ8r6/8fh9Wu4sZu19qrDcmczoRXfPzHrnqr6KZssr0TNjzdQ1Rh+b7asrzGiSZxproxyb7atWPntey4z3D2tQVb/BYyvMnturG9b9Yz3f+n6FOVKfvVxgPd96L1hpjrwnSZ5G+qe3Bv8w470dvd6rzL19inhHrvfqfO7tVSqZu9PM9ips7k7zyFwvInk2Y8b/iA6WQ9E4M3TtHD0Py6FonBm6do6e5wMzvK9DlBEAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="45" height="25">
@@ -42,7 +42,7 @@
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="WEST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Since the poison came, we\'ve been able to outfit our scouts with the finest weapons from the caldera forge.')"/>
+    <property name="onInteract" value="speak('We outfit our scouts with the finest weapons from the caldera forge.')"/>
    </properties>
   </object>
   <object id="86" name="npc" type="Character" x="512" y="240" width="16" height="16">
@@ -52,13 +52,13 @@
     <property name="onInteract" value="speak('Elan weaponry is imbued with the magic in elemental stones.')"/>
    </properties>
   </object>
-  <object id="87" name="forge" type="Character" x="576" y="64" width="16" height="16">
+  <object id="87" name="forger" type="Character" x="576" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="onInteract" value="play('world4/elan_forge01.lua')"/>
    </properties>
   </object>
-  <object id="89" name="forge" type="Character" x="608" y="64" width="16" height="16">
+  <object id="89" name="forger" type="Character" x="608" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="onInteract" value="play('world4/elan_forge02.lua')"/>
@@ -88,7 +88,7 @@
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3NsQkAMAwEMe9fuUuXWbPEE2OQBrirAgAAACbchY8O9348TriX8gD3NqTQlBEAAA==
+   H4sIAAAAAAAAC+3NIQoAIBBFQdn7B5vNs5q2KiioYQZe+ixbCgAAAPBC//RHnRSLPTuxc98mxWLPbhseCJDllBEAAA==
   </data>
  </layer>
  <layer name="Tile Layer 4" width="45" height="25">

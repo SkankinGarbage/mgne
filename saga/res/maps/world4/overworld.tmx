@@ -3,6 +3,7 @@
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
+  <property name="cancelsTransform" value="true"/>
   <property name="name" value="Gamma World"/>
   <property name="terrainEncounter" value="terrain_world4"/>
  </properties>
@@ -55,7 +56,7 @@
     <property name="onCollide" value="targetTele('world4/illusive01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="81" name="illusive" type="Event" x="1040" y="352" width="16" height="16">
+  <object id="81" name="monster_town" type="Event" x="1040" y="352" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/monster_town.tmx', 'entry', 'NORTH')"/>
    </properties>

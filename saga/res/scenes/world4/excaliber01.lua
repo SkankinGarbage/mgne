@@ -8,5 +8,5 @@ walk('guard', 1, 'NORTH')
 walk('guard', 1, 'WEST')
 face('guard', 'EAST')
 
-speak("Guard", "We've guard this piece too long. Maybe you can use EXCALIBER to slay the evil Moloch.")
-sceneSwitch('excaliber01')
+speak("Guard", "We've kept this piece too long. Maybe you're the one to reforge EXCALIBER.")
+sceneSwitch('excaliber01', true)

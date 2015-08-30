@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$RPARA",
-	"itemDescription" : "Attacks with weapon damage and grants o-para to party on attack (tier 10)",
+	"itemDescription" : "Attacks with weapon damage and grants $LPARA to party on attack (tier 10)",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 50000,

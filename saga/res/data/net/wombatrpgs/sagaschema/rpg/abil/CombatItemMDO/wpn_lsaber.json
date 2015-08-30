@@ -6,7 +6,7 @@
 	"abilityName" : "L-SABER",
 	"itemDescription" : "Attacks with weapon damage based on user agility (tier 8)",
 	"type" : "ITEM",
-	"uses" : 0,
+	"uses" : 50,
 	"cost" : 36000,
 	"anim" : "None",
 	"equip" : [ ],

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="40" tilewidth="16" tileheight="16" nextobjectid="80">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="40" tilewidth="16" tileheight="16" nextobjectid="84">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
   <property name="encounter" value="encounterset_level09_danger01"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WMQ7DIAxFGVm79Sg9gq+YJWetKsWSlQb4pMEx6h+eIgXb8IhRWFNKKyGEEHeWCkiMjUXj0HnpiCMVNCY34gSoJVudnnk9HHVfM5BTe2/3SmtGdXyddNS8iI77HnucdNQ8pOe9HW2PfZ7Pyjco1Vq2PFsn0nncO+qaex0lzeVYi22N3+WIMMLRE+RfPMIx2j1ndsee83hVz6PzejjaO0Dvfh/F2zp09HNUcoFWXx6BzHfHeSzl/Toe0dH2naTvvm2N03Gc45X7EXXddKQjHekYlX9wJIQQQmbnDaQm3OKgIwAA
+   H4sIAAAAAAAAC+2WQQ6EIAxFu2Q7uzmKR+CKbjyrMbFJMyOlOFJK5i9eTKQtPCyRjYg2AAAA7qwKlhgZa42zzgtHO1mBY5JAiy2NyfyWeT0ceV+TIUd7L/eKa0Z1XG46cl5ER9lrR+zrpiPnab0+ylH22PF8K9+gVGs982SdSOfx05HX3OqYaS5HLbY2PsrRQg9HTyz/4h6O0e45szu2nMenet46r4ejvAO07vdVvKwDRz9HJhWo9eUVlvlGnMdS3q/jER1l32X67tvaOBz7OT65H1HXDUc4whGOUfkHRwAAAGB2dmXfISagIwAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="57" height="40">
@@ -26,12 +26,12 @@
  <objectgroup name="Object Layer 1">
   <object id="49" name="stairs_left" type="Target" x="336" y="176" width="16" height="16"/>
   <object id="50" name="stairs_right" type="Target" x="560" y="176" width="16" height="16"/>
-  <object id="51" name="tele" type="Event" x="336" y="192" width="16" height="16">
+  <object id="51" name="tele" type="Event" x="336" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath04.tmx', 'stairs_left')"/>
    </properties>
   </object>
-  <object id="52" name="tele" type="Event" x="560" y="192" width="16" height="16">
+  <object id="52" name="tele" type="Event" x="560" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath04.tmx', 'stairs_right')"/>
    </properties>
@@ -99,7 +99,7 @@
   </object>
   <object id="66" name="chest" type="Chest" x="176" y="160" width="16" height="16">
    <properties>
-    <property name="item" value="pot_cross"/>
+    <property name="item" value="item_cross"/>
    </properties>
   </object>
   <object id="67" name="chest" type="Chest" x="176" y="192" width="16" height="16">
@@ -120,28 +120,12 @@
     <property name="onInteract" value="sceneSwitch('sarnath_guard01', true); play('world4/sarnath_guard.lua')"/>
    </properties>
   </object>
-  <object id="70" name="guard02" type="Character" x="384" y="352" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_demon"/>
-    <property name="face" value="NORTH"/>
-    <property name="hide" value="return getSwitch('sarnath_guard02')"/>
-    <property name="onInteract" value="sceneSwitch('sarnath_guard02', true); play('world4/sarnath_guard.lua')"/>
-   </properties>
-  </object>
   <object id="71" name="guard03" type="Character" x="512" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return getSwitch('sarnath_guard03')"/>
     <property name="onInteract" value="sceneSwitch('sarnath_guard03', true); play('world4/sarnath_guard.lua')"/>
-   </properties>
-  </object>
-  <object id="73" name="guard04" type="Character" x="608" y="176" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_demon"/>
-    <property name="face" value="WEST"/>
-    <property name="hide" value="return getSwitch('sarnath_guard04')"/>
-    <property name="onInteract" value="sceneSwitch('sarnath_guard04', true); play('world4/sarnath_guard.lua')"/>
    </properties>
   </object>
   <object id="74" name="demon01" type="Character" x="336" y="448" width="16" height="16">
@@ -170,6 +154,18 @@
     <property name="appearance" value="4dir_itamor"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return getSwitch('itamor_freed')"/>
+   </properties>
+  </object>
+  <object id="80" name="trigger" type="Event" x="336" y="432" width="80" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('itamor01')"/>
+    <property name="onCollide" value="play('world4/itamor01.lua')"/>
+   </properties>
+  </object>
+  <object id="83" name="trigger" type="Event" x="400" y="448" width="16" height="64">
+   <properties>
+    <property name="hide" value="return getSwitch('itamor01')"/>
+    <property name="onCollide" value="play('world4/itamor01.lua')"/>
    </properties>
   </object>
  </objectgroup>

@@ -93,7 +93,7 @@
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="WEST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('The contagion on the surface increases mutans\'s power. How can you stand being up here?')"/>
+    <property name="onInteract" value="speak('The contagion on the surface increases mutants\'s power, even if it makes humans sick.')"/>
    </properties>
   </object>
   <object id="99" name="npc" type="Character" x="240" y="416" width="16" height="16">

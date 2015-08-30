@@ -3,6 +3,7 @@
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Excaliber Town"/>
+  <property name="preservesTransform" value="true"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
