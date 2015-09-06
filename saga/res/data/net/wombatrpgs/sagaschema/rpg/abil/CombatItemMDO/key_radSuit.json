@@ -1,0 +1,21 @@
+{
+	"key" : "key_radSuit",
+	"subfolder" : "key",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "RAD SUIT",
+	"itemDescription" : "While in inventory prevents ambient damage",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectNothingMDO",
+		"key" : "anon_CombatItemMDO_-871225491"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

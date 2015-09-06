@@ -11,7 +11,7 @@ shake(.5)
 
 sceneSwitch('missile_bars_1', true)
 wait(.15)
-sceneSwitch('missile_bars_1', true)
+sceneSwitch('missile_bars_2', true)
 wait(.15)
 
 face('hero', 'NORTH')

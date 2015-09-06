@@ -42,6 +42,7 @@ public class CharConverter {
 	 * @return					The converted version of the string
 	 */
 	public String convert(String input) {
+		if (input == null) return null;
 		String result = input;
 		for (SpecialCharacterMDO charMDO : mdo.codes) {
 			result = result.replace(

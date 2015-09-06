@@ -6,7 +6,7 @@
 	"abilityName" : "TELEPORT",
 	"itemDescription" : "Teleports to visited locations",
 	"type" : "ABILITY",
-	"uses" : 0,
+	"uses" : 5,
 	"cost" : 0,
 	"anim" : "None",
 	"equip" : [ ],

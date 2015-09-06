@@ -7,6 +7,10 @@
 package net.wombatrpgs.saga.lua;
 
 import net.wombatrpgs.mgne.core.MGlobal;
+import net.wombatrpgs.mgne.maps.Level;
+import net.wombatrpgs.mgne.maps.events.MapEvent;
+import net.wombatrpgs.mgne.maps.objects.TimerListener;
+import net.wombatrpgs.mgne.maps.objects.TimerObject;
 import net.wombatrpgs.mgne.scenes.SceneCommand;
 import net.wombatrpgs.mgne.scenes.SceneLib;
 
@@ -30,26 +34,34 @@ public class SceneScreenShake extends VarArgFunction {
 		SceneLib.addFunction(new SceneCommand() {
 			
 			int power;
+			Level map;
+			MapEvent event;
 
 			@Override protected void internalRun() {
-				timeToWait = args.arg(1).tofloat();
 				if (args.narg() >= 2) {
 					power = args.arg(2).checkint();
 				} else {
 					power = MAX_POWER_PIXELS;
 				}
-			}
-
-			/** @see net.wombatrpgs.mgne.scenes.SceneCommand#update(float) */
-			@Override public void update(float elapsed) {
-				super.update(elapsed);
-				shake(power);
-			}
-
-			/** @see net.wombatrpgs.mgne.scenes.SceneCommand#finish() */
-			@Override protected void finish() {
-				shake(0);
-				super.finish();
+				if (args.narg() >= 3 && args.arg(3).checkboolean()) {
+					timeToWait = args.arg(1).tofloat();
+				}
+				
+				map = MGlobal.levelManager.getActive();
+				event = new MapEvent() {
+					@Override public void update(float elapsed) {
+						super.update(elapsed);
+						shake(power);
+					}
+				};
+				map.addEvent(event);
+				
+				new TimerObject(args.arg(1).tofloat(), parent.getScreen(), new TimerListener() {
+					@Override public void onTimerZero(TimerObject source) {
+						map.removeEvent(event);
+						shake(0);
+					}
+				});
 			}
 
 			private void shake(int offsetPower) {

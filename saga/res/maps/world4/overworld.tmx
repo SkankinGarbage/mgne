@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="94">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="96">
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
@@ -38,6 +38,7 @@
   </object>
   <object id="77" name="radiation" type="Event" x="656" y="896" width="16" height="16">
    <properties>
+    <property name="hide" value="return hasItem('key_radSuit')"/>
     <property name="onTurn" value="if (getAvatar().terrainType() == 147) then play('world4/radiation.lua'); playScene(); end"/>
    </properties>
   </object>
@@ -99,6 +100,17 @@
    <properties>
     <property name="hide" value="return not getSwitch('jonas02') or getSwitch('jonas03')"/>
     <property name="onCollide" value="play('world4/jonas03.lua')"/>
+   </properties>
+  </object>
+  <object id="94" name="missile" type="Event" x="1152" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/missile01.tmx', 'entry', 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="95" name="autostart" type="Event" x="1168" y="224" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('sekhmet_dead')"/>
+    <property name="onEnter" value="play('world4/missile_reset.lua')"/>
    </properties>
   </object>
  </objectgroup>

@@ -69,6 +69,19 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 	/** Tile-based positioning */
 	protected int tileX, tileY;
 	protected int tileWidth, tileHeight;
+	
+	/**
+	 * Creates a blank event. Not meant to be used normally, but can be helpful
+	 * for subclasses or anonymous events.
+	 */
+	public MapEvent() {
+		zeroCoords();
+		
+		tileWidth = 1;
+		tileHeight = 1;
+		
+		toNextBehavior = MGlobal.rand.nextFloat() * BEHAVIOR_MAX_DELAY;
+	}
 
 	/**
 	 * Creates a new map event from data.
@@ -77,9 +90,8 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 	public MapEvent(EventMDO mdo) {
 		super();
 		this.mdo = mdo;
-		
-		zeroCoords();
 		regenerateLua();
+		
 		if (mdo.passable == null) {
 			mdo.passable = PassabilityType.PASSABLE;
 		}
@@ -115,8 +127,6 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 		}
 		
 		eventHidden = mdo.hidden == DisplayType.HIDDEN;
-		
-		toNextBehavior = MGlobal.rand.nextFloat() * BEHAVIOR_MAX_DELAY;
 	}
 	
 	/** @param tileX The new x-coord of this event (in tiles) */
@@ -155,7 +165,7 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 	/** @return True if the object is passable, false otherwise */
 	public boolean isPassable() {
 		if (isHidden()) return true;
-		if (mdo.passable != PassabilityType.PASSABLE) return false;
+		if (mdo != null && mdo.passable != PassabilityType.PASSABLE) return false;
 		return appearance == null;
 	}
 	
@@ -408,7 +418,7 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 	 * @return					True if an interaction happened, false if none
 	 */
 	public boolean onInteract() {
-		if (mdoHasProperty(mdo.onInteract)) {
+		if (mdo != null && mdoHasProperty(mdo.onInteract)) {
 			faceToward(MGlobal.getHero());
 			runScene(onInteract);
 			return true;
@@ -699,7 +709,7 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 	 * @return					The scene parser from the script, or null
 	 */
 	protected SceneParser mdoToScene(String lua) {
-		if (mdoHasProperty(lua) && lua.length() > 0) {
+		if (mdo != null && mdoHasProperty(lua) && lua.length() > 0) {
 			SceneParser scene = new StringSceneParser(lua, toLua());
 			assets.add(scene);
 			return scene;

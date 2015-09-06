@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="32" tilewidth="16" tileheight="16" nextobjectid="79">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="32" tilewidth="16" tileheight="16" nextobjectid="84">
  <properties>
   <property name="bgm" value="ffl2_burning_blood"/>
   <property name="encounter" value="encounterset_level09_danger02"/>
@@ -60,7 +60,7 @@
     <property name="onBehavior" value="this.wander()"/>
    </properties>
   </object>
-  <object id="77" name="trigger" type="Event" x="176" y="272" width="16" height="16">
+  <object id="77" name="trigger" type="Event" x="176" y="256" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('missile04')"/>
     <property name="onCollide" value="play('world4/missile04.lua')"/>
@@ -68,8 +68,12 @@
   </object>
   <object id="78" name="auto" type="Event" x="208" y="272" width="16" height="16">
    <properties>
-    <property name="hide" value="return getSwitch('missile04')"/>
-    <property name="onBehavior" value="play(world4/missile_ambient.lua')"/>
+    <property name="onBehavior" value="play('world4/missile_ambient02.lua'); playScene()"/>
+   </properties>
+  </object>
+  <object id="83" name="auto" type="Event" x="224" y="256" width="16" height="16">
+   <properties>
+    <property name="onBehavior" value="play('world4/missile_ambient01.lua'); playScene()"/>
    </properties>
   </object>
  </objectgroup>

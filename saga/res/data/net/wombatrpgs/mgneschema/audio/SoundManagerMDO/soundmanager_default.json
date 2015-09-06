@@ -51,6 +51,10 @@
 		{
 			"key" : "ding",
 			"file" : "ffl1_01_ding.wav"
+		},
+		{
+			"key" : "roar",
+			"file" : "ffl1_29_roar.wav"
 		}
 	],
 	"emuMusicEntries" : [

@@ -11,14 +11,14 @@ shake(.5)
 
 sceneSwitch('missile_bars_1', true)
 wait(.15)
-sceneSwitch('missile_bars_1', true)
+sceneSwitch('missile_bars_2', true)
 wait(.15)
 
 face('hero', 'NORTH')
 speak("Jonas", "What??")
 
-walk('guard1', 'NORTH', 6, false)
-walk('guard2', 'NORTH', 6)
+walk('guard1', 6, 'NORTH', false)
+walk('guard2', 6, 'NORTH')
 
 speak(hero2, "We're trapped!")
 speak(hero1, "Jonas, what is this place?")

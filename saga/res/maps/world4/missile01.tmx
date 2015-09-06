@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="34" tilewidth="16" tileheight="16" nextobjectid="69">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="34" tilewidth="16" tileheight="16" nextobjectid="73">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level09_danger02"/>
@@ -32,13 +32,13 @@
   </object>
   <object id="56" name="guard1" type="Character" x="240" y="240" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_got"/>
+    <property name="appearance" value="4dir_horse"/>
     <property name="hide" value="return getSwitch('missile02')"/>
    </properties>
   </object>
   <object id="58" name="guard2" type="Character" x="288" y="240" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_got"/>
+    <property name="appearance" value="4dir_horse"/>
     <property name="hide" value="return getSwitch('missile02')"/>
    </properties>
   </object>
@@ -63,13 +63,20 @@
   <object id="67" name="gate" type="Event" x="256" y="256" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
-    <property name="hide" value="return getSwitch('missile_bars_1')"/>
+    <property name="hide" value="return not getSwitch('missile_bars_1')"/>
    </properties>
   </object>
   <object id="68" name="gate" type="Event" x="272" y="256" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
-    <property name="hide" value="return getSwitch('missile_bars_2')"/>
+    <property name="hide" value="return not getSwitch('missile_bars_2')"/>
+   </properties>
+  </object>
+  <object id="71" name="chest" type="Chest" x="160" y="192" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('sekhmet_dead')"/>
+    <property name="item" value="key_radSuit"/>
+    <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
  </objectgroup>

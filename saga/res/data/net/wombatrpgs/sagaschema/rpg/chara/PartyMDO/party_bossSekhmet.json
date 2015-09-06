@@ -1,0 +1,20 @@
+{
+	"key" : "party_bossSekhmet",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"monster" : "enemy_brn09_IMMOLATOR",
+			"count" : 1
+		},
+		{
+			"monster" : "enemy_bossSekhmet",
+			"count" : 1
+		},
+		{
+			"monster" : "enemy_brn09_IMMOLATOR",
+			"count" : 1
+		}
+	]
+}

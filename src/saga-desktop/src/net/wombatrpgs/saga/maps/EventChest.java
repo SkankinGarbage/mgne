@@ -154,7 +154,7 @@ public class EventChest extends MapEvent {
 	 * Sets appearance based on switch status.
 	 */
 	protected void setAppearance() {
-		if (MGlobal.memory.getSwitch(switchName)) {
+		if (chestOpened()) {
 			setAppearance(openSprite);
 		} else if (!invisible) {
 			setAppearance(closedSprite);
