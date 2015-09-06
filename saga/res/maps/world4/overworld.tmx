@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="89">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="94">
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
@@ -14,7 +14,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="92" height="79">
@@ -75,6 +75,30 @@
    <properties>
     <property name="hide" value="return getSwitch('itamor02') or not getSwitch('itamor01')"/>
     <property name="onEnter" value="play('world4/itamor02.lua')"/>
+   </properties>
+  </object>
+  <object id="89" name="trigger" type="Event" x="1040" y="304" width="64" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('jonas02') or getSwitch('jonas03')"/>
+    <property name="onCollide" value="play('world4/jonas03.lua')"/>
+   </properties>
+  </object>
+  <object id="90" name="trigger" type="Event" x="1088" y="320" width="16" height="48">
+   <properties>
+    <property name="hide" value="return not getSwitch('jonas02') or getSwitch('jonas03')"/>
+    <property name="onCollide" value="play('world4/jonas03.lua')"/>
+   </properties>
+  </object>
+  <object id="92" name="trigger" type="Event" x="1104" y="352" width="176" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('jonas02') or getSwitch('jonas03')"/>
+    <property name="onCollide" value="play('world4/jonas03.lua')"/>
+   </properties>
+  </object>
+  <object id="93" name="trigger" type="Event" x="1040" y="144" width="16" height="160">
+   <properties>
+    <property name="hide" value="return not getSwitch('jonas02') or getSwitch('jonas03')"/>
+    <property name="onCollide" value="play('world4/jonas03.lua')"/>
    </properties>
   </object>
  </objectgroup>

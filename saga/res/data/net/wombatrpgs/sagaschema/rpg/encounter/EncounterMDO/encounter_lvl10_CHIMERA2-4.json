@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl10_CHIMERA2-4",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_got10_CHIMERA",
+			"amount" : "2-4"
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"key" : "chara_jonas",
+	"subfolder" : "npcs",
+	"name" : "Jonas",
+	"description" : "",
+	"gender" : "MALE",
+	"race" : "HUMAN",
+	"family" : "None",
+	"species" : "",
+	"appearance" : "4dir_jonas",
+	"portrait" : "None",
+	"meatEatLevel" : 0,
+	"meatTargetLevel" : 0,
+	"gp" : 0,
+	"loot" : "None",
+	"equipped" : [
+		"wpn_swordDefend",
+		"wpn_gunLaser",
+		"wpn_cannonBazooka",
+		"shield_mirror",
+		"body_dragon",
+		"hand_samurai",
+		"helm_samurai"
+	],
+	"stats" : {
+		"hp" : 600,
+		"mhp" : 600,
+		"str" : 68,
+		"def" : 0,
+		"agi" : 52,
+		"mana" : 0,
+		"flags" : [
+			"EQUIPMENT_FIX"
+		]
+	}
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="32" tilewidth="16" tileheight="16" nextobjectid="83">
+ <properties>
+  <property name="bgm" value="ffl2_burning_blood"/>
+  <property name="encounter" value="encounterset_level09_danger02"/>
+  <property name="name" value="Missile Base"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="50" height="32">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2VUQ6CMAyGewXeOIp38Coeg1fgACBnlSVrbLrVUeI6MX34EldDt1/7sQ0ANsdxnD9nEpC+P/qcNavAuDMr6kirHIPAsvNU1JFfy3GWlo4M7HNuLdVzPQLWzszxDDj39whfS/WR9Zgg9cciB846zv0jwtdSfWE9Vkj9sfaDnhd/b54jV2/hzO1gDg2f/KmRI8xuB6l7dC9thlwPpKv0X4TZ7eF9n6GT1HNtDu453a+vlIPfZ9RJyesS3HNrp3N80w+rHLnaVXKUsl05B72rz+agPVrlOHv20nvYcziO4ziOjheOYuJLABkAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="50" height="32">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAAAAwJcBSxPzAQAZAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="69" name="tele" type="Event" x="608" y="256" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/missile05.tmx', 'door1')"/>
+   </properties>
+  </object>
+  <object id="70" name="door2" type="Target" x="608" y="240" width="16" height="16"/>
+  <object id="71" name="tele" type="Event" x="176" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/missile03.tmx', 'door1')"/>
+   </properties>
+  </object>
+  <object id="72" name="door1" type="Target" x="176" y="240" width="16" height="16"/>
+  <object id="78" name="auto" type="Event" x="208" y="272" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('missile04')"/>
+    <property name="onBehavior" value="play(world4/missile_ambient.lua')"/>
+   </properties>
+  </object>
+  <object id="79" name="trigger" type="Event" x="256" y="256" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="sceneSwitch('missile_door01', true); play('world4/missile_ambient.lua')"/>
+   </properties>
+  </object>
+  <object id="81" name="trigger" type="Event" x="256" y="176" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="sceneSwitch('missile_door02', true); play('world4/missile_ambient.lua')"/>
+   </properties>
+  </object>
+  <object id="82" name="trigger" type="Event" x="528" y="176" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="sceneSwitch('missile_door03', true); play('world4/missile_ambient.lua')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="50" height="32">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAAAAwJcBSxPzAQAZAAA=
+  </data>
+ </layer>
+</map>
