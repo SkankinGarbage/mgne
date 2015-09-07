@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="54" height="36" tilewidth="16" tileheight="16" nextobjectid="66">
+ <properties>
+  <property name="bgm" value="ffl3_dark"/>
+  <property name="encounter" value="encounterset_level09_danger01"/>
+  <property name="name" value="Dagon"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="54" height="36">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2XMQ7CMAxF2zIlJ+MYbHQCDsLExm1ZiBR9fbsJTepSeXhL5KZ+Smy38zAMs+M4jnNY7hvS4v2lXqcKxpXcIMfHD3tcO3s9gUjWSnM9A2x/K6+g5BIIR/BCt+mL5KWdfW+vRCRnEQtiJyEuZljUF8v3BUjxySvdR3wuKntZ3EOWC7tPccFLWtu71/hnXm9A88r7InuOrW1VXzU9A8nPi/UNq7nM/GrmkNQP035W95DlUusl3WnL+mKglzar9+g1ATibpO8lrC/Ny7Jv5PWvwby1+pK4FDq18kKCsC6xFF97Vq3rq+S82GzAObH227C1V+5XE1s6+6y9eoH/2xo1Xo7jOI7j9OUDRdtSm2AeAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="54" height="36">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3UMQ6AIBBEUTiG9z+XwcpwDCy2NzRi2PeS3081pQAAwLfup756BKmc0awr+rOjrl4AvGnRbvwPAADkNACijFlxYB4AAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="52" name="entry" type="Target" x="192" y="336" width="16" height="16"/>
+  <object id="54" name="tele" type="Event" x="160" y="128" width="16" height="320">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'dagon')"/>
+   </properties>
+  </object>
+  <object id="61" name="tele" type="Event" x="176" y="432" width="512" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/overworld.tmx', 'dagon')"/>
+   </properties>
+  </object>
+  <object id="62" name="weapon" type="Target" x="336" y="272" width="16" height="16"/>
+  <object id="63" name="tele" type="Event" x="336" y="256" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/dagon02.tmx', 'weapon')"/>
+   </properties>
+  </object>
+  <object id="64" name="tele" type="Event" x="624" y="336" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/dagon02.tmx', 'inn')"/>
+   </properties>
+  </object>
+  <object id="65" name="inn" type="Target" x="624" y="352" width="16" height="16"/>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="54" height="36">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BgQAAAADDoPlTH+ECVQEAAAAAAADAN083ew9gHgAA
+  </data>
+ </layer>
+</map>

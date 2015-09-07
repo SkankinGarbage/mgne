@@ -1,0 +1,21 @@
+{
+	"key" : "ring_diamond",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$VDIAMOND",
+	"itemDescription" : "Resists curse, stone, and blind",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 5000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-1818589988"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

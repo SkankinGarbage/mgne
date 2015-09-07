@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="96">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="98">
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
@@ -14,7 +14,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="92" height="79">
@@ -22,7 +22,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3aMQ6CQBAFUEi8hyfRknvT2noGr2BtjCEhhCgizLq77zVTESafYZudpgEAAGCtrk3dAQAAAADk45K6AYCMXVM3UKlTO1/Hzu18ZR2Zx5F1PJnHyS3rW7pXbya3zPdUwveszbv5XTK3vz5fozWZjf8tmS8XOd926V6cKXFkHU/mAAAAAADf6Rv705GeWfepm2AT99QN/JlPuyhH9yoU5JDhPA/7EtPKfmQdp5vc4ct8f+Y7jvMbAAAAAKBMD9QGusqQcQAA
+   H4sIAAAAAAAAC+3aMQ6CQBAFUEi8hyfRknvT2noGr2BtjCEhhCgizLq77zVTESafYZudpgEAAIC8dG3qDgAAAABY45K6AYCMXVM3UKlTO1/Hzu18ZR2Zx5F1PJnHyS3rW7pXbya3zPdUwveszbv5XTK3vz5fozWZjf8tmS8XOd92ul6cKXFkHU/mAAAAAADf6Rv705GeWfepm2AT99QN/JlPuyhH9yoU5JDhPA/7EtPKfmQdp5vc4ct8f+Y7jvMbAAAAAKBMD06b0nmQcQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -111,6 +111,16 @@
    <properties>
     <property name="hide" value="return getSwitch('sekhmet_dead')"/>
     <property name="onEnter" value="play('world4/missile_reset.lua')"/>
+   </properties>
+  </object>
+  <object id="96" name="desert" type="Event" x="1280" y="496" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/desert_cave.tmx', 'entry', 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="97" name="illusive" type="Event" x="432" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/dagon01.tmx', 'entry', 'EAST')"/>
    </properties>
   </object>
  </objectgroup>
