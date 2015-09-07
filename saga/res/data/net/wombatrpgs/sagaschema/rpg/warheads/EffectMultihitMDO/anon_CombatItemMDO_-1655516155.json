@@ -4,12 +4,12 @@
 	"name" : "anon_CombatItemMDO_-1655516155",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
-	"damType" : "WEAPON",
+	"damType" : "PHYSICAL",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],
 	"power" : 4,
-	"hits" : "1,2",
+	"hits" : "2,1,1",
 	"attackStat" : "STR",
 	"defendStat" : "DEF"
 }

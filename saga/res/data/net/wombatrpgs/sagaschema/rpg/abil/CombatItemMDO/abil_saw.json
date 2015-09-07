@@ -1,0 +1,21 @@
+{
+	"key" : "abil_saw",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "SAW",
+	"itemDescription" : "Inflicts death based on user strength",
+	"type" : "ABILITY",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_saw",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-1931679703"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

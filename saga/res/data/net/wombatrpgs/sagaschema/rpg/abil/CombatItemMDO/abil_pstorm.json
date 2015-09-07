@@ -1,0 +1,21 @@
+{
+	"key" : "abil_pstorm",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "PSN STORM",
+	"itemDescription" : "Inflicts poison on a party",
+	"type" : "ITEM",
+	"uses" : 5,
+	"cost" : 0,
+	"anim" : "banim_spell",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_653739444"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

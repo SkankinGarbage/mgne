@@ -5,22 +5,27 @@
 	"description" : "Converted from a report",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_gun",
+	"family" : "None",
 	"species" : "COMMANDO",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/gun.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"loot" : null,
-	"equipped" : [ ],
+	"loot" : "wpn_gunLaser",
+	"equipped" : [
+		"wpn_gunLaser",
+		"wpn_ewhip",
+		"wpn_lsaber",
+		"abil_othunder"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 606,
+		"mhp" : 606,
+		"str" : 75,
+		"def" : 68,
+		"agi" : 71,
+		"mana" : 0,
+		"flags" : [ ]
 	}
 }

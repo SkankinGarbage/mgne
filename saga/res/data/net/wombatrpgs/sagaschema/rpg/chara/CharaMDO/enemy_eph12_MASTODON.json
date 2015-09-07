@@ -8,18 +8,24 @@
 	"family" : "mfamily_eph",
 	"species" : "MASTODON",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/eph.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_2tusk",
+		"abil_kick",
+		"abil_bash",
+		"abil_oice"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 666,
+		"mhp" : 666,
+		"str" : 90,
+		"def" : 78,
+		"agi" : 56,
+		"mana" : 54,
+		"flags" : [ ]
 	}
 }

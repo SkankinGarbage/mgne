@@ -8,18 +8,27 @@
 	"family" : "mfamily_zom",
 	"species" : "MUMMY",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/zom.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_pfang",
+		"abil_drain",
+		"abil_touch",
+		"abil_xfire"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 729,
+		"mhp" : 729,
+		"str" : 66,
+		"def" : 40,
+		"agi" : 62,
+		"mana" : 60,
+		"flags" : [
+			"UNDEAD"
+		]
 	}
 }

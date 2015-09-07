@@ -8,18 +8,26 @@
 	"family" : "mfamily_elf",
 	"species" : "UNDINE",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/elf.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_ice",
+		"abil_tremble",
+		"abil_touch",
+		"abil_whirl",
+		"abil_oice",
+		"abil_xfire"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 566,
+		"mhp" : 566,
+		"str" : 60,
+		"def" : 58,
+		"agi" : 80,
+		"mana" : 94,
+		"flags" : [ ]
 	}
 }

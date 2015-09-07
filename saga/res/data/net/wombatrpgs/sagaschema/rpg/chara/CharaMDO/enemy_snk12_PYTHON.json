@@ -8,18 +8,25 @@
 	"family" : "mfamily_snk",
 	"species" : "PYTHON",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/snk.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_bite",
+		"abil_constrict",
+		"abil_5heads",
+		"abil_bash",
+		"abil_ostone"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 666,
+		"mhp" : 666,
+		"str" : 82,
+		"def" : 64,
+		"agi" : 64,
+		"mana" : 66,
+		"flags" : [ ]
 	}
 }

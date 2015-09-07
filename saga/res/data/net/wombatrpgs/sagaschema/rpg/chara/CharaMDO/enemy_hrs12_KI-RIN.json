@@ -8,18 +8,26 @@
 	"family" : "mfamily_hrs",
 	"species" : "KI-RIN",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/hrs.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_kick",
+		"abil_esp",
+		"abil_burning",
+		"abil_teleport",
+		"abil_ofire",
+		"abil_opara"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 606,
+		"mhp" : 606,
+		"str" : 80,
+		"def" : 61,
+		"agi" : 72,
+		"mana" : 80,
+		"flags" : [ ]
 	}
 }

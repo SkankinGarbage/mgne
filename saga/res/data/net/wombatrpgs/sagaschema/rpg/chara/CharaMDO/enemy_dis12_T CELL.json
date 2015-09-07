@@ -8,18 +8,26 @@
 	"family" : "mfamily_dis",
 	"species" : "T CELL",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/dis.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_dissolve",
+		"abil_melt",
+		"abil_poison",
+		"abil_armor",
+		"abil_opoison",
+		"abil_ostone"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 666,
+		"mhp" : 666,
+		"str" : 48,
+		"def" : 52,
+		"agi" : 60,
+		"mana" : 88,
+		"flags" : [ ]
 	}
 }

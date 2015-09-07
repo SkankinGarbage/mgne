@@ -8,18 +8,25 @@
 	"family" : "mfamily_pnx",
 	"species" : "COCKATRICE",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/pnx.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_sgaze",
+		"abil_sskin",
+		"abil_ostone",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 606,
+		"mhp" : 606,
+		"str" : 57,
+		"def" : 55,
+		"agi" : 61,
+		"mana" : 77,
+		"flags" : [ ]
 	}
 }

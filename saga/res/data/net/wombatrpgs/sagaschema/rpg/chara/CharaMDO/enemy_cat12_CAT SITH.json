@@ -8,18 +8,25 @@
 	"family" : "mfamily_cat",
 	"species" : "CAT SITH",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/cat.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_bite",
+		"abil_cgaze",
+		"abil_dgaze",
+		"abil_warning"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 606,
+		"mhp" : 606,
+		"str" : 76,
+		"def" : 60,
+		"agi" : 85,
+		"mana" : 70,
+		"flags" : [ ]
 	}
 }

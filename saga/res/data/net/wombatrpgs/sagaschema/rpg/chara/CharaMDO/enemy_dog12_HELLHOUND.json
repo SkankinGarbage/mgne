@@ -8,18 +8,25 @@
 	"family" : "mfamily_dog",
 	"species" : "HELLHOUND",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/dog.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_bite",
+		"abil_flame",
+		"abil_stench",
+		"abil_gaze",
+		"abil_ofire"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 606,
+		"mhp" : 606,
+		"str" : 82,
+		"def" : 76,
+		"agi" : 76,
+		"mana" : 76,
+		"flags" : [ ]
 	}
 }

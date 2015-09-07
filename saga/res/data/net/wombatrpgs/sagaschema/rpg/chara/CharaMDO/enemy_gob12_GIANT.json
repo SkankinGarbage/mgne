@@ -12,14 +12,20 @@
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_punch",
+		"abil_kick",
+		"abil_ice",
+		"abil_thunder"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 666,
+		"mhp" : 666,
+		"str" : 88,
+		"def" : 65,
+		"agi" : 68,
+		"mana" : 60,
+		"flags" : [ ]
 	}
 }

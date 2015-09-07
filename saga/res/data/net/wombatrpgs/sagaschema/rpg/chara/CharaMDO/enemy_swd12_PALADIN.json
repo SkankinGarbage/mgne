@@ -5,22 +5,27 @@
 	"description" : "Converted from a report",
 	"gender" : "NONE",
 	"race" : "MONSTER",
-	"family" : "mfamily_swd",
+	"family" : "None",
 	"species" : "PALADIN",
 	"appearance" : "4dir_ffl2_human",
-	"portrait" : "battle_portraits/goblin.png",
+	"portrait" : "battle_portraits/swd.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 12,
 	"gp" : 2400,
-	"loot" : null,
-	"equipped" : [ ],
+	"loot" : "wpn_swordDragon",
+	"equipped" : [
+		"wpn_swordDragon",
+		"wpn_swordDefend",
+		"wpn_swordSun",
+		"shield_mirror"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 606,
+		"mhp" : 606,
+		"str" : 82,
+		"def" : 68,
+		"agi" : 70,
+		"mana" : 20,
+		"flags" : [ ]
 	}
 }
