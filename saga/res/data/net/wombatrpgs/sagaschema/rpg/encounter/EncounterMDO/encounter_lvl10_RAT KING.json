@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl10_RAT KING",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rat10_RAT KING",
+			"amount" : "1"
+		}
+	]
+}

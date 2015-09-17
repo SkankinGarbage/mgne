@@ -1,0 +1,41 @@
+{
+	"key" : "encounterset_level10_danger00",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl10_THUNDER",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl10_RAT KING",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl10_PUDDING",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl10_DEMON LORD",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl10_KILLER BEE_GORGON",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl10_RAT KING2-4_PUDDING",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl10_SAMURAI_GORGON_THUNDER",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl10_WEREWOLF1-2_CHIMERA0-1",
+			"weight" : 12
+		}
+	],
+	"steps" : 42
+}

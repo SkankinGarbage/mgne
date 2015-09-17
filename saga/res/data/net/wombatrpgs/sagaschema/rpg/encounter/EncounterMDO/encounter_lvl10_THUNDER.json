@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl10_THUNDER",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_pnx10_THUNDER",
+			"amount" : "1"
+		}
+	]
+}

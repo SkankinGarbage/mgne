@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl10_PATHOGEN1-2_KILLER BEE_UNICORN1-2",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dis10_PATHOGEN",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_fly10_KILLER BEE",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_hrs10_UNICORN",
+			"amount" : "1-2"
+		}
+	]
+}

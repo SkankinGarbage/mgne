@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl10_SAMURAI_GORGON_THUNDER",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_swd10_SAMURAI",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_tmp10_GORGON",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_pnx10_THUNDER",
+			"amount" : "1"
+		}
+	]
+}

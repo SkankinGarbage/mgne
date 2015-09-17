@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl10_RAT KING2-4_PUDDING",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rat10_RAT KING",
+			"amount" : "2-4"
+		},
+		{
+			"enemy" : "enemy_goo10_PUDDING",
+			"amount" : ""
+		}
+	]
+}

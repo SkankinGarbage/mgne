@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl10_PUDDING",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_goo10_PUDDING",
+			"amount" : "1"
+		}
+	]
+}

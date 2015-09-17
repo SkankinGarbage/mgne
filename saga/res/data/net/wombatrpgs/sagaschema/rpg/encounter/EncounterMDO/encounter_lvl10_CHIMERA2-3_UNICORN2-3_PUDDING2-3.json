@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl10_CHIMERA2-3_UNICORN2-3_PUDDING2-3",
+	"subfolder" : "level10",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_got10_CHIMERA",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_hrs10_UNICORN",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_goo10_PUDDING",
+			"amount" : "2-3"
+		}
+	]
+}
