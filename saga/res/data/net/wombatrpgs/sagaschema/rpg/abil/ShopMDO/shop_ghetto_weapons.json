@@ -1,0 +1,16 @@
+{
+	"key" : "shop_ghetto_weapons",
+	"subfolder" : "world4",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordBabel",
+		"wpn_lsaber",
+		"wpn_gunShock",
+		"wpn_gunTank",
+		"wpn_cannonMissile",
+		"hand_babel",
+		"body_babel",
+		"shoe_geta"
+	]
+}
