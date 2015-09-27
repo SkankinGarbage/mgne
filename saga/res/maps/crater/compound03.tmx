@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="33" tilewidth="16" tileheight="16" nextobjectid="99">
+ <properties>
+  <property name="bgm" value="ffl3_dark"/>
+  <property name="encounter" value="encounterset_level10_danger02"/>
+  <property name="name" value="Sarnath"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="33" height="33">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2UwQrAIAiGfb8O69j7P8lOA2dZWhoFCv9hsE++iRMgSltlE3Ojw7PBoZDQyhNMONzrkFCkDiNmpaQOI6bVQ5qifH+WwUlQzzU5ML1wc7VmRv1aO27NhMM5DniH6TPXz4P5ittr61vdYk50oD0803PAdw6H3sEM/3uoZSQzOmEf6Dd4MJrb78WEQziEQx36L+M7xpU18wKnpqElBBEAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="33" height="33">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3VMQ6AIAyF4XIhGfXarp5OFuJCikVomvh/KzySQklF3jsNe79kNJdTxmp2nSM86sRjSyI5rc9o9nLWYTxvJANUXn2vZbz6Pvpf6d1ra312pndHrfUVmeiYF8B/MTfj4C1Q3TDR/NIEEQAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="71" name="npc" type="Character" x="64" y="448" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('crater/guard.lua')"/>
+    <property name="onInteract" value="play('crater/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="72" name="npc" type="Character" x="272" y="448" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('crater/guard.lua')"/>
+    <property name="onInteract" value="play('crater/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="73" name="npc" type="Character" x="480" y="448" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('crater/guard.lua')"/>
+    <property name="onInteract" value="play('crater/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="75" name="npc" type="Character" x="96" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="WEST"/>
+    <property name="onCollide" value="play('crater/guard.lua')"/>
+    <property name="onInteract" value="play('crater/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="78" name="block" type="Event" x="160" y="176" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="79" name="block" type="Event" x="192" y="176" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="80" name="block" type="Event" x="256" y="352" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="81" name="block" type="Event" x="256" y="320" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="82" name="block" type="Event" x="464" y="352" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="85" name="block" type="Event" x="464" y="320" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="86" name="block" type="Event" x="368" y="176" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="87" name="block" type="Event" x="400" y="176" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="88" name="npc" type="Character" x="336" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="EAST"/>
+    <property name="onCollide" value="play('crater/guard.lua')"/>
+    <property name="onInteract" value="play('crater/guard.lua')"/>
+   </properties>
+  </object>
+  <object id="89" name="left" type="Target" x="80" y="352" width="16" height="16"/>
+  <object id="90" name="right" type="Target" x="496" y="352" width="16" height="16"/>
+  <object id="91" name="tele" type="Event" x="288" y="368" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('crater/compound01.tmx', 'top_middle')"/>
+   </properties>
+  </object>
+  <object id="92" name="middle" type="Target" x="288" y="352" width="16" height="16"/>
+  <object id="93" name="tele" type="Event" x="80" y="368" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('crater/compound01.tmx', 'top_left')"/>
+   </properties>
+  </object>
+  <object id="94" name="tele" type="Event" x="496" y="368" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('crater/compound01.tmx', 'top_right')"/>
+   </properties>
+  </object>
+  <object id="95" name="back_left" type="Target" x="176" y="32" width="16" height="16"/>
+  <object id="96" name="back_right" type="Target" x="384" y="32" width="16" height="16"/>
+  <object id="97" name="tele" type="Event" x="384" y="16" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('crater/compound04.tmx', 'right')"/>
+   </properties>
+  </object>
+  <object id="98" name="tele" type="Event" x="176" y="16" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('crater/compound04.tmx', 'left')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="33" height="33">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAMC/ASB3lP8EEQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="33" height="33">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAMC/ASB3lP8EEQAA
+  </data>
+ </layer>
+</map>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="32" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="255">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="32" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="256">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Ghetto"/>
@@ -97,6 +97,13 @@
   <object id="254" name="tele" type="Event" x="96" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/town.tmx', 'weapons')"/>
+   </properties>
+  </object>
+  <object id="255" name="npc" type="Character" x="480" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('No weapon could harm Moloch. Well, maybe EXCALIBER...')"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="98">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="100">
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
@@ -14,7 +14,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="92" height="79">
@@ -33,6 +33,7 @@
   </object>
   <object id="76" name="barrier" type="Event" x="304" y="816" width="16" height="16">
    <properties>
+    <property name="hide" value="return hasItem('key_radSuit')"/>
     <property name="onCollide" value="play('world4/barrier.lua')"/>
    </properties>
   </object>
@@ -121,6 +122,16 @@
   <object id="97" name="illusive" type="Event" x="432" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/dagon01.tmx', 'entry', 'EAST')"/>
+   </properties>
+  </object>
+  <object id="98" name="ghetto" type="Event" x="256" y="864" width="32" height="32">
+   <properties>
+    <property name="onCollide" value="targetTele('crater/town.tmx', 'entry', 'WEST')"/>
+   </properties>
+  </object>
+  <object id="99" name="compound" type="Event" x="368" y="912" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('crater/compound.tmx', 'entry', 'WEST')"/>
    </properties>
   </object>
  </objectgroup>
