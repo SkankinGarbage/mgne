@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="63" tilewidth="16" tileheight="16" nextobjectid="119">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="63" tilewidth="16" tileheight="16" nextobjectid="121">
  <properties>
   <property name="bgm" value="ffl2_burning_blood"/>
   <property name="encounter" value="encounterset_level09_danger02"/>
@@ -145,7 +145,19 @@
   </object>
   <object id="118" name="trigger" type="Event" x="192" y="352" width="16" height="16">
    <properties>
-    <property name="hide" value="return getSwitch('jonas04')"/>
+    <property name="hide" value="return getSwitch('jonas04') or not hasItem('key_radSuit')"/>
+    <property name="onCollide" value="play('world4/jonas04.lua')"/>
+   </properties>
+  </object>
+  <object id="119" name="trigger" type="Event" x="208" y="368" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('jonas04') or not hasItem('key_radSuit')"/>
+    <property name="onCollide" value="play('world4/jonas04.lua')"/>
+   </properties>
+  </object>
+  <object id="120" name="trigger" type="Event" x="224" y="352" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('jonas04') or not hasItem('key_radSuit')"/>
     <property name="onCollide" value="play('world4/jonas04.lua')"/>
    </properties>
   </object>

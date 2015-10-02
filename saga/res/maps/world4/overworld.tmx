@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="100">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="101">
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
@@ -131,7 +131,12 @@
   </object>
   <object id="99" name="compound" type="Event" x="368" y="912" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('crater/compound.tmx', 'entry', 'WEST')"/>
+    <property name="onCollide" value="targetTele('crater/compound01.tmx', 'entry', 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="100" name="tower" type="Event" x="304" y="944" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('crater/tower01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>

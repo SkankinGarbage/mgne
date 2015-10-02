@@ -2,8 +2,8 @@
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="18" height="13" tilewidth="16" tileheight="16" nextobjectid="103">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
-  <property name="encounter" value="encounterset_level10_danger02"/>
-  <property name="name" value="Sarnath"/>
+  <property name="encounter" value="encounterset_level10_danger00"/>
+  <property name="name" value="Compound"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2thYGBoQcLIoIUEOVLUDjZz8GF/IPaGYnRzkOXwYZg5uAA+OVLUkmIOtcKHFHPQw2Sg451YtwqiqUX3B7FAggS16AAAGVLR8KgDAAA=
+   H4sIAAAAAAAAC2thYGBoQcLIoIUEOVLUDjZz8GF/IPaGYnRzkOXwYZg5uAA+OVLUkmIOtcKHFHPQw2Sg451YtwqiqUX3By45bzQ5CQbyAQAA2c1HqAMAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="18" height="13">

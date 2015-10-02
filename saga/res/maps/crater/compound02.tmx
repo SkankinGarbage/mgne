@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="33" tilewidth="16" tileheight="16" nextobjectid="90">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="33" tilewidth="16" tileheight="16" nextobjectid="91">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
-  <property name="encounter" value="encounterset_level10_danger02"/>
-  <property name="name" value="Sarnath"/>
+  <property name="encounter" value="encounterset_level10_danger00"/>
+  <property name="name" value="Compound"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
