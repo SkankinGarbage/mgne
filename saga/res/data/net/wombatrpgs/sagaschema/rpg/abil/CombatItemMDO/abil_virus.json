@@ -1,0 +1,21 @@
+{
+	"key" : "abil_virus",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "VIRUS",
+	"itemDescription" : "Inflicts confusion",
+	"type" : "ABILITY",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_gas",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-1670188858"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

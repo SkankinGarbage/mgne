@@ -14,7 +14,7 @@
 	"gp" : 400,
 	"loot" : "None",
 	"equipped" : [
-		"abil_acid",
+		"abil_2claw",
 		"abil_poison",
 		"abil_dskin",
 		"abil_xfire"

@@ -99,7 +99,7 @@
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="hide" value="return not getSwitch('elan_elder02')"/>
-    <property name="onInteract" value="speak('Seer', 'Don\'t fail me.')"/>
+    <property name="onInteract" value="speak('Seer', 'When you have the rest, come back to the forge. Don\'t fail me.')"/>
    </properties>
   </object>
   <object id="104" name="itamor" type="Character" x="448" y="400" width="16" height="16">

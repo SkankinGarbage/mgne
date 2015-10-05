@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="27" tilewidth="16" tileheight="16" nextobjectid="67">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="27" tilewidth="16" tileheight="16" nextobjectid="74">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level10_danger01"/>
@@ -28,6 +28,26 @@
   <object id="66" name="tele" type="Event" x="112" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/tower11.tmx', 'stairs')"/>
+   </properties>
+  </object>
+  <object id="67" name="moloch" type="Character" x="112" y="224" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_moloch"/>
+    <property name="hide" value="return not getSwitch('moloch_appears')"/>
+   </properties>
+  </object>
+  <object id="69" name="chest" type="Event" x="112" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_chest_closed"/>
+    <property name="hide" value="return getSwitch('crater_chest')"/>
+    <property name="onInteract" value="play('crater/boss.lua')"/>
+   </properties>
+  </object>
+  <object id="70" name="chest" type="Chest" x="112" y="384" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('crater_chest')"/>
+    <property name="item" value="key_excaliber3"/>
+    <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
  </objectgroup>
