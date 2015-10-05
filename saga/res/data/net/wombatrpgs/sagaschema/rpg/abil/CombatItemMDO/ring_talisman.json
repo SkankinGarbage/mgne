@@ -1,0 +1,21 @@
+{
+	"key" : "ring_talisman",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$VTALISMAN",
+	"itemDescription" : "Resists thunder and earth",
+	"type" : "ITEM",
+	"uses" : 0,
+	"cost" : 11000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-1218882741"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

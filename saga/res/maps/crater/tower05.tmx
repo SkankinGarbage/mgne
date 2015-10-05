@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="21" tilewidth="16" tileheight="16" nextobjectid="69">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="encounter" value="encounterset_level10_danger01"/>
+  <property name="name" value="Red Tower"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="15" height="21">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC5WT0Q3DIAxE3X3YBPKFv8IKzJCvDF5FstXrxSbtSSeRoGcfJhGJdYB/FTLbHzWQuaywXvHIqXnAOuOZG+YT1hnvzwqM+wU1lFjsiVw1M8/z86wVPM3Mc3bMOgMjz9kH1Z505in37M4W2nOXhC10ZtyrD32j7w4z89xqwGnSO5sZz7c98Cf1bMZd6pQ9mhtm7fLRLvc7P4jBM+7yLb/zFtTY7L2fMdKwPPjfeq++4DA//rfei3OuNMCZ3hQJrv3sBAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="15" height="21">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="56" name="entry" type="Event" x="208" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide">playSound('rebound');
+targetTele('world4/tower04.tmx', 'exit')</property>
+   </properties>
+  </object>
+  <object id="57" name="exit" type="Event" x="16" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide">playSound('rebound');
+targetTele('world4/tower06.tmx', 'entry')</property>
+   </properties>
+  </object>
+  <object id="68" name="teleport" type="Event" x="112" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide">playSound('rebound');
+targetTele('world4/tower04.tmx', 'teleport')</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="15" height="21">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="15" height="21">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
+  </data>
+ </layer>
+</map>

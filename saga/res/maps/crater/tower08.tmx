@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="21" tilewidth="16" tileheight="16" nextobjectid="63">
+ <properties>
+  <property name="bgm" value="ffl3_ruins"/>
+  <property name="encounter" value="encounterset_level10_danger01"/>
+  <property name="name" value="Red Tower"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="15" height="21">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC5WS0QkEIQxE3X7sRPdLv9YWrOG+LPwQDPsYotwNBEN0nIkmBB8fxK8g5/7jDnJmVOQnPu+vKxrynb76bCsG8p1/9TmcUP/UpM959pJ1558+E7Qi8rTxX7Hfhe/VqW0+O9aE6LLfwKW3K/hvxXqUns3bEM0k9SHvZFzz2kVT68bTNycvCl9nb/adHf/6v9zPizdR5M+8t2KPJbx4wjtzqq8zVNd5wmYuO3fcq249emjLD+fetMqBR/+ce9NSnyc0xA5fTy8RbOwEAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="15" height="21">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAUwYMBIvl5LCvSOglEwCmgPANM8LOfsBAAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="56" name="entry" type="Event" x="16" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide">playSound('rebound');
+targetTele('world4/tower07.tmx', 'exit')</property>
+   </properties>
+  </object>
+  <object id="57" name="exit" type="Event" x="208" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide">playSound('rebound');
+targetTele('world4/tower0.tmx', 'entry')</property>
+   </properties>
+  </object>
+  <object id="60" name="chest" type="Chest" x="112" y="240" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_xcure"/>
+   </properties>
+  </object>
+  <object id="61" name="tele_bottom" type="Event" x="112" y="208" width="16" height="16">
+   <properties>
+    <property name="onCollide">playSound('rebound');
+targetTele('world4/tower07.tmx', 'tele_bottom')</property>
+   </properties>
+  </object>
+  <object id="62" name="tele_top" type="Event" x="112" y="112" width="16" height="16">
+   <properties>
+    <property name="onCollide">playSound('rebound');
+targetTele('world4/tower07.tmx', 'tele_top')</property>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="15" height="21">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="15" height="21">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
+  </data>
+ </layer>
+</map>
