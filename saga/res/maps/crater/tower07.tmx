@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC5WTQQrEIAxFc6DepLpqV/UKnsGVBx8Khr7+iTIT+CjCy0+MmsXRoF+DTP4jB5lbJ/Yrntw5VLCf8cqVoY79jFeuB1KenuT2gN3B633Sr451m/hn8WT+Cm9du3hrrRU81wpvZ6PaVtqkZ/ediXXpu9N74sr+u71n2oRnbcxDT59pwlk02ypcGtwdh8wsuh/2eNgTl32/1yYMe7zsHf7eUpAjj3PvMYoy6uG/da9jwbF+/lv30jpXUaBZfAArQ7CP7AQAAA==
+   H4sIAAAAAAAAC5WTQQrEIAxFc6DepLpqV/UKnsGVBx8Khr7+iTITCIrw8n+MmsXRkL8GmfxHDTJ3ntiveHLnyIL9jFeujOzYz3jlepDKU5PcHrA7eL1P6tWxbhP9LJqsX6Gtaxdt9VrB6+razkbeVrlJz647S/rSd6f3xJV+u71n2oSnN9ahps804SyabRUuDe6OQ2YW3Q97POyJy77faxOGPV72Dn9vKaiRx7n3GEUZfvhvXetYcPTPf+ta6nMVBTmLD1olpDPsBAAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="15" height="21">
@@ -27,25 +27,25 @@
   <object id="56" name="entry" type="Event" x="208" y="160" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower06.tmx', 'exit')</property>
+targetTele('crater/tower06.tmx', 'exit')</property>
    </properties>
   </object>
   <object id="57" name="exit" type="Event" x="16" y="160" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower08.tmx', 'entry')</property>
+targetTele('crater/tower08.tmx', 'entry')</property>
    </properties>
   </object>
   <object id="68" name="tele_top" type="Event" x="112" y="112" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower08.tmx', 'tele_top')</property>
+targetTele('crater/tower08.tmx', 'tele_top')</property>
    </properties>
   </object>
   <object id="69" name="tele_bottom" type="Event" x="112" y="208" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower08.tmx', 'tele_bottom')</property>
+targetTele('crater/tower08.tmx', 'tele_bottom')</property>
    </properties>
   </object>
  </objectgroup>

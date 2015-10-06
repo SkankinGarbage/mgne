@@ -1,0 +1,21 @@
+{
+	"key" : "abil_acid",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "ACID",
+	"itemDescription" : "Inflicts poison",
+	"type" : "ABILITY",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_gas",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-990311901"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

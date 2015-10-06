@@ -106,18 +106,18 @@
   <object id="86" name="top_left" type="Target" x="240" y="224" width="16" height="16"/>
   <object id="87" name="tele" type="Event" x="464" y="208" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('crater/compound02.tmx', 'right')"/>
+    <property name="onCollide" value="targetTele('crater/compound03.tmx', 'right')"/>
    </properties>
   </object>
   <object id="88" name="top_middle" type="Target" x="352" y="224" width="16" height="16"/>
   <object id="89" name="tele" type="Event" x="352" y="208" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('crater/compound02.tmx', 'middle')"/>
+    <property name="onCollide" value="targetTele('crater/compound03.tmx', 'middle')"/>
    </properties>
   </object>
   <object id="90" name="tele" type="Event" x="240" y="208" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('crater/compound02.tmx', 'left')"/>
+    <property name="onCollide" value="targetTele('crater/compound03.tmx', 'left')"/>
    </properties>
   </object>
   <object id="91" name="top_right" type="Target" x="464" y="224" width="16" height="16"/>

@@ -55,7 +55,7 @@
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
-    <property name="onInteract" value="speak('The work is terrible but it beats dying above ground.')"/>
+    <property name="onInteract" value="speak('Our labor is terrible but it beats dying above ground.')"/>
    </properties>
   </object>
   <object id="111" name="npc" type="Character" x="176" y="320" width="16" height="16">

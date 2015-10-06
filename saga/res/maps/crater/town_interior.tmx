@@ -46,7 +46,7 @@
   </object>
   <object id="242" name="npc" type="Character" x="384" y="48" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_human"/>
+    <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('You must be one of Moloch\'s men if you want to drink here.')"/>
    </properties>

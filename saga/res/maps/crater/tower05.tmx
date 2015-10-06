@@ -27,19 +27,19 @@
   <object id="56" name="entry" type="Event" x="208" y="160" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower04.tmx', 'exit')</property>
+targetTele('crater/tower04.tmx', 'exit')</property>
    </properties>
   </object>
   <object id="57" name="exit" type="Event" x="16" y="160" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower06.tmx', 'entry')</property>
+targetTele('crater/tower06.tmx', 'entry')</property>
    </properties>
   </object>
   <object id="68" name="teleport" type="Event" x="112" y="160" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower04.tmx', 'teleport')</property>
+targetTele('crater/tower04.tmx', 'teleport')</property>
    </properties>
   </object>
  </objectgroup>

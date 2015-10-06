@@ -52,6 +52,7 @@ public class EffectTeleport extends EffectBattleUnusable {
 					MGlobal.levelManager.getTele().teleport(memory.mapKey,
 							memory.tileX,
 							memory.tileY);
+					item.deductUse();
 				}
 			}
 		});

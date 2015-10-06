@@ -26,7 +26,7 @@
  <objectgroup name="Object Layer 1">
   <object id="70" name="chest" type="Chest" x="160" y="96" width="16" height="16">
    <properties>
-    <property name="item" value="stone_air"/>
+    <property name="collectable" value="stone_air"/>
    </properties>
   </object>
   <object id="71" name="chest" type="Chest" x="304" y="240" width="16" height="16">

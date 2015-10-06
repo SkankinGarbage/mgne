@@ -40,7 +40,7 @@
    <properties>
     <property name="hide" value="return not getSwitch('tower01')"/>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower02.tmx', 'entry')</property>
+targetTele('crater/tower02.tmx', 'entry')</property>
    </properties>
   </object>
   <object id="56" name="block" type="Event" x="48" y="96" width="16" height="16">

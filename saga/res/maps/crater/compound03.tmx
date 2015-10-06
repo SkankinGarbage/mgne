@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2UwQrAIAiGfb8O69j7P8lOA2dZWhoFCv9hsE++iRMgSltlE3Ojw7PBoZDQyhNMONzrkFCkDiNmpaQOI6bVQ5qifH+WwUlQzzU5ML1wc7VmRv1aO27NhMM5DniH6TPXz4P5ittr61vdYk50oD0803PAdw6H3sEM/3uoZSQzOmEf6Dd4MJrb78WEQziEQx36L+M7xpU18wKnpqElBBEAAA==
+   H4sIAAAAAAAAC+2UQQ6AIAwEeRZ/4CBH/v8STyZrpUCxJZC0yR5EpxkRG4KXtMoi5kSHa4FDIaGVJxh3ONchQUYdesyfGnXoMbUeoynC52cZTArffU0GTCvcvmozvX61M67NuMM+DniG6TXXz4J5ijvX2rO6xuzoQHtYpuWAcw5D52AO73koZTiHCGuW3yI27mHRd7BgJLPfinEHd3CHb+i/jHOMK23mBmLm5GQEEQAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="33" height="33">
@@ -147,6 +147,9 @@
   </data>
  </layer>
  <layer name="Tile Layer 4" width="33" height="33">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAMC/ASB3lP8EEQAA
   </data>

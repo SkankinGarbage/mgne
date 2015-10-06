@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC82UQQrAIAwE05vx1Fsf7Qv8bXsJbEOsGyqlwiIE3Ywx2kSkJcSMjJ+pk8owMF42/4WhkMow2B69VC9tTrYGGXBdXciALJinBwzqOFXu53jL4OsSMfh6VYir5BlsD3O/yDy7jwwDso9yRwzGsaIfnvrKvPYBw6p3gX01qukBDCOVIMYyzHzYP7IEMWYwPqy+YjgB6biOyrQGAAA=
+   H4sIAAAAAAAAC82UMQ7AIAhF6QZO3XpoT+Bt60Lya6BC66DJjwkqPAGtRFQTioyMP1ULKsMQ8aXzLgwcVIZBz0hX6ToG6R5kwH1lIQOyYJxmMMjAKfS8x1+GMS8Ww5ivAnahPIOeidQXmWf1yDAguxfbYlCOFf3w1lfq63QYVr0L7CsvpxcweGLDFmWY+Yn+kWzYvgyerO/AcAPvsBUKtAYAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="33" height="13">
@@ -26,7 +26,7 @@
  <objectgroup name="Object Layer 1">
   <object id="62" name="room" type="Ceiling" x="480" y="16">
    <properties>
-    <property name="roofID" value="145"/>
+    <property name="roofID" value="138"/>
     <property name="roofTileset" value="lower"/>
    </properties>
    <polygon points="0,0 0,144 32,144 32,0"/>
@@ -60,7 +60,7 @@
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMglFALpg0CMyZSSU3UGIOvdwAAGHqq4G0BgAA
+   H4sIAAAAAAAAC2NgGAWjYBSMglFALugeBObMpEAfKXgwuAEATD36ZLQGAAA=
   </data>
  </layer>
  <layer name="Tile Layer 4" width="33" height="13">

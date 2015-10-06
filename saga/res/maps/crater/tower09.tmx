@@ -27,25 +27,25 @@
   <object id="56" name="entry" type="Event" x="208" y="160" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower08.tmx', 'exit')</property>
+targetTele('crater/tower08.tmx', 'exit')</property>
    </properties>
   </object>
   <object id="57" name="exit" type="Event" x="16" y="160" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower10.tmx', 'entry')</property>
+targetTele('crater/tower10.tmx', 'entry')</property>
    </properties>
   </object>
   <object id="70" name="tele_left" type="Event" x="80" y="144" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower10.tmx', 'tele_left')</property>
+targetTele('crater/tower10.tmx', 'tele_left')</property>
    </properties>
   </object>
   <object id="71" name="tele_right" type="Event" x="144" y="176" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower10.tmx', 'tele_right')</property>
+targetTele('crater/tower10.tmx', 'tele_right')</property>
    </properties>
   </object>
  </objectgroup>

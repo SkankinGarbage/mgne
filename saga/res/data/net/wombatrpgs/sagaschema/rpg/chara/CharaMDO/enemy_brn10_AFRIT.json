@@ -15,9 +15,9 @@
 	"loot" : "None",
 	"equipped" : [
 		"abil_axe",
-		"abil_sand",
 		"abil_bother",
 		"abil_flame",
+		"abil_sand",
 		"abil_oweapon",
 		"abil_ofire",
 		"abil_xice"

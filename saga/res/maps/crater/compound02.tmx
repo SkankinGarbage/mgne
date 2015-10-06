@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="33" tilewidth="16" tileheight="16" nextobjectid="91">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="34" tilewidth="16" tileheight="16" nextobjectid="92">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
   <property name="encounter" value="encounterset_level10_danger00"/>
@@ -7,20 +7,20 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="33" height="33">
+ <layer name="Tile Layer 1" width="33" height="34">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2USwqAMAxE535ZmPufRjeCJqa1Jf0s5kEWUgaeqQ5ASB7HaoELXS0AOtzMcJDH/HWoZbLJ2INuPgK/VxmQKU3P7noydKBD9B3b54iRmdJ7RGRn6ODPovu1Pah492FrpsUvYsZdfPV/dmaHfqADHejgx/7LtR7DgMwJRNF0sgQRAAA=
+   H4sIAAAAAAAAC+2UQQ6AMAgEeZZ/6EH+/xq9mCgItZXSHnYSDsasGakuEQBx7LMFTni2AMHhIsOh3OarQy0TTcQeePEppPdaBmS86dldTwYOcLC+Y3ltMTLjvYdFdAYO+p51vrIHmZ592Jpp8bPIOIu3/o/OrNAPcIADHPTIf7nWY5SU2ZxnWfzJHJi1w3SIEQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="33" height="33">
+ <layer name="Tile Layer 2" width="33" height="34">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3UMQoAIAiFYbtQjXXt1k5XS2tkhQX93yg+QQRF5mVF705mpBhltE7vucJiTwB/804kuLuZ2OpJOc8qY4lbAMD7+NXv4BboKtmgVwsEEQAA
+   H4sIAAAAAAAAC+3UwQkAIAiFYVuojrV216arCSIrTOj/juITRFBkXVX0nmRmmlFG6/aeOyz2BPC3GERSeJvJo16U86wylrgFAPjHr/aDW8CTDlxfYCaIEQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -59,20 +59,20 @@
     <property name="onInteract" value="play('crater/guard.lua')"/>
    </properties>
   </object>
-  <object id="77" name="left" type="Target" x="80" y="496" width="16" height="16"/>
-  <object id="79" name="middle" type="Target" x="288" y="496" width="16" height="16"/>
-  <object id="82" name="right" type="Target" x="496" y="496" width="16" height="16"/>
-  <object id="83" name="tele" type="Event" x="80" y="512" width="16" height="16">
+  <object id="77" name="left" type="Target" x="80" y="512" width="16" height="16"/>
+  <object id="79" name="middle" type="Target" x="288" y="512" width="16" height="16"/>
+  <object id="82" name="right" type="Target" x="496" y="512" width="16" height="16"/>
+  <object id="83" name="tele" type="Event" x="80" y="528" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/compound01.tmx', 'bottom_left')"/>
    </properties>
   </object>
-  <object id="84" name="tele" type="Event" x="288" y="512" width="16" height="16">
+  <object id="84" name="tele" type="Event" x="288" y="528" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/compound01.tmx', 'bottom_middle')"/>
    </properties>
   </object>
-  <object id="85" name="tele" type="Event" x="496" y="512" width="16" height="16">
+  <object id="85" name="tele" type="Event" x="496" y="528" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/compound01.tmx', 'bottom_right')"/>
    </properties>
@@ -102,17 +102,20 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="33" height="33">
+ <layer name="Tile Layer 3" width="33" height="34">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2TQQoAIAgEfWb/f0lXiTJE1IIZ8LjLCCoCXkZRBodzh56sDA5/OKzdFRkccLh1dP8FDjjgsO/IHMvBu1M0Y/HCPQAAdDIBGvQxcQQRAAA=
+   H4sIAAAAAAAAC+2TQQoAIAgEfWb/f0lXiTJEtKIZ8LjLCCoCXlpRBod1h56sDA5vOIzdFRkccNh1nP4LHHDAYd6ROZaDd6doxuKGewAA+J0OZh294YgRAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="33" height="33">
+ <layer name="Tile Layer 4" width="33" height="34">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3UsQkAIBADwP+FtNT9J9MJBAVB4a5PmkAigBMlI2rez6y02dU3+04ywH981DtsAQDvGMkGPyYEEQAA
+   H4sIAAAAAAAAC+3UsQkAIBADwHchLXX/ybS0EhQEhbs+aQKJAE7kFFHS/cxKHV1ts+8kA/zHR73DFgDArAOeIrGfiBEAAA==
   </data>
  </layer>
 </map>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="101">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="103">
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
@@ -119,7 +119,7 @@
     <property name="onCollide" value="targetTele('world4/desert_cave.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="97" name="illusive" type="Event" x="432" y="160" width="16" height="16">
+  <object id="97" name="dagon" type="Event" x="432" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/dagon01.tmx', 'entry', 'EAST')"/>
    </properties>
@@ -137,6 +137,16 @@
   <object id="100" name="tower" type="Event" x="304" y="944" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/tower01.tmx', 'entry', 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="101" name="grand_city" type="Event" x="896" y="576" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world4/grand_city01.tmx', 'entry', 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="102" name="block" type="Event" x="288" y="960" width="48" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>

@@ -27,14 +27,14 @@
   <object id="56" name="entry" type="Event" x="208" y="160" width="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower02.tmx', 'exit')</property>
+targetTele('crater/tower02.tmx', 'exit')</property>
    </properties>
   </object>
   <object id="57" name="exit" type="Event" x="16" y="160" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('tower02')"/>
     <property name="onCollide">playSound('rebound');
-targetTele('world4/tower04.tmx', 'entry')</property>
+targetTele('crater/tower04.tmx', 'entry')</property>
    </properties>
   </object>
   <object id="58" name="chest" type="Chest" x="96" y="96" width="16" height="16">

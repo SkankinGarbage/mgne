@@ -70,7 +70,7 @@
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Don disobey the masters or you\'ll end up a slave!')"/>
+    <property name="onInteract" value="speak('Don\'t disobey the masters or you\'ll end up a slave!')"/>
    </properties>
   </object>
   <object id="180" name="tele" type="Event" x="720" y="320" width="16" height="48">
@@ -155,21 +155,21 @@
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
-    <property name="onInteract" value="speak('Hm, you seem strong... I\'ll remember your faces when it comes time to select sacrifices.')"/>
+    <property name="onInteract" value="speak('You\'re looking at me funny. I\'ll remember your faces when it comes time to select sacrifices.')"/>
    </properties>
   </object>
   <object id="193" name="npc" type="Character" x="656" y="320" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="speak('You don\'t seem very sick... How would you like to become slaves for Moloch? You wouldn\'t be sacrificed that way.')"/>
+    <property name="onInteract" value="speak('You don\'t seem very sick... Would you like to become slaves for Moloch? You wouldn\'t be sacrificed that way.')"/>
    </properties>
   </object>
   <object id="194" name="npc" type="Character" x="656" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
-    <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="speak('You're very well-equipped, aren\'t you...? Not planning to do anything rebellious I hope, right?')"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('You\'re very well-equipped, aren\'t you...? Not planning to do anything rebellious I hope, right?')"/>
    </properties>
   </object>
   <object id="195" name="npc" type="Character" x="672" y="448" width="16" height="16">
@@ -184,7 +184,7 @@
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('No one but Moloch\'s most trusted know the way into his base.')"/>
+    <property name="onInteract" value="speak('Moloch\'s tower is 13 floors tall.')"/>
    </properties>
   </object>
  </objectgroup>
