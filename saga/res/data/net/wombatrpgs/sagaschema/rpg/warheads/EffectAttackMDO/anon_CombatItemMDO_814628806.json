@@ -4,7 +4,7 @@
 	"name" : "anon_CombatItemMDO_814628806",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "ALL_ENEMY",
-	"damType" : "PHYSICAL",
+	"damType" : "NONELEMENTAL",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],

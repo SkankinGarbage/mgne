@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$SLASER",
-	"itemDescription" : "Attacks a group with fixed damage aimed by user agility (tier 10)",
+	"itemDescription" : "Attacks a group with fixed nonelemental damage aimed by user agility (tier 10)",
 	"type" : "ITEM",
 	"uses" : 30,
 	"cost" : 50000,

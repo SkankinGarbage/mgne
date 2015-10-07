@@ -3,7 +3,7 @@
 	"subfolder" : "",
 	"name" : "anon_CombatItemMDO_-1369124646",
 	"description" : "auto-generated anonymous polymorph",
-	"projector" : "SINGLE_ENEMY",
+	"projector" : "ALL_ENEMY",
 	"damType" : "PHYSICAL",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
