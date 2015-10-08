@@ -40,7 +40,7 @@
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="speak('You\'re from the gate? Strange, a man came through there yesterday. Think he\'s up at the temple.')"/>
+    <property name="onInteract" value="speak('You\'re from the gate? Strange how those things slip open and closed...')"/>
    </properties>
   </object>
   <object id="220" name="npc" type="Character" x="512" y="96" width="16" height="16">
@@ -54,7 +54,7 @@
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="EAST"/>
-    <property name="onInteract" value="speak('I hear rumors of another human city in the southwest crater, but they must live in Moloch\'s shadow.')"/>
+    <property name="onInteract" value="speak('I hear rumors of another human city in the southwest crater, but they must serve the masters.')"/>
    </properties>
   </object>
   <object id="222" name="npc" type="Character" x="400" y="112" width="16" height="16">

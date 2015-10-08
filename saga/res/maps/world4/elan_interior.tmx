@@ -98,7 +98,7 @@
   <object id="101" name="elder" type="Character" x="480" y="400" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
-    <property name="hide" value="return not getSwitch('elan_elder02')"/>
+    <property name="hide" value="return not getSwitch('elan_elder02') or getSwitch('world4_done')"/>
     <property name="onInteract" value="speak('Seer', 'When you have the rest, come back to the forge. Don\'t fail me.')"/>
    </properties>
   </object>

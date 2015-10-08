@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="42" height="38" tilewidth="16" tileheight="16" nextobjectid="102">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="42" height="38" tilewidth="16" tileheight="16" nextobjectid="103">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Elan"/>
@@ -114,6 +114,13 @@
   <object id="101" name="tele" type="Event" x="256" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/elan_cave.tmx', 'forge')"/>
+   </properties>
+  </object>
+  <object id="102" name="seer" type="Character" x="336" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="hide" value="return not getSwitch('world4_done') or getSwitch('got_excaliber')"/>
+    <property name="onInteract" value="play('world4/elan_elder03.lua')"/>
    </properties>
   </object>
  </objectgroup>

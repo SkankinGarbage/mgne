@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="25" tilewidth="16" tileheight="16" nextobjectid="96">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="25" tilewidth="16" tileheight="16" nextobjectid="100">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Elan"/>
@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC83XUQrCMAwG4OLpfPMSHmhvfdOrasFA+En+pmtnUwiCs/PbmiVrKfvHKxDZRjMdJLKaK4lsZln7G4lM+SGWtv7MfJQcbu1t68/MteRwR72We9eQ50677kage7fZ8r6/8fh9Wu4sZu19qrDcmczoRXfPzHrnqr6KZssr0TNjzdQ1Rh+b7asrzGiSZxproxyb7atWPntey4z3D2tQVb/BYyvMnturG9b9Yz3f+n6FOVKfvVxgPd96L1hpjrwnSZ5G+qe3Bv8w470dvd6rzL19inhHrvfqfO7tVSqZu9PM9ips7k7zyFwvInk2Y8b/iA6WQ9E4M3TtHD0Py6FonBm6do6e5wMzvK9DlBEAAA==
+   H4sIAAAAAAAAC82X0Q2DMAxEoy7AWv3rEh2Iv/zRVdtItWRZ54tTQmNLJyRM4JEcNillfRwBZYvGtBNlZa5E2Zhl7W9EmfwhLG39GfNecnBr3rb+jLmWHNxRXsS9KuS701x3IMu9mhnxvj56fI+IOwuz5n0qIe5MzJbXcveYWe+c1VctM+IV9ZhtzdQ1RufO9tUZzJZJvmlbGyV3tq8iP3u8iNnOn61BVV1jczOYPW6vbqD5Yz0fnZ/BHKnPnhdYz0f/BTOZI/9J4tNI//TW4B/Mdm5H3/cq5t4+RXhH3vdqP/f2KpWMXcnM9ips7ErmkbGeIj47w2yfEQ3moa2TF/0SunaO3od5aOvkkddGn6vraDTew+mWBZQRAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="45" height="25">
@@ -80,6 +80,23 @@
   <object id="95" name="tele" type="Event" x="512" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/elan_cave.tmx', 'door_in')"/>
+   </properties>
+  </object>
+  <object id="96" name="excaliber" type="Target" x="608" y="256" width="16" height="16"/>
+  <object id="97" name="smithy" type="Character" x="592" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('elan_elder03')"/>
+    <property name="onInteract" value="speak('We all owe you thanks for slaying Moloch.')"/>
+   </properties>
+  </object>
+  <object id="98" name="seer" type="Character" x="576" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('elan_elder03')"/>
+    <property name="onInteract" value="speak('Now go to Babel. The masters must not touch Babel\'s heart!')"/>
    </properties>
   </object>
  </objectgroup>
