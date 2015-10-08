@@ -12,14 +12,24 @@
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_kick",
+		"abil_horn",
+		"abil_cgaze",
+		"abil_sleep",
+		"abil_heal",
+		"abil_sing",
+		"abil_revive",
+		"abil_opoison"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 795,
+		"mhp" : 795,
+		"str" : 82,
+		"def" : 82,
+		"agi" : 82,
+		"mana" : 86,
+		"flags" : [ ]
 	}
 }

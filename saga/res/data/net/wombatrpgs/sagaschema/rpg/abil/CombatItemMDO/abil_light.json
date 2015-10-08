@@ -1,0 +1,21 @@
+{
+	"key" : "abil_light",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "LIGHT",
+	"itemDescription" : "Inflicts blind on a party",
+	"type" : "ABILITY",
+	"uses" : 3,
+	"cost" : 0,
+	"anim" : "banim_fadeout",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_2065079460"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

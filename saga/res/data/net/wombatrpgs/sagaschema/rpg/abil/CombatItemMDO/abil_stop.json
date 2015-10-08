@@ -1,0 +1,21 @@
+{
+	"key" : "abil_stop",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "STOP",
+	"itemDescription" : "Inflicts death on a group",
+	"type" : "ABILITY",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_scream",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-452007540"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

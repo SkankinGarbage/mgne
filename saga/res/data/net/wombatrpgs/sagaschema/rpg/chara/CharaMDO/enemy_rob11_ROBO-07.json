@@ -12,7 +12,7 @@
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"loot" : "None",
+	"loot" : "wpn_gunVulcan",
 	"equipped" : [
 		"wpn_gunShock",
 		"wpn_cannonMissile"

@@ -1,18 +1,18 @@
 {
-	"key" : "abil_blizzard",
+	"key" : "abil_tornado",
 	"subfolder" : "abil",
 	"name" : "",
-	"description" : "boss only?",
+	"description" : "",
 	"abilityName" : "TORNADO",
-	"itemDescription" : "Attacks a party with low ice damage",
+	"itemDescription" : "Attacks a party with ice damage",
 	"type" : "ABILITY",
-	"uses" : 10,
+	"uses" : 5,
 	"cost" : 0,
-	"anim" : "banim_ice",
+	"anim" : "banim_whirl",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
-		"key" : "anon_CombatItemMDO_2000665136"
+		"key" : "anon_CombatItemMDO_893607215"
 	},
 	"tier" : 0,
 	"robostats" : {

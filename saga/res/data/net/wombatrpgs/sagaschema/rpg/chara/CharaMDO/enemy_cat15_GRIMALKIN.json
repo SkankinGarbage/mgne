@@ -1,25 +1,35 @@
 {
 	"key" : "enemy_cat15_GRIMALKIN",
 	"subfolder" : "level15",
-	"name" : "GRIMALKIN",
+	"name" : "CAT SITH",
 	"description" : "Converted from a report",
 	"gender" : "NONE",
 	"race" : "MONSTER",
 	"family" : "mfamily_cat",
 	"species" : "GRIMALKIN",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_rat",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_bite",
+		"abil_dgaze",
+		"abil_cgaze",
+		"abil_bother",
+		"abil_drain",
+		"abil_ambush",
+		"abil_ofire"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 666,
+		"mhp" : 666,
+		"str" : 75,
+		"def" : 69,
+		"agi" : 99,
+		"mana" : 90,
+		"flags" : [ ]
 	}
 }

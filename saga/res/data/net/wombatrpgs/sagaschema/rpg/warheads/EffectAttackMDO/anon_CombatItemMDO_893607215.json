@@ -1,14 +1,14 @@
 {
-	"key" : "anon_CombatItemMDO_2000665136",
+	"key" : "anon_CombatItemMDO_893607215",
 	"subfolder" : "",
-	"name" : "anon_CombatItemMDO_2000665136",
+	"name" : "anon_CombatItemMDO_893607215",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "ALL_ENEMY",
 	"damType" : "ICE",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],
-	"power" : 3,
+	"power" : 0,
 	"attackStat" : "MANA",
 	"defendStat" : "MANA",
 	"miss" : "ALWAYS_HITS"

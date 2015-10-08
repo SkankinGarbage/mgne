@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_eph",
 	"species" : "BAKU",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_horse",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_kick",
+		"abil_horn",
+		"abil_2tusk",
+		"abil_sleep",
+		"abil_warning",
+		"abil_opara",
+		"abil_ostone",
+		"abil_oweapon"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 795,
+		"mhp" : 795,
+		"str" : 99,
+		"def" : 91,
+		"agi" : 69,
+		"mana" : 80,
+		"flags" : [ ]
 	}
 }
