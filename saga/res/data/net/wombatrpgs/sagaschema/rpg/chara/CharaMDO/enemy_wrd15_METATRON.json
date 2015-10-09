@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_wrd",
 	"species" : "METATRON",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_demon",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_sword",
+		"abil_burning",
+		"abil_beam",
+		"abil_power",
+		"abil_revive",
+		"abil_flare",
+		"abil_revive",
+		"abil_oall"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 606,
+		"mhp" : 606,
+		"str" : 62,
+		"def" : 60,
+		"agi" : 75,
+		"mana" : 99,
+		"flags" : [ ]
 	}
 }

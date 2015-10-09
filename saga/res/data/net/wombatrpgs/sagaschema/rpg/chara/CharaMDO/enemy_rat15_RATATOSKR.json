@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_rat",
 	"species" : "RATATOSKR",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_rat",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_bite",
+		"abil_critical",
+		"abil_stench",
+		"abil_pfang",
+		"abil_dfang",
+		"abil_ambush",
+		"abil_warning",
+		"abil_opoison"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 795,
+		"mhp" : 795,
+		"str" : 88,
+		"def" : 82,
+		"agi" : 90,
+		"mana" : 80,
+		"flags" : [ ]
 	}
 }

@@ -1,0 +1,21 @@
+{
+	"key" : "abil_critical",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "CRITICAL",
+	"itemDescription" : "Slays goblins, beasts, insects, and demons",
+	"type" : "ABILITY",
+	"uses" : 20,
+	"cost" : 0,
+	"anim" : "banim_slash_double",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_1270271768"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

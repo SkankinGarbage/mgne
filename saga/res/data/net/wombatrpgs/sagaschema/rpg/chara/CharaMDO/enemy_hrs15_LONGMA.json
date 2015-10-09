@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_hrs",
 	"species" : "LONGMA",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_horse",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_bite",
+		"abil_2kick",
+		"abil_flame",
+		"abil_thunder",
+		"abil_remedy",
+		"abil_recover",
+		"abil_ofire",
+		"abil_othunder"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 729,
+		"mhp" : 729,
+		"str" : 88,
+		"def" : 80,
+		"agi" : 94,
+		"mana" : 88,
+		"flags" : [ ]
 	}
 }

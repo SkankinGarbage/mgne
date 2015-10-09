@@ -1,0 +1,21 @@
+{
+	"key" : "abil_2kick",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "2 KICK",
+	"itemDescription" : "Attacks up to 2 times",
+	"type" : "ABILITY",
+	"uses" : 20,
+	"cost" : 0,
+	"anim" : "banim_punch",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectMultihitMDO",
+		"key" : "anon_CombatItemMDO_166733256"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

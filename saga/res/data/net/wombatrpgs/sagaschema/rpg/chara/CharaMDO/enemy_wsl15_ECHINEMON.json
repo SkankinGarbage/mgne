@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_wsl",
 	"species" : "ECHINEMON",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_rat",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_2claw",
+		"abil_2sword",
+		"abil_critical",
+		"abil_counter",
+		"abil_armor",
+		"abil_ambush",
+		"abil_opara",
+		"abil_ofire"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 666,
+		"mhp" : 666,
+		"str" : 80,
+		"def" : 64,
+		"agi" : 99,
+		"mana" : 66,
+		"flags" : [ ]
 	}
 }

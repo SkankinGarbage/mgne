@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_snk",
 	"species" : "TEMPTER",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_jelly",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_bite",
+		"abil_tail",
+		"abil_constrict",
+		"abil_tempter",
+		"abil_dfang",
+		"abil_bash",
+		"abil_riddle",
+		"abil_opoison"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 795,
+		"mhp" : 795,
+		"str" : 92,
+		"def" : 80,
+		"agi" : 72,
+		"mana" : 76,
+		"flags" : [ ]
 	}
 }

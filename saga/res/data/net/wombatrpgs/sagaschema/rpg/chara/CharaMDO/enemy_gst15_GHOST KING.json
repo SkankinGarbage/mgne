@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_gst",
 	"species" : "GHOST KING",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_ghost",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_drain",
+		"abil_touch",
+		"abil_tremble",
+		"abil_gaze",
+		"abil_stop",
+		"abil_revive",
+		"abil_opara",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 729,
+		"mhp" : 729,
+		"str" : 77,
+		"def" : 72,
+		"agi" : 90,
+		"mana" : 92,
+		"flags" : [ ]
 	}
 }

@@ -26,8 +26,8 @@
 	"stats" : {
 		"hp" : 666,
 		"mhp" : 666,
-		"str" : 47,
-		"def" : 78,
+		"str" : 2,
+		"def" : 72,
 		"agi" : 78,
 		"mana" : 80,
 		"flags" : [ ]

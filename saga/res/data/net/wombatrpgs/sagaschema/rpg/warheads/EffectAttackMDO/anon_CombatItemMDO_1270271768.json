@@ -1,0 +1,32 @@
+{
+	"key" : "anon_CombatItemMDO_1270271768",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_1270271768",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ENEMY",
+	"damType" : "PHYSICAL",
+	"sideEffects" : [ ],
+	"slayerFamiles" : [
+		"mfamily_arm",
+		"mfamily_brd",
+		"mfamily_cat",
+		"mfamily_dem",
+		"mfamily_dog",
+		"mfamily_elf",
+		"mfamily_eph",
+		"mfamily_fly",
+		"mfamily_gob",
+		"mfamily_hrs",
+		"mfamily_jly",
+		"mfamily_pnx",
+		"mfamily_rat",
+		"mfamily_snk",
+		"mfamily_tmp",
+		"mfamily_wsl"
+	],
+	"riders" : [ ],
+	"power" : 3,
+	"attackStat" : "STR",
+	"defendStat" : "DEF",
+	"miss" : "CAN_MISS"
+}

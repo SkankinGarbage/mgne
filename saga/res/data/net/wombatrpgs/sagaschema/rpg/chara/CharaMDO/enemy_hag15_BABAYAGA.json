@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_hag",
 	"species" : "BABAYAGA",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_demon",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_bite",
+		"abil_stench",
+		"abil_heal",
+		"abil_gaze",
+		"abil_cgaze",
+		"abil_dgaze",
+		"abil_sgaze",
+		"abil_warning"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 666,
+		"mhp" : 666,
+		"str" : 90,
+		"def" : 74,
+		"agi" : 63,
+		"mana" : 96,
+		"flags" : [ ]
 	}
 }

@@ -12,14 +12,24 @@
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_beak",
+		"abil_2claw",
+		"abil_burning",
+		"abil_flame",
+		"abil_flare",
+		"abil_revive",
+		"abil_oelement",
+		"abil_ostone"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 729,
+		"mhp" : 729,
+		"str" : 70,
+		"def" : 77,
+		"agi" : 72,
+		"mana" : 92,
+		"flags" : [ ]
 	}
 }

@@ -24,12 +24,12 @@
 		"abil_xthunder"
 	],
 	"stats" : {
-		"hp" : 795,
-		"mhp" : 795,
-		"str" : 0,
-		"def" : 0,
-		"agi" : 0,
-		"mana" : 0,
+		"hp" : 729,
+		"mhp" : 729,
+		"str" : 42,
+		"def" : 76,
+		"agi" : 60,
+		"mana" : 95,
 		"flags" : [ ]
 	}
 }

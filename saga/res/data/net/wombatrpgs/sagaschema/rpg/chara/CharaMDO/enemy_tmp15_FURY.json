@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_tmp",
 	"species" : "FURY",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_demon",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_claw",
+		"abil_counter",
+		"abil_electro",
+		"abil_scream",
+		"abil_stop",
+		"abil_cgaze",
+		"abil_sing",
+		"abil_oquake"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 666,
+		"mhp" : 666,
+		"str" : 99,
+		"def" : 72,
+		"agi" : 90,
+		"mana" : 81,
+		"flags" : [ ]
 	}
 }

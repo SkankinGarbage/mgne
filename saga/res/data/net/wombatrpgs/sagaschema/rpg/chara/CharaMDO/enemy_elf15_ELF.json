@@ -7,7 +7,7 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_elf",
 	"species" : "ELF",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_elf",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,

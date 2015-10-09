@@ -7,19 +7,29 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_jly",
 	"species" : "HINOTAMA",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_jelly",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
 	"gp" : 0,
-	"equipped" : [ ],
+	"loot" : "None",
+	"equipped" : [
+		"abil_tentacle",
+		"abil_touch",
+		"abil_flame",
+		"abil_heal",
+		"abil_remedy",
+		"abil_remedy",
+		"abil_opara",
+		"abil_ofire"
+	],
 	"stats" : {
-		"hp" : null,
-		"mhp" : null,
-		"str" : null,
-		"def" : null,
-		"agi" : null,
-		"mana" : null,
-		"flags" : null
+		"hp" : 729,
+		"mhp" : 729,
+		"str" : 62,
+		"def" : 67,
+		"agi" : 72,
+		"mana" : 88,
+		"flags" : [ ]
 	}
 }
