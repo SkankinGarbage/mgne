@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl11_SERAPH2-3",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wrd11_SERAPH",
+			"amount" : "2-3"
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl11_BEHEMOTH1-3_SERAPH1-3",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_eph11_BEHEMOTH",
+			"amount" : "1-3"
+		},
+		{
+			"enemy" : "enemy_wrd11_SERAPH",
+			"amount" : "1-3"
+		}
+	]
+}

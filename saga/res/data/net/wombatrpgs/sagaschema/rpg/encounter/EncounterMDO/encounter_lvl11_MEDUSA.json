@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl11_MEDUSA",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_jly11_MEDUSA",
+			"amount" : "1"
+		}
+	]
+}

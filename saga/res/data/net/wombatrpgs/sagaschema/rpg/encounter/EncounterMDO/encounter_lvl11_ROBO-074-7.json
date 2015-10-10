@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl11_ROBO-074-7",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rob11_ROBO-07",
+			"amount" : "4-7"
+		}
+	]
+}

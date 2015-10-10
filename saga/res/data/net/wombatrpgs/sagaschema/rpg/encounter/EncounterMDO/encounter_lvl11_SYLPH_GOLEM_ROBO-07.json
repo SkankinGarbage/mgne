@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl11_SYLPH_GOLEM_ROBO-07",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_elf11_SYLPH",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_gol11_GOLEM",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_rob11_ROBO-07",
+			"amount" : "1"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl11_IBIS",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_brd11_IBIS",
+			"amount" : "1"
+		}
+	]
+}

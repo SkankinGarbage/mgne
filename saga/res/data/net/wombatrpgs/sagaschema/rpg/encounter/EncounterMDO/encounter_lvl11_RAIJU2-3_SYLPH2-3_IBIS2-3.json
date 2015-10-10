@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl11_RAIJU2-3_SYLPH2-3_IBIS2-3",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_wsl11_RAIJU",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_elf11_SYLPH",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_brd11_IBIS",
+			"amount" : "2-3"
+		}
+	]
+}

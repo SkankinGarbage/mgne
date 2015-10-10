@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl11_MEDUSA_LICH_FOXFIRE",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_jly11_MEDUSA",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_skl11_LICH",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_wsp11_FOXFIRE",
+			"amount" : "1"
+		}
+	]
+}

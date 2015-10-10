@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl11_LICH",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_skl11_LICH",
+			"amount" : "1"
+		}
+	]
+}

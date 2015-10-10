@@ -1,0 +1,53 @@
+{
+	"key" : "encounterset_level11_danger0",
+	"subfolder" : "level11",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl11_IBIS",
+			"weight" : 48
+		},
+		{
+			"encounter" : "encounter_lvl11_LICH",
+			"weight" : 48
+		},
+		{
+			"encounter" : "encounter_lvl11_MEDUSA",
+			"weight" : 48
+		},
+		{
+			"encounter" : "encounter_lvl11_RAIJU_FOXFIRE2-3",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl11_SERAPH2-3",
+			"weight" : 40
+		},
+		{
+			"encounter" : "encounter_lvl11_SPHINX_BEHEMOTH",
+			"weight" : 40
+		},
+		{
+			"encounter" : "encounter_lvl11_SYLPH_GOLEM_ROBO-07",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl11_ROBO-074-7",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl11_RAIJU2-3_SYLPH2-3_IBIS2-3",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl11_BEHEMOTH1-3_SERAPH1-3",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl11_MEDUSA_LICH_FOXFIRE",
+			"weight" : 16
+		}
+	],
+	"steps" : 38
+}
