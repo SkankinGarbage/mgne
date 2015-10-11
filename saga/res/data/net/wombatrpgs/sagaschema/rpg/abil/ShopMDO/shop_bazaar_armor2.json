@@ -1,0 +1,15 @@
+{
+	"key" : "shop_bazaar_armor2",
+	"subfolder" : "babel",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"hand_ninja",
+		"hand_babel",
+		"hand_samurai",
+		"shield_samurai",
+		"shield_babel",
+		"shield_mirror",
+		"ring_shades"
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"key" : "shop_bazaar_armor1",
+	"subfolder" : "babel",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"body_light",
+		"body_babel",
+		"body_dragon",
+		"helm_samurai",
+		"helm_babel",
+		"helm_diamond",
+		"abil_2claw",
+		"abil_2claw"
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"key" : "shop_bazaar_items1",
+	"subfolder" : "babel",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"item_hp600",
+		"item_hp999",
+		"item_str48",
+		"item_str99",
+		"item_agi48",
+		"item_agi99"
+	]
+}

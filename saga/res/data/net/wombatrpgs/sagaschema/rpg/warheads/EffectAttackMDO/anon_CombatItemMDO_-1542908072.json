@@ -1,0 +1,15 @@
+{
+	"key" : "anon_CombatItemMDO_-1542908072",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-1542908072",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ENEMY",
+	"damType" : "WEAPON",
+	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
+	"riders" : [ ],
+	"power" : 9,
+	"attackStat" : "AGI",
+	"defendStat" : "DEF",
+	"miss" : "CAN_MISS"
+}

@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$HEXIT",
-	"itemDescription" : "Inflicts death",
+	"itemDescription" : "Inflicts death on a party",
 	"type" : "ITEM",
 	"uses" : 30,
 	"cost" : 50000,

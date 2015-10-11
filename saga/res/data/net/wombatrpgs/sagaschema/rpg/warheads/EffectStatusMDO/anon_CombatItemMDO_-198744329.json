@@ -3,9 +3,9 @@
 	"subfolder" : "",
 	"name" : "anon_CombatItemMDO_-198744329",
 	"description" : "auto-generated anonymous polymorph",
-	"projector" : "GROUP_ENEMY",
+	"projector" : "ALL_ENEMY",
 	"status" : "status_death",
-	"hit" : 80,
+	"hit" : 50,
 	"accStat" : "MANA",
 	"evadeStat" : "MANA"
 }

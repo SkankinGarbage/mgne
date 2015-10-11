@@ -1,0 +1,16 @@
+{
+	"key" : "shop_bazaar_weapon2",
+	"subfolder" : "babel",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_hammerFire",
+		"wpn_axeThunder",
+		"wpn_spearIce",
+		"wpn_lsaber",
+		"wpn_bowPara",
+		"wpn_gunLaser",
+		"wpn_gunVulcan",
+		"wpn_cannonBazooka"
+	]
+}

@@ -3,7 +3,7 @@
 	"subfolder" : "weapon",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$SPOISON",
+	"abilityName" : "$SPARA",
 	"itemDescription" : "Stuns with fixed damage aimed by agility (tier 9)",
 	"type" : "ITEM",
 	"uses" : 50,

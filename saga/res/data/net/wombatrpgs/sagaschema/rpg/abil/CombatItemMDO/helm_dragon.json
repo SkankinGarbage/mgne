@@ -1,20 +1,18 @@
 {
-	"key" : "hand_samurai",
+	"key" : "helm_dragon",
 	"subfolder" : "armor",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "$CSAMURAI",
-	"itemDescription" : "Increases defense by 12 and resists weapon damage",
+	"abilityName" : "$FDRAGON",
+	"itemDescription" : "Increases defense by 20 and resists fire (tier 9)",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 40000,
+	"cost" : 42000,
 	"anim" : "None",
-	"equip" : [
-		"GAUNTLET"
-	],
+	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
-		"key" : "anon_CombatItemMDO_529017010"
+		"key" : "anon_CombatItemMDO_-663407387"
 	},
 	"tier" : 9,
 	"robostats" : {
