@@ -64,6 +64,14 @@ public class CollectableSet {
 	}
 	
 	/**
+	 * Removes a single collectable from the collection by key.
+	 * @param	key				The mdo key of the collectable to remove
+	 */
+	public void removeCollectable(String key) {
+		subtractCollectable(key, 1);
+	}
+	
+	/**
 	 * Checks the quantity of a collectable in the collection.
 	 * @param	collectable		The collectable to check quantity of
 	 * @return					The number of that collectable in stock

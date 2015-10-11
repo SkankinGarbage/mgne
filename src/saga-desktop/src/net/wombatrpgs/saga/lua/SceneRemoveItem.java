@@ -11,27 +11,33 @@ import net.wombatrpgs.mgne.scenes.SceneLib;
 import net.wombatrpgs.saga.core.SGlobal;
 
 import org.luaj.vm2.LuaValue;
-import org.luaj.vm2.lib.OneArgFunction;
+import org.luaj.vm2.Varargs;
+import org.luaj.vm2.lib.VarArgFunction;
 
 /**
  * Removes an item from the party inventory. No effect if item isn't found or if
  * it's equipped to someone.
- * Usage: {@code removeItem(<itemkey>)}
+ * Usage: {@code removeItem(<itemkey>, <isCollectable=false)}
  */
-public class SceneRemoveItem extends OneArgFunction {
+public class SceneRemoveItem extends VarArgFunction {
 
 	/**
-	 * @see org.luaj.vm2.lib.OneArgFunction#call(org.luaj.vm2.LuaValue)
+	 * @see org.luaj.vm2.lib.VarArgFunction#invoke(org.luaj.vm2.Varargs)
 	 */
 	@Override
-	public LuaValue call(final LuaValue itemArg) {
+	public Varargs invoke(Varargs args) {
+		
+		final String key = args.arg(1).checkjstring();
+		final boolean isCollectable = args.narg() >= 2 ? args.arg(2).checkboolean() : false;
+		
 		SceneLib.addFunction(new SceneCommand() {
-
 			@Override protected void internalRun() {
-				String key = itemArg.checkjstring();
-				SGlobal.heroes.getInventory().removeItemByKey(key);
-			}
-			
+				if (isCollectable) {
+					SGlobal.heroes.getCollection().removeCollectable(key);
+				} else {
+					SGlobal.heroes.getInventory().removeItem(key);
+				}
+			}	
 		});
 		return LuaValue.NIL;
 	}

@@ -237,7 +237,7 @@ public abstract class Inventory {
 	 * @param	itemKey			The key of the item to remove
 	 * @return					True if an instance was removed, false if none
 	 */
-	public final boolean removeItemByKey(String itemKey) {
+	public final boolean removeItem(String itemKey) {
 		for (int slot = 0; slot < capacity; slot += 1) {
 			CombatItem toCheck = items[slot];
 			if (toCheck != null && itemKey.equals(toCheck.getKey())) {

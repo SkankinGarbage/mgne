@@ -28,7 +28,7 @@
  <objectgroup name="Object Layer 1">
   <object id="75" name="gate" type="Event" x="624" y="896" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('tower/f15.tmx', 'gate_entry')"/>
+    <property name="onCollide" value="targetTele('tower/f15.tmx', 'gate_entry', 'NORTH')"/>
    </properties>
   </object>
   <object id="76" name="barrier" type="Event" x="304" y="816" width="16" height="16">

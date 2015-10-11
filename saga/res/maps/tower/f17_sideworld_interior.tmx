@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="35" tilewidth="16" tileheight="16" nextobjectid="134">
+ <properties>
+  <property name="bgm" value="ffl3_overworld2"/>
+  <property name="name" value="Floor 17"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="39" height="35">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2UsQ3AIAwEPUC6tAyShdh/hTQpkPOAQbJN8cU1EMkn/4ciIoUQQhK5AKf43IAsT+3zALRnpBfy6RHht+MV5bfr1fp5ubVz6sfIBX3jlaee25tf1X1755EryrPK30efReTaywztceTmketKp2ZdjNwbcsva26xXqIfe/6ru/CpeXqPOWXL03Nnpbla/DK+ZX+S7sbu/TC+LZ6YPIYSczgtBr/6bVBUAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="39" height="35">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3OIQEAMAgAMGhwS/+iJMAexJZgEQA3vNwezOrwDQAAAPirAVCQw8dUFQAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="127" name="tele" type="Event" x="304" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/f17_sideworld.tmx', 'cave')"/>
+   </properties>
+  </object>
+  <object id="128" name="entry" type="Target" x="304" y="144" width="16" height="16"/>
+  <object id="130" name="demon" type="Character" x="304" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return getSwitch('mana01')"/>
+    <property name="onInteract" value="play('tower/mana01.lua')"/>
+   </properties>
+  </object>
+  <object id="131" name="demon" type="Character" x="304" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('mana01') or getSwitch('mana02') or (hasCollectable('stone_fire') and hasCollectable('stone_water') and hasCollectable('stone_earth') and hasCollectable('stone_air'))"/>
+    <property name="onInteract" value="speak('???', 'Bring me one each of $UFIRE, $UWATER, $UAIR, and $UEARTH and then we\'ll see.')"/>
+   </properties>
+  </object>
+  <object id="132" name="demon" type="Character" x="304" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('mana01') or getSwitch('mana02') or not (hasCollectable('stone_fire') and hasCollectable('stone_water') and hasCollectable('stone_earth') and hasCollectable('stone_air'))"/>
+    <property name="onInteract" value="play('tower/mana02.lua')"/>
+   </properties>
+  </object>
+  <object id="133" name="demon" type="Character" x="304" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('mana02')"/>
+    <property name="onInteract" value="play('tower/mana03.lua')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="39" height="35">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BgQAAAADDoPlTX+EAVQEAAAAA8BqE5oTyVBUAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="39" height="35">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BgQAAAADDoPlTX+EAVQEAAAAA8BqE5oTyVBUAAA==
+  </data>
+ </layer>
+</map>

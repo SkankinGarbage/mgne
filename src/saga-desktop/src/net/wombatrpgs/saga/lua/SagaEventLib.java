@@ -9,6 +9,7 @@ package net.wombatrpgs.saga.lua;
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.scenes.SceneLib;
 import net.wombatrpgs.saga.core.SGlobal;
+import net.wombatrpgs.saga.rpg.items.CollectableSet;
 
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.OneArgFunction;
@@ -50,6 +51,14 @@ public class SagaEventLib extends TwoArgFunction {
 			@Override public LuaValue call(LuaValue itemArg) {
 				String key = itemArg.checkjstring();
 				return SGlobal.heroes.isCarryingItemType(key) ? LuaValue.TRUE : LuaValue.FALSE;
+			}
+		});
+		
+		env.set("hasCollectable", new OneArgFunction() {
+			@Override public LuaValue call(LuaValue collectableArg) {
+				String key = collectableArg.checkjstring();
+				CollectableSet set = SGlobal.heroes.getCollection();
+				return set.getQuantity(key) > 0 ? LuaValue.TRUE : LuaValue.FALSE;
 			}
 		});
 		
