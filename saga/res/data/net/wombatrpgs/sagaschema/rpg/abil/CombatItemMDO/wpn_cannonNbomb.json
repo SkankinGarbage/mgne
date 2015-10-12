@@ -7,7 +7,7 @@
 	"itemDescription" : "Attacks a party with fixed damage aimed by strength (tier 11)",
 	"type" : "ITEM",
 	"uses" : 1,
-	"cost" : 1,
+	"cost" : 2,
 	"anim" : "banim_missile",
 	"equip" : [ ],
 	"warhead" : {

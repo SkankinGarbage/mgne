@@ -1,0 +1,21 @@
+{
+	"key" : "abil_bossress",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "",
+	"itemDescription" : "",
+	"type" : "ABILITY",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-931992704"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

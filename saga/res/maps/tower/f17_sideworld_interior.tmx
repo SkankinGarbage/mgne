@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="35" tilewidth="16" tileheight="16" nextobjectid="134">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="35" tilewidth="16" tileheight="16" nextobjectid="135">
  <properties>
-  <property name="bgm" value="ffl3_overworld2"/>
+  <property name="bgm" value="ffl1_cave"/>
   <property name="name" value="Floor 17"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
@@ -25,7 +25,7 @@
  <objectgroup name="Object Layer 1">
   <object id="127" name="tele" type="Event" x="304" y="128" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('tower/f17_sideworld.tmx', 'cave')"/>
+    <property name="onCollide" value="targetTele('tower/f17_sideworld.tmx', 'cave', 'SOUTH')"/>
    </properties>
   </object>
   <object id="128" name="entry" type="Target" x="304" y="144" width="16" height="16"/>
@@ -59,6 +59,11 @@
     <property name="face" value="NORTH"/>
     <property name="hide" value="return not getSwitch('mana02')"/>
     <property name="onInteract" value="play('tower/mana03.lua')"/>
+   </properties>
+  </object>
+  <object id="134" name="spikes" type="Event" x="288" y="128" width="16" height="16">
+   <properties>
+    <property name="onTurn" value="if (getAvatar().terrainType() == 101) then play('tower/spike.lua'); playScene(); end"/>
    </properties>
   </object>
  </objectgroup>

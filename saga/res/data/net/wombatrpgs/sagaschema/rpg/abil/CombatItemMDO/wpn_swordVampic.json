@@ -6,7 +6,7 @@
 	"abilityName" : "$EVAMPIC",
 	"itemDescription" : "Attacks with weapon damage and drains based on user mana (tier 9)",
 	"type" : "ITEM",
-	"uses" : 0,
+	"uses" : 50,
 	"cost" : 46000,
 	"anim" : "banim_slash",
 	"equip" : [ ],

@@ -19,18 +19,27 @@
 		"abil_tempter",
 		"abil_left",
 		"abil_left",
-		"abil_flare",
-		"abil_flare",
-		"abil_odamage",
-		"abil_ochange"
+		"abil_boss_flare",
+		"abil_boss_flare"
 	],
 	"stats" : {
-		"hp" : 9000,
-		"mhp" : 9000,
-		"str" : 80,
+		"hp" : 8500,
+		"mhp" : 8500,
+		"str" : 65,
 		"def" : 65,
 		"agi" : 75,
-		"mana" : 99,
-		"flags" : [ ]
+		"mana" : 90,
+		"flags" : [
+			"RESIST_DAMAGE",
+			"RESIST_WEAPON",
+			"RESIST_BLIND",
+			"RESIST_CURSE",
+			"RESIST_CONFUSE",
+			"RESIST_SLEEP",
+			"RESIST_PARALYZE",
+			"RESIST_STONE",
+			"RESIST_DEATH",
+			"RESIST_POISON"
+		]
 	}
 }

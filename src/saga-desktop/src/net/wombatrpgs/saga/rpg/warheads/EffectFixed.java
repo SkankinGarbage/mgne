@@ -58,7 +58,10 @@ public class EffectFixed extends EffectCombat {
 	 */
 	@Override
 	protected boolean combatHits(Battle battle, Chara user, Chara target, float roll) {
-		int temp = 100 - (user.get(mdo.accStat) + mdo.accuracy - shielding(battle, target));
+		int temp = 100 - (mdo.accuracy - shielding(battle, target));
+		if (mdo.accStat != null) {
+			temp -= user.get(mdo.accStat);
+		}
 		if (mdo.dodgeStat != null) {
 			temp += target.get(mdo.dodgeStat);
 		}

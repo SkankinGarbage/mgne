@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="35" height="27" tilewidth="16" tileheight="16" nextobjectid="128">
  <properties>
-  <property name="bgm" value="ffl3_overworld2"/>
+  <property name="bgm" value="ffl3_talon"/>
   <property name="name" value="Floor 17"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
@@ -30,7 +30,7 @@
   </object>
   <object id="126" name="cave" type="Event" x="192" y="128" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('tower/f17_sideworld_interior.tmx', 'entry')"/>
+    <property name="onCollide" value="targetTele('tower/f17_sideworld_interior.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
   <object id="127" name="memory" type="Teleport Memory" x="192" y="144" width="16" height="16">

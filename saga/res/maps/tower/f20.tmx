@@ -41,6 +41,7 @@
    <properties>
     <property name="appearance" value="4dir_lucifer"/>
     <property name="face" value="EAST"/>
+    <property name="hide" value="return getSwitch('prince_dead')"/>
    </properties>
   </object>
   <object id="147" name="janine" type="Character" x="240" y="224" width="16" height="16">
@@ -70,14 +71,14 @@
     <property name="hide" value="return not getSwitch('prince_dead') or getSwitch('aven_revealed')"/>
    </properties>
   </object>
-  <object id="154" name="avensquare" type="Target" x="288" y="192" width="16" height="16"/>
+  <object id="154" name="avensquare" type="Target" x="288" y="176" width="16" height="16"/>
   <object id="156" name="trigger" type="Event" x="272" y="272" width="48" height="16">
    <properties>
     <property name="hide" value="return getSwitch('janine_joined')"/>
     <property name="onCollide" value="play('tower/f20.lua')"/>
    </properties>
   </object>
-  <object id="158" name="memory" type="Teleport Memory" x="288" y="240" width="16" height="16">
+  <object id="158" name="memory" type="Teleport Memory" x="288" y="288" width="16" height="16">
    <properties>
     <property name="displayName" value="Edenic World"/>
    </properties>

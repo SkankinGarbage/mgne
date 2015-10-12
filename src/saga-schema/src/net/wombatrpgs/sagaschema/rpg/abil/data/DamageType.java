@@ -19,10 +19,10 @@ public enum DamageType implements Resistable {
 	PHYSICAL		(false,	EnumSet.of(Flag.RESIST_DAMAGE),							EnumSet.noneOf(Flag.class)),
 	WEAPON			(false,	EnumSet.of(Flag.RESIST_WEAPON, Flag.RESIST_DAMAGE),		EnumSet.noneOf(Flag.class)),
 	
-	FIRE			(true,	EnumSet.of(Flag.RESIST_FIRE, Flag.RESIST_DAMAGE),		EnumSet.of(Flag.WEAK_FIRE)),
-	ICE				(true,	EnumSet.of(Flag.RESIST_ICE, Flag.RESIST_DAMAGE),		EnumSet.of(Flag.WEAK_ICE)),
-	EARTH			(true,	EnumSet.of(Flag.RESIST_EARTH, Flag.RESIST_DAMAGE),		EnumSet.of(Flag.WEAK_EARTH)),
-	THUNDER			(true,	EnumSet.of(Flag.RESIST_THUNDER, Flag.RESIST_DAMAGE),	EnumSet.of(Flag.WEAK_THUNDER)),
+	FIRE			(true,	EnumSet.of(Flag.RESIST_FIRE),							EnumSet.of(Flag.WEAK_FIRE)),
+	ICE				(true,	EnumSet.of(Flag.RESIST_ICE),							EnumSet.of(Flag.WEAK_ICE)),
+	EARTH			(true,	EnumSet.of(Flag.RESIST_EARTH),							EnumSet.of(Flag.WEAK_EARTH)),
+	THUNDER			(true,	EnumSet.of(Flag.RESIST_THUNDER),						EnumSet.of(Flag.WEAK_THUNDER)),
 	
 	NONELEMENTAL	(false,	EnumSet.noneOf(Flag.class),								EnumSet.noneOf(Flag.class));
 	

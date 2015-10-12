@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$OPETRIFY",
-	"itemDescription" : "Inflicts stone base on user strength",
+	"itemDescription" : "Inflicts stone based on user strength",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 50000,

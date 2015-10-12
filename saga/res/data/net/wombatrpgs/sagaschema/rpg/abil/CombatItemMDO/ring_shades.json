@@ -7,7 +7,7 @@
 	"itemDescription" : "Raises defense by 9, mana by 9, and agility by 9",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 11500,
+	"cost" : 21500,
 	"anim" : "None",
 	"equip" : [ ],
 	"warhead" : {

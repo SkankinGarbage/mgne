@@ -15,7 +15,7 @@
 	"loot" : "wpn_gunVulcan",
 	"equipped" : [
 		"wpn_gunShock",
-		"wpn_cannonMissile"
+		"wpn_gunLMG"
 	],
 	"stats" : {
 		"hp" : 551,

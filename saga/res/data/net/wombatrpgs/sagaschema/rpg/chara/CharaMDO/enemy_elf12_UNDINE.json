@@ -7,7 +7,7 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_elf",
 	"species" : "UNDINE",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_elf",
 	"portrait" : "battle_portraits/elf.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
@@ -17,7 +17,7 @@
 		"abil_ice",
 		"abil_tremble",
 		"abil_touch",
-		"abil_whirl",
+		"abil_tornado",
 		"abil_oice",
 		"abil_xfire"
 	],
