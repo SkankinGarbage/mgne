@@ -1,7 +1,10 @@
 {
 	"key" : "shop_bazaar_items3",
 	"subfolder" : "babel",
-	"name" : null,
-	"description" : null,
-	"items" : null
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"item_door",
+		"item_selfix"
+	]
 }

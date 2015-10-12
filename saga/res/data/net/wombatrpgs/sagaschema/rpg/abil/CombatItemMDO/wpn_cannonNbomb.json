@@ -1,0 +1,21 @@
+{
+	"key" : "wpn_cannonNbomb",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$YNBOMB",
+	"itemDescription" : "Attacks a party with fixed damage aimed by strength (tier 11)",
+	"type" : "ITEM",
+	"uses" : 1,
+	"cost" : 1,
+	"anim" : "banim_missile",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_1621945928"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

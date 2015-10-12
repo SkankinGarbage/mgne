@@ -1,7 +1,15 @@
 {
 	"key" : "shop_bazaar_weapon1",
 	"subfolder" : "babel",
-	"name" : null,
-	"description" : null,
-	"items" : null
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordDragon",
+		"wpn_swordBabel",
+		"wpn_swordPsi",
+		"wpn_swordDefend",
+		"wpn_swordRune",
+		"wpn_swordSun",
+		"wpn_swordVampic"
+	]
 }

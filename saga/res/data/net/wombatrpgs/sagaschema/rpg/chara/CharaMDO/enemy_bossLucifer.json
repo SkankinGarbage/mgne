@@ -1,0 +1,18 @@
+{
+	"key" : "enemy_bossLucifer",
+	"subfolder" : "boss",
+	"name" : null,
+	"description" : null,
+	"gender" : null,
+	"race" : null,
+	"family" : null,
+	"species" : null,
+	"appearance" : null,
+	"portrait" : null,
+	"meatEatLevel" : null,
+	"meatTargetLevel" : null,
+	"gp" : null,
+	"loot" : null,
+	"equipped" : null,
+	"stats" : null
+}

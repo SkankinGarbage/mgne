@@ -1,7 +1,16 @@
 {
 	"key" : "shop_bazaar_spells1",
 	"subfolder" : "babel",
-	"name" : null,
-	"description" : null,
-	"items" : null
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"spell_ice",
+		"spell_fire",
+		"spell_electric",
+		"spell_fog",
+		"spell_sleep",
+		"spell_stone",
+		"spell_death",
+		"spell_flare"
+	]
 }

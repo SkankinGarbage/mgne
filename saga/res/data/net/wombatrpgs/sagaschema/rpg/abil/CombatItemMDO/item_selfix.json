@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "SELFIX",
-	"itemDescription" : "Heals robot every turn",
+	"itemDescription" : "Heals robot every turn (tier 9)",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 30000,
