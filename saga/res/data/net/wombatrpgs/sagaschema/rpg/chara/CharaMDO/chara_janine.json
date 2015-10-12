@@ -1,0 +1,34 @@
+{
+	"key" : "chara_janine",
+	"subfolder" : "npcs",
+	"name" : "Janine",
+	"description" : "",
+	"gender" : "FEMALE",
+	"race" : "HUMAN",
+	"family" : "None",
+	"species" : "",
+	"appearance" : "4dir_janine",
+	"portrait" : "None",
+	"meatEatLevel" : 0,
+	"meatTargetLevel" : 0,
+	"gp" : 0,
+	"loot" : "None",
+	"equipped" : [
+		"wpn_legendMasamune",
+		"wpn_lsaber",
+		"wpn_gunLMG",
+		"helm_babel",
+		"body_babel",
+		"hand_babel",
+		"shoe_geta"
+	],
+	"stats" : {
+		"hp" : 725,
+		"mhp" : 725,
+		"str" : 70,
+		"def" : 0,
+		"agi" : 84,
+		"mana" : 0,
+		"flags" : [ ]
+	}
+}

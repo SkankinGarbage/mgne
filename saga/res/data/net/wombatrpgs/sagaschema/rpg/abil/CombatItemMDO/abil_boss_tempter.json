@@ -1,0 +1,21 @@
+{
+	"key" : "abil_boss_tempter",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "TEMPTER",
+	"itemDescription" : "",
+	"type" : "ABILITY",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-1850095206"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"key" : "abil_left",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "LEFT",
+	"itemDescription" : "",
+	"type" : "ABILITY",
+	"uses" : 30,
+	"cost" : 0,
+	"anim" : "banim_repent",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_773690534"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

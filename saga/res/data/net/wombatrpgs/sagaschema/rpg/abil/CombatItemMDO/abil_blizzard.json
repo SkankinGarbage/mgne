@@ -1,6 +1,6 @@
 {
 	"key" : "abil_blizzard",
-	"subfolder" : "abil",
+	"subfolder" : "boss",
 	"name" : "",
 	"description" : "boss only?",
 	"abilityName" : "TORNADO",

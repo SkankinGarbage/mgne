@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$HNUKE",
-	"itemDescription" : "Attacks a party with high physical damage based on mana",
+	"itemDescription" : "Attacks a party with physical damage based on mana",
 	"type" : "ITEM",
 	"uses" : 30,
 	"cost" : 50000,

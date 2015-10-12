@@ -1,0 +1,21 @@
+{
+	"key" : "abil_repent",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "REPENT",
+	"itemDescription" : "",
+	"type" : "ABILITY",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_repent",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-965338610"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

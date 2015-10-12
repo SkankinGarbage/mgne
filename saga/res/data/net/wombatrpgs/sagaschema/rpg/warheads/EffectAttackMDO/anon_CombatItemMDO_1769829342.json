@@ -8,7 +8,7 @@
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],
-	"power" : 10,
+	"power" : 12,
 	"attackStat" : "MANA",
 	"defendStat" : "MANA",
 	"miss" : "ALWAYS_HITS"

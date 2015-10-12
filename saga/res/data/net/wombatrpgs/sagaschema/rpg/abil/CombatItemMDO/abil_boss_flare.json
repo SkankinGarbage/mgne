@@ -1,0 +1,21 @@
+{
+	"key" : "abil_boss_flare",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "FLARE",
+	"itemDescription" : "",
+	"type" : "ABILITY",
+	"uses" : 30,
+	"cost" : 0,
+	"anim" : "banim_flare",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_-1822548851"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

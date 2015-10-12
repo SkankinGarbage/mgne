@@ -26,7 +26,7 @@ face('janine', 'SOUTH')
 
 speak("Jonas", "Janine! You monster! What have you done?")
 speak("Janine", "I'm sorry you'll never understand, Jonas.")
-speak("Prince", "Very helpful, Janine, but I'm afraid you're no longer necessary.")
+speak("Prince", "You've done well, Janine, but I'm afraid I have no more use for you.")
 speak("Jonas", "No!")
 
 walk('prince', 2, 'EAST', false)
@@ -42,3 +42,45 @@ speak("Janine", "Jonas... You didn't have to...")
 speak("Prince", "Pah. Who cares.")
 face('prince', 'SOUTH')
 speak("Prince", "The seal is broken and I'll become a true god. But first, for the rest of you.")
+
+sceneSwitch('prince_dead', false)
+battle('party_bossLucifer', false, 'ffl1_creator')
+face('hero', 'NORTH')
+playBGM('ffl1_theme')
+
+walk('hero', 1, 'NORTH')
+speak(hero1, "Is he alright?")
+face('janine2', 'SOUTH')
+speak("Janine", "Jonas is dead.")
+speak("Janine", "I was a fool. The masters aren't immortal... You never needed swords or Babel to stop them. Babel is only evil.")
+speak("???", "A useful evil.")
+
+walk('aven', 3, 'NORTH')
+face('hero', 'SOUTH')
+walk('aven', 3, 'NORTH')
+
+speak(hero1, "Aven! You have to help! The prince is dead! But Jonas is dead and the seal is broken!")
+speak("Aven", "Is it?")
+
+pathEvent('aven', 'avensquare')
+face('hero', 'NORTH')
+face('janine2', 'NORTH')
+wait(1.0)
+face('aven', 'SOUTH')
+
+speak("Perfect. Good work, " .. hero1 .. ". The brotherhood was having trouble, but I knew I could count on you.")
+speak(hero1, "What are you talking about? Shouldn't you reseal the door?")
+speak("Aven", "These were never my seals. They were to prevent people like me from stealing the masters' power.")
+speak("Aven", "But now all the masters are slain or sealed by their magic. You've opened the path for my ascension.")
+speak("Aven", "I'm sorry Jonas is dead, but he'll be remembered. Thank you, " .. hero1 .. ". When I'm a god, maybe I'll even grant you a wish!")
+speak(hero1, "Wait!")
+
+walk('aven', 1, 'NORTH')
+sceneSwitch('aven_revealed', true)
+
+speak('janine2', "The villain! I knew not to trust that man!")
+speak(hero1, "Hurry! We have to stop him, in Jonas's name.")
+
+pathEvent('janine', 'hero')
+sceneSwitch('janine_joins', true)
+addMember('chara_janine')
