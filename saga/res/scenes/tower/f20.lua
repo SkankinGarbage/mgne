@@ -82,5 +82,5 @@ speak('Janine', "The villain! I knew not to trust that man!")
 speak(hero1, "Hurry! We have to stop him, in Jonas's name.")
 
 pathEvent('janine2', 'hero')
-sceneSwitch('janine_joins', true)
+sceneSwitch('janine_joined', true)
 addMember('chara_janine')

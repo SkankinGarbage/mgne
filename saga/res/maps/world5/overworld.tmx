@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="55" height="52" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="104">
+ <properties>
+  <property name="battle_bgm" value="ffl1_battle"/>
+  <property name="bgm" value="ffl1_tower"/>
+  <property name="cancelsTransform" value="true"/>
+  <property name="name" value="Edenic World"/>
+  <property name="terrainEncounter" value="terrain_world5"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="55" height="52">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2aTW6DQAyFyba36jLNJaKuuoq6SMI5ol64QcKq++RnewaGjNo8aQQlBPyNf8aBDsNTWY0Lv39exYrtdU0e60mXRxuwsS5kf9LSuF1TreOG+b23eJh8wuYC/VVbN7bOUcvO6djOGUyPqi8luaI5XtRgbL3EoGcH+kszMT6cs144RdoeLxb1KMm5VrHq2YD31LYf7+PdOWZdx1s/Wkvfz7JHM3zcx+fwm+00H9d8a/da7HpL5wq5dH5Jzp2GH2ZUNvZaxegVtiLtG4tL83n15EKOr8mDPvT63ckGZn80RK1/B2TmhsUts/3NGV69bM3q5Z+eB6sPQQb2udYj1jq5h9ebWHZHrIybaY3fEcLC4kLuYbFY9rN4zOYjsyOTQ5nYlnNYbGU4o3id/r4Z+54va8V40J4aTovvpphuxudLNMIWOV7v42veIltku+crjy+bi8gQaTezIF/ElqmPXk2xuOScrO1RLgqbZmExWcOWOV/7UvutZn3A3lfiUEaUb9n6l/mungPxo6XSfkz6qIzfrJyK/GbtZ/xW2mNeyX4m36z5X8rm5VuWKRLaJVxWrYz6EFZDGBuubzKYMmu0npODuqbkW8RXur5lc/UwD62l/abmEybcz8RjCSfyCJP4ppbJ6iXl+iX1z+shPU7G00IWI+PM1BTrGPJ4qvGZt96fYTuCPTKya/YePsP7l9b5Ut7o/LOx78WjMGku2Y/u3/L9T3Y9sfy1h4HH0W8t3wmwOfKej4rfJA+Rg/FGaxbep1ZWPaq5JvrK86PUEVTku7VqZ3QfzAvmGxafS9esNRXZgHHJBovHHhgnSW6iPVk2bz3b4j2j9X6DCZ+vRD4bje/2KKvH9ri26KlqlXke4fX00XV7+98aHb9WT8Z64F7qR1aZZ8E9/S/NX5Xlh2xOlPqnt/pS+37pGZdP/Qd9A8gWAAuwLAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="55" height="52">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3TMREAIBADwfh3hQY0YIEaA1Q0P/PsGsg1SQAA7mZ1AAAA8GR9tkuyqwM+5m8AQAejOgAAAGjvAEEXivOwLAAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="103" name="gate" type="Event" x="432" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/f20.tmx', 'door')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
