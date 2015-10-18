@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl12_MASTODON",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_eph12_MASTODON",
+			"amount" : "1"
+		}
+	]
+}

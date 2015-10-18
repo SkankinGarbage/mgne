@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl12_PALADIN",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_swd12_PALADIN",
+			"amount" : "1"
+		}
+	]
+}

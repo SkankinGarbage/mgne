@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl12_GIANT3-5",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_gob12_GIANT",
+			"amount" : "3-5"
+		}
+	]
+}

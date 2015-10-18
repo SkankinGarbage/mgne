@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl12_WARMECH2-3_NEOSAPIEN2-3_MASTODON2-3",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rob12_WARMECH",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_psi12_NEOSAPIEN",
+			"amount" : "2-3"
+		},
+		{
+			"enemy" : "enemy_eph12_MASTODON",
+			"amount" : "2-3"
+		}
+	]
+}

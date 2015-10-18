@@ -1,0 +1,85 @@
+{
+	"key" : "encounterset_level12_danger00",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl12_T CELL",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl12_STAG",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl12_PALADIN",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl12_MUMMY",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl12_MASTODON",
+			"weight" : 0
+		},
+		{
+			"encounter" : "encounter_lvl12_UNDINE1-3_COCKATRICE",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl12_STAG_T CELL_MASTODON",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl12_MUMMY_COCKATRICE_PYTHON",
+			"weight" : 8
+		},
+		{
+			"encounter" : "encounter_lvl12_PYTHON2-3_PALADIN2-3",
+			"weight" : 0
+		},
+		{
+			"encounter" : "encounter_lvl12_CAT SITH_HELLHOUND",
+			"weight" : 0
+		},
+		{
+			"encounter" : "encounter_lvl12_COMMANDO3-5",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl12_GIANT3-5",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl12_KI-RIN3-5",
+			"weight" : 16
+		},
+		{
+			"encounter" : "encounter_lvl12_NEOSAPIEN4-6",
+			"weight" : 0
+		},
+		{
+			"encounter" : "encounter_lvl12_WARMECH2-3",
+			"weight" : 0
+		},
+		{
+			"encounter" : "encounter_lvl12_UNDINE1-2_CAT SITH1-2_T CELL1-2",
+			"weight" : 0
+		},
+		{
+			"encounter" : "encounter_lvl12_HELLHOUND2-5_UNDINE1-3_COCKATRICE0-2",
+			"weight" : 0
+		},
+		{
+			"encounter" : "encounter_lvl12_KI RIN4-5_GIANT4-5",
+			"weight" : 0
+		},
+		{
+			"encounter" : "encounter_lvl12_WARMECH2-3_NEOSAPIEN2-3_MASTODON2-3",
+			"weight" : 0
+		}
+	],
+	"steps" : 42
+}

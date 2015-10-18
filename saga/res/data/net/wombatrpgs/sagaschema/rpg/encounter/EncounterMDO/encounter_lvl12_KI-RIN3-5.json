@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl12_KI-RIN3-5",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_hrs12_KI-RIN",
+			"amount" : "3-5"
+		}
+	]
+}

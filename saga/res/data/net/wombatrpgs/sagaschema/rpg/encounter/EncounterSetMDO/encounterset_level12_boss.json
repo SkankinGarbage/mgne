@@ -1,0 +1,29 @@
+{
+	"key" : "encounterset_level12_boss",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"encounters" : [
+		{
+			"encounter" : "encounter_lvl12_WARMECH2-3_NEOSAPIEN2-3_MASTODON2-3",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl12_UNDINE1-2_CAT SITH1-2_T CELL1-2",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl12_KI RIN4-5_GIANT4-5",
+			"weight" : 24
+		},
+		{
+			"encounter" : "encounter_lvl12_HELLHOUND2-5_UNDINE1-3_COCKATRICE0-2",
+			"weight" : 32
+		},
+		{
+			"encounter" : "encounter_lvl12_UNDINE1-3_COCKATRICE",
+			"weight" : 16
+		}
+	],
+	"steps" : 0
+}

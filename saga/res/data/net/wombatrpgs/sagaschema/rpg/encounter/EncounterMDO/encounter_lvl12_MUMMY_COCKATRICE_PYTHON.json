@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl12_MUMMY_COCKATRICE_PYTHON",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_zom12_MUMMY",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_pnx12_COCKATRICE",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_snk12_PYTHON",
+			"amount" : "1"
+		}
+	]
+}

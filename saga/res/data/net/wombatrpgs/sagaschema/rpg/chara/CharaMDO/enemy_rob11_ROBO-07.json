@@ -12,15 +12,15 @@
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 11,
 	"gp" : 2000,
-	"loot" : "wpn_gunVulcan",
+	"loot" : "wpn_gunShock",
 	"equipped" : [
 		"wpn_gunShock",
-		"wpn_gunLMG"
+		"wpn_gunTank"
 	],
 	"stats" : {
 		"hp" : 551,
 		"mhp" : 551,
-		"str" : 65,
+		"str" : 80,
 		"def" : 65,
 		"agi" : 65,
 		"mana" : 0,

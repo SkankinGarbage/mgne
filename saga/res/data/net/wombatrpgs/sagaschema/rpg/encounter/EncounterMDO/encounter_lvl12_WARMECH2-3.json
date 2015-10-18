@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl12_WARMECH2-3",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_rob12_WARMECH",
+			"amount" : "3-5"
+		}
+	]
+}

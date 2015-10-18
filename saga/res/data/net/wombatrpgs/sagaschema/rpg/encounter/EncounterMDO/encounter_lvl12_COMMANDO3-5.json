@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl12_COMMANDO3-5",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_gun12_COMMANDO",
+			"amount" : "3-5"
+		}
+	]
+}

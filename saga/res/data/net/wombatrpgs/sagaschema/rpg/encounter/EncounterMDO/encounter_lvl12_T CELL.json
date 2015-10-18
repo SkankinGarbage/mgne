@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl12_T CELL",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dis12_T CELL",
+			"amount" : "1"
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"key" : "encounter_lvl12_NEOSAPIEN4-6",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_psi12_NEOSAPIEN",
+			"amount" : "3-5"
+		}
+	]
+}

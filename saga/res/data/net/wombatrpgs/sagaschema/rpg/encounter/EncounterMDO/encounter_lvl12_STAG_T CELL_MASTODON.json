@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl12_STAG_T CELL_MASTODON",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_arm12_STAG",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_dis12_T CELL",
+			"amount" : "1"
+		},
+		{
+			"enemy" : "enemy_eph12_MASTODON",
+			"amount" : "1"
+		}
+	]
+}

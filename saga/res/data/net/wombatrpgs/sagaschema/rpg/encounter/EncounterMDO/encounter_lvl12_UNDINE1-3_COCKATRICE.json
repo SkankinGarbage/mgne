@@ -1,0 +1,16 @@
+{
+	"key" : "encounter_lvl12_UNDINE1-3_COCKATRICE",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_elf12_UNDINE",
+			"amount" : "1-3"
+		},
+		{
+			"enemy" : "enemy_pnx12_COCKATRICE",
+			"amount" : "1"
+		}
+	]
+}

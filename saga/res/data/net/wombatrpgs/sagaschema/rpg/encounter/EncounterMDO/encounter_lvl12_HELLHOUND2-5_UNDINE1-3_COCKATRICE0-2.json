@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl12_HELLHOUND2-5_UNDINE1-3_COCKATRICE0-2",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_dog12_HELLHOUND",
+			"amount" : "2-5"
+		},
+		{
+			"enemy" : "enemy_elf12_UNDINE",
+			"amount" : "1-3"
+		},
+		{
+			"enemy" : "enemy_pnx12_COCKATRICE",
+			"amount" : "0-2"
+		}
+	]
+}

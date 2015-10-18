@@ -1,0 +1,20 @@
+{
+	"key" : "encounter_lvl12_UNDINE1-2_CAT SITH1-2_T CELL1-2",
+	"subfolder" : "level12",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"enemy" : "enemy_elf12_UNDINE",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_cat12_CAT SITH",
+			"amount" : "1-2"
+		},
+		{
+			"enemy" : "enemy_dis12_T CELL",
+			"amount" : "1-2"
+		}
+	]
+}
