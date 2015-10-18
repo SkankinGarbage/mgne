@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="42" tilewidth="16" tileheight="16" nextobjectid="115">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="42" tilewidth="16" tileheight="16" nextobjectid="123">
  <properties>
   <property name="bgm" value="ffl2_town"/>
   <property name="name" value="Final Town"/>
@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2WUQqDMAyGqwNBwTdPM+/hPZwv206/FhoIIdUqtIkjDx+WUuVrSP/aO+d64xY8CNI+5qwHczbnf3IePE1kUOCTQ0OQ9jFnPdzZeb6hM65zh9DkRusLBM8R0QnVHzK4I3B7CJ4TYnQy2Q3OEwE8WzQO86vn5dnQOinnt+cT+SacV1L3Tdg5BXbG+6J7k+5n6ty6/X1JOeM8OPLjsqWmMz5f9Pw9CVy/7BHqQf9n9zjrjPMA5pa4Zo5j2i85fVPSGc4XPldL9O2J8xlKOnMET+iLK86le+PoDuTW4bWp75d0zs2N1H2pJTe4mqbuSwlnLjdSNdVyp3C5karpTJ7a/jdy86GmM3hfcYf3avsahmEYdfkBKTv2eIgdAAA=
+   H4sIAAAAAAAAC+2WUQqDMAyG6waCgm+eZt7Dezhftp1+LTQQQqpVaRMhDx+WUuVrSP/aOee6izwJV79XA3M2Z3M2Z3PWSe9pIr0CnxwagrSPOevhzs7TDZ1xnVuEJjdaXyB4DohWqP6QwS2B20PwHBGDk8lucB4J4PlA4zC/eN6eFa2Tcv54vpFfwnkhdV+FnVNgZ7wvujfpfqbOD7e9LylnnAd7fly21HTG54uevxeB65ctQj3o/+wWR51xHsDcHNdMcUz7JadvSjrD+cLnao6+HXE+QklnjuAJfXHGuXRv7N2B3Dq8NvX9ks65uZG6L7XkBlfT1H0p4czlRqqmWu4ULjdSNZ3IU9v/Rm4+1HQG7zPu8F5tX8MwDKMuf1HvwiaIHQAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="45" height="42">
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2VYQqDMAxGM3YX73+I/vHHvIFuRxFxggQz2iYkrfsePAQp8lo0TkQ0KX0ytc/zsNfmM9E9d23mRPeguR3RjGY0oxnNsb4EOfzesS6iV4t3dynv7/XD7rfcLBHVPDx2f3Gs4etaPuetdaS+miV6bJbmZYk1zbPhHmoobZa+LU9qznn0DLzA+322wLs5Gfgvs27J7GvlP6idG1HnfDU3cvcR1azBszkZ9JZ885bdHjMKQggh0Qr3XauLiB0AAA==
+   H4sIAAAAAAAAC+2VSwqAMAwF42W8/yHcuNAb+DmKiHYTGjFNSCu+B4NQgkxDm85ENBvhsf4vAjjDGc5whnObwBnOcIazxCTAw9dSXQ1fa6K9tdnu787WW3aWUsu57y6ekmp4Xct9Pl1H+pazlC86S/NSQ4nz4riHkmidpbsVmZI+j5GCmUSfZ49EOw8O/GXWrS/9WnkHrXOjVp9zc+PtPmo5WxLpPDj4au68p3fEjAIAAEB0ALXZXiOIHQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -57,6 +57,70 @@
    </properties>
   </object>
   <object id="114" name="entry" type="Target" x="496" y="384" width="16" height="16"/>
+  <object id="115" name="npc" type="Character" x="416" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Shops? Nobody works here. But you can buy things west of here anyway.')"/>
+   </properties>
+  </object>
+  <object id="116" name="npc" type="Character" x="432" y="320" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Welcome to paradise. But... how have I never met you? No one new comes here.')"/>
+   </properties>
+  </object>
+  <object id="117" name="npc" type="Character" x="384" y="512" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_beetle"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The raw power of this world is amazing! But there is no conflict. Eat, drink, and be merry!')"/>
+   </properties>
+  </object>
+  <object id="118" name="npc" type="Character" x="352" y="496" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Become a god? The palace of the gods is to the north... but we have no need of gods.')"/>
+   </properties>
+  </object>
+  <object id="119" name="npc" type="Character" x="256" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Life began on this world, and our ancestors traveled freely through Babel.')"/>
+   </properties>
+  </object>
+  <object id="120" name="npc" type="Character" x="256" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_horse"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Life began on this world, and our ancestors traveled freely through Babel.')"/>
+   </properties>
+  </object>
+  <object id="121" name="npc" type="Character" x="272" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('They say an evil deity created this world and the rest of Babel, but he died when the gate closed.')"/>
+   </properties>
+  </object>
+  <object id="122" name="npc" type="Character" x="176" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_skeleton"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Nobody dies here. But then again, nobody is born either.')"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="45" height="42">
   <properties>

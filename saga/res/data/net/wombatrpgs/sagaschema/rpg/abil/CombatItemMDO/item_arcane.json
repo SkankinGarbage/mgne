@@ -1,0 +1,21 @@
+{
+	"key" : "item_arcane",
+	"subfolder" : "misc",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "ARCANE",
+	"itemDescription" : "Restores the uses of an item",
+	"type" : "ITEM",
+	"uses" : 1,
+	"cost" : 50000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectUseRestoreMDO",
+		"key" : "anon_CombatItemMDO_1960016999"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

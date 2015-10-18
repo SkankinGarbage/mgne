@@ -1,0 +1,17 @@
+{
+	"key" : "shop_world5_weapons",
+	"subfolder" : "world5",
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"wpn_swordSun",
+		"wpn_bowPara",
+		"wpn_gunLaser",
+		"wpn_gunLMG",
+		"wpn_cannonMissile",
+		"spell_death",
+		"spell_flare",
+		"body_dragon",
+		"helm_dragon"
+	]
+}
