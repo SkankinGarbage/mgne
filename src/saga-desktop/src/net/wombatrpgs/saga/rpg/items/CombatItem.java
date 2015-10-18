@@ -289,6 +289,15 @@ public class CombatItem extends AssetQueuer {
 	}
 	
 	/**
+	 * The actual arcane-style item restore. Restores uses back to the item's
+	 * maximum amount. Meant to be used for items and not robot equipment or
+	 * abilities.
+	 */
+	public void restoreUsesArcane() {
+		uses = mdo.uses;
+	}
+	
+	/**
 	 * Called internally when the item is used in battle, or by the effect when
 	 * applied on the world map. Simulates wear on the item and removes it the
 	 * item reaches zero uses.

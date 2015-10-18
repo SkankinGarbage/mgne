@@ -99,7 +99,7 @@
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="face" value="WEST"/>
-    <property name="onInteract" value="shop('item_testWhip', 'item_hp200', 'item_str24', 'item_testCure', 'body_bronze', 'hand_bronze')"/>
+    <property name="onInteract" value="shop('item_testWhip', 'item_hp200', 'item_str24', 'item_testCure', 'body_bronze', 'hand_bronze', 'item_testArcane')"/>
    </properties>
   </object>
   <object id="10" name="party4" type="Character" x="176" y="80" width="16" height="16">

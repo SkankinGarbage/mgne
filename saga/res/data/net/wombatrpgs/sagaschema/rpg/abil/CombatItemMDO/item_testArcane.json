@@ -1,0 +1,21 @@
+{
+	"key" : "item_testArcane",
+	"subfolder" : "test",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "ARCANE",
+	"itemDescription" : "",
+	"type" : "ITEM",
+	"uses" : 2,
+	"cost" : 1,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectUseRestoreMDO",
+		"key" : "anon_CombatItemMDO_1345660502"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}
