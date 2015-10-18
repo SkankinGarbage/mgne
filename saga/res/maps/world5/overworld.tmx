@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="55" height="52" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="104">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="55" height="52" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="105">
  <properties>
   <property name="battle_bgm" value="ffl1_battle"/>
   <property name="bgm" value="ffl1_tower"/>
@@ -29,6 +29,11 @@
   <object id="103" name="gate" type="Event" x="432" y="400" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f20.tmx', 'door')"/>
+   </properties>
+  </object>
+  <object id="104" name="gate" type="Event" x="432" y="592" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/town.tmx', 'entry', 'WEST')"/>
    </properties>
   </object>
  </objectgroup>

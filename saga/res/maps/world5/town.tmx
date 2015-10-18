@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="42" tilewidth="16" tileheight="16" nextobjectid="115">
+ <properties>
+  <property name="bgm" value="ffl2_town"/>
+  <property name="name" value="Final Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="45" height="42">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2WUQqDMAyGqwNBwTdPM+/hPZwv206/FhoIIdUqtIkjDx+WUuVrSP/aO+d64xY8CNI+5qwHczbnf3IePE1kUOCTQ0OQ9jFnPdzZeb6hM65zh9DkRusLBM8R0QnVHzK4I3B7CJ4TYnQy2Q3OEwE8WzQO86vn5dnQOinnt+cT+SacV1L3Tdg5BXbG+6J7k+5n6ty6/X1JOeM8OPLjsqWmMz5f9Pw9CVy/7BHqQf9n9zjrjPMA5pa4Zo5j2i85fVPSGc4XPldL9O2J8xlKOnMET+iLK86le+PoDuTW4bWp75d0zs2N1H2pJTe4mqbuSwlnLjdSNdVyp3C5karpTJ7a/jdy86GmM3hfcYf3avsahmEYdfkBKTv2eIgdAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="45" height="42">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2VYQqDMAxGM3YX73+I/vHHvIFuRxFxggQz2iYkrfsePAQp8lo0TkQ0KX0ytc/zsNfmM9E9d23mRPeguR3RjGY0oxnNsb4EOfzesS6iV4t3dynv7/XD7rfcLBHVPDx2f3Gs4etaPuetdaS+miV6bJbmZYk1zbPhHmoobZa+LU9qznn0DLzA+322wLs5Gfgvs27J7GvlP6idG1HnfDU3cvcR1azBszkZ9JZ885bdHjMKQggh0Qr3XauLiB0AAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="103" name="inn" type="Target" x="368" y="336" width="16" height="16"/>
+  <object id="104" name="tele" type="Event" x="368" y="320" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/town_interior.tmx', 'inn')"/>
+   </properties>
+  </object>
+  <object id="106" name="weapons" type="Target" x="208" y="416" width="16" height="16"/>
+  <object id="108" name="potions" type="Target" x="208" y="512" width="16" height="16"/>
+  <object id="109" name="tele" type="Event" x="208" y="496" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/town_interior.tmx', 'potions')"/>
+   </properties>
+  </object>
+  <object id="110" name="tele" type="Event" x="208" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/town_interior.tmx', 'weapons')"/>
+   </properties>
+  </object>
+  <object id="111" name="tele" type="Event" x="272" y="128" width="64" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/overworld.tmx', 'town')"/>
+   </properties>
+  </object>
+  <object id="112" name="tele" type="Event" x="544" y="368" width="16" height="64">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/overworld.tmx', 'town')"/>
+   </properties>
+  </object>
+  <object id="113" name="memory" type="Teleport Memory" x="368" y="384" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Final Town"/>
+   </properties>
+  </object>
+  <object id="114" name="entry" type="Target" x="496" y="384" width="16" height="16"/>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="45" height="42">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQlPoAAAAAAAAAB4GuA237aIHQAA
+  </data>
+ </layer>
+</map>
