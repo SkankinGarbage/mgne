@@ -201,6 +201,12 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	/** @return The key of the loot this chara can drop, or null or None */
 	public String getLootKey() { return mdo.loot; }
 	
+	/** @return The percent chance of dropping meat, or 0 for default */
+	public int getMeatDropChance() { return mdo.meatDropChance == null ? 0 : mdo.meatDropChance; }
+	
+	/** @return The percent chance of dropping loot, or 0 for default */
+	public int getLootDropChance() { return mdo.lootDropChance == null ? 0 : mdo.lootDropChance; }
+	
 	/**
 	 * @see net.wombatrpgs.mgne.core.lua.LuaConvertable#toLua()
 	 */

@@ -64,6 +64,10 @@ public class CharaMDO extends MainSchema {
 			+ "this character, compared to the eat level of others")
 	public Integer meatTargetLevel;
 	
+	@Desc("Percent out of 100 chance of dropping meat - 0 to use default")
+	@DefaultValue("0")
+	public Integer meatDropChance;
+	
 	@Desc("GP - dropped when this character is defeated by the player")
 	@DefaultValue("0")
 	public Integer gp;
@@ -72,6 +76,10 @@ public class CharaMDO extends MainSchema {
 	@SchemaLink(CombatItemMDO.class)
 	@Nullable
 	public String loot;
+	
+	@Desc("Percent out of 100 chance of dropping loot - 0 to use default")
+	@DefaultValue("0")
+	public Integer lootDropChance;
 	
 	@Desc("Equipped items/abilities")
 	@SchemaLink(CombatItemMDO.class)

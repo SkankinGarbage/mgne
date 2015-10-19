@@ -1,0 +1,41 @@
+{
+	"key" : "enemy_bossShiva2",
+	"subfolder" : "boss",
+	"name" : "SHIVA2",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "MONSTER",
+	"family" : "mfamily_boss",
+	"species" : "SHIVA2",
+	"appearance" : "4dir_aven",
+	"portrait" : "battle_portraits/boss_shiva.png",
+	"meatEatLevel" : 15,
+	"meatTargetLevel" : 15,
+	"meatDropChance" : 100,
+	"gp" : 9999,
+	"loot" : "helm_band",
+	"lootDropChance" : 100,
+	"equipped" : [
+		"abil_trident",
+		"abil_tornado",
+		"abil_quake",
+		"spell_shake",
+		"spell_exit",
+		"abil_trident",
+		"abil_trident"
+	],
+	"stats" : {
+		"hp" : 6000,
+		"mhp" : 6000,
+		"str" : 99,
+		"def" : 90,
+		"agi" : 75,
+		"mana" : 70,
+		"flags" : [
+			"RESIST_WEAPON",
+			"RESIST_STONE",
+			"RESIST_DEATH",
+			"RESIST_ICE"
+		]
+	}
+}

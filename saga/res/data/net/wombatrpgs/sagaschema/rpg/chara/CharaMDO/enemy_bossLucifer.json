@@ -9,8 +9,9 @@
 	"species" : "LUCIFER",
 	"appearance" : "4dir_lucifer",
 	"portrait" : "battle_portraits/boss_lucifer.png",
-	"meatEatLevel" : 0,
-	"meatTargetLevel" : 0,
+	"meatEatLevel" : 15,
+	"meatTargetLevel" : 15,
+	"meatDropChance" : 0,
 	"gp" : 9999,
 	"loot" : "None",
 	"equipped" : [

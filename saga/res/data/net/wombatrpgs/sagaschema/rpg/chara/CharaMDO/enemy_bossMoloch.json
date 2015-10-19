@@ -9,8 +9,9 @@
 	"species" : "MOLOCH",
 	"appearance" : "4dir_aven",
 	"portrait" : "battle_portraits/boss_moloch.png",
-	"meatEatLevel" : 12,
-	"meatTargetLevel" : 12,
+	"meatEatLevel" : 15,
+	"meatTargetLevel" : 15,
+	"meatDropChance" : 15,
 	"gp" : 9000,
 	"loot" : "None",
 	"equipped" : [

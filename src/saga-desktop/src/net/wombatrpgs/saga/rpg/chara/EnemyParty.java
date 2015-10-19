@@ -64,7 +64,16 @@ public class EnemyParty extends Party {
 	 * @return					The chara who dropped meat, or null for none
 	 */
 	public Chara chooseMeatFamily() {
-		int chance = SGlobal.settings.getMeatChance();
+		int chance = 0;
+		for (int i = 0; i < groupCount(); i += 1) {
+			Chara candidate = getFront(i);
+			if (candidate.getMeatDropChance() > chance) {
+				chance = candidate.getMeatDropChance();
+			}
+		}
+		if (chance > 0) {
+			chance = SGlobal.settings.getMeatChance();
+		}
 		if (MGlobal.rand.nextInt(100) > chance) {
 			return null;
 		}
@@ -88,7 +97,16 @@ public class EnemyParty extends Party {
 	 * @return					The item dropped, or null for none
 	 */
 	public CombatItem chooseLoot() {
-		int chance = SGlobal.settings.getLootChance();
+		int chance = 0;
+		for (int i = 0; i < groupCount(); i += 1) {
+			Chara candidate = getFront(i);
+			if (candidate.getLootDropChance() > chance) {
+				chance = candidate.getLootDropChance();
+			}
+		}
+		if (chance == 0) {
+			chance = SGlobal.settings.getLootChance();
+		}
 		if (MGlobal.rand.nextInt(100) > chance) {
 			return null;
 		}
