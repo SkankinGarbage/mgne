@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/psi.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 12,
-	"gp" : 2400,
+	"meatDropChance" : 0,
+	"gp" : 2800,
 	"loot" : "pot_elixir",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_armor",
 		"abil_hypnosis",

@@ -1,7 +1,16 @@
 {
 	"key" : "shop_world5_potions",
 	"subfolder" : "world5",
-	"name" : null,
-	"description" : null,
-	"items" : null
+	"name" : "",
+	"description" : "",
+	"items" : [
+		"item_hp999",
+		"item_str99",
+		"item_agi99",
+		"pot_xcure",
+		"pot_revive",
+		"spell_cure",
+		"item_door",
+		"item_arcane"
+	]
 }

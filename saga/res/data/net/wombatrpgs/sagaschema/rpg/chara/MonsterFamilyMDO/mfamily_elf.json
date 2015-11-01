@@ -43,6 +43,10 @@
 		{
 			"eat" : "mgroup_11",
 			"result" : "mfamily_hrs"
+		},
+		{
+			"eat" : "mgroup_boss",
+			"result" : "mfamily_dem"
 		}
 	]
 }

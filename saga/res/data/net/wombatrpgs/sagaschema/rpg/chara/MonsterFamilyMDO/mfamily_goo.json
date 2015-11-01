@@ -43,6 +43,10 @@
 		{
 			"eat" : "mgroup_10",
 			"result" : "mfamily_got"
+		},
+		{
+			"eat" : "mgroup_boss",
+			"result" : "mfamily_dis"
 		}
 	]
 }

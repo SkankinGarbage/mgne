@@ -71,7 +71,7 @@ public class EnemyParty extends Party {
 				chance = candidate.getMeatDropChance();
 			}
 		}
-		if (chance > 0) {
+		if (chance < SGlobal.settings.getMeatChance()) {
 			chance = SGlobal.settings.getMeatChance();
 		}
 		if (MGlobal.rand.nextInt(100) > chance) {
@@ -104,7 +104,7 @@ public class EnemyParty extends Party {
 				chance = candidate.getLootDropChance();
 			}
 		}
-		if (chance == 0) {
+		if (chance < SGlobal.settings.getLootChance()) {
 			chance = SGlobal.settings.getLootChance();
 		}
 		if (MGlobal.rand.nextInt(100) > chance) {

@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/swd.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 12,
-	"gp" : 2400,
+	"meatDropChance" : 0,
+	"gp" : 2800,
 	"loot" : "wpn_swordDragon",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"wpn_swordDragon",
 		"wpn_swordDefend",

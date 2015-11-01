@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/rob.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 12,
-	"gp" : 2400,
+	"meatDropChance" : 0,
+	"gp" : 2800,
 	"loot" : "wpn_gunShock",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"wpn_gunLMG",
 		"wpn_gunShock",

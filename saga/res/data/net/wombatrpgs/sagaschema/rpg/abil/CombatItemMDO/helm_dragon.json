@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$FDRAGON",
-	"itemDescription" : "Increases defense by 20 and resists fire (tier 9)",
+	"itemDescription" : "Increases defense by 20 and resists fire",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 42000,

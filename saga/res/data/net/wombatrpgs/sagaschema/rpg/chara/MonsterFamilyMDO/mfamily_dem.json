@@ -39,6 +39,10 @@
 		{
 			"eat" : "mgroup_11",
 			"result" : "mfamily_gol"
+		},
+		{
+			"eat" : "mgroup_boss",
+			"result" : "mfamily_elf"
 		}
 	]
 }

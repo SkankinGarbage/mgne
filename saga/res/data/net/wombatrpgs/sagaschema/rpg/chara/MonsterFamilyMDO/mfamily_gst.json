@@ -43,6 +43,10 @@
 		{
 			"eat" : "mgroup_11",
 			"result" : "mfamily_zom"
+		},
+		{
+			"eat" : "mgroup_boss",
+			"result" : "mfamily_wsp"
 		}
 	]
 }

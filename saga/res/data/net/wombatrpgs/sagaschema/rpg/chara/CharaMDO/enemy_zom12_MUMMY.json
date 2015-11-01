@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/zom.png",
 	"meatEatLevel" : 13,
 	"meatTargetLevel" : 12,
-	"gp" : 2400,
+	"meatDropChance" : 0,
+	"gp" : 2800,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_claw",
 		"abil_pfang",

@@ -25,8 +25,8 @@
 		"abil_trident"
 	],
 	"stats" : {
-		"hp" : 6000,
-		"mhp" : 6000,
+		"hp" : 5500,
+		"mhp" : 5500,
 		"str" : 99,
 		"def" : 90,
 		"agi" : 75,

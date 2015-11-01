@@ -92,14 +92,42 @@ public class MutationManager {
 		} else {
 			fixed = SGlobal.settings.getMutations().randomOption(chara, level);
 		}
+		
 		List<Mutation> results = new ArrayList<Mutation>();
+		while (isMaxed(fixed)) {
+			fixed = SGlobal.settings.getMutations().randomOption(chara, level);
+		}
 		results.add(fixed);
-		Mutation random = null;
-		do {
-			random = SGlobal.settings.getMutations().randomOption(chara, level);
-		} while (fixed.getStat() == random.getStat());
-		results.add(random);
+		
+		for (int tries = 0; tries < 100; tries += 1) {
+			Mutation random = SGlobal.settings.getMutations().randomOption(chara, level);
+			if (fixed.getStat() != random.getStat() && !isMaxed(random)) {
+				results.add(random);
+			}
+		}
+		if (results.size() < 2) {
+			results.add(SGlobal.settings.getMutations().generateAbil(level));
+		}
+		
 		return results;
+	}
+	
+	/**
+	 * Checks if a mutation has reached max stat.
+	 * @param	mutation		The mutation to check
+	 * @return					True if it is
+	 */
+	protected boolean isMaxed(Mutation mutation) {
+		Stat stat = mutation.getStat();
+		if (stat != null) {
+			if (stat == Stat.MHP) {
+				return chara.get(stat) >= 999;
+			} else {
+				return chara.get(stat) >= 99;
+			}
+		} else {
+			return false;
+		}
 	}
 
 }

@@ -31,7 +31,7 @@
     <property name="onCollide" value="targetTele('tower/f20.tmx', 'door')"/>
    </properties>
   </object>
-  <object id="104" name="gate" type="Event" x="432" y="592" width="16" height="16">
+  <object id="104" name="town" type="Event" x="432" y="592" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/town.tmx', 'entry', 'WEST')"/>
    </properties>

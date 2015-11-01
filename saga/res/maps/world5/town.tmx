@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="42" tilewidth="16" tileheight="16" nextobjectid="130">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="42" tilewidth="16" tileheight="16" nextobjectid="132">
  <properties>
-  <property name="bgm" value="ffl2_town"/>
+  <property name="bgm" value="ffl2_peaceful"/>
   <property name="name" value="Final Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
@@ -57,12 +57,12 @@
    </properties>
   </object>
   <object id="114" name="entry" type="Target" x="496" y="384" width="16" height="16"/>
-  <object id="115" name="npc" type="Character" x="416" y="432" width="16" height="16">
+  <object id="115" name="npc" type="Character" x="416" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="EAST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Shops? Nobody works here. But you can buy things west of here anyway.')"/>
+    <property name="onInteract" value="speak('Shops? Nobody works here. But you can buy things anyway.')"/>
    </properties>
   </object>
   <object id="116" name="npc" type="Character" x="432" y="320" width="16" height="16">
@@ -102,7 +102,7 @@
     <property name="appearance" value="4dir_horse"/>
     <property name="face" value="EAST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Life began on this world, and our ancestors traveled freely through Babel.')"/>
+    <property name="onInteract" value="speak('Don\'t you understand? Babel connects different times, not different places.')"/>
    </properties>
   </object>
   <object id="121" name="npc" type="Character" x="272" y="272" width="16" height="16">
@@ -110,7 +110,7 @@
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('They say an evil deity created this world and the rest of Babel, but he died when the gate closed.')"/>
+    <property name="onInteract" value="speak('In the beginning, masters from Babel slew the creator and sealed the gate.')"/>
    </properties>
   </object>
   <object id="122" name="npc" type="Character" x="176" y="400" width="16" height="16">
@@ -151,8 +151,14 @@
   </object>
   <object id="128" name="trigger" type="Event" x="352" y="288" width="16" height="16">
    <properties>
-    <property name="hide" value="return not getSwitch('entered_inn')"/>
+    <property name="hide" value="return not getSwitch('entered_inn') or getSwitch('brotherhood01')"/>
     <property name="onEnter" value="play('world5/brotherhood01.lua')"/>
+   </properties>
+  </object>
+  <object id="131" name="block" type="Event" x="368" y="352" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('entered_inn') or getSwitch('brotherhood01')"/>
+    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>

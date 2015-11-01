@@ -3,7 +3,7 @@
  <properties>
   <property name="bgm" value="ffl3_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger01"/>
-  <property name="name" value="Tortoise Dungeon"/>
+  <property name="name" value="Dragon Dungeon"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>

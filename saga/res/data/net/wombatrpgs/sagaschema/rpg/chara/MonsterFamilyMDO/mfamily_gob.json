@@ -39,6 +39,10 @@
 		{
 			"eat" : "mgroup_10",
 			"result" : "mfamily_arm"
+		},
+		{
+			"eat" : "mgroup_boss",
+			"result" : "mfamily_elf"
 		}
 	]
 }
