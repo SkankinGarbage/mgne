@@ -1,0 +1,21 @@
+{
+	"key" : "abil_litx",
+	"subfolder" : "abil",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "LIT-X",
+	"itemDescription" : "",
+	"type" : "ABILITY",
+	"uses" : 30,
+	"cost" : 0,
+	"anim" : "banim_lightning",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
+		"key" : "anon_CombatItemMDO_-1139393188"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

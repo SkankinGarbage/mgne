@@ -1,0 +1,38 @@
+{
+	"key" : "enemy_bossJorgandr2",
+	"subfolder" : "boss",
+	"name" : "JORGANDR2",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "HUMAN",
+	"family" : "None",
+	"species" : "JORGANDR2",
+	"appearance" : "4dir_aven",
+	"portrait" : "battle_portraits/boss_jorgandr.png",
+	"meatEatLevel" : 15,
+	"meatTargetLevel" : 15,
+	"meatDropChance" : 0,
+	"gp" : 9999,
+	"loot" : "None",
+	"lootDropChance" : 0,
+	"equipped" : [
+		"abil_quake",
+		"abil_quake",
+		"abil_quake",
+		"abil_whirl",
+		"abil_whirl",
+		"abil_whirl",
+		"abil_opara",
+		"abil_othunder",
+		"abil_oquake"
+	],
+	"stats" : {
+		"hp" : 5000,
+		"mhp" : 5000,
+		"str" : 99,
+		"def" : 80,
+		"agi" : 60,
+		"mana" : 70,
+		"flags" : [ ]
+	}
+}

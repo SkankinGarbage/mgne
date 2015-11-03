@@ -1,0 +1,16 @@
+{
+	"key" : "party_bossDragonDungeon",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"monster" : "enemy_bossFenrir2",
+			"count" : 1
+		},
+		{
+			"monster" : "enemy_bossJorgandr2",
+			"count" : 1
+		}
+	]
+}

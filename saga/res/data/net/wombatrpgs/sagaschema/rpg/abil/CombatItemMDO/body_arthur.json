@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$AARTHUR",
-	"itemDescription" : "Increases defense by 38",
+	"itemDescription" : "Increases defense by 40",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 1,

@@ -105,7 +105,7 @@
    <properties>
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="NORTH"/>
-    <property name="onInteract" value="speak('Masters? I only know of four. Eons ago, they slew the demon guarding the gate and then sealed it for once and for all.')"/>
+    <property name="onInteract" value="speak('Masters? I only know of four. They came from Babel to seal the gate.')"/>
    </properties>
   </object>
  </objectgroup>

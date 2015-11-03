@@ -103,10 +103,11 @@ public class MutationManager {
 			Mutation random = SGlobal.settings.getMutations().randomOption(chara, level);
 			if (fixed.getStat() != random.getStat() && !isMaxed(random)) {
 				results.add(random);
+				break;
 			}
 		}
 		if (results.size() < 2) {
-			results.add(SGlobal.settings.getMutations().generateAbil(level));
+			results.add(new MutationAbil(chara, level));
 		}
 		
 		return results;

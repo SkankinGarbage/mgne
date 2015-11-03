@@ -11,15 +11,17 @@
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
+	"meatDropChance" : 0,
 	"gp" : 0,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_bite",
 		"abil_shell",
 		"abil_acid",
 		"abil_bash",
-		"abil_teleport",
 		"abil_revive",
+		"abil_teleport",
 		"abil_opoison",
 		"abil_oweapon"
 	],
