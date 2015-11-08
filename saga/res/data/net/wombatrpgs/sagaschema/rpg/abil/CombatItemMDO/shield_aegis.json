@@ -1,0 +1,30 @@
+{
+	"key" : "shield_aegis",
+	"subfolder" : "armor",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$BAEGIS",
+	"itemDescription" : "Prevents all damage and status to party",
+	"type" : "ITEM",
+	"uses" : 3,
+	"cost" : 2,
+	"anim" : "banim_defend",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectDefendMDO",
+		"key" : "anon_CombatItemMDO_-2106635841"
+	},
+	"tier" : 11,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 99.0
+			},
+			{
+				"stat" : "DEF",
+				"value" : 22.0
+			}
+		]
+	}
+}

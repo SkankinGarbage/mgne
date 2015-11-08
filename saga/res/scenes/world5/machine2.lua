@@ -1,6 +1,7 @@
 sceneSwitch('machine_chest', true)
 playSound('get')
 speak("Retrieved the $CSPEED.")
+addItem('hand_speed')
 wait(0.7)
 playBGM('ffl2_save_the_world')
 speak("????", "INTRUDER ALERT. PREPARE THE SECURITY SYSTEM.")

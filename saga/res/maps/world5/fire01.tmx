@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="82" tilewidth="16" tileheight="16" nextobjectid="107">
+ <properties>
+  <property name="bgm" value="ffl3_dungeon"/>
+  <property name="encounter" value="encounterset_level12_danger01"/>
+  <property name="name" value="Phoenix Dungeon"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="73" height="82">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+1aQXLDMAhM84Le+th8orfe8taOD5nRaBC7GJDkhMNOGwdJeMELkvO83W7PQqFQKBQKhcJl8StgtU+74U/Aap92w12AlFufnGcHJ18Njs9Sbn1ynkkcIaz2ORro2ZA4ar+T7FffUzTQs6HlSfv/S4tavVp9b1HwxL0d+9KiVq+yfWfqBVtTNDvEETt2hS4x9YKtKZoduhd2rKZbWUB9CWPTaoQU4+O7x03XDlaPVnGk9SWMTasRkv+tflj82JmjPpaW3kXyn9EOxg+UbzM56uPnjfFZjqQ1VoDRAYtWSHaPBh4/Duy2b2Pix9p4ngupP5q5b/P0NGyMpTon2WnjtXzLzilPT8PGuOdoZKeNb9dDdTgaXh1o48jq0chOu65xlF3j2HqixRj1R0wvga5b/Z3JEcqR/toMjpi8n8kRkyNorkiO0L1kcaTFhckRNJdFd5AeeeuwlyvtmifGI00djdXsvHXYy5G0j2dyBL2/aMf010f2Fj8kuyyOpH38mXHSPHfBdjRWstPy2eKvlyNNm6zjoqFxZPHXyxFzzcu/17eRLkb620N7z6Ctadl/MxxFnGdncaS9Z9DWjN5/R9SrLI5QXJhaJdUsK1C9YufI4ojps5mza1TfUO3T6hU7xwqONFjfz8+YbwVHZ8ZF+8Hqzio9Ov569Gg03uLHs5unr8Fabc7Gy0+2hlnPF60Y1WCtNkeA6UvY535kF6Ub2fOj2Gh9CasVI7so7cqe3xKbvt8ojvA+ujjC++hP1yNLf8SuPbt/yQbqj5hzQ3SOOOuccAZX0jXm3BCdI846J8wCOj+KRr8uc/60Gtk9Klo36vwpE1p/lInsWhTNUeQ5kOe8aDUXFo5m4cocabbetc6suxqMLkSdz/QcXUWPGETVvqvzgO7NG/Mj99Bv/a+MCO1o83D1/ezK0bvoTnHk48irR8xv/T8d755HxVFxtAtKjzAqj4qjSJ5W+7A7vjfwYXf8bOBDoVAoFAqFQmGMf8HnSVOIXQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="73" height="82">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3auw2AMAwFwDACLbQMQMv+i7GE7YBzt4DzkeJnKWMAAAAAEc5t9gq+73JGAKXugne3okamp2D9FTUAqPX3/ldhRv/bA2t2veMjcF8yDgDdRWaLriKzBQAArCh77ugw12TPHeYaAIC1dcjM2WRmgBxd/6dF8j8NAAAAAIBoL6IuWTCIXQAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="72" name="entry" type="Target" x="576" y="240" width="16" height="16"/>
+  <object id="73" name="tele" type="Event" x="576" y="224" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/overworld.tmx', 'fire')"/>
+   </properties>
+  </object>
+  <object id="74" name="room" type="Ceiling" x="704" y="128">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="75" name="room" type="Ceiling" x="704" y="256">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="76" name="room" type="Ceiling" x="864" y="352">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="77" name="room" type="Ceiling" x="864" y="480">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="78" name="room" type="Ceiling" x="448" y="256">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="79" name="room" type="Ceiling" x="304" y="256">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="80" name="room" type="Ceiling" x="448" y="384">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="81" name="room" type="Ceiling" x="304" y="416">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="82" name="room" type="Ceiling" x="160" y="256">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="83" name="room" type="Ceiling" x="624" y="832">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 96,0 96,112 0,112"/>
+  </object>
+  <object id="84" name="room" type="Ceiling" x="848" y="224">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,112 16,112"/>
+  </object>
+  <object id="87" name="room" type="Ceiling" x="928" y="672">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,112 16,112"/>
+  </object>
+  <object id="88" name="room" type="Ceiling" x="832" y="672">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,112 16,112"/>
+  </object>
+  <object id="89" name="room" type="Ceiling" x="144" y="576">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,112 16,112"/>
+  </object>
+  <object id="90" name="room" type="Ceiling" x="144" y="832">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 112,0 112,112 16,112"/>
+  </object>
+  <object id="91" name="room" type="Ceiling" x="144" y="704">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 112,0 112,128 16,128"/>
+  </object>
+  <object id="92" name="room" type="Ceiling" x="144" y="384">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,128 16,128"/>
+  </object>
+  <object id="93" name="room" type="Ceiling" x="608" y="384">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,128 16,128"/>
+  </object>
+  <object id="94" name="room" type="Ceiling" x="704" y="384">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,128 16,128"/>
+  </object>
+  <object id="95" name="room" type="Ceiling" x="544" y="672">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,128 16,128"/>
+  </object>
+  <object id="96" name="room" type="Ceiling" x="448" y="672">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,128 16,128"/>
+  </object>
+  <object id="97" name="room" type="Ceiling" x="288" y="672">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,128 16,128"/>
+  </object>
+  <object id="100" name="room" type="Ceiling" x="288" y="928">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 96,0 96,112 16,112"/>
+  </object>
+  <object id="101" name="room" type="Ceiling" x="688" y="576">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 112,0 112,112 0,112"/>
+  </object>
+  <object id="102" name="room" type="Ceiling" x="368" y="576">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 112,0 112,96 96,96 96,112 16,112 16,96 0,96"/>
+  </object>
+  <object id="103" name="room" type="Ceiling" x="240" y="864">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 384,0 384,64 16,64"/>
+  </object>
+  <object id="104" name="room" type="Ceiling" x="464" y="608">
+   <properties>
+    <property name="roofID" value="157"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 224,0 224,64 16,64"/>
+  </object>
+  <object id="105" name="stairs" type="Target" x="592" y="1152" width="16" height="16"/>
+  <object id="106" name="tele" type="Event" x="592" y="1168" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/fire02.tmx', 'stairs')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
