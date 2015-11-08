@@ -246,7 +246,7 @@ public class Avatar extends MapEvent implements CommandListener {
 		forceDir = null;
 		if (parent.tileHasProperty(tileX, tileY, Constants.PROPERTY_FORCE)) {
 			String dirString = parent.getTileProperty(tileX, tileY, Constants.PROPERTY_FORCE);
-			if (dirString != null) {
+			if (dirString != null && !tracking) {
 				forceDir = OrthoDir.valueOf(dirString);
 				halt();
 			}

@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/boss_machine.png",
 	"meatEatLevel" : 8,
 	"meatTargetLevel" : 8,
+	"meatDropChance" : 0,
 	"gp" : 5000,
 	"loot" : "wpn_cannonRocket",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_bash",
 		"abil_dbeam",
@@ -21,7 +23,8 @@
 		"abil_oweapon",
 		"abil_opara",
 		"abil_ostone",
-		"item_selfix"
+		"item_selfix",
+		"abil_oice"
 	],
 	"stats" : {
 		"hp" : 1600,

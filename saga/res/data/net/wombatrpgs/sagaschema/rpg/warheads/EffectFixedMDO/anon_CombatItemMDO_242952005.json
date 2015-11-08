@@ -1,0 +1,17 @@
+{
+	"key" : "anon_CombatItemMDO_242952005",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_242952005",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "SINGLE_ENEMY",
+	"damType" : "NONELEMENTAL",
+	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
+	"riders" : [ ],
+	"base" : 440,
+	"range" : 0,
+	"defenseStat" : "MANA",
+	"accuracy" : 100,
+	"accStat" : null,
+	"dodgeStat" : "AGI"
+}

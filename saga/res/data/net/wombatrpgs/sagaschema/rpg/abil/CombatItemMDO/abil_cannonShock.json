@@ -1,0 +1,21 @@
+{
+	"key" : "abil_cannonShock",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$YSHOCK",
+	"itemDescription" : "",
+	"type" : "ABILITY",
+	"uses" : 50,
+	"cost" : 0,
+	"anim" : "banim_lightning",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectFixedMDO",
+		"key" : "anon_CombatItemMDO_926604609"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

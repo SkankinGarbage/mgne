@@ -1,0 +1,21 @@
+{
+	"key" : "abil_smasher",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "SMASHER",
+	"itemDescription" : "",
+	"type" : "ITEM",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_beam",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectMultihitMDO",
+		"key" : "anon_CombatItemMDO_-197659340"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

@@ -1,0 +1,45 @@
+{
+	"key" : "enemy_bossMachine2",
+	"subfolder" : "boss",
+	"name" : "MACHINE2",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "ROBOT",
+	"family" : "None",
+	"species" : "MACHINE2",
+	"appearance" : "4dir_aven",
+	"portrait" : "battle_portraits/boss_machine2.png",
+	"meatEatLevel" : 15,
+	"meatTargetLevel" : 15,
+	"meatDropChance" : 0,
+	"gp" : 9999,
+	"loot" : "None",
+	"lootDropChance" : 0,
+	"equipped" : [
+		"abil_smasher",
+		"abil_cannonShock",
+		"abil_cannonShock2",
+		"wpn_cannonBazooka",
+		"abil_dbeam2",
+		"item_selfix",
+		"wpn_gunTank"
+	],
+	"stats" : {
+		"hp" : 3100,
+		"mhp" : 3100,
+		"str" : 99,
+		"def" : 200,
+		"agi" : 65,
+		"mana" : 0,
+		"flags" : [
+			"RESIST_BLIND",
+			"RESIST_CURSE",
+			"RESIST_CONFUSE",
+			"RESIST_SLEEP",
+			"RESIST_PARALYZE",
+			"RESIST_STONE",
+			"RESIST_DEATH",
+			"RESIST_POISON"
+		]
+	}
+}

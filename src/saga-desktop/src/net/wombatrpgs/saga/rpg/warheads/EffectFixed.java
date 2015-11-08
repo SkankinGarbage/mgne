@@ -36,7 +36,11 @@ public class EffectFixed extends EffectCombat {
 	 */
 	@Override
 	protected int calcPower(Battle battle, Chara user) {
-		return mdo.base + MGlobal.rand.nextInt(mdo.range);
+		if (mdo.range > 0) {
+			return mdo.base + MGlobal.rand.nextInt(mdo.range);
+		} else {
+			return mdo.base;
+		}
 	}
 
 	/**
