@@ -7,7 +7,7 @@
 	"itemDescription" : "Attacks a party with fixed damage aimed by strength (tier 9)",
 	"type" : "ITEM",
 	"uses" : 10,
-	"cost" : 37000,
+	"cost" : 32000,
 	"anim" : "banim_explode",
 	"equip" : [ ],
 	"warhead" : {

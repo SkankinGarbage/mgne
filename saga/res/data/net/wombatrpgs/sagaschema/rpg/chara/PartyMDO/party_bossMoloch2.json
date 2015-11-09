@@ -1,0 +1,12 @@
+{
+	"key" : "party_bossMoloch2",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"monster" : "enemy_bossMoloch2",
+			"count" : 1
+		}
+	]
+}

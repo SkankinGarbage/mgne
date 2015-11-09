@@ -1,0 +1,21 @@
+{
+	"key" : "abil_dkvirus",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "DARK VIRUS",
+	"itemDescription" : "",
+	"type" : "ABILITY",
+	"uses" : 5,
+	"cost" : 0,
+	"anim" : "banim_scream",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_-452994600"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

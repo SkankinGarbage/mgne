@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="82" tilewidth="16" tileheight="16" nextobjectid="107">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="82" tilewidth="16" tileheight="16" nextobjectid="108">
  <properties>
   <property name="bgm" value="ffl3_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger01"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="73" height="82">
@@ -223,6 +223,11 @@
   <object id="106" name="tele" type="Event" x="592" y="1168" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/fire02.tmx', 'stairs')"/>
+   </properties>
+  </object>
+  <object id="107" name="chest" type="Chest" x="336" y="736" width="16" height="16">
+   <properties>
+    <property name="item" value="shield_aegis"/>
    </properties>
   </object>
  </objectgroup>

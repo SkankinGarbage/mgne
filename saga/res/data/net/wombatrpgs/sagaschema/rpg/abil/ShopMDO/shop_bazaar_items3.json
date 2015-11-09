@@ -4,6 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"items" : [
+		"wpn_saw",
 		"item_door",
 		"item_selfix"
 	]

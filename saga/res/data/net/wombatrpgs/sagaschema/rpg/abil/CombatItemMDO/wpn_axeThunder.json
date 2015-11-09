@@ -7,7 +7,7 @@
 	"itemDescription" : "Attacks with thunder damage (tier 9)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 49000,
+	"cost" : 43000,
 	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {

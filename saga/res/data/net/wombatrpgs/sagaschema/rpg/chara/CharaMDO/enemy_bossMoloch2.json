@@ -1,0 +1,40 @@
+{
+	"key" : "enemy_bossMoloch2",
+	"subfolder" : "boss",
+	"name" : "MOLOCH2",
+	"description" : "",
+	"gender" : "NONE",
+	"race" : "MONSTER",
+	"family" : "None",
+	"species" : "MOLOCH2",
+	"appearance" : "4dir_aven",
+	"portrait" : "battle_portraits/boss_moloch.png",
+	"meatEatLevel" : 15,
+	"meatTargetLevel" : 15,
+	"meatDropChance" : 100,
+	"gp" : 9999,
+	"loot" : "shoe_dragon",
+	"lootDropChance" : 100,
+	"equipped" : [
+		"abil_2horn",
+		"spell_flare2",
+		"abil_dkvirus",
+		"abil_pstorm",
+		"abil_2horn"
+	],
+	"stats" : {
+		"hp" : 6800,
+		"mhp" : 6800,
+		"str" : 120,
+		"def" : 75,
+		"agi" : 80,
+		"mana" : 85,
+		"flags" : [
+			"RESIST_SLEEP",
+			"RESIST_PARALYZE",
+			"RESIST_STONE",
+			"RESIST_DEATH",
+			"RESIST_POISON"
+		]
+	}
+}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="45" tilewidth="16" tileheight="16" nextobjectid="109">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="45" tilewidth="16" tileheight="16" nextobjectid="109">
  <properties>
   <property name="bgm" value="ffl3_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger01"/>
@@ -7,37 +7,37 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="40" height="45">
+ <layer name="Tile Layer 1" width="33" height="45">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WwQrDIBCEYfW1+xLevOVZS8GFYVnNJc1MyB5+CI2Hj0Vjj1LKkWXZq+sChl1DwLCrChjSd3199oFntgkbswrPbBPWps1qAqYn+HDf+RT2oe21aH7MfWizaZD3WYw54tzOfIw5tqCVz2L5rlj3L5/fj9hq7d2+n2UE9WAtw+fPCZ4LBd/ufKj4apCST3l+3rh6x/D574j/74J3IMNn3xFzmM9+w7PN8OH9ir7ofmb5/B28enenb+WMfAzX2RxVfFmWZVmm3BdNj9u8IBwAAA==
+   H4sIAAAAAAAAC+2VMQ7EIAwEgRdcl6/c3+4TdOny1jRYWll2KC7rIMXFSCggMZglPkopR5IkCYHvAg6fBRy2BRxqOjzu0Ac/GEc77IMK42iHNvYX2sscMAeaqFzI3Vt1YOdCztgA7SCw6oHnnzmw6tEMPAeB6XDHun8cdD4Qby3DocOdI91Yy3LQ2cQsRjlcZTLSoRpEOzxdB+3hzbEc9BvUPRP/5ywHeYOylzjIN3wzLAfsB+hg9ROmg+4Z3tzdDp6L5cDae1aPSIckSd7DCbJR9D40FwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="40" height="45">
+ <layer name="Tile Layer 2" width="33" height="45">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OQQ0AMAgEMCTwm5X5VzYJvJZLSKugVcBvNx0YdDowOOkAAAAAAAAs8gCGKAzjIBwAAA==
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdP7ewBFAAAAAAAcAOn6d4bNBcAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="105" name="room" type="Ceiling" x="224" y="336">
+  <object id="105" name="room" type="Ceiling" x="192" y="384">
    <properties>
     <property name="roofID" value="157"/>
     <property name="roofTileset" value="lower"/>
    </properties>
    <polygon points="16,0 128,0 128,128 16,128"/>
   </object>
-  <object id="106" name="tele" type="Event" x="288" y="80" width="16" height="16">
+  <object id="106" name="tele" type="Event" x="256" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/fire01.tmx', 'stairs')"/>
    </properties>
   </object>
-  <object id="107" name="stairs" type="Target" x="288" y="96" width="16" height="16"/>
-  <object id="108" name="shiva" type="Character" x="288" y="400" width="16" height="16">
+  <object id="107" name="stairs" type="Target" x="256" y="144" width="16" height="16"/>
+  <object id="108" name="shiva" type="Character" x="256" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_moloch"/>
     <property name="face" value="SOUTH"/>

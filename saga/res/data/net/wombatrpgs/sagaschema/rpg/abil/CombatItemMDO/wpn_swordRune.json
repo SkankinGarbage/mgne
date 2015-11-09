@@ -7,7 +7,7 @@
 	"itemDescription" : "Attacks with weapon damage and reflects elemental damage (tier 9)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 46000,
+	"cost" : 45000,
 	"anim" : "banim_slash",
 	"equip" : [ ],
 	"warhead" : {

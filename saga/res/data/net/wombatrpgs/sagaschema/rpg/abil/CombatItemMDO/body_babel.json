@@ -7,7 +7,7 @@
 	"itemDescription" : "Increases defense by 25",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 40000,
+	"cost" : 35000,
 	"anim" : "None",
 	"equip" : [
 		"ARMOR"

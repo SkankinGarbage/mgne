@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$DHECATE",
-	"itemDescription" : "Increases mana by 20",
+	"itemDescription" : "Increases mana by 24",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 50000,

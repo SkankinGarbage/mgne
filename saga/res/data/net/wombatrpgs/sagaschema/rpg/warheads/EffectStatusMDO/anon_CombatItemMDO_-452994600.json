@@ -1,11 +1,11 @@
 {
-	"key" : "anon_CombatItemMDO_-1749663448",
+	"key" : "anon_CombatItemMDO_-452994600",
 	"subfolder" : "",
-	"name" : "anon_CombatItemMDO_-1749663448",
+	"name" : "anon_CombatItemMDO_-452994600",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "ALL_ENEMY",
 	"status" : "status_confuse",
-	"hit" : 80,
-	"accStat" : "MANA",
+	"hit" : 120,
+	"accStat" : null,
 	"evadeStat" : "MANA"
 }

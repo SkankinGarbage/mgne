@@ -11,15 +11,16 @@
 	"portrait" : "None",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 0,
+	"meatDropChance" : 0,
 	"gp" : 0,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"wpn_legendMasamune",
 		"wpn_lsaber",
 		"wpn_gunLMG",
 		"helm_babel",
 		"body_babel",
-		"hand_babel",
 		"shoe_geta"
 	],
 	"stats" : {

@@ -7,5 +7,13 @@
 	"base" : 20,
 	"power" : 5,
 	"powerStat" : "MANA",
-	"heals" : [ ]
+	"heals" : [
+		"status_blind",
+		"status_confuse",
+		"status_curse",
+		"status_paralyze",
+		"status_poison",
+		"status_sleep",
+		"status_stone"
+	]
 }

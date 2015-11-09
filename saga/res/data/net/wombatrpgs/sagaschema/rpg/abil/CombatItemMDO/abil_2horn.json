@@ -1,18 +1,18 @@
 {
-	"key" : "abil_2tusk",
-	"subfolder" : "abil",
+	"key" : "abil_2horn",
+	"subfolder" : "boss",
 	"name" : "",
 	"description" : "",
-	"abilityName" : "2 TUSKS",
-	"itemDescription" : "Attacks up to 2 times",
+	"abilityName" : "2 HORN",
+	"itemDescription" : "",
 	"type" : "ABILITY",
-	"uses" : 20,
+	"uses" : 10,
 	"cost" : 0,
-	"anim" : "banim_slash_double",
+	"anim" : "banim_wound",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectMultihitMDO",
-		"key" : "anon_CombatItemMDO_-1655516155"
+		"key" : "anon_CombatItemMDO_1886433391"
 	},
 	"tier" : 0,
 	"robostats" : {
