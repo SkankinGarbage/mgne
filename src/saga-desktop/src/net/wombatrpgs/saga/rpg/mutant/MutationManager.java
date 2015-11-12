@@ -122,9 +122,9 @@ public class MutationManager {
 		Stat stat = mutation.getStat();
 		if (stat != null) {
 			if (stat == Stat.MHP) {
-				return chara.get(stat) >= 999;
+				return chara.getBase(stat) >= 999;
 			} else {
-				return chara.get(stat) >= 99;
+				return chara.getBase(stat) >= 99;
 			}
 		} else {
 			return false;

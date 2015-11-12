@@ -261,13 +261,21 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	}
 	
 	/**
-	 * TODO: Returns the base value of the requested stat, not taking into account
-	 * any temporary boosts or things from armor etc.
-	 * @param	stat			The stat to get the value of
-	 * @return					The base value of the requested stat
+	 * Returns the base attribute of a character. This takes all temporary
+	 * boosts, armor, etc, out of the calculation. Helpful to check before
+	 * applying stat candy.
+	 * @param	stat			The stat to get the base value of
+	 * @return					The base value of that stat
 	 */
 	public int getBase(Stat stat) {
-		return get(stat);
+		int current = get(stat);
+		for (CombatItem item : getInventory().getItems()) {
+			SagaStats mods = item.getStatset();
+			if (mods.stat(stat) != null) {
+				current -= mods.stat(stat);
+			}
+		}
+		return current;
 	}
 	
 	/**
