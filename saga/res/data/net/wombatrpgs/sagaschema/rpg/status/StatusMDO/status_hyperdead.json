@@ -1,0 +1,20 @@
+{
+	"key" : "status_hyperdead",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"fullName" : "DEAD",
+	"tag" : "DEAD",
+	"inflictString" : " defeated",
+	"healString" : " rises",
+	"priority" : 99,
+	"resistFlag" : null,
+	"preventChance" : 100,
+	"randomChance" : 0,
+	"recoverChance" : 0,
+	"lethality" : "DEATH",
+	"recover" : "PERSIST_UNTIL_HEAL",
+	"halvedStats" : [ ],
+	"dot" : 0,
+	"dotStat" : null
+}

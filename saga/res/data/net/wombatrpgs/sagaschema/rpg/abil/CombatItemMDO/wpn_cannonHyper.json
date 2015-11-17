@@ -1,0 +1,30 @@
+{
+	"key" : "wpn_cannonHyper",
+	"subfolder" : "weapon",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$YHYPER",
+	"itemDescription" : "Defeats all enemies",
+	"type" : "ITEM",
+	"uses" : 3,
+	"cost" : 50000,
+	"anim" : "banim_hyper",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectStatusMDO",
+		"key" : "anon_CombatItemMDO_1840953166"
+	},
+	"tier" : 10,
+	"robostats" : {
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 90.0
+			},
+			{
+				"stat" : "DEF",
+				"value" : 20.0
+			}
+		]
+	}
+}

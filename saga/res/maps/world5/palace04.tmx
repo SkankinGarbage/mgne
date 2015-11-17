@@ -33,7 +33,7 @@
   <object id="97" name="exit" type="Target" x="144" y="48" width="16" height="16"/>
   <object id="98" name="tele" type="Event" x="144" y="32" width="32" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace05.tmx', 'entry')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'entry')"/>
    </properties>
   </object>
  </objectgroup>
