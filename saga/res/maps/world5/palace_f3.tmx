@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="40" tilewidth="16" tileheight="16" nextobjectid="198">
+ <properties>
+  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="encounter" value="encounterset_level12_danger02"/>
+  <property name="name" value="Grand Palace"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="39" height="40">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YPQ7DIAyFyRGycZRcgClbtx6gW4/Vg1YMlizHzz8pUVIpw1NpjOFrsA30WUp5XliPgFC/UWMcNe6RbEtAqB+N0QKifitTA/6c7WVoAf0421zsuKH5VvHbVmGXYy1sLqkoWw2yoXffwFgZNrSmnjJsXFE2zS/Lxv1kvO5l0/ILjaflblP85DOUpzKO5Pcz2SJCdcFaR6+eWHZNkzOnFyOevQXtWlxbbCh+F6VNdrlWkg3ZyfZh9qlsY4v68rqI6uUcnHskW/+srN3A8yrmQLXMs9MaetJ4vPYoNitnJuYjc8xr32z72VB+e/YMm/Tz2qjuR+2ZXOj6JNoj2Kz6KpVlG71njWTTxsjsWbLOaucO1Ne630T3hauzWft05J7lxYiMlWh968yzwk6+L0P8PXa/1dBetuqwRc7k3e9tSKsFHpuWv5E15czk/89sWux5exZqZ+6AETbe99d9IXLPOpPtqBoyes86Qt5/OWeqnjz/rWsocq64tdUXfEMZbGAYAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="39" height="40">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3VIQ4AIAhAUTyC1ft4G++f7QTQgML2X3EWp4SvCICKeos9f6r1xkh8NwDIxut5dO8tXs9Pe//zDZ7oPwvAG7ozmbqjO1O5O5nmqlWeK2BZzh4AfttS1aC8YBgAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="166" name="l" type="Target" x="288" y="352" width="16" height="16"/>
+  <object id="167" name="j" type="Target" x="192" y="352" width="16" height="16"/>
+  <object id="168" name="m" type="Target" x="336" y="352" width="16" height="16"/>
+  <object id="169" name="k" type="Target" x="240" y="352" width="16" height="16"/>
+  <object id="170" name="room" type="Ceiling" x="16" y="352">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 160,0 160,176 0,176"/>
+  </object>
+  <object id="171" name="room" type="Ceiling" x="16" y="176">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 160,16 160,176 0,176"/>
+  </object>
+  <object id="172" name="room" type="Ceiling" x="16" y="0">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 160,16 160,192 0,192"/>
+  </object>
+  <object id="173" name="room" type="Ceiling" x="400" y="176">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 48,16 48,128 0,128"/>
+  </object>
+  <object id="175" name="room" type="Ceiling" x="400" y="352">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 48,16 48,128 0,128"/>
+  </object>
+  <object id="176" name="room" type="Ceiling" x="528" y="352">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 48,16 48,128 0,128"/>
+  </object>
+  <object id="177" name="room" type="Ceiling" x="528" y="176">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 48,16 48,128 0,128"/>
+  </object>
+  <object id="178" name="room" type="Ceiling" x="176" y="0">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 80,16 80,128 0,128"/>
+  </object>
+  <object id="179" name="room" type="Ceiling" x="448" y="0">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 80,16 80,128 0,128"/>
+  </object>
+  <object id="180" name="spellbook" type="Chest" x="80" y="464" width="16" height="16">
+   <properties>
+    <property name="item" value="spell_wall"/>
+   </properties>
+  </object>
+  <object id="181" name="room" type="Ceiling" x="176" y="368">
+   <properties>
+    <property name="roofID" value="88"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 176,0 176,160 0,160"/>
+  </object>
+  <object id="182" name="tele" type="Event" x="32" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'n')"/>
+   </properties>
+  </object>
+  <object id="184" name="o" type="Target" x="192" y="208" width="16" height="16"/>
+  <object id="185" name="tele" type="Event" x="192" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'o')"/>
+   </properties>
+  </object>
+  <object id="186" name="p" type="Target" x="288" y="208" width="16" height="16"/>
+  <object id="187" name="tele" type="Event" x="288" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'p')"/>
+   </properties>
+  </object>
+  <object id="188" name="q" type="Target" x="336" y="208" width="16" height="16"/>
+  <object id="189" name="tele" type="Event" x="336" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'q')"/>
+   </properties>
+  </object>
+  <object id="190" name="w" type="Target" x="544" y="400" width="16" height="16"/>
+  <object id="191" name="tele" type="Event" x="544" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'w')"/>
+   </properties>
+  </object>
+  <object id="192" name="r" type="Target" x="288" y="64" width="16" height="16"/>
+  <object id="193" name="tele" type="Event" x="288" y="80" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'r')"/>
+   </properties>
+  </object>
+  <object id="194" name="g" type="Target" x="416" y="528" width="16" height="16"/>
+  <object id="195" name="tele" type="Event" x="416" y="544" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'g')"/>
+   </properties>
+  </object>
+  <object id="196" name="s" type="Target" x="592" y="64" width="16" height="16"/>
+  <object id="197" name="tele" type="Event" x="592" y="80" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 's')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="39" height="40">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3GIQEAAAgDsNekfxEyXIHY1BIAAAAuTXkAAPhgAU9cQO5gGAAA
+  </data>
+ </layer>
+</map>

@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2ZQWoDMQxFnSN456OE7LPsdmDoEXvJEohACH1JtuSGhiw+OLH1/SYjy57M2Vo731zXTV5fST08eoEPqTO276QeHqPAhzQY2z0p5HF7CsVZ/RabFmP5oPkPw+twrvcE/NJT86I45DHjpXmez3GH46/FU9yKR8ST+5I8Hzl+xSPi+V/YrDWEclKyRdajl5ucDY2JfHc3PKy8R+uXe+6ub9b9tfj4HtbFZy5tvFRX2pE4bQ7JMoJxSENpr7JZLCts2Tg01jpfvJoNnQeIkcfxs5XXrmBD64gYZZ7yc5bVprjImc1iuwihdc3PaV5bXqOlCrZsLYzUysg91XLhr9lm8lR6ob1xdg6kmRpCPOi6b62WbaaGSAaNq5JtpoYgFsmaeZ7MrlPvd8s8T66yeefE1eeFihrinbmpX15rRNkasiI+vzVGmyNaQ1C/9z9Nhi1aQ7S85Xs7mrez+WfZojVEy0e+t6N5R8uxeesU5S3vi+Tdq9i8umqNmb2nkX7O5tVVa8xqDdH0Y/zmq9rBVqkKtkjuf/SRVNU7gR2qeiewQ78xVd+50BoAAA==
+   H4sIAAAAAAAAC+2ZQWoDMQxF3SN456OU7LPsdmDo9bLrJUsgAiH0JdmSG1Ky+ODW1vebjKR4Jmdr7fzn+tzk9ZXU3aMX+JA6Y/tO6u4xCnxIg7Fdk0Iel4dQnDVvsWkxlg/a/zC8Dud6T8AvPTUvikMeM16a5/lYdzj+WjzFrXhEPLkvyfOR61c8Ip6vwmbVEMpJyRapRy83ORtaE/nf1fCw8h7VL/fc3d+s+2vx8e+wLv7m0tZLdWUcidP2kCwjGIc0lPEqm8WywpaNQ2ut88Wz2dB5gBh5HD9beeMKNlRHxMjjbozZG1Nc5MxmsX0Iobq+MWZvLK/RUgVbthdGemXknmq58NdsM3kqvdB34+weSDM9hHjQdV9aLdtMD5EMGlcl20wPQSySNfM8ma1T73PLPE+usnnnxNXnhYoe4p25aV5ea0TZHrIivr+1Rtsj2kPQvPeeJsMW7SFa3tK7Fa3GSJ3tP8sW7SFaPtK7Fa3GSKPl2Lw6RXnL5yJ59yw2r69aa2bvaWSes3l91Vqz2kM0/Rif+ap2sFWqgi2S+2+9JVX1m8AOVf0msEO/xSZ739AaAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="39" height="44">
@@ -111,25 +111,21 @@
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'j')"/>
    </properties>
   </object>
-  <object id="153" name="j" type="Target" x="192" y="288" width="16" height="16"/>
   <object id="154" name="tele" type="Event" x="240" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'k')"/>
    </properties>
   </object>
-  <object id="155" name="k" type="Target" x="240" y="288" width="16" height="16"/>
   <object id="156" name="tele" type="Event" x="288" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'l')"/>
    </properties>
   </object>
-  <object id="157" name="l" type="Target" x="288" y="288" width="16" height="16"/>
   <object id="158" name="tele" type="Event" x="336" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'm')"/>
    </properties>
   </object>
-  <object id="159" name="m" type="Target" x="336" y="288" width="16" height="16"/>
   <object id="160" name="tele" type="Event" x="272" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'g')"/>
