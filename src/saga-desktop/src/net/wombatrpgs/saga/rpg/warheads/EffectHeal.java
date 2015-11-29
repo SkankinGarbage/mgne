@@ -19,6 +19,7 @@ import net.wombatrpgs.saga.rpg.chara.Status;
 import net.wombatrpgs.saga.rpg.items.CombatItem;
 import net.wombatrpgs.saga.screen.TargetSelectable;
 import net.wombatrpgs.saga.ui.CharaSelector.SelectionListener;
+import net.wombatrpgs.sagaschema.rpg.abil.data.UseRestoreType;
 import net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO;
 
 /**
@@ -33,8 +34,13 @@ public class EffectHeal extends EffectAllyTarget {
 		this.mdo = mdo;
 	}
 
-	/** @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#isMapUsable() */
-	@Override public boolean isMapUsable() { return true; }
+	/**
+	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#isMapUsable()
+	 */
+	@Override public boolean isMapUsable() {
+		// kind of a hack w/e
+		return mdo.useRestore != UseRestoreType.RESTORES_USES;
+	}
 
 	/**
 	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#onMapUse
@@ -143,6 +149,10 @@ public class EffectHeal extends EffectAllyTarget {
 			Status status = victim.getStatus();
 			if (status != null && status.isContainedIn(mdo.heals)) {
 				status.heal(null, victim);
+				affected = true;
+			}
+			if (mdo.useRestore == UseRestoreType.RESTORES_USES) {
+				victim.restoreAbilUses();
 				affected = true;
 			}
 		}

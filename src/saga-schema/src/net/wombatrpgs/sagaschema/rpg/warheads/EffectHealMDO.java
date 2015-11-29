@@ -10,6 +10,7 @@ import net.wombatrpgs.mgns.core.Annotations.DefaultValue;
 import net.wombatrpgs.mgns.core.Annotations.Desc;
 import net.wombatrpgs.mgns.core.Annotations.Nullable;
 import net.wombatrpgs.mgns.core.Annotations.SchemaLink;
+import net.wombatrpgs.sagaschema.rpg.abil.data.UseRestoreType;
 import net.wombatrpgs.sagaschema.rpg.stats.Stat;
 import net.wombatrpgs.sagaschema.rpg.status.StatusMDO;
 
@@ -34,5 +35,9 @@ public class EffectHealMDO extends EffectAllyTargetMDO {
 	@Desc("Heal status - cures these ailments")
 	@SchemaLink(StatusMDO.class)
 	public String[] heals;
+	
+	@Desc("Use restore - does this heal restore uses? (for tent basically)")
+	@DefaultValue("NO_USE_RESTORE")
+	public UseRestoreType useRestore;
 
 }

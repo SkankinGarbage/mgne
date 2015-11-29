@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="50" tilewidth="16" tileheight="16" nextobjectid="220">
+ <properties>
+  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="name" value="Grand Palace"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="57" height="50">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+1aW27CQAwMEj/lr38cghPALfjoSYBcv1qJVa2px/YkWVSkjmSFZJ31zHqfwDSNwwPu78/rbWDMV2N+Xu/mOhPfdwHmDctmuG+4Tz9t8C64w7Xp8rRjPqv5xfrXArlleVobS6l/bTzbptheeB/5PuAa5ZjlZymXCpS5r+LL2h3npRFcUPuNlN1E34aIN2qeB3KJ8rvG1+JBPuO7I7l4bcDWa7yfiW/UzgirW6m/ytvT6cW7kfeYL7Zli70Da7BzjlK/whuhzE2KL+qzOreoP/KN9hlYpvhiTKbR9tNRXBinqEwd70wfy+UILg3eXM4Q+Xocmo7L9Ftbf7am/gpv3Gd4Y/Qu+trnTcNh+q3vAFe1foW3nXOrbVT17Ro+plhnt1Fc8B1WX2+TbGx5dnA+R9qV8VvlzcYxzmOs32W6sv66xBTenn4LW2ZjnJ9W0dmulxWaeiw7bym8lXOPjfn1tGpesr4Zvdtj2TZVeCvoXJi+bHxF+rJ3MaYCL994trUaPxx9lmu1T3rjNXvXxlV4V8vsWsA0KnONl7csn5jHKm+L7EzuxUIdZ3h+AZ+uw9v3WL+zUzfrqxnv6tx0I5yq403NdWYKb3ttiM62VU2jzMZTePfzq+eLZdnY2Rfs9LSKbxRP4e2BnTmyuaFzuzrWn3eN18R3D/FwzlV4e3q9NdTu5djcN0qjNy4U3vg5OqO0uqM1rHM8ObYvPjuZeqJxr/BWvn/HOKjX07gDPTvyjGlk/Ub9XaL6/Xs2r3o5WaLxBL6eToU3g5f7bL3AudNyz/oq+mbjUeGtfKfO4vX7TOOn8flMfPckVrdRvwVkazRqxJwdjc8x8cU8Zhoj3hbRGQzX8coavtay/UK0fixBpNFb49iat6XGDvW/FOy88hc1qjnLzmCRRm9MsTEWtQmW43qJvg3Kb8nZGSzTqNxvqdGD2mf7Oxj7Su7tusDKs1xX+4XyG2cFisZj4N814FqAGr3yTONaLBl3rJxpsG3C2sDuI7YG48Zy4flvodHuI95Ro7cfZ3WP1LhVX11ir9D412xrVPYyr7Z/jT/4BgctV6mILAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="57" height="50">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WwQ6CMAwGYKc39SZHeRevvrEP4FF5E28+gONAbJrBCqysg/9LliBplrUdbrsdAAAAAAB0vrkXAABQgGdgpJrLindgxDyEc0HZLO1TrbU0inOPJflmXhPntZSnli7PtVv6vzV0Dlo8y+ZoImMJ2rVs8wid99LzunL/54vrjxuivXfnzl+TvK4Tc8yt7U2VYO1D8+T+7tve1GxtN0HOPCY0T8fiHfYuyFESY5Wkh2Njc+9Vbkx/pLEW9yqUw/l9tvfj4PqfS3f0OZz8OLv+562J9ZrfAWhMqnuGtliv+R2AxgzdD1KgNeT1D9WXviul/rSGvP6h+tJ32vW36sN+l9LrObbaawBYlx9NiMqLiCwAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="201" name="room" type="Ceiling" x="272" y="576">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 144,16 144,80 80,80 80,112 64,112 64,80 0,80"/>
+  </object>
+  <object id="202" name="room" type="Ceiling" x="464" y="576">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,48 112,48 112,176 0,176"/>
+  </object>
+  <object id="203" name="room" type="Ceiling" x="512" y="400">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,48 96,48 96,176 0,176"/>
+  </object>
+  <object id="204" name="room" type="Ceiling" x="320" y="400">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,48 96,48 96,176 0,176"/>
+  </object>
+  <object id="205" name="room" type="Ceiling" x="400" y="400">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="32,48 96,48 96,176 32,176"/>
+  </object>
+  <object id="206" name="room" type="Ceiling" x="336" y="608">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="32,48 112,48 112,144 32,144"/>
+  </object>
+  <object id="207" name="room" type="Ceiling" x="144" y="608">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="32,-16 80,-16 80,48 176,48 176,144 32,144"/>
+  </object>
+  <object id="208" name="room" type="Ceiling" x="576" y="544">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,48 160,48 160,208 0,208"/>
+  </object>
+  <object id="209" name="u1" type="Target" x="432" y="544" width="16" height="16"/>
+  <object id="210" name="tele" type="Event" x="432" y="560" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'u1')"/>
+   </properties>
+  </object>
+  <object id="211" name="u2" type="Target" x="480" y="544" width="16" height="16"/>
+  <object id="212" name="tele" type="Event" x="480" y="560" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'u2')"/>
+   </properties>
+  </object>
+  <object id="213" name="tele" type="Event" x="704" y="704" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 't')"/>
+   </properties>
+  </object>
+  <object id="214" name="t" type="Target" x="704" y="688" width="16" height="16"/>
+  <object id="215" name="v" type="Target" x="336" y="656" width="16" height="16"/>
+  <object id="216" name="tele" type="Event" x="336" y="672" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'v')"/>
+   </properties>
+  </object>
+  <object id="217" name="spellbook" type="Chest" x="432" y="688" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_tent"/>
+   </properties>
+  </object>
+  <object id="218" name="crystal" type="Event" x="496" y="688" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="play('tower/crystal.lua')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="219" type="Encounter" x="416" y="288">
+   <properties>
+    <property name="mdo" value="encounterset_level12_danger02"/>
+   </properties>
+   <polygon points="192,304 192,160 -96,160 -96,304 -240,304 -240,464 320,464 320,304"/>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="57" height="50">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAPgOtCg2ziCwAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="57" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAPgOtCg2ziCwAAA==
+  </data>
+ </layer>
+</map>

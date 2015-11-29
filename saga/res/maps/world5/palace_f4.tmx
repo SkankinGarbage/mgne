@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="37" height="35" tilewidth="16" tileheight="16" nextobjectid="225">
+ <properties>
+  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="encounter" value="encounterset_level12_danger02"/>
+  <property name="name" value="Grand Palace"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="37" height="35">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC9WXzQ3DMAiFHSkL5JZRukAX6IwdtOoBCVF+Hg6uyOGpluPgzzU8lH2MsTfUy9E/YkdzXZiejq4yIbG9uU38VjJ5sfm8nJPia7w78O4FiW0xWcqySCGxZ5m8NZsyXskk90aExtPOdVemLHfmPS/H3+O3frW6PoB5a03kFxYTzznNx08j5gmsWcW0ShoTSebn1oRJCon5MMYVTLLerVyXXn0YY/T+IyarXj2m0xhXMPE1UYwZr8owaX3T6/dZT9f2kPvdgSl7DzNMXo/j8ax682R5RsU73f6nyKORussyRZK9G8lx7tHVOf59Lns3Wnd0lhVMMx5IHl2ZTzxHZZ+M9qjKces575OdmKhPdmHSeuOMP616B/ENVHTuilhXv71JxFQVrxvTB89ZzDM8FAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="37" height="35">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XPQ6AIAwFYLiZK7d19BDO3EG9hB1cICqh9KmY9yUNPwMQmpLgHBHG4NP27bWjRPBpawW5dk/iRZ+I+pS/sYj3vFbw92OU6ZltiKotEqvEVpjryVwYa53Vsba2x5aDHFpzh7qnL7LMnYU/1h0KOnf5n6P0B2HuiHR2WorR9TwUAAA=
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="198" name="room" type="Ceiling" x="144" y="64">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 224,16 224,160 0,160"/>
+  </object>
+  <object id="199" name="room" type="Ceiling" x="368" y="0">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 144,16 144,176 0,176"/>
+  </object>
+  <object id="200" name="room" type="Ceiling" x="16" y="384">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 176,16 176,128 0,128"/>
+  </object>
+  <object id="201" name="o" type="Target" x="176" y="176" width="16" height="16"/>
+  <object id="202" name="p" type="Target" x="272" y="176" width="16" height="16"/>
+  <object id="203" name="tele" type="Event" x="272" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'p')"/>
+   </properties>
+  </object>
+  <object id="204" name="q" type="Target" x="320" y="176" width="16" height="16"/>
+  <object id="205" name="tele" type="Event" x="320" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'q')"/>
+   </properties>
+  </object>
+  <object id="206" name="tele" type="Event" x="176" y="192" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'o')"/>
+   </properties>
+  </object>
+  <object id="209" name="u1" type="Target" x="272" y="256" width="16" height="16"/>
+  <object id="210" name="tele" type="Event" x="272" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f5.tmx', 'u1')"/>
+   </properties>
+  </object>
+  <object id="211" name="u2" type="Target" x="320" y="256" width="16" height="16"/>
+  <object id="212" name="tele" type="Event" x="320" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f5.tmx', 'u2')"/>
+   </properties>
+  </object>
+  <object id="213" name="v" type="Target" x="176" y="416" width="16" height="16"/>
+  <object id="214" name="tele" type="Event" x="176" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f5.tmx', 'v')"/>
+   </properties>
+  </object>
+  <object id="215" name="t" type="Target" x="544" y="448" width="16" height="16"/>
+  <object id="216" name="tele" type="Event" x="544" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f5.tmx', 't')"/>
+   </properties>
+  </object>
+  <object id="217" name="tele" type="Event" x="544" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'w')"/>
+   </properties>
+  </object>
+  <object id="218" name="w" type="Target" x="544" y="384" width="16" height="16"/>
+  <object id="219" name="spellbook" type="Chest" x="448" y="464" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_elixir"/>
+   </properties>
+  </object>
+  <object id="220" name="spellbook" type="Chest" x="464" y="464" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_revive"/>
+   </properties>
+  </object>
+  <object id="221" name="spellbook" type="Chest" x="480" y="464" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_xcure"/>
+   </properties>
+  </object>
+  <object id="222" name="n" type="Target" x="16" y="208" width="16" height="16"/>
+  <object id="223" name="entry" type="Target" x="288" y="512" width="16" height="16"/>
+  <object id="224" name="tele" type="Event" x="288" y="528" width="32" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_stairs.tmx', 'exit')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="37" height="35">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WMQ0AAAzDsB7lj3ksNk2yEeRMAgBc6XUAAAA80njobQMjZcWJPBQAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="37" height="35">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3DoQ0AMAgAMPgAy/+PIviATEy0SSMAAAAAgIvK/ZPO/cIAUmzPujwUAAA=
+  </data>
+ </layer>
+</map>

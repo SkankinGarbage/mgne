@@ -105,31 +105,31 @@
   </object>
   <object id="182" name="tele" type="Event" x="32" y="192" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'n')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'n')"/>
    </properties>
   </object>
   <object id="184" name="o" type="Target" x="192" y="208" width="16" height="16"/>
   <object id="185" name="tele" type="Event" x="192" y="192" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'o')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'o')"/>
    </properties>
   </object>
   <object id="186" name="p" type="Target" x="288" y="208" width="16" height="16"/>
   <object id="187" name="tele" type="Event" x="288" y="192" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'p')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'p')"/>
    </properties>
   </object>
   <object id="188" name="q" type="Target" x="336" y="208" width="16" height="16"/>
   <object id="189" name="tele" type="Event" x="336" y="192" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'q')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'q')"/>
    </properties>
   </object>
   <object id="190" name="w" type="Target" x="544" y="400" width="16" height="16"/>
   <object id="191" name="tele" type="Event" x="544" y="384" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'w')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'w')"/>
    </properties>
   </object>
   <object id="192" name="r" type="Target" x="288" y="64" width="16" height="16"/>

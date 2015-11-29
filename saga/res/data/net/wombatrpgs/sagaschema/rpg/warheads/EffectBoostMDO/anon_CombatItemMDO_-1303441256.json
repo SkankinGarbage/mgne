@@ -1,0 +1,11 @@
+{
+	"key" : "anon_CombatItemMDO_-1303441256",
+	"subfolder" : "",
+	"name" : "anon_CombatItemMDO_-1303441256",
+	"description" : "auto-generated anonymous polymorph",
+	"projector" : "ALLY_PARTY",
+	"stat" : "DEF",
+	"power" : 15,
+	"powerStat" : null,
+	"cap" : 0
+}

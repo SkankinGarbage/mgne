@@ -1,0 +1,21 @@
+{
+	"key" : "spell_wall",
+	"subfolder" : "spell",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$QWALL",
+	"itemDescription" : "Increases defense of party by 15",
+	"type" : "ITEM",
+	"uses" : 13,
+	"cost" : 50000,
+	"anim" : "banim_fadeout",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectBoostMDO",
+		"key" : "anon_CombatItemMDO_-1303441256"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

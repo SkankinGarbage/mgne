@@ -1,0 +1,21 @@
+{
+	"key" : "pot_tent",
+	"subfolder" : "potions",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "TENT",
+	"itemDescription" : "Fully heals party and restores ability uses",
+	"type" : "ITEM",
+	"uses" : 1,
+	"cost" : 50000,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_-56620980"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

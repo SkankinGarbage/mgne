@@ -85,7 +85,7 @@
   </object>
   <object id="142" name="tele" type="Event" x="288" y="176" width="32" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_tower_f1.tmx', 'entry')"/>
+    <property name="onCollide" value="targetTele('world5/palace_stairs.tmx', 'entry')"/>
    </properties>
   </object>
   <object id="143" name="exit" type="Target" x="304" y="192" width="16" height="16"/>

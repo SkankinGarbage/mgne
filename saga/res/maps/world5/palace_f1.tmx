@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XQW7DIBBF4QjZ5ShR92TnbSXE9brrJStLRZr8/oEZsJ0m8uJLxMx8npzxADmEkE+dOvXSuonxoojNs3yLV8tf5lePi4gpijKZx3yrl+aP+dXjKmLuiur68hnmW72YGAt6tDzr+tb4OvdhEPOSfNGwXoshguTcZ8ejzi/hL8uRfBgTYb6EOb5WPWzBdw/vwdfTXnwai3xm6aF7fR8WPksPHeFr9RYPn/V79fCN9IIZvqzkMz6vZvnkHifHjM9zNkCvUT65x8kx4/OcDdBrlE8T45vx6tXPs/VqfLPa8v9lvcKbw3rCFv0Fe9fRfJb7R9qA7xbsfDLWcv9IwOvlW3O/w+N5QePD+05qqPInwTui8ssnzwsaH953EomNgg95ezXBagQ9WnyJrB/Bo8fn2X8W4jHKp/1GvlZNoArxsPItYX8+VtNWvhL+Nx+rt1UXhSUrMSP9vsenfa+rruD3RdbAGC+f1it7756J8W2h1h7okeQbOYMfqZEz+JH6AXeHu6YAGQAA
+   H4sIAAAAAAAAC+2XTW4DIQyFzRGyy1Gi7slutpUQ1+uul6xGKpL7+gzmZ5KmmsWTyGA/Pk08BpKIpFOnTr20bmq8GWLzLN/jVfPX+cXjomKyoUTmMd/rZfljfvG4qpi7obK+fob5Xi8mxoIeNc+yvje+zL05xLw0X3CsV2MIID333vAo85v8ZnkkH8YEmM8yx1erhxV8d/kffC0dxWex6GeeHnrU9+Hh8/TQEb5ab+nh836vPXwjvWCGLxn5jK9Xs3x6j9NjxtdzNkCvUT69x+kx4+s5G6DXKJ8lxjfj1aqfZ+vV+Ga18v9lvaI3h/WEFf0Fe9ej+Tz3j7iA7yZ+Ph3ruX9E4O3l23M/5ed5weLD+06sqPBHxTui/M2nzwsWH953IokNig95WzXBagQ9anyRrB/Ao8XXs/9sxGOUz/qNfLWaQGXi4eXb5Hg+VtNevix/m4/V266LwZKMmJF+3+KzvtddV/D7IGtgTC+f1Stb756J8a1QeTezPppv5AxuqfCt9Bw5g1sqfCs9vwDEGi8iABkAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="40" height="40">
@@ -20,16 +20,16 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3VQQ5AMBAF0A47JCy5ja0LiyP0Cm6jgmibMmmIQf5LJv3RRSfRQSkA+BMipRJTKbk5tC8hM+eWpgpys72fe8+eNPdTr33Z+S1q2lc724ZnWwJh/UEOab27Mkaetc1CSW4+ow9ySHexPwBfzHxIiJmPv+qZVZpmVjiH9wtfhf8HXMF9+6TvFPft4+4U5gPg2ypa6q0aWupOE6zTJfwAGQAA
+   H4sIAAAAAAAAC+3VQQqAIBAFUKd2FbT1OG27cHSErtBtMihSUQcJmpT/QPzkwgEdUwoAakKkVGNGS24OrUvozL6jGQO52V7vvW9fOuvRV112/gtNz2xn2/ptSSBsieSQybsre+Zedy+M5OaULZJD5pf1Afhy+kNCTn/UamFmaRszQxrOF0qF/we8wb190neKe/u4O4X+AIDSHE7OTaAAGQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="99" name="tele" type="Event" x="304" y="592" width="32" height="16">
+  <object id="99" name="tele" type="Event" x="304" y="608" width="32" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace04.tmx', 'exit')"/>
    </properties>
   </object>
-  <object id="100" name="entry" type="Target" x="304" y="576" width="16" height="16"/>
+  <object id="100" name="entry" type="Target" x="304" y="592" width="16" height="16"/>
   <object id="107" name="a" type="Target" x="32" y="112" width="16" height="16"/>
   <object id="108" name="tele" type="Event" x="32" y="96" width="16" height="16">
    <properties>
@@ -102,6 +102,14 @@
   </properties>
   <data encoding="base64" compression="gzip">
    H4sIAAAAAAAAC+3MMQ0AAAzDsNIcfyJ7xmA9bSlvEgAAAAAA4GOuxoeOBWXSL70AGQAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="40" height="40">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3DsQkAMAgAMP3A1f8fdfAFh1ISSAQAAAAAAPCzyv2qzn1pAKkOm10AGQAA
   </data>
  </layer>
 </map>
