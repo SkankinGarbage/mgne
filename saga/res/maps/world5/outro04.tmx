@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="15" tilewidth="16" tileheight="16" nextobjectid="178">
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="21" height="15">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC7WSMQqAMAxF4yToJjh0s5N6AHXw/vdSIUL4/KRFcHjQhuSV/rYTkQ6YzLoFvHqjCPGhcwS8euRM4JxvFmU19e1mV44KZw5mbW9DEOOxZDKLZ5fyfD2Z+DxnKc8vzlKeieTyzp66P52zojyffa+w3lrQOSjsrhG1TvwLDOaN8sR3Q9Bf+p+pwol+dHq90Vv84US/dV6/16r87AQAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="21" height="15">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACzvHwMBwDg2DwFkG8gG6eefwKyfZTFxuewfFxIoTMg8ETuLQiwtQw6/UNPM+DnFy43cDAyQ8TpKpf7CBm1A8ChgYjuDB5IKzSBg5v1FSvmAznxgAAPFy4x7sBAAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="132" name="target" type="Target" x="160" y="112" width="16" height="16"/>
+  <object id="133" name="hero" type="Character" x="160" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="lua(return getHero(0).getSpriteName())"/>
+    <property name="face" value="NORTH"/>
+   </properties>
+  </object>
+  <object id="153" name="friend3" type="Character" x="80" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="lua(return getHero(3).getSpriteName())"/>
+    <property name="face" value="EAST"/>
+   </properties>
+  </object>
+  <object id="154" name="friend3" type="Character" x="240" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="lua(return getHero(1).getSpriteName())"/>
+    <property name="face" value="WEST"/>
+   </properties>
+  </object>
+  <object id="155" name="friend2" type="Character" x="224" y="128" width="16" height="16">
+   <properties>
+    <property name="appearance" value="lua(return getHero(2).getSpriteName())"/>
+    <property name="face" value="WEST"/>
+   </properties>
+  </object>
+  <object id="156" name="janine" type="Character" x="144" y="112" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_janine"/>
+    <property name="face" value="NORTH"/>
+   </properties>
+  </object>
+  <object id="169" name="elder" type="Character" x="144" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+  <object id="170" name="borg" type="Character" x="160" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="SOUTH"/>
+   </properties>
+  </object>
+  <object id="171" name="grandmaster" type="Character" x="112" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="EAST"/>
+   </properties>
+  </object>
+  <object id="172" name="david" type="Character" x="192" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_david"/>
+    <property name="face" value="WEST"/>
+   </properties>
+  </object>
+  <object id="173" name="npc" type="Character" x="96" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="EAST"/>
+   </properties>
+  </object>
+  <object id="174" name="npc" type="Character" x="208" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="WEST"/>
+   </properties>
+  </object>
+  <object id="175" name="npc" type="Character" x="112" y="144" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="face" value="WEST"/>
+   </properties>
+  </object>
+  <object id="176" name="npc" type="Character" x="128" y="144" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="face" value="NORTH"/>
+   </properties>
+  </object>
+  <object id="177" name="npc" type="Character" x="192" y="144" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="face" value="NORTH"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="21" height="15">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
+  </data>
+ </layer>
+</map>

@@ -30,12 +30,18 @@ public class SceneBGM extends OneArgFunction {
 			BackgroundMusic bgm;
 			
 			/* initializer */ {
-				bgm = MGlobal.audio.generateMusicForKey(bgmArg.checkjstring());
-				MGlobal.assets.loadAsset(bgm, "command bgm");
+				if (bgmArg != LuaValue.NIL) {
+					bgm = MGlobal.audio.generateMusicForKey(bgmArg.checkjstring());
+					MGlobal.assets.loadAsset(bgm, "command bgm");
+				}
 			}
 			
 			@Override protected void internalRun() {
-				MGlobal.audio.playBGM(bgm);
+				if (bgm == null) {
+					MGlobal.audio.fadeoutEmuBGM(1);
+				} else {
+					MGlobal.audio.playBGM(bgm);
+				}
 			}
 			
 		});

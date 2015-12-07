@@ -1,0 +1,37 @@
+playBGM('ffl2_ending1')
+
+fade('white')
+wait(1.0)
+hideHero(true)
+targetTele('world5/outro01', 'target')
+fade('normal')
+wait(5.0)
+
+fade('white')
+wait(1.0)
+targetTele('world5/outro02', 'target')
+fade('normal')
+wait(5.0)
+
+fade('white')
+wait(1.0)
+targetTele('world5/outro03', 'target')
+fade('normal')
+wait(5.0)
+
+fade('white')
+wait(1.0)
+targetTele('world5/outro04', 'target')
+fade('normal')
+wait(7.0)
+
+fade('white')
+wait(1.0)
+targetTele('world5/outro05', 'target')
+fade('normal')
+wait(2.0)
+
+speak("SaGa 4: Masters of the Demon World")
+speak("2016 WOMBATRPGs: psy_wombats + bob_esc")
+speak("Thank you for playing!")
+reset()

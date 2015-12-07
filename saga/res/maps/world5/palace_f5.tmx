@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="50" tilewidth="16" tileheight="16" nextobjectid="220">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="50" tilewidth="16" tileheight="16" nextobjectid="226">
  <properties>
   <property name="bgm" value="ffl3_final_dungeon"/>
   <property name="name" value="Grand Palace"/>
@@ -119,6 +119,35 @@
     <property name="mdo" value="encounterset_level12_danger02"/>
    </properties>
    <polygon points="192,304 192,160 -96,160 -96,304 -240,304 -240,464 320,464 320,304"/>
+  </object>
+  <object id="220" name="aven" type="Character" x="464" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_aven"/>
+    <property name="hide" value="return getSwitch('aven_dead')"/>
+    <property name="onInteract" value="play('world5/boss01.lua')"/>
+   </properties>
+  </object>
+  <object id="221" name="block" type="Event" x="416" y="192" width="32" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="222" name="block" type="Event" x="480" y="192" width="32" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="224" name="zkauba" type="Character" x="448" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_zkauba"/>
+    <property name="hide" value="return not getSwitch('brotherhood_final')"/>
+   </properties>
+  </object>
+  <object id="225" name="lara" type="Character" x="480" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_lara"/>
+    <property name="hide" value="return not getSwitch('brotherhood_final')"/>
+   </properties>
   </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="57" height="50">
