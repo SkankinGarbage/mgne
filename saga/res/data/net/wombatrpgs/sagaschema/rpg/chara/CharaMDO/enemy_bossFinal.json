@@ -1,0 +1,37 @@
+{
+	"key" : "enemy_bossFinal",
+	"subfolder" : "boss",
+	"name" : "AVEN",
+	"description" : "",
+	"gender" : "MALE",
+	"race" : "MUTANT",
+	"family" : "None",
+	"species" : "AVEN",
+	"appearance" : "4dir_aven",
+	"portrait" : "battle_portraits/boss_final.png",
+	"meatEatLevel" : 0,
+	"meatTargetLevel" : 0,
+	"meatDropChance" : 0,
+	"gp" : 1,
+	"loot" : "wpn_swordSeven",
+	"lootDropChance" : 1,
+	"equipped" : [
+		"spell_fire2",
+		"spell_flare2",
+		"spell_lightning",
+		"spell_magma",
+		"spell_magma",
+		"spell_shake",
+		"wpn_swordSeven",
+		"wpn_legendEmperor"
+	],
+	"stats" : {
+		"hp" : 9999,
+		"mhp" : 9999,
+		"str" : 84,
+		"def" : 82,
+		"agi" : 90,
+		"mana" : 99,
+		"flags" : [ ]
+	}
+}

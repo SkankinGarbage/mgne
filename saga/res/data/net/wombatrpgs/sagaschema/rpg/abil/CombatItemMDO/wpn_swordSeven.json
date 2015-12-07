@@ -1,0 +1,21 @@
+{
+	"key" : "wpn_swordSeven",
+	"subfolder" : "boss",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$ESEVEN",
+	"itemDescription" : "",
+	"type" : "ITEM",
+	"uses" : 10,
+	"cost" : 0,
+	"anim" : "banim_slash",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectMultihitMDO",
+		"key" : "anon_CombatItemMDO_-2098797969"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}
