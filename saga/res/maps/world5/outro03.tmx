@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="15" tilewidth="16" tileheight="16" nextobjectid="179">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="16" tilewidth="16" tileheight="16" nextobjectid="179">
+ <properties>
+  <property name="bgm" value="no_change"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="21" height="15">
+ <layer name="Tile Layer 1" width="21" height="16">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC7WTQQqEMAxF40ZQcDeb2dVzeKCZrbjRuam3sYUEvp8UMw4jPEhafKRNKiLS/Mgr8wbKNwZhl617zmcQdtq652yVBLGXszMpnvOhNBDX8uh9bpmP7q8XedT5j77jfq9849wJIdeU6SCP+Gt19upi7jqxPmYirzdXNafn4zqLa1DaC6ednWvlGovLZnUIOhHsk/1bXHNmkfMbiM6n15sZ4gVinqUDKl+BgewEAAA=
+   H4sIAAAAAAAAC6WTQQqEMAxF242g4M6NO+ccHmjcihudm85tTCGBP5+WpuPiQVPl8WmSGEKID3kLG/BqgF12z865AXbaPTs7YKnU7FwUdk5AdNSe9zyFS/jo91rtcT7tucc5KC3OL8GuVeih9vhLOQd1Mf86MR+zkjc3VyVnzsc5k2tUuoqzlJUzJpfN6uh0Itgn+ye5duEIvzvgnc9cb3Y4H3AuzZIH2yneK855A1Uq4M9ABQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="21" height="15">
+ <layer name="Tile Layer 2" width="21" height="16">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGH7gAw42JeAnDja9gBojfv5J+jllFBABTg9Rs4cqAOUH9DyBDgAIfmjh7AQAAA==
+   H4sIAAAAAAAAC2NgGH7gAw42JeAnDja9gBojfv5J+jllFBABTg9Rs4cqAOUH9DxBDwAAydd2FEAFAAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -92,12 +95,12 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="21" height="15">
+ <layer name="Tile Layer 3" width="21" height="16">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
+   H4sIAAAAAAAAC2NgGAWjYBSMglFADgAAduqPIkAFAAA=
   </data>
  </layer>
 </map>

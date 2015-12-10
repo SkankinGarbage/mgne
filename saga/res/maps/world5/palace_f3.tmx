@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="40" tilewidth="16" tileheight="16" nextobjectid="198">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="40" tilewidth="16" tileheight="16" nextobjectid="199">
  <properties>
   <property name="bgm" value="ffl3_final_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger02"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2YPQ7DIAyFyRGycZRcgClbtx6gW4/Vg1YMlizHzz8pUVIpw1NpjOFrsA30WUp5XliPgFC/UWMcNe6RbEtAqB+N0QKifitTA/6c7WVoAf0421zsuKH5VvHbVmGXYy1sLqkoWw2yoXffwFgZNrSmnjJsXFE2zS/Lxv1kvO5l0/ILjaflblP85DOUpzKO5Pcz2SJCdcFaR6+eWHZNkzOnFyOevQXtWlxbbCh+F6VNdrlWkg3ZyfZh9qlsY4v68rqI6uUcnHskW/+srN3A8yrmQLXMs9MaetJ4vPYoNitnJuYjc8xr32z72VB+e/YMm/Tz2qjuR+2ZXOj6JNoj2Kz6KpVlG71njWTTxsjsWbLOaucO1Ne630T3hauzWft05J7lxYiMlWh968yzwk6+L0P8PXa/1dBetuqwRc7k3e9tSKsFHpuWv5E15czk/89sWux5exZqZ+6AETbe99d9IXLPOpPtqBoyes86Qt5/OWeqnjz/rWsocq64tdUXfEMZbGAYAAA=
+   H4sIAAAAAAAAC+2YPQ6DMAyFwxHYchQukImtGwfo1mP1oFUGS5br5x8aBJVAemqK4+QrsR3SrZSyXViPgFC/UWMcNe6RbEtAqB+N0QKifitTA/6c7WloAf0421zsuKH5VvHbVmGXYy1sLqkoWw2yoWffwFgZNrSmnjJsXFE2zS/Lxv1kvO5l0/ILjaflblP85D2UpzKO5Pcz2SJCdcFaR6+eWHZNkzOnFyOevQXtWlxbbCh+F6VNdrlWkg3ZyfZm9ql8xxb15XUR1cs5OPdItv5ZWbuB+1XMgWqZZ6c19KTxeO1RbFbOTMxH5pjXvtn2s6H89uwZNunntVHdj9ozudD1TrRHsFn1VSrLNnrPGsmmjZHZs2Sd1d47UF/rfBPdF67OZu3TkXOWFyMyVqL1rTPPCjv5Pg3x59j9VkN72arDFnkn734vQ1ot8Ni0/I2sKWcm/39m02LP27NQO3MGjLDxvr/uC5Fz1plsR9WQ0XvWEfL+yzlT9eT5b11D97Xv+gDGlx3NYBgAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="39" height="40">
@@ -135,19 +135,24 @@
   <object id="192" name="r" type="Target" x="288" y="64" width="16" height="16"/>
   <object id="193" name="tele" type="Event" x="288" y="80" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'r')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f2.tmx', 'r')"/>
    </properties>
   </object>
   <object id="194" name="g" type="Target" x="416" y="528" width="16" height="16"/>
   <object id="195" name="tele" type="Event" x="416" y="544" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'g')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f2.tmx', 'g')"/>
    </properties>
   </object>
   <object id="196" name="s" type="Target" x="592" y="64" width="16" height="16"/>
   <object id="197" name="tele" type="Event" x="592" y="80" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 's')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f2.tmx', 's')"/>
+   </properties>
+  </object>
+  <object id="198" name="spikes" type="Event" x="0" y="0" width="16" height="16">
+   <properties>
+    <property name="onTurn" value="if (getAvatar().terrainType() == 101) then play('world5/spike.lua'); playScene(); end"/>
    </properties>
   </object>
  </objectgroup>
@@ -156,7 +161,7 @@
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3GIQEAAAgDsNekfxEyXIHY1BIAAAAuTXkAAPhgAU9cQO5gGAAA
+   H4sIAAAAAAAAC+3GsQkAAAjAMG908/9HvEERXBIoNAIAAIBPNXwAAG6lVjX1iERPYBgAAA==
   </data>
  </layer>
 </map>

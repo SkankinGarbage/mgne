@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="15" tilewidth="16" tileheight="16" nextobjectid="153">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="16" tilewidth="16" tileheight="16" nextobjectid="153">
+ <properties>
+  <property name="bgm" value="no_change"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="21" height="15">
+ <layer name="Tile Layer 1" width="21" height="16">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NkYGBghOIJOHA1FOOSZ8SDh4KZXEA8HQeGmYlLnhOqH5uZnFDMiMaGmcmIJoeMSTUTHWMzE5ffudD4+MIemx5aY5i/qW0mPf1ADYwvHskNP1LCAdl+aoUfPeMBAMO1QBrsBAAA
+   H4sIAAAAAAAAC2NkYGBghOIJOHA1FOOSZ8SDh4KZXEA8HQeGmYlLnhOqH5uZnFDMiMaGmcmIJoeMSTUTHWMzE5ffudD4+MIemx5aY5i/qW0mPf1ADYwvHskNP1LCAdl+aoXfUIwHZAwAKzg56EAFAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="21" height="15">
+ <layer name="Tile Layer 2" width="21" height="16">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC3vOwMDwHIrJBc/R8FAGJ4FYnRHCfoMk/gabYjLAVxzsUTAKRgFtwDMGSLkEAIpVsnDsBAAA
+   H4sIAAAAAAAAC3vOwMDwHIrJBc/R8FAGJ4FYnRHCfoMk/gabYjLAVxzsUTAKRgFtwDMG2pVLAP6wSH5ABQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -106,7 +109,7 @@
     <property name="face" value="NORTH"/>
    </properties>
   </object>
-  <object id="147" name="npc" type="Character" x="256" y="192" width="16" height="16">
+  <object id="147" name="npc" type="Character" x="256" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="behavior" value="this.wander()"/>
@@ -134,7 +137,7 @@
     <property name="face" value="SOUTH"/>
    </properties>
   </object>
-  <object id="151" name="npc" type="Character" x="80" y="208" width="16" height="16">
+  <object id="151" name="npc" type="Character" x="80" y="224" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="behavior" value="this.wander()"/>
@@ -149,12 +152,12 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="21" height="15">
+ <layer name="Tile Layer 3" width="21" height="16">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
+   H4sIAAAAAAAAC2NgGAWjYBSMglFADgAAduqPIkAFAAA=
   </data>
  </layer>
 </map>

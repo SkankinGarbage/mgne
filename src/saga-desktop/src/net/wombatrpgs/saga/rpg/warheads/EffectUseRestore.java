@@ -48,13 +48,13 @@ public class EffectUseRestore extends EffectBattleUnusable {
 		final ItemSelector selector = new ItemSelector(SGlobal.heroes.getInventory(),
 				SGlobal.heroes.getInventory().slotCount(), ITEMS_WIDTH,
 				ITEMS_LIST_PADDING, false, false) {
-			Nineslice bg = new Nineslice(getWidth() + 16, getHeight() + 24);
+			Nineslice bg = new Nineslice(getWidth() + 16, getHeight() + 20);
 			/* initializer */ {
 				MGlobal.assets.loadAsset(bg, "arcane bg");
 			}
 			/** @see net.wombatrpgs.saga.ui.ItemSelector#coreRender(com.badlogic.gdx.graphics.g2d.SpriteBatch) */
 			@Override public void coreRender(SpriteBatch batch) {
-				bg.renderAt(batch, getX() - 8, getY() + 8);
+				bg.renderAt(batch, getX() - 8, getY() - 8);
 				super.coreRender(batch);
 			}
 		};

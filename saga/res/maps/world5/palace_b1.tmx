@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="56" height="54" tilewidth="16" tileheight="16" nextobjectid="157">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="58" height="54" tilewidth="16" tileheight="16" nextobjectid="158">
  <properties>
   <property name="bgm" value="ffl3_final_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger02"/>
@@ -7,20 +7,20 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="56" height="54">
+ <layer name="Tile Layer 1" width="58" height="54">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XPQ7CMAxGwxHYGHqCbt04QS/FdTgoqkQkCzk/Tu3YVN/wFmQJP2Q7H0tKaQEAAAAAUGAlePdiwUbw7sWCneDdSw+vL/D7T7/RXuHnB73x2Y+7+2uFvVHn6UdvfPbj7v5WYW/URZjJEhp13n63AnRWz9RF9qMzOFoX2Y8yWgc/Pz+NuuPz54X9jrtzTz5vocX78Ot33J1H8n8LZ86DJbWcNZLPaF0Ev1rOGslntE7qZ3F3WrukvX81v7eiV/6tJP1o5LNZfvlGS/w08hnnx/23Oku+0RI/jfzC+XH/rTT3ztuP68WCGfmltKeWXl5+FnPZO7Na74P07ZlF7/d69TdCK59Jc1w0WvlMmuOiIdmXSLsk8Svdu17gBz/4jftd+b4AAAAA/8oHCAs+TUAvAAA=
+   H4sIAAAAAAAAC+2XPQ7CMAxGwxHYGHqCbt04QS/FdTgoikRUC+XPwY6t9hvegizhhxz7YwkhLAAAAAAAjlgJ1r1oshGse9FkJ1j3wuH1BZ7n8BztGZ5+oLcheebuxVphb9RZO0bobUieuXuxVdgbddaOdFZLSNRZO6a+bgXoDP9TZ+3Y40lnc7TO2rHHkzJaZ+0Iz6N/ibr4+fMCnnE/3YPtLdW4K7+ecT89gp9bOnM+ZlDLbyO5j9Z58qzlt5HcR+u4npr7qfXWpN9nzfOt4Jd+O05fErlvtmfa7RxPidyX88z9p5Mi7XaOp0Qeynnm/tNpvEtrz1wvmszIQ6V3PMPPylNzXntnWequcG/WbHq/37rPEVq5j5sPvdLKfdx86BXOe/L41jiepf3YCzz9AM/zeV5hDwEAAABX5QOKopRO8DAAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="56" height="54">
+ <layer name="Tile Layer 2" width="58" height="54">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YMQrCMBTG8UY3dRB0EfQKOuoFvLIX6OJxXN2MpIGHmISkFl/a/w8esSFDnmnth00DAAAwTWvjaqx2xhUA/IKxvyczW3MTn6vVwvawtLUy8TnUaWPPcNud49GOJ3Gm8lquk67DbzFbKz7v7Z4P3b7PdryIHuS1XCdp6a9NLymipb+haOovdYax5y9EU38psecvpKb+SkyhP1//ILPYo3GVymz+XVdDjpNZ7Nm4SmU2/64L5bhbYqzZu4d7ZNQmN5/5HkKjNn3zWUgor45F7veB/kry2SfN92VJPvvEfYkcfbJYbfns21wsi/E/GwAAAABtXo+L2itALwAA
+   H4sIAAAAAAAAC+3YMQ7CIBTGcdBNHUx0MdEr6KgX8MpeoIvHcXUTQ0leGoGUtgr4/yUvWMLAk9Z+USkAAACMYa1t1W6nbQHAN2nzuzMzNdfhudItTC9LUysdnkMdNuZMt+25Hs14Emcsr+U66Tr9FpM14vPe7P3Q7v9sxovoRV7LdVJufTbxJUly63MqOfYZO9PQ8+mTY58xoefTp8Q+U/xTn65+SWa8h7IVy4LuXVlSPpQZ76lsxbKge1f68uEtMtbg3cs9MOaqb+5zvfjGXA3NfT6+PFybvt8LxpeS+7pKuF9Tcl8X9yvGMCTjlZr7Ps2FMh7/CwIAAACA9QI59+6m8DAAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -36,7 +36,7 @@
     <property name="roofID" value="27"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,0 144,0 144,176 0,176"/>
+   <polygon points="-16,0 144,0 144,176 -16,176"/>
   </object>
   <object id="129" name="room" type="Ceiling" x="384" y="432">
    <properties>
@@ -67,7 +67,7 @@
   <object id="136" name="f" type="Target" x="160" y="496" width="16" height="16"/>
   <object id="137" name="tele" type="Event" x="752" y="448" width="16" height="16">
    <properties>
-    <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'f')"/>
+    <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'g')"/>
    </properties>
   </object>
   <object id="139" name="room" type="Ceiling" x="240" y="608">
@@ -109,12 +109,12 @@
   <object id="155" name="spellbook" type="Chest" x="288" y="688" width="16" height="16"/>
   <object id="156" name="spellbook" type="Chest" x="480" y="688" width="16" height="16"/>
  </objectgroup>
- <layer name="Tile Layer 3" width="56" height="54">
+ <layer name="Tile Layer 3" width="58" height="54">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAA/BtT/ZjDQC8AAA==
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAL4Mz6b/PvAwAAA=
   </data>
  </layer>
 </map>

@@ -7,12 +7,14 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_zom",
 	"species" : "REVENANT",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_skeleton",
 	"portrait" : "battle_portraits/goblin.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
+	"meatDropChance" : 0,
 	"gp" : 0,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_claw",
 		"abil_gas",
@@ -21,7 +23,7 @@
 		"abil_recover",
 		"abil_opara",
 		"abil_odamage",
-		"abil_oice"
+		"abil_opoison"
 	],
 	"stats" : {
 		"hp" : 855,

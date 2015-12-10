@@ -53,7 +53,9 @@ public class ScreenWorld extends SagaScreen {
 	@Override
 	public void update(float elapsed) {
 		super.update(elapsed);
-		MGlobal.levelManager.getActive().update(elapsed);
+		if (MGlobal.levelManager.getActive() != null) {
+			MGlobal.levelManager.getActive().update(elapsed);
+		}
 	}
 
 	/**

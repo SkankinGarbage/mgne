@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="15" tilewidth="16" tileheight="16" nextobjectid="178">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="21" height="16" tilewidth="16" tileheight="16" nextobjectid="178">
+ <properties>
+  <property name="bgm" value="no_change"/>
+ </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="21" height="15">
+ <layer name="Tile Layer 1" width="21" height="16">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC7WSMQqAMAxF4yToJjh0s5N6AHXw/vdSIUL4/KRFcHjQhuSV/rYTkQ6YzLoFvHqjCPGhcwS8euRM4JxvFmU19e1mV44KZw5mbW9DEOOxZDKLZ5fyfD2Z+DxnKc8vzlKeieTyzp66P52zojyffa+w3lrQOSjsrhG1TvwLDOaN8sR3Q9Bf+p+pwol+dHq90Vv84US/dV6/16r87AQAAA==
+   H4sIAAAAAAAAC7WSMQqAMAxF6yTqJjh0s5N6AHXw/vdSIUL4/KRFcXjQhvQFftOGEFpgVOcasOqVgC7mHACr7jkjOKeLWVhUfb3YhL3AmZy3urciaI8mkbc4O5fn40nEZzlzeb5x5vKMTi6H3A9jlpfnfe8E1lsKOnvB211GqRN3gcG8Xp74bwj6c/sZC5zoR6fV6/3FH070a2fzAea/6yeGbKC5QAUAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="21" height="15">
+ <layer name="Tile Layer 2" width="21" height="16">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAACzvHwMBwDg2DwFkG8gG6eefwKyfZTFxuewfFxIoTMg8ETuLQiwtQw6/UNPM+DnFy43cDAyQ8TpKpf7CBm1A8ChgYjuDB5IKzSBg5v1FSvmAznxgAAPFy4x7sBAAA
+   H4sIAAAAAAAACzvHwMBwDg2DwFkG8gG6eefwKyfZTFxuewfFxIoTMg8ETuLQiwtQw6/UNPM+DnFy43cDAyQ8TpKpf7CBm1A8ChgYjuDB5IKzSBg5v1FSvmAzf6AAAJWvSIRABQAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -89,7 +92,7 @@
   <object id="175" name="npc" type="Character" x="112" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
-    <property name="face" value="WEST"/>
+    <property name="face" value="NORTH"/>
    </properties>
   </object>
   <object id="176" name="npc" type="Character" x="128" y="144" width="16" height="16">
@@ -105,12 +108,12 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="21" height="15">
+ <layer name="Tile Layer 3" width="21" height="16">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
+   H4sIAAAAAAAAC2NgGAWjYBSMglFADgAAduqPIkAFAAA=
   </data>
  </layer>
 </map>

@@ -15,6 +15,7 @@ import net.wombatrpgs.mgne.core.interfaces.FinishListener;
 import net.wombatrpgs.mgne.graphics.FacesAnimationFactory;
 import net.wombatrpgs.mgne.io.CommandListener;
 import net.wombatrpgs.mgne.io.Keymap.KeyState;
+import net.wombatrpgs.mgne.maps.Level;
 import net.wombatrpgs.mgneschema.io.data.InputButton;
 import net.wombatrpgs.mgneschema.io.data.InputCommand;
 import net.wombatrpgs.mgneschema.maps.EventMDO;
@@ -78,6 +79,16 @@ public class Avatar extends MapEvent implements CommandListener {
 	@Override
 	public String getName() {
 		return "hero";
+	}
+
+	/**
+	 * @see net.wombatrpgs.mgne.maps.events.MapEvent#onAddedToMap
+	 * (net.wombatrpgs.mgne.maps.Level)
+	 */
+	@Override
+	public void onAddedToMap(Level map) {
+		super.onAddedToMap(map);
+		updateForceDir();
 	}
 
 	/**
@@ -178,6 +189,20 @@ public class Avatar extends MapEvent implements CommandListener {
 		this.vy = 0;
 		this.tracking = false;
 	}
+	
+	/**
+	 * Checks the direction that this tile is being forced towards
+	 */
+	protected void updateForceDir() {
+		forceDir = null;
+		if (parent.tileHasProperty(tileX, tileY, Constants.PROPERTY_FORCE)) {
+			String dirString = parent.getTileProperty(tileX, tileY, Constants.PROPERTY_FORCE);
+			if (dirString != null && !tracking) {
+				forceDir = OrthoDir.valueOf(dirString);
+				halt();
+			}
+		}
+	}
 
 	/**
 	 * Moves in a certain dir on the map?
@@ -237,19 +262,5 @@ public class Avatar extends MapEvent implements CommandListener {
 				addStepTracker();
 			}
 		});
-	}
-	
-	/**
-	 * Checks the direction that this tile is being forced towards
-	 */
-	protected void updateForceDir() {
-		forceDir = null;
-		if (parent.tileHasProperty(tileX, tileY, Constants.PROPERTY_FORCE)) {
-			String dirString = parent.getTileProperty(tileX, tileY, Constants.PROPERTY_FORCE);
-			if (dirString != null && !tracking) {
-				forceDir = OrthoDir.valueOf(dirString);
-				halt();
-			}
-		}
 	}
 }

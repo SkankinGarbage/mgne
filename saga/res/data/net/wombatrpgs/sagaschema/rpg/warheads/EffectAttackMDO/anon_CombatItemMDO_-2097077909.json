@@ -10,7 +10,7 @@
 	],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],
-	"power" : 20,
+	"power" : 30,
 	"attackStat" : "STR",
 	"defendStat" : "DEF",
 	"miss" : "CAN_MISS"

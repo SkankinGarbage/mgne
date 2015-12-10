@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="44" tilewidth="16" tileheight="16" nextobjectid="162">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="44" tilewidth="16" tileheight="16" nextobjectid="166">
  <properties>
   <property name="bgm" value="ffl3_final_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger02"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2ZQWoDMQxF3SN456OU7LPsdmDo9bLrJUsgAiH0JdmSG1Ky+ODW1vebjKR4Jmdr7fzn+tzk9ZXU3aMX+JA6Y/tO6u4xCnxIg7Fdk0Iel4dQnDVvsWkxlg/a/zC8Dud6T8AvPTUvikMeM16a5/lYdzj+WjzFrXhEPLkvyfOR61c8Ip6vwmbVEMpJyRapRy83ORtaE/nf1fCw8h7VL/fc3d+s+2vx8e+wLv7m0tZLdWUcidP2kCwjGIc0lPEqm8WywpaNQ2ut88Wz2dB5gBh5HD9beeMKNlRHxMjjbozZG1Nc5MxmsX0Iobq+MWZvLK/RUgVbthdGemXknmq58NdsM3kqvdB34+weSDM9hHjQdV9aLdtMD5EMGlcl20wPQSySNfM8ma1T73PLPE+usnnnxNXnhYoe4p25aV5ea0TZHrIivr+1Rtsj2kPQvPeeJsMW7SFa3tK7Fa3GSJ3tP8sW7SFaPtK7Fa3GSKPl2Lw6RXnL5yJ59yw2r69aa2bvaWSes3l91Vqz2kM0/Rif+ap2sFWqgi2S+2+9JVX1m8AOVf0msEO/xSZ739AaAAA=
+   H4sIAAAAAAAAC+2YQWoDMQxF3SN456OE7LPsdmDI9bLrJUsgAiH0JVnyNKRM4INbW99vMpLimb21tv9zXQ7y+i7q6dEX+JA6Y7sX9fQYC3xIg7HdikIe15dQnDVvsWkxlg/afzO8Nud6d8AvPTUvikMeM16a5/5atzn+WjzFZTwintyX5PnI9RmPiOensFk1hHJSskXq0ctNzobWRP53MzysvEf1yz2P7m/W/bX4+G9YF39zaeulujKOxGl7SJYRjEMayjjLZrFk2KpxaK11vng3GzoPECOP42crb7yCDdURMfK4B2P2xhQXObNZbF9CqK4fjNkby2u0tIKt2gsjvTJyT7Vc+Gu2mTyVXui3cXYPpJkeQjzouq9tLdtMD5EMGtdKtpkeglgka+V5slqn3vdWeZ7MsnnnxOzzwooe4p25aV5ea0TVHpIR399ao+0R7SFo3ntPU2GL9hAtb+ndilZjpM72n2WL9hAtH+ndilZjpNFqbF6dorzlc5G8exeb11etNbP3NDLP2by+aq3J9hBNP8Z3ntURbCu1gi2S+6dOSZ2f3OcXuyG1A9AaAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="39" height="44">
@@ -20,7 +20,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3UMQqAMBBE0XgzW2/slcRLREgbISAyGt6D7WebXwr8154e8LLZ/4Oe47ozPQKY3rqkF9zbPrwNaDQEeGKkIanOjDREZwBIqX+UCkzQGgAA
+   H4sIAAAAAAAAC+3WwQmAMBBE0dhZrnacliRNaAEGAiKj4T3Y++ztlwL/1dIDXrb6f3DnuK6nRwDLq1t6wdj+4W0AwHMzHZJqlZkO0SoApJxkKoVS0BoAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -57,7 +57,7 @@
     <property name="roofID" value="88"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,0 64,0 64,256 112,256 112,384 0,384"/>
+   <polygon points="0,0 64,0 64,256 112,256 112,400 0,400"/>
   </object>
   <object id="137" name="tele" type="Event" x="224" y="608" width="16" height="16">
    <properties>
@@ -132,13 +132,23 @@
    </properties>
   </object>
   <object id="161" name="g" type="Target" x="272" y="496" width="16" height="16"/>
+  <object id="164" name="spellbook" type="Chest" x="48" y="416" width="16" height="16">
+   <properties>
+    <property name="item" value="item_arcane"/>
+   </properties>
+  </object>
+  <object id="165" name="spellbook" type="Chest" x="560" y="432" width="16" height="16">
+   <properties>
+    <property name="item" value="wpn_bowLaser"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="39" height="44">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3OMQEAAAgDoNW0fxEz7PIQEpAAAAAAAACtuQ7AIwvx2Mmz0BoAAA==
+   H4sIAAAAAAAAC+3OQQkAQAgAQQsa4LB/DzP4OoUZ2P9GAAAAAAAAU+/3ACfl4mpxDY/fB2/QGgAA
   </data>
  </layer>
 </map>
