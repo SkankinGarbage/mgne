@@ -7,6 +7,7 @@
 package net.wombatrpgs.saga.lua;
 
 import net.wombatrpgs.mgne.core.MGlobal;
+import net.wombatrpgs.mgne.core.interfaces.FinishListener;
 import net.wombatrpgs.mgne.scenes.SceneCommand;
 import net.wombatrpgs.mgne.scenes.SceneLib;
 import net.wombatrpgs.saga.core.SGlobal;
@@ -32,9 +33,12 @@ public class SceneReset extends ZeroArgFunction {
 			@Override protected void internalRun() {
 				SagaScreen title = new ScreenTitle();
 				MGlobal.assets.loadAsset(title,  "new title");
-				MGlobal.levelManager.reset();
-				SGlobal.heroes = null;
-				title.transitonOn(TransitionType.WHITE, null);
+				title.transitonOn(TransitionType.WHITE, new FinishListener() {
+					@Override public void onFinish() {
+						MGlobal.levelManager.reset();
+						SGlobal.heroes = null;
+					}
+				});
 			}
 			
 		});

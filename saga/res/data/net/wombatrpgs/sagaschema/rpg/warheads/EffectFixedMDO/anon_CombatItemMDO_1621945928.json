@@ -11,7 +11,7 @@
 	"base" : 850,
 	"range" : 100,
 	"defenseStat" : "DEF",
-	"accuracy" : 100,
+	"accuracy" : 150,
 	"accStat" : "STR",
 	"dodgeStat" : "AGI"
 }

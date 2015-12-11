@@ -20,7 +20,6 @@
 		"spell_flare2",
 		"spell_lightning",
 		"spell_magma",
-		"spell_magma",
 		"spell_shake",
 		"wpn_swordSeven",
 		"wpn_legendEmperor"
@@ -31,7 +30,7 @@
 		"str" : 84,
 		"def" : 82,
 		"agi" : 90,
-		"mana" : 99,
+		"mana" : 95,
 		"flags" : [ ]
 	}
 }
