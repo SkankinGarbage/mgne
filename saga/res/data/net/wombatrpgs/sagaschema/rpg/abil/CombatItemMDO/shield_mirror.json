@@ -7,7 +7,7 @@
 	"itemDescription" : "Raises chance to dodge and reflects fire, ice, earth, and thunder damage",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 32000,
+	"cost" : 29000,
 	"anim" : "banim_defend",
 	"equip" : [ ],
 	"warhead" : {

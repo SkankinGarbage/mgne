@@ -7,7 +7,7 @@
 	"itemDescription" : "Increases defense by 1 and agility by 4",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 2570,
+	"cost" : 2470,
 	"anim" : "None",
 	"equip" : [
 		"SHOE"

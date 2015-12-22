@@ -14,6 +14,7 @@
 	"meatDropChance" : 0,
 	"gp" : 9999,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_light",
 		"abil_repent",
@@ -27,7 +28,7 @@
 		"hp" : 8500,
 		"mhp" : 8500,
 		"str" : 65,
-		"def" : 65,
+		"def" : 62,
 		"agi" : 75,
 		"mana" : 90,
 		"flags" : [
