@@ -270,9 +270,11 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	public int getBase(Stat stat) {
 		int current = get(stat);
 		for (CombatItem item : getInventory().getItems()) {
-			SagaStats mods = item.getStatset();
-			if (mods.stat(stat) != null) {
-				current -= mods.stat(stat);
+			if (item != null) {
+				SagaStats mods = item.getStatset();
+				if (mods.stat(stat) != null) {
+					current -= mods.stat(stat);
+				}
 			}
 		}
 		return current;
