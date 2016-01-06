@@ -58,6 +58,7 @@ public class Listener implements ActionListener, TreeSelectionListener {
 		if (cmd.equals(Action.NEW_ENTRY.toString())) logic.newEntry();
 		if (cmd.equals(Action.DELETE_ENTRY.toString())) logic.deleteEntry();
 		if (cmd.equals(Action.CLONE_ENTRY.toString())) logic.cloneEntry();
+		if (cmd.equals(Action.EXPORT.toString())) logic.export();
 		
 		for (Wizard w : frame.getWizards()) {
 			if (cmd.equals(w.getName())) {

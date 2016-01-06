@@ -143,6 +143,7 @@ public class MainFrame extends JFrame {
 		file = new JMenu("File");
 		file.add(createMenuItem(Action.OPEN_PROJECT));
 		file.add(createMenuItem(Action.CLOSE_PROJECT));
+		file.add(createMenuItem(Action.EXPORT));
 		file.addSeparator();
 		saveItem = createMenuItem(Action.SAVE);
 		file.add(saveItem);

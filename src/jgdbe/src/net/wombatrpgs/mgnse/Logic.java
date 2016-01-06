@@ -162,6 +162,13 @@ public class Logic {
 	}
 	
 	/**
+	 * Exports the project to a compact format.
+	 */
+	public void export() {
+		out.export();
+	}
+	
+	/**
 	 * Saves all edited schema.
 	 */
 	public void saveAll() {

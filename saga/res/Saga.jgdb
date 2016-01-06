@@ -1,5 +1,5 @@
 {
-	"name" : "Saga database",
+	"name" : "saga",
 	"data" : "data",
 	"schema" : [
 		"jar/SagaSchema.jar"

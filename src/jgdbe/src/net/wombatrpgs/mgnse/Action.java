@@ -21,6 +21,7 @@ public enum Action {
 	REVERT				("Revert",			KeyEvent.VK_R),
 	REVERT_ALL			("Revert All",		KeyEvent.VK_R, ActionEvent.SHIFT_MASK),
 	CLOSE_PROJECT		("Close", 			KeyEvent.VK_C, ActionEvent.SHIFT_MASK),
+	EXPORT				("Export",			KeyEvent.VK_E),
 	NEW_ENTRY			("New Entry...",	KeyEvent.VK_N),
 	DELETE_ENTRY		("Delete Entry",	KeyEvent.VK_D),
 	CLONE_ENTRY			("Clone Entry",		KeyEvent.VK_C);

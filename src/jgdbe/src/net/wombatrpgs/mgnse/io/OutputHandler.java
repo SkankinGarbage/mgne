@@ -7,8 +7,15 @@
 package net.wombatrpgs.mgnse.io;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
+import net.wombatrpgs.mgns.core.CompactData;
+import net.wombatrpgs.mgns.core.CompactDataList;
 import net.wombatrpgs.mgns.core.MainSchema;
 import net.wombatrpgs.mgns.core.Schema;
 import net.wombatrpgs.mgnse.Global;
@@ -106,6 +113,56 @@ public class OutputHandler {
 			writeSchema(mdo, file);
 		} catch (IOException e) {
 			Global.instance().err("Error creating " + file, e);
+		}
+	}
+	
+	/**
+	 * Exports compact project data.
+	 */
+	public void export() {
+		InputHandler in = parent.getLogic().getIn();
+		ProjectConfig projectConfig = parent.getLogic().getConfig();
+		
+		List<File> allFiles = in.recursivelyGetFiles(parent.getLogic().loadFile(projectConfig.data));
+		ArrayList<File> toExport = new ArrayList<File>();
+		for (File file : allFiles) {
+			if (file.getName().endsWith(".json")) {
+				toExport.add(file);
+			}
+		}
+		
+		String path = in.getFile(
+				getProjectConfigFile().getParentFile(), 
+				projectConfig.data).getAbsolutePath() + File.separator +
+				projectConfig.name + ".jgdb";
+		
+		try {
+			CompactDataList compact = new CompactDataList();
+			compact.data = new CompactData[toExport.size()];
+			for (int i = 0; i < toExport.size(); i += 1) {
+				File file = toExport.get(i);
+				CompactData entry = new CompactData();
+				Class<? extends MainSchema> schemaClass = parent.getLogic().getSchemaTree().getSchemaByFile(file);
+				entry.data = in.instantiateData(schemaClass, file);
+				entry.data.description = "";
+				entry.data.name = "";
+				entry.schemaName = schemaClass.getCanonicalName();
+				compact.data[i] = entry;
+			}
+			
+			File blob = new File(path);
+			blob.getParentFile().mkdirs();
+			blob.createNewFile();
+			FileOutputStream fileOut = new FileOutputStream(blob);
+			ZipOutputStream zipOut = new ZipOutputStream(fileOut);
+			ZipEntry entry = new ZipEntry(CompactData.DATA_FILE_NAME);
+			zipOut.putNextEntry(entry);
+			Global.instance().writer().writeValue(zipOut, compact);
+			zipOut.flush();
+			zipOut.close();
+			
+		} catch (IOException e) {
+			Global.instance().err(e.getMessage(), e);
 		}
 	}
 
