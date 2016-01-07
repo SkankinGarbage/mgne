@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.zip.ZipInputStream;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
@@ -19,10 +20,14 @@ import com.badlogic.gdx.files.FileHandle;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
 import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
 
 import net.wombatrpgs.mgne.core.Constants;
+import net.wombatrpgs.mgne.core.MAssets;
 import net.wombatrpgs.mgne.core.MGlobal;
+import net.wombatrpgs.mgns.core.CompactData;
+import net.wombatrpgs.mgns.core.CompactDataList;
 import net.wombatrpgs.mgns.core.MainSchema;
 
 /**
@@ -34,6 +39,8 @@ import net.wombatrpgs.mgns.core.MainSchema;
  */
 public class Database {
 	
+	protected static final String DATABASE_SUFFIX = ".jgdb";
+	
 	/** Our library by class. Supply a class, get a list of all extending schema. */
 	protected Map<Class<? extends MainSchema>, List<MainSchema>> classShelf;
 	/** Our library by name. Supply a key, get the schema with that key */
@@ -42,6 +49,8 @@ public class Database {
 	protected List<String> loadedDirs;
 	/** What we're going to use to map objects */
 	protected ObjectMapper mapper;
+	
+	protected boolean compressedMode;
 	
 	/**
 	 * Called whenever a database is created. Set up our giant library shelves!!
@@ -59,7 +68,6 @@ public class Database {
 	 */
 	public void addData(List<? extends MainSchema> entries) {
 		for (MainSchema s : entries) {
-			//Global.reporter.inform("Added entry to database: " + s.key);
 			addData(s);
 		}
 	}
@@ -141,25 +149,6 @@ public class Database {
 	}
 	
 	/**
-	 * Queues up all entries of the listed classes in the asset manager.
-	 * @param	manager			The manager to load classes with
-	 * @param 	types			All the classes to load
-	 */
-	public void queueData(AssetManager manager, List<Class<? extends MainSchema>> types) {
-		for (Class<? extends MainSchema> schema : types) {
-			String name = schema.getCanonicalName();
-			String path = Constants.DATA_DIR;
-			while (name.indexOf('.') != -1) {
-				path += name.substring(0, name.indexOf('.'));
-				path += File.separator;
-				name = name.substring(name.indexOf('.') + 1);
-			}
-			path += name;
-			queueFilesInDir(manager, Gdx.files.internal(path));
-		}
-	}
-	
-	/**
 	 * Turns a chunk of preloaded data into meaningful code.
 	 * @param 	data			The data string to read
 	 * @param	clazz			The class to format it as
@@ -182,13 +171,78 @@ public class Database {
 	}
 	
 	/**
+	 * Load necessary data before the window is created. (or load the entire
+	 * data blob if this compressed mode).
+	 * @param	assetLoader		The loader to load assets with
+	 */
+	public void loadEssentialData(MAssets assetLoader) {
+		String fileName = Constants.DATA_DIR + MGlobal.game.getVersionInfo().gameName + DATABASE_SUFFIX;
+		FileHandle handle = Gdx.files.internal(fileName);
+		if (handle.exists()) {
+			compressedMode = true;
+			ZipInputStream stream = new ZipInputStream(handle.read());
+			try {
+				stream.getNextEntry();
+				ObjectReader reader = mapper.reader().withType(CompactDataList.class);
+				CompactDataList compact = reader.readValue(stream);
+				for (CompactData datum : compact.data) {
+					Class<?> storedClass = Class.forName(datum.schemaName);
+					if (MainSchema.class.isAssignableFrom(storedClass)) {
+						// this is not great, sorry
+						@SuppressWarnings("unchecked")
+						Class<? extends MainSchema> schemaClass = (Class<? extends MainSchema>) storedClass;
+						parseString(datum.dataString, schemaClass);
+					} else {
+						MGlobal.reporter.err("Bad stored schema class: " + storedClass);
+					}
+				}
+			} catch (Exception e) {
+				MGlobal.reporter.err("Error loading compressed data", e);
+			}
+		} else {
+			queueData(assetLoader, Constants.PRELOAD_SCHEMA);
+		}
+	}
+	
+	/**
+	 * Load the RPG data after the window is created. (or load nothing if this
+	 * is compressed mode).
+	 * @param assetLoader
+	 */
+	public void loadSecondaryData(MAssets assetLoader) {
+		if (!compressedMode) {
+			queueFilesInDir(assetLoader, Gdx.files.internal(Constants.DATA_DIR));
+		}
+	}
+	
+	
+	/**
+	 * Queues up all entries of the listed classes in the asset manager.
+	 * @param	manager			The manager to load classes with
+	 * @param 	types			All the classes to load
+	 */
+	protected void queueData(AssetManager manager, List<Class<? extends MainSchema>> types) {
+		for (Class<? extends MainSchema> schema : types) {
+			String name = schema.getCanonicalName();
+			String path = Constants.DATA_DIR;
+			while (name.indexOf('.') != -1) {
+				path += name.substring(0, name.indexOf('.'));
+				path += File.separator;
+				name = name.substring(name.indexOf('.') + 1);
+			}
+			path += name;
+			queueFilesInDir(manager, Gdx.files.internal(path));
+		}
+	}
+	
+	/**
 	 * Recursively queues all files in a specified directory for loading as
 	 * database entries. Does not duplicate entries if things have already been
 	 * added.
 	 * @param 	manager			The manager to load with
 	 * @param 	dir				The file to load from
 	 */
-	public void queueFilesInDir(AssetManager manager, FileHandle dir) {
+	protected void queueFilesInDir(AssetManager manager, FileHandle dir) {
 		if (dir.isDirectory()) {
 			for (String entry : loadedDirs) {
 				if (dir.path().equals(entry)) return;

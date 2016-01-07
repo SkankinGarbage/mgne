@@ -14,6 +14,6 @@ public class CompactData extends Schema {
 	public static String DATA_FILE_NAME = "data.json";
 	
 	public String schemaName;
-	public MainSchema data;
+	public String dataString;
 	
 }

@@ -91,8 +91,8 @@ public class MGlobal {
 			
 			// load up data marked essential, this will always be ugly
 			MGlobal.reporter.inform("Loading essential data");
-			MGlobal.data.queueData(assets, Constants.PRELOAD_SCHEMA);
 			long assetStart = System.currentTimeMillis();
+			MGlobal.data.loadEssentialData(assets);
 			assets.finishLoading();
 			long assetEnd = System.currentTimeMillis();
 			float assetElapsed = (assetEnd - assetStart) / 1000f;
@@ -111,8 +111,8 @@ public class MGlobal {
 			// load secondary data
 			// TODO: polish: load with a loading bar
 			MGlobal.reporter.inform("Loading secondary data");
-			MGlobal.data.queueFilesInDir(assets, Gdx.files.internal(Constants.DATA_DIR));
 			assetStart = System.currentTimeMillis();
+			MGlobal.data.loadSecondaryData(assets);
 			assets.finishLoading();
 			assetEnd = System.currentTimeMillis();
 			assetElapsed = (assetEnd - assetStart) / 1000f;

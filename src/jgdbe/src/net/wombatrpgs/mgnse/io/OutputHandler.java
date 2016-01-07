@@ -143,10 +143,11 @@ public class OutputHandler {
 				File file = toExport.get(i);
 				CompactData entry = new CompactData();
 				Class<? extends MainSchema> schemaClass = parent.getLogic().getSchemaTree().getSchemaByFile(file);
-				entry.data = in.instantiateData(schemaClass, file);
-				entry.data.description = "";
-				entry.data.name = "";
+				MainSchema data = in.instantiateData(schemaClass, file);
+				data.description = "";
+				data.name = "";
 				entry.schemaName = schemaClass.getCanonicalName();
+				entry.dataString = Global.instance().writer().writeValueAsString(data).replaceAll("\\s+","");
 				compact.data[i] = entry;
 			}
 			
