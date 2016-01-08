@@ -555,11 +555,6 @@
    <property name="x" value=""/>
   </properties>
  </tile>
- <tile id="159">
-  <properties>
-   <property name="x" value=""/>
-  </properties>
- </tile>
  <tile id="160">
   <properties>
    <property name="x" value=""/>
