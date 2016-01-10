@@ -27,3 +27,4 @@ saga/savedata/*
 saga/game.jar
 saga/res/jar/SagaSchema.jar
 saga/SaGa4.exe
+*.jgdb

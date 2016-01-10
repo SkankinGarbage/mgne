@@ -147,7 +147,8 @@ public class OutputHandler {
 				data.description = "";
 				data.name = "";
 				entry.schemaName = schemaClass.getCanonicalName();
-				entry.dataString = Global.instance().writer().writeValueAsString(data).replaceAll("\\s+","");
+				entry.dataString = Global.instance().writer().writeValueAsString(data);
+				entry.dataString = entry.dataString.replace("\n", "").replace("\r", "");
 				compact.data[i] = entry;
 			}
 			
