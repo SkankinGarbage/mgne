@@ -29,7 +29,7 @@ import net.wombatrpgs.sagaschema.rpg.stats.Stat;
 /**
  * You heal using this thing.
  */
-public class ScreenInn extends SagaScreen {
+public class ScreenInn extends ScreenShop {
 	
 	protected static final int INFO_HEIGHT = 40;
 	protected static final int INFO_MARGINS = 10;
@@ -37,14 +37,12 @@ public class ScreenInn extends SagaScreen {
 	
 	protected static final int GLOBAL_Y = 82;
 	
-	protected OptionSelector menu;
 	protected CharaSelector inserts;
 	protected Nineslice infoBG;
 	protected TextFormat format;
 	
 	protected String payString;
 	protected int payAmount;
-	protected boolean done;
 	
 	protected int insertsX, insertsY;
 	
@@ -88,8 +86,6 @@ public class ScreenInn extends SagaScreen {
 		format.x = insertsX + INFO_MARGINS;
 		format.y = (int) (insertsY + inserts.getHeight() + INFO_MARGINS +
 				font.getLineHeight()*2  - inserts.getBorderHeight()) + 5;
-		
-		done = false;
 	}
 	
 	/**
@@ -136,15 +132,6 @@ public class ScreenInn extends SagaScreen {
 		super.dispose();
 		infoBG.dispose();
 	}
-
-	/**
-	 * Checks if this inn screen is done and should be disposed by the calling
-	 * context, usually a lua function.
-	 * @return					True to dispose this screen, false if not yet
-	 */
-	public boolean isDone() {
-		return done;
-	}
 	
 	/**
 	 * Called when the user elects to pay the inn fee.
@@ -172,17 +159,6 @@ public class ScreenInn extends SagaScreen {
 			payString = "Not enough GP.";
 		}
 		return false;
-	}
-	
-	/**
-	 * Called when the user elects to leave the inn.
-	 * @return					True to close the menu
-	 */
-	protected boolean onLeave() {
-		menu.close();
-		MGlobal.screens.pop();
-		done = true;
-		return true;
 	}
 	
 	/**

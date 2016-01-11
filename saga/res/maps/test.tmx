@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="23">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="24">
  <properties>
   <property name="battle_bgm" value="ffl1_battle"/>
   <property name="bgm" value="ffl1_overworld"/>
@@ -157,6 +157,13 @@
   <object id="20" name="memory" type="Teleport Memory" x="16" y="16" width="16" height="16">
    <properties>
     <property name="displayName" value="Test Room 1"/>
+   </properties>
+  </object>
+  <object id="23" name="meat" type="Character" x="160" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_ffl2_human"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="meatShop('meatshop_test')"/>
    </properties>
   </object>
  </objectgroup>

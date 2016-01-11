@@ -12,9 +12,9 @@ import java.util.List;
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.scenes.SceneCommand;
 import net.wombatrpgs.mgne.scenes.SceneLib;
-import net.wombatrpgs.saga.screen.ScreenShop;
+import net.wombatrpgs.saga.screen.ScreenItemShop;
 import net.wombatrpgs.sagaschema.rpg.abil.CombatItemMDO;
-import net.wombatrpgs.sagaschema.rpg.abil.ShopMDO;
+import net.wombatrpgs.sagaschema.rpg.shop.ShopMDO;
 
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.Varargs;
@@ -32,7 +32,7 @@ public class SceneShop extends VarArgFunction {
 	public Varargs invoke(final Varargs args) {
 		SceneLib.addFunction(new SceneCommand() {
 			
-			ScreenShop shop;
+			ScreenItemShop shop;
 
 			@Override protected void internalRun() {
 				if (args.narg() > 1) {
@@ -41,10 +41,10 @@ public class SceneShop extends VarArgFunction {
 						String key = args.checkstring(i).checkjstring();
 						mdos.add(MGlobal.data.getEntryFor(key, CombatItemMDO.class));
 					}
-					shop = new ScreenShop(mdos);
+					shop = new ScreenItemShop(mdos);
 				} else {
 					String key = args.arg(1).checkjstring();
-					shop = new ScreenShop(MGlobal.data.getEntryFor(key, ShopMDO.class));
+					shop = new ScreenItemShop(MGlobal.data.getEntryFor(key, ShopMDO.class));
 				}
 				MGlobal.assets.loadAsset(shop, "scene shop");
 				MGlobal.screens.push(shop);

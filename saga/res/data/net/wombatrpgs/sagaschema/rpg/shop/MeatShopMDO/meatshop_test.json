@@ -1,0 +1,28 @@
+{
+	"key" : "meatshop_test",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"entries" : [
+		{
+			"monster" : "chara_enemyTest1",
+			"price" : 0
+		},
+		{
+			"monster" : "chara_enemyTest2",
+			"price" : 40
+		},
+		{
+			"monster" : "chara_enemyTest3",
+			"price" : 200
+		},
+		{
+			"monster" : "chara_enemyTest4",
+			"price" : 5000
+		},
+		{
+			"monster" : "chara_testEnemyStrong",
+			"price" : 99999
+		}
+	]
+}
