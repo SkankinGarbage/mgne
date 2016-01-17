@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="22" tilewidth="16" tileheight="16" nextobjectid="162">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="22" tilewidth="16" tileheight="16" nextobjectid="163">
  <properties>
   <property name="bgm" value="ffl3_talon"/>
   <property name="name" value="Floor 19"/>
@@ -116,6 +116,12 @@
     <property name="face" value="WEST"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="speak('Have you considered bowing to the masters? You\'d be able to afford whatever you like here.')"/>
+   </properties>
+  </object>
+  <object id="162" name="meats" type="Character" x="320" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="onInteract" value="meatShop('meatshop_babel')"/>
    </properties>
   </object>
  </objectgroup>

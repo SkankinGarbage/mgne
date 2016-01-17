@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="328">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="123" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="339">
  <properties>
   <property name="bgm" value="ffl3_town2"/>
   <property name="name" value="City of Angels"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="100" height="54">
+ <layer name="Tile Layer 1" width="123" height="54">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
- <layer name="Tile Layer 2" width="100" height="54">
+ <layer name="Tile Layer 2" width="123" height="54">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3aMQ7CIBSAYXsCV1cddVNP6WxcjMcw6eQJurh6A3V0dZAmkiCmYi0FHv5f8vIajUCKPBplMAAAILwq9gAQ1aL4HAD8mT/X1TKRtbUO3N8mcH/SbAP3twvcH9DFRNXNcdFPNpnvAZJ88/1uq2l9wG2q7tOseM9d2J/30SYQSym8/Rz1+dsg85EW5iMtzAcAAMD/qawMAJDPPmeVynkQ+OM6W8cZOwDw7xZ7AHhxjz0AQLChek48WhntnFVcVFw9tDVS9/9kZbRTGoG81PVJB/Uqvro+6aBe/YZ6lRaf+7lZp/S1FHtHlsisU/paioMjA7aVFU2vIV/8T4Rajvu5ZOznAABpHrZIItFgVAAA
+   H4sIAAAAAAAAC+3aOU7DQBQA0PgEtLRQQgeckhrRIC7BIkViOUEaGgpuAJS0FIwFloyD7Zh4n/ekr2+NlfHIY/9MlFksABiDm5L2qxDXFeeZnoeS9rsQ9xXnt7HqoE9IHSfVAXNT98x79tcd/dyTkwjuy1nP1zvv+XqxqVo/XfQ2im+XPV8PYrQfvqf2km5yXv4c0L1N3sumyt5rhnUQ5uAwWc/bKH6+jT6BZpYT759muvwfw1zHw1zHw1wDAAB/WRUyANBMcS9sDPs+m3oeegAjZo81AHP3MfQA6M3n0AMAercTfqs8FTLj8RriLcR7C33thrl9KWTGY5kL2FRas7NQw+ctrdlZqOHjo4bHo821Wb52Z8dTcVuT+S1fu7PjqXisyTAXp4Uoa4P/sIeArlmbxcPaDAAYyhd6ra01yGcAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -438,21 +438,67 @@
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
+  <object id="328" name="shop" type="Character" x="1808" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="meatShop('meatshop_world3')"/>
+   </properties>
+  </object>
+  <object id="329" name="meat" type="Target" x="1808" y="160" width="16" height="16"/>
+  <object id="330" name="tele" type="Event" x="1808" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city.tmx', 'meat')"/>
+   </properties>
+  </object>
+  <object id="331" name="meat_up" type="Target" x="1936" y="96" width="16" height="16"/>
+  <object id="332" name="tele" type="Event" x="1936" y="80" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'meat_down')"/>
+   </properties>
+  </object>
+  <object id="333" name="tele" type="Event" x="1936" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'meat_up')"/>
+   </properties>
+  </object>
+  <object id="334" name="meat_down" type="Target" x="1936" y="416" width="16" height="16"/>
+  <object id="335" name="room" type="Ceiling" x="1744" y="432">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 16,64 80,64 80,0"/>
+  </object>
+  <object id="336" name="room" type="Ceiling" x="1824" y="432">
+   <properties>
+    <property name="roofID" value="137"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="16,0 16,64 80,64 80,0"/>
+  </object>
+  <object id="338" name="npc" type="Character" x="1872" y="128" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onInteract" value="speak('I love my monster meat, but can you believe they eat each other? What cannibals!')"/>
+   </properties>
+  </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="100" height="54">
+ <layer name="Tile Layer 3" width="123" height="54">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3aMQrDMAwFUF++S6DpAeLeNYGupcV2jBL7PfhTQMhDBgmlBAAAAER7BISPJbqBSv/6bn1Xj/rPI2thXsn/0ct2JBfmHdJpudz4Pbo+AADw3dkz/F13AlexXrzebM6eRc22AAAAzKT2noE+Rr5nAAAAAIBS7tz6qNkLt8RO+beavXBL7JQBgNHtTlcwFGBUAAA=
+   H4sIAAAAAAAAC+3aMQqAMBAEwHzeRlAfoP5Vwc5GNAk5dQa2EhZS2NxdSgAAAADAWdcgHPpgPRFcvSX3rTX6hz3jzUyVu/3Xdcx7lptZA3S3tmR+b90PAADA/5Set31pfvc1Y/A+yik9IzJzAgAAAOBKxNtC6nBbCAAAAAAA7+LG/32e7MdyYrfWzpP9WE7s1gAAIKUNQRiF9MhnAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="100" height="54">
+ <layer name="Tile Layer 4" width="123" height="54">
   <properties>
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3aSwrAIAwFQHsIt97/mF0XFMEPTWDmAOEFV09SCgAAAADEUJ+/E6yZ5d7d6/b8kZb0PWa5d/e6PR8AACCD0100659AFKe7qG4LAAAAAAAAAADw5c4tFnduAAB9L5P5eZxgVAAA
+   H4sIAAAAAAAAC+3awQnAIBAEQC0i3/RfphWIEE85LjMFLOx32dYAAAAAAOC+p+fKyWDVZbfr6fyZNyg3KieDVZfdrqfzAQAAgLqiN6JK+1010RuRzQkAAAAAAAAAAAAAIDcf///w8QcAgO8Gl40of8hnAAA=
   </data>
  </layer>
 </map>

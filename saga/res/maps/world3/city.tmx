@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="53" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="101">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="73" height="53" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="103">
  <properties>
   <property name="bgm" value="ffl3_town2"/>
   <property name="name" value="City of Angels"/>
@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   H4sIAAAAAAAAC+2ZO27DMAyGbWRKr9QLdMvW2zRTugRos7RdUt+1LmChDEHxJdKPoMOPxIls/fpEUQ/vuq7bNehj1OekL/TfGailDklvo95HXQRvfbIPD6Oa92hdR32PGhSMluDEMcLezwmyeOsFLcEIa+2MsjjdGyNKrw06Ez7OQvloRXnj5GXbMz648tGK8pYZRyUvl9zM9VWZ56J0CfSWGUeWvoX9GiEux1i9ZYmKi8tKGFm91bRrZES1mfM9JyOrN4mRZo73+MAxDvNDhIZKPUsxojhZGWWphVH0etHKCO7Xfq/34L+Tkwd1H65Hyyhr7wH7ruYDj62ho9vqFX4WrkfjbS2MrPHgjSNq7Gm9bYHRg0E1RjgfrYkRNU+V9Sz2jr1BRs9IJ+I3KyPJ21xjTdpHWRhxMScxwjlbu8fLZsTtvWpeJUZlTD12t+NLYoRztsbbHIy4NXOZY6FXvA+oMaI+JUZYGm+ZOcnigzvjgoy4/F3KZjGKZIPHTCQjHEc9us6II9ieLTGCeajkpS0xwnOHxgc+48qa1zyMMt5r4bnDmhexItdHRWU/aOk/3Hfe/Bwxd3CMWtfZHkY1eRjV1mFRjKyKGGtRa8tSvvY87rysxG/L3r7lPEDyNhejqD6PkqWuORl5znq0fjX9su/+cpAl1rYURxY+HKel44h7ByMxW4KRpi+l90pWRty5sJfRcZKHUbm3VpeGkXTWHcmIOmvXMnqq9Kf07vppY4y4M30NI+v7tkHBiDuPWYKRpOJ739GMvOIYUftoHFdzMtLmIzhHw3x0AN81guXvjRHWy6QD+K4RLG9hpDmzsDLCY/dYeZ4mZ8+9F6HOY2pnFrBdLYyu07Oo/ZiUs73K3sMU37BdpQ3WcQbzR6ZnDyM8D3hEtauFUauyeEb60vKhGFnyKqUWjpr7Wrx5+GQwsvqds24vI8zp3hl5+FCx1KJsRq3+1sBojfJysTCqldl1tx622n4LI3hda39mXOJ61sIHc5F+y+ibpdq8Ff2z2Z5+AHDgDx50PAAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="73" height="53">
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZS26DMBAGYLhE92mUTdIT9OLZepFtj5DHUQKqUIzx2MYeDwP8n2SZtKT88QNcp2nKndr/opHmbDCmua80Z4MxzX2lOduWHLo2/m7zasrc80twZQvVECc9jk7MtcQ4OnflkllTYudztU/KtVKzhepSr+bz7HgmnM89jkLuVrZHQjZtvjL7J/d9Sxr6SeM6RHO2gVS+NbWDtoyas4EO16UDCPt1CvUzmxFJth17uufcIq9ta5lr7nOjtC//Iq9tRjhbTZqzSeDqK/ee7M4x3z07Nte2Po5Cc2xgcsJU5usLzX0Vy6Ytb4rQ+shnLc+1VzPtp5Q9JA4m8nt772jNe0h74Nvv0rIHpjkb5LsSx/BhiOO9WnKcUONVItOc72xM1STp16aOe3M+Twrq73GsVan1sMT6XaqdfErHtcQzesn26Rmey1bH3U4QJznXSrn3MOr/frvmvHYoy8DwXrY6zDUAAKjh2E4LjP200wIAAAC83pxOKrR0PAAA
+   H4sIAAAAAAAAC+3ZS07DMBAG4OQS7AvqhnICLt7tLNhyBKBHoQhFdRw/xvZ4Mkn+T7KctIH8+JUHw9DuPP4XiyxngznLfWU5G8xZ7ivL2fbkdG/j57Gujik9voVUtlQNedrj6Cxca4yj13u5VNYxueOl2odzLm62VN3qNjyuHT+M46XHUcqXk+2bkc2ap8r+qf25NU39ZPE+xHK2iVa+LbWDtYyWs4EN17UDKHv3SuwzF6kk248jrTkfmX3XVuaaf91o7cvPzL6LlLP1ZDmbBqm+8tdkf46F1uzcXNv7OErNsQnVhOks1BfcvlrjOTSXzfrYCkndH4Vs5bp2G5b9xHmHJIEy37vvjrb8DukIQuuMlXdglrNBvWtkGx4osn1UFseJRqaS/9lQ1yR1yNsv+Xs4Yr9P4l41dj+s8ayl1U4hreNa4xq9Zvv8IZnTVuOOO+l2gjzNudaK84zfawxx12ySPW2x0vUMcw0AAHp4GZcF5t7GZQEAAABZv/8urwR0PAAA
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -223,6 +223,12 @@
   <object id="100" name="memory" type="Teleport Memory" x="592" y="320" width="16" height="16">
    <properties>
     <property name="displayName" value="City of Angels"/>
+   </properties>
+  </object>
+  <object id="101" name="meat" type="Target" x="848" y="640" width="16" height="16"/>
+  <object id="102" name="tele" type="Event" x="848" y="624" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'meat')"/>
    </properties>
   </object>
  </objectgroup>

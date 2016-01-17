@@ -1,0 +1,28 @@
+{
+	"key" : "meatshop_world3",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"entries" : [
+		{
+			"monster" : "enemy_brd04_RAVEN",
+			"price" : 4000
+		},
+		{
+			"monster" : "enemy_cat04_BLACK CAT",
+			"price" : 4500
+		},
+		{
+			"monster" : "enemy_got04_IBEX",
+			"price" : 5000
+		},
+		{
+			"monster" : "enemy_snk04_LEVIATHAN",
+			"price" : 5500
+		},
+		{
+			"monster" : "enemy_gst04_PHANTOM",
+			"price" : 6000
+		}
+	]
+}

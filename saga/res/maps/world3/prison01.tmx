@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="30" tilewidth="16" tileheight="16" nextobjectid="45">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="36" tilewidth="16" tileheight="16" nextobjectid="54">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
@@ -7,81 +7,75 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="43" height="30">
+ <layer name="Tile Layer 1" width="43" height="36">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3SuwnAMAyEYa2QzqNkBDeZIBt56iTgQoUxiOjygL/4QHAgrrhmZg0A8Jr1R38XUVfF33LauurukUheBF2v/3vn75FIXkVdVRTb8r2V+V2zPWbkmWZ7zMif2mtGTle60vX7XQEAMQcGiL/2KBQAAA==
+   H4sIAAAAAAAAC+3UQQqAIBCFYa/gzqN0BDeeoDN0EU9dgsEgTpbNpMFbfCCNyL/QojEmAgDAtJYJGu6yh40xuq3kftTqL4xuQ6uM1jvvbdX4f1il1ta5PdI7D5kna/qNU9t7rp1Cazp/zeiafuPU9tK1RqsW6dayW3P+FnffgtBcEnffVqH5V/dVYo5WtKJ1/lYAAHhmB2CkL6MwGAAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="43" height="30">
+ <layer name="Tile Layer 2" width="43" height="36">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BAQEAAACCIP+vbkhAAQAAAADvBil9bFQoFAAA
+   H4sIAAAAAAAAC+3OMQ0AIAwAQZCDfwmoAUxQAx1ImrDcJb9/awAA9Va0o/N7JDF/Dzzwyuh5AAAAVS45xu/GMBgAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="29" name="block" type="Event" x="208" y="160" width="16" height="32">
+  <object id="29" name="block" type="Event" x="208" y="256" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="30" name="block" type="Event" x="336" y="160" width="16" height="32">
+  <object id="32" name="block" type="Event" x="464" y="256" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="32" name="block" type="Event" x="464" y="160" width="16" height="32">
+  <object id="33" name="block" type="Event" x="464" y="320" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="33" name="block" type="Event" x="464" y="224" width="16" height="32">
+  <object id="34" name="block" type="Event" x="208" y="320" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="34" name="block" type="Event" x="208" y="224" width="16" height="32">
+  <object id="35" name="bars" type="Event" x="336" y="320" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
-    <property name="passable" value="IMPASSABLE"/>
-   </properties>
-  </object>
-  <object id="35" name="bars" type="Event" x="336" y="224" width="16" height="32">
-   <properties>
-    <property name="appearance" value="anim_bars"/>
-    <property name="hide" value="return getSwitch('prison01')"/>
+    <property name="hide" value="return getSwitch('prison_lever')"/>
     <property name="onInteract" value="play('world3/prison01.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="36" name="tele" type="Event" x="160" y="128" width="16" height="16">
+  <object id="36" name="tele" type="Event" x="160" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/prison02.tmx', 'left')"/>
    </properties>
   </object>
-  <object id="37" name="left" type="Target" x="160" y="144" width="16" height="16"/>
-  <object id="38" name="right" type="Target" x="512" y="144" width="16" height="16"/>
-  <object id="39" name="tele" type="Event" x="512" y="128" width="16" height="16">
+  <object id="37" name="left" type="Target" x="160" y="240" width="16" height="16"/>
+  <object id="38" name="right" type="Target" x="512" y="240" width="16" height="16"/>
+  <object id="39" name="tele" type="Event" x="512" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/prison02.tmx', 'right')"/>
    </properties>
   </object>
-  <object id="40" name="room" type="Ceiling" x="288" y="224">
+  <object id="40" name="room" type="Ceiling" x="288" y="320">
    <properties>
     <property name="roofID" value="137"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,0 112,0 112,128 0,128"/>
+   <polygon points="-16,-192 128,-192 128,128 -16,128"/>
   </object>
-  <object id="41" name="npc" type="Character" x="368" y="288" width="16" height="16">
+  <object id="41" name="npc" type="Character" x="368" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="WEST"/>
@@ -89,7 +83,7 @@
     <property name="onInteract" value="speak('We can only sit here and wait for the prince\'s judgment...')"/>
    </properties>
   </object>
-  <object id="42" name="npc" type="Character" x="368" y="288" width="16" height="16">
+  <object id="42" name="npc" type="Character" x="368" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="NORTH"/>
@@ -98,28 +92,45 @@
     <property name="onInteract" value="speak('Who are you?')"/>
    </properties>
   </object>
-  <object id="44" name="room" type="Ceiling" x="288" y="224">
+  <object id="46" name="switch" type="Event" x="368" y="256" width="16" height="16">
    <properties>
-    <property name="roofID" value="137"/>
-    <property name="roofTileset" value="lower"/>
+    <property name="appearance" value="anim_switch_a"/>
+    <property name="hide" value="return getSwitch('prison_lever')"/>
    </properties>
-   <polygon points="0,0 112,0 112,128 0,128"/>
+  </object>
+  <object id="47" name="mid" type="Target" x="288" y="144" width="16" height="16"/>
+  <object id="48" name="tele" type="Event" x="288" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/prison02.tmx', 'mid')"/>
+   </properties>
+  </object>
+  <object id="51" name="switch" type="Event" x="368" y="256" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_switch_b"/>
+    <property name="hide" value="return not getSwitch('prison_lever')"/>
+   </properties>
+  </object>
+  <object id="52" name="janine" type="Character" x="304" y="224" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_janine"/>
+    <property name="hide" value="return getSwitch('prison01')"/>
+   </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="43" height="30">
+ <layer name="Tile Layer 3" width="43" height="36">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BAQEAAACCIP+vbkhAAQAAAADvBil9bFQoFAAA
+   H4sIAAAAAAAAC+3BAQEAAACCIP+vbkhAAQAAAAAA7waagGnfMBgAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" width="43" height="30">
+ <layer name="Tile Layer 4" width="43" height="36">
   <properties>
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3BAQEAAACCIP+vbkhAAQAAAADvBil9bFQoFAAA
+   H4sIAAAAAAAAC+3BAQEAAACCIP+vbkhAAQAAAAAA7waagGnfMBgAAA==
   </data>
  </layer>
 </map>

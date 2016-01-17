@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="45" tilewidth="16" tileheight="16" nextobjectid="56">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="45" tilewidth="16" tileheight="16" nextobjectid="58">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XQQrEMAhFc4XZzZFm0xP0Ol311CULQUI02mDH0P9AAh0j+quTphQAAABRnDdtNlYGeD6b0zQNZvY/DeVb191pmgYz+5+G8q3rz2laj1v3Z4Dy5avFqq/W45b9mTWwzHH11Xp8FCOrBmSWOdZ6fDPEyKgBf0fHwLS5qb/vhhgUJwO9vrZq0JsRS+1ZNeBm1aA3IytrwFerBr2zrvU7lZirayCddW/SQDrr3qSBdNaN+qV9noHo/4OWI66UW0gzLb0/6/fBahq0My192/LaNN+M867RzrV2B+C1ab4rauC9L3vv1tnx3pc9Bg2gwWoafEqMBhQ3OzXHb4nRgOJmJ6L21gAAAAAAAAAAAPA/LjWkrq20LQAA
+   H4sIAAAAAAAAC+2XMQ7DIAxFuUK3HqlLTpDrZMqpIwZLFoKPHZLUtP9JFkPBghdcICVCCCF3sZ+M0VwR0PNZnIEcjIx/GplvbldnIAcj459G5pvbjzPQHreOj4DMV7eWyH3RHreMj+zAUse5L9rjvRxRHUhY6hjt8cWQI6ID/Y22TqC6yb+vhhySJwK1fW11UKsRy9qjOtBhdVCrkZkd6NbqoHbWlf12kHN2B62z7p8ctM66X3HwSthF7fzsOdAuIr6ZSgfv1Hdg/T8o2e5byilaNd36ftb7wWwOyppu3W312lDfiPWOKOsavQH02lDfGR1438vet3V0vO9lT9ABHczmQO5DV4fkjY6+D10dkjc6d6y9DEIIIYQQQgghhHyPAzsUKWO0LQAA
   </data>
  </layer>
  <layer name="Tile Layer 2" width="65" height="45">
@@ -114,6 +114,12 @@
   <object id="55" name="chest" type="Chest" x="464" y="208" width="16" height="16">
    <properties>
     <property name="item" value="pot_mana"/>
+   </properties>
+  </object>
+  <object id="56" name="mid" type="Target" x="368" y="288" width="16" height="16"/>
+  <object id="57" name="tele" type="Event" x="368" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world3/prison01.tmx', 'mid')"/>
    </properties>
   </object>
  </objectgroup>

@@ -1,0 +1,28 @@
+{
+	"key" : "meatshop_babel",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"entries" : [
+		{
+			"monster" : "enemy_brd11_IBIS",
+			"price" : 20000
+		},
+		{
+			"monster" : "enemy_cat11_SPHINX",
+			"price" : 21000
+		},
+		{
+			"monster" : "enemy_eph11_BEHEMOTH",
+			"price" : 22000
+		},
+		{
+			"monster" : "enemy_jly11_MEDUSA",
+			"price" : 23000
+		},
+		{
+			"monster" : "enemy_wrd11_SERAPH",
+			"price" : 24000
+		}
+	]
+}
