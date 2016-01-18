@@ -30,13 +30,13 @@
     <property name="onCollide" value="memTele('tower/f05_transition.tmx', 'tower/f08.tmx', 'ENTRANCE', 'B')"/>
    </properties>
   </object>
-  <object id="92" name="mem_tele" type="Event" x="768" y="128" width="16" height="16">
+  <object id="92" name="mem_tele" type="Event" x="32" y="512" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f05_transition.tmx', 'tower/f10.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
-  <object id="93" name="target_a" type="Event" x="768" y="112" width="16" height="16"/>
-  <object id="95" name="tele" type="Event" x="32" y="512" width="16" height="16">
+  <object id="93" name="target_a" type="Event" x="32" y="496" width="16" height="16"/>
+  <object id="95" name="tele" type="Event" x="768" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('tower/f09_sideworld.tmx', 16, 18, 'SOUTH')"/>
    </properties>

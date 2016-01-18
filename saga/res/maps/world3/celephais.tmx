@@ -142,7 +142,7 @@
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="WEST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Nobody really knows what the Brotherhood is or where it\'s base is... If we knew more, maybe so many of us wouldn\'t be in the Ermengarde jail.')"/>
+    <property name="onInteract" value="speak('Nobody really knows what the Brotherhood is or where its base is... If we knew more, maybe so many of us wouldn\'t be in the Ermengarde jail.')"/>
    </properties>
   </object>
   <object id="118" name="tele" type="Event" x="432" y="400" width="16" height="16">

@@ -141,7 +141,7 @@
     <property name="onCollide" value="targetTele('world2/coast_town.tmx', 'inn')"/>
    </properties>
   </object>
-  <object id="332" name="innkee" type="Target" x="80" y="160" width="16" height="16"/>
+  <object id="332" name="inn" type="Target" x="80" y="160" width="16" height="16"/>
   <object id="333" name="pub" type="Target" x="544" y="160" width="16" height="16"/>
   <object id="334" name="tele" type="Event" x="544" y="176" width="16" height="16">
    <properties>

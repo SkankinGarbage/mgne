@@ -255,7 +255,7 @@ public abstract class Inventory {
 	public final boolean containsBattleUseableItems() {
 		for (int slot = 0; slot < capacity; slot += 1) {
 			CombatItem toCheck = items[slot];
-			if (toCheck != null && toCheck.isBattleUsable()) {
+			if (toCheck != null && toCheck.isBattleUsable() && toCheck.getUses() > 0) {
 				return true;
 			}
 		}

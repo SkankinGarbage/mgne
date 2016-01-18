@@ -11,7 +11,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XMQrDMAxFNXoKZMsNSpa2S5v736zxYGoMlvUt2cmgD4IM9tdDwUIiciFaBGHpJckTv19MoEzp3lrxquUrmb5MoEzp3lbxquUrmQITKBPn9ThjF+SZyfQ547gZkzRP8llvyLRNYFqYMyWTZX+yYIpvgetP+wVM8S1w/ekAmfK8vX3cUk/61zcQX/8y3oOY8poH4uuv+R8ul8s1WyP6vtaztRv07Alaz9Zu0LMnaD2RmRBh0ng6kzNZMyFzqpRJ45nvBq05VbonaD2ROVU6l47wvFo/zK+6OjwUAAA=
+   H4sIAAAAAAAAC+2XMQrDMAxFNXoqZMsNSpYmS5ve/2SNB1MTkKxv2U4GfRBkCF9PShASkQvRQxEtvTR54vMqRC3T18j0EQJlSrVMTH1cD85MQQiUKdUyM/VxPejJJHk9j1gUeUYyvY/YAaZpAJO29uQz34yp5Xwq5eXeyfPE/06aT8sFTPG/k+bTDjLleWtnZku96N/fQHL/z7F1Ysp7Hkjuv+V7uFwu12j1mPtWz9JtUHMnWD1Lt0HNnWD1RPYvhMni6UzO1JoJ2VO1TBbP/DYo7anaO8Hqieyp2r20h+fV+gGa+FyYPBQAAA==
   </data>
  </layer>
  <layer name="Tile Layer 2" width="37" height="35">
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XQQqAIBAFUO9/nEJoEZ6gTZsW3aC6RAoGMqBZ/cjqPxgGVIYBNzNKEd2j94FQg+qMPhx9sVab+U6LnGJO9nKUEfkNKpHRusRdEzkPewr7StX6uuHpBgIl9UJERET7ULtDrtiMt3Hz+7jzJqem3Aeu7CGo+V3uA0/sBZON2cYCrImew5F/h1LC39H/rDiivaU8FAAA
+   H4sIAAAAAAAAC+3XQQqAIBAFUO9/nEJoEZ6gTZsW3aC6RAYuZBAK51uS/8EwC/Ez4GY0hqiMORRCD8pZQ12sMmtU3k9xBTJTrOg1cKJLnehoU8adeKZ4rpysv1i+HoCIiIjooeHmPGdXTmXK3Vuzg6P+C3L3fusfEtt87b4OYCZ6D0e+HUoNb0ftOQGAUdNKPBQAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">

@@ -5,7 +5,11 @@
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "ICE",
-	"sideEffects" : [ ],
+	"sideEffects" : [
+		"CRITICAL_ON_WEAKNESS"
+	],
+	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"power" : 5,
 	"attackStat" : "MANA",
 	"defendStat" : "MANA",

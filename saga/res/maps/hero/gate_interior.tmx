@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="24" height="28" tilewidth="16" tileheight="16" nextobjectid="54">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="24" height="28" tilewidth="16" tileheight="16" nextobjectid="55">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="encounter" value="encounterset_level01_danger00"/>
@@ -44,9 +44,9 @@
     <property name="item" value="pot_xpotion"/>
    </properties>
   </object>
-  <object id="53" name="chest" type="Chest" x="64" y="128" width="16" height="16">
+  <object id="54" name="chest" type="Chest" x="48" y="144" width="16" height="16">
    <properties>
-    <property name="collectable" value="stone_white"/>
+    <property name="collectable" value="stone_air"/>
    </properties>
   </object>
  </objectgroup>

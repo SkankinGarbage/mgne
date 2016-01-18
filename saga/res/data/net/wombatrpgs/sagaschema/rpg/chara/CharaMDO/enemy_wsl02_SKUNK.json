@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/wsl.png",
 	"meatEatLevel" : 3,
 	"meatTargetLevel" : 2,
+	"meatDropChance" : 0,
 	"gp" : 80,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_claw",
 		"abil_stench",
@@ -24,7 +26,7 @@
 		"str" : 13,
 		"def" : 8,
 		"agi" : 18,
-		"mana" : 6,
-		"flags" : []
+		"mana" : 14,
+		"flags" : [ ]
 	}
 }

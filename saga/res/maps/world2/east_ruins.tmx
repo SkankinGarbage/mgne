@@ -3,11 +3,11 @@
  <properties>
   <property name="bgm" value="ffl3_dark"/>
   <property name="encounter" value="encounterset_level03_danger00"/>
-  <property name="name" value="Ruined Town"/>
+  <property name="name" value="Sacked Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" name="upper" tilewidth="16" tileheight="16">
-  <image source="../tilesets/upper2.PNG" width="144" height="240"/>
+  <image source="../tilesets/upper2.PNG" width="144" height="288"/>
   <tile id="1">
    <properties>
     <property name="x" value=""/>

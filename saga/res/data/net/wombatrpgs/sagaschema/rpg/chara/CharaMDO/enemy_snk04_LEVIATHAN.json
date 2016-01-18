@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/snk.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 4,
+	"meatDropChance" : 0,
 	"gp" : 240,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_bash",
 		"abil_constrict",
@@ -21,10 +23,10 @@
 	"stats" : {
 		"hp" : 175,
 		"mhp" : 175,
-		"str" : 20,
+		"str" : 28,
 		"def" : 15,
 		"agi" : 10,
 		"mana" : 15,
-		"flags" : []
+		"flags" : [ ]
 	}
 }

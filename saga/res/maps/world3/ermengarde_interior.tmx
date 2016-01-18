@@ -87,7 +87,7 @@
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="EAST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Some monsters families specialize in healing, resistances, or boss fights. Morph according to your needs!')"/>
+    <property name="onInteract" value="speak('Some monster families specialize in healing, resistances, or boss fights. Morph according to your needs!')"/>
    </properties>
   </object>
   <object id="173" name="npc" type="Character" x="448" y="432" width="16" height="16">

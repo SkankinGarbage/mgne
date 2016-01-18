@@ -8,10 +8,10 @@
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],
-	"base" : 36,
+	"base" : 50,
 	"range" : 8,
 	"defenseStat" : "DEF",
-	"accuracy" : 65,
+	"accuracy" : 70,
 	"accStat" : "STR",
 	"dodgeStat" : "AGI"
 }

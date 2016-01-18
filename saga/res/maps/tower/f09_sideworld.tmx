@@ -35,7 +35,7 @@
   </object>
   <object id="62" name="tele" type="Event" x="256" y="288" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('tower/f09.tmx', 2, 32, 'NORTH')"/>
+    <property name="onCollide" value="teleport('tower/f09.tmx', 48, 7, 'NORTH')"/>
    </properties>
   </object>
   <object id="63" name="memory" type="Teleport Memory" x="256" y="304" width="16" height="16">

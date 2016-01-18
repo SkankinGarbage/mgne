@@ -6,6 +6,6 @@
 	"projector" : "SINGLE_ENEMY",
 	"status" : "status_paralyze",
 	"hit" : 100,
-	"accStat" : null,
+	"accStat" : "MANA",
 	"evadeStat" : "MANA"
 }

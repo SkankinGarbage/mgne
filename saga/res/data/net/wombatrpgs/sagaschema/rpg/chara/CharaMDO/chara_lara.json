@@ -11,15 +11,17 @@
 	"portrait" : "None",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 0,
+	"meatDropChance" : 0,
 	"gp" : 0,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_thunder",
 		"abil_othunder",
 		"abil_mutantBlank",
 		"abil_mutantBlank",
 		"wpn_bowGreat",
-		"spell_cure",
+		"spell_cure2",
 		"hand_silver"
 	],
 	"stats" : {
