@@ -10,9 +10,9 @@
 		"item_str99",
 		"item_agi48",
 		"item_agi99",
-		"pot_xpotion",
 		"pot_elixir",
+		"pot_cure",
 		"spell_cure",
-		"pot_cure"
+		"spell_cure2"
 	]
 }

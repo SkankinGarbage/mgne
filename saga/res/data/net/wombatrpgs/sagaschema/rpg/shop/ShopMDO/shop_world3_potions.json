@@ -11,6 +11,7 @@
 		"item_agi48",
 		"pot_xpotion",
 		"pot_elixir",
-		"spell_cure"
+		"spell_cure",
+		"spell_cure2"
 	]
 }

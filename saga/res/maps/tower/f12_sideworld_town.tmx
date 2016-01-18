@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="50" tilewidth="16" tileheight="16" nextobjectid="89">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="50" tilewidth="16" tileheight="16" nextobjectid="90">
  <properties>
   <property name="bgm" value="ffl1_overworld2"/>
   <property name="name" value="Floor 12"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3ZwQ3DIAwAwHSEPtv9Z6g6QifoAlmkf14GElzC3ctIjkEoWCjZNgAAAACOtgfiaF5tHKnfUgvIFz3TkWd6e0hLHpAr835y5NxAv/stewXtevvBiH7yLcbPpP1+Vcb0+VTGV1K+87OYoZ9kzLWqd/YCmNpM/WQFj4nvurCiEd+reuq0zAHkOOtMn/EPvyYPGC/SD8rxyLtKS10AAAAA/sMPc8znY+BHAAA=
+   H4sIAAAAAAAAC+3ZwQ3DIAwAwHSEPtv9Z6g6QiboAlmk/7wAhziEu5cjOQahYKGwLAAAAAAcbSuIS/Nq45L6LbWAfKV7uuSdaA9pyQNyZZ5PjhwbiHs+smfQLtoPzugnv93zO2m9P5UxMWtlfCf7b34UI/STjLFm9c2eAEMbqZ/M4DXwWRdmdMb/qkidljGAHL32dI87/Jo84Dp63afV1mypCwAAAMA1/AFfb1Yi4EcAAA==
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -61,6 +61,11 @@
   </object>
   <object id="87" name="tomb_exit" type="Target" x="832" y="464" width="16" height="16"/>
   <object id="88" name="tomb_entry" type="Target" x="1392" y="448" width="16" height="16"/>
+  <object id="89" name="chest" type="Chest" x="208" y="592" width="16" height="16">
+   <properties>
+    <property name="item" value="spell_cure2"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="Tile Layer 3" width="92" height="50">
   <properties>

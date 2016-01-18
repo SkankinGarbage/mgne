@@ -4,13 +4,13 @@
 	"name" : "",
 	"description" : "",
 	"items" : [
-		"spell_cure",
-		"pot_elixir",
-		"pot_xcure",
-		"pot_soft",
-		"pot_eyedrop",
-		"pot_cure",
+		"spell_cure2",
 		"item_cross",
+		"pot_cure",
+		"pot_eyedrop",
+		"pot_soft",
+		"pot_elixir",
+		"pot_cure",
 		"pot_revive"
 	]
 }
