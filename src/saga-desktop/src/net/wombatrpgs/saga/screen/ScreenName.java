@@ -68,9 +68,13 @@ public class ScreenName extends SagaScreen {
 		for (char c = 'A'; c <= 'Z'; c += 1) {
 			chars.add(c);
 		}
+		chars.add(' ');
+		chars.add(' ');
 		for (char c = 'a'; c <= 'z'; c += 1) {
 			chars.add(c);
 		}
+		chars.add(' ');
+		chars.add(' ');
 		for (char c = '0'; c <= '9'; c += 1) {
 			chars.add(c);
 		}
@@ -127,12 +131,7 @@ public class ScreenName extends SagaScreen {
 		finished = false;
 		reconstructUnderName();
 		
-		context = new CMapMenu() {
-			@Override protected InputCommand parseCharacter(char character) {
-				//addLetter(character);
-				return super.parseCharacter(character);
-			}
-		};
+		context = new CMapMenu();
 	}
 	
 	/**
