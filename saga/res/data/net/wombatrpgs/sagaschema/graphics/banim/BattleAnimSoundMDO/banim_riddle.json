@@ -3,5 +3,6 @@
 	"subfolder" : "",
 	"name" : "",
 	"description" : "",
-	"sound" : "ffl1_26_riddle.wav"
+	"sound" : "ffl1_26_riddle.wav",
+	"duration" : 1.8
 }

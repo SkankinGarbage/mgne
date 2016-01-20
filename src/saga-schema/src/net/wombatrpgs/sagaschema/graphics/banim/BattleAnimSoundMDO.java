@@ -6,6 +6,7 @@
  */
 package net.wombatrpgs.sagaschema.graphics.banim;
 
+import net.wombatrpgs.mgns.core.Annotations.Desc;
 import net.wombatrpgs.mgns.core.Annotations.Path;
 import net.wombatrpgs.sagaschema.graphics.banim.data.BattleAnimMDO;
 
@@ -14,5 +15,8 @@ import net.wombatrpgs.sagaschema.graphics.banim.data.BattleAnimMDO;
  */
 @Path("graphics/")
 public class BattleAnimSoundMDO extends BattleAnimMDO {
+	
+	@Desc("Duration - in seconds, duration of the sfx, sorry")
+	public Float duration;
 
 }

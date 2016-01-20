@@ -3,5 +3,6 @@
 	"subfolder" : "",
 	"name" : "",
 	"description" : "",
-	"sound" : "ffl1_10_positive.wav"
+	"sound" : "ffl1_10_positive.wav",
+	"duration" : 0.3
 }

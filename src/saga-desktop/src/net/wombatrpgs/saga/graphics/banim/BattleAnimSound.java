@@ -14,6 +14,9 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
  * A sound-only battle animation.
  */
 public class BattleAnimSound extends BattleAnim {
+	
+	protected BattleAnimSoundMDO mdo;
+	protected float elapsed;
 
 	/**
 	 * Creates a new sound-only animation from data.
@@ -21,6 +24,7 @@ public class BattleAnimSound extends BattleAnim {
 	 */
 	public BattleAnimSound(BattleAnimSoundMDO mdo) {
 		super(mdo);
+		this.mdo = mdo;
 	}
 
 	/**
@@ -37,7 +41,16 @@ public class BattleAnimSound extends BattleAnim {
 	 */
 	@Override
 	public boolean isDone() {
-		return true;
+		return elapsed > mdo.duration;
+	}
+
+	/**
+	 * @see net.wombatrpgs.saga.graphics.PortraitAnim#update(float)
+	 */
+	@Override
+	public void update(float elapsed) {
+		super.update(elapsed);
+		this.elapsed += elapsed;
 	}
 
 }
