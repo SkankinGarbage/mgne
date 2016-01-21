@@ -11,12 +11,14 @@
 	"portrait" : "battle_portraits/brd.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 11,
+	"meatDropChance" : 0,
 	"gp" : 2000,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_claw",
 		"abil_beak",
-		"abil_blind",
+		"abil_revive",
 		"abil_warning",
 		"abil_oquake"
 	],

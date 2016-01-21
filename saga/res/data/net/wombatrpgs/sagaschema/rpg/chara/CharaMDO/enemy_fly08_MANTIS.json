@@ -11,11 +11,13 @@
 	"portrait" : "battle_portraits/fly.png",
 	"meatEatLevel" : 9,
 	"meatTargetLevel" : 8,
+	"meatDropChance" : 0,
 	"gp" : 900,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_2sword",
-		"abil_oice"
+		"abil_xice"
 	],
 	"stats" : {
 		"hp" : 262,

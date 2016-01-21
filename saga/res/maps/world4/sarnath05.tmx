@@ -55,14 +55,7 @@
     <property name="roofID" value="157"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,0 0,144 112,144 112,0"/>
-  </object>
-  <object id="56" name="room" type="Ceiling" x="464" y="368">
-   <properties>
-    <property name="roofID" value="157"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,0 0,144 112,144 112,0"/>
+   <polygon points="0,0 0,144 240,144 240,0"/>
   </object>
   <object id="57" name="room" type="Ceiling" x="624" y="96">
    <properties>
@@ -83,14 +76,7 @@
     <property name="roofID" value="157"/>
     <property name="roofTileset" value="lower"/>
    </properties>
-   <polygon points="0,0 0,192 112,192 112,0"/>
-  </object>
-  <object id="61" name="room" type="Ceiling" x="464" y="96">
-   <properties>
-    <property name="roofID" value="157"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="0,0 0,192 112,192 112,0"/>
+   <polygon points="0,0 0,192 240,192 240,0"/>
   </object>
   <object id="65" name="chest" type="Chest" x="512" y="448" width="16" height="16">
    <properties>

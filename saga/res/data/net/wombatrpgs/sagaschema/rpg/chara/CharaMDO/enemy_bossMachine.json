@@ -18,20 +18,19 @@
 	"equipped" : [
 		"abil_bash",
 		"abil_dbeam",
-		"wpn_cannonMissile",
+		"wpn_cannonRocket",
 		"abil_bash",
 		"abil_oweapon",
 		"abil_opara",
 		"abil_ostone",
-		"item_selfix",
-		"abil_oice"
+		"item_selfix"
 	],
 	"stats" : {
-		"hp" : 1600,
-		"mhp" : 1600,
+		"hp" : 1500,
+		"mhp" : 1500,
 		"str" : 55,
-		"def" : 25,
-		"agi" : 35,
+		"def" : 24,
+		"agi" : 33,
 		"mana" : 0,
 		"flags" : [ ]
 	}

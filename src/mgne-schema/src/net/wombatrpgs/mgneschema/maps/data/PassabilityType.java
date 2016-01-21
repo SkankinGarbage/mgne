@@ -13,5 +13,6 @@ public enum PassabilityType {
 	
 	PASSABLE,
 	IMPASSABLE,
+	NPC_IMPASSABLE,
 
 }

@@ -10,7 +10,10 @@
 	"cost" : 12500,
 	"anim" : "None",
 	"equip" : [ ],
-	"warhead" : null,
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO",
+		"key" : "anon_CombatItemMDO_-1990264502"
+	},
 	"tier" : 0,
 	"robostats" : {
 		"stats" : [ ]

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="36" tilewidth="16" tileheight="16" nextobjectid="98">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="36" tilewidth="16" tileheight="16" nextobjectid="118">
  <properties>
   <property name="bgm" value="ffl3_final_dungeon"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
@@ -155,7 +155,11 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="95" name="back" type="Target" x="144" y="48" width="16" height="16"/>
+  <object id="95" name="back" type="Target" x="144" y="48" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
+   </properties>
+  </object>
   <object id="96" name="block" type="Event" x="144" y="32" width="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_labKey')"/>
@@ -166,6 +170,36 @@
   <object id="97" name="tele" type="Event" x="144" y="32" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/lab_final.tmx', 'door')"/>
+   </properties>
+  </object>
+  <object id="112" name="block" type="Event" x="96" y="144" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="113" name="block" type="Event" x="96" y="304" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="114" name="block" type="Event" x="96" y="464" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="115" name="block" type="Event" x="192" y="464" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="116" name="block" type="Event" x="192" y="304" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="117" name="block" type="Event" x="192" y="144" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>

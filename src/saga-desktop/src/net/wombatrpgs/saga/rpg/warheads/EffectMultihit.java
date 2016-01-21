@@ -77,6 +77,11 @@ public class EffectMultihit extends EffectCombat {
 	 */
 	@Override
 	protected boolean combatHits(Battle battle, Chara user, Chara target, float roll) {
+		for (EffectDefend effect : battle.getDefenses(target)) {
+			if (effect.getShielding() > 100) {
+				return false;
+			}
+		}
 		return true;
 	}
 

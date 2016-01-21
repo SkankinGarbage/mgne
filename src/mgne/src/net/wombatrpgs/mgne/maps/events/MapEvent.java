@@ -162,10 +162,15 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 	/** @return True if this event is hidden via script */
 	public boolean isHidden() { return eventHidden || switchHidden; }
 	
+	/** @return True if an npc can step on this event */
+	public boolean isNpcPassable() {
+		return isPassable() && mdo.passable != PassabilityType.NPC_IMPASSABLE;
+	}
+	
 	/** @return True if the object is passable, false otherwise */
 	public boolean isPassable() {
 		if (isHidden()) return true;
-		if (mdo != null && mdo.passable != PassabilityType.PASSABLE) return false;
+		if (mdo != null && mdo.passable == PassabilityType.IMPASSABLE) return false;
 		return appearance == null;
 	}
 	
@@ -653,9 +658,13 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 								cancel = true;
 								break;
 							}
+							if (event.isNpcPassable()) {
+								cancel = true;
+								break;
+							}
 						}
 						if (!parent.isTilePassable(toX, toY)) {
-							cancel = true;;
+							cancel = true;
 						}
 						if (cancel) continue;
 						attemptStep(dir);

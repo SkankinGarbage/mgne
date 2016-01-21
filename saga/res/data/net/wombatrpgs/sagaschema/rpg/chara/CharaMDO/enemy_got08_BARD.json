@@ -7,12 +7,14 @@
 	"race" : "MONSTER",
 	"family" : "mfamily_hrs",
 	"species" : "BARD",
-	"appearance" : "4dir_ffl2_human",
+	"appearance" : "4dir_horse",
 	"portrait" : "battle_portraits/got.png",
 	"meatEatLevel" : 9,
 	"meatTargetLevel" : 8,
+	"meatDropChance" : 0,
 	"gp" : 900,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_horn",
 		"abil_sleep"

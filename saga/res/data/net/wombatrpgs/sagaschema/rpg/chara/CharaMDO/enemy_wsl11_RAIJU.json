@@ -11,14 +11,16 @@
 	"portrait" : "battle_portraits/wsl.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 11,
+	"meatDropChance" : 0,
 	"gp" : 2000,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_2sword",
 		"abil_thunder",
 		"abil_electro",
 		"abil_othunder",
-		"abil_electro"
+		"abil_ambush"
 	],
 	"stats" : {
 		"hp" : 409,

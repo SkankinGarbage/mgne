@@ -80,7 +80,7 @@
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('prison01')"/>
-    <property name="onInteract" value="speak('We can only sit here and wait for the prince\'s judgment...')"/>
+    <property name="onInteract" value="speak('We can only sit here and await the prince\'s judgment...')"/>
    </properties>
   </object>
   <object id="42" name="npc" type="Character" x="368" y="384" width="16" height="16">

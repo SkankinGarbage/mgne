@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="36" tilewidth="16" tileheight="16" nextobjectid="123">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="36" tilewidth="16" tileheight="16" nextobjectid="128">
  <properties>
   <property name="bgm" value="ffl3_final_dungeon"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
@@ -161,7 +161,11 @@
    </properties>
   </object>
   <object id="118" name="interior" type="Target" x="576" y="144" width="16" height="16"/>
-  <object id="119" name="exterior" type="Target" x="320" y="48" width="16" height="16"/>
+  <object id="119" name="exterior" type="Target" x="320" y="48" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
+   </properties>
+  </object>
   <object id="120" name="tele" type="Event" x="320" y="32" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/lab_left.tmx', 'interior')"/>
@@ -172,6 +176,16 @@
     <property name="hide" value="return hasItem('key_labKey')"/>
     <property name="onInteract" value="speak('It\'s locked.')"/>
     <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="126" name="block" type="Event" x="272" y="464" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="127" name="block" type="Event" x="272" y="224" width="16" height="16">
+   <properties>
+    <property name="passable" value="NPC_IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>
