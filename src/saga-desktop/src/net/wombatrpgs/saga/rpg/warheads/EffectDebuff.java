@@ -42,11 +42,15 @@ public class EffectDebuff extends EffectEnemyTarget {
 		String victimname = victim.getName();
 		String tab = SConstants.TAB;
 		String statName = mdo.drainStat.getFullName();
-		int debuffPower = power;
+		float debuffMult = power / 100f;
 		if (mdo.defendStat != null) {
-			debuffPower -= victim.get(mdo.defendStat);
+			debuffMult -= victim.get(mdo.defendStat) / 100f;
 		}
-		int finalStat = victim.get(mdo.drainStat) - debuffPower;
+		if (debuffMult > .5f) {
+			debuffMult = .5f;
+		}
+		int finalStat = (int) (victim.get(mdo.drainStat) * (1.0f-debuffMult));
+		int debuffPower = victim.get(mdo.drainStat) - finalStat;
 		if (finalStat < 0) {
 			debuffPower = victim.get(mdo.drainStat);
 		}
@@ -69,7 +73,7 @@ public class EffectDebuff extends EffectEnemyTarget {
 	protected int calcPower(Battle battle, Chara user) {
 		int power = mdo.power;
 		if (mdo.attackStat != null) {
-			power += user.get(mdo.attackStat) / 4;
+			power += user.get(mdo.attackStat) / 2;
 		}
 		return power;
 	}

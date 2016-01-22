@@ -24,7 +24,7 @@ public class EffectDebuffMDO extends EffectEnemyTargetMDO {
 	@DefaultValue("STR")
 	public Stat drainStat;
 	
-	@Desc("Attack stat - this stat is quartered and then multiplied by power")
+	@Desc("Attack stat - this stat is halved and then multiplied by power")
 	@DefaultValue("MANA")
 	@Nullable
 	public Stat attackStat;

@@ -177,6 +177,11 @@
    <property name="x" value=""/>
   </properties>
  </tile>
+ <tile id="43">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
  <tile id="45">
   <properties>
    <property name="x" value=""/>
@@ -208,6 +213,11 @@
   </properties>
  </tile>
  <tile id="51">
+  <properties>
+   <property name="x" value=""/>
+  </properties>
+ </tile>
+ <tile id="52">
   <properties>
    <property name="x" value=""/>
   </properties>

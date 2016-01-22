@@ -34,7 +34,7 @@
    <properties>
     <property name="appearance" value="4dir_jonas"/>
     <property name="face" value="WEST"/>
-    <property name="hide" value="return getSwitch('jonas_dead')"/>
+    <property name="hide" value="return getSwitch('jonas_dead') or getSwitch('janine_joined')"/>
    </properties>
   </object>
   <object id="146" name="prince" type="Character" x="256" y="96" width="16" height="16">
@@ -55,7 +55,7 @@
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="face" value="EAST"/>
-    <property name="hide" value="return not getSwitch('jonas_dead') or getSwitch('janine_joins')"/>
+    <property name="hide" value="return not getSwitch('jonas_dead') or getSwitch('janine_joined')"/>
    </properties>
   </object>
   <object id="151" name="jonas2" type="Character" x="288" y="80" width="16" height="16">

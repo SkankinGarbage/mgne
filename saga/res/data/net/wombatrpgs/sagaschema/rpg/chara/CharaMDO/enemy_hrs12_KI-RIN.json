@@ -19,9 +19,9 @@
 		"abil_kick",
 		"abil_esp",
 		"abil_burning",
+		"abil_heal",
 		"abil_teleport",
-		"abil_ofire",
-		"abil_opara"
+		"abil_ofire"
 	],
 	"stats" : {
 		"hp" : 606,

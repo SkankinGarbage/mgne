@@ -4,7 +4,7 @@
 	"name" : "anon_CombatItemMDO_-1283125356",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "GROUP_ENEMY",
-	"power" : 5,
+	"power" : 50,
 	"drainStat" : "AGI",
 	"attackStat" : "MANA",
 	"defendStat" : "MANA"

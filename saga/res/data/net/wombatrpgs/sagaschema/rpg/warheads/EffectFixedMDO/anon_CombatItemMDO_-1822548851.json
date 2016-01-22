@@ -13,5 +13,5 @@
 	"defenseStat" : "MANA",
 	"accuracy" : 100,
 	"accStat" : "AGI",
-	"dodgeStat" : "AGI"
+	"dodgeStat" : null
 }
