@@ -3,15 +3,15 @@
 	"subfolder" : "",
 	"name" : "anon_CombatItemMDO_873019151",
 	"description" : "auto-generated anonymous polymorph",
-	"projector" : "SINGLE_ENEMY",
+	"projector" : "GROUP_ENEMY",
 	"damType" : "NONELEMENTAL",
 	"sideEffects" : [ ],
 	"slayerFamiles" : [ ],
 	"riders" : [ ],
-	"base" : 400,
+	"base" : 420,
 	"range" : 60,
 	"defenseStat" : "DEF",
-	"accuracy" : 60,
+	"accuracy" : 65,
 	"accStat" : "AGI",
 	"dodgeStat" : "AGI"
 }

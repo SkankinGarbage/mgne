@@ -32,6 +32,7 @@ public enum Flag implements FlagStatLinkable {
 	RESIST_ICE,
 	RESIST_THUNDER,
 	RESIST_EARTH,
+	RESIST_TYPELESS,
 	
 	WEAK_FIRE,
 	WEAK_ICE,

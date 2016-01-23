@@ -107,10 +107,17 @@ public class LevelManager implements Disposable {
 	 * @param	hero			The hero to become active
 	 * @param	map				The map to become active
 	 */
-	public void setNewActiveSet(Avatar hero, Level map) {
+	public void setNewActiveSet(final Avatar hero, Level map) {
 		this.hero = hero;
 		getTele().teleportRaw(map, hero.getTileX(), hero.getTileY());
-		getScreen().getCamera().track(MGlobal.getHero());
+		getScreen().getCamera().track(new Positionable() {			
+			@Override public float getX() {
+				return hero.getX() + hero.getAppearance().getWidth()/2;
+			}
+			@Override public float getY() {
+				return hero.getY() + hero.getAppearance().getHeight()/2;
+			}
+		});
 		getScreen().getCamera().update(0);
 	}
 

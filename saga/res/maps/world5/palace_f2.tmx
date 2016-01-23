@@ -139,7 +139,7 @@
   </object>
   <object id="165" name="spellbook" type="Chest" x="560" y="432" width="16" height="16">
    <properties>
-    <property name="item" value="wpn_bowLaser"/>
+    <property name="item" value="wpn_bowPara"/>
    </properties>
   </object>
  </objectgroup>

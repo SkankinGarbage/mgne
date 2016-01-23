@@ -137,7 +137,7 @@
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="SOUTH"/>
-    <property name="hide" value="return not getSwitch('brotherhood01')"/>
+    <property name="hide" value="return not getSwitch('brotherhood01') or getSwitch('brotherhood02')"/>
     <property name="onInteract" value="play('world5/zkauba.lua')"/>
    </properties>
   </object>
@@ -145,7 +145,7 @@
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="face" value="SOUTH"/>
-    <property name="hide" value="return not getSwitch('brotherhood01')"/>
+    <property name="hide" value="return not getSwitch('brotherhood01') or getSwitch('brotherhood02')"/>
     <property name="onInteract" value="play('world5/lara.lua')"/>
    </properties>
   </object>

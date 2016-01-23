@@ -24,7 +24,7 @@ public enum DamageType implements Resistable {
 	EARTH			(true,	EnumSet.of(Flag.RESIST_EARTH),							EnumSet.of(Flag.WEAK_EARTH)),
 	THUNDER			(true,	EnumSet.of(Flag.RESIST_THUNDER),						EnumSet.of(Flag.WEAK_THUNDER)),
 	
-	NONELEMENTAL	(false,	EnumSet.noneOf(Flag.class),								EnumSet.noneOf(Flag.class));
+	NONELEMENTAL	(false,	EnumSet.of(Flag.RESIST_TYPELESS),						EnumSet.noneOf(Flag.class));
 	
 	private boolean fullResist;
 	private EnumSet<Flag> resistFlags;

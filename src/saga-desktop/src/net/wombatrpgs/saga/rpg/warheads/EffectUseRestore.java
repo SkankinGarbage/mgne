@@ -54,7 +54,7 @@ public class EffectUseRestore extends EffectBattleUnusable {
 			}
 			/** @see net.wombatrpgs.saga.ui.ItemSelector#coreRender(com.badlogic.gdx.graphics.g2d.SpriteBatch) */
 			@Override public void coreRender(SpriteBatch batch) {
-				bg.renderAt(batch, getX() - 8, getY() - 8);
+				bg.renderAt(batch, getX() - 8, getY() - 2);
 				super.coreRender(batch);
 			}
 		};
