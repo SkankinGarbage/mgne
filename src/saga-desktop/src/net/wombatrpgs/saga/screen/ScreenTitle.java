@@ -6,6 +6,7 @@
  */
 package net.wombatrpgs.saga.screen;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
 
@@ -29,16 +30,16 @@ public class ScreenTitle extends SagaScreen {
 	
 	protected static final int TEXT_Y = 32;
 	protected static final int TEXT_WIDTH = 120;
-	protected static final int BEGIN_X = 70;
-	protected static final int CONTINUE_X = 196;
+	protected static final int TEXT_SPACING = 96;
 	
 	protected static final String STRING_BEGIN = "START";
 	protected static final String STRING_CONTINUE = "CONTINUE";
+	protected static final String STRING_OPTIONS = "OPTIONS";
 	protected static final String BGM_NAME = "ffl1_title";
 	
 	protected IntroSettingsMDO intro;
 	protected Graphic bg;
-	protected TextFormat formatBegin, formatContinue;
+	protected TextFormat textFormat;
 	protected BackgroundMusic bgm;
 	protected int selection;
 	protected boolean transitioning;
@@ -52,19 +53,12 @@ public class ScreenTitle extends SagaScreen {
 		bg = new Graphic(intro.titleBG);
 		assets.add(bg);
 		
-		formatBegin = new TextFormat();
-		formatBegin.align = HAlignment.LEFT;
-		formatBegin.height = 32;
-		formatBegin.width = TEXT_WIDTH;
-		formatBegin.x = BEGIN_X;
-		formatBegin.y = TEXT_Y;
-		
-		formatContinue = new TextFormat();
-		formatContinue.align = HAlignment.LEFT;
-		formatContinue.height = 32;
-		formatContinue.width = TEXT_WIDTH;
-		formatContinue.x = CONTINUE_X;
-		formatContinue.y = TEXT_Y;
+		textFormat = new TextFormat();
+		textFormat.align = HAlignment.CENTER;
+		textFormat.height = 32;
+		textFormat.width = TEXT_WIDTH;
+		textFormat.x = getWidth()/2 - TEXT_WIDTH/2;
+		textFormat.y = TEXT_Y;
 		
 		bgm = MGlobal.audio.generateMusicForKey(BGM_NAME);
 		assets.add(bgm);
@@ -89,16 +83,27 @@ public class ScreenTitle extends SagaScreen {
 		bg.renderAt(batch, 0, 0);
 		
 		FontHolder font = MGlobal.ui.getFont();
-		font.draw(batch, formatBegin, STRING_BEGIN, 0);
-		font.draw(batch, formatContinue, STRING_CONTINUE, 0);
+		font.draw(batch, textFormat, STRING_BEGIN, -1 * TEXT_SPACING, 0);
+		font.draw(batch, textFormat, STRING_CONTINUE, 0, 0);
+		font.draw(batch, textFormat, STRING_OPTIONS, TEXT_SPACING, 0);
 		
 		Graphic cursor = MGlobal.ui.getCursor();
 		int offX = cursor.getWidth() * -1;
 		int offY = cursor.getHeight() * -1;
-		if (selection == 0) {
-			cursor.renderAt(batch, BEGIN_X + offX, TEXT_Y + offY);
-		} else if (selection == 1) {
-			cursor.renderAt(batch, CONTINUE_X + offX, TEXT_Y + offY);
+		float textWidth;
+		switch (selection) {
+			case 0:
+				textWidth = font.getWidth(STRING_BEGIN);
+				cursor.renderAt(batch, getWidth()/2 - textWidth/2 - TEXT_SPACING + offX, TEXT_Y + offY);
+				break;
+			case 1:
+				textWidth = font.getWidth(STRING_CONTINUE);
+				cursor.renderAt(batch, getWidth()/2 - textWidth/2 + offX, TEXT_Y + offY);
+				break;
+			case 2:
+				textWidth = font.getWidth(STRING_OPTIONS);
+				cursor.renderAt(batch, getWidth()/2 - textWidth/2 + TEXT_SPACING + offX, TEXT_Y + offY);
+				break;
 		}
 	}
 
@@ -111,11 +116,12 @@ public class ScreenTitle extends SagaScreen {
 		if (super.onCommand(command)) return true;
 		if (transitioning) return true;
 		switch (command) {
-		case MOVE_LEFT:		return moveCursor(-1);
-		case MOVE_RIGHT:	return moveCursor(1);
-		case UI_CONFIRM:	return confirm();
-		case UI_FINISH:		return confirm();
-		default:			return false;
+			case MOVE_LEFT:		return moveCursor(-1);
+			case MOVE_RIGHT:	return moveCursor(1);
+			case UI_CONFIRM:	return confirm();
+			case UI_FINISH:		return confirm();
+			case UI_CANCEL:		Gdx.app.exit(); return true;
+			default:			return false;
 		}
 	}
 		
@@ -126,8 +132,8 @@ public class ScreenTitle extends SagaScreen {
 	 */
 	public boolean moveCursor(int delta) {
 		selection += delta;
-		if (selection < 0) selection = 1;
-		if (selection > 1) selection = 0;
+		if (selection < 0) selection = 2;
+		if (selection > 2) selection = 0;
 		return true;
 	}
 
@@ -136,32 +142,47 @@ public class ScreenTitle extends SagaScreen {
 	 * @return					True to indicate command was processed
 	 */
 	public boolean confirm() {
-		if (selection == 0) {
-			// start
-			transitioning = true;
-			SagaScreen textIntro = new ScreenTextIntro();
-			MGlobal.assets.loadAsset(textIntro, "text intro");
-			textIntro.transitonOn(TransitionType.BLACK, new FinishListener() {
-				@Override public void onFinish() {
-					dispose();
-				}
-			});
-		} else {
-			// load
-			if (MemoryIndex.loadIndex().existingSavesCount() > 0) {
+		switch (selection) {
+			case 0:
+				// start
 				transitioning = true;
-				SagaScreen textIntro = new ScreenSaves(false);
+				SagaScreen textIntro = new ScreenTextIntro();
 				MGlobal.assets.loadAsset(textIntro, "text intro");
 				textIntro.transitonOn(TransitionType.BLACK, new FinishListener() {
 					@Override public void onFinish() {
 						dispose();
 					}
 				});
-			} else {
-				MGlobal.audio.playSFX(SConstants.SFX_FAIL);
-			}
+				return true;
+			case 1:
+				// load
+				if (MemoryIndex.loadIndex().existingSavesCount() > 0) {
+					transitioning = true;
+					SagaScreen screenSave = new ScreenSaves(false);
+					MGlobal.assets.loadAsset(screenSave, "save intro");
+					screenSave.transitonOn(TransitionType.BLACK, new FinishListener() {
+						@Override public void onFinish() {
+							dispose();
+						}
+					});
+				} else {
+					MGlobal.audio.playSFX(SConstants.SFX_FAIL);
+				}
+				return true;
+			case 2:
+				// options
+				SagaScreen optionsScreen = new ScreenOptions();
+				MGlobal.assets.loadAsset(optionsScreen, "options screen");
+				optionsScreen.transitonOn(TransitionType.BLACK, new FinishListener() {
+					@Override public void onFinish() {
+						dispose();
+					}
+				});
+				return true;
+			default:
+				MGlobal.reporter.err("Unknown title index: " + selection);
+				return true;
 		}
-		return true;
 	}
 
 	/**

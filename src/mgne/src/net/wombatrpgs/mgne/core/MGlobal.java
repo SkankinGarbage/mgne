@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Scanner;
 
 import com.badlogic.gdx.Gdx;
 
@@ -143,8 +144,8 @@ public class MGlobal {
 			// initializing graphics
 			MGlobal.reporter.inform("Creating level-dependant data");
 			toLoad.clear();
-			String result = files.getText(Constants.CONFIG_FILE);
-			boolean fullscreen = result.indexOf("true") != -1;
+			parseConfigs();
+			boolean fullscreen = Boolean.valueOf(args.get(Constants.ARG_FULLSCREEN));
 			Gdx.graphics.setDisplayMode(
 					MGlobal.window.getWidth(),
 					MGlobal.window.getHeight(), 
@@ -196,6 +197,24 @@ public class MGlobal {
 	 */
 	public static VersionInfo getVersion() {
 		return game.getVersionInfo();
+	}
+	
+	/**
+	 * Reads the user-defined configs and puts them into the global arguments.
+	 */
+	protected static void parseConfigs() {
+		String fullText = files.getText(Constants.CONFIG_FILE);
+		Scanner scanner = new Scanner(fullText);
+		while (scanner.hasNextLine()) {
+			String line = scanner.nextLine();
+			String[] keyValuePair = line.split("=");
+			if (keyValuePair.length != 2) {
+				MGlobal.reporter.err("Malformatted config line: " + line);
+				continue;
+			}
+			args.put(keyValuePair[0].trim(), keyValuePair[1].trim());
+		}
+		scanner.close();
 	}
 
 }

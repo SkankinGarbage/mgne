@@ -68,9 +68,6 @@ public class Keymap implements	InputProcessor,
 		clearState();
 	}
 	
-	/** Constructor for Kryo */
-	private Keymap() { }
-	
 	/**
 	 * Creates the default keymap by checking the database for the MDO as
 	 * defined in Constants. Should be called from SGlobal.

@@ -63,8 +63,11 @@ public class Constants {
 	/** Strings could be null or else this */
 	public static final String NULL_MDO = "None";
 	
-	/** I honestly forget but this seems like a no-brainer */
-	protected static final char SEPERATOR_CHAR = ';';
+	/** Default supported argument keys */
+	public static final String ARG_FULLSCREEN = "fullscreen";
+	public static final String ARG_MAP = "map";
+	public static final String ARG_X = "x";
+	public static final String ARG_Y = "y";
 	
 	public static final List<Class<? extends MainSchema>> PRELOAD_SCHEMA;
 	static {

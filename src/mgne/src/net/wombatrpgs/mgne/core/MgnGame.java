@@ -152,20 +152,20 @@ public abstract class MgnGame implements Disposable {
 		MGlobal.levelManager.setScreen(levelScreen);
 		
 		String mapName;
-		if (MGlobal.args.get("map") != null) {
-			mapName = MGlobal.args.get("map");
+		if (MGlobal.args.get(Constants.ARG_MAP) != null) {
+			mapName = MGlobal.args.get(Constants.ARG_MAP);
 		} else {
 			mapName = mdo.map;
 		}
 		Level level = MGlobal.levelManager.getLevel(mapName);
 		Avatar hero = new Avatar();
 		
-		if (MGlobal.args.get("x") == null) {
+		if (MGlobal.args.get(Constants.ARG_X) == null) {
 			hero.setTileX(mdo.mapX);
 			hero.setTileY(mdo.mapY);
 		} else {
-			hero.setTileX(Integer.valueOf(MGlobal.args.get("x")));
-			hero.setTileY(Integer.valueOf(MGlobal.args.get("y")));
+			hero.setTileX(Integer.valueOf(MGlobal.args.get(Constants.ARG_X)));
+			hero.setTileY(Integer.valueOf(MGlobal.args.get(Constants.ARG_Y)));
 		}
 		
 		MGlobal.levelManager.setNewActiveSet(hero, level);
