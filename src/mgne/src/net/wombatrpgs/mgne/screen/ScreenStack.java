@@ -46,7 +46,7 @@ public class ScreenStack implements	Disposable,
 			screen.dispose();
 		}
 		screens.clear();
-		MGlobal.keymap.unregisterListener(this);
+		MGlobal.keymap.unregisterButtonListener(this);
 	}
 
 	/**

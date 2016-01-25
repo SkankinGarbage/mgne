@@ -149,6 +149,17 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 	public void removeEffect(Effect effect) { removeEffects.add(effect); }
 	
 	/**
+	 * Sets the fullscreen mode.
+	 * @param	fullscreen		True to set full screen, false for window
+	 */
+	public static void setFullscreen(boolean fullscreen) {
+		Gdx.graphics.setDisplayMode(
+				MGlobal.window.getWidth(), 
+				MGlobal.window.getHeight(), 
+				fullscreen);
+	}
+	
+	/**
 	 * Checks to see if a screen object exists on the screen. Also checks if the
 	 * object is queued to be added next update step.
 	 * @param	object			The object to check if exists
@@ -328,10 +339,7 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 		switch (command) {
 		
 		case GLOBAL_FULLSCREEN:
-			Gdx.graphics.setDisplayMode(
-					MGlobal.window.getWidth(), 
-					MGlobal.window.getHeight(), 
-					!Gdx.graphics.isFullscreen());
+			setFullscreen(!Gdx.graphics.isFullscreen());
 			return true;
 		default:
 			return false;

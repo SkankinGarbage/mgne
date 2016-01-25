@@ -109,7 +109,7 @@ public class MemoryIndex {
 	public void save() {
 		String fileName = Constants.SAVES_DIR + INDEX_NAME;
 		ObjectMapper mapper = new ObjectMapper();
-		OutputStream output = MGlobal.files.getOuputStream(fileName);
+		OutputStream output = MGlobal.files.getOutputStream(fileName);
 		ObjectWriter writer = mapper.writer(new PerfectPrinter());
 		MGlobal.reporter.inform("Writing saves index to " + fileName);
 		try {

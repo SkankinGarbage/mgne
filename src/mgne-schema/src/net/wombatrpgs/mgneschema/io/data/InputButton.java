@@ -13,17 +13,30 @@ package net.wombatrpgs.mgneschema.io.data;
  */
 public enum InputButton {
 	
-	UP,
-	DOWN,
-	LEFT,
-	RIGHT,
+	UP					("UP"),
+	DOWN				("DOWN"),
+	LEFT				("LEFT"),
+	RIGHT				("RIGHT"),
 
-	BUTTON_A,			// aka "confirm"
-	BUTTON_B,			// aka "cancel"
-	BUTTON_START,		// aka "menu"
-	BUTTON_SELECT,		// aka who the hell uses this
+	BUTTON_A			("A BUTTON"),			// aka "confirm"
+	BUTTON_B			("B BUTTON"),			// aka "cancel"
+	BUTTON_START		("START"),				// aka "menu"
+	BUTTON_SELECT		("CANCEL"),				// aka who the hell uses this
 	
-	FULLSCREEN,
-	DEBUG
+	FULLSCREEN			(""),
+	DEBUG				("");
+	
+	private String displayName;
+	
+	/**
+	 * Default constructor.
+	 * @param	displayName			The name to display to the user on config
+	 */
+	InputButton(String displayName) {
+		this.displayName = displayName;
+	}
+	
+	/** @return The display name of the button for configuration */
+	public String getDisplayName() { return displayName; }
 
 }

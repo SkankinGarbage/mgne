@@ -6,11 +6,20 @@
  */
 package net.wombatrpgs.saga.screen;
 
+import java.util.ArrayList;
+
 import net.wombatrpgs.mgne.core.Constants;
 import net.wombatrpgs.mgne.core.MGlobal;
+import net.wombatrpgs.mgne.io.CommandMap;
+import net.wombatrpgs.mgne.io.InputListener;
+import net.wombatrpgs.mgne.io.command.CMapMenu;
+import net.wombatrpgs.mgne.maps.objects.TimerListener;
+import net.wombatrpgs.mgne.maps.objects.TimerObject;
+import net.wombatrpgs.mgne.screen.Screen;
 import net.wombatrpgs.mgne.ui.Nineslice;
 import net.wombatrpgs.mgne.ui.text.FontHolder;
 import net.wombatrpgs.mgne.ui.text.TextFormat;
+import net.wombatrpgs.mgneschema.io.data.GdxKey;
 import net.wombatrpgs.mgneschema.io.data.InputButton;
 import net.wombatrpgs.mgneschema.io.data.InputCommand;
 import net.wombatrpgs.saga.core.SConstants;
@@ -25,22 +34,37 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class ScreenOptions extends SagaScreen {
 	
 	protected static final int INFO_HEIGHT = 24;
-	protected static final int FULL_WIDTH = 200;
+	protected static final int FULL_WIDTH = 240;
 	protected static final int FULL_HEIGHT = 180;
 	protected static final int TEXT_HEIGHT = 12;
-	protected static final int COLUMN_WIDTH = 96;
+	protected static final int COLUMN_WIDTH = 100;
+	
+	protected static final float KEY_TIMEOUT_SECONDS = 5.0f;
 	
 	protected Nineslice backer, infoBacker;
 	protected TextFormat optionsFormat, infoFormat;
+	protected CommandMap menuContext;
 	
 	protected String info;
+	protected InputButton awaitingButton;
+	protected InputListener inputListener;
+	protected float elapsed;
 	protected int selection;
 	
 	/**
 	 * Default constructor.
 	 */
 	public ScreenOptions() {
-		info = "Select an option.";
+		updateInfo();
+		
+		menuContext = new CMapMenu();
+		
+		inputListener = new InputListener() {
+			@Override public void onKeyUp(int keycode) { }
+			@Override public void onKeyDown(int keycode) {
+				changeButtonToKeycode(keycode);
+			}
+		};
 		
 		backer = new Nineslice(FULL_WIDTH, FULL_HEIGHT - INFO_HEIGHT);
 		infoBacker = new Nineslice(FULL_WIDTH, INFO_HEIGHT);
@@ -49,14 +73,16 @@ public class ScreenOptions extends SagaScreen {
 		
 		infoFormat = new TextFormat();
 		infoFormat.x = getWidth()/2 - FULL_WIDTH/2 + 9;
-		infoFormat.y = getHeight()/2 - FULL_HEIGHT/2 + FULL_HEIGHT - INFO_HEIGHT - infoBacker.getBorderHeight() + 16;
+		infoFormat.y = getHeight()/2 - FULL_HEIGHT/2 + FULL_HEIGHT - 
+				INFO_HEIGHT - infoBacker.getBorderHeight() + 16;
 		infoFormat.align = HAlignment.LEFT;
 		infoFormat.width = FULL_WIDTH - 32;
 		infoFormat.height = TEXT_HEIGHT;
 		
 		optionsFormat = new TextFormat();
-		optionsFormat.x = getWidth()/2 - FULL_WIDTH/2 + 22;
-		optionsFormat.y = getHeight()/2 - FULL_HEIGHT/2 + FULL_HEIGHT - INFO_HEIGHT - infoBacker.getBorderHeight() - 10;
+		optionsFormat.x = getWidth()/2 - FULL_WIDTH/2 + 23;
+		optionsFormat.y = getHeight()/2 - FULL_HEIGHT/2 + FULL_HEIGHT - 
+				INFO_HEIGHT - infoBacker.getBorderHeight() - 10;
 		optionsFormat.align = HAlignment.LEFT;
 		optionsFormat.width = getWidth();
 		optionsFormat.height = TEXT_HEIGHT;
@@ -90,46 +116,35 @@ public class ScreenOptions extends SagaScreen {
 				option = "SCREEN MODE";
 				value = Boolean.valueOf(MGlobal.args.get(Constants.ARG_FULLSCREEN)) ? "FULL" : "WINDOW";
 				break;
-			case 2:
-				option = "A BUTTON";
-				value = controlToString(InputButton.BUTTON_A);
-				break;
-			case 3:
-				option = "B BUTTON";
-				value = controlToString(InputButton.BUTTON_B);
-				break;
-			case 4:
-				option = "START";
-				value = controlToString(InputButton.BUTTON_START);
-				break;
-			case 5:
-				option = "SELECT";
-				value = controlToString(InputButton.BUTTON_SELECT);
-				break;
-			case 6:
-				option = "LEFT";
-				value = controlToString(InputButton.LEFT);
-				break;
-			case 7:
-				option = "UP";
-				value = controlToString(InputButton.UP);
-				break;
-			case 8:
-				option = "RIGHT";
-				value = controlToString(InputButton.RIGHT);
-				break;
-			case 9:
-				option = "DOWN";
-				value = controlToString(InputButton.DOWN);
-				break;
 			default:
-				option = "";
-				value = "";
-				MGlobal.reporter.err("OOB at screen options:" + i);
+				option = buttonForSlot(i).getDisplayName();
+				value = controlToString(buttonForSlot(i));
+				break;
 			}
 			font.draw(batch, optionsFormat, option, -i * TEXT_HEIGHT);
 			font.draw(batch, optionsFormat, value, COLUMN_WIDTH, -i * TEXT_HEIGHT);
 		}
+		
+		MGlobal.ui.getCursor().renderAt(batch, optionsFormat.x - 17,
+				optionsFormat.y - selection * TEXT_HEIGHT - 16);
+	}
+	
+	/**
+	 * @see net.wombatrpgs.mgne.screen.Screen#onFocusGained()
+	 */
+	@Override
+	public void onFocusGained() {
+		super.onFocusGained();
+		pushCommandContext(menuContext);
+	}
+	
+	/**
+	 * @see net.wombatrpgs.mgne.screen.Screen#onFocusLost()
+	 */
+	@Override
+	public void onFocusLost() {
+		super.onFocusLost();
+		removeCommandContext(menuContext);
 	}
 	
 	/**
@@ -146,6 +161,20 @@ public class ScreenOptions extends SagaScreen {
 		case UI_CANCEL:		cancel();			return true;
 		case UI_FINISH:		cancel();			return true;
 		default:								return true;
+		}
+	}
+
+	/**
+	 * @see net.wombatrpgs.saga.screen.SagaScreen#update(float)
+	 */
+	@Override
+	public void update(float delta) {
+		super.update(delta);
+		if (awaitingButton != null) {
+			elapsed += delta;
+			if (elapsed > KEY_TIMEOUT_SECONDS) {
+				cancelButton();
+			}
 		}
 	}
 
@@ -171,8 +200,21 @@ public class ScreenOptions extends SagaScreen {
 	 * @return					The key used for that button
 	 */
 	protected String controlToString(InputButton button) {
-		// TODO
-		return "?";
+		if (MGlobal.args.get(configForButton(button)) != null) {
+			return MGlobal.args.get(configForButton(button));
+		} else {
+			switch (button) {
+			case BUTTON_A:			return "z/space/enter";
+			case BUTTON_B:			return "x/backspace";
+			case BUTTON_START:		return "c/esc";
+			case BUTTON_SELECT:		return "v/tab";
+			case DOWN:				// fall through
+			case UP:				// fall through
+			case RIGHT:				// fall through
+			case LEFT:				return "arrow key";
+			default:				return "?";
+			}
+		}
 	}
 	
 	/**
@@ -183,6 +225,7 @@ public class ScreenOptions extends SagaScreen {
 		selection += delta;
 		if (selection >= 10) selection = 0;
 		if (selection < 0) selection = 9;
+		updateInfo();
 	}
 	
 	/**
@@ -198,7 +241,146 @@ public class ScreenOptions extends SagaScreen {
 	 * Called when user wants to change an option.
 	 */
 	protected void confirm() {
-		
+		switch (selection) {
+		case 0:			cycleTextSpeed();							break;
+		case 1:			toggleFullscreen();							break;
+		default:		changeButton(buttonForSlot(selection));		break;
+		}
 	}
-
+	
+	/**
+	 * Increment text speed on the counter.
+	 */
+	protected void cycleTextSpeed() {
+		Integer newValue = Integer.valueOf(MGlobal.args.get(SConstants.ARG_TEXT_SPEED)) + 1;
+		if (newValue > 3) newValue = 0;
+		MGlobal.args.put(SConstants.ARG_TEXT_SPEED, newValue.toString());
+		saveConfigs();
+	}
+	
+	/**
+	 * Toggles full screen mode.
+	 */
+	protected void toggleFullscreen() {
+		Boolean newValue = !Boolean.valueOf(MGlobal.args.get(Constants.ARG_FULLSCREEN));
+		MGlobal.args.put(Constants.ARG_FULLSCREEN, newValue.toString());
+		Screen.setFullscreen(newValue);
+		saveConfigs();
+	}
+	
+	/**
+	 * Prompt for a new binding for the provided button.
+	 * @param	button			The button to get a new binding for
+	 */
+	protected void changeButton(InputButton button) {
+		info = "Press new button, or wait";
+		awaitingButton = button;
+		elapsed = 0;
+		MGlobal.keymap.registerInputListener(inputListener);
+	}
+	
+	/**
+	 * Binds the awaiting button to the pressed keycode.
+	 * @param	keycode			The code of the pressed key
+	 */
+	protected void changeButtonToKeycode(int keycode) {
+		String result = null;
+		for (GdxKey key : GdxKey.values()) {
+			if (key.keycode == keycode) {
+				result = key.name();
+				break;
+			}
+		}
+		if (result == null) {
+			result = String.valueOf(keycode);
+		}
+		MGlobal.args.put(configForButton(awaitingButton), result);
+		info = "Set to " + result;
+		finishButtonChange();
+	}
+	
+	/**
+	 * Cancel listening for an input button
+	 */
+	protected void cancelButton() {
+		info = "Reset to default.";
+		MGlobal.args.remove(configForButton(awaitingButton));
+		finishButtonChange();
+	}
+	
+	/**
+	 * Finishes the button config process by saving.
+	 */
+	protected void finishButtonChange() {
+		new TimerObject(0.0f, this, new TimerListener() {
+			@Override public void onTimerZero(TimerObject source) {
+				MGlobal.keymap.unregisterInputListener(inputListener);
+			}
+		});
+		awaitingButton = null;
+		elapsed = 0;
+		saveConfigs();
+	}
+	
+	/**
+	 * Writes the configs to disk.
+	 */
+	protected void saveConfigs() {
+		ArrayList<String> configs = new ArrayList<String>();
+		configs.add(Constants.ARG_FULLSCREEN);
+		configs.add(SConstants.ARG_TEXT_SPEED);
+		for (int i = 2; i < 10; i += 1) {
+			configs.add(configForButton(buttonForSlot(i)));
+		}
+		MGlobal.files.writeConfigs(configs);
+	}
+	
+	/**
+	 * Sets the top information string according to selection.
+	 */
+	protected void updateInfo() {
+		switch (selection) {
+		case 0:		info = "Message autotype speed";		break;
+		case 1:		info = "Full screen or window";			break;
+		default:	info = "Custom button config";			break;
+		}
+	}
+	
+	/**
+	 * Given an option slot, returns the associated button.
+	 * @param	slot			The slot to check, should be 2-9
+	 * @return					The button associated with that slot
+	 */
+	protected InputButton buttonForSlot(int slot) {
+		switch (slot) {
+		case 2:		return InputButton.BUTTON_A;
+		case 3:		return InputButton.BUTTON_B;
+		case 4:		return InputButton.BUTTON_START;
+		case 5:		return InputButton.BUTTON_SELECT;
+		case 6:		return InputButton.LEFT;
+		case 7:		return InputButton.UP;
+		case 8:		return InputButton.RIGHT;
+		case 9:		return InputButton.DOWN;
+		default:	MGlobal.reporter.err("Slot OOB: " + slot);		return null;
+		}
+	}
+	
+	/**
+	 * Given a control button, returns the associated config key.
+	 * @param	button			The button to get config for
+	 * @return					The name of that button's config key
+	 */
+	protected String configForButton(InputButton button) {
+		switch (button) {
+		case BUTTON_A:			return SConstants.ARG_CONTROL_A;
+		case BUTTON_B:			return SConstants.ARG_CONTROL_B;
+		case BUTTON_START:		return SConstants.ARG_CONTROL_START;
+		case BUTTON_SELECT:		return SConstants.ARG_CONTROL_SELECT;
+		case LEFT:				return SConstants.ARG_CONTROL_LEFT;
+		case RIGHT:				return SConstants.ARG_CONTROL_RIGHT;
+		case UP:				return SConstants.ARG_CONTROL_UP;
+		case DOWN:				return SConstants.ARG_CONTROL_DOWN;
+		default:	MGlobal.reporter.err("Button OOB: " + button);	return null;
+		}
+	}
 }

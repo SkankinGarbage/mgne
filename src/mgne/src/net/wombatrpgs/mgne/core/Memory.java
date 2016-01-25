@@ -95,7 +95,7 @@ public class Memory {
 	 */
 	public void save(String fileName) {
 		MGlobal.reporter.inform("Saving to " + fileName);
-		OutputStream output = MGlobal.files.getOuputStream(fileName);
+		OutputStream output = MGlobal.files.getOutputStream(fileName);
 		
 		// store all objects in memory in this object
 		storeFields();

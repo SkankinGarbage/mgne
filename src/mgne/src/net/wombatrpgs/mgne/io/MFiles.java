@@ -6,9 +6,13 @@
  */
 package net.wombatrpgs.mgne.io;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.List;
 
+import net.wombatrpgs.mgne.core.Constants;
 import net.wombatrpgs.mgne.core.MGlobal;
 
 import com.badlogic.gdx.Gdx;
@@ -62,9 +66,34 @@ public class MFiles {
 	 * 							game directory, ie "saves/bob/player.sav"
 	 * @return					An output stream to write to that file
 	 */
-	public OutputStream getOuputStream(String fileName) {
+	public OutputStream getOutputStream(String fileName) {
 		FileHandle handle = Gdx.files.local(fileName);
 		return handle.write(false);
+	}
+	
+	/**
+	 * Writes the current values in the args global into the config file.
+	 * @param configs			The names of the configs to write
+	 */
+	public void writeConfigs(List<String> configs) {
+		OutputStream stream = getOutputStream(Constants.CONFIG_FILE);
+		PrintWriter out = new PrintWriter(stream);
+		
+		try {
+			// hacky as fuck, this is really tacked on, sorry
+			for (String config : configs) {
+				String value = MGlobal.args.get(config);
+				if (value != null) {
+					out.write(config + " = " + value + "\n");
+				}
+			}
+			
+			out.flush();
+			out.close();
+			stream.close();
+		} catch (IOException e) {
+			MGlobal.reporter.err("Error writing configs", e);
+		}
 	}
 	
 	/**

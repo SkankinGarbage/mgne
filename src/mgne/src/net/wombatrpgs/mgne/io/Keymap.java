@@ -39,7 +39,8 @@ public class Keymap implements	InputProcessor,
 
 	protected KeymapMDO mdo;
 	
-	protected List<ButtonListener> listeners;
+	protected List<ButtonListener> buttonListeners;
+	protected List<InputListener> inputListeners;
 	protected List<InputEvent> queue;
 	protected Map<InputButton, KeyState> states;
 	protected Map<Integer, InputButton> keyToButton;
@@ -50,10 +51,10 @@ public class Keymap implements	InputProcessor,
 	 * @param	mdo				The data to create from
 	 */
 	public Keymap(KeymapMDO mdo) {
-		this();
 		this.mdo = mdo;
 		queue = new ArrayList<InputEvent>();
-		listeners = new ArrayList<ButtonListener>();
+		buttonListeners = new ArrayList<ButtonListener>();
+		inputListeners = new ArrayList<InputListener>();
 		states = new HashMap<InputButton, KeyState>();
 		keyToButton = new HashMap<Integer, InputButton>();
 		buttonToKey = new HashMap<InputButton, List<Integer>>();
@@ -78,7 +79,7 @@ public class Keymap implements	InputProcessor,
 				Constants.KEY_INPUT, InputSettingsMDO.class);
 		KeymapMDO keyMDO = MGlobal.data.getEntryFor(inputMDO.keymap, KeymapMDO.class);
 		Keymap map = new Keymap(keyMDO);
-		map.registerListener(MGlobal.screens);
+		map.registerButtonListener(MGlobal.screens);
 		Gdx.input.setInputProcessor(map);
 		return map;
 	}
@@ -118,25 +119,44 @@ public class Keymap implements	InputProcessor,
 		if (MGlobal.keymap == this) {
 			MGlobal.keymap = null;
 		}
-		listeners.clear();
-		queue.clear();
 	}
 
 	/**
 	 * Registers a new object to listen for meta-button presses.
 	 * @param 	listener		The listener to register
 	 */
-	public  void registerListener(ButtonListener listener) {
-		listeners.add(listener);
+	public void registerButtonListener(ButtonListener listener) {
+		buttonListeners.add(listener);
 	}
 	
 	/**
 	 * Unregisters an existing listener from meta-button presses.
 	 * @param 	listener		The listener to unregister
 	 */
-	public void unregisterListener(ButtonListener listener) {
-		if (listeners.contains(listener)) {
-			listeners.remove(listener);
+	public void unregisterButtonListener(ButtonListener listener) {
+		if (buttonListeners.contains(listener)) {
+			buttonListeners.remove(listener);
+		} else {
+			MGlobal.reporter.warn("The listener " + listener + " is not " +
+					"actually listening to " + this);
+		}
+	}
+	
+	/**
+	 * Registers a new object to listen for raw button presses.
+	 * @param	listener		The listener to register
+	 */
+	public void registerInputListener(InputListener listener) {
+		inputListeners.add(listener);
+	}
+	
+	/**
+	 * Unregisters an existing listener from raw button presses.
+	 * @param 	listener		The listener to unregister
+	 */
+	public void unregisterInputListener(InputListener listener) {
+		if (inputListeners.contains(listener)) {
+			inputListeners.remove(listener);
 		} else {
 			MGlobal.reporter.warn("The listener " + listener + " is not " +
 					"actually listening to " + this);
@@ -161,8 +181,8 @@ public class Keymap implements	InputProcessor,
 	 */
 	public void absorbListeners(Keymap stale) {
 		if (stale != this) {
-			for (ButtonListener listener : stale.listeners) {
-				listeners.add(listener);
+			for (ButtonListener listener : stale.buttonListeners) {
+				buttonListeners.add(listener);
 			}
 			if (Gdx.input.getInputProcessor() == stale) {
 				Gdx.input.setInputProcessor(this);
@@ -190,7 +210,12 @@ public class Keymap implements	InputProcessor,
 	@Override
 	public boolean keyDown(int keycode) {
 		InputButton button = keyToButton.get(keycode);
-		if (button == null) return false;
+		for (InputListener listener : inputListeners) {
+			listener.onKeyDown(keycode);
+		}
+		if (button == null) {
+			return false;
+		}
 		if (states.get(button) == KeyState.UP) {
 			queue.add(new InputEvent(button, EventType.PRESS));
 			queue.add(new InputEvent(button, EventType.HOLD));
@@ -205,7 +230,10 @@ public class Keymap implements	InputProcessor,
 	 */
 	@Override
 	public boolean keyUp(int keycode) {
-		// this will be handled in the update
+		// most of this is handled in update
+		for (InputListener listener : inputListeners) {
+			listener.onKeyUp(keycode);
+		}
 		return false;
 	}
 
@@ -271,7 +299,7 @@ public class Keymap implements	InputProcessor,
 	 */
 	protected final void signal(InputEvent event) {
 		List<ButtonListener> toTrigger = new ArrayList<ButtonListener>();
-		for (ButtonListener listener : listeners) {
+		for (ButtonListener listener : buttonListeners) {
 			toTrigger.add(listener);
 		}
 		for (ButtonListener listener : toTrigger) {
