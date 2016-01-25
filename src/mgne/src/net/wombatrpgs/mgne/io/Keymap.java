@@ -17,6 +17,7 @@ import net.wombatrpgs.mgne.core.interfaces.Updateable;
 import net.wombatrpgs.mgne.graphics.interfaces.Disposable;
 import net.wombatrpgs.mgne.io.InputEvent.EventType;
 import net.wombatrpgs.mgneschema.io.KeymapMDO;
+import net.wombatrpgs.mgneschema.io.data.GdxKey;
 import net.wombatrpgs.mgneschema.io.data.InputButton;
 import net.wombatrpgs.mgneschema.io.data.KeyButtonPairMDO;
 import net.wombatrpgs.mgneschema.ui.InputSettingsMDO;
@@ -209,7 +210,7 @@ public class Keymap implements	InputProcessor,
 	 */
 	@Override
 	public boolean keyDown(int keycode) {
-		InputButton button = keyToButton.get(keycode);
+		InputButton button = keyToButton(keycode);
 		for (InputListener listener : inputListeners) {
 			listener.onKeyDown(keycode);
 		}
@@ -293,6 +294,25 @@ public class Keymap implements	InputProcessor,
 	}
 	
 	/**
+	 * Given a control button, returns the associated config key.
+	 * @param	button			The button to get config for
+	 * @return					The name of that button's config key
+	 */
+	public String configForButton(InputButton button) {
+		switch (button) {
+		case BUTTON_A:			return Constants.ARG_CONTROL_A;
+		case BUTTON_B:			return Constants.ARG_CONTROL_B;
+		case BUTTON_START:		return Constants.ARG_CONTROL_START;
+		case BUTTON_SELECT:		return Constants.ARG_CONTROL_SELECT;
+		case LEFT:				return Constants.ARG_CONTROL_LEFT;
+		case RIGHT:				return Constants.ARG_CONTROL_RIGHT;
+		case UP:				return Constants.ARG_CONTROL_UP;
+		case DOWN:				return Constants.ARG_CONTROL_DOWN;
+		default:				return "";
+		}
+	}
+	
+	/**
 	 * Signal that a meta-button event (press etc) occurred. Construct the event
 	 * yourself in the raw input handling.
 	 * @param 	event			The event that occurred
@@ -319,6 +339,30 @@ public class Keymap implements	InputProcessor,
 			}
 		}
 		return false;
+	}
+	
+	/**
+	 * Converts keycode to button.
+	 * @param	keycode			The keycode to evaluate
+	 * @return					The button associated with the key, or null
+	 */
+	protected InputButton keyToButton(int keycode) {
+		for (InputButton button : InputButton.values()) {
+			String bind = MGlobal.args.get(configForButton(button));
+			if (bind != null) {
+				int matchingCode;
+				try {
+					GdxKey key = GdxKey.valueOf(bind);
+					matchingCode = key.keycode;
+				} catch (IllegalArgumentException e) {
+					matchingCode = Integer.valueOf(bind);
+				}
+				if (matchingCode == keycode) {
+					return button;
+				}
+			}
+		}
+		return keyToButton.get(keycode);
 	}
 	
 	/**

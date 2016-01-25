@@ -13,6 +13,7 @@ import java.util.List;
 import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import net.wombatrpgs.mgne.core.Constants;
 import net.wombatrpgs.mgne.core.MAssets;
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.core.interfaces.FinishListener;
@@ -205,7 +206,7 @@ public class TextBox extends ScreenGraphic {
 		
 		sinceChar += elapsed;
 		boolean playedType = false;
-		for (; sinceChar > 1f/mdo.typeSpeed; sinceChar -= 1f/mdo.typeSpeed) {
+		for (; sinceChar > 1f/getTypespeed(); sinceChar -= 1f/getTypespeed()) {
 			visibleChars += 1;
 			if (visibleChars > totalLength) {
 				for (int i = 0; i < mdo.lines; i += 1) {
@@ -339,6 +340,24 @@ public class TextBox extends ScreenGraphic {
 		expandingIn = false;
 		expandingOut = true;
 		elapsedExpand = 0;
+	}
+	
+	/**
+	 * Calculates the desired default type speed as requested by the user.
+	 * @return					The seconds a character should take to type
+	 */
+	public float getTypespeed() {
+		String speedString = MGlobal.args.get(Constants.ARG_TEXT_SPEED);
+		if (speedString != null) {
+			int speed = Integer.valueOf(speedString);
+			switch (speed) {
+			case 0: return mdo.typeSpeed / 2.0f;
+			case 1: return mdo.typeSpeed;
+			case 2: return mdo.typeSpeed * 1.6f;
+			case 3: return mdo.typeSpeed * 2.6f;
+			}
+		}
+		return mdo.typeSpeed;
 	}
 	
 	/**

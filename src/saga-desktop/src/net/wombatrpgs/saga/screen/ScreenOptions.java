@@ -200,8 +200,8 @@ public class ScreenOptions extends SagaScreen {
 	 * @return					The key used for that button
 	 */
 	protected String controlToString(InputButton button) {
-		if (MGlobal.args.get(configForButton(button)) != null) {
-			return MGlobal.args.get(configForButton(button));
+		if (MGlobal.args.get(MGlobal.keymap.configForButton(button)) != null) {
+			return MGlobal.args.get(MGlobal.keymap.configForButton(button));
 		} else {
 			switch (button) {
 			case BUTTON_A:			return "z/space/enter";
@@ -294,7 +294,7 @@ public class ScreenOptions extends SagaScreen {
 		if (result == null) {
 			result = String.valueOf(keycode);
 		}
-		MGlobal.args.put(configForButton(awaitingButton), result);
+		MGlobal.args.put(MGlobal.keymap.configForButton(awaitingButton), result);
 		info = "Set to " + result;
 		finishButtonChange();
 	}
@@ -304,7 +304,7 @@ public class ScreenOptions extends SagaScreen {
 	 */
 	protected void cancelButton() {
 		info = "Reset to default.";
-		MGlobal.args.remove(configForButton(awaitingButton));
+		MGlobal.args.remove(MGlobal.keymap.configForButton(awaitingButton));
 		finishButtonChange();
 	}
 	
@@ -330,7 +330,7 @@ public class ScreenOptions extends SagaScreen {
 		configs.add(Constants.ARG_FULLSCREEN);
 		configs.add(SConstants.ARG_TEXT_SPEED);
 		for (int i = 2; i < 10; i += 1) {
-			configs.add(configForButton(buttonForSlot(i)));
+			configs.add(MGlobal.keymap.configForButton(buttonForSlot(i)));
 		}
 		MGlobal.files.writeConfigs(configs);
 	}
@@ -362,25 +362,6 @@ public class ScreenOptions extends SagaScreen {
 		case 8:		return InputButton.RIGHT;
 		case 9:		return InputButton.DOWN;
 		default:	MGlobal.reporter.err("Slot OOB: " + slot);		return null;
-		}
-	}
-	
-	/**
-	 * Given a control button, returns the associated config key.
-	 * @param	button			The button to get config for
-	 * @return					The name of that button's config key
-	 */
-	protected String configForButton(InputButton button) {
-		switch (button) {
-		case BUTTON_A:			return SConstants.ARG_CONTROL_A;
-		case BUTTON_B:			return SConstants.ARG_CONTROL_B;
-		case BUTTON_START:		return SConstants.ARG_CONTROL_START;
-		case BUTTON_SELECT:		return SConstants.ARG_CONTROL_SELECT;
-		case LEFT:				return SConstants.ARG_CONTROL_LEFT;
-		case RIGHT:				return SConstants.ARG_CONTROL_RIGHT;
-		case UP:				return SConstants.ARG_CONTROL_UP;
-		case DOWN:				return SConstants.ARG_CONTROL_DOWN;
-		default:	MGlobal.reporter.err("Button OOB: " + button);	return null;
 		}
 	}
 }

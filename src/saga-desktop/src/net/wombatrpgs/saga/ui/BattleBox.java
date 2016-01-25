@@ -139,7 +139,7 @@ public class BattleBox extends TextBox implements CommandListener {
 		mdo.marginWidth = orig.marginWidth + 2;
 		mdo.nineslice = orig.nineslice;
 		mdo.scaling = orig.scaling;
-		mdo.typeSpeed = orig.typeSpeed;
+		mdo.typeSpeed = (int) MGlobal.ui.getBlockingBox().getTypespeed();
 		return mdo;
 	}
 

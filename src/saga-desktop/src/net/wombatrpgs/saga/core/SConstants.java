@@ -30,16 +30,5 @@ public class SConstants extends Constants {
 	public static final String SFX_INN = "inn";
 	public static final String SFX_BATTLE = "battle";
 	public static final String SFX_CURE = "cure";
-	
-	/** Arguments */
-	public static final String ARG_TEXT_SPEED = "textspeed";
-	public static final String ARG_CONTROL_A = "a";
-	public static final String ARG_CONTROL_B = "b";
-	public static final String ARG_CONTROL_START = "start";
-	public static final String ARG_CONTROL_SELECT = "select";
-	public static final String ARG_CONTROL_LEFT = "left";
-	public static final String ARG_CONTROL_RIGHT = "right";
-	public static final String ARG_CONTROL_UP = "up";
-	public static final String ARG_CONTROL_DOWN = "down";
 
 }
