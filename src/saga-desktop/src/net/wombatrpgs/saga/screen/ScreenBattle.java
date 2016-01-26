@@ -724,11 +724,13 @@ public class ScreenBattle extends SagaScreen {
 			playedSound = false;
 			for (PortraitAnim anim : anims) {
 				anim.start(this);
+				playedSound = true;
 			}
 		} else {
 			BattleAnim anim = BattleAnimFactory.create(animMDO);
 			MGlobal.assets.loadAsset(anim, "battle animation sfx " + animMDO);
 			anim.playSound();
+			playedSound = true;
 		}
 	}
 	
