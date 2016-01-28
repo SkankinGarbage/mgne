@@ -24,6 +24,11 @@ import net.wombatrpgs.mgneschema.ui.InputSettingsMDO;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.controllers.Controller;
+import com.badlogic.gdx.controllers.ControllerListener;
+import com.badlogic.gdx.controllers.Controllers;
+import com.badlogic.gdx.controllers.PovDirection;
+import com.badlogic.gdx.math.Vector3;
 
 /**
  * A map from physical keyboard keys to the meta-buttons that the game runs on.
@@ -36,9 +41,13 @@ import com.badlogic.gdx.InputProcessor;
  */
 public class Keymap implements	InputProcessor,
 								Updateable,
-								Disposable {
+								Disposable,
+								ControllerListener {
+	
+	protected static final float CONTROLLER_DEAD_ZONE = 0.5f;
 
 	protected KeymapMDO mdo;
+	protected Controller activeController;
 	
 	protected List<ButtonListener> buttonListeners;
 	protected List<InputListener> inputListeners;
@@ -46,6 +55,7 @@ public class Keymap implements	InputProcessor,
 	protected Map<InputButton, KeyState> states;
 	protected Map<Integer, InputButton> keyToButton;
 	protected Map<InputButton, List<Integer>> buttonToKey;
+	protected Map<ControllerAxis, Float> axisZeroValues;
 	
 	/**
 	 * Creates and intializes a new keymap.
@@ -59,6 +69,7 @@ public class Keymap implements	InputProcessor,
 		states = new HashMap<InputButton, KeyState>();
 		keyToButton = new HashMap<Integer, InputButton>();
 		buttonToKey = new HashMap<InputButton, List<Integer>>();
+		axisZeroValues = new HashMap<Keymap.ControllerAxis, Float>();
 		
 		for (InputButton button : InputButton.values()) {
 			buttonToKey.put(button, new ArrayList<Integer>());
@@ -67,6 +78,8 @@ public class Keymap implements	InputProcessor,
 			keyToButton.put(pairMDO.keyCode.keycode, pairMDO.button);
 			buttonToKey.get(pairMDO.button).add(pairMDO.keyCode.keycode);
 		}
+		
+		Controllers.addListener(this);
 		
 		clearState();
 	}
@@ -121,6 +134,7 @@ public class Keymap implements	InputProcessor,
 		if (MGlobal.keymap == this) {
 			MGlobal.keymap = null;
 		}
+		Controllers.removeListener(this);
 	}
 
 	/**
@@ -295,6 +309,131 @@ public class Keymap implements	InputProcessor,
 	}
 	
 	/**
+	 * @see com.badlogic.gdx.controllers.ControllerListener#connected
+	 * (com.badlogic.gdx.controllers.Controller)
+	 */
+	@Override
+	public void connected(Controller controller) {
+		// no op
+	}
+
+	/**
+	 * @see com.badlogic.gdx.controllers.ControllerListener#disconnected
+	 * (com.badlogic.gdx.controllers.Controller)
+	 */
+	@Override
+	public void disconnected(Controller controller) {
+		// no op
+	}
+
+	/**
+	 * @see com.badlogic.gdx.controllers.ControllerListener#buttonDown
+	 * (com.badlogic.gdx.controllers.Controller, int)
+	 */
+	@Override
+	public boolean buttonDown(Controller controller, int buttonCode) {
+		// treat this like we would any other key
+		return keyDown(buttonCode);
+	}
+
+	/**
+	 * @see com.badlogic.gdx.controllers.ControllerListener#buttonUp
+	 * (com.badlogic.gdx.controllers.Controller, int)
+	 */
+	@Override
+	public boolean buttonUp(Controller controller, int buttonCode) {
+		// treat this like we would any other key
+		return keyUp(buttonCode);
+	}
+
+	/**
+	 * @see com.badlogic.gdx.controllers.ControllerListener#axisMoved
+	 * (com.badlogic.gdx.controllers.Controller, int, float)
+	 */
+	@Override
+	public boolean axisMoved(Controller controller, int axisCode, float value) {
+		ControllerAxis controllerAxis = new ControllerAxis(controller, axisCode);
+		Float zeroValue = axisZeroValues.get(controllerAxis);
+		if (zeroValue == null) {
+			axisZeroValues.put(controllerAxis, value);
+			return true;
+		} else {
+			if (Math.abs(value - zeroValue) < CONTROLLER_DEAD_ZONE) {
+				return false;
+			}
+			activeController = controller;
+			if (value > 0) {
+				switch (axisCode) {
+				case 0: return axisDown(GdxKey.AXIS0_POSITIVE.keycode);
+				case 1: return axisDown(GdxKey.AXIS1_POSITIVE.keycode);
+				case 2: return axisDown(GdxKey.AXIS2_POSITIVE.keycode);
+				case 3: return axisDown(GdxKey.AXIS3_POSITIVE.keycode);
+				case 4: return axisDown(GdxKey.AXIS4_POSITIVE.keycode);
+				case 5: return axisDown(GdxKey.AXIS5_POSITIVE.keycode);
+				case 6: return axisDown(GdxKey.AXIS6_POSITIVE.keycode);
+				case 7: return axisDown(GdxKey.AXIS7_POSITIVE.keycode);
+				case 8: return axisDown(GdxKey.AXIS8_POSITIVE.keycode);
+				case 9: return axisDown(GdxKey.AXIS9_POSITIVE.keycode);
+				}
+			} else {
+				switch (axisCode) {
+				case 0: return axisDown(GdxKey.AXIS0_NEGATIVE.keycode);
+				case 1: return axisDown(GdxKey.AXIS1_NEGATIVE.keycode);
+				case 2: return axisDown(GdxKey.AXIS2_NEGATIVE.keycode);
+				case 3: return axisDown(GdxKey.AXIS3_NEGATIVE.keycode);
+				case 4: return axisDown(GdxKey.AXIS4_NEGATIVE.keycode);
+				case 5: return axisDown(GdxKey.AXIS5_NEGATIVE.keycode);
+				case 6: return axisDown(GdxKey.AXIS6_NEGATIVE.keycode);
+				case 7: return axisDown(GdxKey.AXIS7_NEGATIVE.keycode);
+				case 8: return axisDown(GdxKey.AXIS8_NEGATIVE.keycode);
+				case 9: return axisDown(GdxKey.AXIS9_NEGATIVE.keycode);
+				}
+			}
+			return false;
+		}
+	}
+
+	/**
+	 * @see com.badlogic.gdx.controllers.ControllerListener#povMoved
+	 * (com.badlogic.gdx.controllers.Controller, int, com.badlogic.gdx.controllers.PovDirection)
+	 */
+	@Override
+	public boolean povMoved(Controller controller, int povCode, PovDirection value) {
+		// think this is unused anyway?
+		return false;
+	}
+
+	/**
+	 * @see com.badlogic.gdx.controllers.ControllerListener#xSliderMoved
+	 * (com.badlogic.gdx.controllers.Controller, int, boolean)
+	 */
+	@Override
+	public boolean xSliderMoved(Controller controller, int sliderCode, boolean value) {
+		// think this is unused anyway?
+		return false;
+	}
+
+	/**
+	 * @see com.badlogic.gdx.controllers.ControllerListener#ySliderMoved
+	 * (com.badlogic.gdx.controllers.Controller, int, boolean)
+	 */
+	@Override
+	public boolean ySliderMoved(Controller controller, int sliderCode, boolean value) {
+		// think this is unused anyway?
+		return false;
+	}
+
+	/**
+	 * @see com.badlogic.gdx.controllers.ControllerListener#accelerometerMoved
+	 * (com.badlogic.gdx.controllers.Controller, int, com.badlogic.gdx.math.Vector3)
+	 */
+	@Override
+	public boolean accelerometerMoved(Controller controller, int accelerometerCode, Vector3 value) {
+		// think this is unused anyway?
+		return false;
+	}
+
+	/**
 	 * Given a control button, returns the associated config key.
 	 * @param	button			The button to get config for
 	 * @return					The name of that button's config key
@@ -311,6 +450,16 @@ public class Keymap implements	InputProcessor,
 		case DOWN:				return Constants.ARG_CONTROL_DOWN;
 		default:				return "";
 		}
+	}
+	
+	/**
+	 * Called every time an axis changes while down.
+	 * @param	keycode			The keycode to the button corresponding
+	 * @return					True to halt processing
+	 */
+	public boolean axisDown(int keycode) {
+		keyDown(keycode);
+		return true;
 	}
 	
 	/**
@@ -334,9 +483,40 @@ public class Keymap implements	InputProcessor,
 	 * @return					True if any of that button's buttons are down
 	 */
 	protected boolean buttonDown(InputButton button) {
-		for (Integer keycode : buttonToKey.get(button)) {
+		ArrayList<Integer> checkKeys = new ArrayList<Integer>();
+		checkKeys.addAll(buttonToKey.get(button));
+		
+		String bind = MGlobal.args.get(configForButton(button));
+		if (bind != null) {
+			int matchingCode;
+			try {
+				GdxKey key = GdxKey.valueOf(bind);
+				matchingCode = key.keycode;
+			} catch (IllegalArgumentException e) {
+				matchingCode = Integer.valueOf(bind);
+			}
+			checkKeys.add(matchingCode);
+		}
+		
+		for (Integer keycode : checkKeys) {
 			if (Gdx.input.isKeyPressed(keycode)) {
 				return true;
+			}
+			
+			// joystick axis hack
+			if (keycode > 200 && keycode < 230 && activeController != null) {
+				// suuuuper hack ugh
+				int axis = (int) Math.floor((float)(keycode - 200) / 2.0f);
+				float current = activeController.getAxis(axis);
+				float zero = axisZeroValues.get(new ControllerAxis(activeController, axis));
+				return Math.abs(current - zero) > CONTROLLER_DEAD_ZONE;
+			}
+			
+			// joystick button hack
+			if (bind != null && activeController != null) {
+				if (activeController.getButton(keycode)) {
+					return true;
+				}
 			}
 		}
 		return false;
@@ -372,6 +552,40 @@ public class Keymap implements	InputProcessor,
 	public enum KeyState {
 		DOWN,
 		UP,
+	}
+	
+	protected enum AxisState {
+		NEUTRAL,
+		DOWN,
+		REPEAT,
+	}
+	
+	/**
+	 * Controller + Axis = ControllerAxis
+	 */
+	protected class ControllerAxis {
+		public Controller controller;
+		public int axis;
+		
+		public ControllerAxis(Controller controller, int axis) {
+			this.axis = axis;
+			this.controller = controller;
+		}
+		
+		/** @see java.lang.Object#equals(java.lang.Object) */
+		@Override public boolean equals(Object otherObject) {
+			if (!otherObject.getClass().equals(getClass())) {
+				return false;
+			}
+			ControllerAxis other = (ControllerAxis) otherObject;
+			return other.axis == this.axis && other.controller == this.controller;
+		}
+
+		/** @see java.lang.Object#hashCode() */
+		@Override public int hashCode() {
+			return Integer.valueOf(axis).hashCode() + controller.hashCode();
+		}
+		
 	}
 	
 }

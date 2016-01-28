@@ -21,7 +21,7 @@ public enum InputButton {
 	BUTTON_A			("A BUTTON"),			// aka "confirm"
 	BUTTON_B			("B BUTTON"),			// aka "cancel"
 	BUTTON_START		("START"),				// aka "menu"
-	BUTTON_SELECT		("CANCEL"),				// aka who the hell uses this
+	BUTTON_SELECT		("SELECT"),				// aka who the hell uses this
 	
 	FULLSCREEN			(""),
 	DEBUG				("");

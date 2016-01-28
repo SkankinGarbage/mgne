@@ -284,6 +284,7 @@ public class ScreenOptions extends SagaScreen {
 	 * @param	keycode			The code of the pressed key
 	 */
 	protected void changeButtonToKeycode(int keycode) {
+		if (awaitingButton == null) return;
 		String result = null;
 		for (GdxKey key : GdxKey.values()) {
 			if (key.keycode == keycode) {
