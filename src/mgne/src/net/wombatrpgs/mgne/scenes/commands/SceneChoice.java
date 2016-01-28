@@ -20,8 +20,8 @@ import net.wombatrpgs.mgneschema.io.data.InputCommand;
 import org.luaj.vm2.LuaValue;
 import org.luaj.vm2.lib.ZeroArgFunction;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.Align;
 
 /**
  * A total hack that asks a yes/no question. Choosing YES continues, choosing
@@ -93,8 +93,7 @@ public class SceneChoice extends ZeroArgFunction {
 			format.y = POS_Y + 20;
 			format.width = WIDTH;
 			format.height = HEIGHT;
-			format.align = HAlignment.LEFT;
-			
+			format.align = Align.left;
 			selected = true;
 			
 			listener = new CommandListener() {

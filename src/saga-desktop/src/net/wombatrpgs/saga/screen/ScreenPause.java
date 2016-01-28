@@ -6,7 +6,7 @@
  */
 package net.wombatrpgs.saga.screen;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MAssets;
@@ -242,7 +242,7 @@ public class ScreenPause extends SagaScreen implements Disposable {
 
 		info1 = "Floor: " + SGlobal.heroes.getLocation();
 		info2 = "GP: " + SGlobal.heroes.getGP();
-		format.align = HAlignment.LEFT;
+		format.align = Align.left;
 		format.width = inserts.getWidth() - INFO_MARGINS / 2;
 		format.height = INFO_HEIGHT;
 		format.x = insertsX + INFO_MARGINS;

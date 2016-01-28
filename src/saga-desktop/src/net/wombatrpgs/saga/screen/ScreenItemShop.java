@@ -9,7 +9,7 @@ package net.wombatrpgs.saga.screen;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -134,7 +134,7 @@ public class ScreenItemShop extends ScreenShop {
 		headerY = globalY + shopBG.getHeight() - shopBG.getBorderHeight();
 		
 		headerFormat = new TextFormat();
-		headerFormat.align = HAlignment.LEFT;
+		headerFormat.align = Align.left;
 		headerFormat.width = ITEMS_WIDTH * 2 - shopBG.getBorderWidth() * 3 - ITEMS_PRICE_WIDTH;
 		headerFormat.height = HEADER_HEIGHT;
 		headerFormat.x = (int) headerX + HEADER_MARGINS + headerBG.getBorderWidth() - 3;

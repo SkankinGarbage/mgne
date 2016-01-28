@@ -9,7 +9,7 @@ package net.wombatrpgs.saga.screen;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -108,7 +108,7 @@ public class ScreenMeatShop extends ScreenShop {
 		assets.add(infoBacker);
 		
 		monsterSpeciesFormat = new TextFormat();
-		monsterSpeciesFormat.align = HAlignment.LEFT;
+		monsterSpeciesFormat.align = Align.left;
 		monsterSpeciesFormat.height = TEXT_HEIGHT;
 		monsterSpeciesFormat.width = getWidth();
 		monsterSpeciesFormat.x = MEAT_MARGIN_HORIZ + 22;
@@ -117,7 +117,7 @@ public class ScreenMeatShop extends ScreenShop {
 		infoFormat = new TextFormat();
 		infoFormat.x = 9;
 		infoFormat.y = getHeight() - INFO_HEIGHT + 16;
-		infoFormat.align = HAlignment.LEFT;
+		infoFormat.align = Align.left;
 		infoFormat.width = getWidth();
 		infoFormat.height = TEXT_HEIGHT;
 		

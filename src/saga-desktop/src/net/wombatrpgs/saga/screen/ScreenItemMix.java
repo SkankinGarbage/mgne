@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -124,14 +124,14 @@ public class ScreenItemMix extends SagaScreen {
 		instructionsFormat = new TextFormat();
 		instructionsFormat.x = displayX + PADDING*3;
 		instructionsFormat.y = displayY + INSTRUCTIONS_HEIGHT - PADDING*4 - 1;
-		instructionsFormat.align = HAlignment.LEFT;
+		instructionsFormat.align = Align.left;
 		instructionsFormat.width = TEXT_WIDTH;
 		instructionsFormat.height = TEXT_HEIGHT;
 		
 		constructionFormat = new TextFormat();
 		constructionFormat.x = displayX + MARGIN;
 		constructionFormat.y = displayY - PADDING*4;
-		constructionFormat.align = HAlignment.LEFT;
+		constructionFormat.align = Align.left;
 		constructionFormat.width = TEXT_WIDTH;
 		constructionFormat.height = TEXT_HEIGHT;
 		

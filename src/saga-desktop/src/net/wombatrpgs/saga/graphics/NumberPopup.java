@@ -7,7 +7,7 @@
 package net.wombatrpgs.saga.graphics;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.ui.text.FontHolder;
 import net.wombatrpgs.mgne.ui.text.TextFormat;
@@ -41,7 +41,7 @@ public class NumberPopup extends PortraitAnim {
 		height = (int) font.getLineHeight();
 		
 		format = new TextFormat();
-		format.align = HAlignment.LEFT;
+		format.align = Align.left;
 		format.height = height + 1;
 		format.width = width + 1;
 	}

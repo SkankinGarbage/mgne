@@ -6,8 +6,6 @@
  */
 package net.wombatrpgs.mgne.ui.text;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
-
 /**
  * Struct for textbox data.
  */
@@ -15,6 +13,8 @@ public class TextFormat {
 	
 	public int x, y;
 	public int width, height;
-	public HAlignment align;
+	
+	/** @see com.badlogic.gdx.utils.Align */
+	public int align;
 
 }

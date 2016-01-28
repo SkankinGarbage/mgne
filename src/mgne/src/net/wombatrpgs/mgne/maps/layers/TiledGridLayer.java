@@ -63,9 +63,9 @@ public class TiledGridLayer extends GridLayer {
 	public void render(SpriteBatch batch) {
 		OrthogonalTiledMapRenderer renderer = parent.getRenderer();
 		renderer.setView(parent.getScreen().getCamera());
-		renderer.getSpriteBatch().begin();
+		renderer.getBatch().begin();
 		renderer.renderTileLayer(layer);
-		renderer.getSpriteBatch().end();
+		renderer.getBatch().end();
 	}
 
 	/**

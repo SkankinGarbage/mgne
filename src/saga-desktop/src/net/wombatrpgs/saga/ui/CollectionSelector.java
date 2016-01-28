@@ -9,7 +9,7 @@ package net.wombatrpgs.saga.ui;
 import java.util.Map;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.core.MAssets;
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -74,12 +74,12 @@ public class CollectionSelector extends ScreenGraphic implements CommandListener
 		height += padding * (count-1);
 		
 		nameFormat = new TextFormat();
-		nameFormat.align = HAlignment.LEFT;
+		nameFormat.align = Align.left;
 		nameFormat.width = width;
 		nameFormat.height = 240;
 		
 		quantityFormat = new TextFormat();
-		quantityFormat.align = HAlignment.RIGHT;
+		quantityFormat.align = Align.right;
 		quantityFormat.width = 16;
 		quantityFormat.height = 240;
 		

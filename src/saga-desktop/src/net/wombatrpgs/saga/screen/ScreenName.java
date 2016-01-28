@@ -9,7 +9,7 @@ package net.wombatrpgs.saga.screen;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -124,7 +124,7 @@ public class ScreenName extends SagaScreen {
 		nameFormat.x = spriteX + sprite.getWidth() / 2 + sprite.getWidth();
 		nameFormat.y = (int) (spriteY + (sprite.getHeight() - font.getLineHeight()) / 2 +
 				font.getLineHeight());
-		nameFormat.align = HAlignment.LEFT;
+		nameFormat.align = Align.left;
 		nameFormat.width = nameBG.getWidth();
 		nameFormat.height = nameBG.getHeight();
 		

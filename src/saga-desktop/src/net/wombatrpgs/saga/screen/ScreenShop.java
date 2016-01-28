@@ -6,7 +6,7 @@
  */
 package net.wombatrpgs.saga.screen;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -43,7 +43,7 @@ public class ScreenShop extends SagaScreen {
 		
 		FontHolder font = MGlobal.ui.getFont();
 		gpFormat = new TextFormat();
-		gpFormat.align = HAlignment.RIGHT;
+		gpFormat.align = Align.right;
 		gpFormat.width = GP_WIDTH - 2 * GP_MARGINS;
 		gpFormat.height = GP_HEIGHT;
 		gpFormat.x = getWidth() - GP_WIDTH + GP_MARGINS;

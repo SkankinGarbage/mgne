@@ -6,7 +6,7 @@
  */
 package net.wombatrpgs.saga.ui;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -45,7 +45,7 @@ public abstract class CharaInsert extends ScreenGraphic {
 	public CharaInsert(Chara chara) {
 		this.chara = chara;
 		format = new TextFormat();
-		format.align = HAlignment.LEFT;
+		format.align = Align.left;
 		refresh();
 	}
 	

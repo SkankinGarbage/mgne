@@ -7,7 +7,7 @@
 package net.wombatrpgs.saga.ui;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.core.MAssets;
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -80,17 +80,17 @@ public class ItemSelector extends ScreenGraphic implements CommandListener {
 		height += padding * (count-1);
 		
 		nameFormat = new TextFormat();
-		nameFormat.align = HAlignment.LEFT;
+		nameFormat.align = Align.left;
 		nameFormat.width = width;
 		nameFormat.height = 240;
 		
 		usesFormat = new TextFormat();
-		usesFormat.align = HAlignment.RIGHT;
+		usesFormat.align = Align.right;
 		usesFormat.width = 16;
 		usesFormat.height = 240;
 		
 		priceFormat = new TextFormat();
-		priceFormat.align = HAlignment.RIGHT;
+		priceFormat.align = Align.right;
 		priceFormat.width = 48;
 		priceFormat.height = 240;
 		

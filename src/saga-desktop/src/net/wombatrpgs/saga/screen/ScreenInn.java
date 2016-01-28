@@ -7,7 +7,7 @@
 package net.wombatrpgs.saga.screen;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.core.MAssets;
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -80,7 +80,7 @@ public class ScreenInn extends ScreenShop {
 		payString = "It will cost " + payAmount + " GP to stay here.";
 		
 		format = new TextFormat();
-		format.align = HAlignment.LEFT;
+		format.align = Align.left;
 		format.width = inserts.getWidth() - INFO_MARGINS / 2 - 10;
 		format.height = INFO_HEIGHT;
 		format.x = insertsX + INFO_MARGINS;

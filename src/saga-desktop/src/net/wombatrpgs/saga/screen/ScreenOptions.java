@@ -24,7 +24,7 @@ import net.wombatrpgs.mgneschema.io.data.InputButton;
 import net.wombatrpgs.mgneschema.io.data.InputCommand;
 import net.wombatrpgs.saga.core.SConstants;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 /**
@@ -75,7 +75,7 @@ public class ScreenOptions extends SagaScreen {
 		infoFormat.x = getWidth()/2 - FULL_WIDTH/2 + 9;
 		infoFormat.y = getHeight()/2 - FULL_HEIGHT/2 + FULL_HEIGHT - 
 				INFO_HEIGHT - infoBacker.getBorderHeight() + 16;
-		infoFormat.align = HAlignment.LEFT;
+		infoFormat.align = Align.left;
 		infoFormat.width = FULL_WIDTH - 32;
 		infoFormat.height = TEXT_HEIGHT;
 		
@@ -83,7 +83,7 @@ public class ScreenOptions extends SagaScreen {
 		optionsFormat.x = getWidth()/2 - FULL_WIDTH/2 + 23;
 		optionsFormat.y = getHeight()/2 - FULL_HEIGHT/2 + FULL_HEIGHT - 
 				INFO_HEIGHT - infoBacker.getBorderHeight() - 10;
-		optionsFormat.align = HAlignment.LEFT;
+		optionsFormat.align = Align.left;
 		optionsFormat.width = getWidth();
 		optionsFormat.height = TEXT_HEIGHT;
 	}

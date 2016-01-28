@@ -8,7 +8,7 @@ package net.wombatrpgs.mgne.ui.text;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.TextBounds;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.Constants;
@@ -87,15 +87,13 @@ public class FontHolder implements Queueable {
 	 */
 	public void draw(SpriteBatch batch, TextFormat format, String text, int offX, int offY) {
 		batch.begin();
-		TextBounds bounds = font.drawWrapped(batch,
+		font.draw(batch,
 				text, 
 				format.x + offX,
 				format.y + offY, 
 				format.width,
-				format.align);
-		if (bounds.height > format.height + offY) {
-			MGlobal.reporter.warn("A string was oversized: \"" + text + "\"");
-		}
+				format.align,
+				true);
 		batch.end();
 	}
 	
@@ -148,7 +146,7 @@ public class FontHolder implements Queueable {
 	 * @return					How wide that text would be, in px
 	 */
 	public float getWidth(String text) {
-		return font.getBounds(text).width;
+		return new GlyphLayout(font, text).width;
 	}
 	
 	/**
@@ -157,7 +155,7 @@ public class FontHolder implements Queueable {
 	 * @return					How high that text would be, in px
 	 */
 	public float getHeight(String text) {
-		return font.getBounds(text).height;
+		return new GlyphLayout(font, text).height;
 	}
 	
 	/**
@@ -165,7 +163,7 @@ public class FontHolder implements Queueable {
 	 * @return					The length of a single character, in px
 	 */
 	public float getCharWidth() {
-		return font.getBounds("a").width;
+		return getWidth("m");
 	}
 	
 	/**

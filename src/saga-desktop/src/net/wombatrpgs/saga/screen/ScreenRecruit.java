@@ -9,7 +9,7 @@ package net.wombatrpgs.saga.screen;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -106,7 +106,7 @@ public class ScreenRecruit extends SagaScreen {
 		FontHolder font = MGlobal.ui.getFont();
 		
 		recruitFormat = new TextFormat();
-		recruitFormat.align = HAlignment.LEFT;
+		recruitFormat.align = Align.left;
 		recruitFormat.height = sprites.get(0).getHeight();
 		recruitFormat.width = MENU_WIDTH - recruitBG.getBorderWidth()*2;
 		recruitFormat.x = menuX + sprites.get(0).getWidth() +
@@ -114,7 +114,7 @@ public class ScreenRecruit extends SagaScreen {
 		recruitFormat.y = 0;
 		
 		titleFormat = new TextFormat();
-		titleFormat.align = HAlignment.CENTER;
+		titleFormat.align = Align.center;
 		titleFormat.height = sprites.get(0).getHeight();
 		titleFormat.width = MENU_WIDTH;
 		titleFormat.x = menuX;
@@ -122,7 +122,7 @@ public class ScreenRecruit extends SagaScreen {
 				font.getLineHeight());
 		
 		helpFormat = new TextFormat();
-		helpFormat.align = HAlignment.CENTER;
+		helpFormat.align = Align.center;
 		helpFormat.height = getHeight();
 		helpFormat.width = HELP_WIDTH - recruitBG.getBorderWidth() * 3;
 		helpFormat.x = menuX + (MENU_WIDTH-HELP_WIDTH)/2 + recruitBG.getBorderWidth() * 3 / 2;

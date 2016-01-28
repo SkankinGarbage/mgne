@@ -8,7 +8,7 @@ package net.wombatrpgs.saga.screen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.core.Constants;
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -54,7 +54,7 @@ public class ScreenTitle extends SagaScreen {
 		assets.add(bg);
 		
 		textFormat = new TextFormat();
-		textFormat.align = HAlignment.CENTER;
+		textFormat.align = Align.center;
 		textFormat.height = 32;
 		textFormat.width = TEXT_WIDTH;
 		textFormat.x = getWidth()/2 - TEXT_WIDTH/2;

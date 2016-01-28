@@ -7,7 +7,7 @@
 package net.wombatrpgs.saga.ui;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.core.MAssets;
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -40,7 +40,7 @@ public class CharaInsertBig extends ScreenGraphic {
 	public CharaInsertBig(Chara chara) {
 		this.chara = chara;
 		format = new TextFormat();
-		format.align = HAlignment.LEFT;
+		format.align = Align.left;
 		format.height = 80;
 		format.width = 160;
 		refresh();

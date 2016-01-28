@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.core.interfaces.FinishListener;
@@ -235,7 +235,7 @@ public class OptionSelector extends ScreenGraphic implements	CommandListener,
 		focus();
 		
 		format = new TextFormat();
-		format.align = HAlignment.LEFT;
+		format.align = Align.left;
 		format.width = (int) (width + padHoriz);
 		format.height = 100;
 		format.x = screenX + (int) padHoriz;

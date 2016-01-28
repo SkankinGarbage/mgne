@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.core.MAssets;
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -117,7 +117,7 @@ public class StatsBar extends ScreenGraphic {
 		FontHolder font = MGlobal.ui.getFont();
 		
 		labelFormat = new TextFormat();
-		labelFormat.align = HAlignment.LEFT;
+		labelFormat.align = Align.left;
 		labelFormat.width = width - statsBG.getBorderWidth()*2;
 		labelFormat.height = 80;
 		labelFormat.x = (int) (x + statsBG.getBorderWidth());
@@ -125,7 +125,7 @@ public class StatsBar extends ScreenGraphic {
 				statsBG.getBorderHeight());
 		
 		statFormat = new TextFormat();
-		statFormat.align = HAlignment.RIGHT;
+		statFormat.align = Align.right;
 		if (horizontal) {
 			statFormat.width  = padding * 2 / 3;
 		} else {

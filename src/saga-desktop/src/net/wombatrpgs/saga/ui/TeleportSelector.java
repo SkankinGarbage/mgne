@@ -7,7 +7,7 @@
 package net.wombatrpgs.saga.ui;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.graphics.ScreenGraphic;
@@ -65,14 +65,14 @@ public class TeleportSelector extends ScreenGraphic implements CommandListener {
 		assets.add(backer);
 		
 		promptFormat = new TextFormat();
-		promptFormat.align = HAlignment.CENTER;
+		promptFormat.align = Align.center;
 		promptFormat.width = WIDTH;
 		promptFormat.height = TEXT_HEIGHT;
 		promptFormat.x = DISPLAY_X;
 		promptFormat.y = DISPLAY_Y + PROMPT_Y;
 		
 		locationFormat = new TextFormat();
-		locationFormat.align = HAlignment.CENTER;
+		locationFormat.align = Align.center;
 		locationFormat.width = WIDTH;
 		locationFormat.height = TEXT_HEIGHT;
 		locationFormat.x = DISPLAY_X;

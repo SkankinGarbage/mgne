@@ -7,7 +7,7 @@
 package net.wombatrpgs.saga.ui;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 
 import net.wombatrpgs.mgne.core.MAssets;
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -44,7 +44,7 @@ public class DescriptionBox extends ScreenGraphic {
 		assets.add(bg);
 		
 		format = new TextFormat();
-		format.align = HAlignment.LEFT;
+		format.align = Align.left;
 		format.width = width - bg.getBorderWidth()*2;
 		format.height = height - bg.getBorderHeight()*2;
 		

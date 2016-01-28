@@ -17,7 +17,7 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap.Format;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.glutils.FrameBuffer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.math.Matrix4;
@@ -248,7 +248,7 @@ public class ScreenBattle extends SagaScreen {
 		FontHolder font = MGlobal.ui.getFont();
 		
 		monsterlistFormat = new TextFormat();
-		monsterlistFormat.align = HAlignment.LEFT;
+		monsterlistFormat.align = Align.left;
 		monsterlistFormat.width = MONSTERLIST_WIDTH;
 		monsterlistFormat.height = MONSTERLIST_HEIGHT;
 		monsterlistFormat.x = (int) (globalX + MONSTERLIST_MARGIN);
@@ -256,7 +256,7 @@ public class ScreenBattle extends SagaScreen {
 		updateMList();
 		
 		meatFormat = new TextFormat();
-		meatFormat.align = HAlignment.LEFT;
+		meatFormat.align = Align.left;
 		meatFormat.width = INSERTS_WIDTH;
 		meatFormat.height = ABILS_HEIGHT;
 		meatFormat.x = (int) (globalX + MONSTERLIST_WIDTH + ABILS_EDGE_PADDING);

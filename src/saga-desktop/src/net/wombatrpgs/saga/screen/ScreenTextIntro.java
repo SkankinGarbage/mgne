@@ -9,7 +9,7 @@ package net.wombatrpgs.saga.screen;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.MGlobal;
@@ -55,7 +55,7 @@ public class ScreenTextIntro extends SagaScreen {
 		FontHolder font = MGlobal.ui.getFont();
 		WindowSettings window = MGlobal.window;
 		scrollFormat = new TextFormat();
-		scrollFormat.align = HAlignment.CENTER;
+		scrollFormat.align = Align.center;
 		scrollFormat.height = 5000;
 		scrollFormat.width = window.getViewportWidth() * 2 / 3;
 		scrollFormat.x = window.getViewportWidth() / 6;

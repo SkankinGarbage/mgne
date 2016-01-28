@@ -67,6 +67,7 @@ public class Keymap implements	InputProcessor,
 			keyToButton.put(pairMDO.keyCode.keycode, pairMDO.button);
 			buttonToKey.get(pairMDO.button).add(pairMDO.keyCode.keycode);
 		}
+		
 		clearState();
 	}
 	

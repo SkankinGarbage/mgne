@@ -6,7 +6,7 @@
  */
 package net.wombatrpgs.saga.screen;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 
@@ -43,7 +43,7 @@ public class ScreenDeath extends SagaScreen {
 		
 		WindowSettings win = MGlobal.window;
 		format = new TextFormat();
-		format.align = HAlignment.CENTER;
+		format.align = Align.center;
 		format.height = win.getViewportHeight() / 3;
 		format.width = win.getViewportWidth();
 		format.x = 0;

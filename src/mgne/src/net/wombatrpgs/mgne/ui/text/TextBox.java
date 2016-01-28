@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.badlogic.gdx.graphics.g2d.BitmapFont.HAlignment;
+import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import net.wombatrpgs.mgne.core.Constants;
@@ -145,7 +145,7 @@ public class TextBox extends ScreenGraphic {
 		} else {
 			bodyFormat.y = win.getViewportHeight() - mdo.marginTop;
 		}
-		bodyFormat.align = HAlignment.LEFT;
+		bodyFormat.align = Align.left;
 		bodyFormat.width = win.getViewportWidth() - mdo.marginWidth * 2;
 		bodyFormat.height = boxHeight - mdo.marginTop - mdo.marginBottom;
 	}
