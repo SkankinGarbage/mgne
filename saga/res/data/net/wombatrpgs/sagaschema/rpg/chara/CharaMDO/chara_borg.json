@@ -11,10 +11,12 @@
 	"portrait" : "None",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 0,
+	"meatDropChance" : 0,
 	"gp" : 0,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
-		"wpn_axeBattle",
+		"wpn_swordBattle",
 		"wpn_gunStun",
 		"item_selfix"
 	],

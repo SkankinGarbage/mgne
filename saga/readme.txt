@@ -1,5 +1,5 @@
 ================================================================================
-= SAGA4 v. 20150110  -demo release v0.1-                                       =
+= SAGA4 v. 20150110  -beta release v0.9-                                       =
 = running on MGNENGINE (https://github.com/psywombats/mgne)                    =
 = contact: aking (psy_wombats@wombatrpgs.net)                                  =
 ================================================================================
