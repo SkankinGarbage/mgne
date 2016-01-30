@@ -30,6 +30,9 @@ public class EventMDO extends MainSchema {
 	@Nullable
 	public String appearance;
 	
+	@Desc("ID - used by Tiled, leave blank")
+	public Integer id;
+	
 	@Desc("Passability")
 	@DefaultValue("PASSABLE")
 	public PassabilityType passable;

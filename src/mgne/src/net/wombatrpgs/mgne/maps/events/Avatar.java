@@ -16,6 +16,7 @@ import net.wombatrpgs.mgne.graphics.FacesAnimationFactory;
 import net.wombatrpgs.mgne.io.CommandListener;
 import net.wombatrpgs.mgne.io.Keymap.KeyState;
 import net.wombatrpgs.mgne.maps.Level;
+import net.wombatrpgs.mgne.scenes.SceneParser;
 import net.wombatrpgs.mgneschema.io.data.InputButton;
 import net.wombatrpgs.mgneschema.io.data.InputCommand;
 import net.wombatrpgs.mgneschema.maps.EventMDO;
@@ -140,6 +141,7 @@ public class Avatar extends MapEvent implements CommandListener {
 	 */
 	@Override
 	public boolean onCommand(InputCommand command) {
+		if (SceneParser.anyRunning()) return true;
 		if (!tracking && !paused && forceDir == null) {
 			switch (command) {
 			case MOVE_LEFT:			move(OrthoDir.WEST);	break;
