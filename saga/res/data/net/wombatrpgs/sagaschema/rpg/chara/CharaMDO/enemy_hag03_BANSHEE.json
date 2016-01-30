@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/hag.png",
 	"meatEatLevel" : 4,
 	"meatTargetLevel" : 3,
+	"meatDropChance" : 0,
 	"gp" : 120,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_claw",
 		"abil_tremble",
@@ -22,8 +24,8 @@
 		"hp" : 80,
 		"mhp" : 80,
 		"str" : 13,
-		"def" : 9,
-		"agi" : 9,
+		"def" : 7,
+		"agi" : 7,
 		"mana" : 14,
 		"flags" : [ ]
 	}

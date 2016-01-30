@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/zom.png",
 	"meatEatLevel" : 4,
 	"meatTargetLevel" : 3,
+	"meatDropChance" : 0,
 	"gp" : 120,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_bite"
 	],
@@ -20,8 +22,8 @@
 		"hp" : 176,
 		"mhp" : 176,
 		"str" : 12,
-		"def" : 3,
-		"agi" : 11,
+		"def" : 2,
+		"agi" : 10,
 		"mana" : 11,
 		"flags" : [ ]
 	}

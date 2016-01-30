@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/skl.png",
 	"meatEatLevel" : 4,
 	"meatTargetLevel" : 3,
+	"meatDropChance" : 0,
 	"gp" : 120,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_bone",
 		"abil_poison",
@@ -21,10 +23,10 @@
 	"stats" : {
 		"hp" : 126,
 		"mhp" : 126,
-		"str" : 16,
-		"def" : 10,
-		"agi" : 13,
-		"mana" : 15,
+		"str" : 14,
+		"def" : 9,
+		"agi" : 12,
+		"mana" : 12,
 		"flags" : [ ]
 	}
 }

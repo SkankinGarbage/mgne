@@ -11,12 +11,13 @@
 	"portrait" : "battle_portraits/gol.png",
 	"meatEatLevel" : 4,
 	"meatTargetLevel" : 3,
+	"meatDropChance" : 0,
 	"gp" : 120,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_axe",
 		"abil_oweapon",
-		"abil_oice",
 		"abil_opoison"
 	],
 	"stats" : {
