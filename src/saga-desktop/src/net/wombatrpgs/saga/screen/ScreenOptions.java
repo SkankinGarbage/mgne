@@ -24,6 +24,7 @@ import net.wombatrpgs.mgneschema.io.data.InputButton;
 import net.wombatrpgs.mgneschema.io.data.InputCommand;
 import net.wombatrpgs.saga.core.SConstants;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -110,10 +111,20 @@ public class ScreenOptions extends SagaScreen {
 			switch (i) {
 			case 0:
 				option = "TEXT SPEED";
-				value = speedToString(Integer.valueOf(MGlobal.args.get(SConstants.ARG_TEXT_SPEED)));
+				int speedValue;
+				String speedRawString = MGlobal.args.get(SConstants.ARG_TEXT_SPEED);
+				if (speedRawString == null) {
+					speedRawString = "1";
+					MGlobal.args.put(SConstants.ARG_TEXT_SPEED, speedRawString);
+				}
+				speedValue = Integer.valueOf(speedRawString);
+				value = speedToString(speedValue);
 				break;
 			case 1:
 				option = "SCREEN MODE";
+				if (MGlobal.args.get(Constants.ARG_FULLSCREEN) == null) {
+					MGlobal.args.put(Constants.ARG_FULLSCREEN, String.valueOf(Gdx.graphics.isFullscreen()));
+				}
 				value = Boolean.valueOf(MGlobal.args.get(Constants.ARG_FULLSCREEN)) ? "FULL" : "WINDOW";
 				break;
 			default:

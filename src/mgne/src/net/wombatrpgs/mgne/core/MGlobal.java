@@ -203,18 +203,20 @@ public class MGlobal {
 	 * Reads the user-defined configs and puts them into the global arguments.
 	 */
 	protected static void parseConfigs() {
-		String fullText = files.getText(Constants.CONFIG_FILE);
-		Scanner scanner = new Scanner(fullText);
-		while (scanner.hasNextLine()) {
-			String line = scanner.nextLine();
-			String[] keyValuePair = line.split("=");
-			if (keyValuePair.length != 2) {
-				MGlobal.reporter.err("Malformatted config line: " + line);
-				continue;
+		if (files.checkIfFileExists(Constants.CONFIG_FILE)) {
+			String fullText = files.getText(Constants.CONFIG_FILE);
+			Scanner scanner = new Scanner(fullText);
+			while (scanner.hasNextLine()) {
+				String line = scanner.nextLine();
+				String[] keyValuePair = line.split("=");
+				if (keyValuePair.length != 2) {
+					MGlobal.reporter.err("Malformatted config line: " + line);
+					continue;
+				}
+				args.put(keyValuePair[0].trim(), keyValuePair[1].trim());
 			}
-			args.put(keyValuePair[0].trim(), keyValuePair[1].trim());
+			scanner.close();
 		}
-		scanner.close();
 	}
 
 }

@@ -111,5 +111,15 @@ public class MFiles {
 			return handle;
 		}
 	}
+	
+	/**
+	 * Checks if a file handle exists.
+	 * @param	fileName		The name of the file to check
+	 * @return					True if the file exists, false if not
+	 */
+	public boolean checkIfFileExists(String fileName) {
+		FileHandle handle = Gdx.files.internal(fileName);
+		return handle.exists();
+	}
 
 }
