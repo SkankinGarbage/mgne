@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$EREVENGE",
-	"itemDescription" : "Attacks with with weapon damage (tier 5)",
+	"itemDescription" : "Retaliates with with weapon damage (tier 5)",
 	"type" : "ITEM",
 	"uses" : 50,
 	"cost" : 2990,

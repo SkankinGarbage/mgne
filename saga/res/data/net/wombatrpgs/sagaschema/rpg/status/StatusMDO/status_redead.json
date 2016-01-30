@@ -8,7 +8,7 @@
 	"inflictString" : " is destroyed",
 	"healString" : " rises",
 	"priority" : 100,
-	"resistFlag" : null,
+	"resistFlag" : "EQUIPMENT_FIX",
 	"preventChance" : 0,
 	"randomChance" : 0,
 	"recoverChance" : 0,

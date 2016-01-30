@@ -78,7 +78,7 @@
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
-    <property name="onInteract" value="speak('How am I supposed to enjoy a meal with those robots in here?')"/>
+    <property name="onInteract" value="speak('How am I supposed to enjoy a meal with those robots watching over my shoulder?')"/>
    </properties>
   </object>
   <object id="149" name="shop" type="Character" x="96" y="96" width="16" height="16">

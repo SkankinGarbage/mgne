@@ -127,6 +127,7 @@ public class ScreenMeatShop extends ScreenShop {
 		listener = new CommandListener() {
 			@Override public boolean onCommand(InputCommand command) {
 				switch (command) {
+				case UI_FINISH:
 				case UI_CANCEL:
 					if (selectingTarget) {
 						selectingTarget = false;
