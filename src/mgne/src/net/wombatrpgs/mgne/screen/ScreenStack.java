@@ -6,6 +6,7 @@
  */
 package net.wombatrpgs.mgne.screen;
 
+import java.util.Collection;
 import java.util.Stack;
 
 import com.badlogic.gdx.Gdx;
@@ -185,6 +186,14 @@ public class ScreenStack implements	Disposable,
 	 */
 	public Screen peek() {
 		return screens.peek();
+	}
+	
+	/**
+	 * Returns all screens on the stack.
+	 * @return					All screens on the current stack
+	 */
+	public Collection<Screen> getScreens() {
+		return screens;
 	}
 
 }

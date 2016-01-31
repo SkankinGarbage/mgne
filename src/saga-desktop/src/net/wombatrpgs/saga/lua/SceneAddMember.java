@@ -6,6 +6,7 @@
  */
 package net.wombatrpgs.saga.lua;
 
+import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.scenes.SceneCommand;
 import net.wombatrpgs.mgne.scenes.SceneLib;
 import net.wombatrpgs.saga.core.SGlobal;
@@ -42,6 +43,7 @@ public class SceneAddMember extends OneArgFunction {
 			
 			@Override protected void internalRun() {
 				SGlobal.heroes.addHero(chara);
+				MGlobal.assets.loadAsset(chara, "new chara?");
 			}
 			
 		});

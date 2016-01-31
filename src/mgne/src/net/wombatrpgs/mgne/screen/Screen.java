@@ -87,9 +87,6 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 		effects = new ArrayList<Effect>();
 		
 		tint = new Color(1, 1, 1, 1);
-		cam = new TrackerCam(MGlobal.window.getWidth(), MGlobal.window.getHeight());
-		
-		updateChildren.add(cam);
 	}
 	
 	/**
@@ -176,6 +173,10 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 					MGlobal.window.getWidth(),
 					MGlobal.window.getHeight(),
 					false);
+		}
+		
+		for (Screen screen : MGlobal.screens.getScreens()) {
+			screen.createCamera();
 		}
 	}
 	
@@ -305,27 +306,11 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 		super.postProcessing(manager, pass);
 		if (pass == 0) {
 			
-			viewBatch = constructViewBatch();
-			uiBatch = constructUIBatch();
-			finalBatch = constructFinalBatch();
+
 			
-			buffer = new FrameBuffer(Format.RGB565, 
-					MGlobal.window.getWidth(),
-					MGlobal.window.getHeight(),
-					false);
-			lastBuffer = new FrameBuffer(Format.RGB565, 
-					MGlobal.window.getWidth(),
-					MGlobal.window.getHeight(),
-					false);
+			createCamera();
 			
-			uiCam = new OrthographicCamera();
-			uiCam.zoom = MGlobal.window.getZoom();
-			uiCam.position.x = MGlobal.window.getWidth() / 2;
-			uiCam.position.y = MGlobal.window.getHeight() / 2;
-			uiCam.setToOrtho(false, MGlobal.window.getWidth(), MGlobal.window.getHeight());
-			uiCam.update();
-			uiBatch.setProjectionMatrix(uiCam.combined);
-			shapes = new ShapeRenderer();
+
 		}
 	}
 	
@@ -485,6 +470,44 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 	 */
 	protected void resumeNormalBuffer() {
 		buffer.begin();
+	}
+	
+	/**
+	 * Sets up a new UI cam to match current screen dimensions.
+	 * 
+	 * HACK NOTE: This thing leaks memory if called multiple times. There's some
+	 * subtle bug about disposing buffers and batches in the middle of an update
+	 * loop and I'd rather leak a batch than deal with it at the moment.
+	 */
+	protected void createCamera() {		
+		viewBatch = constructViewBatch();
+		uiBatch = constructUIBatch();
+		finalBatch = constructFinalBatch();
+		
+		buffer = new FrameBuffer(Format.RGB565, 
+				MGlobal.window.getWidth(),
+				MGlobal.window.getHeight(),
+				false);
+		lastBuffer = new FrameBuffer(Format.RGB565, 
+				MGlobal.window.getWidth(),
+				MGlobal.window.getHeight(),
+				false);
+		
+		shapes = new ShapeRenderer();
+		
+		uiCam = new OrthographicCamera();
+		uiCam.zoom = MGlobal.window.getZoom();
+		uiCam.position.x = MGlobal.window.getWidth() / 2;
+		uiCam.position.y = MGlobal.window.getHeight() / 2;
+		uiCam.setToOrtho(false, MGlobal.window.getWidth(), MGlobal.window.getHeight());
+		uiCam.update();
+		uiBatch.setProjectionMatrix(uiCam.combined);
+		
+		if (cam != null) {
+			removeUChild(cam);
+		}
+		cam = new TrackerCam(MGlobal.window.getWidth(), MGlobal.window.getHeight());
+		updateChildren.add(cam);
 	}
 
 }

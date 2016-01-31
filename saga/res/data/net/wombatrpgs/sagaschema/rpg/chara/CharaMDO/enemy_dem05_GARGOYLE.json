@@ -11,14 +11,16 @@
 	"portrait" : "battle_portraits/dem.png",
 	"meatEatLevel" : 6,
 	"meatTargetLevel" : 5,
+	"meatDropChance" : 0,
 	"gp" : 400,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_claw",
 		"abil_dive",
 		"abil_thunder",
 		"abil_electro",
-		"abil_othunder",
+		"abil_ostone",
 		"abil_oice"
 	],
 	"stats" : {
