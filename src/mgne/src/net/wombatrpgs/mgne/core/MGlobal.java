@@ -25,6 +25,7 @@ import net.wombatrpgs.mgne.io.audio.SoundManager;
 import net.wombatrpgs.mgne.maps.LevelManager;
 import net.wombatrpgs.mgne.maps.events.Avatar;
 import net.wombatrpgs.mgne.maps.events.EventFactory;
+import net.wombatrpgs.mgne.screen.Screen;
 import net.wombatrpgs.mgne.screen.ScreenStack;
 import net.wombatrpgs.mgne.screen.WindowSettings;
 import net.wombatrpgs.mgne.ui.UISettings;
@@ -146,10 +147,7 @@ public class MGlobal {
 			toLoad.clear();
 			parseConfigs();
 			boolean fullscreen = Boolean.valueOf(args.get(Constants.ARG_FULLSCREEN));
-			Gdx.graphics.setDisplayMode(
-					MGlobal.window.getWidth(),
-					MGlobal.window.getHeight(), 
-					fullscreen);
+			Screen.setFullscreen(fullscreen);
 			MGlobal.screens.push(game.makeStarterScreen());
 			toLoad.add(MGlobal.screens.peek());
 			Gdx.graphics.setTitle(MGlobal.window.getTitle());

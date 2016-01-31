@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Stack;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Graphics.DisplayMode;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -51,14 +52,15 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 															ButtonListener {
 	
 	protected TrackerCam cam;
-	protected transient OrthographicCamera uiCam;
+	protected OrthographicCamera uiCam;
 	
-	/** Graphics shit, reloaded new each time */
-	protected transient SpriteBatch viewBatch;
-	protected transient SpriteBatch finalBatch;
-	protected transient SpriteBatch uiBatch;
-	protected transient FrameBuffer buffer, lastBuffer;
-	protected transient ShapeRenderer shapes;
+	/** Graphics shit */
+	protected SpriteBatch viewBatch;
+	protected SpriteBatch finalBatch;
+	protected SpriteBatch uiBatch;
+	protected FrameBuffer buffer, lastBuffer;
+	protected ShapeRenderer shapes;
+	protected static int letterX, letterY;
 	
 	protected Color tint;
 	
@@ -153,10 +155,28 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 	 * @param	fullscreen		True to set full screen, false for window
 	 */
 	public static void setFullscreen(boolean fullscreen) {
-		Gdx.graphics.setDisplayMode(
-				MGlobal.window.getWidth(), 
-				MGlobal.window.getHeight(), 
-				fullscreen);
+		if (fullscreen) {
+			int portWidth = MGlobal.window.getViewportWidth();
+			int portHeight =  MGlobal.window.getViewportHeight();
+			DisplayMode mode = Gdx.graphics.getDesktopDisplayMode();
+			int multX = Math.floorDiv(mode.width, portWidth);
+			int multY = Math.floorDiv(mode.height, portHeight);
+			int mult = Math.min(multX, multY);
+			
+			// transition to the new mode, letterboxed if need be
+			int newWidth = portWidth * mult;
+			int newHeight = portHeight * mult;
+			letterX = (mode.width - newWidth) / 2;
+			letterY = (mode.height - newHeight) / 2;
+			Gdx.graphics.setDisplayMode(mode.width, mode.height, true);
+		} else {
+			letterX = 0;
+			letterY = 0;
+			Gdx.graphics.setDisplayMode(
+					MGlobal.window.getWidth(),
+					MGlobal.window.getHeight(),
+					false);
+		}
 	}
 	
 	/**
@@ -250,15 +270,23 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 			effect.apply(buffer);
 		}
 		
+		// wipe the main screen
+		shapes.setColor(20.f/255.f, 20.f/255.f, 20.f/255.f, 1);
+		shapes.begin(ShapeType.Filled);
+		shapes.rect(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		shapes.end();
+		
 		// now draw the results to the screen
 		finalBatch.setColor(tint);
 		finalBatch.begin();
+		int realWidth = Gdx.graphics.getWidth() - letterX*2;
+		int realHeight = Gdx.graphics.getHeight() - letterY*2;
 		// oh god I'm so sorry
 		finalBatch.draw(
 				buffer.getColorBufferTexture(),			// texture
-				0, 0,									// x/y in screen space
+				letterX, letterY,						// x/y in screen space
 				0, 0,									// origin x/y screen
-				window.getWidth(), window.getHeight(),	// width/height screen
+				realWidth, realHeight,					// width/height screen
 				1, 1,									// scale x/y
 				0,										// rotation in degrees
 				0, 0,									// x/y in texel space
