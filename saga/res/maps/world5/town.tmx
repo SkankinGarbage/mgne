@@ -149,11 +149,10 @@
     <property name="onInteract" value="play('world5/lara.lua')"/>
    </properties>
   </object>
-  <object id="131" name="block" type="Event" x="368" y="352" width="16" height="16">
+  <object id="131" name="autostart" type="Event" x="400" y="288" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('entered_inn') or getSwitch('brotherhood01')"/>
-    <property name="onTouch" value="play('world5/brotherhood01.lua')"/>
-    <property name="passable" value="IMPASSABLE"/>
+    <property name="onEnter" value="play('world5/brotherhood01.lua')"/>
    </properties>
   </object>
  </objectgroup>

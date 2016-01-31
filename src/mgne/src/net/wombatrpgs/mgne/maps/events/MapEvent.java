@@ -256,9 +256,7 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 		if (appearance != null) {
 			appearance.update(elapsed);
 		}
-		if (hide != null) {
-			switchHidden = MGlobal.lua.run(hide, lua).checkboolean();
-		}
+		recalculateSwitchHidden();
 		if (!SceneParser.anyRunning()) {
 			toNextBehavior -= elapsed;
 		}
@@ -372,6 +370,7 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 	@Override
 	public void onMapFocusGained(Level map) {
 		super.onMapFocusGained(map);
+		recalculateSwitchHidden();
 		if (onEnter != null && !isHidden()) {
 			MGlobal.levelManager.getTele().getPost().addListener(new FinishListener() {
 				@Override public void onFinish() {
@@ -724,6 +723,15 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 			return scene;
 		} else {
 			return null;
+		}
+	}
+	
+	/**
+	 * Recalculates this event's hidden state.
+	 */
+	protected void recalculateSwitchHidden() {
+		if (hide != null) {
+			switchHidden = MGlobal.lua.run(hide, lua).checkboolean();
 		}
 	}
 
