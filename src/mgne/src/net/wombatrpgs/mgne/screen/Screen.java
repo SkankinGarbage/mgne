@@ -86,6 +86,9 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 		removeEffects = new ArrayList<Effect>();
 		effects = new ArrayList<Effect>();
 		
+		cam = new TrackerCam(MGlobal.window.getWidth(), MGlobal.window.getHeight());
+		updateChildren.add(cam);
+		
 		tint = new Color(1, 1, 1, 1);
 	}
 	
@@ -176,7 +179,7 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 		}
 		
 		for (Screen screen : MGlobal.screens.getScreens()) {
-			screen.createCamera();
+			screen.recreateBatches();
 		}
 	}
 	
@@ -308,7 +311,7 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 			
 
 			
-			createCamera();
+			recreateBatches();
 			
 
 		}
@@ -473,13 +476,13 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 	}
 	
 	/**
-	 * Sets up a new UI cam to match current screen dimensions.
+	 * Sets up a new batches/buffers to match current screen dimensions.
 	 * 
 	 * HACK NOTE: This thing leaks memory if called multiple times. There's some
 	 * subtle bug about disposing buffers and batches in the middle of an update
 	 * loop and I'd rather leak a batch than deal with it at the moment.
 	 */
-	protected void createCamera() {		
+	protected void recreateBatches() {		
 		viewBatch = constructViewBatch();
 		uiBatch = constructUIBatch();
 		finalBatch = constructFinalBatch();
@@ -502,12 +505,6 @@ public abstract class Screen extends AssetQueuer implements CommandListener,
 		uiCam.setToOrtho(false, MGlobal.window.getWidth(), MGlobal.window.getHeight());
 		uiCam.update();
 		uiBatch.setProjectionMatrix(uiCam.combined);
-		
-		if (cam != null) {
-			removeUChild(cam);
-		}
-		cam = new TrackerCam(MGlobal.window.getWidth(), MGlobal.window.getHeight());
-		updateChildren.add(cam);
 	}
 
 }

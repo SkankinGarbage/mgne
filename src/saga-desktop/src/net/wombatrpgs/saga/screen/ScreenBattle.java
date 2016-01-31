@@ -1149,11 +1149,12 @@ public class ScreenBattle extends SagaScreen {
 	 * @param	delta			Amount to move, negative to go left
 	 */
 	protected void moveCursor(int delta) {
-		selectedIndex += delta;
-		selectedBounds();
-		selectedCheck();
-		selectedBounds();
-		selectedCheck();
+		int count = battle.getEnemy().groupCount();
+		do {
+			selectedIndex += delta;
+			if (selectedIndex < 0) selectedIndex += count;
+			if (selectedIndex >= count) selectedIndex %= count;
+		} while (selectedIndex < 0 || selectedIndex >= count || !battle.isEnemyAlive(selectedIndex));
 	}
 	
 	/**
@@ -1170,24 +1171,6 @@ public class ScreenBattle extends SagaScreen {
 	protected void selectConfirm() {
 		cancelSelectionMode();
 		targetListener.onTargetSelection(battle.getEnemy().getGroup(selectedIndex));
-	}
-	
-	/**
-	 * Applies edges to the selection mode cursor.
-	 */
-	protected void selectedBounds() {
-		int count = battle.getEnemy().groupCount();
-		if (selectedIndex < 0) selectedIndex += count;
-		if (selectedIndex >= count) selectedIndex %= count;
-	}
-	
-	/**
-	 * Moves the selection cursor past dead enemy groups.
-	 */
-	protected void selectedCheck() {
-		while (!battle.isEnemyAlive(selectedIndex)) {
-			selectedIndex += 1;
-		}
 	}
 	
 	/**
