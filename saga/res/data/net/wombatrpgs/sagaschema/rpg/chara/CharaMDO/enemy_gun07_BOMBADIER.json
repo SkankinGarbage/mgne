@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/gun.png",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 6,
+	"meatDropChance" : 0,
 	"gp" : 720,
 	"loot" : "wpn_cannonRocket",
+	"lootDropChance" : 10,
 	"equipped" : [
 		"wpn_cannonRocket"
 	],

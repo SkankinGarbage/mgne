@@ -100,11 +100,11 @@ public class EnemyParty extends Party {
 		int chance = 0;
 		for (int i = 0; i < groupCount(); i += 1) {
 			Chara candidate = getFront(i);
-			if (candidate.getLootDropChance() > chance) {
+			if (candidate.getLootDropChance() > 0) {
 				chance = candidate.getLootDropChance();
 			}
 		}
-		if (chance < SGlobal.settings.getLootChance()) {
+		if (chance == 0) {
 			chance = SGlobal.settings.getLootChance();
 		}
 		if (MGlobal.rand.nextInt(100) > chance) {
