@@ -6,6 +6,8 @@
 	"projector" : "SINGLE_ENEMY",
 	"damType" : "WEAPON",
 	"sideEffects" : [ ],
+	"slayerFamiles" : [ ],
+	"riders" : [ ],
 	"power" : 5,
 	"attackStat" : "AGI",
 	"defendStat" : "DEF",

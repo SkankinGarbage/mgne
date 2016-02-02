@@ -4,26 +4,26 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$WCAT",
-	"itemDescription" : "Attacks with weapon damage based on user agility (tier 6)",
+	"itemDescription" : "Attacks with weapon damage based on user agility (tier 7)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 9500,
+	"cost" : 15500,
 	"anim" : "banim_slash_agi",
 	"equip" : [ ],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
 		"key" : "anon_CombatItemMDO_-241989618"
 	},
-	"tier" : 6,
+	"tier" : 7,
 	"robostats" : {
 		"stats" : [
 			{
 				"stat" : "MHP",
-				"value" : 54.0
+				"value" : 63.0
 			},
 			{
 				"stat" : "AGI",
-				"value" : 18.0
+				"value" : 21.0
 			}
 		]
 	}
