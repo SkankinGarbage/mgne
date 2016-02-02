@@ -61,9 +61,18 @@ public class ScreenOptions extends SagaScreen {
 		menuContext = new CMapMenu();
 		
 		inputListener = new InputListener() {
-			@Override public void onKeyUp(int keycode) { }
-			@Override public void onKeyDown(int keycode) {
-				changeButtonToKeycode(keycode);
+			int orig = -1;
+			@Override public void onKeyUp(final int keycode) {
+				new TimerObject(0.0f, MGlobal.screens.peek(), new TimerListener() {
+					@Override public void onTimerZero(TimerObject source) {
+						if (keycode == orig) {
+							changeButtonToKeycode(keycode);
+						}
+					}
+				});
+			}
+			@Override public void onKeyDown(final int keycode) {
+				orig = keycode;
 			}
 		};
 		
@@ -164,6 +173,7 @@ public class ScreenOptions extends SagaScreen {
 	 */
 	@Override
 	public boolean onCommand(InputCommand command) {
+		if (awaitingButton != null) return true;
 		if (super.onCommand(command)) return true;
 		switch (command) {
 		case MOVE_UP:		moveCursor(-1);		return true;
@@ -287,7 +297,12 @@ public class ScreenOptions extends SagaScreen {
 		info = "Press new button, or wait";
 		awaitingButton = button;
 		elapsed = 0;
-		MGlobal.keymap.registerInputListener(inputListener);
+		new TimerObject(0.0f, this, new TimerListener() {
+			@Override public void onTimerZero(TimerObject source) {
+				MGlobal.keymap.registerInputListener(inputListener);
+			}
+		});
+		
 	}
 	
 	/**

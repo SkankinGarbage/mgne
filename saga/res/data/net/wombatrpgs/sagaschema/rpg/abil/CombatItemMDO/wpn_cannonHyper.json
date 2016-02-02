@@ -20,10 +20,6 @@
 			{
 				"stat" : "MHP",
 				"value" : 90.0
-			},
-			{
-				"stat" : "DEF",
-				"value" : 20.0
 			}
 		]
 	}

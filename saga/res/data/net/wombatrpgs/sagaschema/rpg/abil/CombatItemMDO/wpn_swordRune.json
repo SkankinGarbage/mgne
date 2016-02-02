@@ -14,8 +14,17 @@
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectAttackMDO",
 		"key" : "anon_CombatItemMDO_-1908364353"
 	},
-	"tier" : 0,
+	"tier" : 9,
 	"robostats" : {
-		"stats" : [ ]
+		"stats" : [
+			{
+				"stat" : "MHP",
+				"value" : 81.0
+			},
+			{
+				"stat" : "STR",
+				"value" : 27.0
+			}
+		]
 	}
 }

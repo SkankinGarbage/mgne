@@ -7,7 +7,7 @@
 	"itemDescription" : "Stuns with fixed damage aimed by agility (tier 9)",
 	"type" : "ITEM",
 	"uses" : 50,
-	"cost" : 39000,
+	"cost" : 29000,
 	"anim" : "banim_arrows",
 	"equip" : [ ],
 	"warhead" : {
@@ -23,7 +23,7 @@
 			},
 			{
 				"stat" : "AGI",
-				"value" : 18.0
+				"value" : 27.0
 			}
 		]
 	}

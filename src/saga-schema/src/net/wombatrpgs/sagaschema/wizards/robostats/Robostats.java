@@ -72,7 +72,7 @@ public class Robostats extends Wizard {
 				stats.add(Stat.MHP);
 			} else if (isClass(className, EffectFixedMDO.class)) {
 				EffectFixedMDO mdo = loadMDO(key, EffectFixedMDO.class);
-				stats.add(mdo.accStat);
+				stats.add((mdo.accStat == null) ? Stat.STR : mdo.accStat);
 				stats.add(Stat.MHP);
 			} else if (isClass(className, EffectMultihitMDO.class)) {
 				EffectMultihitMDO mdo = loadMDO(key, EffectMultihitMDO.class);
@@ -104,7 +104,7 @@ public class Robostats extends Wizard {
 				StatEntryMDO entryMDO = new StatEntryMDO();
 				entryMDO.stat = stat;
 				entryMDO.value = (float) tier;
-				entryMDO.value *= (stat == Stat.MHP) ? 9 : 2;
+				entryMDO.value *= (stat == Stat.MHP) ? 9.0f : 3.0f;
 				entries.add(entryMDO);
 			}
 			itemMDO.robostats.stats = new StatEntryMDO[entries.size()];

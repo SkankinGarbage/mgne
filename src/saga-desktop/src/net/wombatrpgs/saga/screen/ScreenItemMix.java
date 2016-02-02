@@ -230,6 +230,7 @@ public class ScreenItemMix extends SagaScreen {
 		case MOVE_UP:			moveCursor(-1);			return true;
 		case UI_CONFIRM:		confirm();				return true;
 		case UI_CANCEL:			cancel();				return true;
+		case UI_FINISH:			cancel();				return true;
 		default:										return false;
 		}
 	}

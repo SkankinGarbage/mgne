@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$FARMY",
-	"itemDescription" : "Increases defense by 14 and strength by 8",
+	"itemDescription" : "Increases defense by 14 and strength by 14",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 50000,
