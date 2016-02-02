@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="106">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="103">
  <properties>
   <property name="battle_bgm" value="ffl3_boss"/>
   <property name="bgm" value="ffl3_talon"/>
+  <property name="cancelsTransform" value="true"/>
   <property name="name" value="Gamma World"/>
-  <property name="preservesTransform" value="false"/>
   <property name="terrainEncounter" value="terrain_world4"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
@@ -73,10 +73,10 @@
     <property name="onCollide" value="targetTele('world4/elan.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="88" name="trigger" type="Event" x="1040" y="960" width="48" height="16">
+  <object id="88" name="trigger" type="Event" x="1104" y="944" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('itamor02') or not getSwitch('itamor01')"/>
-    <property name="onTouch" value="play('world4/itamor02.lua')"/>
+    <property name="onEnter" value="play('world4/itamor02.lua')"/>
    </properties>
   </object>
   <object id="89" name="trigger" type="Event" x="1040" y="304" width="64" height="16">
@@ -147,24 +147,6 @@
   <object id="102" name="block" type="Event" x="288" y="960" width="48" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
-   </properties>
-  </object>
-  <object id="103" name="trigger" type="Event" x="1040" y="992" width="48" height="16">
-   <properties>
-    <property name="hide" value="return getSwitch('itamor02') or not getSwitch('itamor01')"/>
-    <property name="onTouch" value="play('world4/itamor02.lua')"/>
-   </properties>
-  </object>
-  <object id="104" name="trigger" type="Event" x="1072" y="976" width="16" height="16">
-   <properties>
-    <property name="hide" value="return getSwitch('itamor02') or not getSwitch('itamor01')"/>
-    <property name="onTouch" value="play('world4/itamor02.lua')"/>
-   </properties>
-  </object>
-  <object id="105" name="trigger" type="Event" x="1040" y="976" width="16" height="16">
-   <properties>
-    <property name="hide" value="return getSwitch('itamor02') or not getSwitch('itamor01')"/>
-    <property name="onTouch" value="play('world4/itamor02.lua')"/>
    </properties>
   </object>
  </objectgroup>

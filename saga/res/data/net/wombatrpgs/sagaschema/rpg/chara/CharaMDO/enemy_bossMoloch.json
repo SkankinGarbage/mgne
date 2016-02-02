@@ -11,9 +11,10 @@
 	"portrait" : "battle_portraits/boss_moloch.png",
 	"meatEatLevel" : 15,
 	"meatTargetLevel" : 15,
-	"meatDropChance" : 15,
+	"meatDropChance" : 25,
 	"gp" : 9000,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_pstorm",
 		"spell_magma",
@@ -23,12 +24,12 @@
 		"abil_oall"
 	],
 	"stats" : {
-		"hp" : 8500,
-		"mhp" : 8500,
+		"hp" : 8200,
+		"mhp" : 8200,
 		"str" : 80,
 		"def" : 65,
-		"agi" : 70,
-		"mana" : 80,
+		"agi" : 64,
+		"mana" : 77,
 		"flags" : [ ]
 	}
 }
