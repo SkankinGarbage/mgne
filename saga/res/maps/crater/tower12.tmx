@@ -43,11 +43,10 @@
     <property name="onInteract" value="play('crater/boss.lua')"/>
    </properties>
   </object>
-  <object id="70" name="chest" type="Chest" x="112" y="384" width="16" height="16">
+  <object id="70" name="chest" type="Event" x="112" y="384" width="16" height="16">
    <properties>
+    <property name="appearance" value="anim_chest_open"/>
     <property name="hide" value="return not getSwitch('crater_chest')"/>
-    <property name="item" value="key_excaliber3"/>
-    <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
  </objectgroup>

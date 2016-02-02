@@ -113,12 +113,20 @@ public class EventChest extends MapEvent {
 					setAppearance();
 				}
 			} else if (collectable != null) {
-				MGlobal.ui.getBlockingBox().blockText(
-						MGlobal.levelManager.getScreen(),
-						"Retrieved a " + collectable.getName() + ".");
 				SGlobal.heroes.getCollection().addCollectable(collectable);
 				MGlobal.memory.setSwitch(switchName);
 				MGlobal.audio.playSFX(SConstants.SFX_GET);
+				String chestName = collectable.getChestName();
+				if (chestName == null || chestName.isEmpty()) {
+					MGlobal.ui.getBlockingBox().blockText(
+							MGlobal.levelManager.getScreen(),
+							"Retrieved a " + collectable.getName() + ".");
+				} else {
+					int quantity = SGlobal.heroes.getCollection().getQuantity(collectable);
+					MGlobal.ui.getBlockingBox().blockText(
+							MGlobal.levelManager.getScreen(),
+							"Retrieved part " + quantity + " of " + chestName + ".");
+				}
 				setAppearance();
 			} else {
 				MGlobal.ui.getBlockingBox().blockText(

@@ -43,6 +43,7 @@ public class SagaSceneLib extends TwoArgFunction {
 		env.set("choice", new SceneChoice());
 		env.set("mix", new SceneItemMix());
 		env.set("meatShop", new SceneMeatShop());
+		env.set("addCollectable", new SceneAddCollectable());
 		
 		env.set("sagalib", library);
 		return library;

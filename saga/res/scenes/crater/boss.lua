@@ -4,9 +4,9 @@ local hero3 = getHero(2).getName()
 local hero4 = getHero(3).getName()
 
 playSound('get')
-addItem('key_excaliber3')
+addCollectable('collectable_excaliber')
 sceneSwitch('crater_chest', true)
-speak("Retrieved the EXCALIBER3.")
+speak("Retrieved part 3 of $EEXCALIBER.")
 wait(0.8)
 
 speak(hero2, "Part of EXCALIBER? Is this a fake?")

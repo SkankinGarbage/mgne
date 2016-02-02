@@ -216,8 +216,7 @@
   </object>
   <object id="77" name="chest" type="Chest" x="352" y="304" width="16" height="16">
    <properties>
-    <property name="item" value="key_excaliber1"/>
-    <property name="keyItem" value="KEY_ITEM"/>
+    <property name="collectable" value="collectable_excaliber"/>
    </properties>
   </object>
   <object id="78" name="npc" type="Character" x="496" y="208" width="16" height="16">

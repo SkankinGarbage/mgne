@@ -7,6 +7,7 @@
 package net.wombatrpgs.saga.rpg.items;
 
 import net.wombatrpgs.mgne.core.MGlobal;
+import net.wombatrpgs.mgne.maps.MapThing;
 import net.wombatrpgs.sagaschema.rpg.abil.CollectableMDO;
 
 /**
@@ -34,6 +35,9 @@ public class Collectable {
 	
 	/** @return The display name of this collectable */
 	public String getName() { return MGlobal.charConverter.convert(mdo.displayName); }
+	
+	/** @return The chest display name of this collectable */
+	public String getChestName() { return MGlobal.charConverter.convert(mdo.chestName); }
 
 	/**
 	 * @see java.lang.Object#toString()

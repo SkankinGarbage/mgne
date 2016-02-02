@@ -18,5 +18,8 @@ public class CollectableMDO extends MainSchema {
 	
 	@Desc("Display name - special symbols are allowed, 8 characters max maybe?")
 	public String displayName;
+	
+	@Desc("Chest name - Specialty key for parts of items, what it's called coming out of the chest, just leave blank")
+	public String chestName;
 
 }

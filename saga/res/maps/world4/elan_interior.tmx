@@ -77,8 +77,7 @@
   <object id="97" name="chest" type="Chest" x="464" y="368" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('elan_elder02')"/>
-    <property name="item" value="key_excaliber2"/>
-    <property name="keyItem" value="KEY_ITEM"/>
+    <property name="item" value="collectable_excaliber"/>
    </properties>
   </object>
   <object id="99" name="elder" type="Character" x="480" y="400" width="16" height="16">

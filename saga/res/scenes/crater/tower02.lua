@@ -5,7 +5,7 @@ local hero4 = getHero(3).getName()
 
 playSound('get')
 sceneSwitch('tower02', true)
-speak("Retrieved the EXCALIBER3.")
+speak("Retrieved part 3 of $EEXCALIBER.")
 wait(0.8)
 
 sceneSwitch('jonas_tower', true)
