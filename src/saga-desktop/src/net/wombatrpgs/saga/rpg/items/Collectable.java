@@ -7,7 +7,6 @@
 package net.wombatrpgs.saga.rpg.items;
 
 import net.wombatrpgs.mgne.core.MGlobal;
-import net.wombatrpgs.mgne.maps.MapThing;
 import net.wombatrpgs.sagaschema.rpg.abil.CollectableMDO;
 
 /**

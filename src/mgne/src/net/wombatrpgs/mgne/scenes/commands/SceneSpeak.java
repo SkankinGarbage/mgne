@@ -45,11 +45,25 @@ public class SceneSpeak extends VarArgFunction {
 				boolean animateOn = (index == 0);
 				boolean animateOff = (index == count-1);
 				box.blockText(parent.getScreen(), text, animateOn, animateOff);
+				//scheduleTest();
 			}
 			
 			@Override protected boolean shouldFinish() {
 				return !box.isBlocking() && super.shouldFinish();
 			}
+			
+//			void scheduleTest() {
+//				new TimerObject(0.2f, MGlobal.screens.peek(), new TimerListener() {
+//					@Override public void onTimerZero(TimerObject source) {
+//						if (!shouldFinish()) {
+//							box.onCommand(InputCommand.UI_CONFIRM);
+//							if (!shouldFinish()) {
+//								scheduleTest();
+//							}
+//						}
+//					}
+//				});
+//			}
 			
 		});
 		return LuaValue.NIL;

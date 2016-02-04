@@ -3,5 +3,6 @@
 	"subfolder" : "",
 	"name" : "",
 	"description" : "",
-	"displayName" : "$EEXCALIBER"
+	"displayName" : "$EEXCALIBER",
+	"chestName" : "$EEXCALIBER"
 }

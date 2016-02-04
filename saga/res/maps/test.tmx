@@ -118,7 +118,7 @@
   <object id="12" name="test script" type="Character" x="224" y="192" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
-    <property name="onInteract" value="play('testscript.lua')"/>
+    <property name="onInteract" value="play('test/testscript.lua')"/>
    </properties>
   </object>
   <object id="13" name="chameleon" type="Character" x="240" y="192" width="16" height="16">
@@ -166,7 +166,7 @@
     <property name="onInteract" value="meatShop('meatshop_test')"/>
    </properties>
   </object>
-  <object id="26" name="switch" type="Character" x="128" y="16" width="16" height="16">
+  <object id="26" name="switch" type="Character" x="240" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="speak('HOLA SWITCH IS SET'); sceneSwitch('saga_testswitch', true)"/>
