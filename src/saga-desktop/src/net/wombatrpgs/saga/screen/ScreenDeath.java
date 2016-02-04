@@ -6,6 +6,7 @@
  */
 package net.wombatrpgs.saga.screen;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
@@ -104,11 +105,10 @@ public class ScreenDeath extends SagaScreen {
 	@Override
 	public void render(SpriteBatch batch) {
 		
-		WindowSettings win = MGlobal.window;
 		shapes.begin(ShapeType.Filled);
 		float[] white = SGlobal.graphics.getWhite();
 		shapes.setColor(white[0], white[1], white[2], 0);
-		shapes.rect(0, 0, win.getWidth(), win.getHeight());
+		shapes.rect(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 		shapes.end();
 		
 		FontHolder font = MGlobal.ui.getFont();
