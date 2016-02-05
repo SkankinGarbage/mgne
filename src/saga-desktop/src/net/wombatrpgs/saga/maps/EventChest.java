@@ -86,7 +86,7 @@ public class EventChest extends MapEvent {
 	 */
 	@Override
 	public boolean onInteract() {
-		if (!chestOpened()) {
+		if (!chestOpened() && !isHidden()) {
 			if (encounter != null) {
 				MGlobal.assets.loadAsset(encounter, "chest encounter");
 				MGlobal.memory.setSwitch(switchName);
@@ -155,7 +155,7 @@ public class EventChest extends MapEvent {
 	 */
 	@Override
 	public boolean isPassable() {
-		return false;
+		return !isHidden();
 	}
 
 	/**

@@ -35,10 +35,11 @@ public class MutationSettings {
 	 * Generates a mutant ability based on the meat power level of a monster.
 	 * Uses the RNG to select an ability and discard it based on the rarity of
 	 * that ability. Will probably hang if no abilities in the list...
+	 * @param	chara			The chara being generated for
 	 * @param	level			The meat level to generate for
 	 * @return					An appropriate ability to learn
 	 */
-	public CombatItem generateAbil(int level) {
+	public CombatItem generateAbil(Chara chara, int level) {
 		// we'll break out by returning the correct abil
 		while (true) {
 			int index = MGlobal.rand.nextInt(mdo.abils.length);
@@ -47,9 +48,15 @@ public class MutationSettings {
 			if (abilMDO.level > level) {
 				roll /= 2;
 			}
-			if (roll < abilMDO.chance) {
-				return new CombatItem(abilMDO.abil);
+			if (roll > abilMDO.chance) {
+				continue;
 			}
+			for (CombatItem abil : chara.getInventory().getItems()) {
+				if (abil != null && abil.getKey().equals(abilMDO.abil)) {
+					continue;
+				}
+			}
+			return new CombatItem(abilMDO.abil);
 		}
 	}
 	

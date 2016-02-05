@@ -42,7 +42,7 @@ public class MutationAbil extends Mutation {
 	public MutationAbil(Chara chara, int level) {
 		this(chara,
 				MGlobal.rand.nextInt(4),
-				SGlobal.settings.getMutations().generateAbil(level));
+				SGlobal.settings.getMutations().generateAbil(chara, level));
 	}
 
 	/**
