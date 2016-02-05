@@ -35,6 +35,8 @@
         <pathelement location="${saga-desktop.location}/lib/gdx-backend-lwjgl-natives.jar"/>
         <pathelement location="${saga-desktop.location}/lib/gdx-backend-lwjgl.jar"/>
         <pathelement location="${saga-desktop.location}/lib/gdx-natives.jar"/>
+        <pathelement location="${saga-desktop.location}/lib/gdx-controllers-desktop-natives.jar"/>
+        <pathelement location="${saga-desktop.location}/lib/gdx-controllers-desktop.jar"/>
         <pathelement location="${mgne.location}/lib/gdx.jar"/>
     </path>
     <path id="mgne.classpath">
@@ -42,6 +44,7 @@
         <path refid="jgdb-schema.classpath"/>
         <path refid="mgne-schema.classpath"/>
         <pathelement location="lib/gdx.jar"/>
+        <pathelement location="lib/gdx-controllers.jar"/>
         <pathelement location="lib/jackson-core-2.0.4.jar"/>
         <pathelement location="lib/jackson-databind-2.0.4.jar"/>
 		<pathelement location="lib/jackson-annotations-2.0.4.jar"/>

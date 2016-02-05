@@ -37,6 +37,8 @@
         <pathelement location="${saga-desktop.location}/lib/gdx-backend-lwjgl.jar"/>
         <pathelement location="${saga-desktop.location}/lib/gdx-natives.jar"/>
         <pathelement location="${mgne.location}/lib/gdx.jar"/>
+        <pathelement location="${saga-desktop.location}/lib/gdx-controllers-desktop-natives.jar"/>
+        <pathelement location="${saga-desktop.location}/lib/gdx-controllers-desktop.jar"/>
     </path>
     <path id="mgne.classpath">
         <pathelement location="${mgne.location}/bin"/>
@@ -62,7 +64,10 @@
         <pathelement location="lib/gdx-backend-lwjgl-natives.jar"/>
         <pathelement location="lib/gdx-backend-lwjgl.jar"/>
         <pathelement location="lib/gdx-natives.jar"/>
+        <pathelement location="lib/gdx-controllers-desktop.jar"/>
+        <pathelement location="lib/gdx-controllers-desktop-natives.jar"/>
         <pathelement location="${mgne.location}/lib/gdx.jar"/>
+        <pathelement location="${mgne.location}/lib/gdx-controllers.jar"/>
         <path refid="mgne-schema.classpath"/>
         <path refid="saga-schema.classpath"/>
         <path refid="jgdb-schema.classpath"/>
@@ -136,7 +141,7 @@
                 <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
                 <attribute name="Rsrc-Main-Class" value="net.wombatrpgs.saga.core.Main"/>
                 <attribute name="Class-Path" value="."/>
-                <attribute name="Rsrc-Class-Path" value="./ jackson-annotations-2.0.4.jar jackson-core-2.0.4.jar jackson-databind-2.0.4.jar gdx.jar jackson-core-2.0.4.jar jackson-databind-2.0.4.jar luaj-jse-3.0-beta2.jar gdx-backend-lwjgl-natives.jar gdx-backend-lwjgl.jar gdx-natives.jar"/>
+                <attribute name="Rsrc-Class-Path" value="./ jackson-annotations-2.0.4.jar jackson-core-2.0.4.jar jackson-databind-2.0.4.jar gdx.jar jackson-core-2.0.4.jar jackson-databind-2.0.4.jar luaj-jse-3.0-beta2.jar gdx-backend-lwjgl-natives.jar gdx-backend-lwjgl.jar gdx-natives.jar gdx-controllers-desktop.jar gdx-controllers-desktop-natives.jar"/>
             </manifest>
             <zipfileset src="jar-in-jar-loader.zip"/>
             <fileset dir="../../src/gme-java/bin"/>
@@ -156,6 +161,8 @@
             <zipfileset dir="..\..\src\saga-desktop\lib" includes="gdx-backend-lwjgl-natives.jar"/>
             <zipfileset dir="..\..\src\saga-desktop\lib" includes="gdx-backend-lwjgl.jar"/>
             <zipfileset dir="..\..\src\saga-desktop\lib" includes="gdx-natives.jar"/>
+            <zipfileset dir="..\..\src\saga-desktop\lib" includes="gdx-controllers-desktop-natives.jar"/>
+            <zipfileset dir="..\..\src\saga-desktop\lib" includes="gdx-controllers-desktop.jar"/>
             <fileset dir="../../src/saga-schema/bin"/>
         </jar>
     </target>
