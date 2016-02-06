@@ -12,9 +12,11 @@ import java.nio.ByteOrder;
 import com.badlogic.gdx.audio.AudioDevice;
 
 import gme.MusicEmu;
+import net.wombatrpgs.gme.GmeListener;
 import net.wombatrpgs.mgne.core.AssetQueuer;
 import net.wombatrpgs.mgne.core.Constants;
 import net.wombatrpgs.mgne.core.MAssets;
+import net.wombatrpgs.mgne.core.MGlobal;
 
 /**
  * The MGN version of EmuPlayer. Not a manager in itself. Handles all track from
@@ -22,13 +24,14 @@ import net.wombatrpgs.mgne.core.MAssets;
  * necessarily play nicely with other instances because the underlying instance
  * uses some static members. The emulator could probably use a rewrite.
  */
-public class MgnEmuPlayer extends AssetQueuer {
+public class MgnEmuPlayer extends AssetQueuer implements GmeListener {
 	
 	protected static final int BUFFER_LENGTH = 8192; // in samples
 	
 	protected String fileName;
 	protected MusicEmu emu;
 	protected SoundManager manager;
+	protected int track;
 	protected boolean playing;
 	
 	/**
@@ -41,6 +44,7 @@ public class MgnEmuPlayer extends AssetQueuer {
 		this.manager = manager;
 		
 		playing = false;
+		track = -1;
 	}
 	
 	/** @return True if a track is playing on this emulator */
@@ -62,6 +66,18 @@ public class MgnEmuPlayer extends AssetQueuer {
 	@Override
 	public void postProcessing(MAssets manager, int pass) {
 		emu = manager.get(fileName, MusicEmu.class);
+		emu.setListener(this);
+	}
+
+	/**
+	 * @see net.wombatrpgs.gme.GmeListener#onError(java.lang.String)
+	 */
+	@Override
+	public void onError(String error) {
+		MGlobal.reporter.err(fileName + ": " + error);
+		if (playing) {
+			playTrack(track);
+		}
 	}
 
 	/**
@@ -87,8 +103,9 @@ public class MgnEmuPlayer extends AssetQueuer {
 	 * @param	track			The index of the track to play
 	 */
 	public void playTrack(int track) {
-		emu.startTrack(track);
-		playing = true;
+		this.emu.startTrack(track);
+		this.track = track;
+		this.playing = true;
 	}
 	
 	/**

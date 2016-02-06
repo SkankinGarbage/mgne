@@ -1,5 +1,7 @@
 package gme;
 
+import net.wombatrpgs.gme.GmeListener;
+
 // Music emulator interface
 // http://www.slack.net/~ant/
 
@@ -19,12 +21,18 @@ public class MusicEmu
 	// enables performance-intensive assertions
 	protected static final boolean debug = false;
 	
+	// listener for callback errors
+	protected GmeListener listener;
+	
 	public MusicEmu()
 	{
 		trackCount_   = 0;
 		trackEnded_   = true;
 		currentTrack_ = 0;
 	}
+	
+	// WRPGs hacks
+	public void setListener(GmeListener listener) { this.listener = listener; }
 	
 	// Requests change of sample rate and returns sample rate used, which might be different
 	public final int setSampleRate( int rate ) { return sampleRate_ = setSampleRate_( rate ); }
@@ -106,12 +114,19 @@ public class MusicEmu
 	protected void setTrackEnded() { trackEnded_ = true; }
 	
 	// Stops track and notes emulation error
-	protected void logError()
+	protected void logError(String error)
 	{
 		if ( !trackEnded_ )
 		{
 			trackEnded_ = true;
-			System.out.println( "emulation error" );
+			if (listener == null)
+			{
+				listener.onError(error);
+			}
+			else 
+			{
+				System.out.println( "emulation error" );
+			}
 		}
 	}
 	

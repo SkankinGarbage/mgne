@@ -221,7 +221,7 @@ final class VgmEmu extends ClassicEmu
 			
 			case cmd_data_block:
 				if ( data [pos++] != cmd_end )
-					logError();
+					logError("cmd_data_block: data [pos++] != cmd_end");
 				int type = data [pos++];
 				long size = getLE32( data, pos ); pos += 4;
 				if ( type == pcm_block_type )
@@ -251,7 +251,7 @@ final class VgmEmu extends ClassicEmu
 					break;
 				
 				default:
-					logError();
+					logError("unknown cmd byte " + (cmd & 0xF0));
 					break;
 				}
 			}
@@ -269,7 +269,7 @@ final class VgmEmu extends ClassicEmu
 			if ( pos > data.length )
 			{
 				pos = data.length;
-				logError(); // went past end
+				logError("pos > data.length"); // went past end
 			}
 		}
 		

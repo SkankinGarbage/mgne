@@ -213,7 +213,7 @@ final class SpcEmu extends SpcCpu
 		
 		if ( time < 0 ) // emulation error
 		{
-			logError();
+			logError("time < 0");
 			return 0;
 		}
 		

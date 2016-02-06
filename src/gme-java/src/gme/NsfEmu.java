@@ -167,7 +167,7 @@ final class NsfEmu extends NesCpu
 			
 			if ( pc != idleAddr )
 			{
-				logError();
+				logError("pc != idleAddr");
 				return endTime;
 			}
 			

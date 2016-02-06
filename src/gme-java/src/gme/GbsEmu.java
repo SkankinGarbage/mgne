@@ -143,7 +143,7 @@ public final class GbsEmu extends GbCpu
 			{
 				// TODO: PC overflow handling
 				pc = (pc + 1) & 0xFFFF;
-				logError();
+				logError("PC overflow");
 				return endTime;
 			}
 			

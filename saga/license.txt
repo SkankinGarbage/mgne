@@ -8,6 +8,10 @@ code: http://creativecommons.org/licenses/by-sa/3.0/
 LWJGL:
 Copyright © 2012-2014 Lightweight Java Game Library Project 
 http://www.lwjgl.org/license
+
+GB EMU original code:
+Copyright © 2003-2007 Shay Green.
+http://www.gnu.org/licenses/lgpl-3.0.en.html
  
 Jackson:
 GNU General Public License, version 2 http://www.gnu.org/licenses/gpl-2.0.html
