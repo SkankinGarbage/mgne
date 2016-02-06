@@ -122,7 +122,6 @@ public class ScreenDeath extends SagaScreen {
 	 * @return					True to close the menu
 	 */
 	protected boolean onRetry() {
-		//MGlobal.screens.removeScreen(this);
 		battle.restart();
 		return true;
 	}

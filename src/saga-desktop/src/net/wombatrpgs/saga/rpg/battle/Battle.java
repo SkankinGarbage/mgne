@@ -27,6 +27,7 @@ import net.wombatrpgs.saga.rpg.chara.Enemy;
 import net.wombatrpgs.saga.rpg.chara.EnemyParty;
 import net.wombatrpgs.saga.rpg.chara.HeroParty;
 import net.wombatrpgs.saga.rpg.chara.Party;
+import net.wombatrpgs.saga.rpg.chara.PartyMemory;
 import net.wombatrpgs.saga.rpg.items.CombatItem;
 import net.wombatrpgs.saga.rpg.items.Inventory;
 import net.wombatrpgs.saga.rpg.mutant.Mutation;
@@ -72,6 +73,7 @@ public class Battle extends AssetQueuer implements Disposable {
 	protected Map<Chara, List<EffectDefend>> defendEffects;
 	protected List<SagaScreen> screensToRemove;
 	protected Chara meatDropper;
+	protected PartyMemory restartState;
 	protected int actorIndex;
 	protected int mutateIndex;
 	protected boolean initialized;
@@ -192,6 +194,7 @@ public class Battle extends AssetQueuer implements Disposable {
 	 */
 	public void start() {
 		final Battle battle = this;
+		restartState = new PartyMemory(SGlobal.heroes);
 		if (initialized) {
 			screen.transitonOn(TransitionType.WHITE, null);
 		} else {
@@ -443,7 +446,6 @@ public class Battle extends AssetQueuer implements Disposable {
 	 * @param	index			The index of the currently selected ally, or 0
 	 * @param	listener		The callback once target is selected
 	 */
-	// TODO: battle: come up with some way of targeting dead people
 	public void selectAlly(int index, TargetListener listener) {
 		targetingMode = true;
 		screen.selectAlly(index, listener);
@@ -552,10 +554,14 @@ public class Battle extends AssetQueuer implements Disposable {
 	}
 	
 	/**
-	 * Restarts a battle with both parties at full health... almost like the
-	 * hero died and had to restart.
+	 * Restarts a battle with the enemy at full health and the heroes as if
+	 * they walked in for the first time.
 	 */
 	public void restart() {
+		SGlobal.heroes.dispose();
+		SGlobal.heroes = new HeroParty(restartState);
+		MGlobal.assets.loadAsset(SGlobal.heroes, "New party state");
+		
 		globalTurn.clear();
 		resetBoosts();
 		player.fullHeal();

@@ -956,12 +956,12 @@ public class ScreenBattle extends SagaScreen {
 	 */
 	public void selectEnemyIndex(int selected, TargetListener listener, boolean multiMode) {
 		this.targetListener = listener;
-		this.selectedIndex = selected;
+		this.selectedIndex = selected - 1;
 		this.multiMode = multiMode;
 		
 		showMonsterList = true;
 		selectionMode = true;
-		moveCursor(0);
+		moveCursor(1);
 		pushCommandListener(selectListener);
 		// TODO: battle: use multimode to render enemy inserts maybe?
 	}
