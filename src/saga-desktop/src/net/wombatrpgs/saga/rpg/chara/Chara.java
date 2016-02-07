@@ -433,17 +433,6 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	}
 	
 	/**
-	 * Checks if this character can act of their own free will in battle. A
-	 * chara may be unable to do this if they are dead, paralyzed, or confused.
-	 * Does not print any messages.
-	 * @param	battle			The battle this check is a part of
-	 * @return					True if this chara can construct intents
-	 */
-	public boolean canConstructIntents(Battle battle) {
-		return !isConfused(battle, true, true) && canAct(battle, true, true);
-	}
-	
-	/**
 	 * Checks if this character is dead or has deadly status effects.
 	 * @return					True if this character has kicked the bucket
 	 */

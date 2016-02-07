@@ -180,7 +180,9 @@ public class Intent implements Comparable<Intent> {
 		// confused guys are confused
 		if (actor.isConfused(battle, false, false)) {
 			setItem(actor.getRandomCombatItem());
-			item.assignRandomTargets(this);
+			if (item != null) {
+				item.assignRandomTargets(this);
+			}
 		}
 		
 		// don't attack corpses, probably

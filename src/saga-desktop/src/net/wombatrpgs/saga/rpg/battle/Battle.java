@@ -807,28 +807,33 @@ public class Battle extends AssetQueuer implements Disposable {
 	 */
 	protected void modifyIntent(final Intent intent, final IntentListener listener) {
 		final Chara chara = intent.getActor();
-		if (chara.getInventory().containsBattleUseableItems()) {
-			SlotListener slotListener = new SlotListener() {
-				@Override public boolean onSelection(int selected) {
-					if (selected == -1) {
-						listener.onIntent(null);
-						return true;
-					}
-					CombatItem item = chara.getInventory().get(selected);
-					if (item == null || !item.isBattleUsable() || item.getUses() == 0) {
-						return false;
-					}
-					intent.setItem(item);
-					item.modifyIntent(intent, listener);
-					return true;
-				}
-			};
-			int slot = chara.getInventory().slotFor(intent.getItem());
-			screen.selectItem(chara, slot, slotListener);
-		} else {
+		if (!chara.getInventory().containsBattleUseableItems()) {
 			intent.setItem(null);
 			listener.onIntent(intent);
+			return;
 		}
+		if (chara.isConfused(this, true, true)) {
+			intent.setItem(chara.getRandomCombatItem());
+			listener.onIntent(intent);
+			return;
+		}
+		SlotListener slotListener = new SlotListener() {
+			@Override public boolean onSelection(int selected) {
+				if (selected == -1) {
+					listener.onIntent(null);
+					return true;
+				}
+				CombatItem item = chara.getInventory().get(selected);
+				if (item == null || !item.isBattleUsable() || item.getUses() == 0) {
+					return false;
+				}
+				intent.setItem(item);
+				item.modifyIntent(intent, listener);
+				return true;
+			}
+		};
+		int slot = chara.getInventory().slotFor(intent.getItem());
+		screen.selectItem(chara, slot, slotListener);
 	}
 	
 	/**
@@ -1017,7 +1022,7 @@ public class Battle extends AssetQueuer implements Disposable {
 					actorIndex -= 1;
 				}
 			} while (actorIndex > 0 &&
-					!player.getFront(actorIndex).canConstructIntents(this));
+					!player.getFront(actorIndex).canAct(this, true, true));
 			if (actorIndex == 0) {
 				actorIndex = -1;
 				incrementActorIndex(false);
@@ -1026,7 +1031,7 @@ public class Battle extends AssetQueuer implements Disposable {
 			do {
 				actorIndex += 1;
 			} while (actorIndex < player.size() &&
-					!player.getFront(actorIndex).canConstructIntents(this));
+					!player.getFront(actorIndex).canAct(this, true, true));
 		}
 	}
 	
