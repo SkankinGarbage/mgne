@@ -155,7 +155,7 @@ public class EventChest extends MapEvent {
 	 */
 	@Override
 	public boolean isPassable() {
-		return !isHidden();
+		return isHidden();
 	}
 
 	/**

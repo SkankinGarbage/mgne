@@ -6,6 +6,7 @@
 	"items" : [
 		"wpn_saw",
 		"item_door",
-		"item_selfix"
+		"item_selfix",
+		"pot_eyedrop"
 	]
 }

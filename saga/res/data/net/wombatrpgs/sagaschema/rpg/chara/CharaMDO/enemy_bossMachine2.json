@@ -21,8 +21,7 @@
 		"abil_cannonShock2",
 		"wpn_cannonBazooka",
 		"abil_dbeam2",
-		"item_selfix",
-		"wpn_gunTank"
+		"item_selfix"
 	],
 	"stats" : {
 		"hp" : 3100,

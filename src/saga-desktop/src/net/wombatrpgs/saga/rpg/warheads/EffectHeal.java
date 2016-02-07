@@ -35,11 +35,20 @@ public class EffectHeal extends EffectAllyTarget {
 	}
 
 	/**
-	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#isMapUsable()
+	 * @see net.wombatrpgs.saga.rpg.warheads.EffectAllyTarget#isBattleUsable()
 	 */
-	@Override public boolean isMapUsable() {
+	@Override
+	public boolean isBattleUsable() {
 		// kind of a hack w/e
 		return mdo.useRestore != UseRestoreType.RESTORES_USES;
+	}
+
+	/**
+	 * @see net.wombatrpgs.saga.rpg.warheads.AbilEffect#isMapUsable()
+	 */
+	@Override
+	public boolean isMapUsable() {
+		return true;
 	}
 
 	/**

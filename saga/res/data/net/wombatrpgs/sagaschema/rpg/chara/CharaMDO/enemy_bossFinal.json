@@ -17,7 +17,7 @@
 	"lootDropChance" : 1,
 	"equipped" : [
 		"spell_fire2",
-		"spell_flare2",
+		"abil_boss_flare",
 		"spell_lightning",
 		"spell_magma",
 		"spell_shake",
@@ -27,10 +27,16 @@
 	"stats" : {
 		"hp" : 9999,
 		"mhp" : 9999,
-		"str" : 84,
-		"def" : 78,
-		"agi" : 90,
-		"mana" : 95,
-		"flags" : [ ]
+		"str" : 92,
+		"def" : 71,
+		"agi" : 88,
+		"mana" : 97,
+		"flags" : [
+			"RESIST_CONFUSE",
+			"RESIST_SLEEP",
+			"RESIST_STONE",
+			"RESIST_DEATH",
+			"RESIST_POISON"
+		]
 	}
 }
