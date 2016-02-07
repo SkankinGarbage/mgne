@@ -26,9 +26,9 @@ playBGM('ffl1_town')
 speak(hero1, "EXCALIBER is whole again.")
 speak("Seer", "Now go to Babel. The masters must not touch Babel's heart!")
 
-removeCollectable('collectable_excaliber', true)
-removeCollectable('collectable_excaliber', true)
-removeCollectable('collectable_excaliber', true)
+removeItem('collectable_excaliber', true)
+removeItem('collectable_excaliber', true)
+removeItem('collectable_excaliber', true)
 addItem('wpn_legendExcaliber')
 
 sceneSwitch('got_excaliber', true)
