@@ -74,7 +74,7 @@
     <property name="onInteract" value="speak('It\'s locked.')"/>
    </properties>
   </object>
-  <object id="97" name="chest" type="Chest" x="448" y="368" width="16" height="16">
+  <object id="97" name="chest" type="Chest" x="464" y="368" width="16" height="16">
    <properties>
     <property name="collectable" value="collectable_excaliber"/>
     <property name="hide" value="return not getSwitch('elan_elder02')"/>

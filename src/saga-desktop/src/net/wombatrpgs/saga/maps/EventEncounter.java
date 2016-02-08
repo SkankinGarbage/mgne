@@ -111,6 +111,7 @@ public abstract class EventEncounter extends MapEvent {
 		if (mdo == null) return;
 		if (MGlobal.rand.nextInt(mdo.steps) > 0) return;
 		if ("off".equals(MGlobal.args.get("encounters"))) return;
+		if (MGlobal.memory.getSwitch("disable_encounters")) return;
 		if (poly != null && !poly.contains(hero.getX(), hero.getY())) return;
 		for (MapEvent event : hero.getParent().getEventsAt(hero.getTileX(), hero.getTileY())) {
 			if (event.hasCollideTrigger()) return;
