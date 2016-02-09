@@ -1,0 +1,24 @@
+{
+	"key" : "party_testSoloStrong",
+	"subfolder" : "test",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"monster" : "chara_testHumanF",
+			"count" : 1
+		},
+		{
+			"monster" : "chara_testHumanF",
+			"count" : 1
+		},
+		{
+			"monster" : "chara_testHumanF",
+			"count" : 1
+		},
+		{
+			"monster" : "chara_testHumanF",
+			"count" : 1
+		}
+	]
+}

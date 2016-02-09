@@ -11,15 +11,20 @@
 	"portrait" : "None",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 0,
+	"meatDropChance" : 0,
 	"gp" : 0,
 	"loot" : "None",
-	"equipped" : [ ],
+	"lootDropChance" : 0,
+	"equipped" : [
+		"wpn_legendEmperor",
+		"abil_esp"
+	],
 	"stats" : {
 		"hp" : 60,
 		"mhp" : 60,
-		"str" : 4,
+		"str" : 99,
 		"def" : 0,
-		"agi" : 7,
+		"agi" : 99,
 		"mana" : 0,
 		"flags" : [ ]
 	}

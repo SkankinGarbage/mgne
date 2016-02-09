@@ -74,7 +74,7 @@ public class MgnEmuPlayer extends AssetQueuer implements GmeListener {
 	 */
 	@Override
 	public void onError(String error) {
-		MGlobal.reporter.err(fileName + ": " + error);
+		MGlobal.reporter.warn(fileName + ": " + error);
 		if (playing) {
 			playTrack(track);
 		}
@@ -88,11 +88,17 @@ public class MgnEmuPlayer extends AssetQueuer implements GmeListener {
 	public boolean writeSamples() {
 		AudioDevice device = manager.getDevice();
 		if (playing && !emu.trackEnded()) {
-			byte [] buffer = new byte [BUFFER_LENGTH * 2];
-			short[] shorts = new short[BUFFER_LENGTH];
-			int count = emu.play(buffer, BUFFER_LENGTH);
-			ByteBuffer.wrap(buffer).order(ByteOrder.BIG_ENDIAN).asShortBuffer().get(shorts);
-			device.writeSamples(shorts, 0, count);
+			try {
+				byte [] buffer = new byte [BUFFER_LENGTH * 2];
+				short[] shorts = new short[BUFFER_LENGTH];
+				int count = emu.play(buffer, BUFFER_LENGTH);
+				ByteBuffer.wrap(buffer).order(ByteOrder.BIG_ENDIAN).asShortBuffer().get(shorts);
+				device.writeSamples(shorts, 0, count);
+			} catch (Exception e) {
+				MGlobal.reporter.warn("GB APU exception", e);
+				fadeout(0);
+				onError(e.getMessage());
+			}
 			return true;
 		}
 		return false;

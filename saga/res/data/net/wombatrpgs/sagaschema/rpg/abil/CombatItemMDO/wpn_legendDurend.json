@@ -6,7 +6,7 @@
 	"abilityName" : "$XDUREND",
 	"itemDescription" : "Attacks with weapon damage and ignores damage resistance (tier 10)",
 	"type" : "ITEM",
-	"uses" : 50,
+	"uses" : 0,
 	"cost" : 1,
 	"anim" : "banim_slash_legend",
 	"equip" : [ ],

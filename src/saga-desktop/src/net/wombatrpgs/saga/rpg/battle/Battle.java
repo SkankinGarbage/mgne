@@ -17,6 +17,9 @@ import net.wombatrpgs.mgne.core.MAssets;
 import net.wombatrpgs.mgne.core.MGlobal;
 import net.wombatrpgs.mgne.core.interfaces.FinishListener;
 import net.wombatrpgs.mgne.graphics.interfaces.Disposable;
+import net.wombatrpgs.mgne.maps.objects.TimerListener;
+import net.wombatrpgs.mgne.maps.objects.TimerObject;
+import net.wombatrpgs.mgneschema.io.data.GdxKey;
 import net.wombatrpgs.saga.core.SConstants;
 import net.wombatrpgs.saga.core.SGlobal;
 import net.wombatrpgs.saga.rpg.battle.Intent.IntentListener;
@@ -213,6 +216,7 @@ public class Battle extends AssetQueuer implements Disposable {
 				battle.internalStart();
 			}
 		};
+		perfTest();
 	}
 	
 	/**
@@ -1097,6 +1101,22 @@ public class Battle extends AssetQueuer implements Disposable {
 		for (Chara chara : player.getAll()) {
 			chara.onBattleEnd(this);
 		}
+	}
+	
+	/**
+	 * Performance testing timer scheduling.
+	 */
+	protected void perfTest() {
+		// perf testing garbage
+		new TimerObject(0.1f, screen, new TimerListener() {
+			@Override public void onTimerZero(TimerObject source) {
+				if (!isDone()) {
+					MGlobal.keymap.keyDown(GdxKey.SPACE.keycode);
+					MGlobal.keymap.keyUp(GdxKey.SPACE.keycode);
+					perfTest();
+				}
+			}
+		});
 	}
 
 }

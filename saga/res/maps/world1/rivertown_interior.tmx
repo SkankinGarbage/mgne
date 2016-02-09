@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="32" tilewidth="16" tileheight="16" nextobjectid="22">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="32" tilewidth="16" tileheight="16" nextobjectid="25">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="name" value="River Town"/>
@@ -78,39 +78,11 @@
     <property name="onInteract" value="speak('Eastern cities are a little reclusive. You won\'t find a place more hospitable than this!')"/>
    </properties>
   </object>
-  <object id="10" name="NPC" type="Character" x="192" y="400" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_demon"/>
-    <property name="face" value="SOUTH"/>
-    <property name="onInteract" value="speak('The champion of the plains town wields the everburning torch, a magical weapon that gives off light even without air.')"/>
-   </properties>
-  </object>
-  <object id="11" name="NPC" type="Character" x="208" y="416" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_demon"/>
-    <property name="face" value="WEST"/>
-    <property name="onInteract" value="speak('Here in the river city we built a shrine to the airseed, a magical artifact that lets you breathe where others suffocate.')"/>
-   </properties>
-  </object>
-  <object id="12" name="NPC" type="Character" x="192" y="432" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_demon"/>
-    <property name="face" value="NORTH"/>
-    <property name="onInteract" value="speak('In the city keep of the mountain town, their wiseman guards the magus eye, a magical talisman that guides the user away from invisible traps.')"/>
-   </properties>
-  </object>
-  <object id="13" name="NPC" type="Character" x="96" y="432" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_rat"/>
-    <property name="face" value="NORTH"/>
-    <property name="onInteract" value="speak('A man named David stopped by here a few weeks ago. I hear he had one of the four artifacts that unseal Hero!')"/>
-   </properties>
-  </object>
   <object id="14" name="NPC" type="Character" x="80" y="368" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="EAST"/>
-    <property name="onInteract" value="speak('This bar is popular with treasure hunters, like that silly group at the table. If you want my advice, you should be a well-balanced party and carefully consider who attacks what so as to defeat as many monsters as possible before they can hurt you.')"/>
+    <property name="onInteract" value="speak('This bar is popular with treasure hunters, like that silly group at the table.'); speak('If you want my advice, you should be a well-balanced party and carefully consider who attacks what so as to defeat as many monsters as possible before they can hurt you.')"/>
    </properties>
   </object>
   <object id="15" name="mayor" type="Character" x="480" y="432" width="16" height="16">
@@ -153,7 +125,7 @@
   </object>
   <object id="20" name="NPC" type="Character" x="32" y="416" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_knight"/>
+    <property name="appearance" value="4dir_golem"/>
     <property name="face" value="EAST"/>
     <property name="onInteract" value="speak('Defense is best! A sturdy monster does not care if the enemy gets a few attacks in.')"/>
    </properties>
@@ -163,6 +135,20 @@
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('Mana is best! A powerful mutant can take down huge numbers of enemies.')"/>
+   </properties>
+  </object>
+  <object id="22" name="npc" type="Character" x="192" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('Monsters attack the front two party members much more often than those in back. Reorder wisely!')"/>
+   </properties>
+  </object>
+  <object id="24" name="npc" type="Character" x="208" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onInteract" value="speak('It\'s hard to hit monsters that are a lot faster than you. Agility is important.')"/>
    </properties>
   </object>
  </objectgroup>
