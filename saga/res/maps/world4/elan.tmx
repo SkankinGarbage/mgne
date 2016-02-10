@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="42" height="38" tilewidth="16" tileheight="16" nextobjectid="103">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="42" height="38" tilewidth="16" tileheight="16" nextobjectid="105">
  <properties>
   <property name="bgm" value="ffl1_town"/>
   <property name="name" value="Elan"/>
@@ -72,12 +72,12 @@
   <object id="94" name="itamor" type="Character" x="336" y="400" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_itamor"/>
-    <property name="hide" value="return getSwitch('itamor03')"/>
+    <property name="hide" value="return getSwitch('itamor03') or not getSwitch('itamor_freed')"/>
    </properties>
   </object>
   <object id="95" name="trigger" type="Event" x="320" y="400" width="16" height="16">
    <properties>
-    <property name="hide" value="return getSwitch('itamor03')"/>
+    <property name="hide" value="return getSwitch('itamor03') or not getSwitch('itamor_freed')"/>
     <property name="onEnter" value="play('world4/itamor03.lua')"/>
    </properties>
   </object>

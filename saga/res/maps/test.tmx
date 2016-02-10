@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="27">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="29">
  <properties>
   <property name="battle_bgm" value="ffl1_battle"/>
   <property name="bgm" value="ffl1_overworld"/>
@@ -170,6 +170,12 @@
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="speak('HOLA SWITCH IS SET'); sceneSwitch('saga_testswitch', true)"/>
+   </properties>
+  </object>
+  <object id="28" name="radiation" type="Event" x="64" y="80" width="16" height="16">
+   <properties>
+    <property name="hide" value="return hasItem('key_radSuit')"/>
+    <property name="onTurn" value="if (getAvatar().terrainType() == 147) then play('world4/radiation.lua'); playScene(); end"/>
    </properties>
   </object>
  </objectgroup>

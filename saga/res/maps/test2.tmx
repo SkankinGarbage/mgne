@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="8">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="9">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="name" value="saga testmap 2"/>
@@ -83,6 +83,12 @@
   <object id="7" name="potion" type="Chest" x="176" y="48" width="16" height="16">
    <properties>
     <property name="item" value="item_testTransform"/>
+   </properties>
+  </object>
+  <object id="8" name="radiation" type="Event" x="16" y="16" width="16" height="16">
+   <properties>
+    <property name="hide" value="return hasItem('key_radSuit')"/>
+    <property name="onTurn" value="play('world4/radiation.lua'); playScene();"/>
    </properties>
   </object>
  </objectgroup>

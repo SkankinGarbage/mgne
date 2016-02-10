@@ -216,7 +216,7 @@ public class Battle extends AssetQueuer implements Disposable {
 				battle.internalStart();
 			}
 		};
-		perfTest();
+		//perfTest();
 	}
 	
 	/**
