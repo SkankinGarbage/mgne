@@ -172,11 +172,5 @@
     <property name="onInteract" value="speak('HOLA SWITCH IS SET'); sceneSwitch('saga_testswitch', true)"/>
    </properties>
   </object>
-  <object id="28" name="radiation" type="Event" x="64" y="80" width="16" height="16">
-   <properties>
-    <property name="hide" value="return hasItem('key_radSuit')"/>
-    <property name="onTurn" value="if (getAvatar().terrainType() == 147) then play('world4/radiation.lua'); playScene(); end"/>
-   </properties>
-  </object>
  </objectgroup>
 </map>

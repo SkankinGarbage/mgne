@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="90" height="45" tilewidth="16" tileheight="16" nextobjectid="170">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="90" height="45" tilewidth="16" tileheight="16" nextobjectid="218">
  <properties>
-  <property name="bgm" value="ffl3_talon"/>
-  <property name="name" value="Floor 17"/>
+  <property name="bgm" value="ffl1_overworld"/>
+  <property name="name" value="Floor 7"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
@@ -19,7 +19,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3XoRHAMAwEQbklT/qvKTTMHRg6b80uPCT4qgIAAOjvbdrTfE07AAAAe2n/sr/7rn7SHFXP+PsKAMiVtsfsurs6AAAAAACkWUnNjNJIPwAA
+   H4sIAAAAAAAAC+3XoQ3AMAwEQGelqMNnrNCwbhBUVbZ1B9/E8D8CAACgv900z+Y0zQEAALjLtpft7lr519blNkfEM356BAAKytbH9LpaOQAAAAAAZPMCjqrFI0g/AAA=
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
@@ -58,7 +58,7 @@
     <property name="onBehavior" value="this.randomFace()"/>
    </properties>
   </object>
-  <object id="145" name="rat" type="Character" x="432" y="96" width="16" height="16">
+  <object id="145" name="rat" type="Character" x="528" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="onBehavior" value="this.randomFace()"/>
@@ -76,7 +76,7 @@
     <property name="onBehavior" value="this.randomFace()"/>
    </properties>
   </object>
-  <object id="148" name="brd" type="Character" x="528" y="96" width="16" height="16">
+  <object id="148" name="brd" type="Character" x="432" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_bird"/>
     <property name="onBehavior" value="this.randomFace()"/>
@@ -200,6 +200,254 @@
    <properties>
     <property name="appearance" value="4dir_ghost"/>
     <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="170" name="npc" type="Character" x="352" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a goblin. They are bulky but slow, with just a touch of magic.')"/>
+   </properties>
+  </object>
+  <object id="171" name="npc" type="Character" x="352" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a fly. They are a nuissance and attack in numbers.')"/>
+   </properties>
+  </object>
+  <object id="172" name="npc" type="Character" x="416" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('This is an elf. Although frail, it is fast and casts strong elemental magic.')"/>
+   </properties>
+  </object>
+  <object id="173" name="npc" type="Character" x="320" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('This is a hag. They are slow but be careful that its hideous look doesn\'t instantly kill you.')"/>
+   </properties>
+  </object>
+  <object id="174" name="npc" type="Character" x="512" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('This is a goat. Beware its sleep attacks in long fights.')"/>
+   </properties>
+  </object>
+  <object id="175" name="npc" type="Character" x="448" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a weasel. They are very very fast.')"/>
+   </properties>
+  </object>
+  <object id="176" name="npc" type="Character" x="544" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a rat. Weak people should beware its diseased bite.')"/>
+   </properties>
+  </object>
+  <object id="177" name="npc" type="Character" x="448" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a bird. They are fast and hit hard. Beware!')"/>
+   </properties>
+  </object>
+  <object id="178" name="npc" type="Character" x="544" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is an angel. It is immune to most magic but quite weak.')"/>
+   </properties>
+  </object>
+  <object id="179" name="npc" type="Character" x="608" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('This is a skeleton. They are hard to deal with without slaying items.')"/>
+   </properties>
+  </object>
+  <object id="180" name="npc" type="Character" x="640" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is an armored beetle. Although it has a very tough shell, it does not resist magic.')"/>
+   </properties>
+  </object>
+  <object id="181" name="npc" type="Character" x="640" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a zombie. It can absorb many attacks but has low defense.')"/>
+   </properties>
+  </object>
+  <object id="182" name="npc" type="Character" x="736" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a slime. It has scary health-stealing attacks. Weapons won\'t work but thunder magic will.')"/>
+   </properties>
+  </object>
+  <object id="183" name="npc" type="Character" x="736" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a dog. It is very versatile.')"/>
+   </properties>
+  </object>
+  <object id="184" name="npc" type="Character" x="704" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('This is a temptress. Be quick or you will see its nasty status magic.')"/>
+   </properties>
+  </object>
+  <object id="194" name="npc" type="Character" x="832" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a horse. It is strong and fast, so be careful in your defense.')"/>
+   </properties>
+  </object>
+  <object id="195" name="npc" type="Character" x="832" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a snake. It is a well-rounded if slowish physical monster.')"/>
+   </properties>
+  </object>
+  <object id="196" name="npc" type="Character" x="800" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('This is a disease. Touching it could poison you, or worse!')"/>
+   </properties>
+  </object>
+  <object id="197" name="npc" type="Character" x="896" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('This is a golem. No monster is stronger... or slower.')"/>
+   </properties>
+  </object>
+  <object id="198" name="npc" type="Character" x="928" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is an elephant. It is hard to deal with without status magic.')"/>
+   </properties>
+  </object>
+  <object id="199" name="npc" type="Character" x="928" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a cat. It might be frail but there is something odd about it.')"/>
+   </properties>
+  </object>
+  <object id="200" name="npc" type="Character" x="992" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('This is a wisp. It uses many spells but none seem all that strong...')"/>
+   </properties>
+  </object>
+  <object id="201" name="npc" type="Character" x="1024" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a phoenix. It knows support and healing magic.')"/>
+   </properties>
+  </object>
+  <object id="202" name="npc" type="Character" x="1024" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a ghost. It seems to use a lot of ice magic.')"/>
+   </properties>
+  </object>
+  <object id="203" name="npc" type="Character" x="1120" y="176" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a jellyfish. It heals itself and sometimes its friends.')"/>
+   </properties>
+  </object>
+  <object id="204" name="npc" type="Character" x="1120" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('This is a demon. It can fight with weapons or magic but can\'t deal with tough foes.')"/>
+   </properties>
+  </object>
+  <object id="205" name="npc" type="Character" x="1088" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('This is a burn. It seems to use a lot of fire magic.')"/>
+   </properties>
+  </object>
+  <object id="206" name="npc" type="Character" x="272" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Most of the monsters here were captured in Babel.')"/>
+   </properties>
+  </object>
+  <object id="208" name="npc" type="Character" x="384" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I saw a group of fly monsters attack once. They didn\'t do much at first, but then they bothered and slowed the victim so he couldn\'t hit anything!')"/>
+   </properties>
+  </object>
+  <object id="209" name="npc" type="Character" x="416" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('When I go exploring, I have to beware of birds. I always have a shield ready if I see a whole bunch of \'em!')"/>
+   </properties>
+  </object>
+  <object id="210" name="npc" type="Character" x="576" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Those angels are very annoying. I can\'t seem to hurt them at all!')"/>
+   </properties>
+  </object>
+  <object id="211" name="npc" type="Character" x="624" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('My bodyguard is a beetle. Weapons bounce right off when he\'s in front of me!')"/>
+   </properties>
+  </object>
+  <object id="212" name="npc" type="Character" x="784" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('For a tough fight, I\'d pick a slime over an elf or horse. Dissolving a tough foe works through high defense and mana!')"/>
+   </properties>
+  </object>
+  <object id="213" name="npc" type="Character" x="720" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Careful! This dog\'s strange, don\'t make eye contact.')"/>
+   </properties>
+  </object>
+  <object id="214" name="npc" type="Character" x="912" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I hear monster meat is sold in a market deep within Babel. Perfect when you need just the right monster.')"/>
+   </properties>
+  </object>
+  <object id="215" name="npc" type="Character" x="976" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('A ghost attacked me, but I was wearing fur armor.')"/>
+   </properties>
+  </object>
+  <object id="216" name="npc" type="Character" x="1120" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('That burning thing looks powerful, but it seems all my strongest enemies are immune to my fire spells...')"/>
+   </properties>
+  </object>
+  <object id="217" name="npc" type="Character" x="1168" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Healing monsters are always in high demand. I\'d be lucky to own one.')"/>
    </properties>
   </object>
  </objectgroup>

@@ -637,6 +637,14 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 					return LuaValue.NIL;
 				}
 			});
+			lua.set("randomFace", new ZeroArgFunction() {
+				@Override public LuaValue call() {
+					int index = MGlobal.rand.nextInt(OrthoDir.values().length);
+					OrthoDir dir = OrthoDir.values()[index];
+					setFacing(dir);
+					return LuaValue.NIL;
+				}
+			});
 			lua.set("wander", new ZeroArgFunction() {
 				@Override public LuaValue call() {
 					if (isTracking()) return LuaValue.NIL;
