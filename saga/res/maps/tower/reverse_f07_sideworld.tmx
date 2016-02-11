@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="34" height="23" tilewidth="16" tileheight="16" nextobjectid="128">
+ <properties>
+  <property name="bgm" value="ffl1_overworld"/>
+  <property name="name" value="Floor 17"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="34" height="23">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC7VWMRLDMAhznte+IsnSdGn6/6kdwh3HgRAkGTSBAcmAvY0xtpvw/uNh8GrG2g90fK6q46vOf5o+q7LPN3ERn2fCdzmAOEdcKnVUdN+Hzx3FYDRldbd3aLlfoSnjY2uwtbBcMl2RXd+f5i3wuKA8SFdk1/0sQP2A8mS6as6TyZHpoevwet+LU/WRHGtgn40WEmciclifjIc3W1FPntWDzbOMfL5QHFZXJo+dCbQLvDgM38qcR3PHoMI3m2PbYx3dKruL6TeGC9KN4ey9Hcy75NXrvT3s7ori6Ps984+q7q6It/Rs9x9V4cz+g7pvfmeWPUgPdf/R1VmO8APM0vo2OAwAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="34" height="23">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgIAweEaGGHmCwuGMUjIJRwMBwc6AdQGMgzzjQLqAv+IbGv8kw/ON4FIyC4Q5G8/EooDYAAP8YF5Q4DAAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="125" name="gate" type="Event" x="208" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/reverse_f07.tmx', 'sideworld')"/>
+   </properties>
+  </object>
+  <object id="126" name="zoo" type="Event" x="336" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/reverse_f07_sideworld_interior.tmx', 'entry', 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="127" name="memory" type="Teleport Memory" x="336" y="176" width="16" height="16">
+   <properties>
+    <property name="displayName" value="Zoo World"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="34" height="23">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BgQAAAADDoPlT3+AEVQEAAHwDUgMdLjgMAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="34" height="23">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BgQAAAADDoPlT3+AEVQEAAHwDUgMdLjgMAAA=
+  </data>
+ </layer>
+</map>

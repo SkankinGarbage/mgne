@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="90" height="45" tilewidth="16" tileheight="16" nextobjectid="170">
+ <properties>
+  <property name="bgm" value="ffl3_talon"/>
+  <property name="name" value="Floor 17"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="90" height="45">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2YQQrDMAwE63tu+VMe11cXHwRCyIZCHK82O7Ak3UvVoSVyPx8hhNjHlzCI9LkOFz9v1R6RPtfp4uev2iPS52oufv6qPSJIfpg8j54dcXaWfpf3/r5Hkkba7/R8Jmmk/U7PV5JG2u/23F4QeX6fZ6Td4M4e0XN8PjP0iJ7j85mhf9LzaG+Pnlvyunr/tOdsb5fn/xl9Zy3Z3p49B9nuV3jOzpuWbG/3nrNzK8P9Cs/ZedMSPZt7myU7tzLcr/CcnTfjmdTe9wwdc572PHPPHATPKP/zrO7v3jeucJ0FyUMVz36v8NdRRu4baX+XZ79X+OsomXe/F/n5qvbxM+4gO7f4vcjPX7WPnxEB+81Z4m+xYo8Ikh92z2xBZLabVA0is92kaoQQQgghhBBCCIHPDx6VUgNIPwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="90" height="45">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3XoRHAMAwEQbklT/qvKTTMHRg6b80uPCT4qgIAAOjvbdrTfE07AAAAe2n/sr/7rn7SHFXP+PsKAMiVtsfsurs6AAAAAACkWUnNjNJIPwAA
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="129" name="npc" type="Character" x="208" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_robot"/>
+    <property name="onInteract" value="speak('Welcome to the zoological society. It\'s free admission today.')"/>
+   </properties>
+  </object>
+  <object id="134" name="entry" type="Target" x="112" y="400" width="16" height="16"/>
+  <object id="136" name="tele" type="Event" x="112" y="416" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/reverse_f07_sideworld.tmx', 'zoo')"/>
+   </properties>
+  </object>
+  <object id="137" name="tele" type="Event" x="80" y="416" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('tower/reverse_f07_sideworld.tmx', 'zoo')"/>
+   </properties>
+  </object>
+  <object id="139" name="gob" type="Character" x="336" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="140" name="fly" type="Character" x="336" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_bird"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="144" name="hag" type="Character" x="336" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="145" name="rat" type="Character" x="432" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="146" name="wsl" type="Character" x="432" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="147" name="elf" type="Character" x="432" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="148" name="brd" type="Character" x="528" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_bird"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="149" name="wrd" type="Character" x="528" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_ghost"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="150" name="got" type="Character" x="528" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_horse"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="151" name="skl" type="Character" x="624" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_skeleton"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="152" name="zom" type="Character" x="624" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_skeleton"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="153" name="arm" type="Character" x="624" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_beetle"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="154" name="goo" type="Character" x="720" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_slime"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="155" name="dog" type="Character" x="720" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="156" name="tmp" type="Character" x="720" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="157" name="hrs" type="Character" x="816" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_horse"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="158" name="snk" type="Character" x="816" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="160" name="dis" type="Character" x="816" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_slime"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="161" name="gol" type="Character" x="912" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_golem"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="162" name="cat" type="Character" x="912" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="163" name="eph" type="Character" x="912" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_horse"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="164" name="wsp" type="Character" x="1008" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_ghost"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="165" name="pnx" type="Character" x="1008" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_bird"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="166" name="gst" type="Character" x="1008" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_ghost"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="167" name="jly" type="Character" x="1104" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_jelly"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="168" name="dem" type="Character" x="1104" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+  <object id="169" name="brn" type="Character" x="1104" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_ghost"/>
+    <property name="onBehavior" value="this.randomFace()"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="90" height="45">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3FoQEAAAgDIA+w+f+v9nWTUKgCAAAAAAAAAAC40zE3JgYAAAAAAPhsAbTX+81IPwAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="90" height="45">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3FoQEAIAgAMDjC6sFebYZOYiuLAAAAAAAAAACAnV6bGSfrzLhZBwAAAAAA2OwD3NOuZEg/AAA=
+  </data>
+ </layer>
+</map>
