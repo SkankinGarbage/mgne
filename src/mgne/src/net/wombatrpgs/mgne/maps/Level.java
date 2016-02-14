@@ -396,7 +396,9 @@ public abstract class Level extends ScreenObject implements Turnable, Disposable
 				internalRemoveObject(object);
 				MGlobal.reporter.inform("Overlapped remove/add object: " + object);
 			} else {
-				MGlobal.reporter.warn("Added the same object twice: " + object);
+				if (object != MGlobal.getHero()) {
+					MGlobal.reporter.warn("Added the same object twice: " + object);
+				}
 				return;
 			}
 		}

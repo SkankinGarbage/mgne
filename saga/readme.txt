@@ -1,5 +1,5 @@
 ================================================================================
-= SAGA4 v. 20150210  -beta release v0.9-                                       =
+= SAGA4 v. 20150213  -beta release v0.91-                                       =
 = running on MGNENGINE (https://github.com/psywombats/mgne)                    =
 = contact: aking (psy_wombats@wombatrpgs.net)                                  =
 ================================================================================
@@ -20,9 +20,14 @@ You can also change the keybinds in-game from the options menu.
 
 REPORTING PROBLEMS:
 If the game crashes or you encounter a problem, the game will attempt to send a
-bug report automatically, but you can help us out by sending the error.log to
-aking (psy_wombats@wombatrpgs.net). If you have any other comments or
-suggestions, the game has a homepage:
+bug report automatically. It would also be super if you send along error.log to
+me at psy_wombats@wombatrpgs.net or PM/FB/Skype/IRC/whatever.
+
+If you notice any balance issues, noncrashing bugs, graphical glitches, or have
+some other suggestion, that's welcome too! Send someone on the dev team your
+feedback and we'll turn it into an issue on the issue tracker.
+
+
 
 OPTIONAL MANUAL:
 
@@ -32,10 +37,10 @@ Generations ago, the gates of the town of Hero opened to reveal a new world
 beyond. Learned scholars and foreign traders emerged from the gate, bearing new
 sciences and magical artifacts.
 
-A year later, the world behind the gates
-changed. Hoards of monsters poured out of the gate and ransacked villages across
-the countryside. The wisemen from the gate were seen no more. In desperation,
-sages sealed the gates of Hero and left the town abandoned.
+A year later, the world behind the gates changed. Hoards of monsters poured out
+of the gate and ransacked villages across the countryside. The wisemen from the
+gate were seen no more. In desperation, sages sealed the gates of Hero and left
+the town abandoned.
 
 The legend of the Gates of Hero were not forgotten. Dreaming of the world beyond
 the gates, many have sought the secret town of Hero, but none have returned.
