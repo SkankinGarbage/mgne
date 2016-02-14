@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/mgne"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/gdx-backend-lwjgl-natives.jar"/>
 	<classpathentry kind="lib" path="lib/gdx-backend-lwjgl.jar" sourcepath="lib/gdx-backend-lwjgl-sources.jar"/>
 	<classpathentry kind="lib" path="lib/gdx-natives.jar"/>
@@ -20,5 +19,6 @@
 	<classpathentry kind="lib" path="/mgne/lib/jackson-annotations-2.0.4.jar"/>
 	<classpathentry kind="lib" path="lib/gdx-controllers-desktop-natives.jar"/>
 	<classpathentry kind="lib" path="lib/gdx-controllers-desktop.jar" sourcepath="lib/gdx-controllers-desktop-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_67"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

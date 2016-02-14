@@ -31,7 +31,7 @@
     <property name="onInteract" value="speak('You don\'t look so good. Were you above ground?')"/>
    </properties>
   </object>
-  <object id="149" name="memory" type="Teleport Memory" x="384" y="176" width="16" height="16">
+  <object id="149" name="memory" type="Teleport Memory" x="400" y="176" width="16" height="16">
    <properties>
     <property name="displayName" value="Underground City"/>
    </properties>
@@ -174,11 +174,11 @@
     <property name="onInteract" value="speak('I\'ve never seen anyone stand up to Moloch\'s men!')"/>
    </properties>
   </object>
-  <object id="178" name="jonas" type="Character" x="400" y="192" width="16" height="16">
+  <object id="178" name="jonas" type="Character" x="384" y="192" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
     <property name="face" value="NORTH"/>
-    <property name="hide" value="return not hasItem('key_excaliber1') or not hasItem('key_excaliber2') or getSwitch('jonas02')"/>
+    <property name="hide" value="return collectableCount('collectable_excaliber') ~= 2 or getSwitch('jonas02')"/>
     <property name="onInteract" value="play('world4/jonas02.lua')"/>
    </properties>
   </object>

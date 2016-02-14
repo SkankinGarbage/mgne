@@ -1,12 +1,12 @@
 ================================================================================
-= SAGA4 v. 20150110  -beta release v0.9-                                       =
+= SAGA4 v. 20150210  -beta release v0.9-                                       =
 = running on MGNENGINE (https://github.com/psywombats/mgne)                    =
 = contact: aking (psy_wombats@wombatrpgs.net)                                  =
 ================================================================================
 
 TO RUN:
-Double-click SaGa.jar. If you're running Windows, you may also run play.bat. No
-installation is required. You will need Java to run the game.
+On Windows, run SaGa.exe. Otherwise double-click SaGa.jar and cross your
+fingers.
 
 CONTROLS:
 Dirpad:                 arrow keys
@@ -16,8 +16,7 @@ Start:                  enter, escape, or C
 Select:                 tab, or V
 Fullscreen:				F12
 
-DEMO:
-The game ends after the first overworld.
+You can also change the keybinds in-game from the options menu.
 
 REPORTING PROBLEMS:
 If the game crashes or you encounter a problem, the game will attempt to send a

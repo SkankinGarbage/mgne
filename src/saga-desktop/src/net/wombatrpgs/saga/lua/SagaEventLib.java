@@ -62,6 +62,14 @@ public class SagaEventLib extends TwoArgFunction {
 			}
 		});
 		
+		env.set("collectableCount", new OneArgFunction() {
+			@Override public LuaValue call(LuaValue collectableArg) {
+				String key = collectableArg.checkjstring();
+				CollectableSet set = SGlobal.heroes.getCollection();
+				return CoerceJavaToLua.coerce(set.getQuantity(key));
+			}
+		});
+		
 		env.set("playScene", new ZeroArgFunction() {
 			@Override public LuaValue call() {
 				SceneLib.runExtraCommands();
