@@ -503,11 +503,15 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	}
 	
 	/**
-	 * Causes this character to regain HP. Caps at the chara's max HP.
+	 * Causes this character to regain HP. Caps at the chara's max HP. Dead
+	 * characters can't heal.
 	 * @param	heal			The damage amount to heal, in HP
 	 * @return					The damage actually healed
 	 */
 	public int heal(int heal) {
+		if (isDead()) {
+			return 0;
+		}
 		int old = get(Stat.HP);
 		stats.add(Stat.HP, heal);
 		if (get(Stat.HP) > get(Stat.MHP)) {
