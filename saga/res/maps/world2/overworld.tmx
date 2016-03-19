@@ -13,7 +13,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3YS5KDMAwEUKi5VXYswwG4/1GyiatUmpbcAn8gpUVXMgw4+Fk2n2NZliOTyWQymUwmMyW7yOxzeXJ2kJnns4rMttF5f8M6nvVcjVxtY7afdpRhHEusfllu1vHWccxYzPDUXuV76dcbbDvjyRhGj/faHem5KqOaWfT/uk+RcUCW3nZrfEZYFsdo/65YM3bMtmibd3Rk+hftu5wbzDlFx6rnPI86Xq211jbe/nrN6u0ZrZvelqPG5g6W3tzZv23W9ouOR9m31bne2VK61Cxr9cLu2+K61sPyqqe2ZD1bzAP9/MD2pYfl64SntaaXjLC8Wuu9ruVnPGuWqK1e9zln2up5n8k+xzGx1o+oJZqzLe6Zej9LRp6LUTbgWdry7v9a1RkT2b9XR8vXct5zE7EsrTnfYh4z4zLK0apN1nNb/nvKNpFZy3t+b03UhiMcrdpkPJElqk393i76/Ip+w7JEjiMMGU/LVDtalpYnMkD19f62vQJLph5HO3pzXQcZIsuaJzPvi69Vl5bhbEevNjfwGfX01smaJapby2/k2hitzc34m/VEtanft2tX5PdHOM62Y2oT1aXnWY7z5joKmrv6u1WLs916eMpjvHpH7yZQnd7hPqf1XPc80VpQLHeiXR3P8kmGsjZlfSKrWoqdd31nLO+8JkZNo4bSUh/P1uivOdY80Vy3alMbydrXQWvjbIPWnt41qVab+l0p81tPXBtbmNbqUtbnL/tcMa3lUJ/pmMlkMplMJvOsfADW0LnY9DwAAA==
+   H4sIAAAAAAAAC+3YS27DMAwEUAe9lXdeJgfw/Y/STQQQ7FAcyvrYBReDpK6tWE+U/Dm3bTszmUwmk8lkMkvyEVl9Lk/OB2Tl+bxEVtvovL9hHVs9X0autrHaTzvKMI4lVr8sN+t46zhmLFZ4aq/yvfTrDba1eDKG0eNr7c70fCkjzyz6f92nyDggy9p2a3xmWBbHaP+uWDN2zDbv/GZatjoy/Yv2Xc4N5py8/ZDlKM+o49Vau2oT2V+vWaM9W+bMSMtZY3MHSyulnZPYLzoeZd9e53pnS+niWXr1wu7b47o2wvKqp7ZkPXvMA/38wPZlhOXe4Gmt6SU9147WMV1h2erJWOr2et3n9PAdeZ/JPscxsdaPqCWasz3umUY/S0aei1EO4Fnaqt3/9aozJrJ/+0DLfWv3PESQpdVez3vUyHuRkY5WbbKex/bXU7aJzHre89fWRG04w9GqTcYTWaJ5rt/bRZ9f0W9YlshxhiHjaZlqx9o8t96DenO1HHt8v2tLrx5HvxuKznUdZIgsPU9m3hdfqy5rhqtq0qvNA3xGPWvrpGeJ6tYb85WOVm0ext+sJ6pN/b5duyK/H9Jx5nWmpTZRXdY89Vpleeqguau/W3Z3MuzlKY+p1Tt6N4HqtFaLd7Rj5nrNE60FxfJDtKvDWD7FsdSmrE9k5aXY1a7vjOWTHbVp1FBa6uPZGkWOd10Te3iiuW7VpjaStS9jtfN0Q+1ZuyZ5tanflXq/c/fr80hTry5lff5Xm6umXk71mY6ZTCaTyWQyz8ovVJOg5PQ8AAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="83" height="47">
@@ -107,7 +107,7 @@
   </object>
   <object id="34" name="tele" type="Event" x="656" y="368" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world2/caves_b.tmx', 89, 41, 'SOUTH')"/>
+    <property name="onCollide" value="teleport('world2/caves_b.tmx', 71, 42, 'SOUTH')"/>
    </properties>
   </object>
   <object id="35" name="tele" type="Event" x="608" y="272" width="16" height="16">

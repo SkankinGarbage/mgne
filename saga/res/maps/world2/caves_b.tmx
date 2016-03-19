@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="112" height="82" tilewidth="16" tileheight="16" backgroundcolor="#000000" nextobjectid="72">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="112" height="82" tilewidth="16" tileheight="16" backgroundcolor="#000000" nextobjectid="78">
  <properties>
   <property name="bgm" value="ffl1_cave"/>
   <property name="encounter" value="encounterset_level03_danger00_lowrate"/>
@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="112" height="82">
@@ -59,46 +59,6 @@
    </properties>
    <polygon points="-16,80 32,80 32,176 -16,176"/>
   </object>
-  <object id="63" name="room" type="Ceiling" x="1264" y="608">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="-16,80 64,80 64,208 -16,208"/>
-  </object>
-  <object id="64" name="room" type="Ceiling" x="1264" y="880">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="-16,96 64,96 64,208 -16,208"/>
-  </object>
-  <object id="65" name="room" type="Ceiling" x="1408" y="880">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="-16,96 64,96 64,208 -16,208"/>
-  </object>
-  <object id="66" name="room" type="Ceiling" x="1568" y="736">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="-32,96 64,96 64,208 -32,208"/>
-  </object>
-  <object id="68" name="room" type="Ceiling" x="1408" y="608">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="-16,32 64,32 64,208 -16,208"/>
-  </object>
-  <object id="69" name="tele" type="Event" x="1424" y="640" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world2/overworld.tmx', 41, 23, 'SOUTH')"/>
-   </properties>
-  </object>
   <object id="70" name="tele" type="Event" x="1024" y="256" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 38, 17, 'EAST')"/>
@@ -108,6 +68,46 @@
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 36, 24, 'WEST')"/>
    </properties>
+  </object>
+  <object id="72" name="room" type="Ceiling" x="976" y="624">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="-16,80 64,80 64,208 -16,208"/>
+  </object>
+  <object id="73" name="room" type="Ceiling" x="1120" y="624">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="-16,32 64,32 64,208 -16,208"/>
+  </object>
+  <object id="74" name="room" type="Ceiling" x="1280" y="752">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="-32,96 64,96 64,208 -32,208"/>
+  </object>
+  <object id="75" name="room" type="Ceiling" x="1120" y="896">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="-16,96 64,96 64,208 -16,208"/>
+  </object>
+  <object id="76" name="tele" type="Event" x="1136" y="656" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world2/overworld.tmx', 41, 23, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="77" name="room" type="Ceiling" x="976" y="896">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="-16,96 64,96 64,208 -16,208"/>
   </object>
  </objectgroup>
 </map>

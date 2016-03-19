@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   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
+   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
   </data>
  </layer>
  <layer name="Tile Layer 2" width="135" height="71">
@@ -24,13 +24,6 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="46" name="room" type="Ceiling" x="960" y="272">
-   <properties>
-    <property name="roofID" value="27"/>
-    <property name="roofTileset" value="lower"/>
-   </properties>
-   <polygon points="-16,48 80,48 80,160 -16,160"/>
-  </object>
   <object id="47" name="room" type="Ceiling" x="1136" y="112">
    <properties>
     <property name="roofID" value="27"/>
