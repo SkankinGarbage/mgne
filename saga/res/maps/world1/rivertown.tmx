@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="49" tilewidth="16" tileheight="16" nextobjectid="25">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="49" tilewidth="16" tileheight="16" nextobjectid="33">
  <properties>
   <property name="bgm" value="ffl3_town"/>
   <property name="name" value="River Town"/>
@@ -101,26 +101,6 @@
     <property name="onInteract" value="speak('Once in a while a shop might have a relic from Hero, but magical items are rare nowadays.')"/>
    </properties>
   </object>
-  <object id="14" type="Event" x="272" y="240" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/rivertown_interior.tmx', 4, 7)"/>
-   </properties>
-  </object>
-  <object id="15" type="Event" x="496" y="256" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/rivertown_interior.tmx', 30, 11)"/>
-   </properties>
-  </object>
-  <object id="16" type="Event" x="320" y="544" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/rivertown_interior.tmx', 10, 30)"/>
-   </properties>
-  </object>
-  <object id="17" type="Event" x="512" y="400" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/rivertown_interior.tmx', 28, 30)"/>
-   </properties>
-  </object>
   <object id="19" type="Event" x="160" y="656" width="448" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 31)"/>
@@ -154,5 +134,29 @@
     <property name="onInteract" value="speak('A man named David stopped by here a few weeks ago. I hear he had one of the four artifacts that unseal Hero!')"/>
    </properties>
   </object>
+  <object id="25" name="inn" type="Target" x="272" y="256" width="16" height="16"/>
+  <object id="26" name="tele" type="Event" x="272" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown_interior.tmx', 'inn')"/>
+   </properties>
+  </object>
+  <object id="27" name="tele" type="Event" x="496" y="256" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown_interior.tmx', 'shops')"/>
+   </properties>
+  </object>
+  <object id="28" name="shops" type="Target" x="496" y="272" width="16" height="16"/>
+  <object id="29" name="tele" type="Event" x="320" y="544" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown_interior.tmx', 'pub')"/>
+   </properties>
+  </object>
+  <object id="30" name="pub" type="Target" x="320" y="560" width="16" height="16"/>
+  <object id="31" name="tele" type="Event" x="512" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown_interior.tmx', 'house')"/>
+   </properties>
+  </object>
+  <object id="32" name="house" type="Target" x="512" y="416" width="16" height="16"/>
  </objectgroup>
 </map>

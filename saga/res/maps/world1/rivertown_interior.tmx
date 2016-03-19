@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="32" tilewidth="16" tileheight="16" nextobjectid="25">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="32" tilewidth="16" tileheight="16" nextobjectid="34">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="name" value="River Town"/>
@@ -23,31 +23,11 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="inn" type="Character" x="64" y="48" width="16" height="16">
+  <object id="1" name="innkeep" type="Character" x="64" y="48" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="inn()"/>
-   </properties>
-  </object>
-  <object id="2" type="Event" x="480" y="176" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/rivertown.tmx', 31, 17)"/>
-   </properties>
-  </object>
-  <object id="3" type="Event" x="448" y="480" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/rivertown.tmx', 32, 26)"/>
-   </properties>
-  </object>
-  <object id="4" type="Event" x="64" y="128" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/rivertown.tmx', 17, 16)"/>
-   </properties>
-  </object>
-  <object id="5" type="Event" x="160" y="480" width="16" height="16">
-   <properties>
-    <property name="onCollide" value="teleport('world1/rivertown.tmx', 20, 35)"/>
    </properties>
   </object>
   <object id="6" name="shop" type="Character" x="480" y="96" width="16" height="16">
@@ -151,6 +131,31 @@
     <property name="onInteract" value="speak('It\'s hard to hit monsters that are a lot faster than you. Agility is important.')"/>
    </properties>
   </object>
+  <object id="25" name="tele" type="Event" x="64" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown.tmx', 'inn')"/>
+   </properties>
+  </object>
+  <object id="26" name="inn" type="Target" x="64" y="112" width="16" height="16"/>
+  <object id="27" name="tele" type="Event" x="480" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown.tmx', 'shops')"/>
+   </properties>
+  </object>
+  <object id="28" name="shops" type="Target" x="480" y="160" width="16" height="16"/>
+  <object id="29" name="tele" type="Event" x="160" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown.tmx', 'pub')"/>
+   </properties>
+  </object>
+  <object id="30" name="pub" type="Target" x="160" y="464" width="16" height="16"/>
+  <object id="31" name="tele" type="Event" x="448" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown.tmx', 'house')"/>
+   </properties>
+  </object>
+  <object id="32" name="house" type="Target" x="448" y="464" width="16" height="16"/>
+  <object id="33" name="house" type="Target" x="448" y="464" width="16" height="16"/>
  </objectgroup>
  <layer name="Tile Layer 3" width="38" height="32">
   <properties>

@@ -28,6 +28,8 @@ import net.wombatrpgs.mgne.graphics.FacesAnimation;
 import net.wombatrpgs.mgne.graphics.FacesAnimationFactory;
 import net.wombatrpgs.mgne.maps.Level;
 import net.wombatrpgs.mgne.maps.MapMovable;
+import net.wombatrpgs.mgne.maps.objects.TimerListener;
+import net.wombatrpgs.mgne.maps.objects.TimerObject;
 import net.wombatrpgs.mgne.scenes.SceneParser;
 import net.wombatrpgs.mgne.scenes.StringSceneParser;
 import net.wombatrpgs.mgneschema.graphics.DirMDO;
@@ -372,13 +374,24 @@ public class MapEvent extends MapMovable implements	LuaConvertable, Turnable {
 		super.onMapFocusGained(map);
 		recalculateSwitchHidden();
 		if (onEnter != null && !isHidden()) {
-			MGlobal.levelManager.getTele().getPost().addListener(new FinishListener() {
-				@Override public void onFinish() {
-					if (!isHidden()) {
-						runScene(onEnter);
+			if (MGlobal.levelManager.getTele().isTeleporting()) {
+				MGlobal.levelManager.getTele().getPost().addListener(new FinishListener() {
+					@Override public void onFinish() {
+						if (!isHidden()) {
+							runScene(onEnter);
+						}
 					}
-				}
-			});
+				});
+			} else {
+				// there's probably some initialization jank going on
+				new TimerObject(0.0f, MGlobal.levelManager.getScreen(), new TimerListener() {
+					@Override public void onTimerZero(TimerObject source) {
+						if (!isHidden()) {
+							runScene(onEnter);
+						}
+					}
+				});
+			}
 		}
 	}
 

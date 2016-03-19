@@ -24,6 +24,7 @@ public class TeleportManager implements Queueable {
 	
 	protected TeleportSettingsMDO mdo;
 	protected StoredSceneParser preParser, postParser;
+	protected boolean teleporting;
 	
 	/**
 	 * Constructs teleport settings from data.
@@ -40,6 +41,9 @@ public class TeleportManager implements Queueable {
 	
 	/** @return The parser to play after a teleport */
 	public StoredSceneParser getPost() { return postParser; }
+	
+	/** @return True if a teleport is in progress */
+	public boolean isTeleporting() { return teleporting; }
 
 	/**
 	 * @see net.wombatrpgs.mgne.core.interfaces.Queueable#queueRequiredAssets
@@ -75,6 +79,7 @@ public class TeleportManager implements Queueable {
 	 */
 	public void teleport(String mapName, final int tileX, final int tileY,
 			final FinishListener listener, final FinishListener midListener) {
+		teleporting = true;
 		final Level map = MGlobal.levelManager.getLevel(mapName);
 		preParser.run();
 		preParser.addListener(new FinishListener() {
@@ -91,6 +96,7 @@ public class TeleportManager implements Queueable {
 				if (entryDir != null && !entryDir.isEmpty()) {
 					MGlobal.getHero().setFacing(OrthoDir.valueOf(entryDir));
 				}
+				teleporting = false;
 			};
 		});
 	}

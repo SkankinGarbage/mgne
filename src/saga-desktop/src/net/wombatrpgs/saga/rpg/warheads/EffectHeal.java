@@ -152,8 +152,10 @@ public class EffectHeal extends EffectAllyTarget {
 		boolean affected = false;
 		for (Chara victim : targets) {
 			Chara user = caller.getUser() == null ? victim : caller.getUser();
-			if (victim.heal(calcPower(user)) > 0) {
-				affected = true;
+			if (!victim.isDead()) {
+				if (victim.heal(calcPower(user)) > 0) {
+					affected = true;
+				}
 			}
 			Status status = victim.getStatus();
 			if (status != null && status.isContainedIn(mdo.heals)) {

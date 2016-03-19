@@ -509,9 +509,6 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	 * @return					The damage actually healed
 	 */
 	public int heal(int heal) {
-		if (isDead()) {
-			return 0;
-		}
 		int old = get(Stat.HP);
 		stats.add(Stat.HP, heal);
 		if (get(Stat.HP) > get(Stat.MHP)) {
