@@ -1,5 +1,5 @@
 ================================================================================
-= SAGA4 v. 20150213  -beta release v0.91-                                       =
+= SAGA4 v. 20150213  -public release v1.00-                                    =
 = running on MGNENGINE (https://github.com/psywombats/mgne)                    =
 = contact: aking (psy_wombats@wombatrpgs.net)                                  =
 ================================================================================
@@ -16,35 +16,30 @@ Start:                  enter, escape, or C
 Select:                 tab, or V
 Fullscreen:				F12
 
-You can also change the keybinds in-game from the options menu.
+You can also change the keybinds in-game from the options menu. Controllers are
+supported and can be configured at the same place.
 
 REPORTING PROBLEMS:
 If the game crashes or you encounter a problem, the game will attempt to send a
 bug report automatically. It would also be super if you send along error.log to
-me at psy_wombats@wombatrpgs.net or PM/FB/Skype/IRC/whatever.
-
-If you notice any balance issues, noncrashing bugs, graphical glitches, or have
-some other suggestion, that's welcome too! Send someone on the dev team your
-feedback and we'll turn it into an issue on the issue tracker.
-
+me at psy_wombats@wombatrpgs.net.
 
 
 OPTIONAL MANUAL:
 
 Background:
 
-Generations ago, the gates of the town of Hero opened to reveal a new world
-beyond. Learned scholars and foreign traders emerged from the gate, bearing new
-sciences and magical artifacts.
+Generations ago, a gate in the city of Hero opened to reveal a new world beyond.
+Scholars and traders emerged from the gate, bearing new sciences and magical
+artifacts.
 
-A year later, the world behind the gates changed. Hoards of monsters poured out
-of the gate and ransacked villages across the countryside. The wisemen from the
-gate were seen no more. In desperation, sages sealed the gates of Hero and left
-the town abandoned.
+A year later, the world behind the gate changed. Hoards of monsters poured out
+of the gate and ransacked the countryside. The wisemen from the gate were seen
+no more. In desperation, the gate was sealed and the town abandoned.
 
-The legend of the Gates of Hero were not forgotten. Dreaming of the world beyond
-the gates, many have sought the secret town of Hero, but none have returned.
-Now, another tale of adventure is about to begin...
+The legend of Hero was not forgotten. Dreaming of the world beyond the gate,
+many have sought the secret city of Hero, but none have returned. Now, another
+tale of adventure is about to begin...
 
 Party:
 
