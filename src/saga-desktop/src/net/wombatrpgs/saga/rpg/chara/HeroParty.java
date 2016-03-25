@@ -15,6 +15,7 @@ import net.wombatrpgs.saga.rpg.items.CollectableSet;
 import net.wombatrpgs.saga.rpg.items.CombatItem;
 import net.wombatrpgs.saga.rpg.items.PartyInventory;
 import net.wombatrpgs.sagaschema.rpg.chara.PartyMDO;
+import net.wombatrpgs.sagaschema.rpg.stats.Stat;
 
 /**
  * The player party. Contains four or five dauntless heroes.
@@ -67,7 +68,39 @@ public class HeroParty extends Party {
 		for (int i = 0; i < memory.charas.length; i += 1) {
 			CharaMemory charaMemory = memory.charas[i];
 			int groupIndex = memory.charaOrderIndices[i];
-			Chara chara = new Chara(charaMemory);
+			Chara chara = null;
+			if (groupIndex == -1) {
+				// shit this is busted save from v1.00
+				// this is a 5th party member who should've been removed
+				// replace them with the next member up
+				groupIndex = 4;
+				
+				String replacementKey = null;
+				if (charaMemory.name.equals("BORG")) {
+					replacementKey = "chara_david";
+				} else if (charaMemory.name.equals("David")) {
+					if (charaMemory.stats.stat(Stat.MHP) < 100) {
+						replacementKey = "chara_lara";
+					} else {
+						replacementKey = "chara_borg2";
+					}
+				} else if (charaMemory.name.equals("Lara")) {
+					replacementKey = "chara_zkauba";
+				} else if (charaMemory.name.equals("Zkauba")) {
+					replacementKey = "chara_david2";
+				} else if (charaMemory.name.equals("BORG Mk2")) {
+					replacementKey = "chara_jonas";
+				} else if (charaMemory.name.equals("Jonas")) {
+					replacementKey = "chara_janine";
+				} else {
+					MGlobal.reporter.err("Corrupted save loading couldn't load replacement for " + charaMemory.name);
+					return;
+				}
+				chara = new Chara(replacementKey);
+				
+			} else {
+				chara = new Chara(charaMemory);
+			}
 			assets.add(chara);
 			heroes.add(chara);
 			groups.get(groupIndex).add(chara);
@@ -137,6 +170,7 @@ public class HeroParty extends Party {
 	public void removeHero(Chara hero) {
 		assets.remove(hero);
 		members.remove(hero);
+		heroes.remove(hero);
 		List<Chara> toRemove = null;
 		for (List<Chara> group : groups) {
 			if (group.contains(hero)) {
