@@ -49,7 +49,7 @@
     <property name="onInteract" value="shop('shop_base')"/>
    </properties>
   </object>
-  <object id="141" name="room" type="Ceiling" x="368" y="352">
+  <object id="141" name="room" type="Ceiling" x="240" y="224">
    <properties>
     <property name="roofID" value="13"/>
     <property name="roofTileset" value="lower"/>

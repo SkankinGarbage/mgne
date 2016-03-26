@@ -79,7 +79,7 @@
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('Humans can't use mana to resist magical attacks, but at least we can wear lots of resistance-granting armors.')"/>
+    <property name="onInteract" value="speak('Humans can\'t use mana to resist magical attacks, but at least we can wear lots of resistance-granting armors.')"/>
    </properties>
   </object>
   <object id="172" name="npc" type="Character" x="352" y="432" width="16" height="16">

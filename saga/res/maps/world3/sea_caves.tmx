@@ -56,7 +56,7 @@
   <object id="72" name="chest" type="Chest" x="896" y="336" width="16" height="16"/>
   <object id="73" name="tele" type="Event" x="288" y="208" width="16" height="16">
    <properties>
-    <property name="onCollide" value="teleport('world3/overworld.tmx', 53, 21, 'SOUTH'); sceneSwitch('escaped_jail', true)"/>
+    <property name="onCollide" value="teleport('world3/overworld.tmx', 53, 21, 'SOUTH')"/>
    </properties>
   </object>
   <object id="74" name="tele" type="Event" x="944" y="224" width="16" height="16">

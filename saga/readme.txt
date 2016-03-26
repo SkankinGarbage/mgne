@@ -1,5 +1,5 @@
 ================================================================================
-= SAGA4 v. 20150213  -public release v1.00-                                    =
+= SAGA4 v. 20150213  -public release v1.03-                                    =
 = running on MGNENGINE (https://github.com/psywombats/mgne)                    =
 = contact: aking (psy_wombats@wombatrpgs.net)                                  =
 ================================================================================
