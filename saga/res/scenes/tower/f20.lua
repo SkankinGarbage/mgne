@@ -10,10 +10,10 @@ speak("Janine", "Stay back, " .. hero1 .. ".")
 pathEvent('hero', 'herosquare')
 wait(1.0)
 
-speak("Prince", "You're a fool, Jonas. That piece of EXCALIBER is fake. I couldn't care less if you destroy it.")
+speak("Prince", "You're a fool, Jonas. That piece of EXCALIBUR is fake. I couldn't care less if you destroy it.")
 speak("Jonas", "What? No... But you're too late.")
 speak("Jonas", hero1 .. " showed up and soon Aven and the brotherhood will be here to finish you off. And you still can't break Babel's seal.")
-speak("Prince", "Oh? I don't need EXCALIBER any more. I have MASAMUNE.")
+speak("Prince", "Oh? I don't need EXCALIBUR any more. I have MASAMUNE.")
 speak(hero1, "Janine! You wouldn't give it to him!")
 speak("Janine", "No need. I'll break the seal myself.")
 
@@ -27,7 +27,7 @@ face('janine', 'SOUTH')
 
 speak("Jonas", "Janine! You monster! What have you done?")
 speak("Janine", "I'm sorry you'll never understand, Jonas.")
-speak("Prince", "You've done well, Janine, but I'm afraid I have no more use for you. Say your prayers")
+speak("Prince", "You've done well, Janine, but I'm afraid I have no more use for you. Say your prayers!")
 speak("Jonas", "No!")
 
 walk('prince', 2, 'EAST', false)
