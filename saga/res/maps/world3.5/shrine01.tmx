@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="49" tilewidth="16" tileheight="16" nextobjectid="14">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="49" tilewidth="16" tileheight="16" nextobjectid="16">
  <properties>
   <property name="bgm" value="ffl2_ruins"/>
   <property name="encounter" value="encounterset_level07_danger00"/>
@@ -47,8 +47,6 @@
   <object id="11" name="door" type="Event" x="336" y="400" width="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_cryptKey')"/>
-    <property name="onInteract" value="speak('It\'s locked.')"/>
-    <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
   <object id="12" name="door" type="Event" x="464" y="400" width="16" height="16">
@@ -61,6 +59,18 @@
   <object id="13" name="chest" type="Chest" x="192" y="176" width="16" height="16">
    <properties>
     <property name="item" value="item_str48"/>
+   </properties>
+  </object>
+  <object id="14" name="tele" type="Event" x="336" y="400" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not hasItem('key_cryptKey')"/>
+    <property name="onCollide" value="teleport('world3.5/shrine03.tmx', 10, 27)"/>
+   </properties>
+  </object>
+  <object id="15" name="tele" type="Event" x="464" y="400" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not hasItem('key_cryptKey')"/>
+    <property name="onCollide" value="teleport('world3.5/shrine03.tmx', 22, 27)"/>
    </properties>
   </object>
  </objectgroup>
