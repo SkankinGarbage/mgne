@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="51" tilewidth="16" tileheight="16" nextobjectid="69">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="51" tilewidth="16" tileheight="16" nextobjectid="70">
  <properties>
   <property name="bgm" value="ffl3_dark"/>
   <property name="encounter" value="encounterset_level09_danger01"/>
@@ -102,6 +102,11 @@
    </properties>
   </object>
   <object id="68" name="block" type="Event" x="224" y="240" width="16" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="69" name="block" type="Event" x="416" y="112" width="32" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>

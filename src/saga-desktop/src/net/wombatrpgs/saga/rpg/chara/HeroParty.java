@@ -151,6 +151,15 @@ public class HeroParty extends Party {
 	}
 
 	/**
+	 * @see net.wombatrpgs.saga.rpg.chara.Party#innlikeHeal()
+	 */
+	@Override
+	public void innlikeHeal() {
+		super.innlikeHeal();
+		setLeaderAppearance();
+	}
+
+	/**
 	 * Adds a character to the party.
 	 * @param	hero			The character to add
 	 */
