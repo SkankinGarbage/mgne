@@ -551,7 +551,8 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	public CombatItem getRandomCombatItem() {
 		List<CombatItem> usable = new ArrayList<CombatItem>();
 		for (CombatItem item : getInventory().getItems()) {
-			if (item != null && item.isBattleUsable()) {
+			if (item != null && item.isBattleUsable() &&
+					(item.getUses() > 0 || item.isUnlimited())) {
 				usable.add(item);
 			}
 		}
