@@ -50,5 +50,8 @@ public class EventChestMDO extends EventMDO {
 	@Desc("Scene - plays after the chest is opened")
 	@FileLink("scenes")
 	public String scene;
-
+	
+	@Desc("Custom switch - switch name, or leave blank for autogen")
+	@Nullable
+	public String switchName;
 }

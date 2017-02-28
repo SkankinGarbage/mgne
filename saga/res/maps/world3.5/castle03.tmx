@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="43" tilewidth="16" tileheight="16" nextobjectid="27">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="43" tilewidth="16" tileheight="16" nextobjectid="31">
  <properties>
   <property name="bgm" value="ffl3_ruins"/>
   <property name="encounter" value="encounterset_level07_danger01"/>
@@ -57,5 +57,17 @@
   </object>
   <object id="23" name="corner1" type="Target" x="320" y="464" width="16" height="16"/>
   <object id="24" name="corner2" type="Target" x="304" y="464" width="16" height="16"/>
+  <object id="29" name="chest" type="Chest" x="288" y="208" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_white"/>
+    <property name="switchName" value="white1"/>
+   </properties>
+  </object>
+  <object id="30" name="chest" type="Chest" x="272" y="224" width="16" height="16">
+   <properties>
+    <property name="collectable" value="stone_earth"/>
+    <property name="switchName" value="earth1"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

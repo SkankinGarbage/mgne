@@ -12,7 +12,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2VQQoAIQhF6x6doF2X6L6zndPNpkDCoaxxjPiLByL8/IZocM4FAAAAABxFLFwklmrjhFZCKtwklmrThFZCZvhDK/XoCVKPs9pVj34QS487/uPu80jrab5/use6e7PT3cMr1N2bSczdjV5Osz9u7undqLV7Oe070+4Pzm8vp31n3uq0ea6H9i3LuR35K2uPo31Ye4BHAAAA4Bsem1kN+qAZAAA=
+   H4sIAAAAAAAAC+2VQQoAIQhF6x6doF2XmPvOdk43mwIJQ3NygviLByL8+opoCiEkAAAAABxFrtwkntVmg3aGUnlIPKstBu0MF4O2fxat1WMkaP5pPbNoV3mMArRvuzz+ofWexxVaq1fP90/3SPeI5x7+At0jLebuhpTzrI+be3o32t9SzvvOjHYf9SvlvO/M6J8+z9XQv7VzbjW92u1RW8duD/AIAAAArOEFZV+KRaAZAAA=
   </data>
  </layer>
  <layer name="Tile Layer 2" width="41" height="40">
@@ -53,6 +53,7 @@
   <object id="5" name="chest" type="Chest" x="464" y="224" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_water"/>
+    <property name="switchName" value="water1"/>
    </properties>
   </object>
  </objectgroup>
@@ -61,7 +62,7 @@
    <property name="z" value="1.0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WMQ0AAAgEsReCf51YYIEwtMl5uAQAAG7VMACADT4DgA8aCdYtw6AZAAA=
+   H4sIAAAAAAAAC+3WMQ0AAAgEsReCf51IYIIwtMl5uAQAAG7VEADAJr8BwAcNj2AGtaAZAAA=
   </data>
  </layer>
 </map>

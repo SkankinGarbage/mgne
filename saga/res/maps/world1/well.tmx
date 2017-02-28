@@ -72,6 +72,7 @@
   <object id="9" name="chest" type="Chest" x="224" y="112" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_earth"/>
+    <property name="switchName" value="earth1"/>
    </properties>
   </object>
   <object id="11" name="chest" type="Chest" x="176" y="128" width="16" height="16">
@@ -82,6 +83,7 @@
   <object id="12" name="chest" type="Chest" x="256" y="112" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_white"/>
+    <property name="switchName" value="white1"/>
    </properties>
   </object>
  </objectgroup>

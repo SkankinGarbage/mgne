@@ -68,8 +68,12 @@ public class EventChest extends MapEvent {
 			encounter.setFleeable(false);
 		}
 		
-		switchName = "chest_" + object.getLevel().getKeyName();
-		switchName += "(" + object.getTileX() + "," + object.getTileY() + ")";
+		if (mdoHasProperty(mdo.switchName)) {
+			switchName = mdo.switchName;
+		} else {
+			switchName = "chest_" + object.getLevel().getKeyName();
+			switchName += "(" + object.getTileX() + "," + object.getTileY() + ")";
+		}
 		
 		keyItem = (mdo.keyItem == KeyItemType.KEY_ITEM);
 		invisible = (mdo.visible == ChestInvisibilityType.INVISIBLE);
