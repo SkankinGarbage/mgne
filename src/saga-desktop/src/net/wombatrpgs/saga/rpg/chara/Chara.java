@@ -305,12 +305,28 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	}
 
 	/**
-	 * Checks if this character resists a certain damage or status type.
+	 * Checks if this character resists a certain damage or status type. Immune
+	 * characters also resist that damage.
 	 * @param	type			The damage or status to check
 	 * @return					True if this character resists that type
 	 */
 	public boolean resists(Resistable type) {
+		if (isImmuneTo(type)) {
+			return true;
+		}
 		for (Flag flag : type.getResistFlags()) {
+			if (is(flag)) return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * Checks if this character is immune to a certain damage or status.
+	 * @param	type			The damage or status to check
+	 * @return					True if this character is immune to that type
+	 */
+	public boolean isImmuneTo(Resistable type) {
+		for (Flag flag : type.getImmuneFlags()) {
 			if (is(flag)) return true;
 		}
 		return false;

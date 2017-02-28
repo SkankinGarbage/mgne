@@ -16,30 +16,30 @@ import net.wombatrpgs.sagaschema.rpg.stats.Flag;
  */
 public enum DamageType implements Resistable {
 	
-	PHYSICAL		(false,	EnumSet.of(Flag.RESIST_DAMAGE),							EnumSet.noneOf(Flag.class)),
-	WEAPON			(false,	EnumSet.of(Flag.RESIST_WEAPON, Flag.RESIST_DAMAGE),		EnumSet.noneOf(Flag.class)),
+	PHYSICAL		(EnumSet.noneOf(Flag.class),		EnumSet.of(Flag.RESIST_DAMAGE),							EnumSet.noneOf(Flag.class)),
+	WEAPON			(EnumSet.of(Flag.IMMUNE_WEAPON),	EnumSet.of(Flag.RESIST_WEAPON, Flag.RESIST_DAMAGE),		EnumSet.noneOf(Flag.class)),
 	
-	FIRE			(true,	EnumSet.of(Flag.RESIST_FIRE),							EnumSet.of(Flag.WEAK_FIRE)),
-	ICE				(true,	EnumSet.of(Flag.RESIST_ICE),							EnumSet.of(Flag.WEAK_ICE)),
-	EARTH			(true,	EnumSet.of(Flag.RESIST_EARTH),							EnumSet.of(Flag.WEAK_EARTH)),
-	THUNDER			(true,	EnumSet.of(Flag.RESIST_THUNDER),						EnumSet.of(Flag.WEAK_THUNDER)),
+	FIRE			(EnumSet.of(Flag.RESIST_FIRE),		EnumSet.noneOf(Flag.class),								EnumSet.of(Flag.WEAK_FIRE)),
+	ICE				(EnumSet.of(Flag.RESIST_ICE),		EnumSet.noneOf(Flag.class),								EnumSet.of(Flag.WEAK_ICE)),
+	EARTH			(EnumSet.noneOf(Flag.class),		EnumSet.of(Flag.RESIST_EARTH),							EnumSet.of(Flag.WEAK_EARTH)),
+	THUNDER			(EnumSet.noneOf(Flag.class),		EnumSet.of(Flag.RESIST_THUNDER),						EnumSet.of(Flag.WEAK_THUNDER)),
 	
-	NONELEMENTAL	(false,	EnumSet.of(Flag.RESIST_TYPELESS),						EnumSet.noneOf(Flag.class));
+	NONELEMENTAL	(EnumSet.noneOf(Flag.class),		EnumSet.of(Flag.RESIST_TYPELESS),						EnumSet.noneOf(Flag.class));
 	
-	private boolean fullResist;
+	private EnumSet<Flag> immuneFlags;
 	private EnumSet<Flag> resistFlags;
 	private EnumSet<Flag> weakFlags;
 	
 	/**
 	 * Internal enum constructor.
-	 * @param	fullResist		True if the damage can be fully negated
+	 * @param	immuneFlags		All flags that grant full immunity
 	 * @param	resistFlags		All flags that could be used to resist damage
 	 * @param	weakFlags		All flags that indicate weakness
 	 */
-	DamageType(boolean fullResist, EnumSet<Flag> resistFlags, EnumSet<Flag> weakFlags) {
+	DamageType(EnumSet<Flag> immuneFlags, EnumSet<Flag> resistFlags, EnumSet<Flag> weakFlags) {
 		this.resistFlags = resistFlags;
 		this.weakFlags = weakFlags;
-		this.fullResist = fullResist;
+		this.immuneFlags = immuneFlags;
 	}
 
 	/**
@@ -59,11 +59,11 @@ public enum DamageType implements Resistable {
 	}
 
 	/**
-	 * @see net.wombatrpgs.sagaschema.rpg.chara.data.Resistable#isNegateable()
+	 * @see net.wombatrpgs.sagaschema.rpg.chara.data.Resistable#getImmuneFlags()
 	 */
 	@Override
-	public boolean isNegateable() {
-		return fullResist;
+	public EnumSet<Flag> getImmuneFlags() {
+		return immuneFlags;
 	}
 	
 }

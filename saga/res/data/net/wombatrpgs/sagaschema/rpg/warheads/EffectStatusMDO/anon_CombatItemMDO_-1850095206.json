@@ -4,7 +4,7 @@
 	"name" : "anon_CombatItemMDO_-1850095206",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ENEMY",
-	"status" : "status_blind",
+	"status" : "status_confuse",
 	"hit" : 80,
 	"accStat" : "MANA",
 	"evadeStat" : "MANA"

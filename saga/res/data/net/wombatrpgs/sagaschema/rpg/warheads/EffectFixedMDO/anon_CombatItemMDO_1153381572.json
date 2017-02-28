@@ -25,8 +25,8 @@
 			"effects" : [ ]
 		}
 	],
-	"base" : 120,
-	"range" : 40,
+	"base" : 130,
+	"range" : 45,
 	"defenseStat" : "DEF",
 	"accuracy" : 70,
 	"accStat" : "STR",

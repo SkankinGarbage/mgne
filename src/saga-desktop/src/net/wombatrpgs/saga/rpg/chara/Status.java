@@ -51,14 +51,14 @@ public class Status implements Resistable {
 		return result;
 	}
 	
+	/** @see net.wombatrpgs.sagaschema.rpg.chara.data.Resistable#getImmuneFlags() */
+	@Override public EnumSet<Flag> getImmuneFlags() { return EnumSet.of(mdo.resistFlag); }
+	
 	/** @see net.wombatrpgs.sagaschema.rpg.chara.data.Resistable#getResistFlags() */
 	@Override public EnumSet<Flag> getResistFlags() { return EnumSet.of(mdo.resistFlag); }
 
 	/** @see net.wombatrpgs.sagaschema.rpg.chara.data.Resistable#getWeakFlags() */
 	@Override public EnumSet<Flag> getWeakFlags() { return EnumSet.noneOf(Flag.class); }
-	
-	/** @see net.wombatrpgs.sagaschema.rpg.chara.data.Resistable#isNegateable() */
-	@Override public boolean isNegateable() { return true; }
 	
 	/** @return The short display name for this status */
 	public String getTag() { return mdo.tag; }

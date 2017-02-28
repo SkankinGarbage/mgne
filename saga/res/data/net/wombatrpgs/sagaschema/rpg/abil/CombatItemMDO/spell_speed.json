@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$QSPEED",
-	"itemDescription" : "Boosts an ally's agility by 20",
+	"itemDescription" : "Boosts an ally's agility by 25",
 	"type" : "ITEM",
 	"uses" : 23,
 	"cost" : 48000,

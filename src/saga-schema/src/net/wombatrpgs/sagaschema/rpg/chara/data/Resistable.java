@@ -21,9 +21,19 @@ public interface Resistable {
 	 * and appropriate action taken. Return empty set for no possible resist.
 	 * Should return the most specific elements first, ie, prioritize element
 	 * resist over damage resist. This is useful for backwards correlation.
+	 * 
+	 * Resistances only partially block some of the damage.
+	 * 
 	 * @return					The stats that indicate resistance
 	 */
 	public EnumSet<Flag> getResistFlags();
+	
+	/**
+	 * Same as resistances, but these flags grant complete immunity.
+	 * 
+	 * @return					The stats that indicate immunity
+	 */
+	public EnumSet<Flag> getImmuneFlags();
 	
 	/**
 	 * Returns the flags that indicate a creature is weak to this effect, or
@@ -32,13 +42,5 @@ public interface Resistable {
 	 * @return					The stats that indicate weakness
 	 */
 	public EnumSet<Flag> getWeakFlags();
-	
-	/**
-	 * Checks if this damage type is fully resistable. Creatures that resist
-	 * this will take no damage or not be affects. Should return the most
-	 * specific elements first.
-	 * @return					True if the effect is fully negateable
-	 */
-	public boolean isNegateable();
 
 }

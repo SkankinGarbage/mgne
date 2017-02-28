@@ -1,0 +1,21 @@
+{
+	"key" : "abil_oweapon2",
+	"subfolder" : "resistances",
+	"name" : "",
+	"description" : "",
+	"abilityName" : "$LWEAPON2",
+	"itemDescription" : "Resists all weapon damage",
+	"type" : "ABILITY",
+	"uses" : 0,
+	"cost" : 0,
+	"anim" : "None",
+	"equip" : [ ],
+	"warhead" : {
+		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
+		"key" : "anon_CombatItemMDO_-1782736627"
+	},
+	"tier" : 0,
+	"robostats" : {
+		"stats" : [ ]
+	}
+}

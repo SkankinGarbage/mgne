@@ -4,8 +4,8 @@
 	"name" : "anon_CombatItemMDO_-836809086",
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "ALLY_PARTY",
-	"base" : 0,
-	"power" : 5,
+	"base" : 50,
+	"power" : 4,
 	"powerStat" : "MANA",
 	"heals" : [ ],
 	"useRestore" : "NO_USE_RESTORE"

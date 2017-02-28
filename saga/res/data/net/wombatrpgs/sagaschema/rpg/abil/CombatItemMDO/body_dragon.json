@@ -7,7 +7,7 @@
 	"itemDescription" : "Increases defense by 23 and resists fire and ice",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 45000,
+	"cost" : 49500,
 	"anim" : "None",
 	"equip" : [
 		"ARMOR"

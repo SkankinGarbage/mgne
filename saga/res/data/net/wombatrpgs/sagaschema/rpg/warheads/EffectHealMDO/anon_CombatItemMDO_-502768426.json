@@ -5,7 +5,8 @@
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "ALLY_PARTY",
 	"base" : 0,
-	"power" : 6,
+	"power" : 4,
 	"powerStat" : "MANA",
-	"heals" : [ ]
+	"heals" : [ ],
+	"useRestore" : "NO_USE_RESTORE"
 }

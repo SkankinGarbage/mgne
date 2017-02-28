@@ -5,7 +5,7 @@
 	"description" : "auto-generated anonymous polymorph",
 	"projector" : "SINGLE_ALLY",
 	"stat" : "AGI",
-	"power" : 20,
+	"power" : 25,
 	"powerStat" : null,
 	"cap" : 0
 }

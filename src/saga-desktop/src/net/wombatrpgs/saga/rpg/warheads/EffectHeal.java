@@ -20,6 +20,7 @@ import net.wombatrpgs.saga.rpg.items.CombatItem;
 import net.wombatrpgs.saga.screen.TargetSelectable;
 import net.wombatrpgs.saga.ui.CharaSelector.SelectionListener;
 import net.wombatrpgs.sagaschema.rpg.abil.data.UseRestoreType;
+import net.wombatrpgs.sagaschema.rpg.stats.Stat;
 import net.wombatrpgs.sagaschema.rpg.warheads.EffectHealMDO;
 
 /**
@@ -138,7 +139,10 @@ public class EffectHeal extends EffectAllyTarget {
 		if (mdo.powerStat != null) {
 			heal *= user.get(mdo.powerStat);
 		}
-		heal += mdo.base;
+		if (mdo.powerStat != Stat.MANA || user.getBase(Stat.MANA) > 0) {
+			// this prevents humans from healing a fixed amount with curative items despite 0 mana
+			heal += mdo.base;
+		}
 		return heal;
 	}
 	

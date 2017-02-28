@@ -7,9 +7,11 @@
 	"itemDescription" : "Increases defense by 20 and resists fire",
 	"type" : "ITEM",
 	"uses" : 0,
-	"cost" : 36200,
+	"cost" : 41200,
 	"anim" : "None",
-	"equip" : [ ],
+	"equip" : [
+		"HELMET"
+	],
 	"warhead" : {
 		"clazz" : "net.wombatrpgs.sagaschema.rpg.warheads.EffectPassiveMDO",
 		"key" : "anon_CombatItemMDO_-663407387"

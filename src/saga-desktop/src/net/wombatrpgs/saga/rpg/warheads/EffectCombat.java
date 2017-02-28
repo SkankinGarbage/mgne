@@ -116,13 +116,15 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 		} else {
 			// This attack may have damaged the victim
 			int damage = calcDamage(battle, power, victim);
-			if (resists(victim) && !effect(OffenseFlag.IGNORE_RESISTANCES)) {
-				if (mdo.damType.isNegateable()) {
+			if (!effect(OffenseFlag.IGNORE_RESISTANCES)) {
+				if (isImmune(victim)) {
 					battle.println(tab + victimname + " is resistant to " + itemname + ".");
 					damage = 0;
-				} else {
+				} else if (resists(victim)) {
+					battle.println(tab + victimname + " is resistant to " + itemname + ".");
 					damage /= 2;
 				}
+				
 			}
 			if (damage > 0) {
 				battle.damagePlayback(victim, damage);
@@ -265,12 +267,21 @@ public abstract class EffectCombat extends EffectEnemyTarget {
 	}
 	
 	/**
-	 * Checks if the target resists this effect.
+	 * Checks if the target resists this effect. Immune charas also resist.
 	 * @param	target			The target to check
 	 * @return					True if the target is resistant, else false
 	 */
 	protected boolean resists(Chara target) {
-		return target.resists(mdo.damType);
+		return target.resists(mdo.damType); 
+	}
+	
+	/**
+	 * Checks if the target is immune to this effect.
+	 * @param	target			The target to check
+	 * @return					True if the target is immune
+	 */
+	protected boolean isImmune(Chara target) {
+		return target.isImmuneTo(mdo.damType);
 	}
 	
 	/**

@@ -18,6 +18,7 @@ public enum Flag implements FlagStatLinkable {
 	
 	RESIST_DAMAGE,
 	RESIST_WEAPON,
+	IMMUNE_WEAPON,
 	
 	RESIST_BLIND,
 	RESIST_CURSE,
