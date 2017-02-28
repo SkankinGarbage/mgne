@@ -14,6 +14,7 @@
 	"meatDropChance" : 100,
 	"gp" : 9999,
 	"loot" : "shoe_dragon",
+	"deathAnim" : "banim_sink",
 	"lootDropChance" : 100,
 	"equipped" : [
 		"abil_2horn",

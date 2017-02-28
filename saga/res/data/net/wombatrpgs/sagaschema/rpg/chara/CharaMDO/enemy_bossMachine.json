@@ -14,6 +14,7 @@
 	"meatDropChance" : 0,
 	"gp" : 5000,
 	"loot" : "wpn_cannonRocket",
+	"deathAnim" : "banim_sink",
 	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_bash",

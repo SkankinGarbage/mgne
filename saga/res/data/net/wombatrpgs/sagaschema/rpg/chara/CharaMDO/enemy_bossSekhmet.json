@@ -11,8 +11,11 @@
 	"portrait" : "battle_portraits/sekhmet.png",
 	"meatEatLevel" : 12,
 	"meatTargetLevel" : 15,
+	"meatDropChance" : 0,
 	"gp" : 7800,
 	"loot" : "None",
+	"deathAnim" : "banim_sink",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_cgaze",
 		"abil_bite",

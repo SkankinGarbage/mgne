@@ -1,0 +1,8 @@
+{
+	"key" : "shader_sink",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"vertexFile" : "sink.vert",
+	"fragmentFile" : "sink.frag"
+}

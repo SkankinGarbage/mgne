@@ -11,8 +11,11 @@
 	"portrait" : "battle_portraits/boss_fenrir.png",
 	"meatEatLevel" : 5,
 	"meatTargetLevel" : 5,
+	"meatDropChance" : 0,
 	"gp" : 1200,
 	"loot" : "None",
+	"deathAnim" : "banim_sink",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_kick",
 		"abil_ice",

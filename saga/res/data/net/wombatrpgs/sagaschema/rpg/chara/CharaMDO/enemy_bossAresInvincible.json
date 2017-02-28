@@ -11,8 +11,11 @@
 	"portrait" : "battle_portraits/boss_ares.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 11,
+	"meatDropChance" : 0,
 	"gp" : 0,
 	"loot" : "None",
+	"deathAnim" : "banim_sink",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"special_aresSpear",
 		"special_aresQuake",

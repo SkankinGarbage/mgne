@@ -14,12 +14,14 @@
 	"meatDropChance" : 0,
 	"gp" : 2800,
 	"loot" : "wpn_gunShock",
+	"deathAnim" : "None",
 	"lootDropChance" : 0,
 	"equipped" : [
 		"wpn_gunLMG",
 		"wpn_gunShock",
 		"abil_dbeam",
-		"abil_othunder"
+		"abil_oice",
+		"abil_xthunder"
 	],
 	"stats" : {
 		"hp" : 606,

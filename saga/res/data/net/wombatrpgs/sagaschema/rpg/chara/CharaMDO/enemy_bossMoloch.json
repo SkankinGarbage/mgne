@@ -14,6 +14,7 @@
 	"meatDropChance" : 25,
 	"gp" : 9000,
 	"loot" : "None",
+	"deathAnim" : "banim_sink",
 	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_pstorm",

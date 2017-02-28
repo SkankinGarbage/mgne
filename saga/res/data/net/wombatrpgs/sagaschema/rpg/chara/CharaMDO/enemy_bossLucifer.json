@@ -14,6 +14,7 @@
 	"meatDropChance" : 0,
 	"gp" : 9999,
 	"loot" : "None",
+	"deathAnim" : "banim_sink",
 	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_light",

@@ -1,0 +1,10 @@
+{
+	"key" : "banim_sink",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"sound" : "ffl1_31_rumble.wav",
+	"shader" : "shader_sink",
+	"duration" : 5.0,
+	"scope" : "PORTRAIT"
+}

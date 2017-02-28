@@ -11,8 +11,11 @@
 	"portrait" : "battle_portraits/boss_ares.png",
 	"meatEatLevel" : 11,
 	"meatTargetLevel" : 11,
+	"meatDropChance" : 0,
 	"gp" : 7200,
 	"loot" : "None",
+	"deathAnim" : "banim_sink",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_spear",
 		"abil_spear",

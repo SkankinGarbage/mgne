@@ -11,8 +11,11 @@
 	"portrait" : "battle_portraits/psi.png",
 	"meatEatLevel" : 4,
 	"meatTargetLevel" : 4,
+	"meatDropChance" : 0,
 	"gp" : 1800,
 	"loot" : "body_silver",
+	"deathAnim" : "banim_sink",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"wpn_gunMagnum",
 		"abil_opara"
