@@ -207,6 +207,9 @@ public class Chara extends AssetQueuer implements Disposable, LuaConvertable {
 	/** @return The percent chance of dropping loot, or 0 for default */
 	public int getLootDropChance() { return mdo.lootDropChance == null ? 0 : mdo.lootDropChance; }
 	
+	/** @return The death anim of the dying character, or null for default */
+	public String getDeathAnimKey() { return MapThing.mdoHasProperty(mdo.deathAnim) ? mdo.deathAnim : null; }
+	
 	/**
 	 * @see net.wombatrpgs.mgne.core.lua.LuaConvertable#toLua()
 	 */

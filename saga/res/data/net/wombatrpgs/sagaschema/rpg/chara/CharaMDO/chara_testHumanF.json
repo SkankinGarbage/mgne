@@ -14,9 +14,9 @@
 	"meatDropChance" : 0,
 	"gp" : 0,
 	"loot" : "None",
-	"lootDropChance" : 0,
+	"lootDropChance" : 1,
 	"equipped" : [
-		"wpn_legendEmperor",
+		"wpn_rapier",
 		"abil_esp"
 	],
 	"stats" : {

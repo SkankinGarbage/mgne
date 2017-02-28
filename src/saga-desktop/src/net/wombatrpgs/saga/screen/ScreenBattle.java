@@ -441,8 +441,18 @@ public class ScreenBattle extends SagaScreen {
 		shapes.end();
 		for (int i = 0 ; i < groups; i += 1) { 
 			List<Chara> group = enemy.getGroup(i);
-			if (group.size() == 0) continue;
-			if (!battle.isEnemyAlive(i) && !deathTimers.containsKey(i)) continue;
+			if (group.size() == 0) {
+				continue;
+			}
+			PortraitAnim anim = animsOnGroups.get(i);
+			if (anim != null && anim.isDone()) {
+				animsOnGroups.remove(i);
+				anim.dispose();
+				anim = null;
+			}
+			if (!battle.isEnemyAlive(i) && !deathTimers.containsKey(i) && anim == null) {
+				continue;
+			}
 			
 			Graphic portrait = enemy.getFront(i).getPortrait();
 			if (portrait == null) continue;
@@ -469,7 +479,6 @@ public class ScreenBattle extends SagaScreen {
 						renderY + (portrait.getHeight() - cursor.getHeight()) / 2);
 			}
 			
-			PortraitAnim anim = animsOnGroups.get(i);
 			if (anim != null) {
 				anim.renderAt(enemyBatch,
 						renderX + portrait.getWidth() / 2,
@@ -828,7 +837,15 @@ public class ScreenBattle extends SagaScreen {
 	 * @param	index			The index of the group to animate dying
 	 */
 	public void immediateAnimateDeath(int index) {
-		deathTimers.put(index, DEATH_DURATION);
+		Chara victim = battle.getEnemy().getFront(index);
+		if (victim.getDeathAnimKey() != null) {
+			BattleAnimMDO animMDO = MGlobal.data.getEntryFor(victim.getDeathAnimKey(), BattleAnimMDO.class);
+			PlayAnim anim = new PlayAnim(this, animMDO, battle.getEnemy().getGroup(index));
+			playbackQueue.add(0, anim);
+			anim.start();
+		} else {
+			deathTimers.put(index, DEATH_DURATION);
+		}
 	}
 	
 	/**

@@ -5,7 +5,7 @@ precision mediump float;
 varying vec4 v_color; 
 varying vec2 v_texCoords; 
 uniform sampler2D u_texture;
-uniform float u_elapsedRatio;
+uniform float u_elapsed;
 
 void main() {
 	float prime = 104729.0;

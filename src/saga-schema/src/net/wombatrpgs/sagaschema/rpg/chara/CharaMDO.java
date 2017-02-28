@@ -15,6 +15,7 @@ import net.wombatrpgs.mgns.core.Annotations.Nullable;
 import net.wombatrpgs.mgns.core.Annotations.Path;
 import net.wombatrpgs.mgns.core.Annotations.SchemaLink;
 import net.wombatrpgs.mgns.core.MainSchema;
+import net.wombatrpgs.sagaschema.graphics.banim.data.BattleAnimMDO;
 import net.wombatrpgs.sagaschema.rpg.abil.CombatItemMDO;
 import net.wombatrpgs.sagaschema.rpg.chara.data.Gender;
 import net.wombatrpgs.sagaschema.rpg.chara.data.Race;
@@ -76,6 +77,11 @@ public class CharaMDO extends MainSchema {
 	@SchemaLink(CombatItemMDO.class)
 	@Nullable
 	public String loot;
+	
+	@Desc("Death animation - played on death, null for default")
+	@SchemaLink(BattleAnimMDO.class)
+	@Nullable
+	public String deathAnim;
 	
 	@Desc("Percent out of 100 chance of dropping loot - 0 to use default")
 	@DefaultValue("0")

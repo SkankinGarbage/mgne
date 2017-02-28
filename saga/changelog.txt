@@ -1,0 +1,22 @@
+v1.20
+
+Balance:
+  - Buffed the SPEED staff (bigger agi boost)
+  - Heavily nerfed the HEAL staff (not as heavily influence by mana, it was
+    previously healing about twice what it should've been)
+  - Increased the price of the DRAGON helm, SAMURAI guantlet, and DRAGON body
+    (the resistances they offer are substantial)
+  - Buffed the EXIT spell (hits more often)
+  - Tweaked the HEAL spell (it was previously worse than the more mundane staff)
+  - Tweaked the BAND helm (it offers a bit less defense but true to its SaGa1
+    counterpart, it confers O-PARA)
+  - Buffed the NUKE spell
+  - Buffed the LASER bow
+  - Buffed the PETRIFY hammer
+  - Buffed the GREAT bow
+  - Buffed the LMG gun
+  - Buffed the TANK gun
+  - Buffed the armored beetle class of monsters (better physical tanking)
+  - O-ALL no longer includes phys damage resist (it was previously the only
+    available to players and made mutants that stumbled on it invincible)
+  - Corrected the description of O-PARA (it doesn't actually confer O-STONE)

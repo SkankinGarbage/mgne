@@ -1,0 +1,10 @@
+{
+	"key" : "banim_split",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"sound" : "ffl1_22_hum.wav",
+	"shader" : "shader_split",
+	"duration" : 5.0,
+	"scope" : "ENEMY_AREA"
+}

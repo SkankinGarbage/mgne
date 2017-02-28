@@ -1,0 +1,8 @@
+{
+	"key" : "shader_split",
+	"subfolder" : "",
+	"name" : "",
+	"description" : "",
+	"vertexFile" : "split.vert",
+	"fragmentFile" : "split.frag"
+}

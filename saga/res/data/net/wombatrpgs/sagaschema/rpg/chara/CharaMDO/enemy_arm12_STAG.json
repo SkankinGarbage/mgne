@@ -20,7 +20,8 @@
 		"abil_shell",
 		"abil_horn",
 		"abil_saw",
-		"abil_xice"
+		"abil_xice",
+		"abil_oweapon2"
 	],
 	"stats" : {
 		"hp" : 606,

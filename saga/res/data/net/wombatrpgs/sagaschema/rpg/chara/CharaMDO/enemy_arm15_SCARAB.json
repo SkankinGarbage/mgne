@@ -17,13 +17,13 @@
 	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_bite",
-		"abil_shell",
 		"abil_acid",
 		"abil_bash",
+		"abil_saw",
 		"abil_revive",
 		"abil_teleport",
-		"abil_opoison",
-		"abil_oweapon"
+		"abil_ostone",
+		"abil_oweapon2"
 	],
 	"stats" : {
 		"hp" : 666,

@@ -11,8 +11,10 @@
 	"portrait" : "battle_portraits/arm.png",
 	"meatEatLevel" : 10,
 	"meatTargetLevel" : 9,
+	"meatDropChance" : 0,
 	"gp" : 1200,
 	"loot" : "None",
+	"lootDropChance" : 0,
 	"equipped" : [
 		"abil_horn",
 		"abil_shell",
@@ -23,7 +25,7 @@
 		"hp" : 330,
 		"mhp" : 330,
 		"str" : 52,
-		"def" : 45,
+		"def" : 60,
 		"agi" : 45,
 		"mana" : 48,
 		"flags" : [ ]

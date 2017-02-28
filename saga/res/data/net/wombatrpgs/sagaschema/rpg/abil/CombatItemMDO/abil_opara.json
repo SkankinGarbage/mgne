@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$LPARALYZE",
-	"itemDescription" : "Resists sleep, paralysis, stone, and death",
+	"itemDescription" : "Resists sleep, paralysis, and death",
 	"type" : "ABILITY",
 	"uses" : 0,
 	"cost" : 0,

@@ -4,7 +4,7 @@
 	"name" : "",
 	"description" : "",
 	"abilityName" : "$FBAND",
-	"itemDescription" : "Increases defense by 25",
+	"itemDescription" : "Increases defense by 20 and resists para",
 	"type" : "ITEM",
 	"uses" : 0,
 	"cost" : 1,
