@@ -46,7 +46,7 @@
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onBehavior" value="this.wander()"/>
-    <property name="onInteract" value="speak('hi my name is bort the bozo and I like to talk to myself an awful lot')"/>
+    <property name="onInteract" value="speak('Dreaming of the world beyond the gates, many have sought the secret town of Hero, but none have returned. Now, another tale of adventure is about to begin... ')"/>
    </properties>
   </object>
   <object id="2" name="teleport" type="Event" x="304" y="112" width="16" height="16">

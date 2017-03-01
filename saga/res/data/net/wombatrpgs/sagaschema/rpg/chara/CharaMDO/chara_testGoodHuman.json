@@ -1,0 +1,21 @@
+{
+	"key" : "chara_testGoodHuman",
+	"subfolder" : "test",
+	"name" : null,
+	"description" : null,
+	"gender" : null,
+	"race" : null,
+	"family" : null,
+	"species" : null,
+	"appearance" : null,
+	"portrait" : null,
+	"meatEatLevel" : null,
+	"meatTargetLevel" : null,
+	"meatDropChance" : null,
+	"gp" : null,
+	"loot" : null,
+	"deathAnim" : null,
+	"lootDropChance" : null,
+	"equipped" : null,
+	"stats" : null
+}

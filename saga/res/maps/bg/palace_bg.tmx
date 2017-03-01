@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="50" tilewidth="16" tileheight="16" nextobjectid="227">
+ <properties>
+  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="name" value="Grand Palace"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer name="Tile Layer 1" width="57" height="50">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2Wyw2DMAyGQeJSbr0xBBPAFhy6/ygVEpasv34EophHY8lqSQzOF9txmqZKlSpVqlSpUqVKrrSgTxPkeyLn0xk1vidxrhxz88tGY3eXlaFvfvl6+L2rEMOrsTmvlrNebUnaC/8t9jPrV8s7j8vL1yNakpF02jSFc/2dM5jIFz+3SjOu/j6bpsbFy03rXfLF97QkY2/wefVl8Xnvos+SjC+Bj681NSelevXejWKkOOaeNVLcvHhGMaIv5JhgfAYb4pDuPdxuEr4dyXik3vbG2tMoxpz+dkS5vwhGqXa6BB03TbG1/JVm1M4GWtsiKI0T4+LYduAPz9ySjNbZV4pRqouSjFYPozWOgnaJYyP7jlX3JRm5Iq/E2AJPq4xpjFreRDGiXykmRxhHsJU4SzJa/QLPTr52L1fR9sx6lPzRs8f4ZjZvx7ZTfEXnqhdHjNnAbAbHFuMYwYh9PKWH56p3X4hklHqc1vMq43UZpZrSaszaE5zHfom20Yx7nq/MyH0vyjPvC9q8F+vUvDiTcTDsiQF7ATJK8xGMe+tOm9cY+J5oe8DvEaUYrb4sMUrzOYz8HnFHRuk+rn37Drl6RCP741W0yn/JF6YjKECILAAA
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="57" height="50">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3WwQ6CMAwGYKc39SZHeRevvrEP4FF5E28+gONAbJrBCqysg/9LliBplrUdbrsdAAAAAAB0vrkXAABQgGdgpJrLindgxDyEc0HZLO1TrbU0inOPJflmXhPntZSnli7PtVv6vzV0Dlo8y+ZoImMJ2rVs8wid99LzunL/54vrjxuivXfnzl+TvK4Tc8yt7U2VYO1D8+T+7tve1GxtN0HOPCY0T8fiHfYuyFESY5Wkh2Njc+9Vbkx/pLEW9yqUw/l9tvfj4PqfS3f0OZz8OLv+562J9ZrfAWhMqnuGtliv+R2AxgzdD1KgNeT1D9WXviul/rSGvP6h+tJ32vW36sN+l9LrObbaawBYlx9NiMqLiCwAAA==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="201" name="room" type="Ceiling" x="272" y="576">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,16 144,16 144,80 80,80 80,112 64,112 64,80 0,80"/>
+  </object>
+  <object id="202" name="room" type="Ceiling" x="464" y="576">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,48 112,48 112,176 0,176"/>
+  </object>
+  <object id="203" name="room" type="Ceiling" x="512" y="400">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,48 96,48 96,176 0,176"/>
+  </object>
+  <object id="204" name="room" type="Ceiling" x="320" y="400">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,48 96,48 96,176 0,176"/>
+  </object>
+  <object id="205" name="room" type="Ceiling" x="400" y="400">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="32,48 96,48 96,176 32,176"/>
+  </object>
+  <object id="206" name="room" type="Ceiling" x="336" y="608">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="32,48 112,48 112,144 32,144"/>
+  </object>
+  <object id="207" name="room" type="Ceiling" x="144" y="608">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="32,-16 80,-16 80,48 176,48 176,144 32,144"/>
+  </object>
+  <object id="208" name="room" type="Ceiling" x="576" y="544">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,48 160,48 160,208 0,208"/>
+  </object>
+  <object id="209" name="u1" type="Target" x="432" y="544" width="16" height="16"/>
+  <object id="210" name="tele" type="Event" x="432" y="560" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'u1')"/>
+   </properties>
+  </object>
+  <object id="211" name="u2" type="Target" x="480" y="544" width="16" height="16"/>
+  <object id="212" name="tele" type="Event" x="480" y="560" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'u2')"/>
+   </properties>
+  </object>
+  <object id="213" name="tele" type="Event" x="704" y="704" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 't')"/>
+   </properties>
+  </object>
+  <object id="214" name="t" type="Target" x="704" y="688" width="16" height="16"/>
+  <object id="215" name="v" type="Target" x="336" y="656" width="16" height="16"/>
+  <object id="216" name="tele" type="Event" x="336" y="672" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'v')"/>
+   </properties>
+  </object>
+  <object id="217" name="spellbook" type="Chest" x="432" y="688" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_tent"/>
+   </properties>
+  </object>
+  <object id="218" name="crystal" type="Event" x="496" y="688" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="play('tower/crystal.lua')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="219" type="Encounter" x="416" y="288">
+   <properties>
+    <property name="mdo" value="encounterset_level12_danger02"/>
+   </properties>
+   <polygon points="192,304 192,160 -96,160 -96,304 -240,304 -240,464 320,464 320,304"/>
+  </object>
+  <object id="220" name="aven" type="Character" x="464" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_aven"/>
+    <property name="hide" value="return getSwitch('aven_dead')"/>
+    <property name="onInteract" value="play('world5/boss01.lua')"/>
+   </properties>
+  </object>
+  <object id="221" name="block" type="Event" x="416" y="192" width="32" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="222" name="block" type="Event" x="480" y="192" width="32" height="16">
+   <properties>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="224" name="zkauba" type="Character" x="448" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_zkauba"/>
+    <property name="hide" value="return not getSwitch('brotherhood_final')"/>
+   </properties>
+  </object>
+  <object id="225" name="lara" type="Character" x="480" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_lara"/>
+    <property name="hide" value="return not getSwitch('brotherhood_final')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Tile Layer 3" width="57" height="50">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAPgOtCg2ziCwAAA==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="57" height="50">
+  <properties>
+   <property name="z" value="2.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+2ajWrDMAyE84x7liZ+/VFWMyFO8slWmDzyQSlzMuXki3+U9Dju47oxdhXa5/s8fvI9P3+//kZOCiPf3jk20HaCc70Ymczca6f6biKOzE/H1rmPtKzmKq8nY3k5R/tD53QZMWa0sFhjRvefpUHq8PT3du3/qhav/WUc8+YJdg5BeTTQlq3FGwc6brQ/ImOm3awFHUfzfESD5DLa9P+i+C1BC8rzAG3WeayGfg4al7LNuo7W0ozrMWuw1z8oZ0+Dda5Ezjmo/0ZaGG+8NXi0Po/WtEwytDD3d6Q/2PzlfdpjZGtB15KxvOuMjs3uSz0t+tqMFr0GI13W2r6qQcNqke2MN9J7tL9a1RDhDi0oPorX14eIhrvno4iWA5yD9lfZNU0WjDfomKRyLc96Y+37UU1QjV29YYl44+0f/0NfdLyc0HOKCsx649WrFWG9Ycdt5eeFjDde3Vc1t4g3vb7q6D115ft2xZtq8wsi4o1XZ+2wl5OMvIns3ysQ8Wb3/RDrTeTZdxUyvKm6ZkhYbzLeBVRi9V1AJWa92al23NWbKMwzVMSOtSP7O4OdasfO7LvrquPPgn2XjNildkTsptdjl1p3harzxMPDwwPDV8HPk+Mv34ZdgpqILAAA
+  </data>
+ </layer>
+</map>
