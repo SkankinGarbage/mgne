@@ -459,7 +459,7 @@ public class ScreenBattle extends SagaScreen {
 			if (deathTimers.containsKey(i)) {
 				deathShader.begin();
 				enemyBatch.setShader(deathShader);
-				deathShader.setUniformf("u_elapsedRatio",
+				deathShader.setUniformf("u_elapsed",
 						1f - (deathTimers.get(i) / DEATH_DURATION));
 			}
 			float renderX = globalX + (win.getViewportWidth() - portrait.getWidth()*groups) *

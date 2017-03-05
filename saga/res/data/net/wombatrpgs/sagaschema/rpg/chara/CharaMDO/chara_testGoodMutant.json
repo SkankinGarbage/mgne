@@ -1,13 +1,13 @@
 {
-	"key" : "chara_testGoodHuman",
+	"key" : "chara_testGoodMutant",
 	"subfolder" : "test",
-	"name" : "Faye",
+	"name" : "Eitar",
 	"description" : "",
 	"gender" : "FEMALE",
 	"race" : "HUMAN",
 	"family" : "None",
 	"species" : "",
-	"appearance" : "4dir_human_f",
+	"appearance" : "4dir_mutant_m",
 	"portrait" : "None",
 	"meatEatLevel" : 0,
 	"meatTargetLevel" : 0,
@@ -17,22 +17,22 @@
 	"deathAnim" : "None",
 	"lootDropChance" : 0,
 	"equipped" : [
-		"wpn_swordRune",
-		"wpn_swordRevenge",
-		"wpn_gunVulcan",
-		"shield_samurai",
-		"body_diamond",
-		"hand_giant",
-		"helm_silver",
-		"ring_shades"
+		"abil_mirror",
+		"abil_warning",
+		"abil_dfang",
+		"abil_quake",
+		"wpn_knifePsi",
+		"spell_cure2",
+		"spell_flare",
+		"body_dragon"
 	],
 	"stats" : {
-		"hp" : 598,
-		"mhp" : 598,
-		"str" : 74,
-		"def" : 0,
-		"agi" : 48,
-		"mana" : 0,
+		"hp" : 409,
+		"mhp" : 409,
+		"str" : 32,
+		"def" : 12,
+		"agi" : 62,
+		"mana" : 71,
 		"flags" : [ ]
 	}
 }

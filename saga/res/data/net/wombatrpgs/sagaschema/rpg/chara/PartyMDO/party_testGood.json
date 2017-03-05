@@ -1,0 +1,28 @@
+{
+	"key" : "party_testGood",
+	"subfolder" : "test",
+	"name" : "",
+	"description" : "",
+	"members" : [
+		{
+			"monster" : "chara_testGoodHuman",
+			"count" : 1
+		},
+		{
+			"monster" : "chara_testGoodRobot",
+			"count" : 1
+		},
+		{
+			"monster" : "enemy_goo10_PUDDING",
+			"count" : 1
+		},
+		{
+			"monster" : "chara_testGoodMutant",
+			"count" : 1
+		},
+		{
+			"monster" : "chara_jonas",
+			"count" : 1
+		}
+	]
+}
