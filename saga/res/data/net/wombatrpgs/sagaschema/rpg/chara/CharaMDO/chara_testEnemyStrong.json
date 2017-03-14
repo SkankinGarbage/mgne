@@ -17,11 +17,11 @@
 	"deathAnim" : "banim_split",
 	"lootDropChance" : 0,
 	"equipped" : [
-		"abil_quake"
+		"abil_horn"
 	],
 	"stats" : {
-		"hp" : 1,
-		"mhp" : 1,
+		"hp" : 10000,
+		"mhp" : 10000,
 		"str" : 80,
 		"def" : 10,
 		"agi" : 1,

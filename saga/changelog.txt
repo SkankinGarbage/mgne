@@ -20,3 +20,14 @@ Balance:
   - O-ALL no longer includes phys damage resist (it was previously the only
     available to players and made mutants that stumbled on it invincible)
   - Corrected the description of O-PARA (it doesn't actually confer O-STONE)
+
+Graphics:
+  - New defeat animations for all bosses
+
+RPG:
+  - It's now possible to retrieve the elemental stones hidden in world 1 when
+    revisiting it after world 3
+
+Bugfix:
+   - Attempt to fix a save corruption issue caused by removing 5th party members
+   - Interiors in Ermengarde no longer crash

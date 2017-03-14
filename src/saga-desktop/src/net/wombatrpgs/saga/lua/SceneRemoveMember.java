@@ -30,8 +30,13 @@ public class SceneRemoveMember extends ZeroArgFunction {
 
 			@Override protected void internalRun() {
 				if (SGlobal.heroes.size() == 5) {
-					Chara hero = SGlobal.heroes.getFront(4);
+					// this is the source of some save corruption, we need to make sure he's gone
+					Chara hero = SGlobal.heroes.getStoryHero(4);
 					SGlobal.heroes.removeHero(hero);
+					if (SGlobal.heroes.size() == 5) {
+						MGlobal.reporter.err("Removal failed for hero " + hero);
+						SGlobal.heroes.removeHero(SGlobal.heroes.getFront(4));
+					}
 				} else {
 					MGlobal.reporter.warn("Tried to remove permanent member!");
 				}

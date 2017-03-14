@@ -685,7 +685,7 @@ public class Battle extends AssetQueuer implements Disposable {
 	 * @return					The chance of escape, 0=never 1=always
 	 */
 	protected float calcRunChance() {
-		return .5f;
+		return 1.0f;
 	}
 	
 	/**

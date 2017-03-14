@@ -123,6 +123,7 @@ public class PostReporter implements Reporter {
 	 */
 	@Override
 	public void warn(String warning) {
+		System.err.println(warning);
 		errLog.println(warning);
 		errLog.flush();
 	}

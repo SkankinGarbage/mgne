@@ -179,7 +179,10 @@ public class HeroParty extends Party {
 	public void removeHero(Chara hero) {
 		assets.remove(hero);
 		members.remove(hero);
-		heroes.remove(hero);
+		boolean removed = heroes.remove(hero);
+		if (!removed) {
+			System.out.println();
+		}
 		List<Chara> toRemove = null;
 		for (List<Chara> group : groups) {
 			if (group.contains(hero)) {
@@ -221,12 +224,15 @@ public class HeroParty extends Party {
 	 * Dead heroes should be put in the back.
 	 */
 	public void reorderDeadHeroes() {
-		List<Chara> oldHeroes = new ArrayList<Chara>();
-		for (Chara hero : oldHeroes) {
-			if (hero.isDead()) {
-				insert(hero, 4); // last player-controlled slot in party
-			}
-		}
+		// somewhat intentionally disabled -- this is annoying
+		// originally thought it was buggy but apparently it's bugged in the "noop"
+		// ...rather than the "save corruption" one
+//		List<Chara> oldHeroes = new ArrayList<Chara>();
+//		for (Chara hero : oldHeroes) {
+//			if (hero.isDead()) {
+//				insert(hero, 4); // last player-controlled slot in party
+//			}
+//		}
 		setLeaderAppearance();
 	}
 	
@@ -244,23 +250,24 @@ public class HeroParty extends Party {
 	 * @param	index			The index to insert them at, 0 is front
 	 */
 	public void insert(Chara hero, int index) {
-		if (contains(hero)) {
-			removeHero(hero);
-		}
-		List<Chara> oldHeroes = new ArrayList<Chara>();
-		oldHeroes.addAll(heroes);
-		groups.clear();
-		members.clear();
-		heroes.clear();
-		int existingIndex = 0;
-		for (int i = 0; i < groups.size()+1; i += 1) {
-			if (index == i) {
-				addHero(hero);
-			} else {
-				addHero(oldHeroes.get(existingIndex));
-				existingIndex += 1;
-			}
-		}
+		MGlobal.reporter.err("insert disabled, probably buggy");
+//		if (contains(hero)) {
+//			removeHero(hero);
+//		}
+//		List<Chara> oldHeroes = new ArrayList<Chara>();
+//		oldHeroes.addAll(heroes);
+//		groups.clear();
+//		members.clear();
+//		heroes.clear();
+//		int existingIndex = 0;
+//		for (int i = 0; i < groups.size()+1; i += 1) {
+//			if (index == i) {
+//				addHero(hero);
+//			} else {
+//				addHero(oldHeroes.get(existingIndex));
+//				existingIndex += 1;
+//			}
+//		}
 	}
 
 	/**

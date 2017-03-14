@@ -31,7 +31,6 @@
   </object>
   <object id="2" name="exit" type="Event" x="256" y="272" width="16" height="16">
    <properties>
-    <property name="id" value="exit"/>
     <property name="onCollide" value="teleport('world1/shrine02.tmx', 16, 20)"/>
    </properties>
   </object>
