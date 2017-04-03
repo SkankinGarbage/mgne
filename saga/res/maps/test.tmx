@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="34">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="35">
  <properties>
   <property name="battle_bgm" value="ffl1_battle"/>
   <property name="bgm" value="ffl1_overworld"/>
@@ -30,7 +30,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJyt1L8KgCAQwGHHskEIGhqLhv4N1dLag/RMPUhbb9gJCXKc5wUOH+Ly83RQK6V0YiYR6Xk3uEABHnAQ/F7JcL3lY3snwe/VDNfbP5L7un1GoN63QmuoRzVLZh7bayM93KyZFu7lgh4329/5Qq0BifVMpNcgkh6nR6jeCKaAWXiO31vBFtAJu6n/FesFbS8aLg==
+   eJxjZGBgYBzFo3gUj+IhgAHGRgEt
   </data>
  </layer>
  <layer name="Tile Layer 2" width="20" height="15">
@@ -38,11 +38,11 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjYBic4OVAO2AUjIJRMOgAAL61AOo=
+   eJxjYBgFo2AUjIKhAQAEsAAB
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="bort the bozo" type="Character" x="208" y="192" width="16" height="16">
+  <object id="1" name="bort the bozo" type="Character" x="144" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onBehavior" value="this.wander()"/>
@@ -56,21 +56,21 @@
   </object>
   <object id="3" name="party1" type="Character" x="48" y="208" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_ffl2_human"/>
+    <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="battle('party_1group')"/>
    </properties>
   </object>
   <object id="4" name="party2" type="Character" x="64" y="208" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_ffl2_human"/>
+    <property name="appearance" value="4dir_rat"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="battle('party_2group')"/>
    </properties>
   </object>
   <object id="5" name="party3" type="Character" x="80" y="208" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_ffl2_human"/>
+    <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="battle('party_3group')"/>
    </properties>
@@ -83,19 +83,19 @@
   </object>
   <object id="7" name="party4" type="Character" x="96" y="208" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_ffl2_human"/>
+    <property name="appearance" value="4dir_lucifer"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="battle('party_testGroups')"/>
    </properties>
   </object>
-  <object id="8" name="inn" type="Character" x="192" y="128" width="16" height="16">
+  <object id="8" name="inn" type="Character" x="176" y="128" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="9" name="shop" type="Character" x="192" y="144" width="16" height="16">
+  <object id="9" name="shop" type="Character" x="176" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="face" value="WEST"/>
@@ -161,14 +161,14 @@
   </object>
   <object id="23" name="meat" type="Character" x="160" y="80" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_ffl2_human"/>
+    <property name="appearance" value="4dir_jonas"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="meatShop('meatshop_test')"/>
    </properties>
   </object>
   <object id="26" name="switch" type="Character" x="240" y="96" width="16" height="16">
    <properties>
-    <property name="appearance" value="4dir_ffl2_human"/>
+    <property name="appearance" value="4dir_janine"/>
     <property name="onInteract" value="speak('HOLA SWITCH IS SET'); sceneSwitch('saga_testswitch', true)"/>
    </properties>
   </object>
