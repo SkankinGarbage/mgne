@@ -24,6 +24,6 @@ speak("BORG", "I'm proud of all of you. Now let's get out of here!")
 
 fade('white')
 wait(1.0)
-teleport('world3.5/fortress_b1.tmx', 7, 11, 'NORTH', false)
+teleport('world3.5/fortress_b1.tmx', 20, 11, 'NORTH', false)
 fade('normal')
 wait(1.0)
