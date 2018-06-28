@@ -1,3 +1,8 @@
+v1.21
+
+Bugfix:
+  - Defeating Ares no longer teleports into an inaccessible map
+
 v1.20
 
 Balance:
