@@ -35,7 +35,7 @@ public class SuperGame implements ApplicationListener, FocusListener {
 		if (debug != null) {
 			MGlobal.debug = DebugLevel.valueOf(debug.toUpperCase());
 		} else {
-			MGlobal.debug = DebugLevel.DEVELOP;
+			MGlobal.debug = DebugLevel.DEBUG;
 		}
 	}
 	
