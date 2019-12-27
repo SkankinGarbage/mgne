@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="49" height="37" tilewidth="16" tileheight="16" nextobjectid="90">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="49" height="37" tileworld2_battle="16" tileheight="16" nextobjectid="90">
  <properties>
-  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="bgm" value="boss_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger02"/>
   <property name="name" value="Grand Palace"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="49" height="37">
+ <layer name="Tile Layer 1" world2_battle="49" height="37">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2WsQ3AIAwEGYQJ6Ngi+08UpaBBVuBlYxPyxXUn4CjAOaWUCSHkoxQBb1d7/iog7bfK1fKsewlU0O3vG1lXi7RPA3H7+0bW3aUBgQ1sWOWu6vB2rTss3Qx4f28o3blG88Os69Ug/amj+WHG9WTX+QHh7Q2MnB+sGiL/LTac1aBxd+iwcKNaos/AhjMaCCGEnM8NOJxGS1QcAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="49" height="37">
+ <layer name="Tile Layer 2" world2_battle="49" height="37">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,20 +24,20 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="86" name="entry" type="Target" x="208" y="432" width="16" height="16"/>
-  <object id="87" name="tele" type="Event" x="208" y="448" width="16" height="16">
+  <object id="86" name="entry" type="Target" x="208" y="432" world2_battle="16" height="16"/>
+  <object id="87" name="tele" type="Event" x="208" y="448" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace01.tmx', 'exit')"/>
    </properties>
   </object>
-  <object id="88" name="tele" type="Event" x="560" y="272" width="16" height="16">
+  <object id="88" name="tele" type="Event" x="560" y="272" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace03.tmx', 'entry')"/>
    </properties>
   </object>
-  <object id="89" name="exit" type="Target" x="560" y="256" width="16" height="16"/>
+  <object id="89" name="exit" type="Target" x="560" y="256" world2_battle="16" height="16"/>
  </objectgroup>
- <layer name="Tile Layer 3" width="49" height="37">
+ <layer name="Tile Layer 3" world2_battle="49" height="37">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

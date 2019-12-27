@@ -6,4 +6,4 @@ speak(hero1, hero1 .. ".")
 speak("Sekhmet", "Well I'm afraid your luck runs out here, " .. hero1 .. ". If the missile won't kill you, then I will!")
 
 sceneSwitch('sekhmet_dead', true)
-battle('party_bossSekhmet', false, 'ffl1_boss')
+battle('party_bossSekhmet', false, 'battle_boss')

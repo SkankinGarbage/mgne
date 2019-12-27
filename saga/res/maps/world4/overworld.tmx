@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="92" height="79" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="105">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="92" height="79" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="105">
  <properties>
-  <property name="battle_bgm" value="ffl3_boss"/>
-  <property name="bgm" value="ffl3_talon"/>
+  <property name="battle_bgm" value="world4_battle"/>
+  <property name="bgm" value="world4"/>
   <property name="cancelsTransform" value="true"/>
   <property name="name" value="Gamma World"/>
   <property name="terrainEncounter" value="terrain_world4"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="92" height="79">
+ <layer name="Tile Layer 1" world2_battle="92" height="79">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -17,7 +17,7 @@
    H4sIAAAAAAAAC+3aQZLiMAwF0HCt2bHNKWamsujZTM1B2KT6AH3VoatwtVrYlizLtmy0+EUDgSSPj0Kgb9u23V4ku4GMNnDvdTPa2r3d273XyWhr93Zv9/7KuyBXkJ/3/LrntwHv98QlDnc5be9a68/8veftkZz52ei6ZB+oWPK+gFwfl8H8T8a51WUL71Lznt6w5/86OZ/ba/Y7FuyR8+Im9jw1+zBrv2Ph9psK9/GjrWfxjvWX02vv9/eE9UvnMWf+eL/53rj/1DxpsQ+r9BuuP9XTG7qemyNUt6X7sDPut+x9i6w/5Uf1N9drLe+Z+03ZpIyl3q88v2NdpuYCxzs3R+Df1LHkspA3XA+nkzvz9QjL7pHHweflWEvNrXnHZnWum3j7YqZU8HO693OXS7ebYx7+buldat7SO7Yu6J3bJu72w5mFX9/Usqv2W+KN1yuxqzGfud/c+b1vz8c4yjw1/2vNZ+53zjv22SR8lrhGLrFpahmOd85+lX5Tn5mDd8zxgpbLLdPb21K/Jevq3W9sPmu/Y/sT1pfaDqq7Jf2W9nzGfnOPTThUd0v6Xeou7Xjpe6nEG+4zx7vEOnhr95trbnGehP3JeYfnDa99zHRUcuYW5wm33/C9VjozNOZJ7r6ZvEsjmRnUrKh9/Ireuflttd9he2f0Dtuh3W/O8ZLqd4iWd8vjpdY8GdlvaqZ4v/X7reltpd8575GfB1Pm4fZZ+52aJ5ayUr9n8MbmM3un5onFrOA9S79xZvYuNcfHLs77X/N9JN1HS96S7YavVW7ftNZbYz2zd+m+WfEuMZ/N22rc271XTg/vA+RzmfNxCW+v2QeNubqK94Huh99TwNtrzN37uzXnO6Iac/d+9g7nCtreGuchK3jjblPeEnPNcz9OuL9/j/SGFtR3zZa9Ux1x737WEvfe3leQWm9s3rvblryheeo3Ra3PJy2T++1ZYt7T+0Dbe0zkja1xXyx4Q/NwHvkBcqD7R9umrKl+/ygw730+n8poW41+c8x7eKfsR1uWeHPmt0XvGSP5Hxb3Hu99undz8xM93r353lJ3GG3vlc1ruh7OMVp4e9Jxb/deOe7t3ivHvd175bi3e68c97bp/R/bYNH0kHEAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="92" height="79">
+ <layer name="Tile Layer 2" world2_battle="92" height="79">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -26,136 +26,136 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="75" name="gate" type="Event" x="624" y="896" width="16" height="16">
+  <object id="75" name="gate" type="Event" x="624" y="896" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f15.tmx', 'gate_entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="76" name="barrier" type="Event" x="304" y="816" width="16" height="16">
+  <object id="76" name="barrier" type="Event" x="304" y="816" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_radSuit')"/>
     <property name="onCollide" value="play('world4/barrier.lua')"/>
    </properties>
   </object>
-  <object id="77" name="radiation" type="Event" x="656" y="896" width="16" height="16">
+  <object id="77" name="radiation" type="Event" x="656" y="896" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_radSuit')"/>
     <property name="onTurn" value="if (getAvatar().terrainType() == 147) then play('world4/radiation.lua'); playScene(); end"/>
    </properties>
   </object>
-  <object id="78" name="city" type="Event" x="688" y="560" width="16" height="16">
+  <object id="78" name="city" type="Event" x="688" y="560" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/city.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="79" name="temple" type="Event" x="544" y="416" width="16" height="16">
+  <object id="79" name="temple" type="Event" x="544" y="416" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/temple_f1.tmx', 'entry')"/>
    </properties>
   </object>
-  <object id="80" name="illusive" type="Event" x="192" y="528" width="16" height="16">
+  <object id="80" name="illusive" type="Event" x="192" y="528" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/illusive01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="81" name="monster_town" type="Event" x="1040" y="352" width="16" height="16">
+  <object id="81" name="monster_town" type="Event" x="1040" y="352" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/monster_town.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="82" name="sarnath" type="Event" x="1056" y="976" width="16" height="16">
+  <object id="82" name="sarnath" type="Event" x="1056" y="976" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath01.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="84" name="elan" type="Event" x="1136" y="1056" width="16" height="16">
+  <object id="84" name="elan" type="Event" x="1136" y="1056" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/elan.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="88" name="trigger" type="Event" x="1104" y="944" width="16" height="16">
+  <object id="88" name="trigger" type="Event" x="1104" y="944" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('itamor02') or not getSwitch('itamor01')"/>
     <property name="onEnter" value="play('world4/itamor02.lua')"/>
    </properties>
   </object>
-  <object id="89" name="trigger" type="Event" x="1104" y="304" width="176" height="16">
+  <object id="89" name="trigger" type="Event" x="1104" y="304" world2_battle="176" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('jonas02') or getSwitch('jonas03')"/>
     <property name="onCollide" value="play('world4/jonas03.lua')"/>
    </properties>
   </object>
-  <object id="90" name="trigger" type="Event" x="1104" y="320" width="16" height="48">
+  <object id="90" name="trigger" type="Event" x="1104" y="320" world2_battle="16" height="48">
    <properties>
     <property name="hide" value="return not getSwitch('jonas02') or getSwitch('jonas03')"/>
     <property name="onCollide" value="play('world4/jonas03.lua')"/>
    </properties>
   </object>
-  <object id="92" name="trigger" type="Event" x="1040" y="368" width="80" height="16">
+  <object id="92" name="trigger" type="Event" x="1040" y="368" world2_battle="80" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('jonas02') or getSwitch('jonas03')"/>
     <property name="onCollide" value="play('world4/jonas03.lua')"/>
    </properties>
   </object>
-  <object id="93" name="trigger" type="Event" x="1024" y="144" width="16" height="240">
+  <object id="93" name="trigger" type="Event" x="1024" y="144" world2_battle="16" height="240">
    <properties>
     <property name="hide" value="return not getSwitch('jonas02') or getSwitch('jonas03')"/>
     <property name="onCollide" value="play('world4/jonas03.lua')"/>
    </properties>
   </object>
-  <object id="94" name="missile" type="Event" x="1152" y="224" width="16" height="16">
+  <object id="94" name="missile" type="Event" x="1152" y="224" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/missile01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="95" name="autostart" type="Event" x="1168" y="224" width="16" height="16">
+  <object id="95" name="autostart" type="Event" x="1168" y="224" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('sekhmet_dead')"/>
     <property name="onEnter" value="play('world4/missile_reset.lua')"/>
    </properties>
   </object>
-  <object id="96" name="desert" type="Event" x="1280" y="496" width="16" height="16">
+  <object id="96" name="desert" type="Event" x="1280" y="496" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/desert_cave.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="97" name="dagon" type="Event" x="432" y="160" width="16" height="16">
+  <object id="97" name="dagon" type="Event" x="432" y="160" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/dagon01.tmx', 'entry', 'EAST')"/>
    </properties>
   </object>
-  <object id="98" name="ghetto" type="Event" x="256" y="864" width="32" height="32">
+  <object id="98" name="ghetto" type="Event" x="256" y="864" world2_battle="32" height="32">
    <properties>
     <property name="onCollide" value="targetTele('crater/town.tmx', 'entry', 'WEST')"/>
    </properties>
   </object>
-  <object id="99" name="compound" type="Event" x="368" y="912" width="16" height="16">
+  <object id="99" name="compound" type="Event" x="368" y="912" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/compound01.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="100" name="tower" type="Event" x="304" y="944" width="16" height="16">
+  <object id="100" name="tower" type="Event" x="304" y="944" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/tower01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="101" name="grand_city" type="Event" x="896" y="576" width="16" height="16">
+  <object id="101" name="grand_city" type="Event" x="896" y="576" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/grand_city01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="102" name="block" type="Event" x="288" y="960" width="48" height="16">
+  <object id="102" name="block" type="Event" x="288" y="960" world2_battle="48" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="103" name="autostart" type="Event" x="656" y="864" width="16" height="16">
+  <object id="103" name="autostart" type="Event" x="656" y="864" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return collectableCount('collectable_excaliber') ~= 1 or getSwitch('jonas_radio01') or not getSwitch('jonas01')"/>
     <property name="onEnter" value="play('world4/jonas_radio01.lua')"/>
    </properties>
   </object>
-  <object id="104" name="autostart" type="Event" x="656" y="848" width="16" height="16">
+  <object id="104" name="autostart" type="Event" x="656" y="848" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return collectableCount('collectable_excaliber') ~=2 or getSwitch('jonas_radio02') or not getSwitch('jonas01') or getSwitch('jonas_radio02')"/>
     <property name="onEnter" value="play('world4/jonas_radio02.lua')"/>

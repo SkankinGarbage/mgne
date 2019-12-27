@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="38" height="25" tilewidth="16" tileheight="16" nextobjectid="118">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="38" height="25" tileworld2_battle="16" tileheight="16" nextobjectid="118">
  <properties>
-  <property name="bgm" value="ffl3_dark"/>
+  <property name="bgm" value="optional_dungeon"/>
   <property name="encounter" value="encounterset_level10_danger00"/>
   <property name="name" value="Compound"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="38" height="25">
+ <layer name="Tile Layer 1" world2_battle="38" height="25">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2VQQoAIQhFu1+LuZQHn5XQYtQsHS380KaH+DCq1iqaPNECRMpLl/LSJasXRAsQgcDFpRMLGGbFVyLVefAZ1wivLtR49dXwqL6nekn3eJff5MW9MVi3y1e8sD7bvCz6enllPEfkf89rdp5ZvMY97s+34F+h+Lj3AjIEYL/YDgAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="38" height="25">
+ <layer name="Tile Layer 2" world2_battle="38" height="25">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,48 +24,48 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="102" name="tele" type="Event" x="0" y="16" width="16" height="16">
+  <object id="102" name="tele" type="Event" x="0" y="16" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/compound04.tmx', 'stairs')"/>
    </properties>
   </object>
-  <object id="103" name="stairs" type="Target" x="0" y="32" width="16" height="16"/>
-  <object id="106" name="npc" type="Character" x="48" y="256" width="16" height="16">
+  <object id="103" name="stairs" type="Target" x="0" y="32" world2_battle="16" height="16"/>
+  <object id="106" name="npc" type="Character" x="48" y="256" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('We have to work these old machines by hand.')"/>
    </properties>
   </object>
-  <object id="107" name="npc" type="Character" x="176" y="368" width="16" height="16">
+  <object id="107" name="npc" type="Character" x="176" y="368" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('Whatever Moloch\'s up to, it must require a lot of power.')"/>
    </properties>
   </object>
-  <object id="108" name="npc" type="Character" x="304" y="352" width="16" height="16">
+  <object id="108" name="npc" type="Character" x="304" y="352" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('I\'ll gladly work all day if it means I don\'t have to be sacrificed.')"/>
    </properties>
   </object>
-  <object id="110" name="npc" type="Character" x="48" y="320" width="16" height="16">
+  <object id="110" name="npc" type="Character" x="48" y="320" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('Our labor is terrible but it beats dying above ground.')"/>
    </properties>
   </object>
-  <object id="111" name="npc" type="Character" x="176" y="320" width="16" height="16">
+  <object id="111" name="npc" type="Character" x="176" y="320" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('You\'re no slave. How did you get in?')"/>
    </properties>
   </object>
-  <object id="112" name="npc" type="Character" x="304" y="272" width="16" height="16">
+  <object id="112" name="npc" type="Character" x="304" y="272" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="WEST"/>
@@ -73,7 +73,7 @@
     <property name="onInteract" value="play('crater/slave01.lua')"/>
    </properties>
   </object>
-  <object id="114" name="npc" type="Character" x="304" y="272" width="16" height="16">
+  <object id="114" name="npc" type="Character" x="304" y="272" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="WEST"/>
@@ -81,7 +81,7 @@
     <property name="onInteract" value="play('crater/slave02.lua')"/>
    </properties>
   </object>
-  <object id="115" name="npc" type="Character" x="64" y="352" width="16" height="16">
+  <object id="115" name="npc" type="Character" x="64" y="352" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -89,7 +89,7 @@
     <property name="onInteract" value="speak('Y-You must be the rebels. Please don\'t hurt me!')"/>
    </properties>
   </object>
-  <object id="116" name="npc" type="Character" x="320" y="304" width="16" height="16">
+  <object id="116" name="npc" type="Character" x="320" y="304" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -97,7 +97,7 @@
     <property name="onInteract" value="speak('I\'m human, just like you! Leave me alone!')"/>
    </properties>
   </object>
-  <object id="117" name="chest" type="Chest" x="464" y="352" width="16" height="16">
+  <object id="117" name="chest" type="Chest" x="464" y="352" world2_battle="16" height="16">
    <properties>
     <property name="item" value="pot_strength"/>
    </properties>

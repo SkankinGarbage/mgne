@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="35" height="32" tilewidth="16" tileheight="16" nextobjectid="5">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="35" height="32" tileworld2_battle="16" tileheight="16" nextobjectid="5">
  <properties>
-  <property name="bgm" value="ffl1_cave"/>
+  <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level00_danger05"/>
   <property name="name" value="Southern Cave"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="35" height="32">
+ <layer name="Tile Layer 1" world2_battle="35" height="32">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+3UMQqAMAyF4XiOdsopXN26ef/bKNKApIVUNKbDGz5KIeBPsc1ElAEA4LJO0CD2iXqtllRnkhLRwnWGlYiW5bR11qj/5c08Wr5vse6KZ0tRHfe70uvxbpFz4LoXTO274t0i51A69Lvi3fKUV4vV9cd3R3oiOwAARhypLh+wgBEAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="35" height="32">
+ <layer name="Tile Layer 2" world2_battle="35" height="32">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,23 +24,23 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="tele" type="Event" x="160" y="144" width="16" height="16">
+  <object id="1" name="tele" type="Event" x="160" y="144" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/hq02.tmx', 23, 33)"/>
    </properties>
   </object>
-  <object id="2" name="tele" type="Event" x="304" y="160" width="16" height="16">
+  <object id="2" name="tele" type="Event" x="304" y="160" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 54, 52)"/>
    </properties>
   </object>
-  <object id="3" name="chest" type="Chest" x="240" y="304" width="16" height="16">
+  <object id="3" name="chest" type="Chest" x="240" y="304" world2_battle="16" height="16">
    <properties>
     <property name="item" value="key_artifactFlashlight"/>
     <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
-  <object id="4" name="boss" type="Character" x="240" y="336" width="16" height="16">
+  <object id="4" name="boss" type="Character" x="240" y="336" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_bird"/>
     <property name="face" value="WEST"/>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="24">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="32" height="32" tileworld2_battle="16" tileheight="16" nextobjectid="24">
  <properties>
-  <property name="bgm" value="ffl2_ruins"/>
+  <property name="bgm" value="minor_dungeon"/>
   <property name="encounter" value="encounterset_level07_danger00"/>
   <property name="name" value="Airseed Shrine"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="32" height="32">
+ <layer name="Tile Layer 1" world2_battle="32" height="32">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC9WWXQqEMAyEq/jog+CDV/FC3v8Ky4Jhx2HyU5EFC2F1a/PFTJra2vvGFNi/WPNpfP1UTIqlLJq/GwdzV+F7PG2C6yi2nhj4ncbApmSO4+l594hb5WNuKjlQbGZM8B9rHK2r5MDjq/pnzTmOu/xMR6vJ8fw145rxfGV8ZSuZ0pvne/lqvytdlS7ZPNeLx7fcmqHW3+uBfHp9D/VGTaIasGf30472yz3yuQ5U3zE9ULsK/wA+59b4mB++X8UafB/z6/F3MK5l42fGeh/kt8rnWlb6L3Sv+Hvr5x9N1zLzt06+1ZTH92rZ47MpfnX/WQzqrEX/uOewTud23R/cn6v9T/U65OOeW9p1Lw60TvnJ+FEvsxo3n1u77kU0z08P39M423teb67wcU32bRnVo/pWy/icA3W2qpjUPJ+VFbbKAdeRiknNKx0rQ33LVM777AyeO/jq/M9i8noN+qsO1hL7StT/1PO9bBWH8hcZPv/0iLhvGx9ENE6EABAAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="32" height="32">
+ <layer name="Tile Layer 2" world2_battle="32" height="32">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,12 +24,12 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="chest" type="Chest" x="400" y="144" width="16" height="16">
+  <object id="1" name="chest" type="Chest" x="400" y="144" world2_battle="16" height="16">
    <properties>
     <property name="item" value="hand_ninja"/>
    </properties>
   </object>
-  <object id="3" name="tele" type="Event" x="352" y="448" width="16" height="16">
+  <object id="3" name="tele" type="Event" x="352" y="448" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return not hasItem('key_cryptKey')"/>
     <property name="onCollide" value="teleport('world3.5/shrine01.tmx', 29, 26)"/>
@@ -42,60 +42,60 @@
    </properties>
    <polygon points="0,0 64,0 64,-48 80,-48 80,-160 288,-160 288,-144 320,-144 320,16 400,16 400,-256 0,-256"/>
   </object>
-  <object id="10" name="door" type="Door" x="432" y="320" width="16" height="16">
+  <object id="10" name="door" type="Door" x="432" y="320" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_cryptKey"/>
    </properties>
   </object>
-  <object id="12" name="tele" type="Event" x="160" y="448" width="16" height="16">
+  <object id="12" name="tele" type="Event" x="160" y="448" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return not hasItem('key_cryptKey')"/>
     <property name="onCollide" value="teleport('world3.5/shrine01.tmx', 21, 26)"/>
    </properties>
   </object>
-  <object id="16" name="door" type="Event" x="352" y="448" width="16" height="16">
+  <object id="16" name="door" type="Event" x="352" y="448" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_cryptKey')"/>
     <property name="onCollide" value="speak('It\'s locked.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="17" name="door" type="Event" x="160" y="448" width="16" height="16">
+  <object id="17" name="door" type="Event" x="160" y="448" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_cryptKey')"/>
     <property name="onCollide" value="speak('It\'s locked.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="19" name="chest" type="Chest" x="80" y="240" width="16" height="16">
+  <object id="19" name="chest" type="Chest" x="80" y="240" world2_battle="16" height="16">
    <properties>
     <property name="item" value="wpn_cannonMissile"/>
    </properties>
   </object>
-  <object id="20" name="door" type="Door" x="240" y="144" width="16" height="16">
+  <object id="20" name="door" type="Door" x="240" y="144" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_cryptKey"/>
    </properties>
   </object>
-  <object id="21" name="tele" type="Event" x="256" y="272" width="16" height="16">
+  <object id="21" name="tele" type="Event" x="256" y="272" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/shrine04.tmx', 16, 20)"/>
    </properties>
   </object>
-  <object id="22" name="spikes" type="Event" x="272" y="336" width="16" height="16">
+  <object id="22" name="spikes" type="Event" x="272" y="336" world2_battle="16" height="16">
    <properties>
     <property name="onTurn" value="if (getAvatar().terrainType() == 101) then play('world3.5/spike.lua'); playScene(); end"/>
    </properties>
   </object>
-  <object id="23" name="tele" type="Event" x="256" y="304" width="16" height="16">
+  <object id="23" name="tele" type="Event" x="256" y="304" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/shrine03.tmx', 16, 16)"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="32" height="32">
+ <layer name="Tile Layer 3" world2_battle="32" height="32">
   <properties>
    <property name="z" value="2"/>
   </properties>
@@ -103,7 +103,7 @@
    H4sIAAAAAAAAC+3SMQoAMAgEQYuU6fL/v+YJIngnwk4dcoUbAQAAgCl3eOeZ9l07qFM3mP2vbmNre0f8PlPtoruj6t223tntAy+EmiMAEAAA
   </data>
  </layer>
- <layer name="Tile Layer 4" width="32" height="32">
+ <layer name="Tile Layer 4" world2_battle="32" height="32">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="21" tilewidth="16" tileheight="16" nextobjectid="61">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="15" height="21" tileworld2_battle="16" tileheight="16" nextobjectid="61">
  <properties>
-  <property name="bgm" value="ffl3_ruins"/>
+  <property name="bgm" value="plot_dungeon"/>
   <property name="encounter" value="encounterset_level10_danger01"/>
   <property name="name" value="Red Tower"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="15" height="21">
+ <layer name="Tile Layer 1" world2_battle="15" height="21">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC5WTQQ7DIAwE4Qm99VFwCqfyF048vEKy1dHW0NTSSiRmvA7BKcUxoLtBpv5Rg8xSw/rEs34zdax3/kPUTRNr3UO2QjMQ8wMc+2wblnk9z9XXA70uZayZr+K58k/xyvLseXr39N1j3vDeg7PKKJeDGmPD//LVexedbcRNcO2Gd+Tp964c+Igrxq245J+duGr7PV7pMzN6fnqHmu1n+MyUoEa19/6NUXTrh3PrXteBY/+cW/fSPk/RoV28AZM6r3bsBAAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="15" height="21">
+ <layer name="Tile Layer 2" world2_battle="15" height="21">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,40 +24,40 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="52" name="entry" type="Target" x="112" y="64" width="16" height="16"/>
-  <object id="53" name="tele" type="Event" x="112" y="48" width="16" height="16">
+  <object id="52" name="entry" type="Target" x="112" y="64" world2_battle="16" height="16"/>
+  <object id="53" name="tele" type="Event" x="112" y="48" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'tower')"/>
    </properties>
   </object>
-  <object id="54" name="warp" type="Event" x="16" y="160" width="16" height="16">
+  <object id="54" name="warp" type="Event" x="16" y="160" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('tower01') or not getSwitch('slave01')"/>
     <property name="onCollide" value="play('crater/tower01.lua')"/>
    </properties>
   </object>
-  <object id="55" name="warp" type="Event" x="16" y="160" width="16" height="16">
+  <object id="55" name="warp" type="Event" x="16" y="160" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('tower01')"/>
     <property name="onCollide">playSound('rebound');
 targetTele('crater/tower02.tmx', 'entry')</property>
    </properties>
   </object>
-  <object id="56" name="block" type="Event" x="48" y="96" width="16" height="16">
+  <object id="56" name="block" type="Event" x="48" y="96" world2_battle="16" height="16">
    <properties>
     <property name="onInteract" value="speak('Locked.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="58" name="block" type="Event" x="176" y="96" width="16" height="16">
+  <object id="58" name="block" type="Event" x="176" y="96" world2_battle="16" height="16">
    <properties>
     <property name="onInteract" value="speak('Locked.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="59" name="exit" type="Target" x="16" y="160" width="16" height="16"/>
+  <object id="59" name="exit" type="Target" x="16" y="160" world2_battle="16" height="16"/>
  </objectgroup>
- <layer name="Tile Layer 3" width="15" height="21">
+ <layer name="Tile Layer 3" world2_battle="15" height="21">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -65,7 +65,7 @@ targetTele('crater/tower02.tmx', 'entry')</property>
    H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
   </data>
  </layer>
- <layer name="Tile Layer 4" width="15" height="21">
+ <layer name="Tile Layer 4" world2_battle="15" height="21">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

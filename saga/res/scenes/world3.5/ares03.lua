@@ -16,7 +16,7 @@ wait(0.7)
 speak("Janine", "Now let's see how tough you are without your shield!")
 
 sceneSwitch('ares_dead', true)
-battle('party_bossAres', false, 'ffl1_boss')
+battle('party_bossAres', false, 'battle_boss')
 face('hero', 'NORTH')
 
 speak("Janine", "The master is dead.")

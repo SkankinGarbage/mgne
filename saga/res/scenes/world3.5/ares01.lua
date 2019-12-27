@@ -12,7 +12,7 @@ speak(hero1, "We have to help them.")
 speak("David", "Yes! But...")
 speak("David", "Waggh! It's him! " .. hero1 .. ", run!")
 
-battle('party_bossAresInvincible', true, 'ffl1_boss')
+battle('party_bossAresInvincible', true, 'battle_boss')
 face('hero', 'NORTH')
 
 fade('white')

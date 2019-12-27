@@ -2,7 +2,7 @@ local hero1 = getHero(0).getName()
 local hero2 = getHero(1).getName()
 local hero3 = getHero(2).getName()
 
-playBGM('ffl3_steslos')
+playBGM('twins_theme')
 pathEvent('hero', 'target_hero')
 
 speak("Jonas", "Give up the sword, Janine. MASAMUNE could undo all of the seals! Let Aven destroy it.")
@@ -31,7 +31,7 @@ speak("Aven", "My oldest enemy...")
 speak("Aven", "By sealing the gates, I'm sure we have him on the run. By now he's surely looking for swords to break seals himself...")
 speak("Aven", "I'm sure we'll meet again.")
 
-playBGM('ffl2_apollo')
+playBGM('gate_theme')
 
 walk('aven', 2, 'WEST', false)
 walk('jonas', 2, 'WEST', false)

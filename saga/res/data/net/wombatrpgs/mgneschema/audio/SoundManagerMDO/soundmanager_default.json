@@ -59,17 +59,12 @@
 	],
 	"emuMusicEntries" : [
 		{
-			"refKey" : "ffl1_title",
-			"gbsPath" : "ffl1.gbs",
-			"track" : 0
-		},
-		{
-			"refKey" : "ffl1_overworld",
+			"refKey" : "world3",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 1
 		},
 		{
-			"refKey" : "ffl1_overworld2",
+			"refKey" : "world1_revisited",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 2
 		},
@@ -79,264 +74,164 @@
 			"track" : 3
 		},
 		{
-			"refKey" : "ffl1_cave",
+			"refKey" : "generic_cave",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 4
 		},
 		{
-			"refKey" : "ffl1_creator",
+			"refKey" : "battle_lucifer",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 5
 		},
 		{
-			"refKey" : "ffl1_boss",
+			"refKey" : "battle_boss",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 6
 		},
 		{
-			"refKey" : "ffl1_town",
+			"refKey" : "generic_town",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 7
 		},
 		{
-			"refKey" : "ffl1_battle",
+			"refKey" : "world3_battle",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 8
 		},
 		{
-			"refKey" : "ffl1_sad",
-			"gbsPath" : "ffl1.gbs",
-			"track" : 9
-		},
-		{
-			"refKey" : "ffl1_tower",
+			"refKey" : "world_5",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 10
 		},
 		{
-			"refKey" : "ffl1_theme",
+			"refKey" : "tower",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 11
 		},
 		{
-			"refKey" : "ffl1_victory",
+			"refKey" : "victory",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 12
 		},
 		{
-			"refKey" : "ffl1_lose",
-			"gbsPath" : "ffl1.gbs",
-			"track" : 13
-		},
-		{
-			"refKey" : "ffl1_get",
+			"refKey" : "get",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 14
 		},
 		{
-			"refKey" : "ffl1_intrigue",
-			"gbsPath" : "ffl1.gbs",
-			"track" : 15
-		},
-		{
-			"refKey" : "ffl1_paradise",
+			"refKey" : "final_floor",
 			"gbsPath" : "ffl1.gbs",
 			"track" : 16
 		},
 		{
-			"refKey" : "ffl2_title",
-			"gbsPath" : "ffl2.gbs",
-			"track" : 0
-		},
-		{
-			"refKey" : "ffl2_ending",
+			"refKey" : "ending",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 1
 		},
 		{
-			"refKey" : "ffl2_burning_blood",
+			"refKey" : "missile_base",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 2
 		},
 		{
-			"refKey" : "ffl2_victory",
-			"gbsPath" : "ffl2.gbs",
-			"track" : 3
-		},
-		{
-			"refKey" : "ffl2_crisis",
-			"gbsPath" : "ffl2.gbs",
-			"track" : 4
-		},
-		{
-			"refKey" : "ffl2_tower",
-			"gbsPath" : "ffl2.gbs",
-			"track" : 5
-		},
-		{
-			"refKey" : "ffl2_peaceful",
+			"refKey" : "eden_town",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 6
 		},
 		{
-			"refKey" : "ffl2_apollo",
+			"refKey" : "gate_theme",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 7
 		},
 		{
-			"refKey" : "ffl2_ending2",
-			"gbsPath" : "ffl2.gbs",
-			"track" : 8
-		},
-		{
-			"refKey" : "ffl2_hometown",
+			"refKey" : "home_town",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 9
 		},
 		{
-			"refKey" : "ffl2_theme",
-			"gbsPath" : "ffl2.gbs",
-			"track" : 10
-		},
-		{
-			"refKey" : "ffl2_overworld",
+			"refKey" : "world2",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 11
 		},
 		{
-			"refKey" : "ffl2_mystery",
-			"gbsPath" : "ffl2.gbs",
-			"track" : 12
-		},
-		{
-			"refKey" : "ffl2_ruins",
+			"refKey" : "minor_dungeon",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 13
 		},
 		{
-			"refKey" : "ffl2_ending1",
+			"refKey" : "ending",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 14
 		},
 		{
-			"refKey" : "ffl2_sad",
-			"gbsPath" : "ffl2.gbs",
-			"track" : 15
-		},
-		{
-			"refKey" : "ffl2_battle",
+			"refKey" : "world2_battle",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 16
 		},
 		{
-			"refKey" : "ffl2_boss",
-			"gbsPath" : "ffl2.gbs",
-			"track" : 17
-		},
-		{
-			"refKey" : "ffl2_save_the_world",
+			"refKey" : "elemental_boss",
 			"gbsPath" : "ffl2.gbs",
 			"track" : 18
 		},
 		{
-			"refKey" : "ffl3_title",
-			"gbsPath" : "ffl3.gbs",
-			"track" : 0
-		},
-		{
-			"refKey" : "ffl3_battle",
+			"refKey" : "world1_battle",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 1
 		},
 		{
-			"refKey" : "ffl3_boss",
+			"refKey" : "world4_battle",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 2
 		},
 		{
-			"refKey" : "ffl3_sad",
-			"gbsPath" : "ffl3.gbs",
-			"track" : 3
-		},
-		{
-			"refKey" : "ffl3_victory",
-			"gbsPath" : "ffl3.gbs",
-			"track" : 4
-		},
-		{
-			"refKey" : "ffl3_lose",
-			"gbsPath" : "ffl3.gbs",
-			"track" : 5
-		},
-		{
-			"refKey" : "ffl3_ending",
-			"gbsPath" : "ffl3.gbs",
-			"track" : 6
-		},
-		{
-			"refKey" : "ffl3_steslos",
+			"refKey" : "twins_theme",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 7
 		},
 		{
-			"refKey" : "ffl3_overworld",
+			"refKey" : "world1",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 8
 		},
 		{
-			"refKey" : "ffl3_town",
+			"refKey" : "world1_town",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 9
 		},
 		{
-			"refKey" : "ffl3_talon",
+			"refKey" : "world4",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 10
 		},
 		{
-			"refKey" : "ffl3_cave",
-			"gbsPath" : "ffl3.gbs",
-			"track" : 11
-		},
-		{
-			"refKey" : "ffl3_crisis",
-			"gbsPath" : "ffl3.gbs",
-			"track" : 12
-		},
-		{
-			"refKey" : "ffl3_xagor",
+			"refKey" : "final_boss",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 13
 		},
 		{
-			"refKey" : "ffl3_ruins",
+			"refKey" : "plot_dungeon",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 14
 		},
 		{
-			"refKey" : "ffl3_dungeon",
+			"refKey" : "elemental_dungeons",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 15
 		},
 		{
-			"refKey" : "ffl3_dark",
+			"refKey" : "optional_dungeon",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 16
 		},
 		{
-			"refKey" : "ffl3_final_dungeon",
+			"refKey" : "boss_dungeon",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 17
 		},
 		{
-			"refKey" : "ffl3_town2",
+			"refKey" : "angelic_town",
 			"gbsPath" : "ffl3.gbs",
 			"track" : 18
-		},
-		{
-			"refKey" : "ffl3_hometown",
-			"gbsPath" : "ffl3.gbs",
-			"track" : 19
 		}
 	],
 	"loadedMusicEntries" : [ ]

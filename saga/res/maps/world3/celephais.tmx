@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="128">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="50" height="54" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="128">
  <properties>
-  <property name="bgm" value="ffl1_town"/>
+  <property name="bgm" value="generic_town"/>
   <property name="name" value="Celephais"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="50" height="54">
+ <layer name="Tile Layer 1" world2_battle="50" height="54">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2XwQqDMAxAFUGYsJuXeeu/evGvx8BCKEnaVNPGkcM7lKDk2SSt0zAMk2FehfTO0z3cwz3cw7rHDMDWvTw+mXXKCsDWmh7jmR/FCOBiPw4Atv6xKHtsBDBPLlaKtkcggDlwMQzYH608uHz2ym8P+6O1x34Rrl9ae9R8e8mzrT3S+s6tUw+sP1p5cPWdW6ceWH/08MidB+m6pD96eDy5P0rq+2keWP1L5q4Vj1z9U/sxI2h7UHe+mjxj/I2g7cHd+aR5xviKoO0RBvrOR50PVJ4xfiC06A8Kqj+oPK16SOdqz3lV0+dcvGQea/U55VF7PvTYj1CxH7nzocf5EWvrjrk7FsZbe0jnLvZcq/OD86idq1xc67+W89BA22M50cw/ouWxCd7NIal9DcJN75F8a8u4hy1698ddeyGdq9ZI5/VTXa7caS3xL/sBXZ7s4DiO4ziW+AJHK8HEMCoAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="50" height="54">
+ <layer name="Tile Layer 2" world2_battle="50" height="54">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,17 +23,17 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="102" name="tele" type="Event" x="160" y="400" width="16" height="32">
+  <object id="102" name="tele" type="Event" x="160" y="400" world2_battle="16" height="32">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 47, 30)"/>
    </properties>
   </object>
-  <object id="103" name="tele" type="Event" x="304" y="128" width="336" height="16">
+  <object id="103" name="tele" type="Event" x="304" y="128" world2_battle="336" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 47, 30)"/>
    </properties>
   </object>
-  <object id="104" name="npc" type="Character" x="368" y="208" width="16" height="16">
+  <object id="104" name="npc" type="Character" x="368" y="208" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
     <property name="face" value="SOUTH"/>
@@ -41,7 +41,7 @@
     <property name="onInteract" value="speak('This is the city of Celephais. You\'re not from around here, are you?')"/>
    </properties>
   </object>
-  <object id="105" name="npc" type="Character" x="256" y="272" width="16" height="16">
+  <object id="105" name="npc" type="Character" x="256" y="272" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
@@ -49,7 +49,7 @@
     <property name="onInteract" value="speak('I broke my leg in the plutonium mines and now I can\'t work.')"/>
    </properties>
   </object>
-  <object id="106" name="npc" type="Character" x="224" y="384" width="16" height="16">
+  <object id="106" name="npc" type="Character" x="224" y="384" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_bird"/>
     <property name="face" value="NORTH"/>
@@ -57,7 +57,7 @@
     <property name="onInteract" value="speak('The population here keeps getting bigger from all the villagers that are being forced to move in.')"/>
    </properties>
   </object>
-  <object id="107" name="npc" type="Character" x="240" y="512" width="16" height="16">
+  <object id="107" name="npc" type="Character" x="240" y="512" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="face" value="NORTH"/>
@@ -65,7 +65,7 @@
     <property name="onInteract" value="speak('The prince of the City of Angels promised our city would get power once Babel is open, so I\'m working hard!')"/>
    </properties>
   </object>
-  <object id="108" name="npc" type="Character" x="336" y="464" width="16" height="16">
+  <object id="108" name="npc" type="Character" x="336" y="464" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="NORTH"/>
@@ -73,7 +73,7 @@
     <property name="onInteract" value="speak('Robots do all the farming now. We can only mine.')"/>
    </properties>
   </object>
-  <object id="109" name="npc" type="Character" x="480" y="368" width="16" height="16">
+  <object id="109" name="npc" type="Character" x="480" y="368" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_golem"/>
     <property name="face" value="WEST"/>
@@ -81,7 +81,7 @@
     <property name="onInteract" value="speak('Why couldn\'t I have been born a beautiful human instead of a lowly miner!')"/>
    </properties>
   </object>
-  <object id="110" name="npc" type="Character" x="592" y="512" width="16" height="16">
+  <object id="110" name="npc" type="Character" x="592" y="512" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
@@ -89,7 +89,7 @@
     <property name="onInteract" value="speak('I used to live further south, but guards from the City of Angels moved me and my family here.')"/>
    </properties>
   </object>
-  <object id="111" name="npc" type="Character" x="608" y="336" width="16" height="16">
+  <object id="111" name="npc" type="Character" x="608" y="336" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_skeleton"/>
     <property name="face" value="NORTH"/>
@@ -97,7 +97,7 @@
     <property name="onInteract" value="speak('This is my day off from work! I need to find some more metal to repair the walls.')"/>
    </properties>
   </object>
-  <object id="112" name="npc" type="Character" x="512" y="256" width="16" height="16">
+  <object id="112" name="npc" type="Character" x="512" y="256" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
@@ -105,7 +105,7 @@
     <property name="onInteract" value="speak('I\'m a schoolteacher here. Maybe our kids can escape Celephais by becoming scientists.')"/>
    </properties>
   </object>
-  <object id="113" name="npc" type="Character" x="368" y="336" width="16" height="16">
+  <object id="113" name="npc" type="Character" x="368" y="336" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="WEST"/>
@@ -113,7 +113,7 @@
     <property name="onInteract" value="speak('Robots from the City of Angels bring us food shipments once a month.')"/>
    </properties>
   </object>
-  <object id="114" name="npc" type="Character" x="480" y="656" width="16" height="16">
+  <object id="114" name="npc" type="Character" x="480" y="656" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="SOUTH"/>
@@ -121,7 +121,7 @@
     <property name="onInteract" value="speak('I\'m sick of it! I\'ll run away and join the Brotherhood.')"/>
    </properties>
   </object>
-  <object id="115" name="npc" type="Character" x="480" y="720" width="16" height="16">
+  <object id="115" name="npc" type="Character" x="480" y="720" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="NORTH"/>
@@ -129,7 +129,7 @@
     <property name="onInteract" value="speak('Shh! Guards from the City of Angels keep watch here.')"/>
    </properties>
   </object>
-  <object id="116" name="npc" type="Character" x="448" y="688" width="16" height="16">
+  <object id="116" name="npc" type="Character" x="448" y="688" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="EAST"/>
@@ -137,7 +137,7 @@
     <property name="onInteract" value="speak('A friend of mine used to be a member of the Brotherhood, but he was arrested at the monorail depot.')"/>
    </properties>
   </object>
-  <object id="117" name="npc" type="Character" x="512" y="688" width="16" height="16">
+  <object id="117" name="npc" type="Character" x="512" y="688" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="WEST"/>
@@ -145,38 +145,38 @@
     <property name="onInteract" value="speak('Nobody really knows what the Brotherhood is or where its base is... If we knew more, maybe so many of us wouldn\'t be in the Ermengarde jail.')"/>
    </properties>
   </object>
-  <object id="118" name="tele" type="Event" x="432" y="400" width="16" height="16">
+  <object id="118" name="tele" type="Event" x="432" y="400" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/celephais_interior.tmx', 'pub')"/>
    </properties>
   </object>
-  <object id="119" name="tele" type="Event" x="528" y="400" width="16" height="16">
+  <object id="119" name="tele" type="Event" x="528" y="400" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/celephais_interior.tmx', 'inn')"/>
    </properties>
   </object>
-  <object id="120" name="tele" type="Event" x="432" y="512" width="16" height="16">
+  <object id="120" name="tele" type="Event" x="432" y="512" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/celephais_interior.tmx', 'shop_left')"/>
    </properties>
   </object>
-  <object id="121" name="tele" type="Event" x="528" y="512" width="16" height="16">
+  <object id="121" name="tele" type="Event" x="528" y="512" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/celephais_interior.tmx', 'shop_right')"/>
    </properties>
   </object>
-  <object id="122" name="pub" type="Target" x="432" y="416" width="16" height="16"/>
-  <object id="123" name="inn" type="Target" x="528" y="416" width="16" height="16"/>
-  <object id="124" name="shop_left" type="Target" x="432" y="528" width="16" height="16"/>
-  <object id="125" name="shop_right" type="Target" x="528" y="528" width="16" height="16"/>
-  <object id="126" name="npc" type="Character" x="400" y="416" width="16" height="16">
+  <object id="122" name="pub" type="Target" x="432" y="416" world2_battle="16" height="16"/>
+  <object id="123" name="inn" type="Target" x="528" y="416" world2_battle="16" height="16"/>
+  <object id="124" name="shop_left" type="Target" x="432" y="528" world2_battle="16" height="16"/>
+  <object id="125" name="shop_right" type="Target" x="528" y="528" world2_battle="16" height="16"/>
+  <object id="126" name="npc" type="Character" x="400" y="416" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('Guard', 'I\'m an elite soldier from the City of Angels.')"/>
    </properties>
   </object>
-  <object id="127" name="memory" type="Teleport Memory" x="240" y="432" width="16" height="16">
+  <object id="127" name="memory" type="Teleport Memory" x="240" y="432" world2_battle="16" height="16">
    <properties>
     <property name="displayName" value="Celephais"/>
    </properties>

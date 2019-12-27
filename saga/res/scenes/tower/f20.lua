@@ -3,7 +3,7 @@ local hero2 = getHero(1).getName()
 local hero3 = getHero(2).getName()
 local hero4 = getHero(3).getName()
 
-playBGM('ffl3_steslos')
+playBGM('twins_theme')
 
 speak(hero1, "Jonas! Janine!")
 speak("Janine", "Stay back, " .. hero1 .. ".")
@@ -47,9 +47,9 @@ face('prince', 'SOUTH')
 speak("Prince", "The seal is broken and I'll become a true god. But first, for the rest of you.")
 
 sceneSwitch('prince_dead', true)
-battle('party_bossLucifer', false, 'ffl1_creator')
+battle('party_bossLucifer', false, 'battle_lucifer')
 face('hero', 'NORTH')
-playBGM('ffl1_theme')
+playBGM('tower')
 
 walk('hero', 1, 'NORTH')
 speak(hero1, "Is he alright?")

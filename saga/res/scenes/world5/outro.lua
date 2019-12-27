@@ -1,4 +1,4 @@
-playBGM('ffl2_ending1')
+playBGM('ending')
 
 fade('white')
 wait(1.0)

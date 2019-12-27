@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="31" height="15" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" world2_battle="31" height="15" tileworld2_battle="16" tileheight="16">
  <properties>
-  <property name="bgm" value="ffl3_ruins"/>
+  <property name="bgm" value="plot_dungeon"/>
   <property name="encounter" value="encounterset_level05_danger02"/>
   <property name="name" value="Power Plant"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="31" height="15">
+ <layer name="Tile Layer 1" world2_battle="31" height="15">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+WUQQrAMAgE07/nUl/dQwmIqMx66aELXsIwC0lwrTfWzCTUd87uZCb91Ndxk37F57mdjOdpN/VZ4C43nle7ic8KLvJKN/VZw3le7Sa+v3d/9d4VHznaTX3Vf884EsWX7Zp4J4eh3Yov7rydnClRfR07CfE9WyQjAkQHAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="31" height="15">
+ <layer name="Tile Layer 2" world2_battle="31" height="15">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,31 +23,31 @@
    H4sIAAAAAAAAC2NgGAWjgP7AjBE/n1RgwIifjwzsGfHzSQWWjPj5o2AUjILhCwAt/LIeRAcAAA==
   </data>
  </layer>
- <objectgroup name="Object Layer 1" width="0" height="0">
-  <object name="left" type="Target" x="80" y="192" width="16" height="16"/>
-  <object name="tele" type="Event" x="80" y="208" width="16" height="16">
+ <objectgroup name="Object Layer 1" world2_battle="0" height="0">
+  <object name="left" type="Target" x="80" y="192" world2_battle="16" height="16"/>
+  <object name="tele" type="Event" x="80" y="208" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/powerplant02.tmx', 'left')"/>
    </properties>
   </object>
-  <object name="right" type="Target" x="400" y="192" width="16" height="16"/>
-  <object name="tele" type="Event" x="400" y="208" width="16" height="16">
+  <object name="right" type="Target" x="400" y="192" world2_battle="16" height="16"/>
+  <object name="tele" type="Event" x="400" y="208" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/powerplant02.tmx', 'right')"/>
    </properties>
   </object>
-  <object name="chest" type="Chest" x="400" y="112" width="16" height="16">
+  <object name="chest" type="Chest" x="400" y="112" world2_battle="16" height="16">
    <properties>
     <property name="item" value="item_agi99"/>
    </properties>
   </object>
-  <object name="chest" type="Chest" x="80" y="112" width="16" height="16">
+  <object name="chest" type="Chest" x="80" y="112" world2_battle="16" height="16">
    <properties>
     <property name="item" value="spell_wizard"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="31" height="15">
+ <layer name="Tile Layer 3" world2_battle="31" height="15">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -55,7 +55,7 @@
    H4sIAAAAAAAAC2NgGAWjYBSMglEwXEHXAJrXSWW7STGPXnYDADdyQihEBwAA
   </data>
  </layer>
- <layer name="Tile Layer 4" width="31" height="15">
+ <layer name="Tile Layer 4" world2_battle="31" height="15">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

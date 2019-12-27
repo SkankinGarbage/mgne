@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="42" tilewidth="16" tileheight="16" nextobjectid="132">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="45" height="42" tileworld2_battle="16" tileheight="16" nextobjectid="132">
  <properties>
-  <property name="bgm" value="ffl2_peaceful"/>
+  <property name="bgm" value="eden_town"/>
   <property name="name" value="Final Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="45" height="42">
+ <layer name="Tile Layer 1" world2_battle="45" height="42">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2WUQqDMAyG6waCgm+eZt7Dezhftp1+LTQQQqpVaRMhDx+WUuVrSP/aOee6izwJV79XA3M2Z3M2Z3PWSe9pIr0CnxwagrSPOevhzs7TDZ1xnVuEJjdaXyB4DohWqP6QwS2B20PwHBGDk8lucB4J4PlA4zC/eN6eFa2Tcv54vpFfwnkhdV+FnVNgZ7wvujfpfqbOD7e9LylnnAd7fly21HTG54uevxeB65ctQj3o/+wWR51xHsDcHNdMcUz7JadvSjrD+cLnao6+HXE+QklnjuAJfXHGuXRv7N2B3Dq8NvX9ks65uZG6L7XkBlfT1H0p4czlRqqmWu4ULjdSNZ3IU9v/Rm4+1HQG7zPu8F5tX8MwDKMuf1HvwiaIHQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="45" height="42">
+ <layer name="Tile Layer 2" world2_battle="45" height="42">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,41 +23,41 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="103" name="inn" type="Target" x="368" y="336" width="16" height="16"/>
-  <object id="104" name="tele" type="Event" x="368" y="320" width="16" height="16">
+  <object id="103" name="inn" type="Target" x="368" y="336" world2_battle="16" height="16"/>
+  <object id="104" name="tele" type="Event" x="368" y="320" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/town_interior.tmx', 'inn'); sceneSwitch('entered_inn', true)"/>
    </properties>
   </object>
-  <object id="106" name="weapons" type="Target" x="208" y="416" width="16" height="16"/>
-  <object id="108" name="potions" type="Target" x="208" y="512" width="16" height="16"/>
-  <object id="109" name="tele" type="Event" x="208" y="496" width="16" height="16">
+  <object id="106" name="weapons" type="Target" x="208" y="416" world2_battle="16" height="16"/>
+  <object id="108" name="potions" type="Target" x="208" y="512" world2_battle="16" height="16"/>
+  <object id="109" name="tele" type="Event" x="208" y="496" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/town_interior.tmx', 'potions')"/>
    </properties>
   </object>
-  <object id="110" name="tele" type="Event" x="208" y="400" width="16" height="16">
+  <object id="110" name="tele" type="Event" x="208" y="400" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/town_interior.tmx', 'weapons')"/>
    </properties>
   </object>
-  <object id="111" name="tele" type="Event" x="272" y="128" width="64" height="16">
+  <object id="111" name="tele" type="Event" x="272" y="128" world2_battle="64" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/overworld.tmx', 'town')"/>
    </properties>
   </object>
-  <object id="112" name="tele" type="Event" x="544" y="368" width="16" height="64">
+  <object id="112" name="tele" type="Event" x="544" y="368" world2_battle="16" height="64">
    <properties>
     <property name="onCollide" value="targetTele('world5/overworld.tmx', 'town')"/>
    </properties>
   </object>
-  <object id="113" name="memory" type="Teleport Memory" x="368" y="384" width="16" height="16">
+  <object id="113" name="memory" type="Teleport Memory" x="368" y="384" world2_battle="16" height="16">
    <properties>
     <property name="displayName" value="Final Town"/>
    </properties>
   </object>
-  <object id="114" name="entry" type="Target" x="496" y="384" width="16" height="16"/>
-  <object id="115" name="npc" type="Character" x="416" y="448" width="16" height="16">
+  <object id="114" name="entry" type="Target" x="496" y="384" world2_battle="16" height="16"/>
+  <object id="115" name="npc" type="Character" x="416" y="448" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="EAST"/>
@@ -65,7 +65,7 @@
     <property name="onInteract" value="speak('Shops? Nobody works here. But you can buy things anyway.')"/>
    </properties>
   </object>
-  <object id="116" name="npc" type="Character" x="432" y="320" width="16" height="16">
+  <object id="116" name="npc" type="Character" x="432" y="320" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="face" value="SOUTH"/>
@@ -73,7 +73,7 @@
     <property name="onInteract" value="speak('Welcome to paradise. But... how have I never met you? No one new comes here.')"/>
    </properties>
   </object>
-  <object id="117" name="npc" type="Character" x="384" y="512" width="16" height="16">
+  <object id="117" name="npc" type="Character" x="384" y="512" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_beetle"/>
     <property name="face" value="NORTH"/>
@@ -81,7 +81,7 @@
     <property name="onInteract" value="speak('The raw power of this world is amazing! But there is no conflict. Eat, drink, and be merry!')"/>
    </properties>
   </object>
-  <object id="118" name="npc" type="Character" x="336" y="496" width="16" height="16">
+  <object id="118" name="npc" type="Character" x="336" y="496" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="SOUTH"/>
@@ -89,7 +89,7 @@
     <property name="onInteract" value="speak('Become a god? The palace of the gods is to the north... but we have no need of gods.')"/>
    </properties>
   </object>
-  <object id="119" name="npc" type="Character" x="256" y="432" width="16" height="16">
+  <object id="119" name="npc" type="Character" x="256" y="432" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="SOUTH"/>
@@ -97,7 +97,7 @@
     <property name="onInteract" value="speak('Life began on this world, and our ancestors traveled freely through Babel.')"/>
    </properties>
   </object>
-  <object id="120" name="npc" type="Character" x="256" y="336" width="16" height="16">
+  <object id="120" name="npc" type="Character" x="256" y="336" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
     <property name="face" value="EAST"/>
@@ -105,7 +105,7 @@
     <property name="onInteract" value="speak('Don\'t you understand? Babel connects different times, not different places.')"/>
    </properties>
   </object>
-  <object id="121" name="npc" type="Character" x="272" y="272" width="16" height="16">
+  <object id="121" name="npc" type="Character" x="272" y="272" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
@@ -113,7 +113,7 @@
     <property name="onInteract" value="speak('In the beginning, masters from Babel slew the creator and sealed the gate.')"/>
    </properties>
   </object>
-  <object id="122" name="npc" type="Character" x="176" y="400" width="16" height="16">
+  <object id="122" name="npc" type="Character" x="176" y="400" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_skeleton"/>
     <property name="face" value="WEST"/>
@@ -121,19 +121,19 @@
     <property name="onInteract" value="speak('Nobody dies here. But then again, nobody is born either.')"/>
    </properties>
   </object>
-  <object id="123" name="zkauba" type="Character" x="544" y="384" width="16" height="16">
+  <object id="123" name="zkauba" type="Character" x="544" y="384" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="hide" value="return not getSwitch('brotherhood_appears')"/>
    </properties>
   </object>
-  <object id="124" name="lara" type="Character" x="544" y="400" width="16" height="16">
+  <object id="124" name="lara" type="Character" x="544" y="400" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="hide" value="return not getSwitch('brotherhood_appears')"/>
    </properties>
   </object>
-  <object id="126" name="zkauba2" type="Character" x="352" y="336" width="16" height="16">
+  <object id="126" name="zkauba2" type="Character" x="352" y="336" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="SOUTH"/>
@@ -141,7 +141,7 @@
     <property name="onInteract" value="play('world5/zkauba.lua')"/>
    </properties>
   </object>
-  <object id="127" name="lara2" type="Character" x="384" y="336" width="16" height="16">
+  <object id="127" name="lara2" type="Character" x="384" y="336" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="face" value="SOUTH"/>
@@ -149,14 +149,14 @@
     <property name="onInteract" value="play('world5/lara.lua')"/>
    </properties>
   </object>
-  <object id="131" name="autostart" type="Event" x="400" y="288" width="16" height="16">
+  <object id="131" name="autostart" type="Event" x="400" y="288" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('entered_inn') or getSwitch('brotherhood01')"/>
     <property name="onEnter" value="play('world5/brotherhood01.lua')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="45" height="42">
+ <layer name="Tile Layer 3" world2_battle="45" height="42">
   <properties>
    <property name="z" value="1.5"/>
   </properties>

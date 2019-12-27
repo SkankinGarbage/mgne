@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="45" tilewidth="16" tileheight="16" nextobjectid="109">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="33" height="45" tileworld2_battle="16" tileheight="16" nextobjectid="109">
  <properties>
-  <property name="bgm" value="ffl3_dungeon"/>
+  <property name="bgm" value="elemental_dungeons"/>
   <property name="encounter" value="encounterset_level12_danger01"/>
   <property name="name" value="Phoenix Dungeon"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="33" height="45">
+ <layer name="Tile Layer 1" world2_battle="33" height="45">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2VMQ7EIAwEgRdcl6/c3+4TdOny1jRYWll2KC7rIMXFSCggMZglPkopR5IkCYHvAg6fBRy2BRxqOjzu0Ac/GEc77IMK42iHNvYX2sscMAeaqFzI3Vt1YOdCztgA7SCw6oHnnzmw6tEMPAeB6XDHun8cdD4Qby3DocOdI91Yy3LQ2cQsRjlcZTLSoRpEOzxdB+3hzbEc9BvUPRP/5ywHeYOylzjIN3wzLAfsB+hg9ROmg+4Z3tzdDp6L5cDae1aPSIckSd7DCbJR9D40FwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="33" height="45">
+ <layer name="Tile Layer 2" world2_battle="33" height="45">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -31,13 +31,13 @@
    </properties>
    <polygon points="16,0 128,0 128,128 16,128"/>
   </object>
-  <object id="106" name="tele" type="Event" x="256" y="128" width="16" height="16">
+  <object id="106" name="tele" type="Event" x="256" y="128" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/fire01.tmx', 'stairs')"/>
    </properties>
   </object>
-  <object id="107" name="stairs" type="Target" x="256" y="144" width="16" height="16"/>
-  <object id="108" name="shiva" type="Character" x="256" y="448" width="16" height="16">
+  <object id="107" name="stairs" type="Target" x="256" y="144" world2_battle="16" height="16"/>
+  <object id="108" name="shiva" type="Character" x="256" y="448" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="anim_moloch"/>
     <property name="face" value="SOUTH"/>

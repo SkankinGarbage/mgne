@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="49" tilewidth="16" tileheight="16" nextobjectid="67">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="57" height="49" tileworld2_battle="16" tileheight="16" nextobjectid="67">
  <properties>
-  <property name="bgm" value="ffl1_overworld2"/>
+  <property name="bgm" value="world1_revisited"/>
   <property name="encounter" value="encounterset_level08_danger00"/>
   <property name="name" value="Floor 12"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="57" height="49">
+ <layer name="Tile Layer 1" world2_battle="57" height="49">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+3XQRLCIAyF4Xo0tz2Hx+kd7FHVBTOZDiEB0hDwLf6Vdso3oRb3bdt2hBBCCIXv+e0IsA4PJ230ejytq5tXN644S26PzmLUrH8Wo5UlivHsqOR4MJ3BTdpyLtodLnr24PbKHb7c53fNLt2zZOyZOzc3r+ftIPfueea1Tm9fbq9aV3KOsFpZckm/M7+ivBtT9D1QY4vsvL7fWl2cjRZxH0ouzfUjja22WtcoI72vdAbrdXn6rvfUnDGtfF7G1jlaGb2d3BpWmqW0FsmZzoe5a48Avh6nNNd0dsw5Rxg1Ts5a+n6kOdY4qVX7/SjGWt8sxhbXbMYas5Uz2n8rSyc9S412tVg1rsg+zirN08r1/oNeCCGEUGUfEhtWm6QrAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="57" height="49">
+ <layer name="Tile Layer 2" world2_battle="57" height="49">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,17 +24,17 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="63" name="gate" type="Event" x="416" y="448" width="16" height="16">
+  <object id="63" name="gate" type="Event" x="416" y="448" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f12.tmx', 'sideworld', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="64" name="town" type="Event" x="192" y="304" width="16" height="16">
+  <object id="64" name="town" type="Event" x="192" y="304" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f12_sideworld_town.tmx', 'entry', 'EAST')"/>
    </properties>
   </object>
-  <object id="65" name="memory" type="Teleport Memory" x="432" y="448" width="16" height="16">
+  <object id="65" name="memory" type="Teleport Memory" x="432" y="448" world2_battle="16" height="16">
    <properties>
     <property name="displayName" value="Scorch World"/>
    </properties>

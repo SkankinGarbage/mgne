@@ -32,7 +32,7 @@ speak("Wolf", "Won't you come die with your friend?")
 walk('hero', 3, 'NORTH')
 speak(hero1, "You'll pay for this, fiends!")
 
-battle('party_bossWorld2', false, 'ffl1_boss')
+battle('party_bossWorld2', false, 'battle_boss')
 sceneSwitch('fenrir_dead', true)
 sceneSwitch('jorgandr_dead', true)
 face('hero', 'NORTH')

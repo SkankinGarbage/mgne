@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="31" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="351">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="69" height="31" tileworld2_battle="16" tileheight="16" backgroundcolor="#676767" nextobjectid="351">
  <properties>
-  <property name="bgm" value="ffl3_town"/>
+  <property name="bgm" value="world1_town"/>
   <property name="name" value="Wolf's Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="69" height="31">
+ <layer name="Tile Layer 1" world2_battle="69" height="31">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2YwQ6EIAxEOe6Fj1Uv6sWb371sogkZoQxs2ZBNmzQa1DdlNKJ1rn94xdTW7VEvW9sc8ri2PhqT8oD9Fk8kpuRJ6vxSjRIzpbGFPK+tj8akPGG/xROJKXmSOr9Uo8RMabyinEIuMMZkiyctvNJ1GjWixhpy76jHzm0kT3rrsbojeeITY+bJf7xPvl2LMZn3icb3SW9PcG1eyNom91zDWzRZPXZuNd9suXuEa/NO1ra65xreosnq5eaW0kgF3sP5urb1mWDiV5qogxo5Pt7D7bq29Zlg4leaqIMamnOysLCwsLCw0IsefcaReSXmfbzUd6zpheI/So5bw8sxmN5qDTP2pNR3rOmF4j9KjlvDyzGY3moNM/akZ69kNJ7ENE/ME4ZpnpgnDDP2hO15sXoj85CJrE9o97xG5yEzZt0M7Z7X6Dxkxqyb8QawdttsbCEAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="69" height="31">
+ <layer name="Tile Layer 2" world2_battle="69" height="31">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -30,39 +30,39 @@
    </properties>
    <polygon points="16,0 16,112 80,112 80,0"/>
   </object>
-  <object id="316" name="innkeep" type="Character" x="80" y="80" width="16" height="16">
+  <object id="316" name="innkeep" type="Character" x="80" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="317" name="tele" type="Event" x="544" y="176" width="16" height="16">
+  <object id="317" name="tele" type="Event" x="544" y="176" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/coast_town.tmx', 20, 24)"/>
    </properties>
   </object>
-  <object id="318" name="npc" type="Character" x="544" y="48" width="16" height="16">
+  <object id="318" name="npc" type="Character" x="544" y="48" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="play('world2/barkeep.lua')"/>
    </properties>
   </object>
-  <object id="319" name="npc" type="Character" x="640" y="96" width="16" height="16">
+  <object id="319" name="npc" type="Character" x="640" y="96" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_golem"/>
     <property name="face" value="EAST"/>
     <property name="onInteract" value="speak('I hear security is getting tighter at the wolf\'s castle. Did something happen?')"/>
    </properties>
   </object>
-  <object id="320" name="npc" type="Character" x="640" y="64" width="16" height="16">
+  <object id="320" name="npc" type="Character" x="640" y="64" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="EAST"/>
     <property name="onInteract" value="speak('Long ago before the worm came, there were many more settlements in the mountains.')"/>
    </properties>
   </object>
-  <object id="321" name="npc" type="Character" x="592" y="112" width="16" height="16">
+  <object id="321" name="npc" type="Character" x="592" y="112" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
@@ -70,7 +70,7 @@
     <property name="onInteract" value="speak('A strange group of men passed through recently, talking nonsense about \'masters\' and someplace called Babel.')"/>
    </properties>
   </object>
-  <object id="322" name="npc" type="Character" x="528" y="80" width="16" height="16">
+  <object id="322" name="npc" type="Character" x="528" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="NORTH"/>
@@ -78,7 +78,7 @@
     <property name="onInteract" value="speak('My brother died in battle against the forces of the worm. It\'s a very common fate.')"/>
    </properties>
   </object>
-  <object id="323" name="npc" type="Character" x="432" y="48" width="16" height="16">
+  <object id="323" name="npc" type="Character" x="432" y="48" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="SOUTH"/>
@@ -86,41 +86,41 @@
     <property name="onInteract" value="speak('Listen... If you happen to be helping prisoners of the wolf... There is an old cave nearby that leads right to the jail. Good luck.')"/>
    </properties>
   </object>
-  <object id="324" name="npc" type="Character" x="944" y="80" width="16" height="16">
+  <object id="324" name="npc" type="Character" x="944" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="onInteract" value="play('world2/mayor.lua')"/>
    </properties>
   </object>
-  <object id="325" name="shop" type="Character" x="400" y="384" width="16" height="16">
+  <object id="325" name="shop" type="Character" x="400" y="384" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_world2_potions')"/>
    </properties>
   </object>
-  <object id="326" name="shop" type="Character" x="80" y="384" width="16" height="16">
+  <object id="326" name="shop" type="Character" x="80" y="384" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_coastal_armor')"/>
    </properties>
   </object>
-  <object id="327" name="shop" type="Character" x="720" y="384" width="16" height="16">
+  <object id="327" name="shop" type="Character" x="720" y="384" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_coastal_weapon')"/>
    </properties>
   </object>
-  <object id="328" name="jonas" type="Character" x="1040" y="368" width="16" height="16">
+  <object id="328" name="jonas" type="Character" x="1040" y="368" world2_battle="16" height="16">
    <properties>
     <property name="animate" value="false"/>
     <property name="appearance" value="4dir_jonas"/>
     <property name="hide" value="return not getSwitch('world2_done') or getSwitch('world3_gate')"/>
    </properties>
   </object>
-  <object id="329" name="lara" type="Character" x="1008" y="368" width="16" height="16">
+  <object id="329" name="lara" type="Character" x="1008" y="368" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="face" value="EAST"/>
@@ -128,7 +128,7 @@
     <property name="onInteract" value="play('world2/lara03.lua')"/>
    </properties>
   </object>
-  <object id="330" name="lara" type="Character" x="1008" y="368" width="16" height="16">
+  <object id="330" name="lara" type="Character" x="1008" y="368" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="face" value="EAST"/>
@@ -136,75 +136,75 @@
     <property name="onInteract" value="speak('Lara', 'The seal on this world may be damaged. I would investigate.')"/>
    </properties>
   </object>
-  <object id="331" name="tele" type="Event" x="80" y="176" width="16" height="16">
+  <object id="331" name="tele" type="Event" x="80" y="176" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world2/coast_town.tmx', 'inn')"/>
    </properties>
   </object>
-  <object id="332" name="inn" type="Target" x="80" y="160" width="16" height="16"/>
-  <object id="333" name="pub" type="Target" x="544" y="160" width="16" height="16"/>
-  <object id="334" name="tele" type="Event" x="544" y="176" width="16" height="16">
+  <object id="332" name="inn" type="Target" x="80" y="160" world2_battle="16" height="16"/>
+  <object id="333" name="pub" type="Target" x="544" y="160" world2_battle="16" height="16"/>
+  <object id="334" name="tele" type="Event" x="544" y="176" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world2/coast_town.tmx', 'pub')"/>
    </properties>
   </object>
-  <object id="335" name="mansion" type="Target" x="944" y="160" width="16" height="16"/>
-  <object id="336" name="tele" type="Event" x="944" y="176" width="16" height="16">
+  <object id="335" name="mansion" type="Target" x="944" y="160" world2_battle="16" height="16"/>
+  <object id="336" name="tele" type="Event" x="944" y="176" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/coast_town.tmx', 20, 24)"/>
    </properties>
   </object>
-  <object id="337" name="tele" type="Event" x="944" y="176" width="16" height="16">
+  <object id="337" name="tele" type="Event" x="944" y="176" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world2/coast_town.tmx', 'mansion')"/>
    </properties>
   </object>
-  <object id="338" name="armor" type="Target" x="80" y="448" width="16" height="16"/>
-  <object id="339" name="tele" type="Event" x="80" y="464" width="16" height="16">
+  <object id="338" name="armor" type="Target" x="80" y="448" world2_battle="16" height="16"/>
+  <object id="339" name="tele" type="Event" x="80" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/coast_town.tmx', 20, 24)"/>
    </properties>
   </object>
-  <object id="340" name="tele" type="Event" x="80" y="464" width="16" height="16">
+  <object id="340" name="tele" type="Event" x="80" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world2/coast_town.tmx', 'armor')"/>
    </properties>
   </object>
-  <object id="341" name="pots" type="Target" x="400" y="448" width="16" height="16"/>
-  <object id="342" name="tele" type="Event" x="400" y="464" width="16" height="16">
+  <object id="341" name="pots" type="Target" x="400" y="448" world2_battle="16" height="16"/>
+  <object id="342" name="tele" type="Event" x="400" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/coast_town.tmx', 20, 24)"/>
    </properties>
   </object>
-  <object id="343" name="tele" type="Event" x="400" y="464" width="16" height="16">
+  <object id="343" name="tele" type="Event" x="400" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world2/coast_town.tmx', 'pots')"/>
    </properties>
   </object>
-  <object id="344" name="weapons" type="Target" x="720" y="448" width="16" height="16"/>
-  <object id="345" name="tele" type="Event" x="720" y="464" width="16" height="16">
+  <object id="344" name="weapons" type="Target" x="720" y="448" world2_battle="16" height="16"/>
+  <object id="345" name="tele" type="Event" x="720" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/coast_town.tmx', 20, 24)"/>
    </properties>
   </object>
-  <object id="346" name="tele" type="Event" x="720" y="464" width="16" height="16">
+  <object id="346" name="tele" type="Event" x="720" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world2/coast_town.tmx', 'weapons')"/>
    </properties>
   </object>
-  <object id="347" name="house" type="Target" x="1024" y="448" width="16" height="16"/>
-  <object id="348" name="tele" type="Event" x="1024" y="464" width="16" height="16">
+  <object id="347" name="house" type="Target" x="1024" y="448" world2_battle="16" height="16"/>
+  <object id="348" name="tele" type="Event" x="1024" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/coast_town.tmx', 20, 24)"/>
    </properties>
   </object>
-  <object id="349" name="tele" type="Event" x="1024" y="464" width="16" height="16">
+  <object id="349" name="tele" type="Event" x="1024" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world2/coast_town.tmx', 'house')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="69" height="31">
+ <layer name="Tile Layer 3" world2_battle="69" height="31">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -212,7 +212,7 @@
    H4sIAAAAAAAAC+3YQQqAMAxE0VzAw6ob7entMhQLDRkh4H+QZacNzSpmAAAAgNne63AV4c+d4ndFbOK8q9ftKnKnP9eS78j0Ff3LqHFuZqWei0xfs79UGedmVtm5GH3dFwAAAAAA+A/1nq163gr1nq1y3mqWeh9VOe8t6wHUqN5HbCEAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" width="69" height="31">
+ <layer name="Tile Layer 4" world2_battle="69" height="31">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

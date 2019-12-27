@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="65" height="45" tilewidth="16" tileheight="16" nextobjectid="58">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="65" height="45" tileworld2_battle="16" tileheight="16" nextobjectid="58">
  <properties>
-  <property name="bgm" value="ffl1_cave"/>
+  <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
   <property name="name" value="Prison"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="65" height="45">
+ <layer name="Tile Layer 1" world2_battle="65" height="45">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2XMQ7DIAxFuUK3HqlLTpDrZMqpIwZLFoKPHZLUtP9JFkPBghdcICVCCCF3sZ+M0VwR0PNZnIEcjIx/GplvbldnIAcj459G5pvbjzPQHreOj4DMV7eWyH3RHreMj+zAUse5L9rjvRxRHUhY6hjt8cWQI6ID/Y22TqC6yb+vhhySJwK1fW11UKsRy9qjOtBhdVCrkZkd6NbqoHbWlf12kHN2B62z7p8ctM66X3HwSthF7fzsOdAuIr6ZSgfv1Hdg/T8o2e5byilaNd36ftb7wWwOyppu3W312lDfiPWOKOsavQH02lDfGR1438vet3V0vO9lT9ABHczmQO5DV4fkjY6+D10dkjc6d6y9DEIIIYQQQgghhHyPAzsUKWO0LQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="65" height="45">
+ <layer name="Tile Layer 2" world2_battle="65" height="45">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,14 +24,14 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="36" name="tele" type="Event" x="288" y="448" width="16" height="16">
+  <object id="36" name="tele" type="Event" x="288" y="448" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/prison01.tmx', 'left')"/>
    </properties>
   </object>
-  <object id="37" name="left" type="Target" x="288" y="432" width="16" height="16"/>
-  <object id="38" name="right" type="Target" x="640" y="432" width="16" height="16"/>
-  <object id="39" name="tele" type="Event" x="640" y="448" width="16" height="16">
+  <object id="37" name="left" type="Target" x="288" y="432" world2_battle="16" height="16"/>
+  <object id="38" name="right" type="Target" x="640" y="432" world2_battle="16" height="16"/>
+  <object id="39" name="tele" type="Event" x="640" y="448" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/prison01.tmx', 'right')"/>
    </properties>
@@ -43,12 +43,12 @@
    </properties>
    <polygon points="32,-96 32,-48 128,-48 128,16 112,16 112,144 0,144 0,-48 -144,-48 -144,-16 -160,-16 -160,-96"/>
   </object>
-  <object id="45" name="tele" type="Event" x="736" y="304" width="16" height="16">
+  <object id="45" name="tele" type="Event" x="736" y="304" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/east_depot.tmx', 'prison_door')"/>
    </properties>
   </object>
-  <object id="46" name="door" type="Target" x="736" y="288" width="16" height="16"/>
+  <object id="46" name="door" type="Target" x="736" y="288" world2_battle="16" height="16"/>
   <object id="47" name="room" type="Ceiling" x="624" y="80">
    <properties>
     <property name="roofID" value="137"/>
@@ -63,7 +63,7 @@
    </properties>
    <polygon points="160,0 176,0 176,80 224,80 224,224 160,224"/>
   </object>
-  <object id="49" name="guard" type="Character" x="480" y="368" width="16" height="16">
+  <object id="49" name="guard" type="Character" x="480" y="368" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="EAST"/>
@@ -71,7 +71,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="50" name="guard" type="Character" x="464" y="352" width="16" height="16">
+  <object id="50" name="guard" type="Character" x="464" y="352" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
@@ -79,7 +79,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="51" name="guard" type="Character" x="448" y="368" width="16" height="16">
+  <object id="51" name="guard" type="Character" x="448" y="368" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
@@ -87,7 +87,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="52" name="guard" type="Character" x="608" y="272" width="16" height="16">
+  <object id="52" name="guard" type="Character" x="608" y="272" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
@@ -95,7 +95,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="53" name="guard" type="Character" x="624" y="256" width="16" height="16">
+  <object id="53" name="guard" type="Character" x="624" y="256" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
@@ -103,7 +103,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="54" name="guard" type="Character" x="640" y="272" width="16" height="16">
+  <object id="54" name="guard" type="Character" x="640" y="272" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
@@ -111,19 +111,19 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="55" name="chest" type="Chest" x="464" y="208" width="16" height="16">
+  <object id="55" name="chest" type="Chest" x="464" y="208" world2_battle="16" height="16">
    <properties>
     <property name="item" value="pot_mana"/>
    </properties>
   </object>
-  <object id="56" name="mid" type="Target" x="368" y="288" width="16" height="16"/>
-  <object id="57" name="tele" type="Event" x="368" y="304" width="16" height="16">
+  <object id="56" name="mid" type="Target" x="368" y="288" world2_battle="16" height="16"/>
+  <object id="57" name="tele" type="Event" x="368" y="304" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/prison01.tmx', 'mid')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="65" height="45">
+ <layer name="Tile Layer 3" world2_battle="65" height="45">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -131,7 +131,7 @@
    H4sIAAAAAAAAC+3WsQ0AIAwDwSzIBGzE1IyQJlIiuJO+d+kIAAAAAHjX6R7QYCX9YCcBADBP9mMrmi77sRUBAADQ4wK5s+nstC0AAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" width="65" height="45">
+ <layer name="Tile Layer 4" world2_battle="65" height="45">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

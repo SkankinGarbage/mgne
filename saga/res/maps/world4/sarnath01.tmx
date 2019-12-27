@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="51" tilewidth="16" tileheight="16" nextobjectid="70">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="69" height="51" tileworld2_battle="16" tileheight="16" nextobjectid="70">
  <properties>
-  <property name="bgm" value="ffl3_dark"/>
+  <property name="bgm" value="optional_dungeon"/>
   <property name="encounter" value="encounterset_level09_danger01"/>
   <property name="name" value="Sarnath"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="69" height="51">
+ <layer name="Tile Layer 1" world2_battle="69" height="51">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2ZQXLDIAxF8eQU2dGjsOtJcpnS9gBpN80qPWXjGTRVFH3AZgp0Ros3drCjomeMQjk45w6GYRiGYfw7njayJFC7ZGt8jRFOnjewZNo1tsTWGOmk9plF0N4yTo4M3j6Dk2MFEbQjJzUxPYO7mcGJryCCduSkJuZ6XxD3z+IE5UXEhHYtpGuhIo72Xfm9kU6OihMtt+jyTko5lzzLvznSiRdOtNyjgpZfbS3SxpeMPdLJ4u6dUB+pz18iz5jaLuxYcsJjXDJx+d+deT653vgWeVIbHUtOzukzv1/GnWk+KTlZ8/kQeVLbyif4nvZO8fvP6Ry9ZzM6QfNiqfZIts7HszkheH7auawRLwWQN+SCGO2Ery9Kz5C87HFSOz56r3dKz2VtR7Xi4h7rTY0Tbf7V4qFxS/RwwtcdJ/e7dqFasSJrhaw3e5xEEI/3Q1tL9XDiGad0lDnwWsHrDc0JrzfeAO8ZJ1r94v0gejvZC68/PDeJrNW1v4kRo5wE91gXgjivzU2L1bJ26j3H8jlN5qHl2vrMNVB/ejvJ1WKtNsi5gfvh44DGiBYD1bBSf3o64Ud+XasNufWvHDcBxEA1rNSf3k54LSa02oCcaLUF1Re0ZqJaPJMTL65v4ao4qZmT+NzlJ3Mi34Hg8jnJnPnvPPlOyVh8DtLm5xmdaDmjvErjJ7h8Tdbcz+KkNC7+AuSU+jXitz130gLKuSXm2i/v7sdSDyf0f/tWkJPWuHLO6eHENz7LPeNE7oOivVGit5Pg6vYvSyAnub3Q3N4oJ7i+7w7a69xKAGj30jOXn2v2XXs42QPKfwHn2n3yudSuH2d1MhJz0s+JYRiGYRiGMYYfDniY4Pw2AAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="69" height="51">
+ <layer name="Tile Layer 2" world2_battle="69" height="51">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,95 +24,95 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="45" name="block" type="Event" x="512" y="112" width="96" height="16">
+  <object id="45" name="block" type="Event" x="512" y="112" world2_battle="96" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="46" name="block" type="Event" x="512" y="544" width="96" height="16">
+  <object id="46" name="block" type="Event" x="512" y="544" world2_battle="96" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="48" name="block" type="Event" x="416" y="128" width="16" height="16">
+  <object id="48" name="block" type="Event" x="416" y="128" world2_battle="16" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="49" name="house_ne" type="Target" x="448" y="288" width="16" height="16"/>
-  <object id="50" name="house_nw" type="Target" x="432" y="384" width="16" height="16"/>
-  <object id="51" name="house_sw" type="Target" x="368" y="480" width="16" height="16"/>
-  <object id="52" name="house_se" type="Target" x="656" y="480" width="16" height="16"/>
-  <object id="53" name="entry" type="Target" x="560" y="640" width="16" height="16"/>
-  <object id="55" name="door_left" type="Target" x="528" y="400" width="16" height="16"/>
-  <object id="56" name="door_right" type="Target" x="576" y="400" width="16" height="16"/>
-  <object id="57" name="tele" type="Event" x="160" y="320" width="64" height="16">
+  <object id="49" name="house_ne" type="Target" x="448" y="288" world2_battle="16" height="16"/>
+  <object id="50" name="house_nw" type="Target" x="432" y="384" world2_battle="16" height="16"/>
+  <object id="51" name="house_sw" type="Target" x="368" y="480" world2_battle="16" height="16"/>
+  <object id="52" name="house_se" type="Target" x="656" y="480" world2_battle="16" height="16"/>
+  <object id="53" name="entry" type="Target" x="560" y="640" world2_battle="16" height="16"/>
+  <object id="55" name="door_left" type="Target" x="528" y="400" world2_battle="16" height="16"/>
+  <object id="56" name="door_right" type="Target" x="576" y="400" world2_battle="16" height="16"/>
+  <object id="57" name="tele" type="Event" x="160" y="320" world2_battle="64" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
    </properties>
   </object>
-  <object id="58" name="tele" type="Event" x="880" y="320" width="64" height="16">
+  <object id="58" name="tele" type="Event" x="880" y="320" world2_battle="64" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
    </properties>
   </object>
-  <object id="59" name="tele" type="Event" x="160" y="336" width="16" height="352">
+  <object id="59" name="tele" type="Event" x="160" y="336" world2_battle="16" height="352">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
    </properties>
   </object>
-  <object id="60" name="tele" type="Event" x="928" y="336" width="16" height="352">
+  <object id="60" name="tele" type="Event" x="928" y="336" world2_battle="16" height="352">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
    </properties>
   </object>
-  <object id="61" name="tele" type="Event" x="176" y="672" width="752" height="16">
+  <object id="61" name="tele" type="Event" x="176" y="672" world2_battle="752" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'sarnath')"/>
    </properties>
   </object>
-  <object id="62" name="tele" type="Event" x="368" y="464" width="16" height="16">
+  <object id="62" name="tele" type="Event" x="368" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'house_sw')"/>
    </properties>
   </object>
-  <object id="63" name="tele" type="Event" x="432" y="368" width="16" height="16">
+  <object id="63" name="tele" type="Event" x="432" y="368" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'house_nw')"/>
    </properties>
   </object>
-  <object id="64" name="tele" type="Event" x="448" y="272" width="16" height="16">
+  <object id="64" name="tele" type="Event" x="448" y="272" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'house_ne')"/>
    </properties>
   </object>
-  <object id="65" name="tele" type="Event" x="656" y="464" width="16" height="16">
+  <object id="65" name="tele" type="Event" x="656" y="464" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'house_se')"/>
    </properties>
   </object>
-  <object id="66" name="tele" type="Event" x="528" y="384" width="16" height="16">
+  <object id="66" name="tele" type="Event" x="528" y="384" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath04.tmx', 'door_left')"/>
    </properties>
   </object>
-  <object id="67" name="tele" type="Event" x="576" y="384" width="16" height="16">
+  <object id="67" name="tele" type="Event" x="576" y="384" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath04.tmx', 'door_right')"/>
    </properties>
   </object>
-  <object id="68" name="block" type="Event" x="224" y="240" width="16" height="16">
+  <object id="68" name="block" type="Event" x="224" y="240" world2_battle="16" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="69" name="block" type="Event" x="416" y="112" width="32" height="16">
+  <object id="69" name="block" type="Event" x="416" y="112" world2_battle="32" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="69" height="51">
+ <layer name="Tile Layer 3" world2_battle="69" height="51">
   <properties>
    <property name="z" value="1.5"/>
   </properties>

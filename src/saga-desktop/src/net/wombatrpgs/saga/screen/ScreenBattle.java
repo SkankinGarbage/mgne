@@ -116,7 +116,7 @@ public class ScreenBattle extends SagaScreen {
 	protected static final float TEXT_FADE_TIME = 0f;
 	protected static final float ADVANCE_DURATION = .2f;
 	protected static final int ADVANCE_LENGTH = 8; // in px
-	protected static final String VICTORY_BGM_NAME = "ffl1_victory";
+	protected static final String VICTORY_BGM_NAME = "victory";
 	
 	protected Battle battle;
 	

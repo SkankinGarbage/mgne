@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="47" tilewidth="16" tileheight="16" nextobjectid="73">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="45" height="47" tileworld2_battle="16" tileheight="16" nextobjectid="73">
  <properties>
-  <property name="bgm" value="ffl1_theme"/>
+  <property name="bgm" value="tower"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
   <property name="name" value="Floor 2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="45" height="47">
+ <layer name="Tile Layer 1" world2_battle="45" height="47">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2XOwoDMQxEfbzU6XKBNHv/PgRiEEKf0Vr+BQ9MZYHfyrakLQXXq8Gz9N37qdhbm6VdmR+Kn8baYY7JYrZ8mGOymL21WdqVufr98+o9hdbcyqzVZO5ZWokZPVfvbowU2ndpHM/zaszUFvPId+f1ZGo0rjd3D+be3Hd7smWNO6uO92Dm3HSvjDnb67vUSBzn1t7xSswSN/Imosx8L+/eIXEW80XWr7IeM+ooMz83r6cgcTsx8xgp/xl3w6tX0Z7C80e/LSvPmcxSPeHnob2FDOYWU94q+l0tc3YPZp7fkcx3e4rEmymPBX0/I/6pKHO19M8k1TMrrjdvYftI/6bRuBHakdk7czTOcg9mLX+c2YrLmIv/nRmZAbwenzFHRJm9WWtF5pY8e338MOfcjay5OMrckucZzMgcjvaPET0FnWm1+ov4MO+nD39jVvIMIQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="45" height="47">
+ <layer name="Tile Layer 2" world2_battle="45" height="47">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,30 +24,30 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="66" name="target_a" type="Event" x="480" y="416" width="16" height="16"/>
-  <object id="67" name="mem_tele" type="Event" x="480" y="432" width="16" height="16">
+  <object id="66" name="target_a" type="Event" x="480" y="416" world2_battle="16" height="16"/>
+  <object id="67" name="mem_tele" type="Event" x="480" y="432" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f01_transition.tmx', 'tower/f03.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
-  <object id="68" name="target_b" type="Event" x="48" y="688" width="16" height="16"/>
-  <object id="69" name="mem_tele" type="Event" x="48" y="704" width="16" height="16">
+  <object id="68" name="target_b" type="Event" x="48" y="688" world2_battle="16" height="16"/>
+  <object id="69" name="mem_tele" type="Event" x="48" y="704" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f01_transition.tmx', 'tower/f01.tmx', 'ENTRANCE', 'B')"/>
    </properties>
   </object>
-  <object id="70" name="tele" type="Event" x="96" y="224" width="16" height="16">
+  <object id="70" name="tele" type="Event" x="96" y="224" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('tower/f02_sideworld.tmx', 20, 28)"/>
    </properties>
   </object>
-  <object id="71" name="chest" type="Chest" x="208" y="64" width="16" height="16">
+  <object id="71" name="chest" type="Chest" x="208" y="64" world2_battle="16" height="16">
    <properties>
     <property name="item" value="wpn_gunMusket"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="45" height="47">
+ <layer name="Tile Layer 3" world2_battle="45" height="47">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -55,7 +55,7 @@
    H4sIAAAAAAAAC+3WQQ0AIAwEwWrkh38jeGgC5ZIZBfvcKgAAAAD4154OaFjTAQ2JzQAA3OPD30hsTnEAjqwzNQwhAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="45" height="47">
+ <layer name="Tile Layer 4" world2_battle="45" height="47">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="76" height="70" tilewidth="16" tileheight="16" nextobjectid="36">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="76" height="70" tileworld2_battle="16" tileheight="16" nextobjectid="36">
  <properties>
-  <property name="battle_bgm" value="ffl3_battle"/>
-  <property name="bgm" value="ffl1_overworld2"/>
+  <property name="battle_bgm" value="world1_battle"/>
+  <property name="bgm" value="world1_revisited"/>
   <property name="name" value="Home World"/>
   <property name="terrainEncounter" value="terrain_world3.5"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="76" height="70">
+ <layer name="Tile Layer 1" world2_battle="76" height="70">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -16,7 +16,7 @@
    H4sIAAAAAAAAC+2aTY7bMAyF7aNl6Zyi7cqrogfJbi7cGcBEOQ+kSEqyJTdcPFh2FFv6/Ej9JM9lWZ4naj/5/v+bklfySl7zKHklr+Q1j5LXd70OncVrc167g4jTQxD1qYXXxlS6dhdJnIjVehz3o9zCqqTRDCLe0nithx4HL+pbhJuX1x2YWZxWVm9f/nnsXXlp3DQeNTnsXXhxUczymOzNynNPags/jmaF3Pg550V5bGVlfm1d4rwsZsiqNP8ZwYx4UZ2ovyLMno77ou9n9BevW5O/PF6juta7mIEX+VzLYa28LK9hvdJnFIc8r47gJflMenetvDizSFsoJ9Ca7bHY67ermfX0VyR2JAYSv9GsNGb8/UZ51eQZKR55G57B+13JrIVXbU4mTpKf+L6A5sVRor7y9+rl1Xv8eoFmyV/YZ7xm8cLxy/Och+Nz9NhsOUziRevtnqyk5+A5ny/jeDmTIuNj7bxI6js+807rcIsXxUTLHNKaw9xx/4L6gDFJuaTXfLsUx6N5fTiE/XgJvGgMrWElrSl4me97zMpLWtNyES/0VW0OxnkoCveKRnAreYpz0Hi15HZNWFdjdfXc3mKFudfi5fGVxar0PI3ZlT5r5UXzRq0Of9a6+HhZvkZ/zeAzLy/8rchSD16jY7OUuzzvOsLLw8xzj5F5TGJWajfGX5RXq0b7S+IVaf9ZvEp5UfsdapTPanl546m3ruYk+ayWVy9mz5tw03hp8dErHrXYmp1XtJ3a/5s4Ay3faKy2Jd6Odfm+1h3JjR9Rpf+DlZhJjPix5t3NwEviw/dzMB55XYuVZ41zN39pftoFWTlEYyOVpe+WOEn7TyOE3uG8JI6ee2n/n/jxqV+B9qCnZ+HFj1iO8LL0+1N/4Jq1NzeSjcWr1E6MzTPa4tkLnsVflshf20m87sAKfRXlhd8r5Wzvvt/MrCyfSfNWPhZI86gWD0t8PuCz0ZwsXtxfJX3V0Tzk4SUxwvIsisQjj0tSD144bxjNJOotyVfaPNYaO6Pzgrvz2oTjVjhv5TW7tLmqx0tn+Gt28fGel7l3LF/x66jRv/GfIew35aoaXp56V/Xr54XalbJ0Hq13ZR9SqVQqlUqlUqlU6h31FwaL30ggUwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="76" height="70">
+ <layer name="Tile Layer 2" world2_battle="76" height="70">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -25,69 +25,69 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="19" name="Hero Gate" type="Event" x="912" y="224" width="80" height="32">
+  <object id="19" name="Hero Gate" type="Event" x="912" y="224" world2_battle="80" height="32">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/gate.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="21" name="Hero Gate" type="Event" x="912" y="256" width="16" height="16">
+  <object id="21" name="Hero Gate" type="Event" x="912" y="256" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/gate.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="22" name="Hero Gate" type="Event" x="944" y="256" width="16" height="16">
+  <object id="22" name="Hero Gate" type="Event" x="944" y="256" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/gate.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="23" name="Hero Gate" type="Event" x="976" y="256" width="16" height="16">
+  <object id="23" name="Hero Gate" type="Event" x="976" y="256" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/gate.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="25" name="Castle of Hero" type="Event" x="944" y="288" width="16" height="16">
+  <object id="25" name="Castle of Hero" type="Event" x="944" y="288" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/fortress_f1.tmx', 'entry_north', 'EAST')"/>
    </properties>
   </object>
-  <object id="27" name="Hometown" type="Event" x="352" y="160" width="16" height="16">
+  <object id="27" name="Hometown" type="Event" x="352" y="160" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/hometown.tmx', 'entry', 'NORTH')"/>
    </properties>
   </object>
-  <object id="29" name="tele" type="Event" x="336" y="432" width="16" height="16">
+  <object id="29" name="tele" type="Event" x="336" y="432" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/pass01.tmx', 'entry')"/>
    </properties>
   </object>
-  <object id="30" name="tele" type="Event" x="368" y="448" width="16" height="16">
+  <object id="30" name="tele" type="Event" x="368" y="448" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/pass02.tmx', 'exit')"/>
    </properties>
   </object>
-  <object id="31" name="Airseed Shrine" type="Event" x="400" y="704" width="16" height="16">
+  <object id="31" name="Airseed Shrine" type="Event" x="400" y="704" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/shrine01.tmx', 13, 39, 'NORTH')"/>
    </properties>
   </object>
-  <object id="32" name="River Town" type="Event" x="400" y="496" width="16" height="16">
+  <object id="32" name="River Town" type="Event" x="400" y="496" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/rivertown.tmx', 24, 9, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="33" name="Southern Cave" type="Event" x="864" y="832" width="16" height="16">
+  <object id="33" name="Southern Cave" type="Event" x="864" y="832" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/hq01.tmx', 12, 16, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="34" name="block" type="Event" x="944" y="352" width="16" height="16">
+  <object id="34" name="block" type="Event" x="944" y="352" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="anim_mountain"/>
     <property name="hide" value="return getSwitch('twins01')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="35" name="Ares Castle" type="Event" x="800" y="400" width="16" height="16">
+  <object id="35" name="Ares Castle" type="Event" x="800" y="400" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/castle01.tmx', 24, 28, 'NORTH')"/>
    </properties>

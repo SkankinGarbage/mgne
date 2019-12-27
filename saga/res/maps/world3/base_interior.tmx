@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="36" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="166">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="51" height="36" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="166">
  <properties>
-  <property name="bgm" value="ffl1_town"/>
+  <property name="bgm" value="generic_town"/>
   <property name="name" value="Rebel Base"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="51" height="36">
+ <layer name="Tile Layer 1" world2_battle="51" height="36">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+1YQQ7CMAzLCybttlfALjAe2IejHHph6XBUlwyIJV96cOZMbVNPIjKBRIBqjdBTXgF6akfpKe8APbWj9JQFoKd2lF56SS/pJb2war+yNNbZemwvF9nfY8VYWwfosft4k/09Voy1bYAeu4+RYPcxkUgkEgmFNxsYlTmguu9qItkAM3OwMhOWFyQbYGYOVmbC8oLMycx3hzWff6sXnWfXAC89e7+lqfPs9iNeev43w8uD6CVqv9S32iz+M/lIs/qZxdejHi/1rbaI/0w+0qzfv3zQy4hzrGcf/pMXTxZz5nms7m0kizl7HmPlMK0s5ux5zBMCaD/VsBwAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="51" height="36">
+ <layer name="Tile Layer 2" world2_battle="51" height="36">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,26 +23,26 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="128" name="innkeep" type="Character" x="80" y="112" width="16" height="16">
+  <object id="128" name="innkeep" type="Character" x="80" y="112" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="137" name="inn" type="Target" x="80" y="176" width="16" height="16"/>
-  <object id="138" name="tele" type="Event" x="80" y="192" width="16" height="16">
+  <object id="137" name="inn" type="Target" x="80" y="176" world2_battle="16" height="16"/>
+  <object id="138" name="tele" type="Event" x="80" y="192" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/base.tmx', 'inn')"/>
    </properties>
   </object>
-  <object id="139" name="shop" type="Character" x="720" y="80" width="16" height="16">
+  <object id="139" name="shop" type="Character" x="720" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_world3_potions')"/>
    </properties>
   </object>
-  <object id="140" name="shop" type="Character" x="400" y="80" width="16" height="16">
+  <object id="140" name="shop" type="Character" x="400" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
@@ -56,44 +56,44 @@
    </properties>
    <polygon points="0,0 0,176 112,176 112,0"/>
   </object>
-  <object id="142" name="tele" type="Event" x="400" y="160" width="16" height="16">
+  <object id="142" name="tele" type="Event" x="400" y="160" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/base.tmx', 'shop_left')"/>
    </properties>
   </object>
-  <object id="143" name="shop_left" type="Target" x="400" y="144" width="16" height="16"/>
-  <object id="144" name="tele" type="Event" x="720" y="160" width="16" height="16">
+  <object id="143" name="shop_left" type="Target" x="400" y="144" world2_battle="16" height="16"/>
+  <object id="144" name="tele" type="Event" x="720" y="160" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/base.tmx', 'shop_right')"/>
    </properties>
   </object>
-  <object id="145" name="shop_right" type="Target" x="720" y="144" width="16" height="16"/>
-  <object id="146" name="tele" type="Event" x="96" y="544" width="16" height="16">
+  <object id="145" name="shop_right" type="Target" x="720" y="144" world2_battle="16" height="16"/>
+  <object id="146" name="tele" type="Event" x="96" y="544" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/base.tmx', 'house')"/>
    </properties>
   </object>
-  <object id="147" name="house" type="Target" x="96" y="528" width="16" height="16"/>
-  <object id="150" name="tele" type="Event" x="512" y="480" width="16" height="16">
+  <object id="147" name="house" type="Target" x="96" y="528" world2_battle="16" height="16"/>
+  <object id="150" name="tele" type="Event" x="512" y="480" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/base_interior.tmx', 'house_up')"/>
    </properties>
   </object>
-  <object id="151" name="house_down" type="Target" x="512" y="464" width="16" height="16"/>
-  <object id="152" name="tele" type="Event" x="160" y="448" width="16" height="16">
+  <object id="151" name="house_down" type="Target" x="512" y="464" world2_battle="16" height="16"/>
+  <object id="152" name="tele" type="Event" x="160" y="448" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/base_interior.tmx', 'house_down')"/>
    </properties>
   </object>
-  <object id="153" name="house_up" type="Target" x="160" y="464" width="16" height="16"/>
-  <object id="154" name="zkauba" type="Character" x="384" y="448" width="16" height="16">
+  <object id="153" name="house_up" type="Target" x="160" y="464" world2_battle="16" height="16"/>
+  <object id="154" name="zkauba" type="Character" x="384" y="448" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="EAST"/>
     <property name="hide" value="return getSwitch('zkauba_joins')"/>
    </properties>
   </object>
-  <object id="155" name="aven" type="Character" x="400" y="464" width="16" height="16">
+  <object id="155" name="aven" type="Character" x="400" y="464" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
     <property name="face" value="NORTH"/>
@@ -101,13 +101,13 @@
     <property name="onInteract" value="play('world3/aven02.lua')"/>
    </properties>
   </object>
-  <object id="156" name="trigger" type="Event" x="464" y="432" width="16" height="16">
+  <object id="156" name="trigger" type="Event" x="464" y="432" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('aven01')"/>
     <property name="onCollide" value="play('world3/aven01.lua')"/>
    </properties>
   </object>
-  <object id="158" name="aven" type="Character" x="400" y="432" width="16" height="16">
+  <object id="158" name="aven" type="Character" x="400" y="432" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
     <property name="face" value="SOUTH"/>
@@ -115,7 +115,7 @@
     <property name="onInteract" value="play('world3/aven03.lua')"/>
    </properties>
   </object>
-  <object id="159" name="aven" type="Character" x="400" y="432" width="16" height="16">
+  <object id="159" name="aven" type="Character" x="400" y="432" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
     <property name="face" value="SOUTH"/>
@@ -123,7 +123,7 @@
     <property name="onInteract" value="speak('Aven', 'The City of Angels runs a plutonium mine and refinery in the northeast. Sabotage it.')"/>
    </properties>
   </object>
-  <object id="160" name="aven" type="Character" x="384" y="448" width="16" height="16">
+  <object id="160" name="aven" type="Character" x="384" y="448" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
     <property name="face" value="EAST"/>
@@ -131,14 +131,14 @@
     <property name="onInteract" value="play('world3/aven04.lua')"/>
    </properties>
   </object>
-  <object id="162" name="chest" type="Chest" x="176" y="400" width="16" height="16">
+  <object id="162" name="chest" type="Chest" x="176" y="400" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('aven04') or hasItem('key_railCard')"/>
     <property name="item" value="key_railCard"/>
     <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
-  <object id="163" name="zkauba" type="Character" x="400" y="464" width="16" height="16">
+  <object id="163" name="zkauba" type="Character" x="400" y="464" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="NORTH"/>
@@ -146,7 +146,7 @@
     <property name="onInteract" value="speak('Thank you again.')"/>
    </properties>
   </object>
-  <object id="165" name="aven" type="Character" x="400" y="432" width="16" height="16">
+  <object id="165" name="aven" type="Character" x="400" y="432" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
     <property name="face" value="SOUTH"/>
@@ -155,7 +155,7 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="51" height="36">
+ <layer name="Tile Layer 3" world2_battle="51" height="36">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -163,7 +163,7 @@
    H4sIAAAAAAAAC+3YMQqAMAwF0J7Ao6iL9v43E6GzVBJIh/cg6w/J+FsDAKpti+f9cRTmZd99F+Zl/7FS9h8BAACANVR2UNmiXcw+MmbnDO77Eu1irpExOz247/UAb2Wf6bAcAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="51" height="36">
+ <layer name="Tile Layer 4" world2_battle="51" height="36">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

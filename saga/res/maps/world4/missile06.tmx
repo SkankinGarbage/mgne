@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="63" tilewidth="16" tileheight="16" nextobjectid="121">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="26" height="63" tileworld2_battle="16" tileheight="16" nextobjectid="121">
  <properties>
-  <property name="bgm" value="ffl2_burning_blood"/>
+  <property name="bgm" value="missile_base"/>
   <property name="encounter" value="encounterset_level09_danger02"/>
   <property name="name" value="Missile Base"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="26" height="63" opacity="0.9">
+ <layer name="Tile Layer 1" world2_battle="26" height="63" opacity="0.9">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2VMQqAQAwE829b29MH6OWtEkhxBBuRDWfcYtoMbBZWRUQJ+Tmbg/acDtqzOPTQQ89zVgfp2AdPA3r64DkSMkNnR897F+q+bWjsNWJXbUNjrxG7Gn+Dyo8eeu58qPtGpf3J/E+1Xai0PwZ7PXcPqnk0ycFez92Dah5NcmR6CPkCF/whAC2YGQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="26" height="63">
+ <layer name="Tile Layer 2" world2_battle="26" height="63">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,145 +24,145 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="92" name="guard_r1" type="Character" x="240" y="800" width="16" height="16">
+  <object id="92" name="guard_r1" type="Character" x="240" y="800" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
    </properties>
   </object>
-  <object id="93" name="guard_r2" type="Character" x="240" y="688" width="16" height="16">
+  <object id="93" name="guard_r2" type="Character" x="240" y="688" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
    </properties>
   </object>
-  <object id="94" name="guard_r3" type="Character" x="240" y="576" width="16" height="16">
+  <object id="94" name="guard_r3" type="Character" x="240" y="576" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
    </properties>
   </object>
-  <object id="95" name="guard_l3" type="Character" x="160" y="576" width="16" height="16">
+  <object id="95" name="guard_l3" type="Character" x="160" y="576" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
    </properties>
   </object>
-  <object id="96" name="guard_l1" type="Character" x="160" y="800" width="16" height="16">
+  <object id="96" name="guard_l1" type="Character" x="160" y="800" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
    </properties>
   </object>
-  <object id="97" name="guard_l2" type="Character" x="160" y="688" width="16" height="16">
+  <object id="97" name="guard_l2" type="Character" x="160" y="688" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
    </properties>
   </object>
-  <object id="98" name="tele" type="Event" x="192" y="880" width="32" height="16">
+  <object id="98" name="tele" type="Event" x="192" y="880" world2_battle="32" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/missile05.tmx', 'door2')"/>
    </properties>
   </object>
-  <object id="99" name="door1" type="Target" x="208" y="864" width="16" height="16"/>
-  <object id="100" name="gate" type="Event" x="192" y="768" width="16" height="32">
+  <object id="99" name="door1" type="Target" x="208" y="864" world2_battle="16" height="16"/>
+  <object id="100" name="gate" type="Event" x="192" y="768" world2_battle="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return not getSwitch('missile_trap01_01')"/>
    </properties>
   </object>
-  <object id="101" name="gate" type="Event" x="208" y="768" width="16" height="32">
+  <object id="101" name="gate" type="Event" x="208" y="768" world2_battle="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return not getSwitch('missile_trap01_02')"/>
    </properties>
   </object>
-  <object id="102" name="gate" type="Event" x="192" y="656" width="16" height="32">
+  <object id="102" name="gate" type="Event" x="192" y="656" world2_battle="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return not getSwitch('missile_trap02_01')"/>
    </properties>
   </object>
-  <object id="103" name="gate" type="Event" x="208" y="656" width="16" height="32">
+  <object id="103" name="gate" type="Event" x="208" y="656" world2_battle="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return not getSwitch('missile_trap02_02')"/>
    </properties>
   </object>
-  <object id="104" name="gate" type="Event" x="192" y="544" width="16" height="32">
+  <object id="104" name="gate" type="Event" x="192" y="544" world2_battle="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return not getSwitch('missile_trap03_01')"/>
    </properties>
   </object>
-  <object id="105" name="gate" type="Event" x="208" y="544" width="16" height="32">
+  <object id="105" name="gate" type="Event" x="208" y="544" world2_battle="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return not getSwitch('missile_trap03_02')"/>
    </properties>
   </object>
-  <object id="106" name="trigger" type="Event" x="192" y="752" width="32" height="16">
+  <object id="106" name="trigger" type="Event" x="192" y="752" world2_battle="32" height="16">
    <properties>
     <property name="hide" value="return getSwitch('missile_trap01')"/>
     <property name="onCollide" value="play('world4/missile_trap01.lua')"/>
    </properties>
   </object>
-  <object id="107" name="trigger" type="Event" x="192" y="528" width="32" height="16">
+  <object id="107" name="trigger" type="Event" x="192" y="528" world2_battle="32" height="16">
    <properties>
     <property name="hide" value="return getSwitch('missile_trap03')"/>
     <property name="onCollide" value="play('world4/missile_trap03.lua')"/>
    </properties>
   </object>
-  <object id="108" name="trigger" type="Event" x="192" y="640" width="32" height="16">
+  <object id="108" name="trigger" type="Event" x="192" y="640" world2_battle="32" height="16">
    <properties>
     <property name="hide" value="return getSwitch('missile_trap02')"/>
     <property name="onCollide" value="play('world4/missile_trap02.lua')"/>
    </properties>
   </object>
-  <object id="110" name="tele" type="Event" x="192" y="128" width="32" height="16">
+  <object id="110" name="tele" type="Event" x="192" y="128" world2_battle="32" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'missile')"/>
    </properties>
   </object>
-  <object id="111" name="boss" type="Character" x="192" y="416" width="16" height="16">
+  <object id="111" name="boss" type="Character" x="192" y="416" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="anim_sekhmet"/>
     <property name="hide" value="return getSwitch('sekhmet_dead')"/>
     <property name="onInteract" value="play('world4/boss01.lua')"/>
    </properties>
   </object>
-  <object id="113" name="trigger" type="Event" x="208" y="432" width="16" height="16">
+  <object id="113" name="trigger" type="Event" x="208" y="432" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('sekhmet_dead')"/>
     <property name="onCollide" value="walk('hero', 1, 'WEST'); face('hero', 'NORTH'); play('world4/boss01.lua')"/>
    </properties>
   </object>
-  <object id="115" name="chest" type="Chest" x="208" y="336" width="16" height="16">
+  <object id="115" name="chest" type="Chest" x="208" y="336" world2_battle="16" height="16">
    <properties>
     <property name="item" value="key_radSuit"/>
     <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
-  <object id="116" name="chest" type="Chest" x="192" y="336" width="16" height="16">
+  <object id="116" name="chest" type="Chest" x="192" y="336" world2_battle="16" height="16">
    <properties>
     <property name="item" value="body_babel"/>
    </properties>
   </object>
-  <object id="118" name="trigger" type="Event" x="192" y="352" width="16" height="16">
+  <object id="118" name="trigger" type="Event" x="192" y="352" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('jonas04') or not hasItem('key_radSuit')"/>
     <property name="onCollide" value="play('world4/jonas04.lua')"/>
    </properties>
   </object>
-  <object id="119" name="trigger" type="Event" x="208" y="368" width="16" height="16">
+  <object id="119" name="trigger" type="Event" x="208" y="368" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('jonas04') or not hasItem('key_radSuit')"/>
     <property name="onCollide" value="play('world4/jonas04.lua')"/>
    </properties>
   </object>
-  <object id="120" name="trigger" type="Event" x="224" y="352" width="16" height="16">
+  <object id="120" name="trigger" type="Event" x="224" y="352" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('jonas04') or not hasItem('key_radSuit')"/>
     <property name="onCollide" value="play('world4/jonas04.lua')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="26" height="63">
+ <layer name="Tile Layer 3" world2_battle="26" height="63">
   <properties>
    <property name="z" value="1.5"/>
   </properties>

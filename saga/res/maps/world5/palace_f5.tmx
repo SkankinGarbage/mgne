@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="50" tilewidth="16" tileheight="16" nextobjectid="227">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="57" height="50" tileworld2_battle="16" tileheight="16" nextobjectid="227">
  <properties>
-  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="bgm" value="boss_dungeon"/>
   <property name="name" value="Grand Palace"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="57" height="50">
+ <layer name="Tile Layer 1" world2_battle="57" height="50">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2Wyw2DMAyGQeJSbr0xBBPAFhy6/ygVEpasv34EophHY8lqSQzOF9txmqZKlSpVqlSpUqVKrrSgTxPkeyLn0xk1vidxrhxz88tGY3eXlaFvfvl6+L2rEMOrsTmvlrNebUnaC/8t9jPrV8s7j8vL1yNakpF02jSFc/2dM5jIFz+3SjOu/j6bpsbFy03rXfLF97QkY2/wefVl8Xnvos+SjC+Bj681NSelevXejWKkOOaeNVLcvHhGMaIv5JhgfAYb4pDuPdxuEr4dyXik3vbG2tMoxpz+dkS5vwhGqXa6BB03TbG1/JVm1M4GWtsiKI0T4+LYduAPz9ySjNbZV4pRqouSjFYPozWOgnaJYyP7jlX3JRm5Iq/E2AJPq4xpjFreRDGiXykmRxhHsJU4SzJa/QLPTr52L1fR9sx6lPzRs8f4ZjZvx7ZTfEXnqhdHjNnAbAbHFuMYwYh9PKWH56p3X4hklHqc1vMq43UZpZrSaszaE5zHfom20Yx7nq/MyH0vyjPvC9q8F+vUvDiTcTDsiQF7ATJK8xGMe+tOm9cY+J5oe8DvEaUYrb4sMUrzOYz8HnFHRuk+rn37Drl6RCP741W0yn/JF6YjKECILAAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="57" height="50">
+ <layer name="Tile Layer 2" world2_battle="57" height="50">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -79,36 +79,36 @@
    </properties>
    <polygon points="0,48 160,48 160,208 0,208"/>
   </object>
-  <object id="209" name="u1" type="Target" x="432" y="544" width="16" height="16"/>
-  <object id="210" name="tele" type="Event" x="432" y="560" width="16" height="16">
+  <object id="209" name="u1" type="Target" x="432" y="544" world2_battle="16" height="16"/>
+  <object id="210" name="tele" type="Event" x="432" y="560" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'u1')"/>
    </properties>
   </object>
-  <object id="211" name="u2" type="Target" x="480" y="544" width="16" height="16"/>
-  <object id="212" name="tele" type="Event" x="480" y="560" width="16" height="16">
+  <object id="211" name="u2" type="Target" x="480" y="544" world2_battle="16" height="16"/>
+  <object id="212" name="tele" type="Event" x="480" y="560" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'u2')"/>
    </properties>
   </object>
-  <object id="213" name="tele" type="Event" x="704" y="704" width="16" height="16">
+  <object id="213" name="tele" type="Event" x="704" y="704" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 't')"/>
    </properties>
   </object>
-  <object id="214" name="t" type="Target" x="704" y="688" width="16" height="16"/>
-  <object id="215" name="v" type="Target" x="336" y="656" width="16" height="16"/>
-  <object id="216" name="tele" type="Event" x="336" y="672" width="16" height="16">
+  <object id="214" name="t" type="Target" x="704" y="688" world2_battle="16" height="16"/>
+  <object id="215" name="v" type="Target" x="336" y="656" world2_battle="16" height="16"/>
+  <object id="216" name="tele" type="Event" x="336" y="672" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'v')"/>
    </properties>
   </object>
-  <object id="217" name="spellbook" type="Chest" x="432" y="688" width="16" height="16">
+  <object id="217" name="spellbook" type="Chest" x="432" y="688" world2_battle="16" height="16">
    <properties>
     <property name="item" value="pot_tent"/>
    </properties>
   </object>
-  <object id="218" name="crystal" type="Event" x="496" y="688" width="16" height="16">
+  <object id="218" name="crystal" type="Event" x="496" y="688" world2_battle="16" height="16">
    <properties>
     <property name="onInteract" value="play('tower/crystal.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
@@ -120,37 +120,37 @@
    </properties>
    <polygon points="192,304 192,160 -96,160 -96,304 -240,304 -240,464 320,464 320,304"/>
   </object>
-  <object id="220" name="aven" type="Character" x="464" y="192" width="16" height="16">
+  <object id="220" name="aven" type="Character" x="464" y="192" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
     <property name="hide" value="return getSwitch('aven_dead')"/>
     <property name="onInteract" value="play('world5/boss01.lua')"/>
    </properties>
   </object>
-  <object id="221" name="block" type="Event" x="416" y="192" width="32" height="16">
+  <object id="221" name="block" type="Event" x="416" y="192" world2_battle="32" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="222" name="block" type="Event" x="480" y="192" width="32" height="16">
+  <object id="222" name="block" type="Event" x="480" y="192" world2_battle="32" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="224" name="zkauba" type="Character" x="448" y="368" width="16" height="16">
+  <object id="224" name="zkauba" type="Character" x="448" y="368" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="hide" value="return not getSwitch('brotherhood_final')"/>
    </properties>
   </object>
-  <object id="225" name="lara" type="Character" x="480" y="368" width="16" height="16">
+  <object id="225" name="lara" type="Character" x="480" y="368" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="hide" value="return not getSwitch('brotherhood_final')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="57" height="50">
+ <layer name="Tile Layer 3" world2_battle="57" height="50">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -158,7 +158,7 @@
    H4sIAAAAAAAAC+3BMQEAAADCoPVPbQZ/oAAAAAAAAAAAAAAAPgOtCg2ziCwAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" width="57" height="50">
+ <layer name="Tile Layer 4" world2_battle="57" height="50">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="49" tilewidth="16" tileheight="16" nextobjectid="7">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="51" height="49" tileworld2_battle="16" tileheight="16" nextobjectid="7">
  <properties>
-  <property name="bgm" value="ffl2_ruins"/>
+  <property name="bgm" value="minor_dungeon"/>
   <property name="encounter" value="encounterset_level00_danger03"/>
   <property name="name" value="Airseed Shrine"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="51" height="49">
+ <layer name="Tile Layer 1" world2_battle="51" height="49">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2YMXLDMAwEpYlLd3yRO3X+QpLGSZPk/1XigjMIBgcSOlB2weIK2xKA5RGg5MuyLJdOrUAnUijuGqgtIi8fy3I0z0iOI3lGe9LDksHTin8kC8uTXS/DmeHJPdYZKLNeL0eGR5WlAGWyeDnYPSZ92YAyWbwcbM88K0uUR8+q0RweT8Yek/3yLCyj9lidPRkM50aezN631q3WwPLIGMj3DI61kass+88beV8B8evvuvf39n9xcm0GT4tJX1tUPL1WZWf9iOfmsGwip8dkMRQQr37+JP2w9lmLpcXkMURZWB7EgmaPxYQYUCyLJaP/LRZvjmomxKD7/FF7TPaDV2dLsp9G+KLXwmKpe+gkckcZpCfaO83CzLBWv1Rv7rou/2cW2v9aVxHDYkW9H2Wr93jPS9UbWZN3xuhr6n1orslzP6P3ZQ2ovy2WHl0Bh/ScfbaU98rzt2dmSb/QGR+Jp1kYnr1zynrf3TvnMvqfYckSu8cyfBnBMtoX5t2l56xl318ivlizNqJeFqb/JUvr7EP/bfWoJ35Gr6xqDWUu+f0HoZ74bO9XJjRT5fcMS098Zn9pbzzdSBbvmSvC8BbQO4j/9advQj9O7a+B+katX5ZYzyfLZHkky8vBmiyTZbJMlskyWR7N8guPNNCtDCcAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="51" height="49">
+ <layer name="Tile Layer 2" world2_battle="51" height="49">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,34 +24,34 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="spellbook" type="Chest" x="608" y="160" width="16" height="16">
+  <object id="1" name="spellbook" type="Chest" x="608" y="160" world2_battle="16" height="16">
    <properties>
     <property name="item" value="spell_fire"/>
    </properties>
   </object>
-  <object id="2" name="tele" type="Event" x="192" y="640" width="448" height="16">
+  <object id="2" name="tele" type="Event" x="192" y="640" world2_battle="448" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 44)"/>
    </properties>
   </object>
-  <object id="3" name="door" type="Event" x="400" y="304" width="16" height="16">
+  <object id="3" name="door" type="Event" x="400" y="304" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_shrineKey')"/>
     <property name="onInteract" value="speak('It\'s locked.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="4" name="tele" type="Event" x="336" y="400" width="16" height="16">
+  <object id="4" name="tele" type="Event" x="336" y="400" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/shrine02.tmx', 10, 27)"/>
    </properties>
   </object>
-  <object id="5" name="tele" type="Event" x="464" y="400" width="16" height="16">
+  <object id="5" name="tele" type="Event" x="464" y="400" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/shrine02.tmx', 22, 27)"/>
    </properties>
   </object>
-  <object id="6" name="tele" type="Event" x="400" y="304" width="16" height="16">
+  <object id="6" name="tele" type="Event" x="400" y="304" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return not hasItem('key_shrineKey')"/>
     <property name="onCollide" value="teleport('world1/shrine03.tmx', 16, 25)"/>

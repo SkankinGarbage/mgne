@@ -24,9 +24,9 @@ speak("Moloch", "One last chance... Give me the shards and I let you live. Or do
 speak(hero1, "We'll kill you with or without EXCALIBUR!")
 
 sceneSwitch('moloch_appears', false)
-battle('party_bossMoloch', false, 'ffl1_boss')
+battle('party_bossMoloch', false, 'battle_boss')
 face('hero', 'NORTH')
-playBGM('ffl3_ruins')
+playBGM('plot_dungeon')
 
 wait(0.7)
 speak(hero2, "Phew, Moloch is dead and we have all three parts. Now we can reforge EXCALIBUR at Elan!")

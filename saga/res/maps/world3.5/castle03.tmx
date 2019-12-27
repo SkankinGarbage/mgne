@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="43" tilewidth="16" tileheight="16" nextobjectid="31">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="41" height="43" tileworld2_battle="16" tileheight="16" nextobjectid="31">
  <properties>
-  <property name="bgm" value="ffl3_ruins"/>
+  <property name="bgm" value="plot_dungeon"/>
   <property name="encounter" value="encounterset_level07_danger01"/>
   <property name="name" value="Ares Castle"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="41" height="43">
+ <layer name="Tile Layer 1" world2_battle="41" height="43">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2Wuw3AIAxELbZIB1tkC/bfJu0JEYXgjwi54jUWgsfJxRURKYQQQtw5F3B4oi74j6OhdmYz/7AkN6TOLMrxLpc0QHtP7dxjnRf6jjjiecza2hHfRN8Rx7vzno5WeDpq9tHTUZNvlAsd6fhFduk90cz0nmiyvO89EXnhfKb3eOWLuWh7j1e+7D32jpp9ZO+h498dCSFkVy7VLYs1jBsAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="41" height="43">
+ <layer name="Tile Layer 2" world2_battle="41" height="43">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,46 +24,46 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="14" name="target_tele" type="Event" x="320" y="352" width="16" height="16">
+  <object id="14" name="target_tele" type="Event" x="320" y="352" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/castle04.tmx', 'stairs_se')"/>
    </properties>
   </object>
-  <object id="15" name="stairs_se" type="Target" x="320" y="368" width="16" height="16"/>
-  <object id="16" name="stairs_ne" type="Target" x="320" y="144" width="16" height="16"/>
-  <object id="17" name="tele" type="Event" x="320" y="128" width="16" height="16">
+  <object id="15" name="stairs_se" type="Target" x="320" y="368" world2_battle="16" height="16"/>
+  <object id="16" name="stairs_ne" type="Target" x="320" y="144" world2_battle="16" height="16"/>
+  <object id="17" name="tele" type="Event" x="320" y="128" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/castle04.tmx', 'stairs_ne')"/>
    </properties>
   </object>
-  <object id="18" name="tele" type="Event" x="464" y="144" width="16" height="16">
+  <object id="18" name="tele" type="Event" x="464" y="144" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/castle02.tmx', 'stairs')"/>
    </properties>
   </object>
-  <object id="19" name="stairs1" type="Target" x="464" y="160" width="16" height="16"/>
-  <object id="20" name="janine" type="Character" x="176" y="448" width="16" height="16">
+  <object id="19" name="stairs1" type="Target" x="464" y="160" world2_battle="16" height="16"/>
+  <object id="20" name="janine" type="Character" x="176" y="448" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="hide" value="return getSwitch('twins02')"/>
     <property name="onInteract" value="play('world3.5/twins02.lua')"/>
    </properties>
   </object>
-  <object id="22" name="borg" type="Character" x="176" y="464" width="16" height="16">
+  <object id="22" name="borg" type="Character" x="176" y="464" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="hide" value="return not getSwitch('borg_leaves_again') or getSwitch('twins02')"/>
    </properties>
   </object>
-  <object id="23" name="corner1" type="Target" x="320" y="464" width="16" height="16"/>
-  <object id="24" name="corner2" type="Target" x="304" y="464" width="16" height="16"/>
-  <object id="29" name="chest" type="Chest" x="288" y="208" width="16" height="16">
+  <object id="23" name="corner1" type="Target" x="320" y="464" world2_battle="16" height="16"/>
+  <object id="24" name="corner2" type="Target" x="304" y="464" world2_battle="16" height="16"/>
+  <object id="29" name="chest" type="Chest" x="288" y="208" world2_battle="16" height="16">
    <properties>
     <property name="collectable" value="stone_white"/>
     <property name="switchName" value="white1"/>
    </properties>
   </object>
-  <object id="30" name="chest" type="Chest" x="272" y="224" width="16" height="16">
+  <object id="30" name="chest" type="Chest" x="272" y="224" world2_battle="16" height="16">
    <properties>
     <property name="collectable" value="stone_earth"/>
     <property name="switchName" value="earth1"/>

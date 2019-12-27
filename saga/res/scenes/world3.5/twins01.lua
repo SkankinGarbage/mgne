@@ -2,7 +2,7 @@ local hero1 = getHero(0).getName()
 local hero2 = getHero(1).getName()
 local hero3 = getHero(2).getName()
 
-playBGM('ffl3_steslos')
+playBGM('twins_theme')
 speak(hero3, "It's the twins!")
 wait(0.7)
 
@@ -40,7 +40,7 @@ walk('janine', 2, 'SOUTH')
 face('hero', 'SOUTH')
 pathEvent('janine', 'janine_target2')
 
-playBGM('ffl2_hometown')
+playBGM('home_town')
 wait(0.7)
 
 speak(hero1, "How could we pick sides?")

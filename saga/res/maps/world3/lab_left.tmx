@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="36" tilewidth="16" tileheight="16" nextobjectid="128">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="41" height="36" tileworld2_battle="16" tileheight="16" nextobjectid="128">
  <properties>
-  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="bgm" value="boss_dungeon"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
   <property name="name" value="Research Base"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="41" height="36">
+ <layer name="Tile Layer 1" world2_battle="41" height="36">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2WwQ7DIAiG7bPPa+dpp67vujSRhBpFpDg8QPInbUHykSoSgp69kCRr/qXPIOsV8yUEed6EOH6ISTnvjnwcxkgI8vfq4NR5PZ8574F8XMatIszYq4NTZ8unyUjFjNS5BWd0RppRst+lZ0bCiBUr30ZjWn4pI/RSUCzeU7j36JRjynWU/ykj9FJQLN7PcO/RZQ8uVfPviF3CyLHefuvpQOyrMmLh874S49P9yGXU0GxGjdlsNqPGbGZ5ZmbfMyOMVve1MzpjjXH1M2M5m3EZLWczLqPPZvaMWD6brT2baVjrX6zG2OqfK1q0BmDYDMYf9gn+hxAXAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="41" height="36">
+ <layer name="Tile Layer 2" world2_battle="41" height="36">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -31,24 +31,24 @@
    </properties>
    <polygon points="0,0 112,0 112,144 0,144"/>
   </object>
-  <object id="91" name="chest" type="Chest" x="208" y="64" width="16" height="16">
+  <object id="91" name="chest" type="Chest" x="208" y="64" world2_battle="16" height="16">
    <properties>
     <property name="item" value="wpn_saw"/>
    </properties>
   </object>
-  <object id="92" name="lab_foyer" type="Target" x="320" y="528" width="16" height="16"/>
-  <object id="93" name="tele" type="Event" x="320" y="544" width="16" height="16">
+  <object id="92" name="lab_foyer" type="Target" x="320" y="528" world2_battle="16" height="16"/>
+  <object id="93" name="tele" type="Event" x="320" y="544" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/lab_foyer.tmx', 'lab_left')"/>
    </properties>
   </object>
-  <object id="98" name="chest" type="Chest" x="64" y="336" width="16" height="16">
+  <object id="98" name="chest" type="Chest" x="64" y="336" world2_battle="16" height="16">
    <properties>
     <property name="item" value="key_labKey"/>
     <property name="keyItem" value="KEY_ITEM"/>
    </properties>
   </object>
-  <object id="102" name="guard" type="Character" x="336" y="224" width="16" height="16">
+  <object id="102" name="guard" type="Character" x="336" y="224" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
@@ -57,7 +57,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="103" name="guard" type="Character" x="304" y="384" width="16" height="16">
+  <object id="103" name="guard" type="Character" x="304" y="384" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
@@ -66,7 +66,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="104" name="guard" type="Character" x="336" y="384" width="16" height="16">
+  <object id="104" name="guard" type="Character" x="336" y="384" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
@@ -75,7 +75,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="105" name="guard" type="Character" x="304" y="224" width="16" height="16">
+  <object id="105" name="guard" type="Character" x="304" y="224" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
@@ -119,77 +119,77 @@
    </properties>
    <polygon points="0,0 256,0 256,80 0,80"/>
   </object>
-  <object id="111" name="door" type="Door" x="192" y="192" width="16" height="16">
+  <object id="111" name="door" type="Door" x="192" y="192" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_storeKey"/>
    </properties>
   </object>
-  <object id="112" name="door" type="Door" x="64" y="192" width="16" height="16">
+  <object id="112" name="door" type="Door" x="64" y="192" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_storeKey"/>
    </properties>
   </object>
-  <object id="113" name="door" type="Door" x="64" y="432" width="16" height="16">
+  <object id="113" name="door" type="Door" x="64" y="432" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_storeKey"/>
    </properties>
   </object>
-  <object id="114" name="door" type="Door" x="192" y="432" width="16" height="16">
+  <object id="114" name="door" type="Door" x="192" y="432" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="keyItem" value="key_storeKey"/>
    </properties>
   </object>
-  <object id="115" name="npc" type="Character" x="64" y="112" width="16" height="16">
+  <object id="115" name="npc" type="Character" x="64" y="112" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="play('world3/lab02.lua')"/>
    </properties>
   </object>
-  <object id="116" name="chest" type="Chest" x="576" y="80" width="16" height="16">
+  <object id="116" name="chest" type="Chest" x="576" y="80" world2_battle="16" height="16">
    <properties>
     <property name="item" value="item_hp600"/>
    </properties>
   </object>
-  <object id="117" name="tele" type="Event" x="576" y="160" width="16" height="16">
+  <object id="117" name="tele" type="Event" x="576" y="160" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/lab_left.tmx', 'exterior')"/>
    </properties>
   </object>
-  <object id="118" name="interior" type="Target" x="576" y="144" width="16" height="16"/>
-  <object id="119" name="exterior" type="Target" x="320" y="48" width="16" height="16">
+  <object id="118" name="interior" type="Target" x="576" y="144" world2_battle="16" height="16"/>
+  <object id="119" name="exterior" type="Target" x="320" y="48" world2_battle="16" height="16">
    <properties>
     <property name="passable" value="NPC_IMPASSABLE"/>
    </properties>
   </object>
-  <object id="120" name="tele" type="Event" x="320" y="32" width="16" height="16">
+  <object id="120" name="tele" type="Event" x="320" y="32" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/lab_left.tmx', 'interior')"/>
    </properties>
   </object>
-  <object id="121" name="block" type="Event" x="320" y="32" width="16" height="16">
+  <object id="121" name="block" type="Event" x="320" y="32" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_labKey')"/>
     <property name="onInteract" value="speak('It\'s locked.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="126" name="block" type="Event" x="272" y="464" width="16" height="16">
+  <object id="126" name="block" type="Event" x="272" y="464" world2_battle="16" height="16">
    <properties>
     <property name="passable" value="NPC_IMPASSABLE"/>
    </properties>
   </object>
-  <object id="127" name="block" type="Event" x="272" y="224" width="16" height="16">
+  <object id="127" name="block" type="Event" x="272" y="224" world2_battle="16" height="16">
    <properties>
     <property name="passable" value="NPC_IMPASSABLE"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="41" height="36">
+ <layer name="Tile Layer 3" world2_battle="41" height="36">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -197,7 +197,7 @@
    H4sIAAAAAAAAC+3XMQqAQAwEwPzdWn2A+leLa0Q4OLhILGYgbVjYaiMAIMdSHWDAVh1gwFkdAAAAINEabYvN3NeOaFts5p7+uo97XeyVoV56XVxJ/2+BnrKGEBcAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" width="41" height="36">
+ <layer name="Tile Layer 4" world2_battle="41" height="36">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

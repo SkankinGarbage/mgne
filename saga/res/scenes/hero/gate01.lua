@@ -41,6 +41,6 @@ wait(0.7)
 
 speak("????", "Now the gate is open, and this world is mine!")
 
-battle('party_bossShiva', false, 'ffl1_boss')
+battle('party_bossShiva', false, 'battle_boss')
 sceneSwitch('hero_done', true)
 face('hero', 'NORTH')

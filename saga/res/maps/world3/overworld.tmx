@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="89" height="60" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="75">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="89" height="60" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="75">
  <properties>
-  <property name="battle_bgm" value="ffl1_battle"/>
-  <property name="bgm" value="ffl1_overworld"/>
+  <property name="battle_bgm" value="world3_battle"/>
+  <property name="bgm" value="world3"/>
   <property name="name" value="Angelic World"/>
   <property name="terrainEncounter" value="terrain_world3"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="89" height="60">
+ <layer name="Tile Layer 1" world2_battle="89" height="60">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -16,7 +16,7 @@
    H4sIAAAAAAAAC+3avXLiQAwH8HWbZ6DjSSihP2qc5pImcy+QdHnvkDlr0CiSVvvptaPiPzBmSdgfsnYNXEIIl1+QlxWz9tzdeD9xYzfeQ9zYjfcQN3bjPcSN3XgPceNHzm7cxbiF85aNT0xGdN6iMWebYzwZnEu8j0vovCeUEY0nxVcy0xwlw7NhTCzzEs4Y5jKasWbL1fE10Zjeh0DN1eoRo9axxZc6SMZSjdIeQY2t9cz1COx5NIwZxZj6WutYq1HuMRyLM9cjsOdsGDOKMdhO4WcdXw3G1O/CHIPc7nk2OnNz5fpyzpjW/Rhbcr64jjVfyVHL2z3/hPfF2odzUtq7U43BGXtT85hxjq8l+O9v3ViraezMGd/C43xvGWm+H0pGNNZ6B2esne89jd+ZaMbHjsZS74P1kM7z2sEyxXhaPLnx78rz5oT3sMR4IrefvzC5zrXqmOsZa9bx9/n9957X8DjXn8L/ngBj/qD7H8vj2jnQw1jqERDqvKbxjOYI5zo1xokZH8n4Vv0YLCXj3Dqm19Wx/bNlPFeHYAyeT8wxyW8mzrMwrsSYWmqB1yEZc0Yp1yV0rNX4O7CPwMZwLFaj4Jx6vZ3bFyzOV2Ke4q19VpFjfDC+f4eI1xzSr7dz+q/FHe+PY84xQ+79SDV+XvxiuSX69ejHknOKsbWWU2teqkEttX1z6pjLmfHFxrC3S7Et9dX6au/UNKbHsXFJLef41vwcGF7f2sbccfz5sWScU7eWPUjN8x7+34jGln6hOZek5rmes1+raRz7zrikX9QyLrUvXQ9r+MaMtX5R07WVcWlaG2NnrY5T+27KtfRWjekcY+PB2VKDNfYVXD9t8Z1zT2Orc6wn59rDGM5yDm2vMVoYS/O01nKJcyxrWrY0xnVWo2ecwuOa5oSSutZJKd3vrmk8GZ8fq2VsfAk/zUuNoR62amzxhr0c54qDjam3ZG2Zc+/1r9aal9IzaV+mrjFjrrZT3Hr37FrGFmc8FoxjdWs1HnGta2F8Ro/hXkDXRTDm+m2u8UuQ+0XP9a2FMfWmY+gt3Ke/IaKuUqRxmvFa1x6lxpydZMwd035fnxOw5DzX7iG15mjZG+Nov03ONR61J9espdTUNh41buzGbuzGbjxG3NiN3diNLfkC5/thUXBTAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="89" height="60">
+ <layer name="Tile Layer 2" world2_battle="89" height="60">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -25,84 +25,84 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="52" name="Gate" type="Event" x="640" y="400" width="16" height="32">
+  <object id="52" name="Gate" type="Event" x="640" y="400" world2_battle="16" height="32">
    <properties>
     <property name="hide" value="return getSwitch('machine_dead') and not getSwitch('world3_gate')"/>
     <property name="onCollide" value="teleport('world3/gate.tmx', 33, 36, 'NORTH')"/>
    </properties>
   </object>
-  <object id="53" name="Plutonium Mines" type="Event" x="512" y="224" width="16" height="16">
+  <object id="53" name="Plutonium Mines" type="Event" x="512" y="224" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/plutonium01.tmx', 12, 15)"/>
    </properties>
   </object>
-  <object id="54" name="Worker's Village" type="Event" x="752" y="480" width="16" height="16">
+  <object id="54" name="Worker's Village" type="Event" x="752" y="480" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/celephais.tmx', 20, 10, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="55" name="Island Ruins" type="Event" x="832" y="784" width="16" height="16">
+  <object id="55" name="Island Ruins" type="Event" x="832" y="784" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/ruins01.tmx', 11, 10)"/>
    </properties>
   </object>
-  <object id="56" name="Lab" type="Event" x="928" y="608" width="16" height="16">
+  <object id="56" name="Lab" type="Event" x="928" y="608" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/lab_foyer.tmx', 7, 12, 'NORTH')"/>
    </properties>
   </object>
-  <object id="58" name="Rebel Base" type="Event" x="448" y="736" width="16" height="16">
+  <object id="58" name="Rebel Base" type="Event" x="448" y="736" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/base.tmx', 13, 18, 'EAST')"/>
    </properties>
   </object>
-  <object id="60" name="Island Caves" type="Event" x="1184" y="336" width="16" height="16">
+  <object id="60" name="Island Caves" type="Event" x="1184" y="336" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/sea_caves.tmx', 59, 15, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="61" name="Seaside Village" type="Event" x="1248" y="416" width="16" height="16">
+  <object id="61" name="Seaside Village" type="Event" x="1248" y="416" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/ermengarde.tmx', 12, 14, 'EAST')"/>
    </properties>
   </object>
-  <object id="62" name="Prison" type="Event" x="1184" y="384" width="16" height="32">
+  <object id="62" name="Prison" type="Event" x="1184" y="384" world2_battle="16" height="32">
    <properties>
     <property name="onCollide" value="teleport('world3/east_depot.tmx', 28, 40, 'NORTH')"/>
    </properties>
   </object>
-  <object id="63" name="Old Mine" type="Event" x="208" y="240" width="16" height="16">
+  <object id="63" name="Old Mine" type="Event" x="208" y="240" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/mine01.tmx', 32, 37, 'NORTH')"/>
    </properties>
   </object>
-  <object id="65" name="block" type="Event" x="864" y="400" width="16" height="16">
+  <object id="65" name="block" type="Event" x="864" y="400" world2_battle="16" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="67" name="autostart" type="Event" x="1168" y="496" width="16" height="16">
+  <object id="67" name="autostart" type="Event" x="1168" y="496" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('prison01') or getSwitch('prison02')"/>
     <property name="onEnter" value="play('world3/prison02.lua')"/>
    </properties>
   </object>
-  <object id="69" name="block" type="Event" x="1168" y="400" width="16" height="16">
+  <object id="69" name="block" type="Event" x="1168" y="400" world2_battle="16" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="70" name="Island Caves" type="Event" x="848" y="336" width="16" height="16">
+  <object id="70" name="Island Caves" type="Event" x="848" y="336" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/sea_caves.tmx', 18, 14, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="71" name="block" type="Event" x="272" y="400" width="16" height="16">
+  <object id="71" name="block" type="Event" x="272" y="400" world2_battle="16" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="74" name="Gate" type="Event" x="640" y="400" width="16" height="32">
+  <object id="74" name="Gate" type="Event" x="640" y="400" world2_battle="16" height="32">
    <properties>
     <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate')"/>
     <property name="onCollide" value="teleport('world3/gate.tmx', 33, 37, 'NORTH')"/>

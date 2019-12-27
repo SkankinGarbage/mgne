@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="44" height="40" tilewidth="16" tileheight="16" nextobjectid="62">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="44" height="40" tileworld2_battle="16" tileheight="16" nextobjectid="62">
  <properties>
-  <property name="bgm" value="ffl1_cave"/>
+  <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level09_danger02"/>
   <property name="name" value="Shelter"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="44" height="40">
+ <layer name="Tile Layer 1" world2_battle="44" height="40">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2WMQqAMAxFOzo4CA5exQPmHD2rU7eIfkm+DfzhDeFD+wpN2t5a60IIIcqxOiA5m90BydksDkg+i+9ZzHcr5nsU87VJfQcG1ky8mWpAzfb1ZqoBNcvZgmC8GWOvjDNk+WbkWc53az7105t+Y/p6/YTkbN+I/458a/p6M2hW3zv3Cr4R90i+sXfna/6nM/P/IIQQIpYLgJLQw4AbAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="44" height="40">
+ <layer name="Tile Layer 2" world2_battle="44" height="40">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,8 +24,8 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="52" name="entry" type="Target" x="352" y="192" width="16" height="16"/>
-  <object id="54" name="tele" type="Event" x="352" y="176" width="16" height="16">
+  <object id="52" name="entry" type="Target" x="352" y="192" world2_battle="16" height="16"/>
+  <object id="54" name="tele" type="Event" x="352" y="176" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'desert')"/>
    </properties>
@@ -58,18 +58,18 @@
    </properties>
    <polygon points="0,16 0,128 80,128 80,16"/>
   </object>
-  <object id="60" name="chest" type="Chest" x="448" y="400" width="16" height="16">
+  <object id="60" name="chest" type="Chest" x="448" y="400" world2_battle="16" height="16">
    <properties>
     <property name="collectable" value="stone_fire"/>
    </properties>
   </object>
-  <object id="61" name="chest" type="Chest" x="304" y="160" width="16" height="16">
+  <object id="61" name="chest" type="Chest" x="304" y="160" world2_battle="16" height="16">
    <properties>
     <property name="item" value="item_hp999"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="44" height="40">
+ <layer name="Tile Layer 3" world2_battle="44" height="40">
   <properties>
    <property name="z" value="1.5"/>
   </properties>

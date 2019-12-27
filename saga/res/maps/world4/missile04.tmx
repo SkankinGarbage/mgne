@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="32" tilewidth="16" tileheight="16" nextobjectid="96">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="50" height="32" tileworld2_battle="16" tileheight="16" nextobjectid="96">
  <properties>
-  <property name="bgm" value="ffl2_burning_blood"/>
+  <property name="bgm" value="missile_base"/>
   <property name="encounter" value="encounterset_level09_danger02"/>
   <property name="name" value="Missile Base"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="50" height="32">
+ <layer name="Tile Layer 1" world2_battle="50" height="32">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2VwQ2DMAxFswI3RmGHrtIxeoUOAGXWCslIX64l5MhxRPUPTyQcHD/FH/ZSyk4IIX/OEkwvjy2YXh6vYOgR41LrZdXQuctweEsPs6wfTmZVY5F9dmY+0sMq66eTVdXYYJ85a3ie1+GkR2amxh5W3WiHY3aH8ps9PMvrYNU4GRrdxTG7ozwxk5hzr4fOOZ43NvLAu9aZjMp5dqYtIvOR5WG9u4vHldudPfDfXOuBNXp51PZ+9R2mByGEEOLjC6Yf9cYAGQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="50" height="32">
+ <layer name="Tile Layer 2" world2_battle="50" height="32">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,66 +24,66 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="69" name="tele" type="Event" x="608" y="256" width="16" height="16">
+  <object id="69" name="tele" type="Event" x="608" y="256" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/missile05.tmx', 'door1')"/>
    </properties>
   </object>
-  <object id="70" name="door2" type="Target" x="608" y="240" width="16" height="16"/>
-  <object id="71" name="tele" type="Event" x="176" y="224" width="16" height="16">
+  <object id="70" name="door2" type="Target" x="608" y="240" world2_battle="16" height="16"/>
+  <object id="71" name="tele" type="Event" x="176" y="224" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/missile03.tmx', 'door1')"/>
    </properties>
   </object>
-  <object id="72" name="door1" type="Target" x="176" y="240" width="16" height="16"/>
-  <object id="79" name="trigger" type="Event" x="256" y="240" width="16" height="16">
+  <object id="72" name="door1" type="Target" x="176" y="240" world2_battle="16" height="16"/>
+  <object id="79" name="trigger" type="Event" x="256" y="240" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('missile_door01')"/>
     <property name="onCollide" value="sceneSwitch('missile_door01', true); play('world4/missile_ambient01.lua')"/>
    </properties>
   </object>
-  <object id="84" name="gate" type="Event" x="256" y="256" width="16" height="32">
+  <object id="84" name="gate" type="Event" x="256" y="256" world2_battle="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return not getSwitch('missile_door01')"/>
    </properties>
   </object>
-  <object id="85" name="gate" type="Event" x="256" y="176" width="16" height="32">
+  <object id="85" name="gate" type="Event" x="256" y="176" world2_battle="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return not getSwitch('missile_door02')"/>
    </properties>
   </object>
-  <object id="86" name="gate" type="Event" x="528" y="176" width="16" height="32">
+  <object id="86" name="gate" type="Event" x="528" y="176" world2_battle="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return not getSwitch('missile_door03')"/>
    </properties>
   </object>
-  <object id="92" name="auto" type="Event" x="208" y="272" width="16" height="16">
+  <object id="92" name="auto" type="Event" x="208" y="272" world2_battle="16" height="16">
    <properties>
     <property name="onBehavior" value="play('world4/missile_ambient02.lua'); playScene()"/>
    </properties>
   </object>
-  <object id="93" name="auto" type="Event" x="224" y="256" width="16" height="16">
+  <object id="93" name="auto" type="Event" x="224" y="256" world2_battle="16" height="16">
    <properties>
     <property name="onBehavior" value="play('world4/missile_ambient01.lua'); playScene()"/>
    </properties>
   </object>
-  <object id="94" name="trigger" type="Event" x="256" y="160" width="16" height="16">
+  <object id="94" name="trigger" type="Event" x="256" y="160" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('missile_door02')"/>
     <property name="onCollide" value="sceneSwitch('missile_door02', true); play('world4/missile_ambient01.lua')"/>
    </properties>
   </object>
-  <object id="95" name="trigger" type="Event" x="528" y="208" width="16" height="16">
+  <object id="95" name="trigger" type="Event" x="528" y="208" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('missile_door03')"/>
     <property name="onCollide" value="sceneSwitch('missile_door03', true); play('world4/missile_ambient01.lua')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="50" height="32">
+ <layer name="Tile Layer 3" world2_battle="50" height="32">
   <properties>
    <property name="z" value="1.5"/>
   </properties>

@@ -1,14 +1,14 @@
 local hero1 = getHero(0).getName()
 local hero2 = getHero(2).getName()
 
-playBGM('ffl1_boss')
+playBGM('battle_boss')
 speak("Zkauba", hero1 .. "! Get back!")
 speak(hero1, "What?")
 speak("Zkauba", "The prince went through the gate days ago! It's a trap!")
 speak("????", "INTRUDER ALERT. GET THEM! GET THEM!")
 
 sceneSwitch('machine_dead', true)
-battle('party_bossMachine', false, 'ffl1_boss')
+battle('party_bossMachine', false, 'battle_boss')
 face('hero', 'NORTH')
 playBGM('ffl3_ruins')
 

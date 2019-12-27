@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="58" height="54" tilewidth="16" tileheight="16" nextobjectid="158">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="58" height="54" tileworld2_battle="16" tileheight="16" nextobjectid="158">
  <properties>
-  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="bgm" value="boss_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger02"/>
   <property name="name" value="Grand Palace"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="58" height="54">
+ <layer name="Tile Layer 1" world2_battle="58" height="54">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2XPQ7CMAxGwxHYGHqCbt04QS/FdTgoikRUC+XPwY6t9hvegizhhxz7YwkhLAAAAAAAjlgJ1r1oshGse9FkJ1j3wuH1BZ7n8BztGZ5+oLcheebuxVphb9RZO0bobUieuXuxVdgbddaOdFZLSNRZO6a+bgXoDP9TZ+3Y40lnc7TO2rHHkzJaZ+0Iz6N/ibr4+fMCnnE/3YPtLdW4K7+ecT89gp9bOnM+ZlDLbyO5j9Z58qzlt5HcR+u4npr7qfXWpN9nzfOt4Jd+O05fErlvtmfa7RxPidyX88z9p5Mi7XaOp0Qeynnm/tNpvEtrz1wvmszIQ6V3PMPPylNzXntnWequcG/WbHq/37rPEVq5j5sPvdLKfdx86BXOe/L41jiepf3YCzz9AM/zeV5hDwEAAABX5QOKopRO8DAAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="58" height="54">
+ <layer name="Tile Layer 2" world2_battle="58" height="54">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -59,13 +59,13 @@
    </properties>
    <polygon points="0,-32 160,-32 160,304 0,304"/>
   </object>
-  <object id="135" name="tele" type="Event" x="160" y="480" width="16" height="16">
+  <object id="135" name="tele" type="Event" x="160" y="480" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'f')"/>
    </properties>
   </object>
-  <object id="136" name="f" type="Target" x="160" y="496" width="16" height="16"/>
-  <object id="137" name="tele" type="Event" x="752" y="448" width="16" height="16">
+  <object id="136" name="f" type="Target" x="160" y="496" world2_battle="16" height="16"/>
+  <object id="137" name="tele" type="Event" x="752" y="448" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'g')"/>
    </properties>
@@ -77,39 +77,39 @@
    </properties>
    <polygon points="0,0 288,0 288,128 0,128"/>
   </object>
-  <object id="140" name="i" type="Target" x="656" y="384" width="16" height="16"/>
-  <object id="141" name="tele" type="Event" x="656" y="368" width="16" height="16">
+  <object id="140" name="i" type="Target" x="656" y="384" world2_battle="16" height="16"/>
+  <object id="141" name="tele" type="Event" x="656" y="368" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'i')"/>
    </properties>
   </object>
-  <object id="142" name="tele" type="Event" x="288" y="176" width="32" height="16">
+  <object id="142" name="tele" type="Event" x="288" y="176" world2_battle="32" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_stairs.tmx', 'entry')"/>
    </properties>
   </object>
-  <object id="143" name="exit" type="Target" x="304" y="192" width="16" height="16"/>
-  <object id="146" name="spellbook" type="Chest" x="272" y="672" width="16" height="16"/>
-  <object id="147" name="spellbook" type="Chest" x="304" y="688" width="16" height="16"/>
-  <object id="148" name="spellbook" type="Chest" x="336" y="672" width="16" height="16">
+  <object id="143" name="exit" type="Target" x="304" y="192" world2_battle="16" height="16"/>
+  <object id="146" name="spellbook" type="Chest" x="272" y="672" world2_battle="16" height="16"/>
+  <object id="147" name="spellbook" type="Chest" x="304" y="688" world2_battle="16" height="16"/>
+  <object id="148" name="spellbook" type="Chest" x="336" y="672" world2_battle="16" height="16">
    <properties>
     <property name="item" value="pot_xpotion"/>
    </properties>
   </object>
-  <object id="149" name="spellbook" type="Chest" x="368" y="688" width="16" height="16"/>
-  <object id="150" name="spellbook" type="Chest" x="400" y="672" width="16" height="16"/>
-  <object id="151" name="spellbook" type="Chest" x="432" y="672" width="16" height="16"/>
-  <object id="152" name="spellbook" type="Chest" x="464" y="672" width="16" height="16"/>
-  <object id="153" name="spellbook" type="Chest" x="416" y="688" width="16" height="16">
+  <object id="149" name="spellbook" type="Chest" x="368" y="688" world2_battle="16" height="16"/>
+  <object id="150" name="spellbook" type="Chest" x="400" y="672" world2_battle="16" height="16"/>
+  <object id="151" name="spellbook" type="Chest" x="432" y="672" world2_battle="16" height="16"/>
+  <object id="152" name="spellbook" type="Chest" x="464" y="672" world2_battle="16" height="16"/>
+  <object id="153" name="spellbook" type="Chest" x="416" y="688" world2_battle="16" height="16">
    <properties>
     <property name="item" value="wpn_cannonHyper"/>
    </properties>
   </object>
-  <object id="154" name="spellbook" type="Chest" x="352" y="672" width="16" height="16"/>
-  <object id="155" name="spellbook" type="Chest" x="288" y="688" width="16" height="16"/>
-  <object id="156" name="spellbook" type="Chest" x="480" y="688" width="16" height="16"/>
+  <object id="154" name="spellbook" type="Chest" x="352" y="672" world2_battle="16" height="16"/>
+  <object id="155" name="spellbook" type="Chest" x="288" y="688" world2_battle="16" height="16"/>
+  <object id="156" name="spellbook" type="Chest" x="480" y="688" world2_battle="16" height="16"/>
  </objectgroup>
- <layer name="Tile Layer 3" width="58" height="54">
+ <layer name="Tile Layer 3" world2_battle="58" height="54">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="15" tilewidth="16" tileheight="16" nextobjectid="76">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="30" height="15" tileworld2_battle="16" tileheight="16" nextobjectid="76">
  <properties>
-  <property name="bgm" value="ffl3_final_dungeon"/>
+  <property name="bgm" value="boss_dungeon"/>
   <property name="name" value="Research Base"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="30" height="15">
+ <layer name="Tile Layer 1" world2_battle="30" height="15">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC2tmYGBoJhNTAkD6+8jA1LB3DhmYGva2kIEH0l5KMTn29jKQly76KLR3NgN56WIOhfZSgkftHfzpmRr5F597aFU+4wMtNDR7oOwFABwzIoQIBwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="30" height="15">
+ <layer name="Tile Layer 2" world2_battle="30" height="15">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -30,7 +30,7 @@
    </properties>
    <polygon points="0,0 224,0 224,80 0,80"/>
   </object>
-  <object id="55" name="npc" type="Character" x="112" y="80" width="16" height="16">
+  <object id="55" name="npc" type="Character" x="112" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="SOUTH"/>
@@ -38,7 +38,7 @@
     <property name="onInteract" value="speak('Welcome to the research base. We\'re not accepting visitors right now.')"/>
    </properties>
   </object>
-  <object id="57" name="npc" type="Character" x="112" y="80" width="16" height="16">
+  <object id="57" name="npc" type="Character" x="112" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="SOUTH"/>
@@ -47,7 +47,7 @@
     <property name="onInteract" value="speak('Help!')"/>
    </properties>
   </object>
-  <object id="58" name="guard" type="Character" x="208" y="112" width="16" height="16">
+  <object id="58" name="guard" type="Character" x="208" y="112" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
@@ -55,7 +55,7 @@
     <property name="onInteract" value="speak('Sorry, restricted access past this point.')"/>
    </properties>
   </object>
-  <object id="62" name="guard" type="Character" x="208" y="128" width="16" height="16">
+  <object id="62" name="guard" type="Character" x="208" y="128" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="WEST"/>
@@ -63,7 +63,7 @@
     <property name="onInteract" value="speak('Sorry, restricted access past this point.')"/>
    </properties>
   </object>
-  <object id="64" name="guard" type="Character" x="208" y="144" width="16" height="16">
+  <object id="64" name="guard" type="Character" x="208" y="144" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
@@ -71,7 +71,7 @@
     <property name="onInteract" value="speak('Sorry, restricted access past this point.')"/>
    </properties>
   </object>
-  <object id="65" name="guard" type="Character" x="208" y="144" width="16" height="16">
+  <object id="65" name="guard" type="Character" x="208" y="144" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
@@ -85,30 +85,30 @@
    </properties>
    <polygon points="-16,16 240,16 240,256 -16,256"/>
   </object>
-  <object id="67" name="door" type="Event" x="112" y="208" width="16" height="16">
+  <object id="67" name="door" type="Event" x="112" y="208" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 58, 38, 'WEST')"/>
    </properties>
   </object>
-  <object id="68" name="tele" type="Event" x="288" y="96" width="16" height="16">
+  <object id="68" name="tele" type="Event" x="288" y="96" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/lab_left.tmx', 'lab_foyer')"/>
    </properties>
   </object>
-  <object id="69" name="tele" type="Event" x="416" y="96" width="16" height="16">
+  <object id="69" name="tele" type="Event" x="416" y="96" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/lab_right.tmx', 'lab_foyer')"/>
    </properties>
   </object>
-  <object id="70" name="tele" type="Event" x="352" y="96" width="16" height="16">
+  <object id="70" name="tele" type="Event" x="352" y="96" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/lab_center.tmx', 'lab_foyer')"/>
    </properties>
   </object>
-  <object id="71" name="lab_center" type="Target" x="352" y="112" width="16" height="16"/>
-  <object id="72" name="lab_right" type="Target" x="416" y="112" width="16" height="16"/>
-  <object id="73" name="lab_left" type="Target" x="288" y="112" width="16" height="16"/>
-  <object id="74" name="guard" type="Character" x="208" y="112" width="16" height="16">
+  <object id="71" name="lab_center" type="Target" x="352" y="112" world2_battle="16" height="16"/>
+  <object id="72" name="lab_right" type="Target" x="416" y="112" world2_battle="16" height="16"/>
+  <object id="73" name="lab_left" type="Target" x="288" y="112" world2_battle="16" height="16"/>
+  <object id="74" name="guard" type="Character" x="208" y="112" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
@@ -116,7 +116,7 @@
     <property name="onInteract" value="play('world3/lab01.lua')"/>
    </properties>
   </object>
-  <object id="75" name="guard" type="Character" x="208" y="128" width="16" height="16">
+  <object id="75" name="guard" type="Character" x="208" y="128" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="WEST"/>
@@ -125,7 +125,7 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="30" height="15">
+ <layer name="Tile Layer 3" world2_battle="30" height="15">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -133,7 +133,7 @@
    H4sIAAAAAAAAC2NgGAWjYBSMglFAK9BHJu4nYG4zAfk5ZOK5QNxLIzcTArMpcDMlAAD7m5FACAcAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" width="30" height="15">
+ <layer name="Tile Layer 4" world2_battle="30" height="15">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

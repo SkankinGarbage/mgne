@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="69" height="44" tilewidth="16" tileheight="16" nextobjectid="103">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="69" height="44" tileworld2_battle="16" tileheight="16" nextobjectid="103">
  <properties>
-  <property name="bgm" value="ffl1_theme"/>
+  <property name="bgm" value="tower"/>
   <property name="encounter" value="encounterset_level08_danger00"/>
   <property name="name" value="Floor 12"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="69" height="44">
+ <layer name="Tile Layer 1" world2_battle="69" height="44">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2aUQqDMAyG67tvXsML7f4XGYX9EELWprbRNPaDsE1waT/daqIpLUbyESJyXg15LDuJO508kVdDHstB4o5jhhw8rxfyWE4SOGZWY8R37yyvRyfb7zUfMysv1MfB8np0QsPCi+TD+3nC3Yz0UvLhcd3B7xrjGu1F4wNrjxcwTjr3UV60PrD2eIPPvddLiw/PjPISxQfo9RLNB7jqJaoP0OKFRlQfQOOFR2QfoOaFR3QfoOTlX0T2AUpetvQ+H4B64T6ol7f4APQ84T5o3e+pprNE6gdJ50lv3TgLpesP/n9i2ZfyQq0fJEVkL7Xr09LniF401+u1bZG8aPuFmu0RvGjrOcmJtm6ciZb6VnIyul/3NK31vuQkpThervQ//jlJaW4vPf0gOl9pfq19KS9gvq0+EtnvJO852r6UNydX+0F0v9I9Gk1fypsTfl1u0f+o9aU8OuF1/kgfQPIyw3MF1v0gqS/l0QkP6/4YfR7K47qzCxE5rwbpfkTkvIvFYtHKF5jW0x5wLwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="69" height="44">
+ <layer name="Tile Layer 2" world2_battle="69" height="44">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,31 +24,31 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="94" name="mem_tele" type="Event" x="512" y="512" width="16" height="16">
+  <object id="94" name="mem_tele" type="Event" x="512" y="512" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f10_transition.tmx', 'tower/f11.tmx', 'ENTRANCE', 'B')"/>
    </properties>
   </object>
-  <object id="95" name="target_b" type="Target" x="512" y="496" width="16" height="16"/>
-  <object id="96" name="target_a" type="Target" x="256" y="112" width="16" height="16"/>
-  <object id="97" name="mem_tele" type="Event" x="256" y="128" width="16" height="16">
+  <object id="95" name="target_b" type="Target" x="512" y="496" world2_battle="16" height="16"/>
+  <object id="96" name="target_a" type="Target" x="256" y="112" world2_battle="16" height="16"/>
+  <object id="97" name="mem_tele" type="Event" x="256" y="128" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f10_transition.tmx', 'tower/f13.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
-  <object id="100" name="chest" type="Chest" x="272" y="560" width="16" height="16">
+  <object id="100" name="chest" type="Chest" x="272" y="560" world2_battle="16" height="16">
    <properties>
     <property name="item" value="body_diamond"/>
    </properties>
   </object>
-  <object id="101" name="sideworld" type="Target" x="752" y="64" width="16" height="16"/>
-  <object id="102" name="tele" type="Event" x="752" y="48" width="16" height="16">
+  <object id="101" name="sideworld" type="Target" x="752" y="64" world2_battle="16" height="16"/>
+  <object id="102" name="tele" type="Event" x="752" y="48" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f12_sideworld.tmx', 'gate')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="69" height="44">
+ <layer name="Tile Layer 3" world2_battle="69" height="44">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -56,7 +56,7 @@
    H4sIAAAAAAAAC+3ZMQ0AMAgAQQR0qzr8G6kAVhJocqfg948AAH6W0wELnemAhe50AAAAAAAA0MYfqvyhyh8CAIAeDwrQT7ZwLwAA
   </data>
  </layer>
- <layer name="Tile Layer 4" width="69" height="44">
+ <layer name="Tile Layer 4" world2_battle="69" height="44">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

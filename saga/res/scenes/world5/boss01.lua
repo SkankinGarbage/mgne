@@ -3,7 +3,7 @@ local hero2 = getHero(1).getName()
 local hero3 = getHero(2).getName()
 local hero4 = getHero(3).getName()
 
-playBGM('ffl1_paradise')
+playBGM('final_floor')
 
 speak("Aven", "Oh, " .. hero1 .. " and friends. You finally caught up.")
 speak("Janine", "Watch yourself, Aven. Jonas fought for you, and you betrayed him.")
@@ -24,7 +24,7 @@ face('aven', 'SOUTH')
 speak("Aven", "But don't doubt the greatness of my power!")
 
 sceneSwitch('aven_dead', true)
-battle('party_bossFinal', false, 'ffl3_xagor')
+battle('party_bossFinal', false, 'final_boss')
 
 playBGM(nil)
 wait(0.7)

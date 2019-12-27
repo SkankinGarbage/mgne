@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="21" tilewidth="16" tileheight="16" nextobjectid="58">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="15" height="21" tileworld2_battle="16" tileheight="16" nextobjectid="58">
  <properties>
-  <property name="bgm" value="ffl3_ruins"/>
+  <property name="bgm" value="plot_dungeon"/>
   <property name="encounter" value="encounterset_level10_danger01"/>
   <property name="name" value="Red Tower"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="15" height="21">
+ <layer name="Tile Layer 1" world2_battle="15" height="21">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC5WTSw6DMAwF0/v0JoBYhBW5Amdg5YNXSLaYvjoULD1hRR5/cFJKbjt018hMD3KQObTAv+LJLa4Gv8cr11wGv8crZ64XfOVZs8dlvP7P4Gb/DhDPm/S+IPfs8Rs0gDWpHTU3j9kSxXnUDvYN9p/M4znzE1bvnd3gDWzsdBdec5hw3OmY8Nl+I2Z07rAqO8vuFWes5bS1/N7XXRjOuJZvi/s2JjkmP48ZM2veD99t1KoXHPvnu41a2ueVNahnH2+zHwLsBAAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="15" height="21">
+ <layer name="Tile Layer 2" world2_battle="15" height="21">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,20 +24,20 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="56" name="entry" type="Event" x="16" y="160" width="16" height="16">
+  <object id="56" name="entry" type="Event" x="16" y="160" world2_battle="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
 targetTele('crater/tower01.tmx', 'exit')</property>
    </properties>
   </object>
-  <object id="57" name="exit" type="Event" x="208" y="160" width="16" height="16">
+  <object id="57" name="exit" type="Event" x="208" y="160" world2_battle="16" height="16">
    <properties>
     <property name="onCollide">playSound('rebound');
 targetTele('crater/tower03.tmx', 'entry')</property>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="15" height="21">
+ <layer name="Tile Layer 3" world2_battle="15" height="21">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -45,7 +45,7 @@ targetTele('crater/tower03.tmx', 'entry')</property>
    H4sIAAAAAAAAC2NgGAWjYBSMguEPAMWacCzsBAAA
   </data>
  </layer>
- <layer name="Tile Layer 4" width="15" height="21">
+ <layer name="Tile Layer 4" world2_battle="15" height="21">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

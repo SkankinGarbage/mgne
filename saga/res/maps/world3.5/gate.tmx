@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="93">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="52" height="48" tileworld2_battle="16" tileheight="16" nextobjectid="93">
  <properties>
-  <property name="bgm" value="ffl2_apollo"/>
+  <property name="bgm" value="gate_theme"/>
   <property name="name" value="F1 Gate"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="52" height="48">
+ <layer name="Tile Layer 1" world2_battle="52" height="48">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2ZzYrDMAyEU3orueWNcur7P1FZqEFMNfLU8d/u+jAUmoTos35sKfdt2+6FOonU53eiUnuu6irPQfRbeWaTGi/IOiuzGi/Iank8tll5n29Z1qfAM7ImKDyoHM8B10flKL6rlAd9Naqm746tufXNXR9Z0xPP7S22trtwT+/cYLFmedjaHsI9PexV4/xWoJHr72l2HvRHlAssNxSxGtGaJ8oFlhuKvBrQg8fqxw7cU0piDOuBjYUWeVLK8xBZ7PMYC7V4lD2ghn8eAQ+u7RUeZQ9Q/JOk8njng1Q3a+dSabwxpvS/fd7GheXpsbcyHs8vEQ+rC8knvc49Co+1mTGx/fSA3x48p+CfKI8inqtiufgtj5c7Ho/3f00e76yO+/W5fbKz9Vbzh/Fc7UW9szru1/v2yZ6Locg3+CzytOyFkPObc5pX7xSe9I4eswJrh9c7RH5jeyzy2NhoyYI2K/0C41HmC61rNs4IWL9g72E8rH/qOU9MMZ1simZSOR7WP/Weg1tb07uRR+lT2fnaq2st+bz8QR6l/kX9D+ZNDZ4oXzFmvJgr5WG21Mj9GjOPHI9S52rU7WjmUTN+lTo38rtdrXWb9TtQqf4azwxz+cWztLS0tPQf9QIjXqCZACcAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="52" height="48">
+ <layer name="Tile Layer 2" world2_battle="52" height="48">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,98 +23,98 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="32" name="tele" type="Event" x="208" y="560" width="336" height="16">
+  <object id="32" name="tele" type="Event" x="208" y="560" world2_battle="336" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/overworld.tmx', 59, 16)"/>
    </properties>
   </object>
-  <object id="46" name="tele" type="Event" x="208" y="128" width="336" height="16">
+  <object id="46" name="tele" type="Event" x="208" y="128" world2_battle="336" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/overworld.tmx', 59, 16)"/>
    </properties>
   </object>
-  <object id="47" name="tele" type="Event" x="192" y="128" width="16" height="448">
+  <object id="47" name="tele" type="Event" x="192" y="128" world2_battle="16" height="448">
    <properties>
     <property name="onCollide" value="teleport('world3.5/overworld.tmx', 59, 16)"/>
    </properties>
   </object>
-  <object id="48" name="tele" type="Event" x="544" y="128" width="16" height="448">
+  <object id="48" name="tele" type="Event" x="544" y="128" world2_battle="16" height="448">
    <properties>
     <property name="onCollide" value="teleport('world3.5/overworld.tmx', 59, 16)"/>
    </properties>
   </object>
-  <object id="78" name="tele" type="Event" x="416" y="224" width="16" height="16">
+  <object id="78" name="tele" type="Event" x="416" y="224" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('ares_dead')"/>
     <property name="onCollide" value="teleport('tower/reverse_f05.tmx', 7, 12, 'NORTH')"/>
    </properties>
   </object>
-  <object id="79" name="autostart" type="Event" x="384" y="224" width="16" height="16">
+  <object id="79" name="autostart" type="Event" x="384" y="224" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('world3.5_entry')"/>
     <property name="onEnter" value="play('world3.5/entry.lua')"/>
    </properties>
   </object>
-  <object id="80" name="prince" type="Character" x="416" y="256" width="16" height="16">
+  <object id="80" name="prince" type="Character" x="416" y="256" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lucifer"/>
     <property name="face" value="SOUTH"/>
     <property name="hide" value="return not getSwitch('prince_appears')"/>
    </properties>
   </object>
-  <object id="81" name="entry" type="Target" x="416" y="512" width="16" height="16"/>
-  <object id="82" name="autostart" type="Event" x="384" y="240" width="16" height="16">
+  <object id="81" name="entry" type="Target" x="416" y="512" world2_battle="16" height="16"/>
+  <object id="82" name="autostart" type="Event" x="384" y="240" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('ares_dead') or getSwitch('twins03')"/>
     <property name="onEnter" value="play('world3.5/twins03.lua')"/>
    </properties>
   </object>
-  <object id="83" name="janine" type="Character" x="384" y="320" width="16" height="16">
+  <object id="83" name="janine" type="Character" x="384" y="320" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="face" value="EAST"/>
     <property name="hide" value="return getSwitch('twins03') or not getSwitch('ares_dead')"/>
    </properties>
   </object>
-  <object id="85" name="jonas" type="Character" x="432" y="320" width="16" height="16">
+  <object id="85" name="jonas" type="Character" x="432" y="320" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('twins03') or not getSwitch('ares_dead')"/>
    </properties>
   </object>
-  <object id="86" name="zkauba" type="Character" x="448" y="304" width="16" height="16">
+  <object id="86" name="zkauba" type="Character" x="448" y="304" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('twins03') or not getSwitch('ares_dead')"/>
    </properties>
   </object>
-  <object id="87" name="lara" type="Character" x="448" y="336" width="16" height="16">
+  <object id="87" name="lara" type="Character" x="448" y="336" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('twins03') or not getSwitch('ares_dead')"/>
    </properties>
   </object>
-  <object id="88" name="aven" type="Character" x="464" y="320" width="16" height="16">
+  <object id="88" name="aven" type="Character" x="464" y="320" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('twins03') or not getSwitch('ares_dead')"/>
    </properties>
   </object>
-  <object id="89" name="target_hero" type="Target" x="416" y="368" width="16" height="16"/>
-  <object id="90" name="target_middle" type="Target" x="416" y="320" width="16" height="16"/>
-  <object id="91" name="gate" type="Target" x="416" y="208" width="16" height="16"/>
-  <object id="92" name="tele" type="Event" x="416" y="224" width="16" height="16">
+  <object id="89" name="target_hero" type="Target" x="416" y="368" world2_battle="16" height="16"/>
+  <object id="90" name="target_middle" type="Target" x="416" y="320" world2_battle="16" height="16"/>
+  <object id="91" name="gate" type="Target" x="416" y="208" world2_battle="16" height="16"/>
+  <object id="92" name="tele" type="Event" x="416" y="224" world2_battle="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('ares_dead')"/>
     <property name="onCollide" value="teleport('tower/f10.tmx', 14, 10, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="52" height="48">
+ <layer name="Tile Layer 3" world2_battle="52" height="48">
   <properties>
    <property name="z" value="1.0"/>
   </properties>

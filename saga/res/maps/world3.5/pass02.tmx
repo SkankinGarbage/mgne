@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="54" height="52" tilewidth="16" tileheight="16" nextobjectid="18">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="54" height="52" tileworld2_battle="16" tileheight="16" nextobjectid="18">
  <properties>
-  <property name="bgm" value="ffl1_cave"/>
+  <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level07_danger00"/>
   <property name="name" value="North Passage"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="54" height="52">
+ <layer name="Tile Layer 1" world2_battle="54" height="52">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2XUQ7DIAiGvYF764N96imWHWRH2P2PsCxpE8cAkYJ2CQ9/slZFPmFI15TSGgqFQqFQSK37BXzw0O0CPnjEZbmYP1ZxyZO4rPKEisusPLTIk8LEZdnHR3NZ5MnG2Mn7+Gg2C64M7BRk7GAbwcflz9n4YdzboNhx+XNmb8xmTr+x8+KC+QOZNXu3cmAEW2t/mE/SHHgJz9OLTXKuljlAsXlwUedF+VfSd12Dzz3noT07iV3qvI49C9BWaQXPJfX76sXF3ad1bT6UwTpY567AxdnNAnHzZnJxNZnyj+Nq5cAorlZf51kPPbm4mieth5RN6b3kxcXFERuH9ZDikt5LI7m4/3+rNvTWjhlcWr+lXF7fE/W9O5rruOMtuGDvAL+J6vdYr4HFGc7h1sO+BZun4eJ6B+w9nF/7jfVVrfWSvTVcD0KS3qLeH/7WCvNFw/UkRPFK2SXrMWG+WNQNirOXvceOF4sn+wz/LOVx58xWXQ9n+2Kpuh7O9sVSmm/Hf1BwhUKhUCgU+ugNf7f3vuArAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="54" height="52">
+ <layer name="Tile Layer 2" world2_battle="54" height="52">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -38,19 +38,19 @@
    </properties>
    <polygon points="0,0 48,0 48,96 0,96"/>
   </object>
-  <object id="12" name="tele" type="Event" x="176" y="176" width="16" height="16">
+  <object id="12" name="tele" type="Event" x="176" y="176" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/pass01.tmx', 'stairs_down')"/>
    </properties>
   </object>
-  <object id="13" name="entry" type="Target" x="176" y="192" width="16" height="16"/>
-  <object id="15" name="exit" type="Target" x="560" y="144" width="16" height="16"/>
-  <object id="16" name="tele" type="Event" x="560" y="128" width="16" height="16">
+  <object id="13" name="entry" type="Target" x="176" y="192" world2_battle="16" height="16"/>
+  <object id="15" name="exit" type="Target" x="560" y="144" world2_battle="16" height="16"/>
+  <object id="16" name="tele" type="Event" x="560" y="128" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/overworld.tmx', 23, 28, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="17" name="chest" type="Chest" x="448" y="384" width="16" height="16">
+  <object id="17" name="chest" type="Chest" x="448" y="384" world2_battle="16" height="16">
    <properties>
     <property name="collectable" value="stone_water"/>
    </properties>

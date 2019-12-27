@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="41" tilewidth="16" tileheight="16" nextobjectid="65">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="39" height="41" tileworld2_battle="16" tileheight="16" nextobjectid="65">
  <properties>
-  <property name="bgm" value="ffl1_cave"/>
+  <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level09_danger01"/>
   <property name="name" value="Illusive Cave"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="39" height="41">
+ <layer name="Tile Layer 1" world2_battle="39" height="41">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2WsQ2EMBAErw+yj13AV0QdkH0VVGB6fBGsZBn7QMg+jv8NJrBWloczWlhEZCGEEAcMDhxqBAcOXt0GhXCQ93Z7KYSD3OLeruL1nfp3t2i8r9UZ75vc0ANR9p2A9ahkpX2tQA9E2XcC1qOSlfa1vEswZXMo9UU6r5yebiDt3Jx0XhuzgVt6xsZacVsrz2Plhkz7Btw1Ny9uYFYyrfu1fb/sdqZ7g5JZdy/OKv2/5ZlV917pN+vunSpe4EO3x7khO9O9Pd0IIeRpfAE2S9je/BgAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="39" height="41">
+ <layer name="Tile Layer 2" world2_battle="39" height="41">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -38,17 +38,17 @@
    </properties>
    <polygon points="0,0 0,128 304,128 304,0"/>
   </object>
-  <object id="59" name="entry" type="Target" x="304" y="272" width="16" height="16"/>
-  <object id="60" name="tele" type="Event" x="304" y="256" width="16" height="16">
+  <object id="59" name="entry" type="Target" x="304" y="272" world2_battle="16" height="16"/>
+  <object id="60" name="tele" type="Event" x="304" y="256" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/illusive01.tmx', 'exit')"/>
    </properties>
   </object>
-  <object id="63" name="tele" type="Event" x="304" y="128" width="16" height="16">
+  <object id="63" name="tele" type="Event" x="304" y="128" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/illusive03.tmx', 'entry')"/>
    </properties>
   </object>
-  <object id="64" name="exit" type="Target" x="304" y="144" width="16" height="16"/>
+  <object id="64" name="exit" type="Target" x="304" y="144" world2_battle="16" height="16"/>
  </objectgroup>
 </map>

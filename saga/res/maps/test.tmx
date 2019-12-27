@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" nextobjectid="35">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="20" height="15" tileworld2_battle="16" tileheight="16" nextobjectid="35">
  <properties>
-  <property name="battle_bgm" value="ffl1_battle"/>
-  <property name="bgm" value="ffl1_overworld"/>
+  <property name="battle_bgm" value="world1_battle"/>
+  <property name="bgm" value="world3"/>
   <property name="name" value="saga testmap"/>
  </properties>
- <tileset firstgid="1" name="welp" tilewidth="16" tileheight="16">
-  <image source="tilesets/welp.png" width="48" height="32"/>
+ <tileset firstgid="1" name="welp" tileworld2_battle="16" tileheight="16">
+  <image source="tilesets/welp.png" world2_battle="48" height="32"/>
   <tile id="2">
    <properties>
     <property name="x" value=""/>
@@ -25,7 +25,7 @@
  </tileset>
  <tileset firstgid="7" source="tilesets/lower.tsx"/>
  <tileset firstgid="182" source="tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="20" height="15">
+ <layer name="Tile Layer 1" world2_battle="20" height="15">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -33,7 +33,7 @@
    eJxjZGBgYBzFo3gUj+IhgAHGRgEt
   </data>
  </layer>
- <layer name="Tile Layer 2" width="20" height="15">
+ <layer name="Tile Layer 2" world2_battle="20" height="15">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -42,67 +42,67 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="bort the bozo" type="Character" x="144" y="176" width="16" height="16">
+  <object id="1" name="bort the bozo" type="Character" x="144" y="176" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="speak('Dreaming of the world beyond the gates, many have sought the secret town of Hero, but none have returned. Now, another tale of adventure is about to begin... ')"/>
    </properties>
   </object>
-  <object id="2" name="teleport" type="Event" x="304" y="112" width="16" height="16">
+  <object id="2" name="teleport" type="Event" x="304" y="112" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('test2.tmx', 1, 8)"/>
    </properties>
   </object>
-  <object id="3" name="party1" type="Character" x="48" y="208" width="16" height="16">
+  <object id="3" name="party1" type="Character" x="48" y="208" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="battle('party_1group')"/>
    </properties>
   </object>
-  <object id="4" name="party2" type="Character" x="64" y="208" width="16" height="16">
+  <object id="4" name="party2" type="Character" x="64" y="208" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="battle('party_2group')"/>
    </properties>
   </object>
-  <object id="5" name="party3" type="Character" x="80" y="208" width="16" height="16">
+  <object id="5" name="party3" type="Character" x="80" y="208" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="battle('party_3group')"/>
    </properties>
   </object>
-  <object id="6" name="sandbag" type="Character" x="16" y="80" width="16" height="16">
+  <object id="6" name="sandbag" type="Character" x="16" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="battle('party_testStrong')"/>
    </properties>
   </object>
-  <object id="7" name="party4" type="Character" x="96" y="208" width="16" height="16">
+  <object id="7" name="party4" type="Character" x="96" y="208" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lucifer"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="battle('party_testGroups')"/>
    </properties>
   </object>
-  <object id="8" name="inn" type="Character" x="176" y="128" width="16" height="16">
+  <object id="8" name="inn" type="Character" x="176" y="128" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="9" name="shop" type="Character" x="176" y="144" width="16" height="16">
+  <object id="9" name="shop" type="Character" x="176" y="144" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="shop('item_testWhip', 'item_hp200', 'item_str24', 'item_testCure', 'body_bronze', 'hand_bronze', 'item_testArcane')"/>
    </properties>
   </object>
-  <object id="10" name="party4" type="Character" x="176" y="80" width="16" height="16">
+  <object id="10" name="party4" type="Character" x="176" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="face" value="NORTH"/>
@@ -115,87 +115,87 @@
    </properties>
    <polygon points="0,0 0,32 80,32 80,80 112,80 112,0"/>
   </object>
-  <object id="12" name="test script" type="Character" x="224" y="192" width="16" height="16">
+  <object id="12" name="test script" type="Character" x="224" y="192" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="play('test/testscript.lua')"/>
    </properties>
   </object>
-  <object id="13" name="chameleon" type="Character" x="240" y="192" width="16" height="16">
+  <object id="13" name="chameleon" type="Character" x="240" y="192" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="lua(return getHero(1).getSpriteName())"/>
     <property name="onInteract" value="speak('wow I look an awful lot like you!!')"/>
    </properties>
   </object>
-  <object id="14" name="mix" type="Character" x="208" y="128" width="16" height="16">
+  <object id="14" name="mix" type="Character" x="208" y="128" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="mix('mixset_weapons')"/>
    </properties>
   </object>
-  <object id="16" name="chest" type="Chest" x="224" y="64" width="16" height="16">
+  <object id="16" name="chest" type="Chest" x="224" y="64" world2_battle="16" height="16">
    <properties>
     <property name="collectable" value="stone_black"/>
    </properties>
   </object>
-  <object id="17" name="chest" type="Chest" x="240" y="64" width="16" height="16">
+  <object id="17" name="chest" type="Chest" x="240" y="64" world2_battle="16" height="16">
    <properties>
     <property name="collectable" value="stone_white"/>
    </properties>
   </object>
-  <object id="18" name="chest" type="Chest" x="256" y="64" width="16" height="16">
+  <object id="18" name="chest" type="Chest" x="256" y="64" world2_battle="16" height="16">
    <properties>
     <property name="collectable" value="stone_white"/>
    </properties>
   </object>
-  <object id="19" name="chest" type="Chest" x="208" y="64" width="16" height="16">
+  <object id="19" name="chest" type="Chest" x="208" y="64" world2_battle="16" height="16">
    <properties>
     <property name="collectable" value="stone_black"/>
    </properties>
   </object>
-  <object id="20" name="memory" type="Teleport Memory" x="16" y="16" width="16" height="16">
+  <object id="20" name="memory" type="Teleport Memory" x="16" y="16" world2_battle="16" height="16">
    <properties>
     <property name="displayName" value="Test Room 1"/>
    </properties>
   </object>
-  <object id="23" name="meat" type="Character" x="160" y="80" width="16" height="16">
+  <object id="23" name="meat" type="Character" x="160" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="meatShop('meatshop_test')"/>
    </properties>
   </object>
-  <object id="26" name="switch" type="Character" x="240" y="96" width="16" height="16">
+  <object id="26" name="switch" type="Character" x="240" y="96" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="onInteract" value="speak('HOLA SWITCH IS SET'); sceneSwitch('saga_testswitch', true)"/>
    </properties>
   </object>
-  <object id="29" name="autostart" type="Event" x="0" y="0" width="16" height="16">
+  <object id="29" name="autostart" type="Event" x="0" y="0" world2_battle="16" height="16">
    <properties>
     <property name="onEnter" value="speak('this is an autostart event!')"/>
    </properties>
   </object>
-  <object id="30" name="bort the bozo" type="Character" x="112" y="112" width="16" height="16">
+  <object id="30" name="bort the bozo" type="Character" x="112" y="112" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="speak('BORG is added to the party'); addMember('chara_borg')"/>
    </properties>
   </object>
-  <object id="31" name="bort the bozo" type="Character" x="80" y="96" width="16" height="16">
+  <object id="31" name="bort the bozo" type="Character" x="80" y="96" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="speak('Removed BORG.'); removeMember();"/>
    </properties>
   </object>
-  <object id="32" name="bort the bozo" type="Character" x="112" y="80" width="16" height="16">
+  <object id="32" name="bort the bozo" type="Character" x="112" y="80" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="speak('lara.'); addMember('chara_lara')"/>
    </properties>
   </object>
-  <object id="33" name="bort the bozo" type="Character" x="112" y="96" width="16" height="16">
+  <object id="33" name="bort the bozo" type="Character" x="112" y="96" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="speak('david is added to the party'); addMember('chara_david')"/>

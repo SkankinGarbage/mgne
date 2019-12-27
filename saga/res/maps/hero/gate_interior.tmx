@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="24" height="28" tilewidth="16" tileheight="16" nextobjectid="55">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="24" height="28" tileworld2_battle="16" tileheight="16" nextobjectid="55">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="encounter" value="encounterset_level01_danger00"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="24" height="28">
+ <layer name="Tile Layer 1" world2_battle="24" height="28">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+WVsQoEMQhEU25h519cd13qtPf//3Mc3MAgul4SU92AKCu8iCxja3UaJqolFCf4SiGF3MsJpf7OvkbAZ2FnK5KAz/NiZ3auX6QBn+fN+pmy/Wf9TC+K65uz91fVnW+VfE+n+XZ3dn9V8nb373z2697q/fvDgf/0tuffgzLX8J9O9QpfKKOO/HWFr5RRV/DvbsBJ/kh6u3y56T0m+NENw3/CgdmfE/zohuFtjtnbBVl/hEeqidnbxTrtX57e4YBm5YAKAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" width="24" height="28">
+ <layer name="Tile Layer 2" world2_battle="24" height="28">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,33 +24,33 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="49" name="tele" type="Event" x="304" y="416" width="16" height="16">
+  <object id="49" name="tele" type="Event" x="304" y="416" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate.tmx', 32, 20)"/>
    </properties>
   </object>
-  <object id="50" name="tele" type="Event" x="64" y="400" width="16" height="16">
+  <object id="50" name="tele" type="Event" x="64" y="400" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate.tmx', 16, 24)"/>
    </properties>
   </object>
-  <object id="51" name="tele" type="Event" x="320" y="144" width="16" height="16">
+  <object id="51" name="tele" type="Event" x="320" y="144" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate.tmx', 19, 15)"/>
    </properties>
   </object>
-  <object id="52" name="chest" type="Chest" x="32" y="336" width="16" height="16">
+  <object id="52" name="chest" type="Chest" x="32" y="336" world2_battle="16" height="16">
    <properties>
     <property name="item" value="pot_xpotion"/>
    </properties>
   </object>
-  <object id="54" name="chest" type="Chest" x="48" y="144" width="16" height="16">
+  <object id="54" name="chest" type="Chest" x="48" y="144" world2_battle="16" height="16">
    <properties>
     <property name="collectable" value="stone_air"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="24" height="28">
+ <layer name="Tile Layer 3" world2_battle="24" height="28">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -58,7 +58,7 @@
    H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBKBjZwInG5vPQ2HxhGptPbQAAuj+pYoAKAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="24" height="28">
+ <layer name="Tile Layer 4" world2_battle="24" height="28">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

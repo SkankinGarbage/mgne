@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="55" height="52" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="110">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="55" height="52" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="110">
  <properties>
-  <property name="battle_bgm" value="ffl1_battle"/>
-  <property name="bgm" value="ffl1_tower"/>
+  <property name="battle_bgm" value="world3_battle"/>
+  <property name="bgm" value="world_5"/>
   <property name="cancelsTransform" value="true"/>
   <property name="encounter" value="encounterset_level12_danger00"/>
   <property name="name" value="Edenic World"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="55" height="52">
+ <layer name="Tile Layer 1" world2_battle="55" height="52">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -17,7 +17,7 @@
    H4sIAAAAAAAAC+1ay46cMBBkjslf5biZn1jllNMqB9j5jlF+eLFEK5VSV7sNZmBXU1ILjzHQ5X64xzAMT2RxS44bG/vPCNT13Tnv9Z0J08rrPpONEJNoF2T99hHo6TceL2X3tf6wF4ruOBcTnUOs9clHxOgo2th3CUThqPzSEivI4/ss35Yjc5voeDS8/GB9bC/jdRk0P5yz0bn/0UB9Il9EQV+u+cRevhrFPT8TdX+d5VfQ590nWj/2Bj6P9UF/fJ3l9yx/hv+5vS39yM+buy28lC22zhXzwviy+Hsb/nFmZH2vp496taHyR9OdeSE/jjmMN7Uu9uTDNozq3aKD0r8mhr1rzGhubA6V3yrdfwYS5Uvsj2qctYjiD+eh6GG6epwizogj1jp7RlQXIgePk8dVcVfoYTPM697c2TM8HZX+nj9m41HFYia/ZOLYxijfyvCs+Wv5fXfaXKP18FXFh/VZw9PjdwdOd+f8FtzoyDx+zPJ3OTK3mu6RrSJ+KhaV7bIxeVm4ML8at0x+5HnAMR4vG5PVvRaLxg25KJ9cwy0zHm1Z2hYna2KO/6+YH5rU4i2b/zLX4hyYHT201mNWR2Xs5sVUzW5eO2O31hrz3WlPwC2KN2/+t3KL4i3LqQbWy3h5ubJWh9TqEpUrWQeFzBpd5sTsfoV7WrzV+LWub9lYvS6C2LqGIz/jxO2MP7bwZD5FxmFbjsTr0MZ2/5b8F9WQEU/kw3r0gNpbxedGdols6I1jPoyte0TRej/S8Ub6mGTX7Bc6x89vzfMtfKfEeM+2kT8aJ+Rl7Zq+tf/8a2D3zK4nnr1eSLif7bbnOwHlm9H+qNnN4pB5KL68Zqn3dVvt1WsPlG0V2dHyIqNmu16507MX/ua4ULZR/rl1zeqJmg7sl0qML++/noHjbdD6ZLldxfUFj3jP6L3fUOD9lZrNeD/ybN8vGHfjXfSL/BJrKxt/NmT2I6KaHuH5xtm+rUEdvZpM1cBnyB8K6luFAt4XRHuc6VuarwrPNplv0HCtGMWYzLOOBPuX9x83c91nBO7DPPGEhw+dB3L/sCwAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="55" height="52">
+ <layer name="Tile Layer 2" world2_battle="55" height="52">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -26,37 +26,37 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="103" name="gate" type="Event" x="432" y="400" width="16" height="16">
+  <object id="103" name="gate" type="Event" x="432" y="400" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f20.tmx', 'door')"/>
    </properties>
   </object>
-  <object id="104" name="town" type="Event" x="432" y="592" width="16" height="16">
+  <object id="104" name="town" type="Event" x="432" y="592" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/town.tmx', 'entry', 'WEST')"/>
    </properties>
   </object>
-  <object id="105" name="earth" type="Event" x="672" y="368" width="16" height="16">
+  <object id="105" name="earth" type="Event" x="672" y="368" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/earth01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="106" name="water" type="Event" x="672" y="432" width="16" height="16">
+  <object id="106" name="water" type="Event" x="672" y="432" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/water01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="107" name="air" type="Event" x="192" y="432" width="16" height="16">
+  <object id="107" name="air" type="Event" x="192" y="432" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/air01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="108" name="fire" type="Event" x="192" y="368" width="16" height="16">
+  <object id="108" name="fire" type="Event" x="192" y="368" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/fire01.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="109" name="palace" type="Event" x="432" y="144" width="16" height="16">
+  <object id="109" name="palace" type="Event" x="432" y="144" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace01.tmx', 'entry', 'NORTH')"/>
    </properties>

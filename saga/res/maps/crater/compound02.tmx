@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="33" height="34" tilewidth="16" tileheight="16" nextobjectid="92">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="33" height="34" tileworld2_battle="16" tileheight="16" nextobjectid="92">
  <properties>
-  <property name="bgm" value="ffl3_dark"/>
+  <property name="bgm" value="optional_dungeon"/>
   <property name="encounter" value="encounterset_level10_danger00"/>
   <property name="name" value="Compound"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="33" height="34">
+ <layer name="Tile Layer 1" world2_battle="33" height="34">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2UQQ6AMAgEeZZ/6EH+/xq9mCgItZXSHnYSDsasGakuEQBx7LMFTni2AMHhIsOh3OarQy0TTcQeePEppPdaBmS86dldTwYOcLC+Y3ltMTLjvYdFdAYO+p51vrIHmZ592Jpp8bPIOIu3/o/OrNAPcIADHPTIf7nWY5SU2ZxnWfzJHJi1w3SIEQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="33" height="34">
+ <layer name="Tile Layer 2" world2_battle="33" height="34">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,7 +24,7 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="71" name="npc" type="Character" x="64" y="448" width="16" height="16">
+  <object id="71" name="npc" type="Character" x="64" y="448" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="face" value="NORTH"/>
@@ -33,7 +33,7 @@
     <property name="onInteract" value="play('crater/guard.lua')"/>
    </properties>
   </object>
-  <object id="72" name="npc" type="Character" x="272" y="448" width="16" height="16">
+  <object id="72" name="npc" type="Character" x="272" y="448" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="face" value="NORTH"/>
@@ -42,7 +42,7 @@
     <property name="onInteract" value="play('crater/guard.lua')"/>
    </properties>
   </object>
-  <object id="73" name="npc" type="Character" x="480" y="448" width="16" height="16">
+  <object id="73" name="npc" type="Character" x="480" y="448" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="face" value="NORTH"/>
@@ -51,7 +51,7 @@
     <property name="onInteract" value="play('crater/guard.lua')"/>
    </properties>
   </object>
-  <object id="75" name="npc" type="Character" x="96" y="176" width="16" height="16">
+  <object id="75" name="npc" type="Character" x="96" y="176" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="face" value="WEST"/>
@@ -59,25 +59,25 @@
     <property name="onInteract" value="play('crater/guard.lua')"/>
    </properties>
   </object>
-  <object id="77" name="left" type="Target" x="80" y="512" width="16" height="16"/>
-  <object id="79" name="middle" type="Target" x="288" y="512" width="16" height="16"/>
-  <object id="82" name="right" type="Target" x="496" y="512" width="16" height="16"/>
-  <object id="83" name="tele" type="Event" x="80" y="528" width="16" height="16">
+  <object id="77" name="left" type="Target" x="80" y="512" world2_battle="16" height="16"/>
+  <object id="79" name="middle" type="Target" x="288" y="512" world2_battle="16" height="16"/>
+  <object id="82" name="right" type="Target" x="496" y="512" world2_battle="16" height="16"/>
+  <object id="83" name="tele" type="Event" x="80" y="528" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/compound01.tmx', 'bottom_left')"/>
    </properties>
   </object>
-  <object id="84" name="tele" type="Event" x="288" y="528" width="16" height="16">
+  <object id="84" name="tele" type="Event" x="288" y="528" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/compound01.tmx', 'bottom_middle')"/>
    </properties>
   </object>
-  <object id="85" name="tele" type="Event" x="496" y="528" width="16" height="16">
+  <object id="85" name="tele" type="Event" x="496" y="528" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/compound01.tmx', 'bottom_right')"/>
    </properties>
   </object>
-  <object id="86" name="npc" type="Character" x="288" y="224" width="16" height="16">
+  <object id="86" name="npc" type="Character" x="288" y="224" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="face" value="NORTH"/>
@@ -86,7 +86,7 @@
     <property name="onInteract" value="play('crater/guard.lua')"/>
    </properties>
   </object>
-  <object id="87" name="npc" type="Character" x="496" y="224" width="16" height="16">
+  <object id="87" name="npc" type="Character" x="496" y="224" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="face" value="NORTH"/>
@@ -95,14 +95,14 @@
     <property name="onInteract" value="play('crater/guard.lua')"/>
    </properties>
   </object>
-  <object id="88" name="back_middle" type="Target" x="256" y="64" width="16" height="16"/>
-  <object id="89" name="tele" type="Event" x="256" y="48" width="16" height="16">
+  <object id="88" name="back_middle" type="Target" x="256" y="64" world2_battle="16" height="16"/>
+  <object id="89" name="tele" type="Event" x="256" y="48" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/compound04.tmx', 'middle')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="33" height="34">
+ <layer name="Tile Layer 3" world2_battle="33" height="34">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -110,7 +110,7 @@
    H4sIAAAAAAAAC+2TQQoAIAgEfWb/f0lXiTJEtKIZ8LjLCCoCXlpRBod1h56sDA5vOIzdFRkccNh1nP4LHHDAYd6ROZaDd6doxuKGewAA+J0OZh294YgRAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="33" height="34">
+ <layer name="Tile Layer 4" world2_battle="33" height="34">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

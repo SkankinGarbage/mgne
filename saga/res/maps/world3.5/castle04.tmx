@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="30" tilewidth="16" tileheight="16" nextobjectid="56">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="25" height="30" tileworld2_battle="16" tileheight="16" nextobjectid="56">
  <properties>
-  <property name="bgm" value="ffl3_ruins"/>
+  <property name="bgm" value="plot_dungeon"/>
   <property name="encounter" value="encounterset_level07_danger01"/>
   <property name="name" value="Ares Castle"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="25" height="30">
+ <layer name="Tile Layer 1" world2_battle="25" height="30">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2TOw7EIAxEs9yAjnThFrn/yUIRSyNr/CEbuiCNkFjbz1l7ti1/OmjFkdrnH5ye0D5U7zsTz2rvhuT3Y6jddyYHGSfUYJJ6Zeh33z2Rg4wKNZikN2TgG5NmNNUnqkBvxXnTOXo20pcVj7LedI6epfT1JgPnoufgfTebedQXY1jz8xiZ3KwYI4rXb5EHGcPLwbhVHqwQt8qDDRifBz8Pvu1BOZ6fvN3NeBAZRyC2u5bQd8iI/ltrryIPaobekSfS82KMTJ/Rd2JtizG7cyyfMXAXWIx3ZvLLZO0n+SsYF9Jn6pq4CwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="25" height="30">
+ <layer name="Tile Layer 2" world2_battle="25" height="30">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -45,7 +45,7 @@
    </properties>
    <polygon points="-16,16 -16,144 112,144 112,208 128,208 128,80 96,80 96,16"/>
   </object>
-  <object id="39" name="guard" type="Character" x="96" y="272" width="16" height="16">
+  <object id="39" name="guard" type="Character" x="96" y="272" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -54,7 +54,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="40" name="guard" type="Character" x="96" y="128" width="16" height="16">
+  <object id="40" name="guard" type="Character" x="96" y="128" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -63,7 +63,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="41" name="guard" type="Character" x="288" y="272" width="16" height="16">
+  <object id="41" name="guard" type="Character" x="288" y="272" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -72,7 +72,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="42" name="guard" type="Character" x="288" y="128" width="16" height="16">
+  <object id="42" name="guard" type="Character" x="288" y="128" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -81,7 +81,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="43" name="guard" type="Character" x="64" y="416" width="16" height="16">
+  <object id="43" name="guard" type="Character" x="64" y="416" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
@@ -89,7 +89,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="44" name="guard" type="Character" x="320" y="416" width="16" height="16">
+  <object id="44" name="guard" type="Character" x="320" y="416" world2_battle="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
@@ -97,13 +97,13 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="45" name="tele" type="Event" x="368" y="368" width="16" height="16">
+  <object id="45" name="tele" type="Event" x="368" y="368" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/castle03.tmx', 'stairs_se')"/>
    </properties>
   </object>
-  <object id="46" name="stairs_se" type="Target" x="368" y="352" width="16" height="16"/>
-  <object id="47" name="tele" type="Event" x="368" y="224" width="16" height="16">
+  <object id="46" name="stairs_se" type="Target" x="368" y="352" world2_battle="16" height="16"/>
+  <object id="47" name="tele" type="Event" x="368" y="224" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/castle03.tmx', 'stairs_ne')"/>
    </properties>
@@ -115,27 +115,27 @@
    </properties>
    <polygon points="-16,16 -16,144 112,144 112,208 128,208 128,80 96,80 96,16"/>
   </object>
-  <object id="49" name="stairs_ne" type="Target" x="368" y="208" width="16" height="16"/>
-  <object id="50" name="tele" type="Event" x="16" y="64" width="16" height="16">
+  <object id="49" name="stairs_ne" type="Target" x="368" y="208" world2_battle="16" height="16"/>
+  <object id="50" name="tele" type="Event" x="16" y="64" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="sceneSwitch('entered_via_throne', false); targetTele('world3.5/castle05.tmx', 'stairs_nw')"/>
    </properties>
   </object>
-  <object id="51" name="stairs_nw" type="Target" x="16" y="80" width="16" height="16"/>
-  <object id="52" name="stairs_sw" type="Target" x="16" y="224" width="16" height="16"/>
-  <object id="53" name="tele" type="Event" x="16" y="208" width="16" height="16">
+  <object id="51" name="stairs_nw" type="Target" x="16" y="80" world2_battle="16" height="16"/>
+  <object id="52" name="stairs_sw" type="Target" x="16" y="224" world2_battle="16" height="16"/>
+  <object id="53" name="tele" type="Event" x="16" y="208" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/castle05.tmx', 'stairs_sw')"/>
    </properties>
   </object>
-  <object id="54" name="stairs_n" type="Target" x="192" y="32" width="16" height="16"/>
-  <object id="55" name="tele" type="Event" x="192" y="16" width="16" height="16">
+  <object id="54" name="stairs_n" type="Target" x="192" y="32" world2_battle="16" height="16"/>
+  <object id="55" name="tele" type="Event" x="192" y="16" world2_battle="16" height="16">
    <properties>
     <property name="onCollide" value="sceneSwitch('entered_via_throne', true); targetTele('world3.5/castle05.tmx', 'stairs_n')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="25" height="30">
+ <layer name="Tile Layer 3" world2_battle="25" height="30">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -143,7 +143,7 @@
    H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBKCAMJKGYlkABikfBwIKBjGtFLO4gBmPTjw6w6VMgAeOzF91fyJgUgE8/AIODFmm4CwAA
   </data>
  </layer>
- <layer name="Tile Layer 4" width="25" height="30">
+ <layer name="Tile Layer 4" world2_battle="25" height="30">
   <properties>
    <property name="z" value="2.5"/>
   </properties>
