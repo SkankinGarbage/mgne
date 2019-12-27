@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="28" height="45" tileworld2_battle="16" tileheight="16" nextobjectid="75">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="28" height="45" tilewidth="16" tileheight="16" nextobjectid="75">
  <properties>
   <property name="bgm" value="plot_dungeon"/>
   <property name="encounter" value="encounterset_level03_danger01"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="28" height="45">
+ <layer name="Tile Layer 1" width="28" height="45">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC9WYSw7DIAxEOUA3UTcou94iF+D+V6oixZLj+jMmhKiRZlHAfqGYAaWUuc/nAb1A0dh2CI3j8bveoGgs8dA4Hv9h8ZEyY634Gbw9bpnMqyVXUy05HqlNr68pbVEdanm0+tnKb902pc2rw43l4338oXdZynmfZddvPXKsR4z10LvUct5nkoesM68Pj4fUp7WOWvwonrVud/HQ/fmvPMsHsrzIU/Y26QPy9xWerMG9TfqA/J3lkTfIXFo+xKs9nucvPEckfv54PM9fOC/y6xH+wnnIvQHhofLeR84V5fE7WeSTXHKuEY+ff9p/x3nRfLP1aXnGKJ6sT5TX62eoBz/N6/XPXl6vf2Z51rzu4kU+PoLnzSfL085bmSM6l3r90+Ihc7J4mhdvRru2z6x+L4f040Vp0+4VzenXcsi9Q6pKm3WvsPq1HMhZNlLEWyZxiVcn82Yq+83mqrLfbK7qC4dXnMiwEwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="28" height="45">
+ <layer name="Tile Layer 2" width="28" height="45">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,52 +24,52 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="60" name="tele" type="Event" x="16" y="656" world2_battle="16" height="16">
+  <object id="60" name="tele" type="Event" x="16" y="656" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_leftstair.tmx', 8, 11)"/>
    </properties>
   </object>
-  <object id="61" name="tele" type="Event" x="352" y="336" world2_battle="16" height="16">
+  <object id="61" name="tele" type="Event" x="352" y="336" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_f1.tmx', 22, 23)"/>
    </properties>
   </object>
-  <object id="62" name="tele" type="Event" x="416" y="96" world2_battle="16" height="16">
+  <object id="62" name="tele" type="Event" x="416" y="96" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_f1.tmx', 25, 2)"/>
    </properties>
   </object>
-  <object id="64" name="tele" type="Event" x="80" y="144" world2_battle="16" height="16">
+  <object id="64" name="tele" type="Event" x="80" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_f3.tmx', 5, 7)"/>
    </properties>
   </object>
-  <object id="66" name="tele" type="Event" x="208" y="48" world2_battle="32" height="16">
+  <object id="66" name="tele" type="Event" x="208" y="48" width="32" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_throne.tmx', 7, 25)"/>
    </properties>
   </object>
-  <object id="67" name="tele" type="Event" x="352" y="144" world2_battle="16" height="16">
+  <object id="67" name="tele" type="Event" x="352" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_f3.tmx', 22, 7)"/>
    </properties>
   </object>
-  <object id="68" name="tele" type="Event" x="80" y="304" world2_battle="16" height="16">
+  <object id="68" name="tele" type="Event" x="80" y="304" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_f3.tmx', 5, 18)"/>
    </properties>
   </object>
-  <object id="69" name="tele" type="Event" x="80" y="400" world2_battle="16" height="16">
+  <object id="69" name="tele" type="Event" x="80" y="400" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_f3.tmx', 5, 24)"/>
    </properties>
   </object>
-  <object id="70" name="tele" type="Event" x="80" y="576" world2_battle="16" height="16">
+  <object id="70" name="tele" type="Event" x="80" y="576" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_f3.tmx', 5, 34)"/>
    </properties>
   </object>
-  <object id="71" name="tele" type="Event" x="352" y="576" world2_battle="16" height="16">
+  <object id="71" name="tele" type="Event" x="352" y="576" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_f3.tmx', 22, 34)"/>
    </properties>
@@ -81,18 +81,18 @@
    </properties>
    <polygon points="0,0 80,0 80,80 0,80"/>
   </object>
-  <object id="73" name="hp200" type="Chest" x="256" y="224" world2_battle="16" height="16">
+  <object id="73" name="hp200" type="Chest" x="256" y="224" width="16" height="16">
    <properties>
     <property name="item" value="body_silver"/>
    </properties>
   </object>
-  <object id="74" name="hp200" type="Chest" x="96" y="512" world2_battle="16" height="16">
+  <object id="74" name="hp200" type="Chest" x="96" y="512" width="16" height="16">
    <properties>
     <property name="item" value="pot_eyedrop"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="28" height="45">
+ <layer name="Tile Layer 3" width="28" height="45">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -100,7 +100,7 @@
    H4sIAAAAAAAAC+3DoQ0AAAgAIA+w+f+vVqvF4GAjAvgsxws1AgAAAHsNb92LorATAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="28" height="45">
+ <layer name="Tile Layer 4" width="28" height="45">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

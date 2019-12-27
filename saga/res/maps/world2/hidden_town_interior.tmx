@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="43" height="31" tileworld2_battle="16" tileheight="16" backgroundcolor="#676767" nextobjectid="63">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="43" height="31" tilewidth="16" tileheight="16" backgroundcolor="#676767" nextobjectid="63">
  <properties>
   <property name="bgm" value="world1_town"/>
   <property name="name" value="Wolf's Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="43" height="31">
+ <layer name="Tile Layer 1" width="43" height="31">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+1XQQqEMBCbY0+CN5+y39r1suvrl0EWxqCdtLqlwgQC2jJJTpoZRGRw6MGbv0pD+cqQ9WmhofxkyPq00FCmDFmfFhqRNbLeLavl3jnj00LjKdvvWIL3mfBppfGW7XcswftC+PSiEQgEAj2B7eNnOv8Vfr9Z7N5eRy/t/JiV1UYP28dt1lxHL+38mJXVRg/bb/T5AWcea7Ky2uhhZ7U/jLL2hN6zan+YZO0J/8w6Fmbey1rDmqzTjbIy+0hkrc9a8y/w9pyzu5QF7ioM54PZ5MzhPbNLWeCuwnA5mE3OHN633IO+B9zbeNQUAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="43" height="31">
+ <layer name="Tile Layer 2" width="43" height="31">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,83 +23,83 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="45" name="tele" type="Event" x="64" y="464" world2_battle="16" height="16">
+  <object id="45" name="tele" type="Event" x="64" y="464" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/hidden_town.tmx', 21, 19)"/>
    </properties>
   </object>
-  <object id="46" name="tele" type="Event" x="192" y="464" world2_battle="16" height="16">
+  <object id="46" name="tele" type="Event" x="192" y="464" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/hidden_town.tmx', 29, 19)"/>
    </properties>
   </object>
-  <object id="47" name="tele" type="Event" x="64" y="144" world2_battle="16" height="16">
+  <object id="47" name="tele" type="Event" x="64" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/hidden_town.tmx', 40, 17)"/>
    </properties>
   </object>
-  <object id="48" name="tele" type="Event" x="336" y="144" world2_battle="16" height="16">
+  <object id="48" name="tele" type="Event" x="336" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/hidden_town.tmx', 41, 22)"/>
    </properties>
   </object>
-  <object id="49" name="tele" type="Event" x="608" y="144" world2_battle="16" height="16">
+  <object id="49" name="tele" type="Event" x="608" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/hidden_town.tmx', 40, 27)"/>
    </properties>
   </object>
-  <object id="50" name="tele" type="Event" x="64" y="336" world2_battle="16" height="16">
+  <object id="50" name="tele" type="Event" x="64" y="336" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/hidden_town_interior.tmx', 29, 23)"/>
    </properties>
   </object>
-  <object id="51" name="tele" type="Event" x="464" y="384" world2_battle="16" height="16">
+  <object id="51" name="tele" type="Event" x="464" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/hidden_town_interior.tmx', 4, 22)"/>
    </properties>
   </object>
-  <object id="52" name="inn" type="Character" x="192" y="384" world2_battle="16" height="16">
+  <object id="52" name="inn" type="Character" x="192" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="53" name="shop" type="Character" x="64" y="64" world2_battle="16" height="16">
+  <object id="53" name="shop" type="Character" x="64" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_world2_potions')"/>
    </properties>
   </object>
-  <object id="54" name="shop" type="Character" x="336" y="64" world2_battle="16" height="16">
+  <object id="54" name="shop" type="Character" x="336" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_hidden_weapons')"/>
    </properties>
   </object>
-  <object id="55" name="shop" type="Character" x="608" y="64" world2_battle="16" height="16">
+  <object id="55" name="shop" type="Character" x="608" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_hidden_magic')"/>
    </properties>
   </object>
-  <object id="57" name="npc" type="Character" x="96" y="400" world2_battle="16" height="16">
+  <object id="57" name="npc" type="Character" x="96" y="400" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('Please enjoy the bar upstairs.')"/>
    </properties>
   </object>
-  <object id="58" name="npc" type="Character" x="560" y="416" world2_battle="16" height="16">
+  <object id="58" name="npc" type="Character" x="560" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="speak('Warrior exiles from all around gather here. I grew up in the domain of the world worm.')"/>
    </properties>
   </object>
-  <object id="59" name="npc" type="Character" x="544" y="336" world2_battle="16" height="16">
+  <object id="59" name="npc" type="Character" x="544" y="336" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
@@ -107,7 +107,7 @@
     <property name="onInteract" value="speak('Learn enemy weaknesses and target them with elemental magic or specialty weapons.')"/>
    </properties>
   </object>
-  <object id="60" name="npc" type="Character" x="608" y="352" world2_battle="16" height="16">
+  <object id="60" name="npc" type="Character" x="608" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
@@ -115,7 +115,7 @@
     <property name="onInteract" value="speak('Most humans specialize in either strength or agility.')"/>
    </properties>
   </object>
-  <object id="61" name="npc" type="Character" x="576" y="384" world2_battle="16" height="16">
+  <object id="61" name="npc" type="Character" x="576" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ghost"/>
     <property name="face" value="SOUTH"/>
@@ -123,7 +123,7 @@
     <property name="onInteract" value="speak('All monsters in a given family tend to be good at the same thing.')"/>
    </properties>
   </object>
-  <object id="62" name="npc" type="Character" x="512" y="368" world2_battle="16" height="16">
+  <object id="62" name="npc" type="Character" x="512" y="368" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_bird"/>
     <property name="face" value="EAST"/>
@@ -132,7 +132,7 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="43" height="31">
+ <layer name="Tile Layer 3" width="43" height="31">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -140,7 +140,7 @@
    H4sIAAAAAAAAC+3XywkAIBBDQSuwWG92bwkLEvzATAHJ+bUGwAn9o40R+Dm1MQM/r2wAAAB7qs5JtFRK1TmJlkqpOudmBy1EvI5d1BQAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="43" height="31">
+ <layer name="Tile Layer 4" width="43" height="31">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

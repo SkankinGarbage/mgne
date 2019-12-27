@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="57" height="36" tileworld2_battle="16" tileheight="16" nextobjectid="9">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="36" tilewidth="16" tileheight="16" nextobjectid="9">
  <properties>
   <property name="bgm" value="optional_dungeon"/>
   <property name="encounter" value="encounterset_level03_danger00"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="57" height="36">
+ <layer name="Tile Layer 1" width="57" height="36">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2WQQ6CMBBFMbKhK3eGnR6BW3j/EykJk/z8zEwLaFuTWbwFdGrn8aF2GoZhCoIgCILg6zwVrPtcMxXMae23MitY97kmZeb04vhQsO4jaQOvuaYXR4tkMDpjzHxi/dpeyPLhZXABJNe0XffgJr2NCtJzUrzW8RvUefzaQ1tD+sY+FgJ7txzvBY4yvrfv6w6wT81NYIfFGdfy9mqP5HnEMUfuO2N/pEdHzEBcSvIpRX4X34dU2REzQMdcPqXwHrzX78zeY72XpdnkMtbWquXHa5c68hlAy9/71mr74X5a4pg7A3CWNV08R/HEPQEdOTc8v3n/La3dNEfORGrYwXPEZ9PajR35DIA1WlYyl7Pv0ZE9tf1Ay0rGtDN5ax/P0Rr3HL1n8094jkEQBEEQtOcNiXUPVhAgAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="57" height="36">
+ <layer name="Tile Layer 2" width="57" height="36">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,17 +24,17 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="6" name="tele" type="Event" x="160" y="240" world2_battle="16" height="64">
+  <object id="6" name="tele" type="Event" x="160" y="240" width="16" height="64">
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 62, 19)"/>
    </properties>
   </object>
-  <object id="7" name="chest" type="Chest" x="480" y="336" world2_battle="16" height="16">
+  <object id="7" name="chest" type="Chest" x="480" y="336" width="16" height="16">
    <properties>
     <property name="item" value="item_hp400"/>
    </properties>
   </object>
-  <object id="8" name="tele" type="Event" x="544" y="224" world2_battle="16" height="16">
+  <object id="8" name="tele" type="Event" x="544" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/east_ruins_interior.tmx', 13, 9)"/>
    </properties>

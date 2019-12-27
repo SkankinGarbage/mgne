@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="135" height="71" tileworld2_battle="16" tileheight="16" nextobjectid="58">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="135" height="71" tilewidth="16" tileheight="16" nextobjectid="58">
  <properties>
   <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level03_danger00_lowrate"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="135" height="71">
+ <layer name="Tile Layer 1" width="135" height="71">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2bPW4cMQyFVfoO68q+RJATTOdu7u7WJwkWsRCaJkVKI0p09hUPGGTH+qG+ISlKeS6lPEMQBEEQBEEQBEFTdUswBiinXgr4gGQd5S8fu8cB5dPxqZlt3gTtnic0ptlsvAgaaedXAts8uq6wIfmIJ0Ejbb8lsM2j6wobko+4ykZlDGzs11H6cgLLR1xlozJ2lD05C/Kjr2z05ATcR/Dfr7JxEF3NWUaEfdv3tfC+b637CBvUP9xjyWv5ysjsfLmlkzzTfPhR/UkvG1fek/JX6h/ePv/tlfzNytzjVPrd6U+sukBk3aAn5+hhw+JAy19fytc5ZmDjXNS/JKsuMKtuoLHhba+HDe8+RlJ9/9bR51Xd+zrJcxY2eHzlft76fUbfs9iw9jC/DXFGqg+KZKL6tJM8r2DDU+Pbycazoz26b9ViGrVxa+1PQxojUXva6qNq/9S/RbPhiZer2JBygFux6wk0JvCYxnMJab294+OMSHGG5yOj4nWad9bfK3nvf2TDkwvWWpNke6sWPosJjRHOh5SPjDJBea/+THvvp7Ph2RdI7Ujy1sJnM6Hx0WJE84WabaQ5SVxw5qPY8PJt+YMWE5o/8Pibgz1XtXLK6mtnMyHx0WJE84XaNyLlxqfwfuS8qK1bfLfivud3yyfMYFL7ZlfYz5OrtuKO5vd4bkzfj54T/w41vltx3/P71fx0lI0VXHgY8bLSu19aMSfKR5RmjK8nr9tlR6lvjZW7PoqfhR1z6V2jXf16aqM1ju22pXedPxzv8Hajziau6mlTv5b/0WoYu+0l2U/bU3mZizqbGJWn7riCD63eqdUwdtstgo1sc2zVHVeyIfUbWcPIxkZGZZiPFFekGkYmLjz12yfhvUx5xE9go/JB7b6qhjHKhfcOQKs2tnsemdnQamucC/797eKBjq/6Oqu2UUX3/drZUTZedrEh1ZOlvFP6/qy2Z/7/I6n2faW2IzGSaW+ymw3+7fHv7718P7em357V/oy7fNa5wNX2o2qJUYys6IdzwcdA64jSuKLZaDERYY9Dec6kVWxoXNzXg3NRx8XzktlsWOeHkfbIysMqNmj81+yt1Tx5rkFzVi2Ps9ho3TVZ7d8fnQ26VpItWuckUky27k1Y9rbumqy0u8T6bhakMe5io+ecRMvhKDPWXDLlgBLr2RjZycaMGlfPWmfy4y3Go/rs9VHRbGj+nsaTmfa27rDtZsLDSlQf2v3F1faqbWv+PuLcvZWTeGJOBkWO0ZO7RdtLqnHxfiLOTFo5ye78IpM8dpptL+ncQXsv41ka9J2hWVx4zx0y3+OC/q0nzd9G25BiSOtvwEVu0fXUcldvGz1nlIgnuaXlilItpqcNT9+IJ3ml5YpaLUbb+47eZ8h6p+vR1bOm1j54dI8DNnKqd00j9r7gIqd213+Qh+YRvz+5uy6IPDSP6jlolrMm5Bp5VNnIcNaEeJJL9Yw8w1kT4kkuvZX9/qIK8SSXMviLKrABaQIXkCawAUnCHgXShD0KpAl5KKQJbECawAakCWxAmsAGpAlsxOoPpaIbysSVAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="135" height="71">
+ <layer name="Tile Layer 2" width="135" height="71">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -59,32 +59,32 @@
    </properties>
    <polygon points="0,48 80,48 80,176 0,176"/>
   </object>
-  <object id="52" name="tele" type="Event" x="208" y="880" world2_battle="16" height="16">
+  <object id="52" name="tele" type="Event" x="208" y="880" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 23, 20, 'EAST')"/>
    </properties>
   </object>
-  <object id="53" name="tele" type="Event" x="720" y="624" world2_battle="16" height="16">
+  <object id="53" name="tele" type="Event" x="720" y="624" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 28, 17, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="54" name="tele" type="Event" x="176" y="320" world2_battle="16" height="16">
+  <object id="54" name="tele" type="Event" x="176" y="320" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 27, 14, 'NORTH')"/>
    </properties>
   </object>
-  <object id="55" name="tele" type="Event" x="1168" y="560" world2_battle="16" height="16">
+  <object id="55" name="tele" type="Event" x="1168" y="560" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 34, 14, 'NORTH')"/>
    </properties>
   </object>
-  <object id="56" name="tele" type="Event" x="1408" y="160" world2_battle="16" height="16">
+  <object id="56" name="tele" type="Event" x="1408" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 37, 12, 'NORTH')"/>
    </properties>
   </object>
-  <object id="57" name="tele" type="Event" x="1936" y="240" world2_battle="16" height="16">
+  <object id="57" name="tele" type="Event" x="1936" y="240" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 49, 13, 'SOUTH')"/>
    </properties>

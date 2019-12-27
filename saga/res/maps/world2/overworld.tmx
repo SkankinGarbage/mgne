@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="83" height="47" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="52">
+<map version="2017.05.26" orientation="orthogonal" renderorder="right-down" width="83" height="47" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="52">
  <properties>
-  <property name="battle_bgm" value="ffl2_battle"/>
+  <property name="battle_bgm" value="world2_battle"/>
   <property name="bgm" value="world_2"/>
   <property name="name" value="Wartorn World"/>
   <property name="terrainEncounter" value="terrain_world2"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="83" height="47">
+ <layer name="Tile Layer 1" width="83" height="47">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -16,7 +16,7 @@
    H4sIAAAAAAAAC+3YS27DMAwEUAe9lXdeJgfw/Y/STQQQ7FAcyvrYBReDpK6tWE+U/Dm3bTszmUwmk8lkMkvyEVl9Lk/OB2Tl+bxEVtvovL9hHVs9X0autrHaTzvKMI4lVr8sN+t46zhmLFZ4aq/yvfTrDba1eDKG0eNr7c70fCkjzyz6f92nyDggy9p2a3xmWBbHaP+uWDN2zDbv/GZatjoy/Yv2Xc4N5py8/ZDlKM+o49Vau2oT2V+vWaM9W+bMSMtZY3MHSyulnZPYLzoeZd9e53pnS+niWXr1wu7b47o2wvKqp7ZkPXvMA/38wPZlhOXe4Gmt6SU9147WMV1h2erJWOr2et3n9PAdeZ/JPscxsdaPqCWasz3umUY/S0aei1EO4Fnaqt3/9aozJrJ/+0DLfWv3PESQpdVez3vUyHuRkY5WbbKex/bXU7aJzHre89fWRG04w9GqTcYTWaJ5rt/bRZ9f0W9YlshxhiHjaZlqx9o8t96DenO1HHt8v2tLrx5HvxuKznUdZIgsPU9m3hdfqy5rhqtq0qvNA3xGPWvrpGeJ6tYb85WOVm0ext+sJ6pN/b5duyK/H9Jx5nWmpTZRXdY89Vpleeqguau/W3Z3MuzlKY+p1Tt6N4HqtFaLd7Rj5nrNE60FxfJDtKvDWD7FsdSmrE9k5aXY1a7vjOWTHbVp1FBa6uPZGkWOd10Te3iiuW7VpjaStS9jtfN0Q+1ZuyZ5tanflXq/c/fr80hTry5lff5Xm6umXk71mY6ZTCaTyWQyz8ovVJOg5PQ8AAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="83" height="47">
+ <layer name="Tile Layer 2" width="83" height="47">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -25,158 +25,158 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="7" name="Babel" type="Event" x="1024" y="416" world2_battle="16" height="16">
+  <object id="7" name="Babel" type="Event" x="1024" y="416" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('tower/f05.tmx', 13, 20, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="19" name="tele" type="Event" x="688" y="480" world2_battle="16" height="16">
+  <object id="19" name="tele" type="Event" x="688" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_c.tmx', 12, 53, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="20" name="tele" type="Event" x="736" y="432" world2_battle="16" height="16">
+  <object id="20" name="tele" type="Event" x="736" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_c.tmx', 17, 25, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="21" name="tele" type="Event" x="800" y="352" world2_battle="16" height="16">
+  <object id="21" name="tele" type="Event" x="800" y="352" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_c.tmx', 51, 13, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="22" name="tele" type="Event" x="816" y="496" world2_battle="16" height="16">
+  <object id="22" name="tele" type="Event" x="816" y="496" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_c.tmx', 57, 75, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="23" name="tele" type="Event" x="848" y="272" world2_battle="16" height="16">
+  <object id="23" name="tele" type="Event" x="848" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_c.tmx', 68, 25, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="24" name="tele" type="Event" x="896" y="304" world2_battle="16" height="16">
+  <object id="24" name="tele" type="Event" x="896" y="304" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_c.tmx', 82, 27, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="25" name="tele" type="Event" x="960" y="384" world2_battle="16" height="16">
+  <object id="25" name="tele" type="Event" x="960" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_c.tmx', 78, 49, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="26" name="tele" type="Event" x="1040" y="240" world2_battle="16" height="16">
+  <object id="26" name="tele" type="Event" x="1040" y="240" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_c.tmx', 107, 19, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="27" name="tele" type="Event" x="784" y="208" world2_battle="16" height="16">
+  <object id="27" name="tele" type="Event" x="784" y="208" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_a.tmx', 121, 16, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="28" name="tele" type="Event" x="544" y="224" world2_battle="16" height="16">
+  <object id="28" name="tele" type="Event" x="544" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_a.tmx', 73, 36, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="29" name="tele" type="Event" x="592" y="192" world2_battle="16" height="16">
+  <object id="29" name="tele" type="Event" x="592" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_a.tmx', 88, 11, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="30" name="tele" type="Event" x="448" y="272" world2_battle="16" height="16">
+  <object id="30" name="tele" type="Event" x="448" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_a.tmx', 45, 40, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="31" name="tele" type="Event" x="368" y="320" world2_battle="16" height="16">
+  <object id="31" name="tele" type="Event" x="368" y="320" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_a.tmx', 13, 56, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="32" name="tele" type="Event" x="432" y="224" world2_battle="16" height="16">
+  <object id="32" name="tele" type="Event" x="432" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_a.tmx', 11, 21, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="33" name="tele" type="Event" x="576" y="384" world2_battle="16" height="16">
+  <object id="33" name="tele" type="Event" x="576" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_b.tmx', 11, 57, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="34" name="tele" type="Event" x="656" y="368" world2_battle="16" height="16">
+  <object id="34" name="tele" type="Event" x="656" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_b.tmx', 71, 42, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="35" name="tele" type="Event" x="608" y="272" world2_battle="16" height="16">
+  <object id="35" name="tele" type="Event" x="608" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/caves_b.tmx', 64, 17, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="36" name="Coast Town" type="Event" x="944" y="496" world2_battle="16" height="16">
+  <object id="36" name="Coast Town" type="Event" x="944" y="496" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/coast_town.tmx', 16, 9, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="37" name="Hidden Town" type="Event" x="656" y="416" world2_battle="16" height="16">
+  <object id="37" name="Hidden Town" type="Event" x="656" y="416" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/hidden_town.tmx', 34, 11, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="38" name="Ruined Town" type="Event" x="992" y="304" world2_battle="16" height="16">
+  <object id="38" name="Ruined Town" type="Event" x="992" y="304" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/east_ruins.tmx', 11, 17, 'EAST')"/>
    </properties>
   </object>
-  <object id="39" name="Coast Town" type="Event" x="736" y="224" world2_battle="16" height="16">
+  <object id="39" name="Coast Town" type="Event" x="736" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/east_ruins.tmx', 11, 17, 'EAST')"/>
    </properties>
   </object>
-  <object id="40" name="Lost Temple" type="Event" x="736" y="224" world2_battle="16" height="16">
+  <object id="40" name="Lost Temple" type="Event" x="736" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/west_ruins.tmx', 46, 30, 'WEST')"/>
    </properties>
   </object>
-  <object id="41" name="Pass" type="Event" x="864" y="496" world2_battle="16" height="16">
+  <object id="41" name="Pass" type="Event" x="864" y="496" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/pass.tmx', 24, 34, 'NORTH')"/>
    </properties>
   </object>
-  <object id="42" name="Pass" type="Event" x="864" y="480" world2_battle="16" height="16">
+  <object id="42" name="Pass" type="Event" x="864" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/pass.tmx', 24, 11, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="43" name="tele" type="Event" x="864" y="432" world2_battle="16" height="16">
+  <object id="43" name="tele" type="Event" x="864" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/wolf01.tmx', 54, 36, 'NORTH')"/>
    </properties>
   </object>
-  <object id="44" name="Worm's Town" type="Event" x="608" y="576" world2_battle="16" height="16">
+  <object id="44" name="Worm's Town" type="Event" x="608" y="576" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_town.tmx', 12, 18, 'EAST')"/>
    </properties>
   </object>
-  <object id="46" name="Worm's Castle" type="Event" x="496" y="528" world2_battle="48" height="16">
+  <object id="46" name="Worm's Castle" type="Event" x="496" y="528" width="48" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_foyer.tmx', 10, 21, 'NORTH')"/>
    </properties>
   </object>
-  <object id="47" name="trigger" type="Event" x="256" y="448" world2_battle="80" height="16">
+  <object id="47" name="trigger" type="Event" x="256" y="448" width="80" height="16">
    <properties>
     <property name="hide" value="return getSwitch('lara02') or not getSwitch('lara_joins')"/>
     <property name="onCollide" value="play('world2/lara02.lua')"/>
    </properties>
   </object>
-  <object id="50" name="Worm's Castle" type="Event" x="512" y="512" world2_battle="16" height="16">
+  <object id="50" name="Worm's Castle" type="Event" x="512" y="512" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_foyer.tmx', 10, 21, 'NORTH')"/>
    </properties>
   </object>
-  <object id="51" name="Worm's Castle" type="Event" x="512" y="544" world2_battle="16" height="16">
+  <object id="51" name="Worm's Castle" type="Event" x="512" y="544" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world2/worm_foyer.tmx', 10, 21, 'NORTH')"/>
    </properties>
