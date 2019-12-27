@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="78" height="54" tileworld2_battle="16" tileheight="16" nextobjectid="62">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="78" height="54" tilewidth="16" tileheight="16" nextobjectid="62">
  <properties>
   <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level04_danger00"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="78" height="54">
+ <layer name="Tile Layer 1" width="78" height="54">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2WwQ6DIBBE7V/1JwwXL8ZzT/3/e2tSE9KIICzMoHN42YRqszxHl3kYhlkIIYQQQogKTAQ99MhC0EOPOIIeekTe5E3e+LmCtxGA21lDezjLBMDtrPXkcO1xAeB21kIO2VyOvx5fX54ENeTQd8nibAnsIYbV9SkOfZdod0fOWCuDu5izszmxWk91h/LGkJ+S3KFmRaw31rxtdZsVLZ2Nxs8fUbdZ0fKsknL2YM/bf+5anJ1TZ4LV3lrkbu/ch5gJsZyEKL3eYmZsoGZCD3k7qoi8XaG2zttVKlPerFHecDX0DBjzVmuvpfl/e78rb2nuV2cPzx1T3mq/W6VVeSt3r7zl3X/3vIWI3ceUN6vvUur/5Dqrkbdcdzm9W/xP6vU1PFm9q+i8tcqVpTtU3pD5usKMQHqy/N7dzVGu1xbO0PsUQgghhBD8fAD6kWu30EEAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="78" height="54">
+ <layer name="Tile Layer 2" width="78" height="54">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,38 +24,38 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="50" name="spikes" type="Event" x="672" y="272" world2_battle="16" height="16">
+  <object id="50" name="spikes" type="Event" x="672" y="272" width="16" height="16">
    <properties>
     <property name="onTurn" value="if (getAvatar().terrainType() == 101) then play('tower/spike.lua'); playScene(); end"/>
    </properties>
   </object>
-  <object id="55" name="tele" type="Event" x="688" y="144" world2_battle="16" height="16">
+  <object id="55" name="tele" type="Event" x="688" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('tower/f07.tmx', 2, 32)"/>
    </properties>
   </object>
-  <object id="56" name="crystal" type="Event" x="1040" y="544" world2_battle="16" height="16">
+  <object id="56" name="crystal" type="Event" x="1040" y="544" width="16" height="16">
    <properties>
     <property name="onInteract" value="play('tower/crystal.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="58" name="chest" type="Chest" x="304" y="432" world2_battle="16" height="16">
+  <object id="58" name="chest" type="Chest" x="304" y="432" width="16" height="16">
    <properties>
     <property name="item" value="shield_samurai"/>
    </properties>
   </object>
-  <object id="59" name="chest" type="Chest" x="688" y="656" world2_battle="16" height="16">
+  <object id="59" name="chest" type="Chest" x="688" y="656" width="16" height="16">
    <properties>
     <property name="item" value="hand_giant"/>
    </properties>
   </object>
-  <object id="60" name="chest" type="Chest" x="400" y="656" world2_battle="16" height="16">
+  <object id="60" name="chest" type="Chest" x="400" y="656" width="16" height="16">
    <properties>
     <property name="item" value="pot_elixir"/>
    </properties>
   </object>
-  <object id="61" name="chest" type="Chest" x="256" y="656" world2_battle="16" height="16">
+  <object id="61" name="chest" type="Chest" x="256" y="656" width="16" height="16">
    <properties>
     <property name="item" value="item_hp400"/>
    </properties>

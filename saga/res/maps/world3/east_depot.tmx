@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="62" height="51" tileworld2_battle="16" tileheight="16" nextobjectid="28">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="62" height="51" tilewidth="16" tileheight="16" nextobjectid="28">
  <properties>
   <property name="bgm" value="world3"/>
   <property name="name" value="East Depot"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="62" height="51">
+ <layer name="Tile Layer 1" width="62" height="51">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2YO27DMAxALWSq904FOvUWPkO3br1LpmQp0PYAzWEbDwIYmr/YjkkZHB4SOYjCJ1GUlEPXdYckSZIkSZKdUQwcV8LbdY7350Ja9B7jfkL0COn7PTP/njkCY+M8KF/LeGHvSDlCxYjdjsQcW+cT5gweWwzOqS29hzu9a5vz5nLD4r+lN4xJ84ZtybtH77Ux8PKusUBvbv3P8ba6e3nX+CRvbX1/EUj94ByK7D3yzqB5S+4e67vWN0uej68fDNr+zK0bL298XuPOK5W1vHHN2DrPOW/O3+rZqje1XiF785bq81694Zn50d5L6tr5gWje3H7GEameS2jeGFzfX8ptG++NUb2/r/wgnsv02chvN71bvpXbdtT5xnH9XbkgXsv02aWz3WeieUtnSSvcOU/quz7zvpdQ93HM6U5vKo+ieWvzfgJQ+5+lD/x7nvdvyd/qbYHqP4I3jA/e0dbw5nIqkje3JiVvan1LeP6vaJ0fq/dSInhTaHVtKS15z93vKVrzXsu9JW9cC+oYDMRne/OWxgAyKP237B0xz5MkSZIkSTz5B4ailupoMQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="62" height="51">
+ <layer name="Tile Layer 2" width="62" height="51">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,41 +23,41 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="10" name="tele" type="Event" x="160" y="128" world2_battle="16" height="560">
+  <object id="10" name="tele" type="Event" x="160" y="128" width="16" height="560">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 74, 25)"/>
    </properties>
   </object>
-  <object id="11" name="tele" type="Event" x="176" y="128" world2_battle="160" height="16">
+  <object id="11" name="tele" type="Event" x="176" y="128" width="160" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 74, 25)"/>
    </properties>
   </object>
-  <object id="12" name="tele" type="Event" x="176" y="672" world2_battle="640" height="16">
+  <object id="12" name="tele" type="Event" x="176" y="672" width="640" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 74, 25)"/>
    </properties>
   </object>
-  <object id="13" name="tele" type="Event" x="816" y="576" world2_battle="16" height="112">
+  <object id="13" name="tele" type="Event" x="816" y="576" width="16" height="112">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 74, 25)"/>
    </properties>
   </object>
-  <object id="14" name="npc" type="Character" x="528" y="512" world2_battle="16" height="16">
+  <object id="14" name="npc" type="Character" x="528" y="512" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('Guard', 'This is the Ermengarde prison. Don\'t end up in here!')"/>
    </properties>
   </object>
-  <object id="16" name="npc" type="Character" x="528" y="528" world2_battle="16" height="16">
+  <object id="16" name="npc" type="Character" x="528" y="528" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('Guard', 'This is the Ermengarde prison. Don\'t end up in here!')"/>
    </properties>
   </object>
-  <object id="17" name="guard" type="Character" x="560" y="512" world2_battle="16" height="16">
+  <object id="17" name="guard" type="Character" x="560" y="512" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="EAST"/>
@@ -65,7 +65,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="18" name="guard" type="Character" x="560" y="528" world2_battle="16" height="16">
+  <object id="18" name="guard" type="Character" x="560" y="528" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="EAST"/>
@@ -73,7 +73,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="19" name="npc" type="Character" x="304" y="192" world2_battle="16" height="16">
+  <object id="19" name="npc" type="Character" x="304" y="192" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
@@ -81,7 +81,7 @@
     <property name="onInteract" value="speak('Guard', 'This is the Ermengarde prison. Don\'t end up in here!')"/>
    </properties>
   </object>
-  <object id="20" name="guard" type="Character" x="720" y="512" world2_battle="16" height="16">
+  <object id="20" name="guard" type="Character" x="720" y="512" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="NORTH"/>
@@ -90,7 +90,7 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="21" name="guard" type="Character" x="736" y="288" world2_battle="16" height="16">
+  <object id="21" name="guard" type="Character" x="736" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
@@ -99,18 +99,18 @@
     <property name="onInteract" value="play('world3/guard.lua')"/>
    </properties>
   </object>
-  <object id="22" name="prison_door" type="Target" x="624" y="448" world2_battle="16" height="16"/>
-  <object id="23" name="tele" type="Event" x="624" y="432" world2_battle="16" height="16">
+  <object id="22" name="prison_door" type="Target" x="624" y="448" width="16" height="16"/>
+  <object id="23" name="tele" type="Event" x="624" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/prison02.tmx', 'door')"/>
    </properties>
   </object>
-  <object id="24" name="tele" type="Event" x="448" y="448" world2_battle="16" height="16">
+  <object id="24" name="tele" type="Event" x="448" y="448" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/east_depot_interior.tmx', 'door')"/>
    </properties>
   </object>
-  <object id="25" name="depot_door" type="Target" x="448" y="464" world2_battle="16" height="16"/>
+  <object id="25" name="depot_door" type="Target" x="448" y="464" width="16" height="16"/>
   <object id="26" name="encounter" type="Encounter" x="352" y="144">
    <properties>
     <property name="mdo" value="encounterset_level05_danger01"/>

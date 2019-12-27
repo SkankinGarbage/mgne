@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="48" height="33" tileworld2_battle="16" tileheight="16" nextobjectid="120">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="33" tilewidth="16" tileheight="16" nextobjectid="120">
  <properties>
   <property name="bgm" value="tower"/>
   <property name="encounter" value="encounterset_level11_danger00"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="48" height="33">
+ <layer name="Tile Layer 1" width="48" height="33">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2XSw6DMAxEs8ll2HEVDtNNL19VAmFZdjKOExO1GWk21XTysPuBlHzaTnszTyinmy07Mk8pml/aoafz+979dIm/lkHPGsFP3ZpBz+rNvzG3ZhBde5Reb1U0v8SKdvLPQU8j0q7fwv8aYC8/OpNIfsuuLJ2R/Fq+F782n5ZMBP/BMofiN7GW4T0efnQm/Fo1UX5NtZ7SHrnQmUTyl3bd2olmevCjGTSflYy0zxK/pac3P/o9r/GjPSg/MhPk3Mgezo90zpT5R376PyH9Hkf2/Bo/0lm7H4zssfLzZyjpeSqyR+PXZmI9d3QPFdI5W2bxL/7FPyeblX8v2NIZ2UP1AYndyfnAGAAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="48" height="33">
+ <layer name="Tile Layer 2" width="48" height="33">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,25 +23,25 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="115" name="target_a" type="Target" x="336" y="368" world2_battle="16" height="16"/>
-  <object id="116" name="target_b" type="Target" x="192" y="336" world2_battle="16" height="16"/>
-  <object id="117" name="door_a" type="Event" x="192" y="352" world2_battle="16" height="16">
+  <object id="115" name="target_a" type="Target" x="336" y="368" width="16" height="16"/>
+  <object id="116" name="target_b" type="Target" x="192" y="336" width="16" height="16"/>
+  <object id="117" name="door_a" type="Event" x="192" y="352" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('', '', 'EXIT', 'B')"/>
    </properties>
   </object>
-  <object id="118" name="door_a" type="Event" x="336" y="384" world2_battle="16" height="16">
+  <object id="118" name="door_a" type="Event" x="336" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('', '', 'EXIT', 'A')"/>
    </properties>
   </object>
-  <object id="119" name="door_a" type="Event" x="480" y="352" world2_battle="16" height="16">
+  <object id="119" name="door_a" type="Event" x="480" y="352" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('', '', 'EXIT', 'B')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="48" height="33">
+ <layer name="Tile Layer 3" width="48" height="33">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -49,7 +49,7 @@
    H4sIAAAAAAAAC+3QoQ0AAAzDsJL9//IOGJ5UYB8QkAQAAACgy5R1uLwF4NsCw5xaKcAYAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="48" height="33">
+ <layer name="Tile Layer 4" width="48" height="33">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

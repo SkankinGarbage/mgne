@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="40" height="40" tileworld2_battle="16" tileheight="16" nextobjectid="5">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" nextobjectid="5">
  <properties>
   <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level00_danger05"/>
   <property name="name" value="Cave of Hero"/>
  </properties>
- <tileset firstgid="1" name="lower" tileworld2_battle="16" tileheight="16">
-  <image source="../tilesets/lower2.PNG" world2_battle="112" height="400"/>
+ <tileset firstgid="1" name="lower" tilewidth="16" tileheight="16">
+  <image source="../tilesets/lower2.PNG" width="112" height="400"/>
   <tile id="3">
    <properties>
     <property name="x" value=""/>
@@ -224,7 +224,7 @@
   </tile>
  </tileset>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="40" height="40">
+ <layer name="Tile Layer 1" width="40" height="40">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -232,7 +232,7 @@
    H4sIAAAAAAAAC+3OsQ2AMBBD0TAHqRiGEdh/lDREOp0cWh/wi9/YzeuttU5ERERE9JF2kdsUbYeognHaLpHb+GSrYMy2LZSNDt/KpoxOn7Jlo8t33inb/Fy+HgzZGHeXbWWsZFPGarbsdBvw/ddHRPS2Bp9WzzwAGQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="40" height="40">
+ <layer name="Tile Layer 2" width="40" height="40">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -241,26 +241,26 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="tele" type="Event" x="288" y="496" world2_battle="16" height="16">
+  <object id="1" name="tele" type="Event" x="288" y="496" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 58, 20)"/>
    </properties>
   </object>
-  <object id="2" name="well" type="Event" x="288" y="368" world2_battle="16" height="16">
+  <object id="2" name="well" type="Event" x="288" y="368" width="16" height="16">
    <properties>
     <property name="hide" value="return not (hasItem('key_artifactScuba') and not hasItem('key_artifactFlashlight'))"/>
     <property name="onInteract" value="play('world1/herowell_dark.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="3" name="well" type="Event" x="288" y="368" world2_battle="16" height="16">
+  <object id="3" name="well" type="Event" x="288" y="368" width="16" height="16">
    <properties>
     <property name="hide" value="return hasItem('key_artifactScuba')"/>
     <property name="onInteract" value="speak(getHero(0).getName(), 'This water looks extremely deep.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="4" name="well" type="Event" x="288" y="368" world2_battle="16" height="16">
+  <object id="4" name="well" type="Event" x="288" y="368" width="16" height="16">
    <properties>
     <property name="hide" value="return not (hasItem('key_artifactScuba') and hasItem('key_artifactFlashlight'))"/>
     <property name="onInteract" value="play('world1/herowell.lua')"/>
@@ -268,7 +268,7 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="40" height="40">
+ <layer name="Tile Layer 3" width="40" height="40">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

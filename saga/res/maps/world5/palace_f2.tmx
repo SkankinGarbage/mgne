@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="39" height="44" tileworld2_battle="16" tileheight="16" nextobjectid="166">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="39" height="44" tilewidth="16" tileheight="16" nextobjectid="166">
  <properties>
   <property name="bgm" value="boss_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger02"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="39" height="44">
+ <layer name="Tile Layer 1" width="39" height="44">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2YQWoDMQxF3SN456OE7LPsdmDI9bLrJUsgAiH0JVnyNKRM4INbW99vMpLimb21tv9zXQ7y+i7q6dEX+JA6Y7sX9fQYC3xIg7HdikIe15dQnDVvsWkxlg/afzO8Nud6d8AvPTUvikMeM16a5/5atzn+WjzFZTwintyX5PnI9RmPiOensFk1hHJSskXq0ctNzobWRP53MzysvEf1yz2P7m/W/bX4+G9YF39zaeulujKOxGl7SJYRjEMayjjLZrFk2KpxaK11vng3GzoPECOP42crb7yCDdURMfK4B2P2xhQXObNZbF9CqK4fjNkby2u0tIKt2gsjvTJyT7Vc+Gu2mTyVXui3cXYPpJkeQjzouq9tLdtMD5EMGtdKtpkeglgka+V5slqn3vdWeZ7MsnnnxOzzwooe4p25aV5ea0TVHpIR399ao+0R7SFo3ntPU2GL9hAtb+ndilZjpM72n2WL9hAtH+ndilZjpNFqbF6dorzlc5G8exeb11etNbP3NDLP2by+aq3J9hBNP8Z3ntURbCu1gi2S+6dOSZ2f3OcXuyG1A9AaAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="39" height="44">
+ <layer name="Tile Layer 2" width="39" height="44">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -59,91 +59,91 @@
    </properties>
    <polygon points="0,0 64,0 64,256 112,256 112,400 0,400"/>
   </object>
-  <object id="137" name="tele" type="Event" x="224" y="608" world2_battle="16" height="16">
+  <object id="137" name="tele" type="Event" x="224" y="608" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'd')"/>
    </properties>
   </object>
-  <object id="138" name="b1" type="Target" x="288" y="208" world2_battle="16" height="16"/>
-  <object id="139" name="b2" type="Target" x="336" y="208" world2_battle="16" height="16"/>
-  <object id="140" name="tele" type="Event" x="336" y="224" world2_battle="16" height="16">
+  <object id="138" name="b1" type="Target" x="288" y="208" width="16" height="16"/>
+  <object id="139" name="b2" type="Target" x="336" y="208" width="16" height="16"/>
+  <object id="140" name="tele" type="Event" x="336" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'b2')"/>
    </properties>
   </object>
-  <object id="141" name="tele" type="Event" x="288" y="224" world2_battle="16" height="16">
+  <object id="141" name="tele" type="Event" x="288" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'b1')"/>
    </properties>
   </object>
-  <object id="142" name="tele" type="Event" x="592" y="224" world2_battle="16" height="16">
+  <object id="142" name="tele" type="Event" x="592" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f2.tmx', 'c')"/>
    </properties>
   </object>
-  <object id="143" name="c" type="Target" x="592" y="208" world2_battle="16" height="16"/>
-  <object id="144" name="a" type="Target" x="32" y="208" world2_battle="16" height="16"/>
-  <object id="145" name="tele" type="Event" x="32" y="224" world2_battle="16" height="16">
+  <object id="143" name="c" type="Target" x="592" y="208" width="16" height="16"/>
+  <object id="144" name="a" type="Target" x="32" y="208" width="16" height="16"/>
+  <object id="145" name="tele" type="Event" x="32" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'a')"/>
    </properties>
   </object>
-  <object id="146" name="tele" type="Event" x="400" y="512" world2_battle="16" height="16">
+  <object id="146" name="tele" type="Event" x="400" y="512" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f1.tmx', 'h')"/>
    </properties>
   </object>
-  <object id="147" name="h" type="Target" x="400" y="496" world2_battle="16" height="16"/>
-  <object id="148" name="r" type="Target" x="288" y="32" world2_battle="16" height="16"/>
-  <object id="149" name="tele" type="Event" x="288" y="16" world2_battle="16" height="16">
+  <object id="147" name="h" type="Target" x="400" y="496" width="16" height="16"/>
+  <object id="148" name="r" type="Target" x="288" y="32" width="16" height="16"/>
+  <object id="149" name="tele" type="Event" x="288" y="16" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'r')"/>
    </properties>
   </object>
-  <object id="150" name="tele" type="Event" x="592" y="16" world2_battle="16" height="16">
+  <object id="150" name="tele" type="Event" x="592" y="16" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 's')"/>
    </properties>
   </object>
-  <object id="151" name="s" type="Target" x="592" y="32" world2_battle="16" height="16"/>
-  <object id="152" name="tele" type="Event" x="192" y="272" world2_battle="16" height="16">
+  <object id="151" name="s" type="Target" x="592" y="32" width="16" height="16"/>
+  <object id="152" name="tele" type="Event" x="192" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'j')"/>
    </properties>
   </object>
-  <object id="154" name="tele" type="Event" x="240" y="272" world2_battle="16" height="16">
+  <object id="154" name="tele" type="Event" x="240" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'k')"/>
    </properties>
   </object>
-  <object id="156" name="tele" type="Event" x="288" y="272" world2_battle="16" height="16">
+  <object id="156" name="tele" type="Event" x="288" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'l')"/>
    </properties>
   </object>
-  <object id="158" name="tele" type="Event" x="336" y="272" world2_battle="16" height="16">
+  <object id="158" name="tele" type="Event" x="336" y="272" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'm')"/>
    </properties>
   </object>
-  <object id="160" name="tele" type="Event" x="272" y="480" world2_battle="16" height="16">
+  <object id="160" name="tele" type="Event" x="272" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f3.tmx', 'g')"/>
    </properties>
   </object>
-  <object id="161" name="g" type="Target" x="272" y="496" world2_battle="16" height="16"/>
-  <object id="164" name="spellbook" type="Chest" x="48" y="416" world2_battle="16" height="16">
+  <object id="161" name="g" type="Target" x="272" y="496" width="16" height="16"/>
+  <object id="164" name="spellbook" type="Chest" x="48" y="416" width="16" height="16">
    <properties>
     <property name="item" value="item_arcane"/>
    </properties>
   </object>
-  <object id="165" name="spellbook" type="Chest" x="560" y="432" world2_battle="16" height="16">
+  <object id="165" name="spellbook" type="Chest" x="560" y="432" width="16" height="16">
    <properties>
     <property name="item" value="wpn_bowPara"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="39" height="44">
+ <layer name="Tile Layer 3" width="39" height="44">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

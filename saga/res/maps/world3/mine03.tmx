@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="53" height="39" tileworld2_battle="16" tileheight="16" nextobjectid="75">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="53" height="39" tilewidth="16" tileheight="16" nextobjectid="75">
  <properties>
   <property name="bgm" value="optional_dungeon"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="53" height="39">
+ <layer name="Tile Layer 1" width="53" height="39">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2VQRLDIAhFvUJ3XXiQHsFDcfhsrYOAVSDN/MVbZAaEBzGppZQKAAAAABXqiKr5cc7PcHo557eOqPfhvXmWlp/hZKnVx3M938GpTWqRAe4sLc7bR6ox85BmfScnrfcZ2s65uGynWbzkpJ0f5WTdg8Ss3wynX+D2KjntzCrTydpvplPfr2X2K07jPCJmrtX8VyfrN3u1XsT92vkPnarv4aS5PsXJstunOJHBicr3/R+fI5xokbaQNzpxZ2U79ffMElOVnKzv3g6WGqedPJCcsnsDAAAATnMBc5zZ7EwgAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="53" height="39">
+ <layer name="Tile Layer 2" width="53" height="39">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,7 +24,7 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="65" name="lever" type="Event" x="368" y="240" world2_battle="16" height="16">
+  <object id="65" name="lever" type="Event" x="368" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_switch_a"/>
     <property name="hide" value="return getSwitch('mine02')"/>
@@ -32,49 +32,49 @@
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="66" name="lever" type="Event" x="368" y="240" world2_battle="16" height="16">
+  <object id="66" name="lever" type="Event" x="368" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_switch_b"/>
     <property name="hide" value="return not getSwitch('mine02')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="67" name="gate" type="Event" x="368" y="384" world2_battle="16" height="32">
+  <object id="67" name="gate" type="Event" x="368" y="384" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return getSwitch('mine02')"/>
    </properties>
   </object>
-  <object id="68" name="gate" type="Event" x="384" y="384" world2_battle="16" height="32">
+  <object id="68" name="gate" type="Event" x="384" y="384" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return getSwitch('mine02')"/>
    </properties>
   </object>
-  <object id="69" name="chest" type="Chest" x="272" y="368" world2_battle="16" height="16">
+  <object id="69" name="chest" type="Chest" x="272" y="368" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_fire"/>
    </properties>
   </object>
-  <object id="70" name="chest" type="Chest" x="608" y="176" world2_battle="16" height="16">
+  <object id="70" name="chest" type="Chest" x="608" y="176" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_white"/>
    </properties>
   </object>
-  <object id="71" name="right_stairs" type="Target" x="464" y="160" world2_battle="16" height="16"/>
-  <object id="72" name="tele" type="Event" x="464" y="144" world2_battle="16" height="16">
+  <object id="71" name="right_stairs" type="Target" x="464" y="160" width="16" height="16"/>
+  <object id="72" name="tele" type="Event" x="464" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/mine01.tmx', 'right_stairs')"/>
    </properties>
   </object>
-  <object id="73" name="tele" type="Event" x="208" y="144" world2_battle="16" height="16">
+  <object id="73" name="tele" type="Event" x="208" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/mine01.tmx', 'left_stairs')"/>
    </properties>
   </object>
-  <object id="74" name="left_stairs" type="Target" x="208" y="160" world2_battle="16" height="16"/>
+  <object id="74" name="left_stairs" type="Target" x="208" y="160" width="16" height="16"/>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="53" height="39">
+ <layer name="Tile Layer 3" width="53" height="39">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -82,7 +82,7 @@
    H4sIAAAAAAAAC+3BMQEAAADCoPVP7WkJoAAAAAAAAAAAbjVAwP9MIAAA
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="53" height="39">
+ <layer name="Tile Layer 4" width="53" height="39">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

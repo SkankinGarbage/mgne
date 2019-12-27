@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="56" height="43" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="197">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="56" height="43" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="197">
  <properties>
   <property name="bgm" value="generic_town"/>
   <property name="name" value="Ghetto"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="56" height="43">
+ <layer name="Tile Layer 1" width="56" height="43">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2YSw7DIAwFQVmV23DB3iHZ9bZdoSKLxyfU2ERezMayCBMlD4vDOXcYhmEYrLyVwOkXheH2CxmnACv8eveC3oPP0Op3EU5QR/1+cJ1Vfq3nc9el/NL39hS/DyH50TrqD6CO+lf7lTJjNndK+UPXlfKj0O+q5Ih6a+9q93wJrv4fm9+8X09O5rnTOv9Sr7RfdDgn035H6qV1Aqgnv8joR3ONgwDqea7u7NcDtx86o9B+Rvul/Fr5WcqF0Tm6lkfeyZ4P3PPn0/0k5+vkR+uvSv+duXvl/EnvKmpz8T/mbmm/GY/Qud4u8ye6t2jdf+zipz1fuDxa56Vkft7Jw955XCJfejKkxEzGavFreWr10wCXX1QCl59hGIbx4ws/bjL6oCUAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="56" height="43">
+ <layer name="Tile Layer 2" width="56" height="43">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,12 +23,12 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="149" name="memory" type="Teleport Memory" x="432" y="336" world2_battle="16" height="16">
+  <object id="149" name="memory" type="Teleport Memory" x="432" y="336" width="16" height="16">
    <properties>
     <property name="displayName" value="Ghetto"/>
    </properties>
   </object>
-  <object id="152" name="npc" type="Character" x="288" y="224" world2_battle="16" height="16">
+  <object id="152" name="npc" type="Character" x="288" y="224" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
@@ -36,36 +36,36 @@
     <property name="onInteract" value="speak('We live in Moloch\'s shadow.')"/>
    </properties>
   </object>
-  <object id="160" name="inn" type="Target" x="352" y="320" world2_battle="16" height="16"/>
-  <object id="161" name="tele" type="Event" x="352" y="304" world2_battle="16" height="16">
+  <object id="160" name="inn" type="Target" x="352" y="320" width="16" height="16"/>
+  <object id="161" name="tele" type="Event" x="352" y="304" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/town_interior.tmx', 'inn')"/>
    </properties>
   </object>
-  <object id="162" name="pub" type="Target" x="528" y="320" world2_battle="16" height="16"/>
-  <object id="163" name="tele" type="Event" x="528" y="304" world2_battle="16" height="16">
+  <object id="162" name="pub" type="Target" x="528" y="320" width="16" height="16"/>
+  <object id="163" name="tele" type="Event" x="528" y="304" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/town_interior.tmx', 'pub')"/>
    </properties>
   </object>
-  <object id="164" name="weapons" type="Target" x="352" y="432" world2_battle="16" height="16"/>
-  <object id="165" name="tele" type="Event" x="352" y="416" world2_battle="16" height="16">
+  <object id="164" name="weapons" type="Target" x="352" y="432" width="16" height="16"/>
+  <object id="165" name="tele" type="Event" x="352" y="416" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/town_interior.tmx', 'weapons')"/>
    </properties>
   </object>
-  <object id="166" name="potions" type="Target" x="640" y="224" world2_battle="16" height="16"/>
-  <object id="167" name="tele" type="Event" x="640" y="208" world2_battle="16" height="16">
+  <object id="166" name="potions" type="Target" x="640" y="224" width="16" height="16"/>
+  <object id="167" name="tele" type="Event" x="640" y="208" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('crater/town_interior.tmx', 'potions')"/>
    </properties>
   </object>
-  <object id="169" name="tele" type="Event" x="160" y="320" world2_battle="16" height="48">
+  <object id="169" name="tele" type="Event" x="160" y="320" width="16" height="48">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'ghetto')"/>
    </properties>
   </object>
-  <object id="179" name="npc" type="Character" x="384" y="192" world2_battle="16" height="16">
+  <object id="179" name="npc" type="Character" x="384" y="192" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="SOUTH"/>
@@ -73,20 +73,20 @@
     <property name="onInteract" value="speak('Don\'t disobey the masters or you\'ll end up a slave!')"/>
    </properties>
   </object>
-  <object id="180" name="tele" type="Event" x="720" y="320" world2_battle="16" height="48">
+  <object id="180" name="tele" type="Event" x="720" y="320" width="16" height="48">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'ghetto')"/>
    </properties>
   </object>
-  <object id="181" name="entry" type="Target" x="688" y="336" world2_battle="16" height="16"/>
-  <object id="182" name="npc" type="Character" x="288" y="432" world2_battle="16" height="16">
+  <object id="181" name="entry" type="Target" x="688" y="336" width="16" height="16"/>
+  <object id="182" name="npc" type="Character" x="288" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_horse"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="speak('Our lord Moloch built this town for us. Should we be grateful?')"/>
    </properties>
   </object>
-  <object id="183" name="npc" type="Character" x="384" y="448" world2_battle="16" height="16">
+  <object id="183" name="npc" type="Character" x="384" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="NORTH"/>
@@ -94,35 +94,35 @@
     <property name="onInteract" value="speak('Life expectancy here is terrible. I feel sick every day.')"/>
    </properties>
   </object>
-  <object id="184" name="npc" type="Character" x="576" y="528" world2_battle="16" height="16">
+  <object id="184" name="npc" type="Character" x="576" y="528" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="speak('Shouldn\'t you be inside? You don\'t want to be poisoned.')"/>
    </properties>
   </object>
-  <object id="185" name="npc" type="Character" x="288" y="528" world2_battle="16" height="16">
+  <object id="185" name="npc" type="Character" x="288" y="528" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="speak('I\'ve heard rumors of a brotherhood working against the masters... but no one has come here.')"/>
    </properties>
   </object>
-  <object id="186" name="npc" type="Character" x="480" y="272" world2_battle="16" height="16">
+  <object id="186" name="npc" type="Character" x="480" y="272" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('I used to live in Elan, but I was captured and forced to settle here.')"/>
    </properties>
   </object>
-  <object id="187" name="npc" type="Character" x="576" y="144" world2_battle="16" height="16">
+  <object id="187" name="npc" type="Character" x="576" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="speak('Moloch needs living tribute to continue to live.')"/>
    </properties>
   </object>
-  <object id="188" name="npc" type="Character" x="496" y="384" world2_battle="16" height="16">
+  <object id="188" name="npc" type="Character" x="496" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="EAST"/>
@@ -130,49 +130,49 @@
     <property name="onInteract" value="speak('Maybe if Moloch opens up Babel he won\'t need sacrifices any more.')"/>
    </properties>
   </object>
-  <object id="189" name="npc" type="Character" x="592" y="400" world2_battle="16" height="16">
+  <object id="189" name="npc" type="Character" x="592" y="400" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="speak('If the poison doesn\'t kill me, then I\'ll be offered as a sacrifice to Moloch anyway.')"/>
    </properties>
   </object>
-  <object id="190" name="npc" type="Character" x="592" y="304" world2_battle="16" height="16">
+  <object id="190" name="npc" type="Character" x="592" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="speak('This town feels like a jail with no walls. We can leave, but what\'s out there but poisonous wasteland?')"/>
    </properties>
   </object>
-  <object id="191" name="npc" type="Character" x="224" y="320" world2_battle="16" height="16">
+  <object id="191" name="npc" type="Character" x="224" y="320" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('You look unfamiliar... But of course, it\'s impossible to get in or out of the crater.')"/>
    </properties>
   </object>
-  <object id="192" name="npc" type="Character" x="224" y="352" world2_battle="16" height="16">
+  <object id="192" name="npc" type="Character" x="224" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="speak('You\'re looking at me funny. I\'ll remember your faces when it comes time to select sacrifices.')"/>
    </properties>
   </object>
-  <object id="193" name="npc" type="Character" x="656" y="320" world2_battle="16" height="16">
+  <object id="193" name="npc" type="Character" x="656" y="320" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('You don\'t seem very sick... Would you like to become slaves for Moloch? You wouldn\'t be sacrificed that way.')"/>
    </properties>
   </object>
-  <object id="194" name="npc" type="Character" x="656" y="352" world2_battle="16" height="16">
+  <object id="194" name="npc" type="Character" x="656" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="speak('You\'re very well-equipped, aren\'t you...? Not planning to do anything rebellious I hope, right?')"/>
    </properties>
   </object>
-  <object id="195" name="npc" type="Character" x="672" y="448" world2_battle="16" height="16">
+  <object id="195" name="npc" type="Character" x="672" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
@@ -180,7 +180,7 @@
     <property name="onInteract" value="speak('The slaves work at a compound to the east. Moloch seeks to rebuild old technology.')"/>
    </properties>
   </object>
-  <object id="196" name="npc" type="Character" x="208" y="144" world2_battle="16" height="16">
+  <object id="196" name="npc" type="Character" x="208" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="onBehavior" value="this.wander()"/>

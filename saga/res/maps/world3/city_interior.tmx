@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="123" height="54" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="339">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="123" height="54" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="339">
  <properties>
   <property name="bgm" value="angelic_town"/>
   <property name="name" value="City of Angels"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="123" height="54">
+ <layer name="Tile Layer 1" width="123" height="54">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2cTY7bMAyFNUforofwAWbdVXa5VFYB0qy6ysxdO0YjDKFI1KNMSazNBxBo/fNE+bOtHytzDSFcBweio/r3zv13Ibh9rcdvrY+mP+KlwaPk2zP3Uh3+FGLd9yEI5PitrDX9ES8N1qnv7SvunXMv1YFjfREEcvxW1kslJP6Ilwbr1PfxFZ+dcy/VgbsnrLB+B+vYi/V70GNN4+0Zo1ifCoG295fk3/T/58zxaH1ou/Mj/HvvjWR9S8qXtqn0/ii9o0awpnmUWNO6lmK9/pfw3QZF1rEdOIfXdgGtD33H/Az5915P1o+kfGmbGu+P0nUbwfr2zKPGmta1FOv1v4TvNiiyjvvP4bVd0K5P7zav1T/eH6XrNoL145lHjbWkrU6Daxe062OVNeK3hfVbJdK8nfV4/1KfrWfu6zm/OgZlTLf3qo811rVYMttavHM+uSg9fz1DWp9aXdL9FvwRLYN9rD7XdAywBH4sQPffjfgjGs3aantNxwBL4McCdP+nEX+LssrapS+ONTf31doPcNbzhMybnYPs2+ad8XTW84TMm6VzX8hcmrO2p9HjLmc9T876OHLWx1Gu/yztc9f64xrzgJL4n/17eqffqE9B1ueuReqHzjtdBWVoXC9JWdr5j/JOv1GfgqzPXYvUD513ugrK0GAtKUs7f0veM7TmJvn2tJW1he9oFrxnSHr9W9f+oWsWLfHYI+s14loprh5xTVVLm4esWaR5SPzpObQO3DbUG/WjeVhVzDOuleJYxDVVLW0esmaR5iHxp+fQ++nGbEO9UT+ah1VZak81+gP0fnow21Bv1E+a9wztjXXOUzP30jZn7azRvLnQ0t5Ya16/3t6a8z5omRavl+V3YU1o/Vrmr7ZcK+T3RaV1Ehb8LQp5ZtH3HeqFCPl9UWmdhAV/i0Ke2ci69nsS1Ms1R8gzK2Gt1Xdy6YvjuIU1d4xrjiSs0effWdtUjXWuH82NPRE/1xyhrOmYg7KmYxdN1j6+1leNTfr3mdJvQnTsEo/VYt0y/rXib1E11qW/z5QLeqwG65bxrxV/i0L6Zlx/S3Jsr/nq3vPhexkzOuvjsebqJhlzIX4aedHy0rU+qH/u/L2zRkLCWqufjJZH1/q0sKbn75l1q5bO/hLWmmMuZ/0qZ+3SkrM+jpz1cYT287RZa/m7cPkapOPI1yDp6y8EVFBJyGcAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="123" height="54">
+ <layer name="Tile Layer 2" width="123" height="54">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,128 +23,128 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="244" name="station_left" type="Target" x="64" y="336" world2_battle="16" height="16"/>
-  <object id="245" name="station_right" type="Target" x="384" y="336" world2_battle="16" height="16"/>
-  <object id="246" name="house" type="Target" x="1520" y="160" world2_battle="16" height="16"/>
-  <object id="247" name="inn_right" type="Target" x="1168" y="176" world2_battle="16" height="16"/>
-  <object id="248" name="inn_left" type="Target" x="1040" y="176" world2_battle="16" height="16"/>
-  <object id="249" name="store_left" type="Target" x="656" y="176" world2_battle="16" height="16"/>
-  <object id="250" name="store_right" type="Target" x="784" y="176" world2_battle="16" height="16"/>
-  <object id="251" name="palace" type="Target" x="224" y="736" world2_battle="16" height="16"/>
-  <object id="252" name="store_f1_up" type="Target" x="672" y="80" world2_battle="16" height="16"/>
-  <object id="253" name="store_f2_down" type="Target" x="640" y="416" world2_battle="16" height="16"/>
-  <object id="254" name="store_f2_up" type="Target" x="800" y="416" world2_battle="16" height="16"/>
-  <object id="255" name="store_f3_down" type="Target" x="784" y="720" world2_battle="16" height="16"/>
-  <object id="256" name="inn_f3_down" type="Target" x="1040" y="720" world2_battle="16" height="16"/>
-  <object id="257" name="inn_f2_up" type="Target" x="1024" y="416" world2_battle="16" height="16"/>
-  <object id="258" name="inn_f2_down" type="Target" x="1184" y="416" world2_battle="16" height="16"/>
-  <object id="259" name="inn_f1_up" type="Target" x="1184" y="80" world2_battle="16" height="16"/>
-  <object id="260" name="house_up" type="Target" x="1392" y="96" world2_battle="16" height="16"/>
-  <object id="261" name="house_down" type="Target" x="1392" y="416" world2_battle="16" height="16"/>
-  <object id="262" name="tele" type="Event" x="64" y="352" world2_battle="16" height="16">
+  <object id="244" name="station_left" type="Target" x="64" y="336" width="16" height="16"/>
+  <object id="245" name="station_right" type="Target" x="384" y="336" width="16" height="16"/>
+  <object id="246" name="house" type="Target" x="1520" y="160" width="16" height="16"/>
+  <object id="247" name="inn_right" type="Target" x="1168" y="176" width="16" height="16"/>
+  <object id="248" name="inn_left" type="Target" x="1040" y="176" width="16" height="16"/>
+  <object id="249" name="store_left" type="Target" x="656" y="176" width="16" height="16"/>
+  <object id="250" name="store_right" type="Target" x="784" y="176" width="16" height="16"/>
+  <object id="251" name="palace" type="Target" x="224" y="736" width="16" height="16"/>
+  <object id="252" name="store_f1_up" type="Target" x="672" y="80" width="16" height="16"/>
+  <object id="253" name="store_f2_down" type="Target" x="640" y="416" width="16" height="16"/>
+  <object id="254" name="store_f2_up" type="Target" x="800" y="416" width="16" height="16"/>
+  <object id="255" name="store_f3_down" type="Target" x="784" y="720" width="16" height="16"/>
+  <object id="256" name="inn_f3_down" type="Target" x="1040" y="720" width="16" height="16"/>
+  <object id="257" name="inn_f2_up" type="Target" x="1024" y="416" width="16" height="16"/>
+  <object id="258" name="inn_f2_down" type="Target" x="1184" y="416" width="16" height="16"/>
+  <object id="259" name="inn_f1_up" type="Target" x="1184" y="80" width="16" height="16"/>
+  <object id="260" name="house_up" type="Target" x="1392" y="96" width="16" height="16"/>
+  <object id="261" name="house_down" type="Target" x="1392" y="416" width="16" height="16"/>
+  <object id="262" name="tele" type="Event" x="64" y="352" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city.tmx', 'station_left')"/>
    </properties>
   </object>
-  <object id="263" name="tele" type="Event" x="384" y="352" world2_battle="16" height="16">
+  <object id="263" name="tele" type="Event" x="384" y="352" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city.tmx', 'station_right')"/>
    </properties>
   </object>
-  <object id="264" name="tele" type="Event" x="224" y="752" world2_battle="16" height="16">
+  <object id="264" name="tele" type="Event" x="224" y="752" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city.tmx', 'palace')"/>
    </properties>
   </object>
-  <object id="265" name="tele" type="Event" x="656" y="192" world2_battle="16" height="16">
+  <object id="265" name="tele" type="Event" x="656" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city.tmx', 'store_left')"/>
    </properties>
   </object>
-  <object id="266" name="tele" type="Event" x="784" y="192" world2_battle="16" height="16">
+  <object id="266" name="tele" type="Event" x="784" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city.tmx', 'store_right')"/>
    </properties>
   </object>
-  <object id="267" name="tele" type="Event" x="1040" y="192" world2_battle="16" height="16">
+  <object id="267" name="tele" type="Event" x="1040" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city.tmx', 'inn_left')"/>
    </properties>
   </object>
-  <object id="268" name="tele" type="Event" x="1168" y="192" world2_battle="16" height="16">
+  <object id="268" name="tele" type="Event" x="1168" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city.tmx', 'inn_right')"/>
    </properties>
   </object>
-  <object id="269" name="tele" type="Event" x="1520" y="176" world2_battle="16" height="16">
+  <object id="269" name="tele" type="Event" x="1520" y="176" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city.tmx', 'house')"/>
    </properties>
   </object>
-  <object id="270" name="tele" type="Event" x="1392" y="80" world2_battle="16" height="16">
+  <object id="270" name="tele" type="Event" x="1392" y="80" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'house_down')"/>
    </properties>
   </object>
-  <object id="271" name="tele" type="Event" x="1392" y="432" world2_battle="16" height="16">
+  <object id="271" name="tele" type="Event" x="1392" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'house_up')"/>
    </properties>
   </object>
-  <object id="272" name="tele" type="Event" x="1184" y="64" world2_battle="16" height="16">
+  <object id="272" name="tele" type="Event" x="1184" y="64" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_f2_down')"/>
    </properties>
   </object>
-  <object id="273" name="tele" type="Event" x="1184" y="432" world2_battle="16" height="16">
+  <object id="273" name="tele" type="Event" x="1184" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_f1_up')"/>
    </properties>
   </object>
-  <object id="274" name="tele" type="Event" x="1024" y="400" world2_battle="16" height="16">
+  <object id="274" name="tele" type="Event" x="1024" y="400" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_f3_down')"/>
    </properties>
   </object>
-  <object id="275" name="tele" type="Event" x="1040" y="736" world2_battle="16" height="16">
+  <object id="275" name="tele" type="Event" x="1040" y="736" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'inn_f2_up')"/>
    </properties>
   </object>
-  <object id="276" name="tele" type="Event" x="784" y="736" world2_battle="16" height="16">
+  <object id="276" name="tele" type="Event" x="784" y="736" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_f2_up')"/>
    </properties>
   </object>
-  <object id="277" name="tele" type="Event" x="800" y="400" world2_battle="16" height="16">
+  <object id="277" name="tele" type="Event" x="800" y="400" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_f3_down')"/>
    </properties>
   </object>
-  <object id="278" name="tele" type="Event" x="640" y="432" world2_battle="16" height="16">
+  <object id="278" name="tele" type="Event" x="640" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_f1_up')"/>
    </properties>
   </object>
-  <object id="279" name="tele" type="Event" x="672" y="64" world2_battle="16" height="16">
+  <object id="279" name="tele" type="Event" x="672" y="64" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'store_f2_down')"/>
    </properties>
   </object>
-  <object id="280" name="inn" type="Character" x="1040" y="96" world2_battle="16" height="16">
+  <object id="280" name="inn" type="Character" x="1040" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="281" name="npc" type="Character" x="1072" y="496" world2_battle="16" height="16">
+  <object id="281" name="npc" type="Character" x="1072" y="496" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="play('world3/barkeep.lua')"/>
    </properties>
   </object>
-  <object id="282" name="npc" type="Character" x="1104" y="432" world2_battle="16" height="16">
+  <object id="282" name="npc" type="Character" x="1104" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="NORTH"/>
@@ -152,7 +152,7 @@
     <property name="onInteract" value="speak('The machine that opens the gates was developed at the research base on an island south of here.')"/>
    </properties>
   </object>
-  <object id="283" name="npc" type="Character" x="1056" y="416" world2_battle="16" height="16">
+  <object id="283" name="npc" type="Character" x="1056" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
@@ -160,7 +160,7 @@
     <property name="onInteract" value="speak('The monorail connects the City of Angels to Ermengarde in the east and to the power plant to the west.')"/>
    </properties>
   </object>
-  <object id="284" name="npc" type="Character" x="1104" y="384" world2_battle="16" height="16">
+  <object id="284" name="npc" type="Character" x="1104" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
@@ -168,7 +168,7 @@
     <property name="onInteract" value="speak('The town of Celephais is in the middle of the continent. Everyone there works in the plutonium mines.')"/>
    </properties>
   </object>
-  <object id="285" name="npc" type="Character" x="1072" y="384" world2_battle="16" height="16">
+  <object id="285" name="npc" type="Character" x="1072" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="SOUTH"/>
@@ -176,7 +176,7 @@
     <property name="onInteract" value="speak('A cave network connects Ermengarde to the continent, but nowadays everyone just takes the monorail.')"/>
    </properties>
   </object>
-  <object id="286" name="npc" type="Character" x="1152" y="448" world2_battle="16" height="16">
+  <object id="286" name="npc" type="Character" x="1152" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
@@ -184,7 +184,7 @@
     <property name="onInteract" value="speak('With the push for nuclear power, the coal mines in the northwest are abandoned now.')"/>
    </properties>
   </object>
-  <object id="287" name="lucifer" type="Character" x="224" y="576" world2_battle="16" height="16">
+  <object id="287" name="lucifer" type="Character" x="224" y="576" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lucifer"/>
     <property name="hide" value="return getSwitch('escaped_jail')"/>
@@ -198,7 +198,7 @@
    </properties>
    <polygon points="16,0 16,128 160,128 160,0"/>
   </object>
-  <object id="289" name="npc" type="Character" x="400" y="624" world2_battle="16" height="16">
+  <object id="289" name="npc" type="Character" x="400" y="624" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
@@ -206,7 +206,7 @@
     <property name="onInteract" value="speak('The prince is a very learned man. Many of the innovations in the city are thanks to his majesty.')"/>
    </properties>
   </object>
-  <object id="290" name="npc" type="Character" x="368" y="672" world2_battle="16" height="16">
+  <object id="290" name="npc" type="Character" x="368" y="672" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="WEST"/>
@@ -214,7 +214,7 @@
     <property name="onInteract" value="speak('I\'m researching Babel. If we could only get at the power source at Babel\'s core, we wouldn\'t need to mine for coal or plutonium.')"/>
    </properties>
   </object>
-  <object id="291" name="npc" type="Character" x="192" y="672" world2_battle="16" height="16">
+  <object id="291" name="npc" type="Character" x="192" y="672" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
@@ -222,7 +222,7 @@
     <property name="onInteract" value="speak('Guard', 'Watch your step.')"/>
    </properties>
   </object>
-  <object id="292" name="npc" type="Character" x="256" y="672" world2_battle="16" height="16">
+  <object id="292" name="npc" type="Character" x="256" y="672" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="SOUTH"/>
@@ -230,7 +230,7 @@
     <property name="onInteract" value="speak('Guard', 'I have my eye on you.')"/>
    </properties>
   </object>
-  <object id="293" name="npc" type="Character" x="272" y="672" world2_battle="16" height="16">
+  <object id="293" name="npc" type="Character" x="272" y="672" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
@@ -238,7 +238,7 @@
     <property name="onInteract" value="speak('Guard', 'The palace is very secure.')"/>
    </properties>
   </object>
-  <object id="294" name="npc" type="Character" x="176" y="672" world2_battle="16" height="16">
+  <object id="294" name="npc" type="Character" x="176" y="672" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
@@ -253,7 +253,7 @@
    </properties>
    <polygon points="16,0 16,192 144,192 144,0"/>
   </object>
-  <object id="297" name="npc" type="Character" x="48" y="672" world2_battle="16" height="16">
+  <object id="297" name="npc" type="Character" x="48" y="672" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
@@ -261,7 +261,7 @@
     <property name="onInteract" value="speak('No one really remembers where his majesty comes from, but he\'s brought wealth to the city.')"/>
    </properties>
   </object>
-  <object id="298" name="npc" type="Character" x="80" y="672" world2_battle="16" height="16">
+  <object id="298" name="npc" type="Character" x="80" y="672" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="SOUTH"/>
@@ -269,7 +269,7 @@
     <property name="onInteract" value="speak('Even if his majesty is a \'master,\' why should we care?')"/>
    </properties>
   </object>
-  <object id="299" name="npc" type="Character" x="64" y="624" world2_battle="16" height="16">
+  <object id="299" name="npc" type="Character" x="64" y="624" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="NORTH"/>
@@ -284,40 +284,40 @@
    </properties>
    <polygon points="16,0 16,192 144,192 144,0"/>
   </object>
-  <object id="301" name="chest" type="Chest" x="1488" y="464" world2_battle="16" height="16">
+  <object id="301" name="chest" type="Chest" x="1488" y="464" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_air"/>
    </properties>
   </object>
-  <object id="302" name="shop" type="Character" x="784" y="64" world2_battle="16" height="16">
+  <object id="302" name="shop" type="Character" x="784" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_world3_potions')"/>
    </properties>
   </object>
-  <object id="303" name="shop" type="Character" x="720" y="64" world2_battle="16" height="16">
+  <object id="303" name="shop" type="Character" x="720" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_city_weapons1')"/>
    </properties>
   </object>
-  <object id="304" name="shop" type="Character" x="704" y="768" world2_battle="16" height="16">
+  <object id="304" name="shop" type="Character" x="704" y="768" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="shop('shop_city_weapons2')"/>
    </properties>
   </object>
-  <object id="305" name="shop" type="Character" x="656" y="768" world2_battle="16" height="16">
+  <object id="305" name="shop" type="Character" x="656" y="768" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="shop('shop_city_armor')"/>
    </properties>
   </object>
-  <object id="306" name="shop" type="Character" x="704" y="480" world2_battle="16" height="16">
+  <object id="306" name="shop" type="Character" x="704" y="480" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="NORTH"/>
@@ -331,7 +331,7 @@
    </properties>
    <polygon points="16,0 16,64 80,64 80,0"/>
   </object>
-  <object id="309" name="chest" type="Chest" x="1200" y="736" world2_battle="16" height="16">
+  <object id="309" name="chest" type="Chest" x="1200" y="736" width="16" height="16">
    <properties>
     <property name="item" value="spell_prayer"/>
    </properties>
@@ -357,28 +357,28 @@
    </properties>
    <polygon points="-16,-16 -16,64 96,64 96,-16"/>
   </object>
-  <object id="313" name="npc" type="Character" x="144" y="208" world2_battle="16" height="16">
+  <object id="313" name="npc" type="Character" x="144" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="play('world3/train_city_gate.lua')"/>
    </properties>
   </object>
-  <object id="314" name="npc" type="Character" x="320" y="144" world2_battle="16" height="16">
+  <object id="314" name="npc" type="Character" x="320" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="play('world3/train_city_ermengarde.lua')"/>
    </properties>
   </object>
-  <object id="315" name="npc" type="Character" x="176" y="288" world2_battle="16" height="16">
+  <object id="315" name="npc" type="Character" x="176" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('As a special guest of his majesty, you may ride the monorail for free.')"/>
    </properties>
   </object>
-  <object id="316" name="npc" type="Character" x="48" y="256" world2_battle="16" height="16">
+  <object id="316" name="npc" type="Character" x="48" y="256" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="SOUTH"/>
@@ -386,7 +386,7 @@
     <property name="onInteract" value="speak('The monorail is wonderful! I can visit the power plant in less than a day\'s journey.')"/>
    </properties>
   </object>
-  <object id="317" name="npc" type="Character" x="304" y="304" world2_battle="16" height="16">
+  <object id="317" name="npc" type="Character" x="304" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="WEST"/>
@@ -394,7 +394,7 @@
     <property name="onInteract" value="speak('The monorail is relatively new. When construction finished last year, work began on the gate machine.')"/>
    </properties>
   </object>
-  <object id="318" name="npc" type="Character" x="400" y="128" world2_battle="16" height="16">
+  <object id="318" name="npc" type="Character" x="400" y="128" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
@@ -402,7 +402,7 @@
     <property name="onInteract" value="speak('Energy from the power plant keeps the monorail going. Without power, all of our progress these past years would be useless.')"/>
    </properties>
   </object>
-  <object id="319" name="npc" type="Character" x="240" y="64" world2_battle="16" height="16">
+  <object id="319" name="npc" type="Character" x="240" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="EAST"/>
@@ -416,53 +416,53 @@
    </properties>
    <polygon points="16,0 16,80 192,80 192,0"/>
   </object>
-  <object id="321" name="trigger" type="Event" x="384" y="96" world2_battle="16" height="16">
+  <object id="321" name="trigger" type="Event" x="384" y="96" width="16" height="16">
    <properties>
     <property name="onCollide" value="sceneSwitch('upper_floor', true)"/>
    </properties>
   </object>
-  <object id="323" name="trigger" type="Event" x="384" y="112" world2_battle="16" height="16">
+  <object id="323" name="trigger" type="Event" x="384" y="112" width="16" height="16">
    <properties>
     <property name="onCollide" value="sceneSwitch('upper_floor', false)"/>
    </properties>
   </object>
-  <object id="324" name="block" type="Event" x="336" y="128" world2_battle="16" height="32">
+  <object id="324" name="block" type="Event" x="336" y="128" width="16" height="32">
    <properties>
     <property name="hide" value="return getSwitch('upper_floor')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="325" name="block" type="Event" x="352" y="128" world2_battle="16" height="32">
+  <object id="325" name="block" type="Event" x="352" y="128" width="16" height="32">
    <properties>
     <property name="hide" value="return not getSwitch('upper_floor')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="328" name="shop" type="Character" x="1808" y="80" world2_battle="16" height="16">
+  <object id="328" name="shop" type="Character" x="1808" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="meatShop('meatshop_world3')"/>
    </properties>
   </object>
-  <object id="329" name="meat" type="Target" x="1808" y="160" world2_battle="16" height="16"/>
-  <object id="330" name="tele" type="Event" x="1808" y="176" world2_battle="16" height="16">
+  <object id="329" name="meat" type="Target" x="1808" y="160" width="16" height="16"/>
+  <object id="330" name="tele" type="Event" x="1808" y="176" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city.tmx', 'meat')"/>
    </properties>
   </object>
-  <object id="331" name="meat_up" type="Target" x="1936" y="96" world2_battle="16" height="16"/>
-  <object id="332" name="tele" type="Event" x="1936" y="80" world2_battle="16" height="16">
+  <object id="331" name="meat_up" type="Target" x="1936" y="96" width="16" height="16"/>
+  <object id="332" name="tele" type="Event" x="1936" y="80" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'meat_down')"/>
    </properties>
   </object>
-  <object id="333" name="tele" type="Event" x="1936" y="432" world2_battle="16" height="16">
+  <object id="333" name="tele" type="Event" x="1936" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/city_interior.tmx', 'meat_up')"/>
    </properties>
   </object>
-  <object id="334" name="meat_down" type="Target" x="1936" y="416" world2_battle="16" height="16"/>
+  <object id="334" name="meat_down" type="Target" x="1936" y="416" width="16" height="16"/>
   <object id="335" name="room" type="Ceiling" x="1744" y="432">
    <properties>
     <property name="roofID" value="137"/>
@@ -477,7 +477,7 @@
    </properties>
    <polygon points="16,0 16,64 80,64 80,0"/>
   </object>
-  <object id="338" name="npc" type="Character" x="1872" y="128" world2_battle="16" height="16">
+  <object id="338" name="npc" type="Character" x="1872" y="128" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="WEST"/>
@@ -485,7 +485,7 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="123" height="54">
+ <layer name="Tile Layer 3" width="123" height="54">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -493,7 +493,7 @@
    H4sIAAAAAAAAC+3aMQqAMBAEwHzeRlAfoP5Vwc5GNAk5dQa2EhZS2NxdSgAAAADAWdcgHPpgPRFcvSX3rTX6hz3jzUyVu/3Xdcx7lptZA3S3tmR+b90PAADA/5Set31pfvc1Y/A+yik9IzJzAgAAAOBKxNtC6nBbCAAAAAAA7+LG/32e7MdyYrfWzpP9WE7s1gAAIKUNQRiF9MhnAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="123" height="54">
+ <layer name="Tile Layer 4" width="123" height="54">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

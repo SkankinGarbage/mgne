@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="48" height="48" tileworld2_battle="16" tileheight="16" nextobjectid="17">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="48" tilewidth="16" tileheight="16" nextobjectid="17">
  <properties>
   <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level00_danger05"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="48" height="48">
+ <layer name="Tile Layer 1" width="48" height="48">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2VUQrDIBBEvUL+ApsvT9Ej5P4nagoWirhJx85aA/PxEIZlGUGeW0ppE0IIEcpjgg692MFSzjq3wJzVPR+s5bQqz0E5i9fO/YPckRuYM/vvDdC87niVz9YfZbb+PXnUHUbm7DsgefQeBCv7W972cs/zyB5W97cnWt72cs/z3+5hwfB8zzzz3f/q+Z75f/Q/87n8z7nDyJzJAuZeF3SexQrkZz5H50eD+jza/yioz6P9j4L6ZIR/1P8+/etOEfMz4v0Ld8H7X4QQQgghhBAcns5JLKUAJAAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="48" height="48">
+ <layer name="Tile Layer 2" width="48" height="48">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,42 +24,42 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="2" name="tele" type="Event" x="176" y="112" world2_battle="16" height="16">
+  <object id="2" name="tele" type="Event" x="176" y="112" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 54, 52)"/>
    </properties>
   </object>
-  <object id="3" name="tele" type="Event" x="176" y="384" world2_battle="16" height="16">
+  <object id="3" name="tele" type="Event" x="176" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/hq02.tmx', 11, 18)"/>
    </properties>
   </object>
-  <object id="4" name="tele" type="Event" x="272" y="384" world2_battle="16" height="16">
+  <object id="4" name="tele" type="Event" x="272" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/hq02.tmx', 17, 18)"/>
    </properties>
   </object>
-  <object id="5" name="tele" type="Event" x="464" y="384" world2_battle="16" height="16">
+  <object id="5" name="tele" type="Event" x="464" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/hq02.tmx', 29, 18)"/>
    </properties>
   </object>
-  <object id="6" name="tele" type="Event" x="560" y="512" world2_battle="16" height="16">
+  <object id="6" name="tele" type="Event" x="560" y="512" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/hq02.tmx', 35, 26)"/>
    </properties>
   </object>
-  <object id="7" name="chest" type="Chest" x="240" y="192" world2_battle="16" height="16">
+  <object id="7" name="chest" type="Chest" x="240" y="192" width="16" height="16">
    <properties>
     <property name="item" value="wpn_swordLong"/>
    </properties>
   </object>
-  <object id="8" name="chest" type="Chest" x="336" y="432" world2_battle="16" height="16">
+  <object id="8" name="chest" type="Chest" x="336" y="432" width="16" height="16">
    <properties>
     <property name="item" value="pot_potion"/>
    </properties>
   </object>
-  <object id="9" name="door" type="Event" x="176" y="256" world2_battle="16" height="32">
+  <object id="9" name="door" type="Event" x="176" y="256" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return getSwitch('shrine_done')"/>
@@ -67,7 +67,7 @@
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="10" name="guard" type="Character" x="160" y="224" world2_battle="16" height="16">
+  <object id="10" name="guard" type="Character" x="160" y="224" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="NORTH"/>
@@ -75,7 +75,7 @@
     <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
    </properties>
   </object>
-  <object id="11" name="guard" type="Character" x="192" y="224" world2_battle="16" height="16">
+  <object id="11" name="guard" type="Character" x="192" y="224" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="NORTH"/>
@@ -83,7 +83,7 @@
     <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
    </properties>
   </object>
-  <object id="12" name="guard" type="Character" x="176" y="320" world2_battle="16" height="16">
+  <object id="12" name="guard" type="Character" x="176" y="320" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="NORTH"/>
@@ -93,7 +93,7 @@
     <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
    </properties>
   </object>
-  <object id="13" name="guard" type="Character" x="240" y="304" world2_battle="16" height="16">
+  <object id="13" name="guard" type="Character" x="240" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="face" value="EAST"/>
@@ -103,7 +103,7 @@
     <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
    </properties>
   </object>
-  <object id="14" name="guard" type="Character" x="400" y="336" world2_battle="16" height="16">
+  <object id="14" name="guard" type="Character" x="400" y="336" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="WEST"/>
@@ -113,7 +113,7 @@
     <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
    </properties>
   </object>
-  <object id="15" name="guard" type="Character" x="560" y="320" world2_battle="16" height="16">
+  <object id="15" name="guard" type="Character" x="560" y="320" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="NORTH"/>
@@ -123,7 +123,7 @@
     <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
    </properties>
   </object>
-  <object id="16" name="guard" type="Character" x="464" y="192" world2_battle="16" height="16">
+  <object id="16" name="guard" type="Character" x="464" y="192" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="face" value="SOUTH"/>

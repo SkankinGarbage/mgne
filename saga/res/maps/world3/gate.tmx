@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="57" height="48" tileworld2_battle="16" tileheight="16" nextobjectid="114">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="57" height="48" tilewidth="16" tileheight="16" nextobjectid="114">
  <properties>
   <property name="bgm" value="gate_theme"/>
   <property name="name" value="F10 Gate"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="57" height="48">
+ <layer name="Tile Layer 1" width="57" height="48">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2YwW7DIAyGmSZVaqXe9pZ5h5y6A3uFbe+6RgLJRTaOCTZk8uETgRLCX5ufhGsI4eo4jnNC3hKj56GhqQbsf2lgZm2YznsD2DOl8/00pEVjj+e+C5DGr+SjAWosybxbNd4SVL3su5XfT34E/FbGt9IoqfdGU2OLNk7vg/kdyxGLOEpytqw/EKj+1BrQ1rgW5VEwjdza1tS47cuxKDOcltrca/dYa7wnbbDM9NC0F02Ne/YyDV2WnkPtcXAv02Ckr45CW2OLr+Y9Yg343lEC+2Hx1NS4x1ex9ZjnHFP9KwF1wbYItFrHUeKrkDxnTE+tLYbX/84ijpyvUu9lW/uSrpc095iuF6QN9rfOVc5XKY3lOlxBbLOmSPQb4Tmct9RyFa7LrGMJr7lZ9pvNV7NG6j28XJelRqzfbL5aW4+tWGvkfJX7FjzKbL7a82zgFuw0SnxVQ+PMvnpUk2Uc9/hJjxiOPAfYe/7U6/uYGuNsuSq5xzJXqTj12AOpZ1i9k2M5pHluQ2Gdq9S5MeY7tXZuvFnW49nj6DiO4zjO/+EP181rq8AqAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="57" height="48">
+ <layer name="Tile Layer 2" width="57" height="48">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,42 +23,42 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="78" name="lucifer" type="Character" x="528" y="368" world2_battle="16" height="16">
+  <object id="78" name="lucifer" type="Character" x="528" y="368" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lucifer"/>
     <property name="face" value="SOUTH"/>
     <property name="hide" value="return getSwitch('lucifer01')"/>
    </properties>
   </object>
-  <object id="79" name="guard1" type="Character" x="496" y="416" world2_battle="16" height="16">
+  <object id="79" name="guard1" type="Character" x="496" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="EAST"/>
     <property name="hide" value="return getSwitch('lucifer01')"/>
    </properties>
   </object>
-  <object id="80" name="guard3" type="Character" x="560" y="416" world2_battle="16" height="16">
+  <object id="80" name="guard3" type="Character" x="560" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('lucifer01')"/>
    </properties>
   </object>
-  <object id="81" name="guard2" type="Character" x="496" y="432" world2_battle="16" height="16">
+  <object id="81" name="guard2" type="Character" x="496" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="EAST"/>
     <property name="hide" value="return getSwitch('lucifer01')"/>
    </properties>
   </object>
-  <object id="82" name="guard4" type="Character" x="560" y="432" world2_battle="16" height="16">
+  <object id="82" name="guard4" type="Character" x="560" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_guard"/>
     <property name="face" value="WEST"/>
     <property name="hide" value="return getSwitch('lucifer01')"/>
    </properties>
   </object>
-  <object id="84" name="npc" type="Character" x="592" y="192" world2_battle="16" height="16">
+  <object id="84" name="npc" type="Character" x="592" y="192" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
@@ -66,7 +66,7 @@
     <property name="onInteract" value="speak('Be careful around the machine.')"/>
    </properties>
   </object>
-  <object id="85" name="npc" type="Character" x="336" y="368" world2_battle="16" height="16">
+  <object id="85" name="npc" type="Character" x="336" y="368" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="WEST"/>
@@ -74,95 +74,95 @@
     <property name="onInteract" value="speak('The test run was a success!')"/>
    </properties>
   </object>
-  <object id="86" name="npc" type="Character" x="272" y="304" world2_battle="16" height="16">
+  <object id="86" name="npc" type="Character" x="272" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('The fuel reserves are off-limits.')"/>
    </properties>
   </object>
-  <object id="87" name="npc" type="Character" x="272" y="400" world2_battle="16" height="16">
+  <object id="87" name="npc" type="Character" x="272" y="400" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('The fuel reserves are off-limits.')"/>
    </properties>
   </object>
-  <object id="88" name="npc" type="Character" x="272" y="496" world2_battle="16" height="16">
+  <object id="88" name="npc" type="Character" x="272" y="496" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('The fuel reserves are off-limits.')"/>
    </properties>
   </object>
-  <object id="89" name="block" type="Event" x="176" y="128" world2_battle="560" height="16">
+  <object id="89" name="block" type="Event" x="176" y="128" width="560" height="16">
    <properties>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="90" name="target_left" type="Target" x="512" y="208" world2_battle="16" height="16"/>
-  <object id="93" name="target_right" type="Target" x="544" y="208" world2_battle="16" height="16"/>
-  <object id="94" name="target_center" type="Target" x="528" y="208" world2_battle="16" height="16"/>
-  <object id="95" name="tele" type="Event" x="160" y="128" world2_battle="16" height="512">
+  <object id="90" name="target_left" type="Target" x="512" y="208" width="16" height="16"/>
+  <object id="93" name="target_right" type="Target" x="544" y="208" width="16" height="16"/>
+  <object id="94" name="target_center" type="Target" x="528" y="208" width="16" height="16"/>
+  <object id="95" name="tele" type="Event" x="160" y="128" width="16" height="512">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 40, 26, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="97" name="tele" type="Event" x="736" y="128" world2_battle="16" height="512">
+  <object id="97" name="tele" type="Event" x="736" y="128" width="16" height="512">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 40, 26, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="98" name="tele" type="Event" x="176" y="624" world2_battle="560" height="16">
+  <object id="98" name="tele" type="Event" x="176" y="624" width="560" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 40, 26, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="99" name="door" type="Target" x="528" y="176" world2_battle="16" height="16"/>
-  <object id="100" name="tele" type="Event" x="528" y="160" world2_battle="16" height="16">
+  <object id="99" name="door" type="Target" x="528" y="176" width="16" height="16"/>
+  <object id="100" name="tele" type="Event" x="528" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/gate_depot.tmx', 'door')"/>
    </properties>
   </object>
-  <object id="101" name="autostart" type="Event" x="496" y="352" world2_battle="16" height="16">
+  <object id="101" name="autostart" type="Event" x="496" y="352" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('lucifer01')"/>
     <property name="onEnter" value="play('world3/lucifer01.lua')"/>
    </properties>
   </object>
-  <object id="102" name="aven" type="Character" x="512" y="608" world2_battle="16" height="16">
+  <object id="102" name="aven" type="Character" x="512" y="608" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_aven"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate')"/>
    </properties>
   </object>
-  <object id="103" name="zkauba" type="Character" x="544" y="608" world2_battle="16" height="16">
+  <object id="103" name="zkauba" type="Character" x="544" y="608" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="NORTH"/>
     <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate')"/>
    </properties>
   </object>
-  <object id="104" name="david" type="Character" x="528" y="480" world2_battle="16" height="16">
+  <object id="104" name="david" type="Character" x="528" y="480" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_david"/>
     <property name="hide" value="return not getSwitch('visitors_appear') or getSwitch('world3_gate')"/>
    </properties>
   </object>
-  <object id="105" name="lara" type="Character" x="528" y="480" world2_battle="16" height="16">
+  <object id="105" name="lara" type="Character" x="528" y="480" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="hide" value="return not getSwitch('visitors_appear') or getSwitch('world3_gate')"/>
    </properties>
   </object>
-  <object id="107" name="autostart" type="Event" x="496" y="480" world2_battle="16" height="16">
+  <object id="107" name="autostart" type="Event" x="496" y="480" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('machine_dead') or getSwitch('world3_gate')"/>
     <property name="onEnter" value="play('world3/gate.lua')"/>
    </properties>
   </object>
-  <object id="109" name="zkauba" type="Character" x="544" y="512" world2_battle="16" height="16">
+  <object id="109" name="zkauba" type="Character" x="544" y="512" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="face" value="WEST"/>
@@ -170,20 +170,20 @@
     <property name="onInteract" value="speak('Zkauba', 'Good luck!')"/>
    </properties>
   </object>
-  <object id="110" name="tele" type="Event" x="528" y="480" world2_battle="16" height="16">
+  <object id="110" name="tele" type="Event" x="528" y="480" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('world3_gate') or getSwitch('ares_dead')"/>
     <property name="onCollide" value="targetTele('tower/reverse_f10.tmx', 'entry', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="113" name="tele" type="Event" x="528" y="480" world2_battle="16" height="16">
+  <object id="113" name="tele" type="Event" x="528" y="480" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('ares_dead')"/>
     <property name="onCollide" value="teleport('tower/f10.tmx', 14, 13, 'SOUTH')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="57" height="48">
+ <layer name="Tile Layer 3" width="57" height="48">
   <properties>
    <property name="z" value="1.0"/>
   </properties>

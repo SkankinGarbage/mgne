@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="61" height="25" tileworld2_battle="16" tileheight="16" nextobjectid="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="61" height="25" tilewidth="16" tileheight="16" nextobjectid="32">
  <properties>
   <property name="bgm" value="no_change"/>
   <property name="encounter" value="encounterset_level01_danger00"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="61" height="25">
+ <layer name="Tile Layer 1" width="61" height="25">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2XUQqEMAxE++mRvEM/ev/b7H5YEDdJk3FoXcyDoNBpkxEbyFZK2YSQkHSa1rvXCnYNyBnp+X8912+041mP/dWRb6SV8nT9KHo9d+u1aKf33dBdv6ullfDqW2A9WoM3Rwf9l6JEPCOgdwk9d+Z91tbT8zs8n3sf07OnP2th9WJtT7Te3aHxrLNAe/EVT71P8cwiPWOa9GyvP+H7pGdMk55/Yc08LGb1MMbMw2KF59W8/T5r9aRn+ww0x0w89YzmFObMM4PIvGaxuhffodf+Afoej9jUFwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="61" height="25">
+ <layer name="Tile Layer 2" width="61" height="25">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,63 +24,63 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="16" name="tele" type="Event" x="16" y="160" world2_battle="16" height="16">
+  <object id="16" name="tele" type="Event" x="16" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/mirror.tmx', 15, 24)"/>
    </properties>
   </object>
-  <object id="21" name="tele" type="Event" x="64" y="64" world2_battle="16" height="16">
+  <object id="21" name="tele" type="Event" x="64" y="64" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/mirror.tmx', 17, 20)"/>
    </properties>
   </object>
-  <object id="22" name="tele" type="Event" x="192" y="384" world2_battle="16" height="16">
+  <object id="22" name="tele" type="Event" x="192" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/mirror.tmx', 20, 34)"/>
    </properties>
   </object>
-  <object id="23" name="tele" type="Event" x="240" y="64" world2_battle="16" height="16">
+  <object id="23" name="tele" type="Event" x="240" y="64" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/mirror.tmx', 24, 17)"/>
    </properties>
   </object>
-  <object id="24" name="tele" type="Event" x="368" y="288" world2_battle="16" height="16">
+  <object id="24" name="tele" type="Event" x="368" y="288" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/mirror.tmx', 26, 34)"/>
    </properties>
   </object>
-  <object id="25" name="tele" type="Event" x="432" y="64" world2_battle="16" height="16">
+  <object id="25" name="tele" type="Event" x="432" y="64" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/mirror.tmx', 30, 17)"/>
    </properties>
   </object>
-  <object id="26" name="tele" type="Event" x="592" y="160" world2_battle="16" height="16">
+  <object id="26" name="tele" type="Event" x="592" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/mirror.tmx', 36, 21)"/>
    </properties>
   </object>
-  <object id="27" name="tele" type="Event" x="768" y="64" world2_battle="16" height="16">
+  <object id="27" name="tele" type="Event" x="768" y="64" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/mirror.tmx', 41, 17)"/>
    </properties>
   </object>
-  <object id="28" name="tele" type="Event" x="944" y="384" world2_battle="16" height="16">
+  <object id="28" name="tele" type="Event" x="944" y="384" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/mirror.tmx', 47, 36)"/>
    </properties>
   </object>
-  <object id="29" name="chest" type="Chest" x="896" y="112" world2_battle="16" height="16">
+  <object id="29" name="chest" type="Chest" x="896" y="112" width="16" height="16">
    <properties>
     <property name="item" value="wpn_whip"/>
    </properties>
   </object>
-  <object id="30" name="chest" type="Chest" x="896" y="144" world2_battle="16" height="16">
+  <object id="30" name="chest" type="Chest" x="896" y="144" width="16" height="16">
    <properties>
     <property name="item" value="wpn_bowPoison"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="61" height="25">
+ <layer name="Tile Layer 3" width="61" height="25">
   <properties>
    <property name="z" value="1.0"/>
   </properties>

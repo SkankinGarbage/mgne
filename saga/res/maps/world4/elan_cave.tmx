@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="45" height="25" tileworld2_battle="16" tileheight="16" nextobjectid="100">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="45" height="25" tilewidth="16" tileheight="16" nextobjectid="100">
  <properties>
   <property name="bgm" value="generic_town"/>
   <property name="name" value="Elan"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="45" height="25">
+ <layer name="Tile Layer 1" width="45" height="25">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC82X0Q2DMAxEoy7AWv3rEh2Iv/zRVdtItWRZ54tTQmNLJyRM4JEcNillfRwBZYvGtBNlZa5E2Zhl7W9EmfwhLG39GfNecnBr3rb+jLmWHNxRXsS9KuS701x3IMu9mhnxvj56fI+IOwuz5n0qIe5MzJbXcveYWe+c1VctM+IV9ZhtzdQ1RufO9tUZzJZJvmlbGyV3tq8iP3u8iNnOn61BVV1jczOYPW6vbqD5Yz0fnZ/BHKnPnhdYz0f/BTOZI/9J4tNI//TW4B/Mdm5H3/cq5t4+RXhH3vdqP/f2KpWMXcnM9ips7ErmkbGeIj47w2yfEQ3moa2TF/0SunaO3od5aOvkkddGn6vraDTew+mWBZQRAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="45" height="25">
+ <layer name="Tile Layer 2" width="45" height="25">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -30,14 +30,14 @@
    </properties>
    <polygon points="0,0 0,160 80,160 80,0"/>
   </object>
-  <object id="84" name="shop" type="Character" x="224" y="240" world2_battle="16" height="16">
+  <object id="84" name="shop" type="Character" x="224" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_elan_forge')"/>
    </properties>
   </object>
-  <object id="85" name="npc" type="Character" x="64" y="272" world2_battle="16" height="16">
+  <object id="85" name="npc" type="Character" x="64" y="272" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="WEST"/>
@@ -45,45 +45,45 @@
     <property name="onInteract" value="speak('We outfit our scouts with the finest weapons from the caldera forge.')"/>
    </properties>
   </object>
-  <object id="86" name="npc" type="Character" x="512" y="240" world2_battle="16" height="16">
+  <object id="86" name="npc" type="Character" x="512" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="onBehavior" value="this.wander()"/>
     <property name="onInteract" value="speak('Elan weaponry is imbued with the magic in elemental stones.')"/>
    </properties>
   </object>
-  <object id="87" name="forger" type="Character" x="576" y="64" world2_battle="16" height="16">
+  <object id="87" name="forger" type="Character" x="576" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="onInteract" value="play('world4/elan_forge01.lua')"/>
    </properties>
   </object>
-  <object id="89" name="forger" type="Character" x="608" y="64" world2_battle="16" height="16">
+  <object id="89" name="forger" type="Character" x="608" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="onInteract" value="play('world4/elan_forge02.lua')"/>
    </properties>
   </object>
-  <object id="90" name="forge" type="Target" x="112" y="352" world2_battle="16" height="16"/>
-  <object id="91" name="tele" type="Event" x="112" y="368" world2_battle="16" height="16">
+  <object id="90" name="forge" type="Target" x="112" y="352" width="16" height="16"/>
+  <object id="91" name="tele" type="Event" x="112" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/elan.tmx', 'forge')"/>
    </properties>
   </object>
-  <object id="92" name="door_in" type="Target" x="112" y="224" world2_battle="16" height="16"/>
-  <object id="93" name="door_out" type="Target" x="512" y="352" world2_battle="16" height="16"/>
-  <object id="94" name="tele" type="Event" x="112" y="208" world2_battle="16" height="16">
+  <object id="92" name="door_in" type="Target" x="112" y="224" width="16" height="16"/>
+  <object id="93" name="door_out" type="Target" x="512" y="352" width="16" height="16"/>
+  <object id="94" name="tele" type="Event" x="112" y="208" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/elan_cave.tmx', 'door_out')"/>
    </properties>
   </object>
-  <object id="95" name="tele" type="Event" x="512" y="368" world2_battle="16" height="16">
+  <object id="95" name="tele" type="Event" x="512" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/elan_cave.tmx', 'door_in')"/>
    </properties>
   </object>
-  <object id="96" name="excaliber" type="Target" x="608" y="256" world2_battle="16" height="16"/>
-  <object id="97" name="smithy" type="Character" x="592" y="240" world2_battle="16" height="16">
+  <object id="96" name="excaliber" type="Target" x="608" y="256" width="16" height="16"/>
+  <object id="97" name="smithy" type="Character" x="592" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="NORTH"/>
@@ -91,7 +91,7 @@
     <property name="onInteract" value="speak('We all owe you thanks for slaying Moloch.')"/>
    </properties>
   </object>
-  <object id="98" name="seer" type="Character" x="576" y="256" world2_battle="16" height="16">
+  <object id="98" name="seer" type="Character" x="576" y="256" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="EAST"/>
@@ -100,7 +100,7 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="45" height="25">
+ <layer name="Tile Layer 3" width="45" height="25">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -108,7 +108,7 @@
    H4sIAAAAAAAAC+3NsQ0AIAwDwexf0dFlVnaAKKG4k760HAEAAABMyE8/VkEvbva7oG4HxS4pJ5QRAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="45" height="25">
+ <layer name="Tile Layer 4" width="45" height="25">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="41" height="40" tileworld2_battle="16" tileheight="16" nextobjectid="6">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="41" height="40" tilewidth="16" tileheight="16" nextobjectid="6">
  <properties>
   <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level00_danger05"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="41" height="40" opacity="0.9">
+ <layer name="Tile Layer 1" width="41" height="40" opacity="0.9">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2VQQoAIQhF6x6doF2XmPvOdk43mwIJQ3NygviLByL8+opoCiEkAAAAABxFrtwkntVmg3aGUnlIPKstBu0MF4O2fxat1WMkaP5pPbNoV3mMArRvuzz+ofWexxVaq1fP90/3SPeI5x7+At0jLebuhpTzrI+be3o32t9SzvvOjHYf9SvlvO/M6J8+z9XQv7VzbjW92u1RW8duD/AIAAAArOEFZV+KRaAZAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="41" height="40">
+ <layer name="Tile Layer 2" width="41" height="40">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,12 +24,12 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="tele" type="Event" x="496" y="464" world2_battle="16" height="16">
+  <object id="1" name="tele" type="Event" x="496" y="464" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/herocave02.tmx', 21, 9)"/>
    </properties>
   </object>
-  <object id="2" name="david" type="Character" x="352" y="400" world2_battle="16" height="16">
+  <object id="2" name="david" type="Character" x="352" y="400" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_david"/>
     <property name="face" value="WEST"/>
@@ -37,27 +37,27 @@
     <property name="onInteract" value="play('world1/david03.lua')"/>
    </properties>
   </object>
-  <object id="3" name="augur" type="Character" x="224" y="224" world2_battle="16" height="16">
+  <object id="3" name="augur" type="Character" x="224" y="224" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="hide" value="return getSwitch('augur_dead')"/>
     <property name="onInteract" value="play('world1/augur.lua')"/>
    </properties>
   </object>
-  <object id="4" name="door" type="Event" x="224" y="208" world2_battle="16" height="16">
+  <object id="4" name="door" type="Event" x="224" y="208" width="16" height="16">
    <properties>
     <property name="onInteract" value="play('world1/herogate01.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="5" name="chest" type="Chest" x="464" y="224" world2_battle="16" height="16">
+  <object id="5" name="chest" type="Chest" x="464" y="224" width="16" height="16">
    <properties>
     <property name="collectable" value="stone_water"/>
     <property name="switchName" value="water1"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="41" height="40">
+ <layer name="Tile Layer 3" width="41" height="40">
   <properties>
    <property name="z" value="1.0"/>
   </properties>

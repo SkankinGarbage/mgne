@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="52" height="41" tileworld2_battle="16" tileheight="16" nextobjectid="79">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="41" tilewidth="16" tileheight="16" nextobjectid="79">
  <properties>
   <property name="bgm" value="optional_dungeon"/>
   <property name="encounter" value="encounterset_level09_danger01"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="52" height="41">
+ <layer name="Tile Layer 1" width="52" height="41">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2XOw6AIBAFuYKdR+EIXNHGsxoLG5NFPm8hkSmm0eRthuDGd4YQTgCAhTkK6c21ZuGTJxXSm2vNGu2jyn0/U3vU+EQnn5bcmvnWu02Ym0S5Fs93mYK9C3ZhburMVfi03PcSnxn7QLXf1PsGAAAA/BjV51S5q/n89f9ttI+XR3Sa79V7v8h1RMU5evVei7sj5npc7z5Q996S85vlQz8FAAAYywU30z2MUCEAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="52" height="41">
+ <layer name="Tile Layer 2" width="52" height="41">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,26 +24,26 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="49" name="stairs_se" type="Target" x="656" y="464" world2_battle="16" height="16"/>
-  <object id="50" name="stairs_nw" type="Target" x="304" y="176" world2_battle="16" height="16"/>
-  <object id="51" name="stairs_ne" type="Target" x="656" y="176" world2_battle="16" height="16"/>
-  <object id="57" name="stairs_sw" type="Target" x="160" y="464" world2_battle="16" height="16"/>
-  <object id="59" name="tele" type="Event" x="304" y="160" world2_battle="16" height="16">
+  <object id="49" name="stairs_se" type="Target" x="656" y="464" width="16" height="16"/>
+  <object id="50" name="stairs_nw" type="Target" x="304" y="176" width="16" height="16"/>
+  <object id="51" name="stairs_ne" type="Target" x="656" y="176" width="16" height="16"/>
+  <object id="57" name="stairs_sw" type="Target" x="160" y="464" width="16" height="16"/>
+  <object id="59" name="tele" type="Event" x="304" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'stairs_nw')"/>
    </properties>
   </object>
-  <object id="60" name="tele" type="Event" x="656" y="160" world2_battle="16" height="16">
+  <object id="60" name="tele" type="Event" x="656" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'stairs_ne')"/>
    </properties>
   </object>
-  <object id="61" name="tele" type="Event" x="656" y="448" world2_battle="16" height="16">
+  <object id="61" name="tele" type="Event" x="656" y="448" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'stairs_se')"/>
    </properties>
   </object>
-  <object id="62" name="tele" type="Event" x="160" y="448" world2_battle="16" height="16">
+  <object id="62" name="tele" type="Event" x="160" y="448" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/sarnath02.tmx', 'stairs_sw')"/>
    </properties>
@@ -83,56 +83,56 @@
    </properties>
    <polygon points="0,0 0,96 64,96 64,0"/>
   </object>
-  <object id="70" name="guard" type="Character" x="272" y="496" world2_battle="16" height="16">
+  <object id="70" name="guard" type="Character" x="272" y="496" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="hide" value="return getSwitch('guard_sw')"/>
     <property name="onInteract" value="sceneSwitch('guard_sw', true); play('world4/sarnath_guard.lua')"/>
    </properties>
   </object>
-  <object id="71" name="guard" type="Character" x="192" y="208" world2_battle="16" height="16">
+  <object id="71" name="guard" type="Character" x="192" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="hide" value="return getSwitch('guard_nw')"/>
     <property name="onInteract" value="sceneSwitch('guard_nw', true); play('world4/sarnath_guard.lua')"/>
    </properties>
   </object>
-  <object id="72" name="guard" type="Character" x="544" y="208" world2_battle="16" height="16">
+  <object id="72" name="guard" type="Character" x="544" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="hide" value="return getSwitch('guard_ne')"/>
     <property name="onInteract" value="sceneSwitch('guard_ne', true); play('world4/sarnath_guard.lua')"/>
    </properties>
   </object>
-  <object id="73" name="guard" type="Character" x="544" y="496" world2_battle="16" height="16">
+  <object id="73" name="guard" type="Character" x="544" y="496" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="hide" value="return getSwitch('guard_se')"/>
     <property name="onInteract" value="sceneSwitch('guard_se', true); play('world4/sarnath_guard.lua')"/>
    </properties>
   </object>
-  <object id="74" name="chest" type="Chest" x="544" y="144" world2_battle="16" height="16">
+  <object id="74" name="chest" type="Chest" x="544" y="144" width="16" height="16">
    <properties>
     <property name="item" value="item_str99"/>
    </properties>
   </object>
-  <object id="76" name="chest" type="Chest" x="224" y="128" world2_battle="16" height="16">
+  <object id="76" name="chest" type="Chest" x="224" y="128" width="16" height="16">
    <properties>
     <property name="item" value="shield_babel"/>
    </properties>
   </object>
-  <object id="77" name="chest" type="Chest" x="288" y="432" world2_battle="16" height="16">
+  <object id="77" name="chest" type="Chest" x="288" y="432" width="16" height="16">
    <properties>
     <property name="item" value="wpn_lsaber"/>
    </properties>
   </object>
-  <object id="78" name="chest" type="Chest" x="608" y="432" world2_battle="16" height="16">
+  <object id="78" name="chest" type="Chest" x="608" y="432" width="16" height="16">
    <properties>
     <property name="item" value="pot_xcure"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="52" height="41">
+ <layer name="Tile Layer 3" width="52" height="41">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -140,7 +140,7 @@
    H4sIAAAAAAAAC+3BMQEAAADCoPVP7WsIoAAAAAAAAAAAeAN81g+XUCEAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="52" height="41">
+ <layer name="Tile Layer 4" width="52" height="41">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

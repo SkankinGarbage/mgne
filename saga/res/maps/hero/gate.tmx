@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="52" height="48" tileworld2_battle="16" tileheight="16" nextobjectid="78">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="52" height="48" tilewidth="16" tileheight="16" nextobjectid="78">
  <properties>
   <property name="bgm" value="gate_theme"/>
   <property name="name" value="F1 Gate"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="52" height="48">
+ <layer name="Tile Layer 1" width="52" height="48">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2YSw7DIAxEU3UXdZcb9f6H6qaRIoQ9g20caFnMhpDEz3j4Pbdtexr1FsS+/xJkjccrL88haFae0YTqReIdlRnVC8PjfT5CPS6e/jxMrJK/GI+hb8zK02tO1+Iv9fhK40F97vSCxCPl9iD6ZPMwuW9R7/gzeDLWW9bbGt8MPGV9l/1q3hiZB/WzeCabBzFIPDvJw6xPXmnfZHkY7QRPxNhpa0DL+JxieWoxZ3sL1ZvEdLZr80sGD1pzauOi8Whzg/Y/a949PNeYJSbEY90LIR7pORofzUcMT7Qv0PPaGlpjKWOvtUfyWM8oUr5Z/2g8HjZUp+y+UxoH1Ja1V0C8KI5a/BKPtt+N5inF5pWtvyweJlYPj/Zuj73cP/Iw51QLTw+fMDzMnYeklvNCBLfnvok5d2u5uIvHMz5XWWslmidCjI8izrEt9dDLpyiWHvNGBs9M+jWejHuexbO0tLS0tMTrA9SOEiUAJwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="52" height="48">
+ <layer name="Tile Layer 2" width="52" height="48">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,42 +23,42 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="32" name="tele" type="Event" x="208" y="560" world2_battle="336" height="16">
+  <object id="32" name="tele" type="Event" x="208" y="560" width="336" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 16)"/>
    </properties>
   </object>
-  <object id="46" name="tele" type="Event" x="208" y="128" world2_battle="336" height="16">
+  <object id="46" name="tele" type="Event" x="208" y="128" width="336" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 16)"/>
    </properties>
   </object>
-  <object id="47" name="tele" type="Event" x="192" y="128" world2_battle="16" height="448">
+  <object id="47" name="tele" type="Event" x="192" y="128" width="16" height="448">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 16)"/>
    </properties>
   </object>
-  <object id="48" name="tele" type="Event" x="544" y="128" world2_battle="16" height="448">
+  <object id="48" name="tele" type="Event" x="544" y="128" width="16" height="448">
    <properties>
     <property name="onCollide" value="teleport('world1/overworld.tmx', 59, 16)"/>
    </properties>
   </object>
-  <object id="49" name="tele" type="Event" x="512" y="304" world2_battle="16" height="16">
+  <object id="49" name="tele" type="Event" x="512" y="304" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate_interior.tmx', 19, 25)"/>
    </properties>
   </object>
-  <object id="50" name="tele" type="Event" x="256" y="368" world2_battle="16" height="16">
+  <object id="50" name="tele" type="Event" x="256" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate_interior.tmx', 4, 24)"/>
    </properties>
   </object>
-  <object id="51" name="tele" type="Event" x="304" y="224" world2_battle="16" height="16">
+  <object id="51" name="tele" type="Event" x="304" y="224" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('hero/gate_interior.tmx', 20, 8)"/>
    </properties>
   </object>
-  <object id="52" name="npc" type="Character" x="384" y="224" world2_battle="16" height="16">
+  <object id="52" name="npc" type="Character" x="384" y="224" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -67,7 +67,7 @@
     <property name="onInteract" value="speak('The gate is sealed.')"/>
    </properties>
   </object>
-  <object id="53" name="knight3" type="Character" x="432" y="288" world2_battle="16" height="16">
+  <object id="53" name="knight3" type="Character" x="432" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
@@ -75,7 +75,7 @@
     <property name="onInteract" value="play('hero/gate01.lua')"/>
    </properties>
   </object>
-  <object id="54" name="knight1" type="Character" x="384" y="304" world2_battle="16" height="16">
+  <object id="54" name="knight1" type="Character" x="384" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_david"/>
     <property name="face" value="NORTH"/>
@@ -83,7 +83,7 @@
     <property name="onInteract" value="play('hero/gate01.lua')"/>
    </properties>
   </object>
-  <object id="56" name="knight4" type="Character" x="448" y="304" world2_battle="16" height="16">
+  <object id="56" name="knight4" type="Character" x="448" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
@@ -91,7 +91,7 @@
     <property name="onInteract" value="play('hero/gate01.lua')"/>
    </properties>
   </object>
-  <object id="57" name="knight2" type="Character" x="400" y="288" world2_battle="16" height="16">
+  <object id="57" name="knight2" type="Character" x="400" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
@@ -99,22 +99,22 @@
     <property name="onInteract" value="play('hero/gate01.lua')"/>
    </properties>
   </object>
-  <object id="60" name="target" type="Event" x="416" y="288" world2_battle="16" height="16"/>
-  <object id="62" name="shiva" type="Character" x="416" y="240" world2_battle="16" height="16">
+  <object id="60" name="target" type="Event" x="416" y="288" width="16" height="16"/>
+  <object id="62" name="shiva" type="Character" x="416" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="SOUTH"/>
     <property name="hide" value="return not getSwitch('shiva_appears') or getSwitch('shiva_mutate')"/>
    </properties>
   </object>
-  <object id="64" name="shiva_mutate" type="Character" x="416" y="240" world2_battle="16" height="16">
+  <object id="64" name="shiva_mutate" type="Character" x="416" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_shiva"/>
     <property name="face" value="SOUTH"/>
     <property name="hide" value="return not getSwitch('shiva_mutate') or getSwitch('hero_done')"/>
    </properties>
   </object>
-  <object id="65" name="npc" type="Character" x="384" y="304" world2_battle="16" height="16">
+  <object id="65" name="npc" type="Character" x="384" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
@@ -123,7 +123,7 @@
     <property name="onInteract" value="speak('We knights must protect the gate.')"/>
    </properties>
   </object>
-  <object id="66" name="npc" type="Character" x="448" y="304" world2_battle="16" height="16">
+  <object id="66" name="npc" type="Character" x="448" y="304" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="NORTH"/>
@@ -132,7 +132,7 @@
     <property name="onInteract" value="speak('We knights must protect the gate.')"/>
    </properties>
   </object>
-  <object id="67" name="david" type="Character" x="400" y="288" world2_battle="16" height="16">
+  <object id="67" name="david" type="Character" x="400" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_david"/>
     <property name="face" value="EAST"/>
@@ -140,7 +140,7 @@
     <property name="onInteract" value="speak('David', 'I knew that oracle was trouble!')"/>
    </properties>
   </object>
-  <object id="68" name="npc" type="Character" x="432" y="288" world2_battle="16" height="16">
+  <object id="68" name="npc" type="Character" x="432" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="WEST"/>
@@ -148,14 +148,14 @@
     <property name="onInteract" value="speak('Grandmaster', 'The gate is open. Thank you for your help and I hope you can find who you\'re looking for.')"/>
    </properties>
   </object>
-  <object id="69" name="gate" type="Event" x="416" y="224" world2_battle="16" height="16">
+  <object id="69" name="gate" type="Event" x="416" y="224" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('hero_done')"/>
     <property name="onCollide" value="teleport('tower/f01.tmx', 7, 12, 'NORTH')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="52" height="48">
+ <layer name="Tile Layer 3" width="52" height="48">
   <properties>
    <property name="z" value="1.0"/>
   </properties>

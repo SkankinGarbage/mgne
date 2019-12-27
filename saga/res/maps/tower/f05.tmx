@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="27" height="41" tileworld2_battle="16" tileheight="16" nextobjectid="94">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="27" height="41" tilewidth="16" tileheight="16" nextobjectid="94">
  <properties>
   <property name="bgm" value="tower"/>
   <property name="encounter" value="encounterset_level02_danger00"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="27" height="41">
+ <layer name="Tile Layer 1" width="27" height="41">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2WwQ6CMBBE6c9x0pNc1DsXwv9flYRNJuO0ZaFtQmSTSVOi+7rbcaXrrmgZT6GarAFUg4V1vEGl67NcVksPwvpK8IxjtSDLnpXqp/WtT8j6WYLFuSfxrBZL6Uws89dW1l4een0L64j30et8dhR6Med99X2cEcyZQYqXysczDsX3MQvxfcZyqRmHUqwAUqxYLq/PgpDXp//AUrOO/R5orz7PeTx13b+6rWugfekeLr59rOtI+9KsxbevdR1p72Fx7z1nSJ0/NzOsX0dYmAelZoX6ncf8OXW/NWEeVCxwhnl6NyRyxgL/I3I85KTO7+Exk+99L4d5yi/oraMc5JlfmJW7972hWLWiNYtVK9R7RK1Q7xFXtI0PnWh3MUwRAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="27" height="41">
+ <layer name="Tile Layer 2" width="27" height="41">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,39 +24,39 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="82" name="gate" type="Event" x="208" y="288" world2_battle="16" height="32">
+  <object id="82" name="gate" type="Event" x="208" y="288" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_gate"/>
     <property name="onCollide" value="teleport('world2/overworld.tmx', 64, 26, 'SOUTH')"/>
    </properties>
   </object>
-  <object id="85" name="block" type="Event" x="352" y="400" world2_battle="16" height="16">
+  <object id="85" name="block" type="Event" x="352" y="400" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('world2_done')"/>
     <property name="onInteract" value="speak('It won\'t open.')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="87" name="mem_tele" type="Event" x="64" y="416" world2_battle="16" height="16">
+  <object id="87" name="mem_tele" type="Event" x="64" y="416" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f01_transition.tmx', 'tower/f04.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
-  <object id="88" name="target_b" type="Event" x="64" y="400" world2_battle="16" height="16"/>
-  <object id="91" name="target_a" type="Event" x="352" y="400" world2_battle="16" height="16"/>
-  <object id="92" name="mem_tele" type="Event" x="352" y="416" world2_battle="16" height="16">
+  <object id="88" name="target_b" type="Event" x="64" y="400" width="16" height="16"/>
+  <object id="91" name="target_a" type="Event" x="352" y="400" width="16" height="16"/>
+  <object id="92" name="mem_tele" type="Event" x="352" y="416" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('world2_done')"/>
     <property name="onCollide" value="memTele('tower/f05_transition.tmx', 'tower/f06.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
-  <object id="93" name="memory" type="Teleport Memory" x="208" y="320" world2_battle="16" height="16">
+  <object id="93" name="memory" type="Teleport Memory" x="208" y="320" width="16" height="16">
    <properties>
     <property name="displayName" value="Wartorn World"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="27" height="41">
+ <layer name="Tile Layer 3" width="27" height="41">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -64,7 +64,7 @@
    H4sIAAAAAAAAC+3NwQkAIAwEwRSZj9h/H7YgeAQfMwXsVgEAwB/WYKdDr5vODr1SHQDeHLaP+chMEQAA
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="27" height="41">
+ <layer name="Tile Layer 4" width="27" height="41">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

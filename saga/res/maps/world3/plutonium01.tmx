@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="25" height="18" tileworld2_battle="16" tileheight="16" nextobjectid="90">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="18" tilewidth="16" tileheight="16" nextobjectid="90">
  <properties>
   <property name="bgm" value="generic_cave"/>
   <property name="name" value="Plutonium Mines"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="25" height="18">
+ <layer name="Tile Layer 1" width="25" height="18">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAACxNmYGAQpgOuRcLYxNDlCMkTax61MMyOFiQMk2vBgmuJlEcWw2YHtTE2Oyixl1jzqGEHNkxtOwjFOSV2EJuuqGEHrvATxBN+1EhXICxBhB3CaDQp6YoUTI4+UgCyHbQCw8UOBqgdtAbk2AEArjJHHggHAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="25" height="18">
+ <layer name="Tile Layer 2" width="25" height="18">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -44,14 +44,14 @@
    </properties>
    <polygon points="16,16 16,192 80,192 80,16"/>
   </object>
-  <object id="78" name="target1" type="Target" x="48" y="64" world2_battle="16" height="16"/>
-  <object id="79" name="target2" type="Target" x="112" y="64" world2_battle="16" height="16"/>
-  <object id="81" name="tele" type="Event" x="192" y="256" world2_battle="16" height="16">
+  <object id="78" name="target1" type="Target" x="48" y="64" width="16" height="16"/>
+  <object id="79" name="target2" type="Target" x="112" y="64" width="16" height="16"/>
+  <object id="81" name="tele" type="Event" x="192" y="256" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 32, 14)"/>
    </properties>
   </object>
-  <object id="82" name="npc" type="Character" x="240" y="128" world2_battle="16" height="16">
+  <object id="82" name="npc" type="Character" x="240" y="128" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="SOUTH"/>
@@ -60,7 +60,7 @@
     <property name="onInteract" value="speak('These are the plutonium mines.')"/>
    </properties>
   </object>
-  <object id="83" name="npc" type="Character" x="128" y="160" world2_battle="16" height="16">
+  <object id="83" name="npc" type="Character" x="128" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="face" value="NORTH"/>
@@ -69,7 +69,7 @@
     <property name="onInteract" value="speak('You don\'t work here. You shouldn\'t be here.')"/>
    </properties>
   </object>
-  <object id="84" name="npc" type="Character" x="176" y="96" world2_battle="16" height="16">
+  <object id="84" name="npc" type="Character" x="176" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_golem"/>
     <property name="face" value="EAST"/>
@@ -78,7 +78,7 @@
     <property name="onInteract" value="speak('Everyone who works here is from Celephais, but all the plutonium goes to the City of Angels...')"/>
    </properties>
   </object>
-  <object id="86" name="npc" type="Character" x="96" y="64" world2_battle="16" height="16">
+  <object id="86" name="npc" type="Character" x="96" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="EAST"/>
@@ -86,7 +86,7 @@
     <property name="onInteract" value="speak('Get back to work!')"/>
    </properties>
   </object>
-  <object id="87" name="janine" type="Character" x="32" y="144" world2_battle="16" height="16">
+  <object id="87" name="janine" type="Character" x="32" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_janine"/>
     <property name="face" value="NORTH"/>
@@ -94,14 +94,14 @@
     <property name="onInteract" value="play('world3/janine02.lua')"/>
    </properties>
   </object>
-  <object id="88" name="entrance" type="target" x="32" y="160" world2_battle="16" height="16"/>
-  <object id="89" name="tele" type="Event" x="32" y="176" world2_battle="16" height="16">
+  <object id="88" name="entrance" type="target" x="32" y="160" width="16" height="16"/>
+  <object id="89" name="tele" type="Event" x="32" y="176" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/plutonium02.tmx', 'entrance')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="25" height="18">
+ <layer name="Tile Layer 3" width="25" height="18">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -109,7 +109,7 @@
    H4sIAAAAAAAAC2NgGAWjYBSMglEAA7UkYHL10cOOwQbo4TZy7QAA/QUkmAgHAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="25" height="18">
+ <layer name="Tile Layer 4" width="25" height="18">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

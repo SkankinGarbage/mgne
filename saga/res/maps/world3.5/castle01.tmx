@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="48" height="42" tileworld2_battle="16" tileheight="16" nextobjectid="30">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="42" tilewidth="16" tileheight="16" nextobjectid="30">
  <properties>
   <property name="bgm" value="plot_dungeon"/>
   <property name="encounter" value="encounterset_level07_danger01"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="48" height="42">
+ <layer name="Tile Layer 1" width="48" height="42">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2XywrCMBQFEwpCQVe6sav2U/L/P2UXBi6HnMZo8xDOYjYT0kxLb8XJOTcVsFampOUb1K/+X3hWpnb/Vhn15/vXN2c12+up/xhvzvMnYa+n/vL+C8Ac8737bwBzzPfufwDMMd+7/wowx3zv/jvA3KjzW8Jo8xt2ZoC5EecXO48YcX5TnannH/tHm9/Yiu956t0ZfX6Zz6237F+B+L8JPWvEfbim/mMWc9YCWI/9bJ8HX7t/M2dvgPXYz/Z58C3m156NjSmfW7e+Rb8luPT3M8dM9rXoZ7+v4cPmkNgX76X18z+b2v1CCCGEEP/OC0jvFRuAHwAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="48" height="42">
+ <layer name="Tile Layer 2" width="48" height="42">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,22 +24,22 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" name="tele" type="Event" x="176" y="480" world2_battle="416" height="16">
+  <object id="1" name="tele" type="Event" x="176" y="480" width="416" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/overworld.tmx', 50, 25)"/>
    </properties>
   </object>
-  <object id="3" name="tele" type="Event" x="176" y="416" world2_battle="16" height="64">
+  <object id="3" name="tele" type="Event" x="176" y="416" width="16" height="64">
    <properties>
     <property name="onCollide" value="teleport('world3.5/overworld.tmx', 50, 25)"/>
    </properties>
   </object>
-  <object id="4" name="tele" type="Event" x="576" y="416" world2_battle="16" height="64">
+  <object id="4" name="tele" type="Event" x="576" y="416" width="16" height="64">
    <properties>
     <property name="onCollide" value="teleport('world3.5/overworld.tmx', 50, 25)"/>
    </properties>
   </object>
-  <object id="17" name="guard" type="Character" x="256" y="240" world2_battle="16" height="16">
+  <object id="17" name="guard" type="Character" x="256" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -48,7 +48,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="18" name="guard" type="Character" x="368" y="384" world2_battle="16" height="16">
+  <object id="18" name="guard" type="Character" x="368" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -56,7 +56,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="19" name="guard" type="Character" x="384" y="384" world2_battle="16" height="16">
+  <object id="19" name="guard" type="Character" x="384" y="384" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -64,7 +64,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="20" name="guard" type="Character" x="448" y="144" world2_battle="16" height="16">
+  <object id="20" name="guard" type="Character" x="448" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -72,7 +72,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="21" name="guard" type="Character" x="304" y="144" world2_battle="16" height="16">
+  <object id="21" name="guard" type="Character" x="304" y="144" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -80,16 +80,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="22" name="guard" type="Character" x="432" y="240" world2_battle="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_knight"/>
-    <property name="face" value="SOUTH"/>
-    <property name="onBehavior" value="this.wander()"/>
-    <property name="onCollide" value="play('world3.5/castle_guard.lua')"/>
-    <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
-   </properties>
-  </object>
-  <object id="23" name="guard" type="Character" x="352" y="288" world2_battle="16" height="16">
+  <object id="22" name="guard" type="Character" x="432" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -98,7 +89,7 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="24" name="guard" type="Character" x="256" y="432" world2_battle="16" height="16">
+  <object id="23" name="guard" type="Character" x="352" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -107,13 +98,22 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="25" name="autostart" type="Event" x="336" y="400" world2_battle="16" height="16">
+  <object id="24" name="guard" type="Character" x="256" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="play('world3.5/castle_guard.lua')"/>
+    <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
+   </properties>
+  </object>
+  <object id="25" name="autostart" type="Event" x="336" y="400" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('world3.5_borg02') or not getSwitch('borg_revived')"/>
     <property name="onEnter" value="play('world3.5/borg02.lua')"/>
    </properties>
   </object>
-  <object id="27" name="guard" type="Character" x="512" y="416" world2_battle="16" height="16">
+  <object id="27" name="guard" type="Character" x="512" y="416" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="face" value="SOUTH"/>
@@ -122,14 +122,14 @@
     <property name="onInteract" value="play('world3.5/castle_guard.lua')"/>
    </properties>
   </object>
-  <object id="28" name="door" type="Target" x="368" y="256" world2_battle="16" height="16"/>
-  <object id="29" name="tele" type="Event" x="368" y="240" world2_battle="16" height="16">
+  <object id="28" name="door" type="Target" x="368" y="256" width="16" height="16"/>
+  <object id="29" name="tele" type="Event" x="368" y="240" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/castle02.tmx', 'door')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="48" height="42">
+ <layer name="Tile Layer 3" width="48" height="42">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="31" height="35" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="176">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="31" height="35" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="176">
  <properties>
   <property name="bgm" value="generic_town"/>
   <property name="name" value="Ermengarde"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="31" height="35">
+ <layer name="Tile Layer 1" width="31" height="35">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2Wuw2AMAwFvUDG8njAAMCuKEWafKQzCjR5T7rGkd51jpOZJQgJ7SrsgIib9mUuQMRN+zIOiLhpn9xyy/29u2b0Rt20b7N233lndkB3pO+0dt95Z3ZD9+w+RVHeJ3LXze7TrbjeHyq33Cu4dSv+eys+QNpPafQQAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="31" height="35">
+ <layer name="Tile Layer 2" width="31" height="35">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,58 +23,58 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="158" name="inn" type="Target" x="80" y="176" world2_battle="16" height="16"/>
-  <object id="159" name="tele" type="Event" x="80" y="192" world2_battle="16" height="16">
+  <object id="158" name="inn" type="Target" x="80" y="176" width="16" height="16"/>
+  <object id="159" name="tele" type="Event" x="80" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/ermengarde.tmx', 'inn')"/>
    </properties>
   </object>
-  <object id="161" name="pots" type="Target" x="400" y="176" world2_battle="16" height="16"/>
-  <object id="162" name="tele" type="Event" x="400" y="192" world2_battle="16" height="16">
+  <object id="161" name="pots" type="Target" x="400" y="176" width="16" height="16"/>
+  <object id="162" name="tele" type="Event" x="400" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/ermengarde.tmx', 'pots')"/>
    </properties>
   </object>
-  <object id="163" name="weapons" type="Target" x="80" y="512" world2_battle="16" height="16"/>
-  <object id="164" name="tele" type="Event" x="80" y="528" world2_battle="16" height="16">
+  <object id="163" name="weapons" type="Target" x="80" y="512" width="16" height="16"/>
+  <object id="164" name="tele" type="Event" x="80" y="528" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/ermengarde.tmx', 'weapons')"/>
    </properties>
   </object>
-  <object id="165" name="pub" type="Target" x="400" y="512" world2_battle="16" height="16"/>
-  <object id="166" name="tele" type="Event" x="400" y="528" world2_battle="16" height="16">
+  <object id="165" name="pub" type="Target" x="400" y="512" width="16" height="16"/>
+  <object id="166" name="tele" type="Event" x="400" y="528" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/ermengarde.tmx', 'pub')"/>
    </properties>
   </object>
-  <object id="167" name="innkeep" type="Character" x="80" y="96" world2_battle="16" height="16">
+  <object id="167" name="innkeep" type="Character" x="80" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="onInteract" value="inn()"/>
    </properties>
   </object>
-  <object id="168" name="shop" type="Character" x="400" y="96" world2_battle="16" height="16">
+  <object id="168" name="shop" type="Character" x="400" y="96" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_world3_potions')"/>
    </properties>
   </object>
-  <object id="169" name="shop" type="Character" x="80" y="432" world2_battle="16" height="16">
+  <object id="169" name="shop" type="Character" x="80" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="shop('shop_ermengarde')"/>
    </properties>
   </object>
-  <object id="170" name="npc" type="Character" x="400" y="400" world2_battle="16" height="16">
+  <object id="170" name="npc" type="Character" x="400" y="400" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('Stay as long as you like.')"/>
    </properties>
   </object>
-  <object id="171" name="npc" type="Character" x="352" y="464" world2_battle="16" height="16">
+  <object id="171" name="npc" type="Character" x="352" y="464" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
@@ -82,7 +82,7 @@
     <property name="onInteract" value="speak('Humans can\'t use mana to resist magical attacks, but at least we can wear lots of resistance-granting armors.')"/>
    </properties>
   </object>
-  <object id="172" name="npc" type="Character" x="352" y="432" world2_battle="16" height="16">
+  <object id="172" name="npc" type="Character" x="352" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="EAST"/>
@@ -90,7 +90,7 @@
     <property name="onInteract" value="speak('Some monster families specialize in healing, resistances, or boss fights. Morph according to your needs!')"/>
    </properties>
   </object>
-  <object id="173" name="npc" type="Character" x="448" y="432" world2_battle="16" height="16">
+  <object id="173" name="npc" type="Character" x="448" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="WEST"/>
@@ -98,7 +98,7 @@
     <property name="onInteract" value="speak('Robots usually specialize in defense, agility, or strength. We can be much stronger than humans!')"/>
    </properties>
   </object>
-  <object id="174" name="npc" type="Character" x="448" y="464" world2_battle="16" height="16">
+  <object id="174" name="npc" type="Character" x="448" y="464" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="face" value="WEST"/>
@@ -107,7 +107,7 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="31" height="35">
+ <layer name="Tile Layer 3" width="31" height="35">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -115,7 +115,7 @@
    H4sIAAAAAAAAC+3WQQ0AIBADwTOAdRQgFgU8SHqBx4yA7bdVAHQaD3szvH3TW+HtdA8A4Ae+YsaptwEAC6eD9BAAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="31" height="35">
+ <layer name="Tile Layer 4" width="31" height="35">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

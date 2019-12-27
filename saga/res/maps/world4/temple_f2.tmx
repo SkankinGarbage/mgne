@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="19" height="20" tileworld2_battle="16" tileheight="16" nextobjectid="38">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="19" height="20" tilewidth="16" tileheight="16" nextobjectid="38">
  <properties>
   <property name="bgm" value="minor_dungeon"/>
   <property name="encounter" value="encounterset_level09_danger00"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="19" height="20">
+ <layer name="Tile Layer 1" width="19" height="20">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC2NggIBICjA6AIn5koEj0cyA4WgyMLobQeb7ALErGdgHyX0w90SRaVYUmvvIMQMd09MskJwgWthSYpYEFc1Cx4PBLOT0HQKlyTULWzofDGmCHLMoMRM9X/tSaBbMDFxlBykYZgYMkFMOwjA6IKccRHcPAALQymTwBQAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="19" height="20">
+ <layer name="Tile Layer 2" width="19" height="20">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,30 +24,30 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="25" name="stairs_down" type="Target" x="128" y="112" world2_battle="16" height="16"/>
-  <object id="26" name="tele" type="Event" x="128" y="128" world2_battle="16" height="16">
+  <object id="25" name="stairs_down" type="Target" x="128" y="112" width="16" height="16"/>
+  <object id="26" name="tele" type="Event" x="128" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/temple_f1.tmx', 'stairs_up')"/>
    </properties>
   </object>
-  <object id="28" name="chest" type="Chest" x="48" y="48" world2_battle="16" height="16"/>
-  <object id="30" name="chest" type="Chest" x="112" y="48" world2_battle="16" height="16"/>
-  <object id="31" name="chest" type="Chest" x="176" y="48" world2_battle="16" height="16"/>
-  <object id="32" name="chest" type="Chest" x="240" y="48" world2_battle="16" height="16"/>
-  <object id="33" name="chest" type="Chest" x="272" y="80" world2_battle="16" height="16"/>
-  <object id="34" name="chest" type="Chest" x="16" y="80" world2_battle="16" height="16"/>
-  <object id="35" name="chest" type="Chest" x="144" y="208" world2_battle="16" height="16">
+  <object id="28" name="chest" type="Chest" x="48" y="48" width="16" height="16"/>
+  <object id="30" name="chest" type="Chest" x="112" y="48" width="16" height="16"/>
+  <object id="31" name="chest" type="Chest" x="176" y="48" width="16" height="16"/>
+  <object id="32" name="chest" type="Chest" x="240" y="48" width="16" height="16"/>
+  <object id="33" name="chest" type="Chest" x="272" y="80" width="16" height="16"/>
+  <object id="34" name="chest" type="Chest" x="16" y="80" width="16" height="16"/>
+  <object id="35" name="chest" type="Chest" x="144" y="208" width="16" height="16">
    <properties>
     <property name="scene" value="play('world4/jonas01.lua')"/>
    </properties>
   </object>
-  <object id="36" name="npc" type="Character" x="64" y="160" world2_battle="16" height="16">
+  <object id="36" name="npc" type="Character" x="64" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_dead"/>
     <property name="onInteract" value="play('world4/monk.lua')"/>
    </properties>
   </object>
-  <object id="37" name="jonas" type="Character" x="192" y="80" world2_battle="16" height="16">
+  <object id="37" name="jonas" type="Character" x="192" y="80" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
     <property name="hide" value="return not getSwitch('temple_jonas')"/>

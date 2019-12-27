@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="72" height="68" tileworld2_battle="16" tileheight="16" nextobjectid="96">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="72" height="68" tilewidth="16" tileheight="16" nextobjectid="96">
  <properties>
   <property name="bgm" value="boss_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger02"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="72" height="68">
+ <layer name="Tile Layer 1" width="72" height="68">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2aQW4DMQhFJ+oqc4V0lQvl/repKgWJIjAfxyNjl8VXq2rGNc8Yf5Pcj+O4l0ql0qb6BjV7njP53BwVnzF8dszF0Xx2y0WK6Sw+H8WE7JNd+fzq1eCgxe3xsfIxKx8r7udbL/a7JjSnVs0fa+69fCL7UObmbBZX8pH75mR/s96VY2c890fysWoLyifjvrPO8eLT5jNSPXxoPpn4XMUoyofPZWc+veNl5HOFLD6RtcjMB713ox6wR9n5PEDtzKd1z2qd7Zq34+PswIfW/3XoeYHykePswgf1gahonOIT49Nb47PzQdcZ4ROp8Vn8z5V8ZL1GavwKfLQ8j/prre5H+GTeXyNqa09dy9b/oZzn+4Dz+eQ+1sPHqksZ+ZzvZ3gdiEjjgzKVysyHGEXvGi0+Vi82Ix+qpVRHb8ff/cXzJ1JHrByReZk9f2he/Kd1jkT5aAx24cP9bM9d1eIg9y2yDrP5WN4l6l80PhYjy09l5CPnyucWOX94jFr9Qu9bmfho69zLh7PQ4vZ6anROZuLTkz/n4e8RpNe2Cp/WOSL5nMo4kpHlixAfMPu+JfmgdcGqrxqfSB3PdN+SivRhIl4P5WP979lcSIi/4/Fbfg/1echzK/NB5fFpfe9ldT6ar27VL3nW8TF34cMZkY+xPg96GO9LrcDHkrb+0t+2+l5e/oz4znAWPpb/R/kgkvxnx4/w8XqDHh+rB4BodvyevP6gx0c+36pVmfrNqDxfF30/+tns7PiLT/EpPqVSqfS/9XWBZsdUfIpPFhWf4lN8ik/xyakV+fwA5PjwPoBMAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="72" height="68">
+ <layer name="Tile Layer 2" width="72" height="68">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,31 +24,31 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="84" name="entry" type="Target" x="608" y="912" world2_battle="16" height="16"/>
-  <object id="85" name="tele" type="Event" x="432" y="944" world2_battle="336" height="16">
+  <object id="84" name="entry" type="Target" x="608" y="912" width="16" height="16"/>
+  <object id="85" name="tele" type="Event" x="432" y="944" width="336" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/overworld.tmx', 'palace')"/>
    </properties>
   </object>
-  <object id="86" name="exit" type="Target" x="800" y="496" world2_battle="16" height="16"/>
-  <object id="87" name="tele" type="Event" x="800" y="480" world2_battle="16" height="16">
+  <object id="86" name="exit" type="Target" x="800" y="496" width="16" height="16"/>
+  <object id="87" name="tele" type="Event" x="800" y="480" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace02.tmx', 'entry')"/>
    </properties>
   </object>
-  <object id="89" name="lara" type="Character" x="432" y="928" world2_battle="16" height="16">
+  <object id="89" name="lara" type="Character" x="432" y="928" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_lara"/>
     <property name="hide" value="return getSwitch('brotherhood02')"/>
    </properties>
   </object>
-  <object id="90" name="zkauba" type="Character" x="432" y="912" world2_battle="16" height="16">
+  <object id="90" name="zkauba" type="Character" x="432" y="912" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="hide" value="return getSwitch('brotherhood02')"/>
    </properties>
   </object>
-  <object id="94" name="trigger" type="Event" x="400" y="944" world2_battle="16" height="16">
+  <object id="94" name="trigger" type="Event" x="400" y="944" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('brotherhood02')"/>
     <property name="onEnter" value="play('world5/brotherhood02.lua')"/>

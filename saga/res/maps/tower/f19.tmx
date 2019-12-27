@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="37" height="46" tileworld2_battle="16" tileheight="16" nextobjectid="140">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="37" height="46" tilewidth="16" tileheight="16" nextobjectid="140">
  <properties>
   <property name="bgm" value="tower"/>
   <property name="encounter" value="encounterset_level11_danger00"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="37" height="46">
+ <layer name="Tile Layer 1" width="37" height="46">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2XQQrDMAwEffFnestX8pi8vwRqKhbJ0spKAyWGPZTK3klsSU5r3/FShKMbcZa6skbE52F6mO5kinKN2KuZpFdE1hpVTOy+WftXxXSueySZDuB6mO5hOrURGnOuZsoow2TlVBf/VzB5PgzTvsDVP/OrmbJckucKpqb4WZJxGZ8Re0rmDPYr6bMHpHFFfMZ4Nf15R07I9dnaJLk8H8nOrhsV8zyY4xEm+U4ZJsnl+cjzGIldYWJ8Vpi8e9Mqk9XHrN7g1Sk8t4xPtAZWMnnzMkyReVhzGJ9Iv8B+5T1Ph7iW8NkNjw5xkilyxvH9Mj4jXusJyMPcN7U91NYfwuHVbrkXs/zR8ki+r1lN95iQK5sXVuysvs6YNC7vHFnnyuNhmHDNzYlFbS3GwzI1hYv9bjmCPgxT9i6ONfffmaq+WyqZJBcrWQ+rmQYXq4yPdx/HbwqmFmR9HqZ6Ji/2Vz53MI3fsz5awcT4MOdilSni8wa/JBV3mBoAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="37" height="46">
+ <layer name="Tile Layer 2" width="37" height="46">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,32 +24,32 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="132" name="mem_tele" type="Event" x="80" y="368" world2_battle="16" height="16">
+  <object id="132" name="mem_tele" type="Event" x="80" y="368" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f15_transition.tmx', 'tower/f18.tmx', 'ENTRANCE', 'B')"/>
    </properties>
   </object>
-  <object id="133" name="target_b" type="Target" x="80" y="384" world2_battle="16" height="16"/>
-  <object id="134" name="target_a" type="Target" x="288" y="192" world2_battle="16" height="16"/>
-  <object id="135" name="mem_tele" type="Event" x="288" y="176" world2_battle="16" height="16">
+  <object id="133" name="target_b" type="Target" x="80" y="384" width="16" height="16"/>
+  <object id="134" name="target_a" type="Target" x="288" y="192" width="16" height="16"/>
+  <object id="135" name="mem_tele" type="Event" x="288" y="176" width="16" height="16">
    <properties>
     <property name="onCollide" value="memTele('tower/f15_transition.tmx', 'tower/f20.tmx', 'ENTRANCE', 'A')"/>
    </properties>
   </object>
-  <object id="136" name="tele" type="Event" x="256" y="528" world2_battle="16" height="16">
+  <object id="136" name="tele" type="Event" x="256" y="528" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f19_sideworld.tmx', 'left')"/>
    </properties>
   </object>
-  <object id="137" name="left" type="Target" x="256" y="544" world2_battle="16" height="16"/>
-  <object id="138" name="tele" type="Event" x="320" y="528" world2_battle="16" height="16">
+  <object id="137" name="left" type="Target" x="256" y="544" width="16" height="16"/>
+  <object id="138" name="tele" type="Event" x="320" y="528" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f19_sideworld.tmx', 'right')"/>
    </properties>
   </object>
-  <object id="139" name="right" type="Target" x="320" y="544" world2_battle="16" height="16"/>
+  <object id="139" name="right" type="Target" x="320" y="544" width="16" height="16"/>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="37" height="46">
+ <layer name="Tile Layer 3" width="37" height="46">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -57,7 +57,7 @@
    H4sIAAAAAAAAC+3BMQEAAADCoPVPbQo/oAAAAAAAAOBvgMSd45gaAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="37" height="46">
+ <layer name="Tile Layer 4" width="37" height="46">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

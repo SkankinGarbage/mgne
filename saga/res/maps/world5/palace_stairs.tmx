@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="51" height="66" tileworld2_battle="16" tileheight="16" nextobjectid="134">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="51" height="66" tilewidth="16" tileheight="16" nextobjectid="134">
  <properties>
   <property name="bgm" value="boss_dungeon"/>
   <property name="encounter" value="encounterset_level12_danger02"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="51" height="66">
+ <layer name="Tile Layer 1" width="51" height="66">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+3XQQrCMBRF0Qouoytw5ibEmeD+F+NAP4QOTMW0zQ/nwhsUOjmUBjJN7TsftC1iYWFhYdnPcq8sk+VR8Y1keTba6bO177N8t7Te3payVt/l17GwsLCwsLCwsLCwjG+p3YUyWWr3RBaWrS1r/qGeLf/EwsLCwsLCwsLCMkIsfTaKZZ7elnmxjIXlUiy75Voss+W2GMvxsfRZnMGlI6slzuGwxHPG4hwOSzxLUpZe3Fpso5g0AAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="51" height="66">
+ <layer name="Tile Layer 2" width="51" height="66">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,20 +24,20 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="130" name="tele" type="Event" x="32" y="944" world2_battle="32" height="16">
+  <object id="130" name="tele" type="Event" x="32" y="944" width="32" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_b1.tmx', 'exit')"/>
    </properties>
   </object>
-  <object id="131" name="tele" type="Event" x="624" y="176" world2_battle="32" height="16">
+  <object id="131" name="tele" type="Event" x="624" y="176" width="32" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world5/palace_f4.tmx', 'entry')"/>
    </properties>
   </object>
-  <object id="132" name="exit" type="Target" x="624" y="192" world2_battle="16" height="16"/>
-  <object id="133" name="entry" type="Target" x="32" y="928" world2_battle="16" height="16"/>
+  <object id="132" name="exit" type="Target" x="624" y="192" width="16" height="16"/>
+  <object id="133" name="entry" type="Target" x="32" y="928" width="16" height="16"/>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="51" height="66">
+ <layer name="Tile Layer 3" width="51" height="66">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -45,7 +45,7 @@
    H4sIAAAAAAAAC+3DMQ0AAAgDsAnBv06eSeCjTZoAAAAAAAAAAAAAAPDBNABcWBFTLSGYNAAA
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="51" height="66">
+ <layer name="Tile Layer 4" width="51" height="66">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

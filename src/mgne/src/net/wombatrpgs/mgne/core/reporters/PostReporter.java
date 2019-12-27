@@ -217,8 +217,9 @@ public class PostReporter implements Reporter {
 		entries.add(new EntryString(FIELD_ERROR, errorString));
 		
 		try {
-			String result = connector.post(entries);
-			MGlobal.reporter.inform("Posted error to DB done, status: " + result);
+			// this no longer works now that WRPGs died, and the DB along with it
+			//String result = connector.post(entries);
+			//MGlobal.reporter.inform("Posted error to DB done, status: " + result);
 		} catch (IOException e) {
 			System.err.println("Error sending other error to DB, oh crap");
 			e.printStackTrace();

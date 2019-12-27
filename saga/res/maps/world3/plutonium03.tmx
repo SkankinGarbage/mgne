@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="77" height="57" tileworld2_battle="16" tileheight="16" nextobjectid="117">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="77" height="57" tilewidth="16" tileheight="16" nextobjectid="117">
  <properties>
   <property name="bgm" value="generic_cave"/>
   <property name="encounter" value="encounterset_level05_danger02"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="77" height="57">
+ <layer name="Tile Layer 1" width="77" height="57">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+2YOw7DIAyG0y1rtwwcpEfgUty9SypFyICxMY/yD59aYZ4fCRDccRwOAAAAAABsz4cR4+TZiTcjxsmzE9f9GwiuRx4q/iy/Ez7jzD/ypJx5Zfsr8vRCwYmNHkOJ1HxrnZV8SsrPworOWvZXOkbqHYEzXR8l9VntAa3neBdnvR31cma1b/67M4tycLauM8keRK1H3DVLUm6m7wQ4kzmTciZwmbhLpPtM7IzancGZJk45ieOvmzOTxq0TztZ1llvPWjgrvZutnVl71TobMcejnZXmXNs+Z9+0cGb5DV9aW+CsvzPJeqZ1pqlfOqZcH0P0P2TSQ2JO4rSa54HrLPccaKk9a8CZ7I6PC3Wep57tk+mixpnlu6k90/bqR02+HuczOIMzOIMz6qz5uz/j7J+l/gRGHjib01mMtr0ejHZm2X5tO73602MscAZncAZnmvu3mcbCJTVWOLN1NvqsIelj6/pmGCcAAAAAAJiPL91SbVmURAAA
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="77" height="57">
+ <layer name="Tile Layer 2" width="77" height="57">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,94 +24,94 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="90" name="chest" type="Chest" x="192" y="464" world2_battle="16" height="16">
+  <object id="90" name="chest" type="Chest" x="192" y="464" width="16" height="16">
    <properties>
     <property name="item" value="pot_agility"/>
    </properties>
   </object>
-  <object id="91" name="chest" type="Chest" x="1040" y="512" world2_battle="16" height="16">
+  <object id="91" name="chest" type="Chest" x="1040" y="512" width="16" height="16">
    <properties>
     <property name="item" value="wpn_gunVulcan"/>
    </properties>
   </object>
-  <object id="92" name="turbine" type="Event" x="560" y="384" world2_battle="32" height="32">
+  <object id="92" name="turbine" type="Event" x="560" y="384" width="32" height="32">
    <properties>
     <property name="hide" value="return getSwitch('turbine01')"/>
     <property name="onInteract" value="play('world3/turbine01.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="93" name="turbine" type="Event" x="640" y="384" world2_battle="32" height="32">
+  <object id="93" name="turbine" type="Event" x="640" y="384" width="32" height="32">
    <properties>
     <property name="hide" value="return getSwitch('turbine02')"/>
     <property name="onInteract" value="play('world3/turbine02.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="94" name="turbine" type="Event" x="640" y="496" world2_battle="32" height="32">
+  <object id="94" name="turbine" type="Event" x="640" y="496" width="32" height="32">
    <properties>
     <property name="hide" value="return getSwitch('turbine03')"/>
     <property name="onInteract" value="play('world3/turbine03.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="95" name="turbine" type="Event" x="560" y="496" world2_battle="32" height="32">
+  <object id="95" name="turbine" type="Event" x="560" y="496" width="32" height="32">
    <properties>
     <property name="hide" value="return getSwitch('turbine04')"/>
     <property name="onInteract" value="play('world3/turbine04.lua')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="101" name="trigger" type="Event" x="688" y="368" world2_battle="16" height="16">
+  <object id="101" name="trigger" type="Event" x="688" y="368" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('turbine01') or not getSwitch('turbine02') or not getSwitch('turbine03') or not getSwitch('turbine04') or getSwitch('mines_done')"/>
     <property name="onCollide" value="play('world3/mines_done.lua')"/>
    </properties>
   </object>
-  <object id="103" name="trigger" type="Event" x="688" y="528" world2_battle="16" height="16">
+  <object id="103" name="trigger" type="Event" x="688" y="528" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('turbine01') or not getSwitch('turbine02') or not getSwitch('turbine03') or not getSwitch('turbine04') or getSwitch('mines_done')"/>
     <property name="onCollide" value="play('world3/mines_done.lua')"/>
    </properties>
   </object>
-  <object id="104" name="trigger" type="Event" x="528" y="528" world2_battle="16" height="16">
+  <object id="104" name="trigger" type="Event" x="528" y="528" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('turbine01') or not getSwitch('turbine02') or not getSwitch('turbine03') or not getSwitch('turbine04') or getSwitch('mines_done')"/>
     <property name="onCollide" value="play('world3/mines_done.lua')"/>
    </properties>
   </object>
-  <object id="105" name="trigger" type="Event" x="528" y="368" world2_battle="16" height="16">
+  <object id="105" name="trigger" type="Event" x="528" y="368" width="16" height="16">
    <properties>
     <property name="hide" value="return not getSwitch('turbine01') or not getSwitch('turbine02') or not getSwitch('turbine03') or not getSwitch('turbine04') or getSwitch('mines_done')"/>
     <property name="onCollide" value="play('world3/mines_done.lua')"/>
    </properties>
   </object>
-  <object id="108" name="tele" type="Event" x="736" y="128" world2_battle="16" height="16">
+  <object id="108" name="tele" type="Event" x="736" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/plutonium02.tmx', 'rightmost')"/>
    </properties>
   </object>
-  <object id="110" name="tele" type="Event" x="624" y="128" world2_battle="16" height="16">
+  <object id="110" name="tele" type="Event" x="624" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/plutonium02.tmx', 'right')"/>
    </properties>
   </object>
-  <object id="111" name="tele" type="Event" x="592" y="128" world2_battle="16" height="16">
+  <object id="111" name="tele" type="Event" x="592" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/plutonium02.tmx', 'left')"/>
    </properties>
   </object>
-  <object id="112" name="tele" type="Event" x="480" y="128" world2_battle="16" height="16">
+  <object id="112" name="tele" type="Event" x="480" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/plutonium02.tmx', 'leftmost')"/>
    </properties>
   </object>
-  <object id="113" name="leftmost" type="target" x="480" y="144" world2_battle="16" height="16"/>
-  <object id="114" name="left" type="target" x="592" y="144" world2_battle="16" height="16"/>
-  <object id="115" name="rightmost" type="target" x="736" y="144" world2_battle="16" height="16"/>
-  <object id="116" name="right" type="target" x="624" y="144" world2_battle="16" height="16"/>
+  <object id="113" name="leftmost" type="target" x="480" y="144" width="16" height="16"/>
+  <object id="114" name="left" type="target" x="592" y="144" width="16" height="16"/>
+  <object id="115" name="rightmost" type="target" x="736" y="144" width="16" height="16"/>
+  <object id="116" name="right" type="target" x="624" y="144" width="16" height="16"/>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="77" height="57">
+ <layer name="Tile Layer 3" width="77" height="57">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -119,7 +119,7 @@
    H4sIAAAAAAAAC+3ZQQqDQBQEUQ/i/c8pLlxERvhtGKa+1AM3WYRKS0DGbZMkSZIkSZJ+7asDGuq2GaGX0JAg9BIaEoReQkOC0EtoSBB6CQ2Jbr0ExM324rWyjY7WSOsZoTXSekZojZUeWvNqbpZzs5x7SHpr9Px/fx5/+lxzddqa0krpqKC0UjoqKK3VDkIvoeHkZrkvbTbzzPHpu6rnnqvOQgn3LdGtd6ZO/00KN8u5Rc7Ncm6W+2czyvvXy8we0u+UJEkSzwHRM/3PlEQAAA==
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="77" height="57">
+ <layer name="Tile Layer 4" width="77" height="57">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

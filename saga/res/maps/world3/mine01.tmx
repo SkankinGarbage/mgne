@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="55" height="47" tileworld2_battle="16" tileheight="16" nextobjectid="54">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="55" height="47" tilewidth="16" tileheight="16" nextobjectid="54">
  <properties>
   <property name="bgm" value="optional_dungeon"/>
   <property name="encounter" value="encounterset_level05_danger01"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="55" height="47">
+ <layer name="Tile Layer 1" width="55" height="47">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC+3WMQ6AIBBEUUpbOwsO5KE4vLE1GSOJG2bhF69yY/hgIrWUUgEAeNEevsxEoK3PaYK2Pnvgfo1cw+0waItYQ5TI72w02jw0gTZvm6CaafOg2kbcNdzb1Hk7tan5FdpUQ+/7nKzQpji1qf1fuU09d2r7+989c5sT7iVztal52nKiLSfacpq5DQCAKBeDAJ6IZCgAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="55" height="47">
+ <layer name="Tile Layer 2" width="55" height="47">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -24,31 +24,31 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="34" name="tele" type="Event" x="496" y="608" world2_battle="32" height="16">
+  <object id="34" name="tele" type="Event" x="496" y="608" width="32" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3/overworld.tmx', 13, 15)"/>
    </properties>
   </object>
-  <object id="35" name="gate" type="Event" x="496" y="256" world2_battle="16" height="32">
+  <object id="35" name="gate" type="Event" x="496" y="256" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return getSwitch('mine01')"/>
    </properties>
   </object>
-  <object id="36" name="gate" type="Event" x="512" y="256" world2_battle="16" height="32">
+  <object id="36" name="gate" type="Event" x="512" y="256" width="16" height="32">
    <properties>
     <property name="appearance" value="anim_bars"/>
     <property name="hide" value="return getSwitch('mine01')"/>
    </properties>
   </object>
-  <object id="37" name="lever" type="Event" x="320" y="288" world2_battle="16" height="16">
+  <object id="37" name="lever" type="Event" x="320" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_switch_b"/>
     <property name="hide" value="return not getSwitch('mine01')"/>
     <property name="passable" value="IMPASSABLE"/>
    </properties>
   </object>
-  <object id="38" name="lever" type="Event" x="320" y="288" world2_battle="16" height="16">
+  <object id="38" name="lever" type="Event" x="320" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="anim_switch_a"/>
     <property name="hide" value="return getSwitch('mine01')"/>
@@ -77,38 +77,38 @@
    </properties>
    <polygon points="0,0 128,0 128,128 0,128"/>
   </object>
-  <object id="44" name="door1" type="Target" x="368" y="144" world2_battle="16" height="16"/>
-  <object id="45" name="door2" type="Target" x="544" y="144" world2_battle="16" height="16"/>
-  <object id="46" name="door3" type="Target" x="640" y="144" world2_battle="16" height="16"/>
-  <object id="47" name="tele" type="Event" x="368" y="128" world2_battle="16" height="16">
+  <object id="44" name="door1" type="Target" x="368" y="144" width="16" height="16"/>
+  <object id="45" name="door2" type="Target" x="544" y="144" width="16" height="16"/>
+  <object id="46" name="door3" type="Target" x="640" y="144" width="16" height="16"/>
+  <object id="47" name="tele" type="Event" x="368" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/mine02.tmx', 'door1')"/>
    </properties>
   </object>
-  <object id="48" name="tele" type="Event" x="544" y="128" world2_battle="16" height="16">
+  <object id="48" name="tele" type="Event" x="544" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/mine02.tmx', 'door2')"/>
    </properties>
   </object>
-  <object id="49" name="tele" type="Event" x="640" y="128" world2_battle="16" height="16">
+  <object id="49" name="tele" type="Event" x="640" y="128" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/mine02.tmx', 'door3')"/>
    </properties>
   </object>
-  <object id="50" name="right_stairs" type="Target" x="688" y="176" world2_battle="16" height="16"/>
-  <object id="51" name="left_stairs" type="Target" x="160" y="176" world2_battle="16" height="16"/>
-  <object id="52" name="tele" type="Event" x="160" y="192" world2_battle="16" height="16">
+  <object id="50" name="right_stairs" type="Target" x="688" y="176" width="16" height="16"/>
+  <object id="51" name="left_stairs" type="Target" x="160" y="176" width="16" height="16"/>
+  <object id="52" name="tele" type="Event" x="160" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/mine03.tmx', 'left_stairs')"/>
    </properties>
   </object>
-  <object id="53" name="tele" type="Event" x="688" y="192" world2_battle="16" height="16">
+  <object id="53" name="tele" type="Event" x="688" y="192" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/mine03.tmx', 'right_stairs')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="55" height="47">
+ <layer name="Tile Layer 3" width="55" height="47">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -116,7 +116,7 @@
    H4sIAAAAAAAAC+3ZMQ0AAAgDQYTgXycGWEiY4C55AZ0bAQB8kE1XXN4GAAAAAADs8SMAwFwBlLtbNmQoAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="55" height="47">
+ <layer name="Tile Layer 4" width="55" height="47">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

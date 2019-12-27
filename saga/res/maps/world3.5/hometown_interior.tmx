@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="37" height="35" tileworld2_battle="16" tileheight="16" nextobjectid="32">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="37" height="35" tilewidth="16" tileheight="16" nextobjectid="32">
  <properties>
   <property name="bgm" value="home_town"/>
   <property name="name" value="Forest Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="37" height="35">
+ <layer name="Tile Layer 1" width="37" height="35">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2XMQrDMAxFNXoqZMsNSpYmS5ve/2SNB1MTkKxv2U4GfRBkCF9PShASkQvRQxEtvTR54vMqRC3T18j0EQJlSrVMTH1cD85MQQiUKdUyM/VxPejJJHk9j1gUeUYyvY/YAaZpAJO29uQz34yp5Xwq5eXeyfPE/06aT8sFTPG/k+bTDjLleWtnZku96N/fQHL/z7F1Ysp7Hkjuv+V7uFwu12j1mPtWz9JtUHMnWD1Lt0HNnWD1RPYvhMni6UzO1JoJ2VO1TBbP/DYo7anaO8Hqieyp2r20h+fV+gGa+FyYPBQAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="37" height="35">
+ <layer name="Tile Layer 2" width="37" height="35">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,17 +23,17 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="1" type="Event" x="64" y="144" world2_battle="16" height="16">
+  <object id="1" type="Event" x="64" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/hometown_interior.tmx', 24, 4)"/>
    </properties>
   </object>
-  <object id="2" type="Event" x="384" y="48" world2_battle="16" height="16">
+  <object id="2" type="Event" x="384" y="48" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world3.5/hometown_interior.tmx', 4, 8)"/>
    </properties>
   </object>
-  <object id="8" name="innkeep" type="Character" x="384" y="432" world2_battle="16" height="16">
+  <object id="8" name="innkeep" type="Character" x="384" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="onInteract" value="inn()"/>
@@ -46,25 +46,25 @@
    </properties>
    <polygon points="0,16 0,144 96,144 96,16"/>
   </object>
-  <object id="14" name="inn" type="Target" x="384" y="496" world2_battle="16" height="16"/>
-  <object id="15" name="tele" type="Event" x="384" y="512" world2_battle="16" height="16">
+  <object id="14" name="inn" type="Target" x="384" y="496" width="16" height="16"/>
+  <object id="15" name="tele" type="Event" x="384" y="512" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/hometown.tmx', 'inn')"/>
    </properties>
   </object>
-  <object id="16" name="elder_house" type="Target" x="48" y="496" world2_battle="16" height="16"/>
-  <object id="17" name="tele" type="Event" x="48" y="512" world2_battle="16" height="16">
+  <object id="16" name="elder_house" type="Target" x="48" y="496" width="16" height="16"/>
+  <object id="17" name="tele" type="Event" x="48" y="512" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/hometown.tmx', 'elder')"/>
    </properties>
   </object>
-  <object id="20" name="borg_house" type="Target" x="384" y="192" world2_battle="16" height="16"/>
-  <object id="21" name="tele" type="Event" x="384" y="208" world2_battle="16" height="16">
+  <object id="20" name="borg_house" type="Target" x="384" y="192" width="16" height="16"/>
+  <object id="21" name="tele" type="Event" x="384" y="208" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3.5/hometown.tmx', 'borg')"/>
    </properties>
   </object>
-  <object id="22" name="borg_disabled" type="Character" x="96" y="432" world2_battle="16" height="16">
+  <object id="22" name="borg_disabled" type="Character" x="96" y="432" width="16" height="16">
    <properties>
     <property name="animate" value="false"/>
     <property name="appearance" value="4dir_robot"/>
@@ -73,7 +73,7 @@
     <property name="onInteract" value="speak('BORG', 'Beep... Beep...'); face('borg_disabled', 'SOUTH')"/>
    </properties>
   </object>
-  <object id="23" name="elder" type="Character" x="96" y="448" world2_battle="16" height="16">
+  <object id="23" name="elder" type="Character" x="96" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="NORTH"/>
@@ -81,7 +81,7 @@
     <property name="onInteract" value="play('world3.5/elder01.lua')"/>
    </properties>
   </object>
-  <object id="24" name="elder" type="Character" x="96" y="448" world2_battle="16" height="16">
+  <object id="24" name="elder" type="Character" x="96" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="WEST"/>
@@ -89,7 +89,7 @@
     <property name="onInteract" value="speak('Elder', 'Have you found Borg\'s ROM?')"/>
    </properties>
   </object>
-  <object id="25" name="elder" type="Character" x="96" y="448" world2_battle="16" height="16">
+  <object id="25" name="elder" type="Character" x="96" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="WEST"/>
@@ -97,7 +97,7 @@
     <property name="onInteract" value="play('world3.5/borg01.lua')"/>
    </properties>
   </object>
-  <object id="28" name="elder" type="Character" x="112" y="448" world2_battle="16" height="16">
+  <object id="28" name="elder" type="Character" x="112" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elder"/>
     <property name="face" value="WEST"/>
@@ -105,20 +105,20 @@
     <property name="onInteract" value="speak('Elder', 'Please make sure Jonas and Janine are safe.')"/>
    </properties>
   </object>
-  <object id="29" name="borg" type="Character" x="96" y="432" world2_battle="16" height="16">
+  <object id="29" name="borg" type="Character" x="96" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
     <property name="hide" value="return not getSwitch('borg_revived') or getSwitch('borg_joins_again')"/>
    </properties>
   </object>
-  <object id="31" name="chest" type="Chest" x="144" y="80" world2_battle="16" height="16">
+  <object id="31" name="chest" type="Chest" x="144" y="80" width="16" height="16">
    <properties>
     <property name="item" value="item_hp999"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="37" height="35">
+ <layer name="Tile Layer 3" width="37" height="35">
   <properties>
    <property name="z" value="2"/>
   </properties>
@@ -126,7 +126,7 @@
    H4sIAAAAAAAAC+3WsQ0AIAhEUSZwFLUR999MCydQLhT+l1xLfokZAAB4VbIDjrrXLtdFTWPPLzdFTQAAAL9Q/KmvN1tIRexND6nQ38ywAJBkYp08FAAA
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="37" height="35">
+ <layer name="Tile Layer 4" width="37" height="35">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

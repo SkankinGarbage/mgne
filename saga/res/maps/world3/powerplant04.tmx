@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" world2_battle="19" height="21" tileworld2_battle="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" width="19" height="21" tilewidth="16" tileheight="16">
  <properties>
   <property name="bgm" value="plot_dungeon"/>
   <property name="encounter" value="encounterset_level05_danger02"/>
@@ -7,7 +7,7 @@
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="19" height="21">
+ <layer name="Tile Layer 1" width="19" height="21">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -15,7 +15,7 @@
    H4sIAAAAAAAAC83UwQ2AMAwDwLJWB+lC4cPW8KkUWbbT/IjkJydTSsbQEyTdyc8+KR1TGZjKVMadoszKuU2cF8KYJMyM5AQ4+7n15UpZxMTzwz5oYBbppzqdWKpbp5Pq9ncrwJqFM8HK597txjrh3T3p5joN802Zxc5oO9vC++v+R7ZPBvGcqXYSG7VT8H0qx5lsd3WHWW5eJZAcGTwGAAA=
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="19" height="21">
+ <layer name="Tile Layer 2" width="19" height="21">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,14 +23,14 @@
    H4sIAAAAAAAAC2NgGAWjYBSMglEwCkgDAITB1j48BgAA
   </data>
  </layer>
- <objectgroup name="Object Layer 1" world2_battle="0" height="0">
-  <object name="stairs" type="Target" x="144" y="288" world2_battle="16" height="16"/>
-  <object name="tele" type="Event" x="144" y="304" world2_battle="16" height="16">
+ <objectgroup name="Object Layer 1" width="0" height="0">
+  <object name="stairs" type="Target" x="144" y="288" width="16" height="16"/>
+  <object name="tele" type="Event" x="144" y="304" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world3/powerplant02.tmx', 'stairs2')"/>
    </properties>
   </object>
-  <object name="zkauba" type="Character" x="144" y="160" world2_battle="16" height="16">
+  <object name="zkauba" type="Character" x="144" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_zkauba"/>
     <property name="hide" value="return getSwitch('left_power_plant')"/>
@@ -38,7 +38,7 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="19" height="21">
+ <layer name="Tile Layer 3" width="19" height="21">
   <properties>
    <property name="z" value="2.0"/>
   </properties>
@@ -46,7 +46,7 @@
    H4sIAAAAAAAAC2NgGAWjYBSMglFAb9A80A6gEAAAORy7ujwGAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="19" height="21">
+ <layer name="Tile Layer 4" width="19" height="21">
   <properties>
    <property name="z" value="2.5"/>
   </properties>

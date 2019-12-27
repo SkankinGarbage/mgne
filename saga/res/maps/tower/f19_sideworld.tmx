@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="25" height="22" tileworld2_battle="16" tileheight="16" nextobjectid="163">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="22" tilewidth="16" tileheight="16" nextobjectid="163">
  <properties>
   <property name="bgm" value="world4"/>
   <property name="name" value="Floor 19"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="25" height="22">
+ <layer name="Tile Layer 1" width="25" height="22">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2VQQ7DMAgEufQzvvlz9EO5+ZOV1a6EiMGuu8mpSHuBaMcgYou843GBbCBXiPIc+FeiimGA1/NKVHVzK2R/yM6M3cOol+ibXjsk35224BHVMcND8v1pZiY7jPphZPvTzEx2GM8v9Gfcyxjt7a8MdX479RUGQyvnYPhn/yiDgTeD3Y/16/4i57fLM7M7MarDE2HfLi8N8rM6PH2M7jwN8rO6jRd63d60mAgAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="25" height="22">
+ <layer name="Tile Layer 2" width="25" height="22">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,78 +23,78 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="144" name="npc" type="Character" x="192" y="240" world2_battle="16" height="16">
+  <object id="144" name="npc" type="Character" x="192" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="onInteract" value="speak('Welcome to the Bazaar of Babel! Goods from many worlds are traded here.')"/>
    </properties>
   </object>
-  <object id="145" name="memory" type="Teleport Memory" x="192" y="272" world2_battle="16" height="16">
+  <object id="145" name="memory" type="Teleport Memory" x="192" y="272" width="16" height="16">
    <properties>
     <property name="displayName" value="Bazaar of Babel"/>
    </properties>
   </object>
-  <object id="146" name="tele" type="Event" x="128" y="320" world2_battle="16" height="16">
+  <object id="146" name="tele" type="Event" x="128" y="320" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f19.tmx', 'left')"/>
    </properties>
   </object>
-  <object id="147" name="left" type="Target" x="128" y="304" world2_battle="16" height="16"/>
-  <object id="148" name="right" type="Target" x="256" y="304" world2_battle="16" height="16"/>
-  <object id="149" name="tele" type="Event" x="256" y="320" world2_battle="16" height="16">
+  <object id="147" name="left" type="Target" x="128" y="304" width="16" height="16"/>
+  <object id="148" name="right" type="Target" x="256" y="304" width="16" height="16"/>
+  <object id="149" name="tele" type="Event" x="256" y="320" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('tower/f19.tmx', 'right')"/>
    </properties>
   </object>
-  <object id="150" name="spells1" type="Character" x="336" y="112" world2_battle="16" height="16">
+  <object id="150" name="spells1" type="Character" x="336" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="onInteract" value="shop('shop_bazaar_spells1')"/>
    </properties>
   </object>
-  <object id="151" name="armor1" type="Character" x="336" y="160" world2_battle="16" height="16">
+  <object id="151" name="armor1" type="Character" x="336" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_knight"/>
     <property name="onInteract" value="shop('shop_bazaar_armor1')"/>
    </properties>
   </object>
-  <object id="152" name="armor2" type="Character" x="48" y="160" world2_battle="16" height="16">
+  <object id="152" name="armor2" type="Character" x="48" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_golem"/>
     <property name="onInteract" value="shop('shop_bazaar_armor2')"/>
    </properties>
   </object>
-  <object id="153" name="weapons1" type="Character" x="48" y="208" world2_battle="16" height="16">
+  <object id="153" name="weapons1" type="Character" x="48" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="onInteract" value="shop('shop_bazaar_weapon1')"/>
    </properties>
   </object>
-  <object id="154" name="weapons2" type="Character" x="336" y="208" world2_battle="16" height="16">
+  <object id="154" name="weapons2" type="Character" x="336" y="208" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="onInteract" value="shop('shop_bazaar_weapon2')"/>
    </properties>
   </object>
-  <object id="155" name="items1" type="Character" x="48" y="112" world2_battle="16" height="16">
+  <object id="155" name="items1" type="Character" x="48" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="onInteract" value="shop('shop_bazaar_items1')"/>
    </properties>
   </object>
-  <object id="156" name="items2" type="Character" x="64" y="64" world2_battle="16" height="16">
+  <object id="156" name="items2" type="Character" x="64" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_f"/>
     <property name="onInteract" value="shop('shop_bazaar_items2')"/>
    </properties>
   </object>
-  <object id="157" name="items3" type="Character" x="304" y="64" world2_battle="16" height="16">
+  <object id="157" name="items3" type="Character" x="304" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="onInteract" value="shop('shop_bazaar_items3')"/>
    </properties>
   </object>
-  <object id="158" name="npc" type="Character" x="128" y="176" world2_battle="16" height="16">
+  <object id="158" name="npc" type="Character" x="128" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_mutant_m"/>
     <property name="face" value="EAST"/>
@@ -102,7 +102,7 @@
     <property name="onInteract" value="speak('Coming this far in Babel, we deserve the best every world has to offer.')"/>
    </properties>
   </object>
-  <object id="160" name="npc" type="Character" x="192" y="160" world2_battle="16" height="16">
+  <object id="160" name="npc" type="Character" x="192" y="160" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_robot"/>
     <property name="face" value="SOUTH"/>
@@ -110,7 +110,7 @@
     <property name="onInteract" value="speak('I wish the masters would open paths to new worlds already. The market needs expansion.')"/>
    </properties>
   </object>
-  <object id="161" name="npc" type="Character" x="256" y="176" world2_battle="16" height="16">
+  <object id="161" name="npc" type="Character" x="256" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="WEST"/>
@@ -118,14 +118,14 @@
     <property name="onInteract" value="speak('Have you considered bowing to the masters? You\'d be able to afford whatever you like here.')"/>
    </properties>
   </object>
-  <object id="162" name="meats" type="Character" x="320" y="64" world2_battle="16" height="16">
+  <object id="162" name="meats" type="Character" x="320" y="64" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="onInteract" value="meatShop('meatshop_babel')"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" world2_battle="25" height="22">
+ <layer name="Tile Layer 3" width="25" height="22">
   <properties>
    <property name="z" value="1.5"/>
   </properties>
@@ -133,7 +133,7 @@
    H4sIAAAAAAAAC2NgGAWjYBSMglEwCkbBQAJWCuWJAVoUyhMDDCmUBwEAu3XsPZgIAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" world2_battle="25" height="22">
+ <layer name="Tile Layer 4" width="25" height="22">
   <properties>
    <property name="z" value="2.0"/>
   </properties>

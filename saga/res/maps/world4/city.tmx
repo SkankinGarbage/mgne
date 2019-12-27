@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" world2_battle="50" height="38" tileworld2_battle="16" tileheight="16" backgroundcolor="#808080" nextobjectid="179">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="38" tilewidth="16" tileheight="16" backgroundcolor="#808080" nextobjectid="179">
  <properties>
   <property name="bgm" value="generic_town"/>
   <property name="name" value="Underground City"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" world2_battle="50" height="38">
+ <layer name="Tile Layer 1" width="50" height="38">
   <properties>
    <property name="z" value="0"/>
   </properties>
@@ -14,7 +14,7 @@
    H4sIAAAAAAAAC+2UQQrEIAxFPUgP1DvNJUo30tuWAQdEYoi2SQvzFm+hIejDfJeU0gIAAODEVujVevufwkxvr3aFXNgEtP2fx0xvdvBYC1lA218v9np5RIPHmMdeIa01LL14/KfHUSGtNSy95NzmMTI/b52rXThzxguP+zzaTM54PJ3zQzhz5J96U87vRHvLKA/LjLd5stbweMajzpa3R8/Fkvf2X7DWPBwi8u79DpE+UfcHAAD4cgJJJCuvsB0AAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" world2_battle="50" height="38">
+ <layer name="Tile Layer 2" width="50" height="38">
   <properties>
    <property name="z" value=".5"/>
   </properties>
@@ -23,7 +23,7 @@
   </data>
  </layer>
  <objectgroup name="Object Layer 1">
-  <object id="134" name="npc" type="Character" x="384" y="432" world2_battle="16" height="16">
+  <object id="134" name="npc" type="Character" x="384" y="432" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_elf"/>
     <property name="face" value="NORTH"/>
@@ -31,26 +31,26 @@
     <property name="onInteract" value="speak('You don\'t look so good. Were you above ground?')"/>
    </properties>
   </object>
-  <object id="149" name="memory" type="Teleport Memory" x="400" y="176" world2_battle="16" height="16">
+  <object id="149" name="memory" type="Teleport Memory" x="400" y="176" width="16" height="16">
    <properties>
     <property name="displayName" value="Underground City"/>
    </properties>
   </object>
-  <object id="150" name="npc" type="Character" x="368" y="240" world2_battle="16" height="16">
+  <object id="150" name="npc" type="Character" x="368" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="EAST"/>
     <property name="onInteract" value="speak('Humans will die in the wastelands. It\'s an invisible poison that burns off your skin.')"/>
    </properties>
   </object>
-  <object id="151" name="npc" type="Character" x="384" y="320" world2_battle="16" height="16">
+  <object id="151" name="npc" type="Character" x="384" y="320" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_rat"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('The servants of Moloch go where they please.')"/>
    </properties>
   </object>
-  <object id="152" name="npc" type="Character" x="512" y="176" world2_battle="16" height="16">
+  <object id="152" name="npc" type="Character" x="512" y="176" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
@@ -58,14 +58,14 @@
     <property name="onInteract" value="speak('Moloch is the master of the wastes. He demands we sacrifice to him or we\'ll all be destroyed.')"/>
    </properties>
   </object>
-  <object id="153" name="npc" type="Character" x="624" y="272" world2_battle="16" height="16">
+  <object id="153" name="npc" type="Character" x="624" y="272" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="WEST"/>
     <property name="onInteract" value="speak('Mutants have a hidden city named Elan somewhere in the southeast.')"/>
    </properties>
   </object>
-  <object id="154" name="npc" type="Character" x="448" y="336" world2_battle="16" height="16">
+  <object id="154" name="npc" type="Character" x="448" y="336" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
@@ -73,7 +73,7 @@
     <property name="onInteract" value="speak('Ages ago, Moloch himself destroyed EXCALIBER so that no one could use it against him.')"/>
    </properties>
   </object>
-  <object id="155" name="npc" type="Character" x="528" y="352" world2_battle="16" height="16">
+  <object id="155" name="npc" type="Character" x="528" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="NORTH"/>
@@ -81,7 +81,7 @@
     <property name="onInteract" value="speak('Before all the surface cities were wiped out, we traded with Sarnath in the southeast and Dagon in the northwest.')"/>
    </properties>
   </object>
-  <object id="156" name="npc" type="Character" x="304" y="400" world2_battle="16" height="16">
+  <object id="156" name="npc" type="Character" x="304" y="400" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_skeleton"/>
     <property name="face" value="SOUTH"/>
@@ -89,14 +89,14 @@
     <property name="onInteract" value="speak('The grand city is in ruins, but the nearby temple still stands. I hear monks live there even now.')"/>
    </properties>
   </object>
-  <object id="157" name="npc" type="Character" x="304" y="288" world2_battle="16" height="16">
+  <object id="157" name="npc" type="Character" x="304" y="288" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_slime"/>
     <property name="face" value="NORTH"/>
     <property name="onInteract" value="speak('Be careful in the wastes! Poison will harm you each step you take unless you go prepared.')"/>
    </properties>
   </object>
-  <object id="158" name="npc" type="Character" x="192" y="336" world2_battle="16" height="16">
+  <object id="158" name="npc" type="Character" x="192" y="336" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_f"/>
     <property name="face" value="SOUTH"/>
@@ -104,69 +104,69 @@
     <property name="onInteract" value="speak('Moloch\'s base is in the crater to the southwest. The poison is strongest there.')"/>
    </properties>
   </object>
-  <object id="159" name="npc" type="Character" x="160" y="240" world2_battle="16" height="16">
+  <object id="159" name="npc" type="Character" x="160" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('Moloch arrived with the destruction of the city.')"/>
    </properties>
   </object>
-  <object id="160" name="inn" type="Target" x="320" y="176" world2_battle="16" height="16"/>
-  <object id="161" name="tele" type="Event" x="320" y="160" world2_battle="16" height="16">
+  <object id="160" name="inn" type="Target" x="320" y="176" width="16" height="16"/>
+  <object id="161" name="tele" type="Event" x="320" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/city_interior.tmx', 'inn')"/>
    </properties>
   </object>
-  <object id="162" name="pub" type="Target" x="224" y="176" world2_battle="16" height="16"/>
-  <object id="163" name="tele" type="Event" x="224" y="160" world2_battle="16" height="16">
+  <object id="162" name="pub" type="Target" x="224" y="176" width="16" height="16"/>
+  <object id="163" name="tele" type="Event" x="224" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/city_interior.tmx', 'pub')"/>
    </properties>
   </object>
-  <object id="164" name="weapons" type="Target" x="464" y="176" world2_battle="16" height="16"/>
-  <object id="165" name="tele" type="Event" x="464" y="160" world2_battle="16" height="16">
+  <object id="164" name="weapons" type="Target" x="464" y="176" width="16" height="16"/>
+  <object id="165" name="tele" type="Event" x="464" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/city_interior.tmx', 'weapons')"/>
    </properties>
   </object>
-  <object id="166" name="potions" type="Target" x="560" y="176" world2_battle="16" height="16"/>
-  <object id="167" name="tele" type="Event" x="560" y="160" world2_battle="16" height="16">
+  <object id="166" name="potions" type="Target" x="560" y="176" width="16" height="16"/>
+  <object id="167" name="tele" type="Event" x="560" y="160" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/city_interior.tmx', 'potions')"/>
    </properties>
   </object>
-  <object id="168" name="entry" type="Target" x="384" y="144" world2_battle="16" height="16"/>
-  <object id="169" name="tele" type="Event" x="384" y="128" world2_battle="32" height="16">
+  <object id="168" name="entry" type="Target" x="384" y="144" width="16" height="16"/>
+  <object id="169" name="tele" type="Event" x="384" y="128" width="32" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/overworld.tmx', 'city')"/>
    </properties>
   </object>
-  <object id="170" name="tele" type="Event" x="544" y="432" world2_battle="16" height="16">
+  <object id="170" name="tele" type="Event" x="544" y="432" width="16" height="16">
    <properties>
     <property name="onCollide" value="targetTele('world4/city_interior.tmx', 'house')"/>
    </properties>
   </object>
-  <object id="171" name="house" type="Target" x="544" y="448" world2_battle="16" height="16"/>
-  <object id="172" name="npc" type="Character" x="512" y="448" world2_battle="16" height="16">
+  <object id="171" name="house" type="Target" x="544" y="448" width="16" height="16"/>
+  <object id="172" name="npc" type="Character" x="512" y="448" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_human_m"/>
     <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('The man in this house lived in Sarnath, but he used to travel all over the world, even to the secret town of Elan!')"/>
    </properties>
   </object>
-  <object id="173" name="demon" type="Character" x="384" y="352" world2_battle="16" height="16">
+  <object id="173" name="demon" type="Character" x="384" y="352" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_demon"/>
     <property name="hide" value="return getSwitch('moloch01')"/>
    </properties>
   </object>
-  <object id="174" name="trigger" type="Event" x="368" y="176" world2_battle="64" height="16">
+  <object id="174" name="trigger" type="Event" x="368" y="176" width="64" height="16">
    <properties>
     <property name="hide" value="return getSwitch('moloch01')"/>
     <property name="onCollide" value="play('world4/moloch01.lua')"/>
    </properties>
   </object>
-  <object id="177" name="npc" type="Character" x="448" y="240" world2_battle="16" height="16">
+  <object id="177" name="npc" type="Character" x="448" y="240" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jelly"/>
     <property name="face" value="EAST"/>
@@ -174,7 +174,7 @@
     <property name="onInteract" value="speak('I\'ve never seen anyone stand up to Moloch\'s men!')"/>
    </properties>
   </object>
-  <object id="178" name="jonas" type="Character" x="384" y="192" world2_battle="16" height="16">
+  <object id="178" name="jonas" type="Character" x="384" y="192" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_jonas"/>
     <property name="face" value="NORTH"/>
