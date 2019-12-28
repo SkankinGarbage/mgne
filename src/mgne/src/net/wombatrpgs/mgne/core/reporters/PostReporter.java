@@ -216,15 +216,16 @@ public class PostReporter implements Reporter {
 		entries.add(new EntryDate(FIELD_TIME));
 		entries.add(new EntryString(FIELD_ERROR, errorString));
 		
-		try {
-			// this no longer works now that WRPGs died, and the DB along with it
-			//String result = connector.post(entries);
-			//MGlobal.reporter.inform("Posted error to DB done, status: " + result);
-		} catch (IOException e) {
-			System.err.println("Error sending other error to DB, oh crap");
-			e.printStackTrace();
-		}
-		
-		doneHTTP();
+		// this no longer works now that WRPGs died, and the DB along with it
+//		try {
+//			
+//			String result = connector.post(entries);
+//			MGlobal.reporter.inform("Posted error to DB done, status: " + result);
+//		} catch (IOException e) {
+//			System.err.println("Error sending other error to DB, oh crap");
+//			e.printStackTrace();
+//		}
+//		
+//		doneHTTP();
 	}
 }
