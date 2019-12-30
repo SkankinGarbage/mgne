@@ -149,7 +149,7 @@ public class CharaEvent : MonoBehaviour {
     }
 
     public Sprite FrameBySlot(int x) {
-        return FrameByExplicitSlot(x, DirectionRelativeToCamera().Ordinal());
+        return FrameByExplicitSlot(x, facing.Ordinal());
     }
     public Sprite FrameByExplicitSlot(int x, int y) {
         string name = NameForFrame(spritesheet.name, x, y);
@@ -173,42 +173,7 @@ public class CharaEvent : MonoBehaviour {
         Vector2Int offset = parent.OffsetForTiles(dir);
         Vector3 startPx = parent.positionPx;
         targetPx = parent.OwnTileToWorld(parent.position);
-        if (targetPx.y == startPx.y || GetComponent<MapEvent3D>() == null) {
-            yield return parent.LinearStepRoutine(dir);
-        } else if (targetPx.y > startPx.y) {
-            // jump up routine routine
-            float duration = (targetPx - startPx).magnitude / parent.tilesPerSecond / 2.0f * JumpHeightUpMult;
-            yield return JumpRoutine(startPx, targetPx, duration);
-            overrideBodySprite = FrameBySlot(0); // "prone" frame
-            yield return CoUtils.Wait(1.0f / parent.tilesPerSecond / 2.0f);
-            overrideBodySprite = null;
-        } else {
-            // jump down routine
-            float elapsed = 0.0f;
-            float walkRatio = 0.65f;
-            float walkDuration = walkRatio / parent.tilesPerSecond;
-            while (true) {
-                float t = elapsed / walkDuration;
-                elapsed += Time.deltaTime;
-                parent.transform.position = new Vector3(
-                    startPx.x + t * (targetPx.x - startPx.x) * walkRatio,
-                    startPx.y,
-                    startPx.z + t * (targetPx.z - startPx.z) * walkRatio);
-                if (elapsed >= walkDuration) {
-                    break;
-                }
-                yield return null;
-            }
-            float dy = targetPx.y - startPx.y;
-            float jumpDuration = Mathf.Sqrt(dy / Gravity) * JumpHeightDownMult;
-            bool isBigDrop = dy <= -1.0f;
-            yield return JumpRoutine(parent.transform.position, targetPx, jumpDuration, isBigDrop);
-            if (isBigDrop) {
-                overrideBodySprite = FrameBySlot(0); // "prone" frame
-                yield return CoUtils.Wait(JumpHeightDownMult / parent.tilesPerSecond / 2.0f);
-                overrideBodySprite = null;
-            }
-        }
+        yield return parent.LinearStepRoutine(dir);
     }
 
     public IEnumerator DesaturateRoutine(float targetDesat) {
@@ -251,7 +216,7 @@ public class CharaEvent : MonoBehaviour {
     }
 
     private void LoadSpritesheetData() {
-        string path = GetComponent<MapEvent3D>() == null ? DefaultMaterial2DPath : DefaultMaterial3DPath;
+        string path = DefaultMaterial2DPath;
         foreach (SpriteRenderer renderer in renderers) {
             if (renderer.material == null) {
                 renderer.material = Resources.Load<Material>(path);
@@ -269,20 +234,6 @@ public class CharaEvent : MonoBehaviour {
         foreach (Sprite sprite in Resources.LoadAll<Sprite>(path)) {
             sprites[sprite.name] = sprite;
         }
-    }
-
-    private OrthoDir DirectionRelativeToCamera() {
-        Camera cam = Application.isPlaying ? parent.parent.camera : FindObjectOfType<Camera>();
-        if (!cam || !cameraRelativeFacing) {
-            return facing;
-        }
-
-        Vector3 ourScreen = cam.WorldToScreenPoint(transform.position);
-        Vector3 targetWorld = ((MapEvent3D)parent).OwnTileToWorld(parent.position + facing.XY3D());
-        targetWorld.y = parent.transform.position.y;
-        Vector3 targetScreen = cam.WorldToScreenPoint(targetWorld);
-        Vector3 delta = targetScreen - ourScreen;
-        return OrthoDirExtensions.DirectionOf2D(new Vector2(delta.x, -delta.y));
     }
 
     private Sprite SpriteForMain() {

@@ -16,7 +16,6 @@ public abstract class Map : MonoBehaviour {
     
     public Grid grid;
     public ObjectLayer objectLayer;
-    public new Camera camera;
 
     public string bgmKey { get; private set; }
     

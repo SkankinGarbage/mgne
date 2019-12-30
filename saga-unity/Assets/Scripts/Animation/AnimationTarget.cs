@@ -120,20 +120,21 @@ public class AnimationTarget : MonoBehaviour {
     // quake({power? duration?})
     public void quake(DynValue args) { CSRun(cs_quake(args), args); }
     private IEnumerator cs_quake(DynValue args) {
-        float elapsed = 0.0f;
-        float duration = FloatArg(args, ArgDuration, 0.25f);
-        float power = FloatArg(args, ArgPower, 0.2f);
-        DuelCam cam = DuelCam.Instance();
-        Vector3 camPosition = cam.transform.localPosition;
-        while (elapsed < duration) {
-            elapsed += Time.deltaTime;
-            cam.transform.localPosition = new Vector3(
-                    camPosition.x + UnityEngine.Random.Range(-power, power),
-                    camPosition.y + UnityEngine.Random.Range(-power, power),
-                    camPosition.z);
-            yield return null;
-        }
-        cam.transform.localPosition = camPosition;
+        //float elapsed = 0.0f;
+        //float duration = FloatArg(args, ArgDuration, 0.25f);
+        //float power = FloatArg(args, ArgPower, 0.2f);
+        //DuelCam cam = DuelCam.Instance();
+        //Vector3 camPosition = cam.transform.localPosition;
+        //while (elapsed < duration) {
+        //    elapsed += Time.deltaTime;
+        //    cam.transform.localPosition = new Vector3(
+        //            camPosition.x + UnityEngine.Random.Range(-power, power),
+        //            camPosition.y + UnityEngine.Random.Range(-power, power),
+        //            camPosition.z);
+        //    yield return null;
+        //}
+        //cam.transform.localPosition = camPosition;
+        yield return null;
     }
 
     // tint({r, g, b, a?, duration?, speed?})

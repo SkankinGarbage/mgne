@@ -9,6 +9,5 @@ public abstract class ActorScriptableObject : ScriptableObject {
     protected BattleController controller { get { return battle.controller; } }
     protected BattleEvent battler { get { return actor.battler; } }
     protected MapEvent mapEvent { get { return battler.GetComponent<MapEvent>(); } }
-    protected Map map { get { return controller.map; } }
 
 }
