@@ -8,9 +8,10 @@ using UnityEngine.Tilemaps;
  */
 public abstract class Map : MonoBehaviour {
 
-    // some game-wide critical map2d constants
+    /// <summary>The number of unity units a tile takes up</summary>
     public const int TileSizePx = 16;
-    public const int UnityUnitScale = 1;
+    /// <summary>The number of pixels that make up a tile</summary>
+    public const float UnityUnitScale = 0.16f;
 
     public const string ResourcePath = "Maps/";
     
@@ -32,7 +33,6 @@ public abstract class Map : MonoBehaviour {
             return _size;
         }
     }
-    public Vector2 sizePx { get { return size * TileSizePx; } }
     public int width { get { return size.x; } }
     public int height { get { return size.y; } }
 

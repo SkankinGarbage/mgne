@@ -10,9 +10,12 @@ public class MapCamera2D : MapCamera {
         base.ManualUpdate();
         Vector3 targetPos = target.transform.position;
         Vector3 oldPos = GetComponent<Camera>().transform.position;
+        Vector2Int pixelPos = new Vector2Int(
+            (int) (targetPos.x / Map.UnityUnitScale * Map.TileSizePx + Map.TileSizePx / 2),
+            (int) (targetPos.y / Map.UnityUnitScale * Map.TileSizePx + Map.TileSizePx / 2));
         Vector3 newPos = new Vector3(
-            targetPos.x - OrthoDir.North.XY2D().y * Map.TileSizePx / Map.UnityUnitScale / 2.0f, 
-            targetPos.y - OrthoDir.North.XY2D().x * Map.TileSizePx / Map.UnityUnitScale / 2.0f, 
+            pixelPos.x / Map.TileSizePx * Map.UnityUnitScale,
+            pixelPos.y / Map.TileSizePx * Map.UnityUnitScale, 
             oldPos.z);
         GetComponent<Camera>().transform.position = newPos;
     }

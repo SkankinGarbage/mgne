@@ -11,6 +11,7 @@ using UnityEngine.Tilemaps;
  */
 [RequireComponent(typeof(Dispatch))]
 [RequireComponent(typeof(LuaCutsceneContext))]
+[RequireComponent(typeof(CustomProperty))]
 [DisallowMultipleComponent]
 public abstract class MapEvent : MonoBehaviour {
 
@@ -31,7 +32,8 @@ public abstract class MapEvent : MonoBehaviour {
 
     // Editor properties
     [HideInInspector] public Vector2Int position = new Vector2Int(0, 0);
-    [HideInInspector] public SuperObject tmxObject;
+    [HideInInspector] public SuperCustomProperties properties;
+    [HideInInspector] public Vector2Int size;
 
     // Properties
     public LuaMapEvent luaObject { get; private set; }
@@ -40,10 +42,6 @@ public abstract class MapEvent : MonoBehaviour {
     
     public Vector3 positionPx {
         get { return transform.localPosition; }
-    }
-
-    public Vector2Int size {
-        get { return new Vector2Int((int)tmxObject.m_Width, (int)tmxObject.m_Height); }
     }
     
     public Map parent {
@@ -186,9 +184,8 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public string GetProperty(string propertyName) {
-        var props = tmxObject.GetComponent<SuperCustomProperties>();
         CustomProperty prop = null;
-        props.TryGetCustomProperty(propertyName, out prop);
+        properties.TryGetCustomProperty(propertyName, out prop);
         return prop.GetValueAsString();
     }
 

@@ -4,14 +4,14 @@ public class MapEvent2D : MapEvent {
 
     public static Vector2Int WorldToTile(Vector3 pos) {
         return new Vector2Int(
-            Mathf.RoundToInt(pos.x / Map.TileSizePx) * OrthoDir.East.Px2DX(),
-            Mathf.RoundToInt(pos.y / Map.TileSizePx) * OrthoDir.North.Px2DY());
+            Mathf.RoundToInt(pos.x / Map.UnityUnitScale) * OrthoDir.East.Px2DX(),
+            Mathf.RoundToInt(pos.y / Map.UnityUnitScale) * OrthoDir.North.Px2DY());
     }
 
     public static Vector3 TileToWorld(Vector2Int position) {
         return new Vector3(
-            position.x * Map.TileSizePx / Map.UnityUnitScale * OrthoDir.East.Px2DX(),
-            position.y * Map.TileSizePx / Map.UnityUnitScale * OrthoDir.North.Px2DY(),
+            position.x * Map.UnityUnitScale * OrthoDir.East.Px2DX(),
+            position.y * Map.UnityUnitScale * OrthoDir.North.Px2DY(),
             0);
     }
 
@@ -66,19 +66,20 @@ public class MapEvent2D : MapEvent {
     }
 
     protected override void DrawGizmoSelf() {
+        float delta = 0.02f;
         if (GetComponent<CharaEvent>() == null || GetComponent<CharaEvent>().spritesheet == null) {
             Gizmos.color = new Color(Gizmos.color.r, Gizmos.color.g, Gizmos.color.b, 0.5f);
             Gizmos.DrawCube(new Vector3(
                     transform.position.x + size.x * Map.TileSizePx * OrthoDir.East.Px2DX() / 2.0f,
                     transform.position.y + size.y * Map.TileSizePx * OrthoDir.North.Px2DY() / 2.0f,
                     transform.position.z - 0.001f),
-                new Vector3((size.x - 0.1f) * Map.TileSizePx, (size.y - 0.1f) * Map.TileSizePx, 0.002f));
+                new Vector3((size.x - delta) * Map.TileSizePx, (size.y - delta) * Map.TileSizePx, 0.002f));
             Gizmos.color = Color.white;
             Gizmos.DrawWireCube(new Vector3(
                     transform.position.x + size.x * Map.TileSizePx * OrthoDir.East.Px2DX() / 2.0f,
                     transform.position.y + size.y * Map.TileSizePx * OrthoDir.North.Px2DY() / 2.0f,
                     transform.position.z - 0.001f),
-                new Vector3((size.x - 0.1f) * Map.TileSizePx, (size.y - 0.1f) * Map.TileSizePx, 0.002f));
+                new Vector3((size.x - delta) * Map.TileSizePx, (size.y - delta) * Map.TileSizePx, 0.002f));
         }
     }
 
