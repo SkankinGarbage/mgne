@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using SuperTiled2Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -10,37 +11,27 @@ using UnityEngine.Tilemaps;
  */
 [RequireComponent(typeof(Dispatch))]
 [RequireComponent(typeof(LuaCutsceneContext))]
-[RequireComponent(typeof(RectTransform))]
 [DisallowMultipleComponent]
 public abstract class MapEvent : MonoBehaviour {
-    
-    private const string PropertyCondition = "show";
-    private const string PropertyBody = "body";
 
-    public const string EventEnabled = "enabled";
-    public const string EventCollide = "collide";
-    public const string EventInteract = "interact";
     public const string EventMove = "move";
+    public const string EventInteract = "interact";
+    public const string EventCollide = "collide";
+    public const string EventEnabled = "enabled";
+    
+    public const string PropertyLuaHide = "hide";
+    public const string PropertyAppearance = "appearance";
+    public const string PropertyPassable = "passable";
 
-    public enum EventTriggerType {
-        Collide,
-        Interact,
-        Autostart,
-        Parallel,
-    }
+    public const string PropertyLuaCollide = "onCollide";
+    public const string PropertyLuaInteract = "onInteract";
+    public const string PropertyLuaAutostart = "onEnter";
+
+    protected const int TilesPerSecond = 8;
 
     // Editor properties
     [HideInInspector] public Vector2Int position = new Vector2Int(0, 0);
-    [HideInInspector] public Vector2Int size = new Vector2Int(1, 1);
-    [Space]
-    [Header("Movement")]
-    public float tilesPerSecond = 2.0f;
-    public bool passable = true;
-    [Space]
-    [Header("Lua scripting")]
-    public string luaCondition;
-    [TextArea(8, 16)] public string luaBody;
-    public EventTriggerType triggerType = EventTriggerType.Collide;
+    [HideInInspector] public SuperObject tmxObject;
 
     // Properties
     public LuaMapEvent luaObject { get; private set; }
@@ -49,6 +40,10 @@ public abstract class MapEvent : MonoBehaviour {
     
     public Vector3 positionPx {
         get { return transform.localPosition; }
+    }
+
+    public Vector2Int size {
+        get { return new Vector2Int((int)tmxObject.m_Width, (int)tmxObject.m_Height); }
     }
     
     public Map parent {
@@ -137,13 +132,6 @@ public abstract class MapEvent : MonoBehaviour {
         CheckEnabled();
     }
 
-    public virtual void Update() {
-        CheckEnabled();
-        if (triggerType == EventTriggerType.Parallel && switchEnabled && !GetComponent<LuaContext>().IsRunning()) {
-            luaObject.Run(PropertyBody);
-        }
-    }
-
     public void OnDrawGizmos() {
         if (Selection.activeGameObject == gameObject) {
             Gizmos.color = Color.red;
@@ -154,11 +142,19 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public void CheckEnabled() {
-        switchEnabled = luaObject.EvaluateBool(PropertyCondition, true);
+        switchEnabled = !luaObject.EvaluateBool(PropertyLuaHide, false);
+    }
+
+    public bool IsPassable() {
+        string passable = GetProperty(PropertyPassable);
+        if (passable == "IMPASSABLE") return false;
+        if (passable == "PASSABLE") return true;
+        if (GetProperty(PropertyAppearance) != null) return false;
+        return true;
     }
 
     public bool IsPassableBy(MapEvent other) {
-        return passable || !switchEnabled;
+        return IsPassable() || !switchEnabled;
     }
 
     public OrthoDir DirectionTo(MapEvent other) {
@@ -178,7 +174,7 @@ public abstract class MapEvent : MonoBehaviour {
                 return false;
             }
         }
-        if (!passable) {
+        if (!IsPassable()) {
             foreach (MapEvent mapEvent in parent.GetEventsAt(loc)) {
                 if (!mapEvent.IsPassableBy(this)) {
                     return false;
@@ -187,6 +183,13 @@ public abstract class MapEvent : MonoBehaviour {
         }
 
         return true;
+    }
+
+    public string GetProperty(string propertyName) {
+        var props = tmxObject.GetComponent<SuperCustomProperties>();
+        CustomProperty prop = null;
+        props.TryGetCustomProperty(propertyName, out prop);
+        return prop.GetValueAsString();
     }
 
     public IEnumerator PathToRoutine(Vector2Int location) {
@@ -213,41 +216,30 @@ public abstract class MapEvent : MonoBehaviour {
         SetDepth();
     }
 
-    public void SetSize(Vector2Int size) {
-        this.size = size;
-        SetScreenPositionToMatchTilePosition();
-        SetDepth();
-    }
-
     public void GenerateLua() {
-        luaObject.Set(PropertyCondition, luaCondition);
-        luaObject.Set(PropertyBody, luaBody);
+        luaObject.Set(PropertyLuaHide, GetProperty(PropertyLuaHide));
+        luaObject.Set(PropertyLuaAutostart, GetProperty(PropertyLuaAutostart));
+        luaObject.Set(PropertyLuaCollide, GetProperty(PropertyLuaCollide));
+        luaObject.Set(PropertyLuaInteract, GetProperty(PropertyLuaInteract));
     }
 
     private void CheckAutostart(bool enabled) {
         LuaContext context = GetComponent<LuaContext>();
-        if (triggerType == EventTriggerType.Autostart && enabled && !context.IsRunning()) {
-            luaObject.Run(PropertyBody);
-        }
-        if (triggerType == EventTriggerType.Parallel && !enabled && context.IsRunning()) {
-            context.ForceTerminate();
+        if (enabled && !context.IsRunning()) {
+            luaObject.Run(PropertyLuaAutostart);
         }
     }
 
     // called when the avatar stumbles into us
     // before the step if impassable, after if passable
     private void OnCollide(AvatarEvent avatar) {
-        if (triggerType == EventTriggerType.Collide) {
-            luaObject.Run(PropertyBody);
-        }
+        luaObject.Run(PropertyLuaCollide);
     }
 
     // called when the avatar stumbles into us
     // facing us if impassable, on top of us if passable
     private void OnInteract(AvatarEvent avatar) {
-        if (triggerType == EventTriggerType.Interact) {
-            luaObject.Run(PropertyBody);
-        }
+        luaObject.Run(PropertyLuaInteract);
     }
 
     private LuaScript ParseScript(string lua) {
@@ -289,10 +281,10 @@ public abstract class MapEvent : MonoBehaviour {
     public IEnumerator LinearStepRoutine(OrthoDir dir) {
         tracking = true;
         targetPositionPx = OwnTileToWorld(position);
-        if (tilesPerSecond == 0) {
+        if (TilesPerSecond == 0) {
             transform.localPosition = targetPositionPx;
         } else {
-            var tween = transform.DOLocalMove(targetPositionPx, 1.0f / tilesPerSecond, UsesSnap());
+            var tween = transform.DOLocalMove(targetPositionPx, 1.0f / TilesPerSecond, UsesSnap());
             tween.SetEase(Ease.Linear);
             yield return CoUtils.RunTween(tween);
         }
