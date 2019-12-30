@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 /**
  * MGNE's big map class, now in MGNE2. Converted from Tiled and now to unity maps.
  */
-public class Map : MonoBehaviour {
+public abstract class Map : MonoBehaviour {
 
     // some game-wide critical map2d constants
     public const int TileSizePx = 16;
@@ -27,12 +27,8 @@ public class Map : MonoBehaviour {
     public Vector2Int size {
         get {
             if (_size.x == 0) {
-                if (terrain != null) {
-                    _size = GetComponent<TacticsTerrainMesh>().size;
-                } else {
-                    Vector3Int v3 = grid.transform.GetChild(0).GetComponent<Tilemap>().size;
-                    _size = new Vector2Int(v3.x, v3.y);
-                }
+                Vector3Int v3 = grid.transform.GetChild(0).GetComponent<Tilemap>().size;
+                _size = new Vector2Int(v3.x, v3.y);
             }
             return _size;
         }
@@ -46,25 +42,13 @@ public class Map : MonoBehaviour {
         get {
             if (_layers == null) {
                 _layers = new List<Tilemap>();
-                if (terrain != null) {
-                    _layers.Add(GetComponent<Tilemap>());
-                } else {
-                    foreach (Transform child in grid.transform) {
-                        if (child.GetComponent<Tilemap>()) {
-                            _layers.Add(child.GetComponent<Tilemap>());
-                        }
+                foreach (Transform child in grid.transform) {
+                    if (child.GetComponent<Tilemap>()) {
+                        _layers.Add(child.GetComponent<Tilemap>());
                     }
                 }
             }
             return _layers;
-        }
-    }
-
-    private TacticsTerrainMesh _terrain;
-    public TacticsTerrainMesh terrain {
-        get {
-            if (_terrain == null) _terrain = GetComponent<TacticsTerrainMesh>();
-            return _terrain;
         }
     }
 
@@ -81,9 +65,7 @@ public class Map : MonoBehaviour {
         return new Vector3Int(x, -1 * (y + 1), 0);
     }
 
-    public PropertiedTile TileAt(Tilemap layer, int x, int y) {
-        return (PropertiedTile)layer.GetTile(TileToTilemapCoords(x, y));
-    }
+    public abstract PropertiedTile TileAt(Tilemap layer, int x, int y);
 
     public bool IsChipPassableAt(Tilemap layer, Vector2Int loc) {
         if (passabilityMap == null) {
@@ -94,7 +76,10 @@ public class Map : MonoBehaviour {
             for (int x = 0; x < width; x += 1) {
                 for (int y = 0; y < height; y += 1) {
                     PropertiedTile tile = TileAt(layer, x, y);
-                    passabilityMap[layer][x, y] = tile == null || tile.GetData().passable;
+                    passabilityMap[layer][x, y] =
+                        tile == null ||
+                        tile.IsPassable ||
+                        !tile.IsImpassable;
                 }
             }
         }
@@ -200,9 +185,7 @@ public class Map : MonoBehaviour {
                     }
                     if (!visited.Contains(next) && actor.CanPassAt(next) &&
                         (actor.GetComponent<CharaEvent>() == null ||
-                             actor.CanPassAt(next)) &&
-                        (actor.GetComponent<BattleEvent>() == null ||
-                             actor.GetComponent<BattleEvent>().CanCrossTileGradient(at, next))) {
+                             actor.CanPassAt(next))) {
                         List<Vector2Int> newHead = new List<Vector2Int>(head) { next };
                         heads.Add(newHead);
                         visited.Add(next);

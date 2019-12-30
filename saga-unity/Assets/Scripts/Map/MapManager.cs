@@ -8,8 +8,6 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
 
     public Map activeMap { get; set; }
     public AvatarEvent avatar { get; set; }
-    public DuelMap activeDuelMap { get; set; }
-    public SceneBlendController blendController { get; set; }
 
     private MapCamera _camera;
     public new MapCamera camera {

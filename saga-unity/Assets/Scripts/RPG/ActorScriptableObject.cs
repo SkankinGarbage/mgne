@@ -10,6 +10,5 @@ public abstract class ActorScriptableObject : ScriptableObject {
     protected BattleEvent battler { get { return actor.battler; } }
     protected MapEvent mapEvent { get { return battler.GetComponent<MapEvent>(); } }
     protected Map map { get { return controller.map; } }
-    protected TacticsTerrainMesh terrain { get { return map.terrain; } }
 
 }
