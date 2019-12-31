@@ -117,6 +117,28 @@ public class OutputHandler {
 	}
 	
 	/**
+	 * Writes a pbo json 
+	 * @param obj pbo
+	 */
+	public void writeJson(Object obj) {
+		InputHandler in = parent.getLogic().getIn();
+		OutputHandler out = parent.getLogic().getOut();
+		ProjectConfig projectConfig = parent.getLogic().getConfig();
+		String path = in.getFile(
+				out.getProjectConfigFile().getParentFile(), 
+				projectConfig.data).getAbsolutePath() + "\\";
+		path += "../json/" + obj.toString() + ".json";
+		File file = new File(path);
+		try {
+			file.getParentFile().mkdirs();
+			file.createNewFile();
+			Global.instance().writer().writeValue(file, obj);
+		} catch (IOException e) {
+			Global.instance().err("Error creating " + file, e);
+		}
+	}
+	
+	/**
 	 * Exports compact project data.
 	 */
 	public void export() {

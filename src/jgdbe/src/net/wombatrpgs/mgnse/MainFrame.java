@@ -49,11 +49,14 @@ public class MainFrame extends JFrame {
 	private List<Wizard> allWizards;
 	private JMenuBar bar;
 	
+	public static MainFrame instance;
+	
 	/**
 	 * Set up the application... in practice all this does is set window title.
 	 */
 	public MainFrame() {
 		super("JG Database Editor");
+		instance = this;
 	}
 	
 	/**
