@@ -37,11 +37,6 @@ public class BattleAnimationPlayer : AnimationPlayer {
             }
         }
 
-        if (debugItem != null) {
-            attacker.chara.itemSprite = debugItem.sprite;
-            defender.chara.itemSprite = debugItem.sprite;
-        }
-
         SetUpLua();
         attacker.PrepareForBattleAnimation(this, CharaAnimationTarget.Type.Attacker);
         defender.PrepareForBattleAnimation(this, CharaAnimationTarget.Type.Defender);

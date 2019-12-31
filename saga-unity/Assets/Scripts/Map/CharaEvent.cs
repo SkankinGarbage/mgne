@@ -4,6 +4,8 @@ using UnityEngine;
 using System;
 using UnityEditor;
 
+#pragma warning disable 0649
+
 /**
  * For our purposes, a CharaEvent is anything that's going to be moving around the map
  * or has a physical appearance. For parallel process or whatevers, they won't have this.
@@ -12,37 +14,25 @@ using UnityEditor;
 [DisallowMultipleComponent]
 public class CharaEvent : MonoBehaviour {
 
-    private const float Gravity = -20.0f;
-    private const float JumpHeightUpMult = 1.2f;
-    private const float JumpHeightDownMult = 1.6f;
     private const string DefaultMaterial2DPath = "Materials/Sprite2D";
-    private const string DefaultMaterial3DPath = "Materials/Sprite3D";
     private const float DesaturationDuration = 0.5f;
     private const float StepsPerSecond = 4.0f;
-    private const float JumpStepsPerSecond = 8.0f;
 
-    public GameObject doll;
-    public SpriteRenderer mainLayer;
-    public SpriteRenderer armsLayer;
-    public SpriteRenderer itemLayer;
-    public bool alwaysAnimates = false;
-    public bool cameraRelativeFacing = false;
+    [SerializeField] private GameObject doll;
+    [SerializeField] private new SpriteRenderer renderer;
+
+    public bool alwaysAnimates;
+    public bool cameraRelativeFacing;
 
     private Dictionary<string, Sprite> sprites;
     private Vector2 lastPosition;
     private bool wasSteppingLastFrame;
-    private List<KeyValuePair<float, Vector3>> afterimageHistory;
     private Vector3 targetPx;
     private float moveTime;
+    private bool stepping;
 
     public MapEvent parent { get { return GetComponent<MapEvent>(); } }
     public Map map { get { return parent.parent; } }
-    public Sprite overrideBodySprite { get; set; }
-    public Sprite itemSprite { get; set; }
-    public ArmMode armMode { get; set; }
-    public ItemMode itemMode { get; set; }
-    public bool jumping { get; set; }
-    public bool stepping { get; set; }
     public float desaturation { get; set; }
 
     [SerializeField]
@@ -64,13 +54,6 @@ public class CharaEvent : MonoBehaviour {
         get { return _facing; }
         set {
             _facing = value;
-            if (armsLayer != null) {
-                if (facing == OrthoDir.North) {
-                    armsLayer.sortingOrder = -2;
-                } else {
-                    armsLayer.sortingOrder = 2;
-                }
-            }
             UpdateAppearance();
         }
     }
@@ -80,10 +63,7 @@ public class CharaEvent : MonoBehaviour {
         get {
             if (_renderers == null) {
                 _renderers = new List<SpriteRenderer>();
-                Debug.Assert(mainLayer != null);
-                _renderers.Add(mainLayer);
-                if (armsLayer != null) _renderers.Add(armsLayer);
-                if (itemLayer != null) _renderers.Add(itemLayer);
+                _renderers.Add(renderer);
             }
             return _renderers;
         }
@@ -130,17 +110,7 @@ public class CharaEvent : MonoBehaviour {
             if (sprites == null || sprites.Count == 0) {
                 LoadSpritesheetData();
             }
-            mainLayer.sprite = SpriteForMain();
-            if (armsLayer != null) armsLayer.sprite = SpriteForArms();
-            if (itemLayer != null) itemLayer.sprite = SpriteForItem();
-
-            if (itemLayer != null && itemLayer.sprite != null) {
-                itemLayer.transform.localPosition = new Vector3(
-                    (float)armMode.ItemAnchor().x / Map.TileSizePx,
-                    (float)armMode.ItemAnchor().y / Map.TileSizePx, 
-                    itemLayer.transform.localPosition.z);
-                itemLayer.transform.localEulerAngles = new Vector3(0.0f, 0.0f, itemMode.Rotation());
-            }
+            renderer.sprite = SpriteForMain();
         }
     }
 
@@ -186,28 +156,6 @@ public class CharaEvent : MonoBehaviour {
         }
     }
 
-    private IEnumerator JumpRoutine(Vector3 startPx, Vector3 targetPx, float duration, bool useJumpFrames = true) {
-        jumping = useJumpFrames;
-        float elapsed = 0.0f;
-        
-        float dy = (targetPx.y - startPx.y);
-        float b = (dy - Gravity * (duration * duration)) / duration;
-        while (true) {
-            float t = elapsed / duration;
-            elapsed += Time.deltaTime;
-            parent.transform.position = new Vector3(
-                startPx.x + t * (targetPx.x - startPx.x),
-                startPx.y + Gravity * (elapsed * elapsed) + b * elapsed,
-                startPx.z + t * (targetPx.z - startPx.z));
-            if (elapsed >= duration) {
-                break;
-            }
-            yield return null;
-        }
-        jumping = false;
-        parent.SetScreenPositionToMatchTilePosition();
-    }
-
     private bool IsSteppingThisFrame() {
         Vector2 position = transform.position;
         Vector2 delta = position - lastPosition;
@@ -237,37 +185,9 @@ public class CharaEvent : MonoBehaviour {
     }
 
     private Sprite SpriteForMain() {
-        if (overrideBodySprite != null) {
-            return overrideBodySprite;
-        }
-
-        int x;
-        if (jumping) {
-            x = Mathf.FloorToInt(moveTime * JumpStepsPerSecond) % 2 + 3;
-        } else {
-            x = Mathf.FloorToInt(moveTime * StepsPerSecond) % 4;
-            if (x == 3) x = 1;
-            if (!stepping) x = 1;
-        }
+        int x = Mathf.FloorToInt(moveTime * StepsPerSecond) % 4;
+        if (x == 3) x = 1;
+        if (!stepping) x = 1;
         return FrameBySlot(x);
-    }
-
-    private Sprite SpriteForArms() {
-        if (armMode == ArmMode.Disabled && jumping) {
-            return FrameBySlot(ArmMode.Raised.FrameIndex());
-        }
-        if (armMode.Show()) {
-            return FrameBySlot(armMode.FrameIndex());
-        } else {
-            return null;
-        }
-    }
-
-    private Sprite SpriteForItem() {
-        if (itemMode.Show()) {
-            return itemSprite;
-        } else {
-            return null;
-        }
     }
 }

@@ -1,33 +1,33 @@
 fileFormatVersion: 2
-guid: 5c3e8aca7e1fd7e498359d2a8e9afd99
+guid: 04d61a887a760df419f722ae32bccb3d
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: guildraider_maluWestLeft
-    21300002: guildraider_maluWestCenter
-    21300004: guildraider_maluWestRight
-    21300006: guildraider_maluSouthLeft
-    21300008: guildraider_maluSouthCenter
-    21300010: guildraider_maluSouthRight
-    21300012: guildraider_maluEastLeft
-    21300014: guildraider_maluEastCenter
-    21300016: guildraider_maluEastRight
-    21300018: guildraider_maluNorthLeft
-    21300020: guildraider_maluNorthCenter
-    21300022: guildraider_maluNorthRight
-    21300024: guildraider_malu_0_0
-    21300026: guildraider_malu_1_0
-    21300028: guildraider_malu_2_0
-    21300030: guildraider_malu_0_1
-    21300032: guildraider_malu_1_1
-    21300034: guildraider_malu_2_1
-    21300036: guildraider_malu_0_2
-    21300038: guildraider_malu_1_2
-    21300040: guildraider_malu_2_2
-    21300042: guildraider_malu_0_3
-    21300044: guildraider_malu_1_3
-    21300046: guildraider_malu_2_3
+  internalIDToNameTable:
+  - first:
+      213: 6710041932596075484
+    second: jonas_0_0
+  - first:
+      213: 2030774369636106911
+    second: jonas_1_0
+  - first:
+      213: 1857049415517831037
+    second: jonas_0_1
+  - first:
+      213: -5904655456823869844
+    second: jonas_1_1
+  - first:
+      213: 2975199712576933421
+    second: jonas_0_2
+  - first:
+      213: 3948332130467121175
+    second: jonas_1_2
+  - first:
+      213: 3307577129831446318
+    second: jonas_0_3
+  - first:
+      213: 336981256906688909
+    second: jonas_1_3
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -68,10 +68,10 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
-  spritePivot: {x: 12, y: 8}
-  spritePixelsToUnits: 16
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -93,28 +93,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guildraider_malu_0_0
+      name: jonas_0_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
-        width: 24
-        height: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,19 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56bae0b8671f01b48ac357c2c1498c40
+      spriteID: a93210a80f7c18a4997a94b75cc654cf
+      internalID: 6710041932596075484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guildraider_malu_1_0
+      name: jonas_1_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 96
-        width: 24
-        height: 32
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,99 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c93bf12b76eb564a981e46e639c6dfb
+      spriteID: 1a1e0f1410ba14e4d851f9a6da339ede
+      internalID: 2030774369636106911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guildraider_malu_2_0
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 96
-        width: 24
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec26dce3007e8a24f93383556f1b6e50
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guildraider_malu_0_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 24
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c5f894a3296c942429aa8d34ee9fb109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guildraider_malu_1_1
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 64
-        width: 24
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1af9cf75550db4428fe373f662a39d9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guildraider_malu_2_1
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 64
-        width: 24
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d53e1da526f38324a995313a4c55ca7c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guildraider_malu_0_2
+      name: jonas_0_1
       rect:
         serializedVersion: 2
         x: 0
         y: 32
-        width: 24
-        height: 32
+        width: 16
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,19 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 446d464dd30929249a9e62be01b04a61
+      spriteID: 3f05f2ba90d2ee049a814eef0f75dc8d
+      internalID: 1857049415517831037
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guildraider_malu_1_2
+      name: jonas_1_1
       rect:
         serializedVersion: 2
-        x: 24
+        x: 16
         y: 32
-        width: 24
-        height: 32
+        width: 16
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,19 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43291ead9672691449e68fc9076f9a44
+      spriteID: 0dd1a4d433d069443a3a3d35a81c0ddb
+      internalID: -5904655456823869844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guildraider_malu_2_2
+      name: jonas_0_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
-        width: 24
-        height: 32
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,19 +195,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca190ca6275a8df46ad3560caed41ae4
+      spriteID: a8a551805549be340a8a23c27177f811
+      internalID: 2975199712576933421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guildraider_malu_0_3
+      name: jonas_1_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d7cd781d6f39342889dfe816188ce4
+      internalID: 3948332130467121175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jonas_0_3
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 32
+        width: 16
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,19 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 088c89498d5d67044ae9ef9d01e5758d
+      spriteID: fdc6569687ae845459d55aeeb7030208
+      internalID: 3307577129831446318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guildraider_malu_1_3
+      name: jonas_1_3
       rect:
         serializedVersion: 2
-        x: 24
+        x: 16
         y: 0
-        width: 24
-        height: 32
+        width: 16
+        height: 16
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -322,27 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6df9ebf6dcf6d304990d81bbd7a12000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guildraider_malu_2_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 24
-        height: 32
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8463f557040406846bba60f19fc8fc5e
+      spriteID: 4837e76e2555a3c4d9820a7d063ac0ff
+      internalID: 336981256906688909
       vertices: []
       indices: 
       edges: []
@@ -351,10 +268,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

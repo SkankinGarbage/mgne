@@ -6,12 +6,6 @@ using MoonSharp.Interpreter;
 [DisallowMultipleComponent]
 public class CharaAnimationTarget : AnimationTarget {
 
-    private static string ArgLayer = "layer";
-    private static string ArgMode = "mode";
-
-    private static float DefaultJumpHeight = 1.2f;
-    private static float DefaultJumpReturnHeight = 0.4f;
-
     public enum Type {
         Attacker,
         Defender,
@@ -26,9 +20,6 @@ public class CharaAnimationTarget : AnimationTarget {
     [MoonSharpHidden]
     public void ConfigureToBattler(BattleEvent battler) {
         chara.spritesheet = battler.GetComponent<CharaEvent>().spritesheet;
-        if (battler.unit.unit.equippedItem != null) {
-            chara.itemSprite = battler.unit.unit.equippedItem.sprite;
-        }
     }
 
     [MoonSharpHidden]
@@ -47,10 +38,6 @@ public class CharaAnimationTarget : AnimationTarget {
                 renderer.GetComponent<AfterimageComponent>().enabled = false;
             }
         }
-        chara.overrideBodySprite = null;
-        chara.itemSprite = null;
-        chara.armMode = ArmMode.Disabled;
-        chara.itemMode = ItemMode.Disabled;
     }
 
     // === COMMAND HELPERS =========================================================================
@@ -78,37 +65,6 @@ public class CharaAnimationTarget : AnimationTarget {
     }
 
     // === LUA FUNCTIONS ===========================================================================
-
-    // jumpToDefender({});
-    public void jumpToDefender(DynValue args) { CSRun(cs_jumpToDefender(args), args); }
-    private IEnumerator cs_jumpToDefender(DynValue args) {
-        chara.jumping = true;
-        Vector3 endPos = CalculateJumpOffset(transform.position, player.defender.transform.position);
-        float duration = (float)args.Table.Get(ArgDuration).Number;
-        yield return JumpRoutine(endPos, duration, DefaultJumpHeight);
-        chara.jumping = false;
-    }
-
-    // jumpReturn({duration?});
-    public void jumpReturn(DynValue args) { CSRun(cs_jumpReturn(args), args); }
-    private IEnumerator cs_jumpReturn(DynValue args) {
-        float overallDuration = (float)args.Table.Get(ArgDuration).Number;
-        float fraction = (2.0f / 3.0f);
-        Vector3 midPos = Vector3.Lerp(transform.position, originalDollPos, fraction);
-        yield return JumpRoutine(midPos,
-                    overallDuration * fraction,
-                    DefaultJumpReturnHeight * fraction);
-        yield return JumpRoutine(originalDollPos,
-                overallDuration * (1.0f - fraction) * 1.5f,
-                DefaultJumpReturnHeight * (1.0f - fraction));
-    }
-
-    // setFrame({frame, layer=0});
-    public void setBody(DynValue args) {
-        int spriteFrame = (int)args.Table.Get(ArgFrame).Number;
-        int index = (int)args.Table.Get(ArgLayer).Number;
-        chara.overrideBodySprite = chara.FrameBySlot(spriteFrame);
-    }
 
     // afterimage({enable?, count?, duration?});
     public void afterimage(DynValue args) {
@@ -144,22 +100,5 @@ public class CharaAnimationTarget : AnimationTarget {
             yield return null;
         }
         transform.localPosition = startPos;
-    }
-
-    // setItem({mode})
-    public void setItem(DynValue args) {
-        chara.itemMode = ItemModeExtensions.Parse(args.Table.Get(ArgMode).String);
-    }
-
-    // setArms({mode})
-    public void setArms(DynValue args) {
-        chara.armMode = ArmModeExtensions.Parse(args.Table.Get(ArgMode).String);
-    }
-
-    // animateSwing({duration=0.2f})
-    public void animateSwing(DynValue args) { CSRun(cs_animateSwing(args), args); }
-    private IEnumerator cs_animateSwing(DynValue args) {
-        float duration = FloatArg(args, ArgDuration, 0.2f);
-        yield return chara.itemLayer.GetComponent<SmearBehavior>().AnimateSlash(duration);
     }
 }
