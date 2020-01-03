@@ -11,6 +11,7 @@ package net.wombatrpgs.mgnschema.wizards.export;
  */
 public class SchemaClass {
 	
+	public String $type = "SchemaClass, Assembly-CSharp-Editor";
 	public String name;
 	public boolean excludeFromTree = false;
 	public String path = "";

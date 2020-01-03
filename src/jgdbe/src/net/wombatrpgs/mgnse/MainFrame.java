@@ -41,7 +41,7 @@ public class MainFrame extends JFrame {
 	
 	private SchemaTree tree;
 	private JPanel editor;
-	private Logic logic;
+	public static Logic logic;
 	private Listener in;
 	private JMenu file, edit, wizard;
 	private JMenuItem saveItem, saveAllItem, revertItem, revertAllItem, deleteItem, cloneItem;

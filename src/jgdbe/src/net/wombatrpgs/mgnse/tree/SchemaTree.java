@@ -37,6 +37,7 @@ import net.wombatrpgs.mgns.core.Annotations;
 import net.wombatrpgs.mgns.core.Annotations.ExcludeFromTree;
 import net.wombatrpgs.mgns.core.MainSchema;
 import net.wombatrpgs.mgns.core.PolymorphicSchema;
+import net.wombatrpgs.mgns.core.Schema;
 import net.wombatrpgs.mgnse.Global;
 import net.wombatrpgs.mgnse.editor.FieldPanel;
 import net.wombatrpgs.mgnse.exception.MisplacedDatabaseEntryException;
@@ -58,6 +59,7 @@ public class SchemaTree extends JTree {
 	private File dataDir;
 	/** All the schema class files */
 	private ArrayList<ClassWrapper> schema;
+	private List<Class<? extends Schema>> headlessSchema;
 	/** The providing data structure */
 	private SchemaNode tree;
 	/** load dem classes */
@@ -73,6 +75,8 @@ public class SchemaTree extends JTree {
 	public void addSchemaJar(File schemaJar) { schemaJars.add(schemaJar); }
 	/** @return All known schema types */
 	public List<ClassWrapper> getSchema() { return schema; }
+	/** @return All known headless schema types */
+	public List<Class<? extends Schema>> getHeadlessSchema() { return headlessSchema; }
 	
 	/**
 	 * Fetches all implementers of the given polymorphic schema
@@ -128,6 +132,8 @@ public class SchemaTree extends JTree {
 		
 		// load from all files
 		schema = new ArrayList<ClassWrapper>();
+		headlessSchema = new ArrayList<Class<? extends Schema>>();
+		
 		for (File schemaJar : schemaJars) {
 			refreshSchema(schemaJar);
 		}
@@ -199,8 +205,8 @@ public class SchemaTree extends JTree {
 				try {
 					Class<?> rawClass = cl.loadClass(className);
 					// if it's schema, add it
-					if (!MainSchema.class.isAssignableFrom(rawClass)) {
-						Global.instance().debug("Class doesn't extend main schema: " + rawClass);
+					if (!MainSchema.class.isAssignableFrom(rawClass) && Schema.class.isAssignableFrom(rawClass)) {
+						headlessSchema.add((Class<? extends MainSchema>) rawClass);
 					} else {
 						schema.add(new ClassWrapper((Class<? extends MainSchema>) rawClass));
 					}

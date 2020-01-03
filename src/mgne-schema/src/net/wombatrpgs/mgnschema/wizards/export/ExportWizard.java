@@ -10,11 +10,10 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.wombatrpgs.mgns.core.MainSchema;
+import net.wombatrpgs.mgns.core.HeadlessSchema;
 import net.wombatrpgs.mgns.core.Schema;
 import net.wombatrpgs.mgns.core.Annotations.DefaultValue;
 import net.wombatrpgs.mgns.core.Annotations.Desc;
-import net.wombatrpgs.mgns.core.Annotations.DisplayName;
 import net.wombatrpgs.mgns.core.Annotations.ExcludeFromTree;
 import net.wombatrpgs.mgns.core.Annotations.Header;
 import net.wombatrpgs.mgns.core.Annotations.InlinePolymorphic;
@@ -41,9 +40,12 @@ public class ExportWizard extends Wizard {
 		for (SchemaNode node : Global.instance().getImplementers(Schema.class)) {
 			convertSchema(node.getSchema());
 		}
+		for (Class<? extends Schema> node : MainFrame.logic.getSchemaTree().getHeadlessSchema()) {
+			convertSchema(node);
+		}
 	}
 	
-	private static void convertSchema(Class<? extends MainSchema> clazz) {
+	private static void convertSchema(Class<? extends Schema> clazz) {
 		System.out.println("Converting " + clazz + "...");
 		
 		SchemaClass toSerialize = new SchemaClass();
@@ -59,17 +61,14 @@ public class ExportWizard extends Wizard {
 		if (exclude != null) {
 			toSerialize.excludeFromTree = exclude.value();
 		}
+		toSerialize.excludeFromTree |= clazz.isAssignableFrom(HeadlessSchema.class);
 		
 		for (Field field : clazz.getFields()) {
 			SchemaField serializeField = new SchemaField();
 			fields.add(serializeField);
 			
 			serializeField.type = field.getType().getSimpleName();
-			
-			DisplayName displayName = field.getAnnotation(DisplayName.class);
-			if (displayName != null) {
-				serializeField.name = displayName.value();
-			}
+			serializeField.name = field.getName();
 			
 			DefaultValue defaultValue = field.getAnnotation(DefaultValue.class);
 			if (defaultValue != null) {
