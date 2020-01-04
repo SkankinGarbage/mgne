@@ -1,0 +1,107 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "EffectFogMDO",
+	"excludeFromTree" : false,
+	"path" : "graphics/effects/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "shader",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "ShaderMDO",
+			"description" : "Fog shader",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "tex",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "AnimationMDO",
+			"description" : "Fog texture/anim",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "velocity",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Fog velocity - in px/s",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "density",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Fog density - 1 highest, 0 invisble",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "radius",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Beacon radius - how far out the beacons reach, in pixels",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "factor",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Beacon factor - the max percent beacons can light up fog, 1 all the way 0 not a t all",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "exponent",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Beacon decay - exponential factor for beacon distance, usually from 1 to 3, 1 giving linear illumination from center and 3 giving cubic",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

@@ -1,0 +1,53 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "ItemMixSetMDO",
+	"excludeFromTree" : false,
+	"path" : "rpg/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "combinations",
+			"type" : "String[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "ItemMixMDO",
+			"description" : "The available combinations",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

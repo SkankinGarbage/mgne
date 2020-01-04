@@ -1,0 +1,89 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "GraphicsSettingsMDO",
+	"excludeFromTree" : false,
+	"path" : "graphics/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "globalShader",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "ShaderMDO",
+			"description" : "Screen shader - used to draw the final screen",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "background",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Background texture - stretched to fit behind the map",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "chunkingEnabled",
+			"type" : "EffectEnabledType",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Chunking - (advanced) enables/disables the character order rendering algorithm",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "shaderDebug",
+			"type" : "TestState",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Some printouts for when shaders bug out",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "enabled",
+			"type" : "ShaderEnabledState",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Whether or not to use shaders",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "EffectLoSMDO",
+	"excludeFromTree" : false,
+	"path" : "graphics/effects/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "shader",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "ShaderMDO",
+			"description" : "Shader",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "invisibleTex",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "AnimationMDO",
+			"description" : "Unseen texture",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "unseenTex",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "AnimationMDO",
+			"description" : "Never seen texture",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "velocity",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Fog velocity - in px/s",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

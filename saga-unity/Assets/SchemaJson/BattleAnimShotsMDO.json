@@ -1,0 +1,143 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "BattleAnimShotsMDO",
+	"excludeFromTree" : false,
+	"path" : "graphics/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "anim",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "BattleAnimStripMDO",
+			"description" : "Animation - the individual shot animation",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "count",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Count - shots to fire in total",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "delay",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Delay - interval between each shot, in seconds",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "cols",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Columns - this many shots appear in a row",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "padX",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Horizontal padding - two shots have this many pixels between them",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "padY",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Vertical padding - two rows of shots have this many pixels between them",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "gainX",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Max vertical gain - each shot appears +/- by this many pixels",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "gainY",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Max horizontal gain - each shot appears +/- by this many pixels",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "jitterX",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Horizontal jitter - each shot height is offset by this many pixels",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "jitterY",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Vertical jitter - each shot height is offset by this many pixels",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "sound",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Sound effect - plays with the animation in battle only",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

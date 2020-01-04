@@ -1,0 +1,7 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "Schema",
+	"excludeFromTree" : true,
+	"path" : "",
+	"fields" : [ ]
+}

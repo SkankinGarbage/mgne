@@ -1,0 +1,26 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "MixEntryMDO",
+	"excludeFromTree" : false,
+	"path" : "",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "item",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "CollectableMDO",
+			"description" : null,
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "quantity",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Quantity",
+			"header" : false
+		}
+	]
+}

@@ -1,0 +1,107 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "Decorator1x3SpecialMDO",
+	"excludeFromTree" : false,
+	"path" : "maps/decorators/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "t",
+			"type" : "TileMDO",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "TileMDO",
+			"description" : "The top tile to replace with",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "m",
+			"type" : "TileMDO",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "TileMDO",
+			"description" : "The middle tile to replace with",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "b",
+			"type" : "TileMDO",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "TileMDO",
+			"description" : "The bottom tile to replace with",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "bottomType",
+			"type" : "TileType",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The tile type of the bottom tile only, overrides other",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "chance",
+			"type" : "Float",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Probabililty this decoration will trigger, 0 is never 1 is always",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "original",
+			"type" : "TileType",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The tile type to replace",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "replacement",
+			"type" : "TileType",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The new tile type to replace it with",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

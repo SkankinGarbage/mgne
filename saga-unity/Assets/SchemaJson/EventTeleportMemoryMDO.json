@@ -1,0 +1,206 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "EventTeleportMemoryMDO",
+	"excludeFromTree" : false,
+	"path" : "maps/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "displayName",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Display name - displayed in the list of teleport locations",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "appearance",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : "DirMDO",
+			"description" : "Animation - what this event looks like, or null for invisible",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "id",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "ID - used by Tiled, leave blank",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "passable",
+			"type" : "PassabilityType",
+			"defaultValue" : "PASSABLE",
+			"schemaLinkedClass" : null,
+			"description" : "Passability",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "width",
+			"type" : "Float",
+			"defaultValue" : "1",
+			"schemaLinkedClass" : null,
+			"description" : "Width of this event, in tiles",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "height",
+			"type" : "Float",
+			"defaultValue" : "1",
+			"schemaLinkedClass" : null,
+			"description" : "Height of this event, in tiles",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "groups",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "Group - any groups this NPC is in, when in doubt just leave blank, space seperated",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "face",
+			"type" : "OrthoDir",
+			"defaultValue" : "SOUTH",
+			"schemaLinkedClass" : null,
+			"description" : "Face - the direction this NPC faces",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "hidden",
+			"type" : "DisplayType",
+			"defaultValue" : "SHOW",
+			"schemaLinkedClass" : null,
+			"description" : "Display on/off",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "hide",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Hide script - if this lua script evals to true, will not show this event",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "onAdd",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "onAdd - lua value, script is called when event is added to map",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "onEnter",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "onEnter - lua value, script is called when hero enters the map",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "onRemove",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "onRemove - lua value, script is called when event is removed from map",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "onTurn",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "onTurn - lua value, script is called every time it's this event's turn",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "onCollide",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "onCollide - lua value, script is called when player walks into this event",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "onInteract",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "onInteract - lua value, script is called when player talks to this event",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "onBehavior",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "onBehavior - lua value, called abritrarily once every couple seconds",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "animate",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "Animate - hack, put something here to be inanimate",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

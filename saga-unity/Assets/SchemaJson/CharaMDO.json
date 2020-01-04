@@ -1,0 +1,188 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "CharaMDO",
+	"excludeFromTree" : false,
+	"path" : "rpg/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Name - default in the case of players, or else enemy name",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "gender",
+			"type" : "Gender",
+			"defaultValue" : "NONE",
+			"schemaLinkedClass" : null,
+			"description" : "Gender",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "race",
+			"type" : "Race",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Race",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "family",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "MonsterFamilyMDO",
+			"description" : "Family - used for transformations, only monsters should have this",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "species",
+			"type" : "String",
+			"defaultValue" : "",
+			"schemaLinkedClass" : null,
+			"description" : "Species - the name of the specific monster subtype, eg GOBLIN, only monsters should have this",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "appearance",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "FourDirMDO",
+			"description" : "Appearance",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "portrait",
+			"type" : "String",
+			"defaultValue" : "None",
+			"schemaLinkedClass" : null,
+			"description" : "In-battle portrait",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "meatEatLevel",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Meat eat level - the power of the meat this character drops, compared to the transform level of other monsters, monster only",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "meatTargetLevel",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Meat transform level - the power of meat needed to transform into this character, compared to the eat level of others",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "meatDropChance",
+			"type" : "Integer",
+			"defaultValue" : "0",
+			"schemaLinkedClass" : null,
+			"description" : "Percent out of 100 chance of dropping meat - 0 to use default",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "gp",
+			"type" : "Integer",
+			"defaultValue" : "0",
+			"schemaLinkedClass" : null,
+			"description" : "GP - dropped when this character is defeated by the player",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "loot",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "CombatItemMDO",
+			"description" : "Loot - dropped when this monster is defeated",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "deathAnim",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "BattleAnimMDO",
+			"description" : "Death animation - played on death, null for default",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "lootDropChance",
+			"type" : "Integer",
+			"defaultValue" : "0",
+			"schemaLinkedClass" : null,
+			"description" : "Percent out of 100 chance of dropping loot - 0 to use default",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "equipped",
+			"type" : "String[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "CombatItemMDO",
+			"description" : "Equipped items/abilities",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "stats",
+			"type" : "StatSetMDO",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "StatSetMDO",
+			"description" : null,
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

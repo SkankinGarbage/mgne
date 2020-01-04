@@ -1,0 +1,26 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "StatModMDO",
+	"excludeFromTree" : false,
+	"path" : "",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "stats",
+			"type" : "StatEntryMDO[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "StatEntryMDO",
+			"description" : "Numeric stat modifiers",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "flags",
+			"type" : "Flag[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : null,
+			"header" : false
+		}
+	]
+}

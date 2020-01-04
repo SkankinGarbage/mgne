@@ -1,0 +1,26 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "MeatShopEntryMDO",
+	"excludeFromTree" : false,
+	"path" : "",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "monster",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "CharaMDO",
+			"description" : null,
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "price",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Price",
+			"header" : false
+		}
+	]
+}

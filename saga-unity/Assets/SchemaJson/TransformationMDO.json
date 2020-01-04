@@ -1,0 +1,26 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "TransformationMDO",
+	"excludeFromTree" : false,
+	"path" : "",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "eat",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "MeatGroupMDO",
+			"description" : "Meat group eaten",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "result",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "MonsterFamilyMDO",
+			"description" : "Resulting family",
+			"header" : false
+		}
+	]
+}

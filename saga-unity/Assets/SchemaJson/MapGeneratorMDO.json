@@ -1,0 +1,170 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "MapGeneratorMDO",
+	"excludeFromTree" : false,
+	"path" : "maps/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "floorTiles",
+			"type" : "TileMDO",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "TileMDO",
+			"description" : "Floor tile(s)",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "wallTiles",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "WallTilesMDO",
+			"description" : "Wall tile(s)",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "ceilingTiles",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "CeilTilesMDO",
+			"description" : "Ceiling tile(s)",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "upstairTiles",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "StairTilesMDO",
+			"description" : "Stair upwards tiles",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "downstairTiles",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "StairTilesMDO",
+			"description" : "Stair downwards tiles",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "generator",
+			"type" : "GenerationType",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Generation algorithm",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "minRoomWidth",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Minimum room width, in tiles",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "minRoomHeight",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Minimum room height, in tiles",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "maxRoomWidth",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Maximum room width, in tiles",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "maxRoomHeight",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Maximum room height, in tiles",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "density",
+			"type" : "Float",
+			"defaultValue" : ".3",
+			"schemaLinkedClass" : null,
+			"description" : "Room density - what percentage of the map should be taken up by rooms, 0.0 to 1.0",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "connectivity",
+			"type" : "Float",
+			"defaultValue" : "1.0",
+			"schemaLinkedClass" : null,
+			"description" : "Connectivity - used in some heuristics, weird value but try to keep it 0-2 or so",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "decorators",
+			"type" : "String[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "DecoratorMDO",
+			"description" : "Decorators - things that go through after the map is generated and add special effects",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "upDecorators",
+			"type" : "String[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "DecoratorMDO",
+			"description" : "Upper decorators - same thing but these get added to upper chip instead",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

@@ -39,13 +39,53 @@ public class Stat {
 
     private static void InitializeStats() {
         stats = new Dictionary<StatTag, Stat>();
-        AddStat(StatTag.MHP,        CombinationAdditive.Instance(), "MHP",      false);
-        AddStat(StatTag.HP,         CombinationAdditive.Instance(), "HP",       false);
-        AddStat(StatTag.MOVE,       CombinationAdditive.Instance(), "MOVE",     false);
-        AddStat(StatTag.JUMP,       CombinationAdditive.Instance(), "JUMP",     false);
+        AddStat(StatTag.MHP);
+        AddStat(StatTag.HP);
+        AddStat(StatTag.STR);
+        AddStat(StatTag.AGI);
+        AddStat(StatTag.DEF);
+        AddStat(StatTag.MAN);
+
+        foreach (StatTag tag in new StatTag[] {     StatTag.RESIST_DAMAGE,
+                StatTag.RESIST_WEAPON,
+                StatTag.IMMUNE_WEAPON,
+
+                StatTag.RESIST_BLIND,
+                StatTag.RESIST_CURSE,
+                StatTag.RESIST_CONFUSE,
+                StatTag.RESIST_SLEEP,
+                StatTag.RESIST_PARALYZE,
+                StatTag.RESIST_STONE,
+                StatTag.RESIST_DEATH,
+                StatTag.RESIST_POISON,
+
+                StatTag.RESIST_FIRE,
+                StatTag.RESIST_ICE,
+                StatTag.RESIST_THUNDER,
+                StatTag.RESIST_EARTH,
+                StatTag.RESIST_TYPELESS,
+
+                StatTag.WEAK_FIRE,
+                StatTag.WEAK_ICE,
+                StatTag.WEAK_THUNDER,
+                StatTag.WEAK_EARTH,
+                StatTag.UNDEAD,
+
+                StatTag.AMBUSHER,
+                StatTag.NO_AMBUSH,
+
+                StatTag.REGENERATING,
+
+                StatTag.EQUIPMENT_FIX }) {
+            AddFlag(tag);
+        }
     }
 
-    private static void AddStat(StatTag tag, CombinationStrategy combinator, string nameShort, bool useBinaryEditor) {
-        stats[tag] = new Stat(tag, combinator, nameShort, useBinaryEditor);
+    private static void AddStat(StatTag tag) {
+        stats[tag] = new Stat(tag, CombinationAdditive.Instance(), tag.ToString(), false);
+    }
+
+    private static void AddFlag(StatTag tag) {
+        stats[tag] = new Stat(tag, CombinationAdditive.Instance(), tag.ToString(), true);
     }
 }

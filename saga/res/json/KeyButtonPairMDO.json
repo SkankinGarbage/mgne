@@ -1,0 +1,26 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "KeyButtonPairMDO",
+	"excludeFromTree" : true,
+	"path" : "",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "keyCode",
+			"type" : "GdxKey",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Keycode - from libgdx's input.keys static stuff, use a wizard for this",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "button",
+			"type" : "InputButton",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Input button - the virtual button that fires on that key",
+			"header" : false
+		}
+	]
+}

@@ -1,0 +1,170 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "StatusMDO",
+	"excludeFromTree" : false,
+	"path" : "rpg/",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "fullName",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Full name - used in extended menus, eg BLIND",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "tag",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Short name - used in small menus, eg BLND",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "inflictString",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Inflict message - printed when inflicted, eg \" is blind\"",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "healString",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Heal message - printed when healed, eg \" regains sight\"",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "priority",
+			"type" : "Integer",
+			"defaultValue" : "50",
+			"schemaLinkedClass" : null,
+			"description" : "Priority - effect with higher priority overwrite other effects",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "resistFlag",
+			"type" : "Flag",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Resist flag - characters with this flag are immune",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "preventChance",
+			"type" : "Integer",
+			"defaultValue" : "0",
+			"schemaLinkedClass" : null,
+			"description" : "Prevent action chance - chance from 0 to 100 chara will be unable to act in battle",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "randomChance",
+			"type" : "Integer",
+			"defaultValue" : "0",
+			"schemaLinkedClass" : null,
+			"description" : "Random action chance - chance from 0 to 100 chara will pick random move and target",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "recoverChance",
+			"type" : "Integer",
+			"defaultValue" : "0",
+			"schemaLinkedClass" : null,
+			"description" : "Recover chance - chance from 0 to 100 chara will randomly heal this status in battle",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "lethality",
+			"type" : "LethalityType",
+			"defaultValue" : "NON_DEADLY",
+			"schemaLinkedClass" : null,
+			"description" : "Lethality type - the game could treat this status the same as being dead",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "recover",
+			"type" : "RecoverType",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Recovery type",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "halvedStats",
+			"type" : "Stat[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Reduced stats - in-battle values is reduced by 50% for these stats in battle",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "dot",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Damage over time - will be inflicted to the afflicted each turn, zero for none",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "dotStat",
+			"type" : "Stat",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Damage over time stat - quartered and multiplied by DoT power",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}
