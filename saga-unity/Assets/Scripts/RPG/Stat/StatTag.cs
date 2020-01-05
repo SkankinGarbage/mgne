@@ -8,7 +8,7 @@
     STR,
     AGI,
     DEF,
-    MAN,
+    MANA,
 
     RESIST_DAMAGE,
     RESIST_WEAPON,

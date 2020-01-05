@@ -6,7 +6,6 @@ public class BattleAnimationPlayer : AnimationPlayer {
 
     public CharaAnimationTarget attacker = null;
     public CharaAnimationTarget defender = null;
-    public Item debugItem;
 
     public override void EditorReset() {
         base.EditorReset();

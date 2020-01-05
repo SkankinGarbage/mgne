@@ -1,0 +1,80 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "EffectReviveMDO",
+	"excludeFromTree" : false,
+	"path" : "",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "base",
+			"type" : "Integer",
+			"defaultValue" : "0",
+			"schemaLinkedClass" : null,
+			"description" : "Heal base - after resurrection, targets starts with this much health",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "power",
+			"type" : "Integer",
+			"defaultValue" : "0",
+			"schemaLinkedClass" : null,
+			"description" : "Heal power - multiplier for the heal (added to base)",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "powerStat",
+			"type" : "Stat",
+			"defaultValue" : "None",
+			"schemaLinkedClass" : null,
+			"description" : "Power stat - this stat is quartered and multiplied by power",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "projector",
+			"type" : "AllyProjector",
+			"defaultValue" : "USER",
+			"schemaLinkedClass" : null,
+			"description" : "Projector - what this ability covers",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

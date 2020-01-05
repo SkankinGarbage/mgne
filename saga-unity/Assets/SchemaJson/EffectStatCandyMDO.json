@@ -1,0 +1,89 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "EffectStatCandyMDO",
+	"excludeFromTree" : false,
+	"path" : "",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "stat",
+			"type" : "Stat",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Stat",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "minGain",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Min gain",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "maxGain",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Max gain",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "restrictRace",
+			"type" : "Race[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Restricted races - only these races allowed to consume",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "maxValue",
+			"type" : "Integer",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Maximum effective value - characters with a stat value above this will receive no effect from this item, or 0 for no maximum",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}

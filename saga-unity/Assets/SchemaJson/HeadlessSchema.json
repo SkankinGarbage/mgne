@@ -1,7 +1,0 @@
-{
-	"$type" : "SchemaClass, Assembly-CSharp-Editor",
-	"name" : "HeadlessSchema",
-	"excludeFromTree" : true,
-	"path" : "",
-	"fields" : [ ]
-}

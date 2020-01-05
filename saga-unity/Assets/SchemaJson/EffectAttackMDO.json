@@ -1,0 +1,125 @@
+{
+	"$type" : "SchemaClass, Assembly-CSharp-Editor",
+	"name" : "EffectAttackMDO",
+	"excludeFromTree" : false,
+	"path" : "",
+	"fields" : [
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "power",
+			"type" : "Integer",
+			"defaultValue" : "0",
+			"schemaLinkedClass" : null,
+			"description" : "Base power - power of the attack before multipliers",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "attackStat",
+			"type" : "Stat",
+			"defaultValue" : "STR",
+			"schemaLinkedClass" : null,
+			"description" : "Attack stat - this stat is quartered and then multiplied by power",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "defendStat",
+			"type" : "Stat",
+			"defaultValue" : "DEF",
+			"schemaLinkedClass" : null,
+			"description" : "Defend stat - this stat is subtracted from incoming damage",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "miss",
+			"type" : "MissType",
+			"defaultValue" : "CAN_MISS",
+			"schemaLinkedClass" : null,
+			"description" : "Miss type - generally only melee attacks should miss",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "damType",
+			"type" : "DamageType",
+			"defaultValue" : "PHYSICAL",
+			"schemaLinkedClass" : null,
+			"description" : "Damage type",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "sideEffects",
+			"type" : "OffenseFlag[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Other flags",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "slayerFamiles",
+			"type" : "String[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "MonsterFamilyMDO",
+			"description" : "Slayer families - monsters in these families will be weak",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "riders",
+			"type" : "EffectDefendMDO[]",
+			"defaultValue" : null,
+			"schemaLinkedClass" : "EffectDefendMDO",
+			"description" : "Riders - an invisible defensive ability that also applies",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "projector",
+			"type" : "OffenseProjector",
+			"defaultValue" : "SINGLE_ENEMY",
+			"schemaLinkedClass" : null,
+			"description" : "Projector",
+			"header" : false
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "key",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The key of this object used in code -- don't change these!",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "subfolder",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Used to subcategorize objects (\"/bosses\" or \"/areas/towns\" for instance)",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "name",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "The display name of this object, used only by humans like you",
+			"header" : true
+		},
+		{
+			"$type" : "SchemaField, Assembly-CSharp-Editor",
+			"name" : "description",
+			"type" : "String",
+			"defaultValue" : null,
+			"schemaLinkedClass" : null,
+			"description" : "Notes and whatnot on this object",
+			"header" : true
+		}
+	]
+}
