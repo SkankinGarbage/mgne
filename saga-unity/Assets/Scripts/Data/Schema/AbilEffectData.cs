@@ -1,3 +1,3 @@
-public class AbilEffectData : MainSchema {
+public class AbilEffectData : PolymorphicSchema {
 
 }
