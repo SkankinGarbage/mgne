@@ -1,5 +1,5 @@
 [UnityEngine.CreateAssetMenu(fileName="Chara", menuName="Data/Rpg/")]
-public class CharaData : UnityEngine.ScriptableObject {
+public class CharaData : MainSchema {
 
     [UnityEngine.Tooltip("Gender")]
     public Gender gender = Gender.NONE;

@@ -1,4 +1,4 @@
-public abstract class BattleAnimData : UnityEngine.ScriptableObject {
+public abstract class BattleAnimData : MainSchema {
 
     [UnityEngine.Tooltip("Sound effect - plays with the animation in battle only")]
     public string sound;

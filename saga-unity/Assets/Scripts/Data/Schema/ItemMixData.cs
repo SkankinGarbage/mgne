@@ -1,5 +1,5 @@
 [UnityEngine.CreateAssetMenu(fileName="ItemMix", menuName="Data/Rpg/")]
-public class ItemMixData : UnityEngine.ScriptableObject {
+public class ItemMixData : MainSchema {
 
     [UnityEngine.Tooltip("Ingredients")]
     public MixEntryData ingredients;

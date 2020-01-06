@@ -1,5 +1,5 @@
 [UnityEngine.CreateAssetMenu(fileName="SagaIntroSettings", menuName="Data/Settings/")]
-public class SagaIntroSettingsData : UnityEngine.ScriptableObject {
+public class SagaIntroSettingsData : MainSchema {
 
     [UnityEngine.Tooltip("Intro text - sloooowly scrolls, make sure to use \\n etc")]
     public string introText;

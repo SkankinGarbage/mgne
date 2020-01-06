@@ -1,3 +1,3 @@
-public class AbilEffectData {
+public class AbilEffectData : MainSchema {
 
 }

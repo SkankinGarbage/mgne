@@ -1,5 +1,5 @@
 [UnityEngine.CreateAssetMenu(fileName="Collectable", menuName="Data/Rpg/")]
-public class CollectableData : UnityEngine.ScriptableObject {
+public class CollectableData : MainSchema {
 
     [UnityEngine.Tooltip("Display name - special symbols are allowed, 8 characters max maybe?")]
     public string displayName;

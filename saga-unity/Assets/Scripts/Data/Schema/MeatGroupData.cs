@@ -1,5 +1,5 @@
 [UnityEngine.CreateAssetMenu(fileName="MeatGroup", menuName="Data/Rpg/")]
-public class MeatGroupData : UnityEngine.ScriptableObject {
+public class MeatGroupData : MainSchema {
 
     public MonsterFamilyData families;
 }

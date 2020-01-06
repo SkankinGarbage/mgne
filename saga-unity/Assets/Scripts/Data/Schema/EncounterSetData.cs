@@ -1,5 +1,5 @@
 [UnityEngine.CreateAssetMenu(fileName="EncounterSet", menuName="Data/Rpg/")]
-public class EncounterSetData : UnityEngine.ScriptableObject {
+public class EncounterSetData : MainSchema {
 
     [UnityEngine.Tooltip("Possible encounters in this set")]
     public EncounterSetMemberData encounters;

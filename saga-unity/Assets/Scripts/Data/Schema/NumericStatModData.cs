@@ -1,5 +1,5 @@
 [System.Serializable]
-public class NumericStatModData : UnityEngine.ScriptableObject {
+public class NumericStatModData : MainSchema {
 
     public StatEntryData stats;
 }

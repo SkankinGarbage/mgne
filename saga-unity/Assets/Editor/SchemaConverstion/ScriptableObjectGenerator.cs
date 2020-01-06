@@ -35,18 +35,38 @@ public class ScriptableObjectGenerator {
         streamReader.Close();
         fileReader.Close();
 
-        string type = filePath.Substring(0, filePath.LastIndexOf('\\'));
-        type = type.Substring(type.LastIndexOf('\\') + 1, type.Length - type.LastIndexOf('\\') - 1);
-        type = type.Replace("MDO", "Data");
-        Debug.Log(type);
-
-        ConvertRaw(type, jsonString);
+        string typeString = filePath.Substring(0, filePath.LastIndexOf('\\'));
+        typeString = typeString.Substring(typeString.LastIndexOf('\\') + 1, typeString.Length - typeString.LastIndexOf('\\') - 1);
+        typeString = typeString.Replace("MDO", "Data");
+        var assembly = typeof(CharaData).Assembly;
+        Type type = assembly.GetType(typeString);
+        if (type != null) {
+            ConvertRaw(type, jsonString);
+        }
     }
 
-    private static void ConvertRaw(string typeString, string jsonString) {
-        var assembly = typeof(CharaData).Assembly;
-        var type = assembly.GetType(typeString);
+    private static void ConvertRaw(Type type, string jsonString) {
         var obj = JsonConvert.DeserializeObject(jsonString, type);
-        Debug.Log("got here");
+        var path = "Assets/Resources/Database/" + type.ToString();
+        path = path.Substring(0, path.LastIndexOf("Data"));
+        if (!Directory.Exists(path)) {
+            Directory.CreateDirectory(path);
+        }
+        var mainSchema = obj as MainSchema;
+        if (mainSchema == null) {
+            Debug.LogError("Bad schema " + type);
+        }
+        if (mainSchema.subfolder.Length > 0) {
+            path += "/" + mainSchema.subfolder;
+            if (!Directory.Exists(path)) {
+                Directory.CreateDirectory(path);
+            }
+        }
+        path += "/" + mainSchema.key + ".asset";
+        
+        if (!File.Exists(path)) {
+            AssetDatabase.CreateAsset((UnityEngine.Object) obj, path);
+            Debug.Log("Writing to " + path + "...");
+        }
     }
 }

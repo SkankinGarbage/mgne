@@ -1,5 +1,5 @@
 [UnityEngine.CreateAssetMenu(fileName="SoundManager", menuName="Data/Audio/")]
-public class SoundManagerData : UnityEngine.ScriptableObject {
+public class SoundManagerData : MainSchema {
 
     [UnityEngine.Tooltip("Sound effect entries")]
     public SoundEffectEntryData[] soundEffectEntries;
