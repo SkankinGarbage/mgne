@@ -12,7 +12,4 @@ public class EffectAttackData : EffectCombatData {
 
     [UnityEngine.Tooltip("Miss type - generally only melee attacks should miss")]
     public MissType miss = MissType.CAN_MISS;
-
-
-
 }

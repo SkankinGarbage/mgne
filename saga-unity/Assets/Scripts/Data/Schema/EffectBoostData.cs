@@ -12,7 +12,4 @@ public class EffectBoostData : EffectAllyTargetData {
 
     [UnityEngine.Tooltip("Cap - boosted stat will never exceed this value, 0 for unlimited")]
     public int cap;
-
-    
-    
 }

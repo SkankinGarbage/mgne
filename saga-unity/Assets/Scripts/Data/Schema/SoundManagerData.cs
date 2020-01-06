@@ -2,14 +2,11 @@
 public class SoundManagerData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Sound effect entries")]
-    public SoundEffectEntryData soundEffectEntries;
+    public SoundEffectEntryData[] soundEffectEntries;
 
     [UnityEngine.Tooltip("Emu track entries")]
-    public EmuMusicEntryData emuMusicEntries;
+    public EmuMusicEntryData[] emuMusicEntries;
 
     [UnityEngine.Tooltip("Loaded music entries")]
-    public LoadedMusicEntryData loadedMusicEntries;
-
-    
-    
+    public LoadedMusicEntryData[] loadedMusicEntries;
 }

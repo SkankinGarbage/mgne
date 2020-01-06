@@ -37,10 +37,13 @@ public class ExportWizard extends Wizard {
 
 	/** @see net.wombatrpgs.mgnse.wizard.Wizard#run() */
 	@Override public void run() {
-		for (SchemaNode node : Global.instance().getImplementers(Schema.class)) {
-			convertSchema(node.getSchema());
-		}
-		for (Class<? extends Schema> node : MainFrame.logic.getSchemaTree().getHeadlessSchema()) {
+//		for (SchemaNode node : Global.instance().getImplementers(Schema.class)) {
+//			convertSchema(node.getSchema());
+//		}
+//		for (Class<? extends Schema> node : MainFrame.logic.getSchemaTree().getHeadlessSchema()) {
+//			convertSchema(node);
+//		}
+		for (Class<? extends Schema> node : MainFrame.logic.getSchemaTree().getPolySchema()) {
 			convertSchema(node);
 		}
 	}

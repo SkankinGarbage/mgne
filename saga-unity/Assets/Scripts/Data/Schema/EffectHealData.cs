@@ -15,7 +15,4 @@ public class EffectHealData : EffectAllyTargetData {
 
     [UnityEngine.Tooltip("Use restore - does this heal restore uses? (for tent basically)")]
     public UseRestoreType useRestore = UseRestoreType.NO_USE_RESTORE;
-
-    
-    
 }

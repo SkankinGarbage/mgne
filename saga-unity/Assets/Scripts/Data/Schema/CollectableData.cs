@@ -7,7 +7,4 @@ public class CollectableData : UnityEngine.ScriptableObject {
     [UnityEngine.Tooltip("Chest name - Specialty key for parts of items, what it\'s called coming out of the" +
 " chest, just leave blank")]
     public string chestName;
-
-    
-    
 }

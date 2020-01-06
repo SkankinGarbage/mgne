@@ -1,4 +1,5 @@
-public class StatEntryData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class StatEntryData {
 
     public StatTag stat;
 

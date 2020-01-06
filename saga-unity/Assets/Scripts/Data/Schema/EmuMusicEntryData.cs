@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="EmuMusicEntry", menuName="Data/")]
-public class EmuMusicEntryData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class EmuMusicEntryData {
 
     [UnityEngine.Tooltip("Reference key - can be used to refer to this key in-game")]
     public string refKey;

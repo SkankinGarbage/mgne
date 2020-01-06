@@ -2,7 +2,4 @@
 public class MeatGroupData : UnityEngine.ScriptableObject {
 
     public MonsterFamilyData families;
-
-    
-    
 }

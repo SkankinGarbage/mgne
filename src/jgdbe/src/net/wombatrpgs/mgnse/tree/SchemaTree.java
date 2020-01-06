@@ -60,6 +60,7 @@ public class SchemaTree extends JTree {
 	/** All the schema class files */
 	private ArrayList<ClassWrapper> schema;
 	private List<Class<? extends Schema>> headlessSchema;
+	private List<Class<? extends Schema>> polySchema;
 	/** The providing data structure */
 	private SchemaNode tree;
 	/** load dem classes */
@@ -77,6 +78,7 @@ public class SchemaTree extends JTree {
 	public List<ClassWrapper> getSchema() { return schema; }
 	/** @return All known headless schema types */
 	public List<Class<? extends Schema>> getHeadlessSchema() { return headlessSchema; }
+	public List<Class<? extends Schema>> getPolySchema() { return polySchema; }
 	
 	/**
 	 * Fetches all implementers of the given polymorphic schema
@@ -133,6 +135,7 @@ public class SchemaTree extends JTree {
 		// load from all files
 		schema = new ArrayList<ClassWrapper>();
 		headlessSchema = new ArrayList<Class<? extends Schema>>();
+		polySchema = new ArrayList<Class<? extends Schema>>();
 		
 		for (File schemaJar : schemaJars) {
 			refreshSchema(schemaJar);
@@ -205,6 +208,9 @@ public class SchemaTree extends JTree {
 				try {
 					Class<?> rawClass = cl.loadClass(className);
 					// if it's schema, add it
+					if (PolymorphicSchema.class.isAssignableFrom(rawClass)) {
+						polySchema.add((Class<? extends MainSchema>) rawClass);
+					}
 					if (!MainSchema.class.isAssignableFrom(rawClass) && Schema.class.isAssignableFrom(rawClass)) {
 						headlessSchema.add((Class<? extends MainSchema>) rawClass);
 					} else {

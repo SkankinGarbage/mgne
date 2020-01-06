@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="StatSet", menuName="Data/")]
-public class StatSetData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class StatSetData {
 
     [UnityEngine.Tooltip("HP")]
     public int hp;

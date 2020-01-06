@@ -12,7 +12,4 @@ public class SagaIntroSettingsData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Race help text - use \\n")]
     public string raceText;
-
-    
-    
 }

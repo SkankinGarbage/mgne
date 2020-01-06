@@ -30,7 +30,4 @@ public class MutationSettingsData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Ability weight - weight of learning an ability relative to other gains")]
     public int weightAbil;
-
-    
-    
 }

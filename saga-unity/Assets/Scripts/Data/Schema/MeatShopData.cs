@@ -3,7 +3,4 @@ public class MeatShopData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Shop inventory")]
     public MeatShopEntryData entries;
-
-    
-    
 }

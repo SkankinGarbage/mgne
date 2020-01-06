@@ -1,5 +1,5 @@
 [UnityEngine.CreateAssetMenu(fileName="BattleAnimShots", menuName="Data/Graphics/")]
-public class BattleAnimShotsData : UnityEngine.ScriptableObject {
+public class BattleAnimShotsData : BattleAnimData {
 
     [UnityEngine.Tooltip("Animation - the individual shot animation")]
     public BattleAnimStripData anim;
@@ -30,10 +30,4 @@ public class BattleAnimShotsData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Vertical jitter - each shot height is offset by this many pixels")]
     public float jitterY;
-
-    [UnityEngine.Tooltip("Sound effect - plays with the animation in battle only")]
-    public string sound;
-
-    
-    
 }

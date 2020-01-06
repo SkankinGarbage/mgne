@@ -6,7 +6,4 @@ public class RecruitSelectionData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Recruitable characters")]
     public CharaData options;
-
-    
-    
 }

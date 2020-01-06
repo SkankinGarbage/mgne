@@ -3,7 +3,4 @@ public class MonsterFamilyData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Transformations to other monster families")]
     public TransformationData transformations;
-
-    
-    
 }

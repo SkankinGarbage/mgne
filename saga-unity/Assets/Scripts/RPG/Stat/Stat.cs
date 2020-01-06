@@ -44,7 +44,7 @@ public class Stat {
         AddStat(StatTag.STR);
         AddStat(StatTag.AGI);
         AddStat(StatTag.DEF);
-        AddStat(StatTag.MAN);
+        AddStat(StatTag.MANA);
 
         foreach (StatTag tag in new StatTag[] {     StatTag.RESIST_DAMAGE,
                 StatTag.RESIST_WEAPON,

@@ -12,8 +12,4 @@ public class EffectCombatData : EffectEnemyTargetData {
 
     [UnityEngine.Tooltip("Riders - an invisible defensive ability that also applies")]
     public EffectDefendData[] riders;
-
-
-
-
 }

@@ -1,9 +1,9 @@
-[UnityEngine.CreateAssetMenu(fileName="PartyEntry", menuName="Data/")]
-public class PartyEntryData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class PartyEntryData {
 
     [UnityEngine.Tooltip("Monster")]
     public CharaData monster;
 
     [UnityEngine.Tooltip("Count")]
-    public int count = "1";
+    public int count = 1;
 }

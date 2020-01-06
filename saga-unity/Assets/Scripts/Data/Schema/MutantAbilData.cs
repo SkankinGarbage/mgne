@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="MutantAbil", menuName="Data/")]
-public class MutantAbilData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class MutantAbilData {
 
     [UnityEngine.Tooltip("Ability")]
     public CombatItemData abil;

@@ -30,7 +30,4 @@ public class CombatItemData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Robo stats - these boosts are granted to robots that equip this")]
     public NumericStatModData robostats;
-
-    
-    
 }

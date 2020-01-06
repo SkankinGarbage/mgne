@@ -3,7 +3,4 @@ public class ShopData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Available items")]
     public CombatItemData items;
-
-    
-    
 }

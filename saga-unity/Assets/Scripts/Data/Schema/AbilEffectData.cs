@@ -1,5 +1,3 @@
-public class AbilEffectData : UnityEngine.ScriptableObject {
+public class AbilEffectData {
 
-    
-    
 }

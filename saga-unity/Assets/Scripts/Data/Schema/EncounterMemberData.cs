@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="EncounterMember", menuName="Data/")]
-public class EncounterMemberData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class EncounterMemberData {
 
     [UnityEngine.Tooltip("Enemy")]
     public CharaData enemy;

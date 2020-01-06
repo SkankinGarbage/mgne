@@ -19,8 +19,4 @@ public class EffectDefendData : EffectAllyTargetData {
 
     [UnityEngine.Tooltip("Other flags")]
     public DefenseFlag[] effects;
-
-
-
-
 }

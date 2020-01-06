@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="BattleStep", menuName="Data/")]
-public class BattleStepData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class BattleStepData {
 
     [UnityEngine.Tooltip("Component sprite file")]
     public string sprite;

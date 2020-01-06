@@ -16,7 +16,4 @@ public class PaletteData : UnityEngine.ScriptableObject {
     [UnityEngine.Tooltip("Output white - output color shaders use as the gameboy white, use rrr,ggg,bbb for" +
 "mat")]
     public string outWhite;
-
-    
-    
 }

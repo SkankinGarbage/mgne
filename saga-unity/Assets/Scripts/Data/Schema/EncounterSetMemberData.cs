@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="EncounterSetMember", menuName="Data/")]
-public class EncounterSetMemberData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class EncounterSetMemberData {
 
     [UnityEngine.Tooltip("The encounter in this set")]
     public EncounterData encounter;

@@ -45,7 +45,4 @@ public class StatusData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Damage over time stat - quartered and multiplied by DoT power")]
     public StatTag dotStat;
-
-    
-    
 }

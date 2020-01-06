@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="MixEntry", menuName="Data/")]
-public class MixEntryData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class MixEntryData {
 
     public CollectableData item;
 

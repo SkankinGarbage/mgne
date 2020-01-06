@@ -6,7 +6,4 @@ public class EncounterSetData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Frequency - encounters will occur once per this many steps")]
     public int steps;
-
-    
-    
 }

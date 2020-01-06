@@ -12,7 +12,4 @@ public class EffectDebuffData : EffectEnemyTargetData {
 
     [UnityEngine.Tooltip("Defend stat - this stat is subtracted from incoming stat drain")]
     public StatTag defendStat = StatTag.MANA;
-
-    
-    
 }

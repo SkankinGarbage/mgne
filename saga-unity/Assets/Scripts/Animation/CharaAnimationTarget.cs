@@ -17,10 +17,10 @@ public class CharaAnimationTarget : AnimationTarget {
 
     private Vector3 originalDollPos;
 
-    [MoonSharpHidden]
-    public void ConfigureToBattler(BattleEvent battler) {
-        chara.spritesheet = battler.GetComponent<CharaEvent>().spritesheet;
-    }
+    //[MoonSharpHidden]
+    //public void ConfigureToBattler(BattleEvent battler) {
+    //    chara.spritesheet = battler.GetComponent<CharaEvent>().spritesheet;
+    //}
 
     [MoonSharpHidden]
     public void PrepareForBattleAnimation(BattleAnimationPlayer player, Type type) {

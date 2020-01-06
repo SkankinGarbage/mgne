@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="SpecialCharacter", menuName="Data/")]
-public class SpecialCharacterData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class SpecialCharacterData {
 
     [UnityEngine.Tooltip("Code")]
     public string code;

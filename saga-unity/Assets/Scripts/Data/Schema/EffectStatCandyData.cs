@@ -16,7 +16,4 @@ public class EffectStatCandyData : AbilEffectData {
     [UnityEngine.Tooltip("Maximum effective value - characters with a stat value above this will receive no" +
 " effect from this item, or 0 for no maximum")]
     public int maxValue;
-
-    
-    
 }

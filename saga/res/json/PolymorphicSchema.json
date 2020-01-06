@@ -1,45 +1,9 @@
 {
 	"$type" : "SchemaClass, Assembly-CSharp-Editor",
-	"name" : "SagaSettingsMDO",
-	"excludeFromTree" : false,
-	"path" : "settings/",
+	"name" : "PolymorphicSchema",
+	"excludeFromTree" : true,
+	"path" : "",
 	"fields" : [
-		{
-			"$type" : "SchemaField, Assembly-CSharp-Editor",
-			"name" : "heroParty",
-			"type" : "String",
-			"defaultValue" : null,
-			"schemaLinkedClass" : "PartyMDO",
-			"description" : "Hero party - how the hero party starts, usually empty",
-			"header" : false
-		},
-		{
-			"$type" : "SchemaField, Assembly-CSharp-Editor",
-			"name" : "monsterSettings",
-			"type" : "String",
-			"defaultValue" : null,
-			"schemaLinkedClass" : "MonsterSettingsMDO",
-			"description" : "Monster settings",
-			"header" : false
-		},
-		{
-			"$type" : "SchemaField, Assembly-CSharp-Editor",
-			"name" : "mutantAbils",
-			"type" : "String",
-			"defaultValue" : null,
-			"schemaLinkedClass" : "MutationSettingsMDO",
-			"description" : "Mutant ability list",
-			"header" : false
-		},
-		{
-			"$type" : "SchemaField, Assembly-CSharp-Editor",
-			"name" : "graphicsSettings",
-			"type" : "String",
-			"defaultValue" : null,
-			"schemaLinkedClass" : "SagaGraphicsMDO",
-			"description" : "Graphics settings",
-			"header" : false
-		},
 		{
 			"$type" : "SchemaField, Assembly-CSharp-Editor",
 			"name" : "key",

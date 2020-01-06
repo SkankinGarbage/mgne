@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="StatMod", menuName="Data/")]
+[System.Serializable]
 public class StatModData : UnityEngine.ScriptableObject {
 
     [UnityEngine.Tooltip("Numeric stat modifiers")]

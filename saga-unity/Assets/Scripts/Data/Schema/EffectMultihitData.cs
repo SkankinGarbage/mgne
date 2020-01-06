@@ -13,8 +13,4 @@ public class EffectMultihitData : EffectCombatData {
 
     [UnityEngine.Tooltip("Defend stat - this stat is subtracted from incoming damage")]
     public StatTag defendStat = StatTag.DEF;
-
-
-
-
 }

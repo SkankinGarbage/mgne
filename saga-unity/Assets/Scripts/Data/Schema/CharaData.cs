@@ -48,7 +48,4 @@ public class CharaData : UnityEngine.ScriptableObject {
     public CombatItemData equipped;
 
     public StatSetData stats;
-
-    
-    
 }

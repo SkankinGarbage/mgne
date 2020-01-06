@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="Transformation", menuName="Data/")]
-public class TransformationData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class TransformationData {
 
     [UnityEngine.Tooltip("Meat group eaten")]
     public MeatGroupData eat;

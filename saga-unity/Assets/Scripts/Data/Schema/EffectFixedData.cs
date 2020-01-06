@@ -18,7 +18,4 @@ public class EffectFixedData : EffectCombatData {
 
     [UnityEngine.Tooltip("Dodge stat - chance to hit reduced by this")]
     public StatTag dodgeStat = StatTag.AGI;
-
-    
-    
 }

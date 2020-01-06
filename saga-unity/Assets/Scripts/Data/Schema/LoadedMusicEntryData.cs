@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="LoadedMusicEntry", menuName="Data/")]
-public class LoadedMusicEntryData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class LoadedMusicEntryData {
 
     [UnityEngine.Tooltip("Reference key - can be used to refer to this key in-game")]
     public string refKey;

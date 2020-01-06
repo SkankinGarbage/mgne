@@ -2,7 +2,4 @@
 public class EffectPassiveData : AbilEffectData {
 
     public StatModData stats;
-
-    
-    
 }

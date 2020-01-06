@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="MeatShopEntry", menuName="Data/")]
-public class MeatShopEntryData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class MeatShopEntryData {
 
     public CharaData monster;
 

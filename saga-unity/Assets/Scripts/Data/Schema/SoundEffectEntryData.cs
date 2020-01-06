@@ -1,5 +1,5 @@
-[UnityEngine.CreateAssetMenu(fileName="SoundEffectEntry", menuName="Data/")]
-public class SoundEffectEntryData : UnityEngine.ScriptableObject {
+[System.Serializable]
+public class SoundEffectEntryData {
 
     [UnityEngine.Tooltip("File - this sfx will play")]
     public string file;
