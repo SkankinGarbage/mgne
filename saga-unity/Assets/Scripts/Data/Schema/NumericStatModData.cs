@@ -1,5 +1,5 @@
 [System.Serializable]
-public class NumericStatModData : MainSchema {
+public class NumericStatModData {
 
-    public StatEntryData stats;
+    public StatEntryData[] stats;
 }

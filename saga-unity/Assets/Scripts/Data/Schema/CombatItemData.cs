@@ -1,3 +1,6 @@
+using Newtonsoft.Json;
+using UnityEngine.Scripting;
+
 [UnityEngine.CreateAssetMenu(fileName="CombatItem", menuName="Data/Rpg/")]
 public class CombatItemData : MainSchema {
 
@@ -16,12 +19,14 @@ public class CombatItemData : MainSchema {
     [UnityEngine.Tooltip("Cost - or zero for unsellable, halved for resale rate")]
     public int cost = 0;
 
+    [JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Animation - graphical effect that plays when this item is used in battle")]
     public BattleAnimData anim;
 
     [UnityEngine.Tooltip("Equipment types - characters can\'t equip two items that share a flag")]
-    public EquipmentFlag equip;
+    public EquipmentFlag[] equip;
 
+    [JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Effect - what happens when this applies")]
     public AbilEffectData warhead;
 

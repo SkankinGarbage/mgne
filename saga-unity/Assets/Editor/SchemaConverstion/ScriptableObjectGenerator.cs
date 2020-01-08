@@ -9,7 +9,7 @@ using System.Reflection;
 public class ScriptableObjectGenerator {
 
     public const string DataDirectory = "DataJsonTest";
-    public const string DatabaseDirectory = "Resources/Database";
+    public const string DatabaseDirectory = "Assets/Resources/Database";
 
     [MenuItem("MGNE Tools/Convert Json")]
     public static void ConvertJson() {
@@ -36,12 +36,12 @@ public class ScriptableObjectGenerator {
         var type = TypeForFilepath(filePath);
         if (type != null) {
             ConvertRaw(type, jsonString);
-            //Link(type, jsonString);
+            Link(type, jsonString);
         }
     }
 
     private static void ConvertRaw(Type type, string jsonString) {
-        var obj = JsonConvert.DeserializeObject(jsonString, type, new LinkIgnoreDeserializer());
+        var obj = JsonConvert.DeserializeObject(jsonString, type);
         var path = PathForJson(type, obj as MainSchema);
 
         if (!File.Exists(path)) {
@@ -52,14 +52,15 @@ public class ScriptableObjectGenerator {
     }
 
     private static void Link(Type type, string jsonString) {
-        var linkedAsset = (MainSchema) JsonConvert.DeserializeObject(jsonString, type, new LinkerDeserializer());
+        LinkerDeserializer.UseLinks = true;
+        var linkedAsset = (MainSchema) JsonConvert.DeserializeObject(jsonString, type);
         var storedAsset = AssetForJson(type, linkedAsset);
 
         // copy from the linked version to the one on disk
-        PropertyInfo[] destinationProperties = storedAsset.GetType().GetProperties();
-        foreach (PropertyInfo destinationPi in destinationProperties) {
-            PropertyInfo sourcePi = linkedAsset.GetType().GetProperty(destinationPi.Name);
-            destinationPi.SetValue(storedAsset, sourcePi.GetValue(linkedAsset, null), null);
+        var destinationFields = storedAsset.GetType().GetFields();
+        foreach (var destinationField in destinationFields) {
+            var sourceField = linkedAsset.GetType().GetField(destinationField.Name);
+            destinationField.SetValue(storedAsset, sourceField.GetValue(linkedAsset));
         }
     }
 
@@ -103,29 +104,11 @@ public class ScriptableObjectGenerator {
     }
 
     public static MainSchema AssetForJson(Type schemaSubclass, MainSchema mainSchema) {
-        string path = DatabaseDirectory + "/" + schemaSubclass.ToString();
+        string path = DatabaseDirectory + "/" + schemaSubclass.ToString().Replace("Data", "");
         if (mainSchema.subfolder?.Length > 0) {
             path += "/" + mainSchema.subfolder;
         }
-        path += mainSchema.key + ".asset";
+        path += "/" + mainSchema.key + ".asset";
         return AssetDatabase.LoadAssetAtPath<MainSchema>(path);
-    }
-
-    public static MainSchema FindAssetForJson(Type schemaSubclass, string key) {
-        string path = Application.dataPath + DatabaseDirectory + "/" + schemaSubclass.ToString();
-        var targetName = key + ".asset";
-        foreach (string filePath in Directory.EnumerateFiles(path)) {
-            if (filePath.EndsWith(targetName)) {
-                AssetDatabase.LoadAssetAtPath<MainSchema>(filePath);
-            }
-        }
-        foreach (string directoryPath in Directory.EnumerateDirectories(path)) {
-            foreach (string filePath in Directory.EnumerateFiles(path)) {
-                if (filePath.EndsWith(targetName)) {
-                    AssetDatabase.LoadAssetAtPath<MainSchema>(filePath);
-                }
-            }
-        }
-        return null;
     }
 }

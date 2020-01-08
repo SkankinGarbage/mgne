@@ -5,7 +5,7 @@ public class EffectCombatData : EffectEnemyTargetData {
     public DamageType damType = DamageType.PHYSICAL;
 
     [UnityEngine.Tooltip("Other flags")]
-    public OffenseFlag sideEffects;
+    public OffenseFlag[] sideEffects;
 
     [UnityEngine.Tooltip("Slayer families - monsters in these families will be weak")]
     public MonsterFamilyData[] slayerFamiles;
