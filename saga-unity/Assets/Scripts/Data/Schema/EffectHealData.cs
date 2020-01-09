@@ -8,8 +8,9 @@ public class EffectHealData : EffectAllyTargetData {
     public int power = 0;
 
     [UnityEngine.Tooltip("Power stat - this stat is quartered and multiplied by power")]
-    public StatTag powerStat = StatTag.None;
-
+    public StatTag? powerStat;
+    
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Heal status - cures these ailments")]
     public StatusData[] heals;
 

@@ -12,7 +12,7 @@ public enum DamageType {
     [DamageType(    new StatTag[] { StatTag.RESIST_EARTH},      new StatTag[] { },                                                  new StatTag[] { StatTag.WEAK_EARTH})]   EARTH,
     [DamageType(    new StatTag[] { StatTag.RESIST_THUNDER},    new StatTag[] { },                                                  new StatTag[] { StatTag.WEAK_THUNDER})] THUNDER,
 
-    [DamageType(    new StatTag[] { },                          new StatTag[] { StatTag.RESIST_TYPELESS },                          new StatTag[] { })]                     TYPELESS,
+    [DamageType(    new StatTag[] { },                          new StatTag[] { StatTag.RESIST_TYPELESS },                          new StatTag[] { })]                     NONELEMENTAL,
 }
 
 

@@ -11,6 +11,7 @@ public class EffectDefendData : EffectAllyTargetData {
     [UnityEngine.Tooltip("Trigger types - when any of these are taken, counter will trigger")]
     public DamageType[] triggerTypes;
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Counter - an offensive ability to launch when triggered")]
     public AbilEffectData warhead;
 

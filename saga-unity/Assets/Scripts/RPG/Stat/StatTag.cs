@@ -1,7 +1,5 @@
 ﻿public enum StatTag {
 
-    None,
-
     MHP,
     HP,
 

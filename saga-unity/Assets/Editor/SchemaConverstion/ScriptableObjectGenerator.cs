@@ -8,35 +8,46 @@ using System.Reflection;
 
 public class ScriptableObjectGenerator {
 
-    public const string DataDirectory = "DataJsonTest";
+    public const string DataDirectory = "DataJson";
     public const string DatabaseDirectory = "Assets/Resources/Database";
 
     [MenuItem("MGNE Tools/Convert Json")]
     public static void ConvertJson() {
         var directoryPath = Application.dataPath + "/" + DataDirectory;
-        ConvertFromDirectory(directoryPath);
+        ConvertOrLinkDirectory(directoryPath, false);
+        AssetDatabase.SaveAssets();
+        ConvertOrLinkDirectory(directoryPath, true);
         AssetDatabase.SaveAssets();
     }
 
-    private static void ConvertFromDirectory(string directoryPath) {
+    private static void ConvertOrLinkDirectory(string directoryPath, bool linkMode) {
         foreach (string filePath in Directory.GetFiles(directoryPath)) {
-            ConvertFromFile(filePath);
+            ConvertOrLinkFile(filePath, linkMode);
         }
         foreach (string subdirectoryPath in Directory.GetDirectories(directoryPath)) {
-            ConvertFromDirectory(subdirectoryPath);
+            ConvertOrLinkDirectory(subdirectoryPath, linkMode);
         }
     }
 
-    private static void ConvertFromFile(string filePath) {
+    private static void ConvertOrLinkFile(string filePath, bool linkMode) {
         if (!filePath.EndsWith(".json")) {
             return;
+        }
+
+        if (linkMode) {
+            Debug.Log("Linking " + filePath + "...");
+        } else {
+            Debug.Log("Converting " + filePath + "...");
         }
 
         var jsonString = JsonAtFilepath(filePath);
         var type = TypeForFilepath(filePath);
         if (type != null) {
-            ConvertRaw(type, jsonString);
-            Link(type, jsonString);
+            if (linkMode) {
+                Link(type, jsonString);
+            } else {
+                ConvertRaw(type, jsonString);
+            }
         }
     }
 
@@ -46,7 +57,6 @@ public class ScriptableObjectGenerator {
 
         if (!File.Exists(path)) {
             AssetDatabase.CreateAsset((UnityEngine.Object)obj, path);
-            AssetDatabase.SaveAssets();
             Debug.Log("Writing to " + path + "...");
         }
     }

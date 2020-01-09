@@ -44,5 +44,5 @@ public class StatusData : MainSchema {
     public int dot;
 
     [UnityEngine.Tooltip("Damage over time stat - quartered and multiplied by DoT power")]
-    public StatTag dotStat;
+    public StatTag? dotStat;
 }

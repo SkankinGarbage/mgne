@@ -7,6 +7,7 @@ public class CharaData : MainSchema {
     [UnityEngine.Tooltip("Race")]
     public Race race;
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Family - used for transformations, only monsters should have this")]
     public MonsterFamilyData family;
 
@@ -35,17 +36,20 @@ public class CharaData : MainSchema {
     [UnityEngine.Tooltip("GP - dropped when this character is defeated by the player")]
     public int gp = 0;
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Loot - dropped when this monster is defeated")]
     public CombatItemData loot;
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Death animation - played on death, null for default")]
     public BattleAnimData deathAnim;
 
     [UnityEngine.Tooltip("Percent out of 100 chance of dropping loot - 0 to use default")]
     public int lootDropChance = 0;
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Equipped items/abilities")]
-    public CombatItemData equipped;
+    public CombatItemData[] equipped;
 
     public StatSetData stats;
 }

@@ -8,8 +8,8 @@ public class EffectDebuffData : EffectEnemyTargetData {
     public StatTag drainStat = StatTag.STR;
 
     [UnityEngine.Tooltip("Attack stat - this stat is halved and then multiplied by power")]
-    public StatTag attackStat = StatTag.MANA;
+    public StatTag? attackStat = StatTag.MANA;
 
     [UnityEngine.Tooltip("Defend stat - this stat is subtracted from incoming stat drain")]
-    public StatTag defendStat = StatTag.MANA;
+    public StatTag? defendStat = StatTag.MANA;
 }

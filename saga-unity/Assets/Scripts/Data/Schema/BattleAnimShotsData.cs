@@ -1,6 +1,7 @@
 [UnityEngine.CreateAssetMenu(fileName="BattleAnimShots", menuName="Data/Graphics/")]
 public class BattleAnimShotsData : BattleAnimData {
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Animation - the individual shot animation")]
     public BattleAnimStripData anim;
 

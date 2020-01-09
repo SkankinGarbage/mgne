@@ -1,8 +1,8 @@
 [UnityEngine.CreateAssetMenu(fileName="MutationSettings", menuName="Data/Rpg/")]
 public class MutationSettingsData : MainSchema {
-
+    
     [UnityEngine.Tooltip("Available mutant abilities")]
-    public MutantAbilData abils;
+    public MutantAbilData[] abils;
 
     [UnityEngine.Tooltip("Mutation chance - probability 0-100 that mutants mutate after a battle")]
     public int mutationChance;

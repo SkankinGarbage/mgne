@@ -1,6 +1,7 @@
 [System.Serializable]
 public class MutantAbilData {
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Ability")]
     public CombatItemData abil;
 

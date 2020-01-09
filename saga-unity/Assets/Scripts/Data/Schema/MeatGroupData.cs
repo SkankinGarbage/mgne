@@ -1,5 +1,6 @@
 [UnityEngine.CreateAssetMenu(fileName="MeatGroup", menuName="Data/Rpg/")]
 public class MeatGroupData : MainSchema {
 
-    public MonsterFamilyData families;
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
+    public MonsterFamilyData[] families;
 }

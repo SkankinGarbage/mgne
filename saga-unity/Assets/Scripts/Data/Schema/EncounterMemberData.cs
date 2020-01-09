@@ -1,6 +1,7 @@
 [System.Serializable]
 public class EncounterMemberData {
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Enemy")]
     public CharaData enemy;
 

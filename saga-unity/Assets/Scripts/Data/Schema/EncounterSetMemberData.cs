@@ -1,6 +1,7 @@
 [System.Serializable]
 public class EncounterSetMemberData {
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("The encounter in this set")]
     public EncounterData encounter;
 

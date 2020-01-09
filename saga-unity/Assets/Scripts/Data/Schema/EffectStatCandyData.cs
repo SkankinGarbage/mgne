@@ -11,7 +11,7 @@ public class EffectStatCandyData : AbilEffectData {
     public StatTag maxGain;
 
     [UnityEngine.Tooltip("Restricted races - only these races allowed to consume")]
-    public Race restrictRace;
+    public Race[] restrictRace;
 
     [UnityEngine.Tooltip("Maximum effective value - characters with a stat value above this will receive no" +
 " effect from this item, or 0 for no maximum")]

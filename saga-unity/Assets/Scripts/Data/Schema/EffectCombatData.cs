@@ -7,9 +7,10 @@ public class EffectCombatData : EffectEnemyTargetData {
     [UnityEngine.Tooltip("Other flags")]
     public OffenseFlag[] sideEffects;
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Slayer families - monsters in these families will be weak")]
     public MonsterFamilyData[] slayerFamiles;
-
+    
     [UnityEngine.Tooltip("Riders - an invisible defensive ability that also applies")]
     public EffectDefendData[] riders;
 }

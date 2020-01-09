@@ -1,6 +1,7 @@
 [UnityEngine.CreateAssetMenu(fileName="BattleAnimSeries", menuName="Data/Graphics/")]
 public class BattleAnimSeriesData : BattleAnimData {
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Animation - this is the strip that plays a bunch of times")]
     public BattleAnimStripData anim;
 

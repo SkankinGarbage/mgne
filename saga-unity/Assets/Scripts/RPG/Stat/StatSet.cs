@@ -31,13 +31,11 @@ public class StatSet : ISerializationCallbackReceiver {
     private void InitNewSet() {
         stats = new Dictionary<StatTag, float>();
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
-            if (tag != StatTag.None) {
-                Stat stat = Stat.Get(tag);
-                if (stat == null) {
-                    continue;
-                }
-                stats[tag] = stat.combinator.Identity();
+            Stat stat = Stat.Get(tag);
+            if (stat == null) {
+                continue;
             }
+            stats[tag] = stat.combinator.Identity();
         }
     }
 

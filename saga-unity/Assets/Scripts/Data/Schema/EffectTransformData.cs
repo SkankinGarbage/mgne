@@ -6,7 +6,4 @@ public class EffectTransformData : AbilEffectData {
 
     [UnityEngine.Tooltip("Switch - this will be set while transform is active")]
     public string switchName;
-
-    
-    
 }

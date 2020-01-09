@@ -2,8 +2,9 @@
 public class ItemMixData : MainSchema {
 
     [UnityEngine.Tooltip("Ingredients")]
-    public MixEntryData ingredients;
+    public MixEntryData[] ingredients;
 
+    [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("The resulting combat item")]
     public CombatItemData result;
 }
