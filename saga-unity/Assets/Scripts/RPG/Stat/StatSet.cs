@@ -94,7 +94,7 @@ public class StatSet : ISerializationCallbackReceiver {
 
     public void OnAfterDeserialize() {
         InitNewSet();
-        if (serializedStats != null) {
+        if (serializedStats != null && !serializedStats.IsEmpty()) {
             AddSet(new StatSet(serializedStats));
         }
     }

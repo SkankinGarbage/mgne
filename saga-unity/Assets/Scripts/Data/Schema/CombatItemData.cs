@@ -30,6 +30,7 @@ public class CombatItemData : MainSchema {
     [UnityEngine.Tooltip("Tier - mostly cosmetic, but can be used to autogenerate robostats")]
     public int tier;
 
+    [Newtonsoft.Json.JsonConverter(typeof(StatModDeserializer))]
     [UnityEngine.Tooltip("Robo stats - these boosts are granted to robots that equip this")]
-    public NumericStatModData robostats;
+    public StatSet robostats;
 }

@@ -51,5 +51,6 @@ public class CharaData : MainSchema {
     [UnityEngine.Tooltip("Equipped items/abilities")]
     public CombatItemData[] equipped;
 
-    public StatSetData stats;
+    [Newtonsoft.Json.JsonConverter(typeof(StatSetDeserializer))]
+    public StatSet stats;
 }

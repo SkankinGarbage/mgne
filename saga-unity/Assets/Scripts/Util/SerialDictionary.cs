@@ -18,9 +18,13 @@ public class SerialDictionary<K, V> {
 
     public Dictionary<K, V> ToDictionary() {
         Dictionary<K, V> result = new Dictionary<K, V>();
-        for (int i = 0; i < keys.Count; i += 1) {
+        for (int i = 0; keys != null && i < keys.Count; i += 1) {
             result[keys[i]] = values[i];
         }
         return result;
+    }
+
+    public bool IsEmpty() {
+        return keys != null;
     }
 }

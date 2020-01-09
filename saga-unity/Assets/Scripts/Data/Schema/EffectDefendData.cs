@@ -15,8 +15,9 @@ public class EffectDefendData : EffectAllyTargetData {
     [UnityEngine.Tooltip("Counter - an offensive ability to launch when triggered")]
     public AbilEffectData warhead;
 
+    [Newtonsoft.Json.JsonConverter(typeof(StatModDeserializer))]
     [UnityEngine.Tooltip("Stat modifiers - applied to the defended characters for the turn")]
-    public StatModData stats;
+    public StatSet stats;
 
     [UnityEngine.Tooltip("Other flags")]
     public DefenseFlag[] effects;

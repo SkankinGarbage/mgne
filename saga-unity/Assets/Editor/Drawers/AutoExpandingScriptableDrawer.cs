@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEditor;
 
 [CustomPropertyDrawer(typeof(AutoExpandingScriptableObject), true)]
+[CustomPropertyDrawer(typeof(PolymorphicSchema), true)]
 public class AutoExpandingScriptableDrawer : PropertyDrawer {
 
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label) {

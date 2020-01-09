@@ -37,7 +37,7 @@ public class LinkerDeserializer : JsonConverter {
                 var keys = serializer.Deserialize<List<string>>(reader);
                 List<MainSchema> results = new List<MainSchema>();
                 foreach (var key in keys) {
-                    var asset = FindAssetForJson(objectType, key);
+                    var asset = FindAssetForJson(objectType.GetElementType(), key);
                     results.Add(asset);
                 }
                 var instance = Activator.CreateInstance(objectType, results.Count);
@@ -91,7 +91,7 @@ public class LinkerDeserializer : JsonConverter {
             }
         }
         foreach (string directoryPath in Directory.EnumerateDirectories(dirPath)) {
-            foreach (string filePath in Directory.EnumerateFiles(dirPath)) {
+            foreach (string filePath in Directory.EnumerateFiles(directoryPath)) {
                 if (filePath.EndsWith(targetName)) {
                     return AssetDatabase.LoadAssetAtPath<MainSchema>(RelativePathForFilePath(filePath));
                 }
