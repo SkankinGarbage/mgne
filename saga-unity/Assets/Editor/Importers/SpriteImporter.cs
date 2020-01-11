@@ -26,6 +26,7 @@ internal sealed class SpriteImporter : AssetPostprocessor {
                 importer.spritePixelsPerUnit = Map.TileSizePx / Map.UnityUnitScale;
                 importer.spriteImportMode = SpriteImportMode.Multiple;
                 importer.spritesheet = new SpriteMetaData[rows * cols];
+
                 List<SpriteMetaData> spritesheet = new List<SpriteMetaData>();
                 for (int y = 0; y < rows; y += 1) {
                     for (int x = 0; x < cols; x += 1) {

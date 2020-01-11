@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectMultihit", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectMultihit", menuName="Data")]
 public class EffectMultihitData : EffectCombatData {
 
     [UnityEngine.Tooltip("Base power - base multiplier of each hit")]

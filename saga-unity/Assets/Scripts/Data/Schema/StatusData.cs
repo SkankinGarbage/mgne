@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="Status", menuName="Data/Rpg/")]
+[UnityEngine.CreateAssetMenu(fileName="Status", menuName="Data/Rpg")]
 public class StatusData : MainSchema {
 
     [UnityEngine.Tooltip("Full name - used in extended menus, eg BLIND")]

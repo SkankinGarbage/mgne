@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectDebuff", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectDebuff", menuName="Data")]
 public class EffectDebuffData : EffectEnemyTargetData {
 
     [UnityEngine.Tooltip("Base power - power of the debuff before multipliers")]

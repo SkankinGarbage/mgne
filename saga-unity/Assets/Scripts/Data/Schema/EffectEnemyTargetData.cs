@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectEnemyTarget", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectEnemyTarget", menuName="Data")]
 public class EffectEnemyTargetData : AbilEffectData {
 
     [UnityEngine.Tooltip("Projector")]

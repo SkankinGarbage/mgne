@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectFixed", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectFixed", menuName="Data")]
 public class EffectFixedData : EffectCombatData {
 
     [UnityEngine.Tooltip("Base damage")]

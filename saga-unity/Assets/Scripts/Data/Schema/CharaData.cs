@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="Chara", menuName="Data/Rpg/")]
+[UnityEngine.CreateAssetMenu(fileName="Chara", menuName="Data/Rpg")]
 public class CharaData : MainSchema {
 
     [UnityEngine.Tooltip("Gender")]

@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectRevive", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectRevive", menuName="Data")]
 public class EffectReviveData : EffectAllyTargetData {
 
     [UnityEngine.Tooltip("Heal base - after resurrection, targets starts with this much health")]

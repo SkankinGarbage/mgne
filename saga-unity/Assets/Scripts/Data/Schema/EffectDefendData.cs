@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectDefend", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectDefend", menuName="Data")]
 public class EffectDefendData : EffectAllyTargetData {
 
     [UnityEngine.Tooltip("Defend item name - as in, \"<char> blocks by <name>\", leave blank to use parent it" +

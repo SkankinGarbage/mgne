@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="ItemMixSet", menuName="Data/Rpg/")]
+[UnityEngine.CreateAssetMenu(fileName="ItemMixSet", menuName="Data/Rpg")]
 public class ItemMixSetData : MainSchema {
 
     [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]

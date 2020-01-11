@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectCombat", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectCombat", menuName="Data")]
 public class EffectCombatData : EffectEnemyTargetData {
 
     [UnityEngine.Tooltip("Damage type")]

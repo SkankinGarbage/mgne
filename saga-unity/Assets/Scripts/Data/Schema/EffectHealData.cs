@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectHeal", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectHeal", menuName="Data")]
 public class EffectHealData : EffectAllyTargetData {
 
     [UnityEngine.Tooltip("Heal base - base power for the heal, added to final value")]

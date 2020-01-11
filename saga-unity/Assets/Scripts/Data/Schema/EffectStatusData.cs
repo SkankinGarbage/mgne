@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectStatus", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectStatus", menuName="Data")]
 public class EffectStatusData : EffectEnemyTargetData {
 
     [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]

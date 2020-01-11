@@ -10,7 +10,6 @@ using UnityEditor;
  * For our purposes, a CharaEvent is anything that's going to be moving around the map
  * or has a physical appearance. For parallel process or whatevers, they won't have this.
  */
-[RequireComponent(typeof(MapEvent))]
 [DisallowMultipleComponent]
 public class CharaEvent : MonoBehaviour {
 
@@ -18,11 +17,9 @@ public class CharaEvent : MonoBehaviour {
     private const float DesaturationDuration = 0.5f;
     private const float StepsPerSecond = 4.0f;
 
-    [SerializeField] private GameObject doll;
-    [SerializeField] private new SpriteRenderer renderer;
+    public Doll Doll;
 
-    public bool alwaysAnimates;
-    public bool cameraRelativeFacing;
+    [SerializeField] private bool alwaysAnimates = true;
 
     private Dictionary<string, Sprite> sprites;
     private Vector2 lastPosition;
@@ -31,14 +28,13 @@ public class CharaEvent : MonoBehaviour {
     private float moveTime;
     private bool stepping;
 
-    public MapEvent parent { get { return GetComponent<MapEvent>(); } }
-    public Map map { get { return parent.parent; } }
-    public float desaturation { get; set; }
+    public MapEvent Parent { get { return GetComponent<MapEvent>(); } }
+    public Map Map { get { return Parent.parent; } }
+    public float Desaturation { get; set; }
 
     [SerializeField]
-    [HideInInspector]
     private Texture2D _spritesheet;
-    public Texture2D spritesheet {
+    public Texture2D Spritesheet {
         get { return _spritesheet; }
         set {
             _spritesheet = value;
@@ -50,7 +46,7 @@ public class CharaEvent : MonoBehaviour {
     [SerializeField]
     [HideInInspector]
     private OrthoDir _facing = OrthoDir.South;
-    public OrthoDir facing {
+    public OrthoDir Facing {
         get { return _facing; }
         set {
             _facing = value;
@@ -59,11 +55,11 @@ public class CharaEvent : MonoBehaviour {
     }
 
     private List<SpriteRenderer> _renderers;
-    protected List<SpriteRenderer> renderers {
+    protected List<SpriteRenderer> Renderers {
         get {
             if (_renderers == null) {
                 _renderers = new List<SpriteRenderer>();
-                _renderers.Add(renderer);
+                _renderers.Add(Doll.Renderer);
             }
             return _renderers;
         }
@@ -76,16 +72,16 @@ public class CharaEvent : MonoBehaviour {
     public void Start() {
         CopyShaderValues();
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventMove, (object payload) => {
-            facing = (OrthoDir)payload;
+            Facing = (OrthoDir)payload;
         });
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventEnabled, (object payload) => {
             bool enabled = (bool)payload;
-            foreach (SpriteRenderer renderer in renderers) {
+            foreach (SpriteRenderer renderer in Renderers) {
                 renderer.enabled = enabled;
             }
         });
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventInteract, (object payload) => {
-            facing = parent.DirectionTo(Global.Instance().Maps.avatar.GetComponent<MapEvent>());
+            Facing = Parent.DirectionTo(Global.Instance().Maps.avatar.GetComponent<MapEvent>());
         });
     }
 
@@ -106,52 +102,56 @@ public class CharaEvent : MonoBehaviour {
     }
 
     public void UpdateAppearance() {
-        if (spritesheet != null) {
+        if (Spritesheet != null) {
             if (sprites == null || sprites.Count == 0) {
                 LoadSpritesheetData();
             }
-            renderer.sprite = SpriteForMain();
+            Doll.Renderer.sprite = SpriteForMain();
         }
     }
 
     public void FaceToward(MapEvent other) {
-        facing = parent.DirectionTo(other);
+        Facing = Parent.DirectionTo(other);
     }
 
     public Sprite FrameBySlot(int x) {
-        return FrameByExplicitSlot(x, facing.Ordinal());
+        return FrameByExplicitSlot(x, Facing.Ordinal());
     }
     public Sprite FrameByExplicitSlot(int x, int y) {
-        string name = NameForFrame(spritesheet.name, x, y);
+        string name = NameForFrame(Spritesheet.name, x, y);
         if (!sprites.ContainsKey(name)) {
             Debug.LogError(this + " doesn't contain frame " + name);
         }
         return sprites[name];
     }
 
+    public void SetAppearanceByTag(string fieldSpriteTag) {
+        Spritesheet = IndexDatabase.Instance().FieldSprites.GetData(fieldSpriteTag).spriteSheet;
+    }
+
     private void CopyShaderValues() {
-        foreach (SpriteRenderer renderer in renderers) {
+        foreach (SpriteRenderer renderer in Renderers) {
             Material material = Application.isPlaying ? renderer.material : renderer.sharedMaterial;
             if (material != null) {
-                material.SetFloat("_Desaturation", desaturation);
+                material.SetFloat("_Desaturation", Desaturation);
             } 
         }
     }
 
     public IEnumerator StepRoutine(OrthoDir dir) {
-        facing = dir;
-        Vector2Int offset = parent.OffsetForTiles(dir);
-        Vector3 startPx = parent.positionPx;
-        targetPx = parent.OwnTileToWorld(parent.position);
-        yield return parent.LinearStepRoutine(dir);
+        Facing = dir;
+        Vector2Int offset = Parent.OffsetForTiles(dir);
+        Vector3 startPx = Parent.positionPx;
+        targetPx = Parent.OwnTileToWorld(Parent.position);
+        yield return Parent.LinearStepRoutine(dir);
     }
 
     public IEnumerator DesaturateRoutine(float targetDesat) {
-        float oldDesat = desaturation;
+        float oldDesat = Desaturation;
         float elapsed = 0.0f;
-        while (desaturation != targetDesat) {
+        while (Desaturation != targetDesat) {
             elapsed += Time.deltaTime;
-            desaturation = Mathf.Lerp(oldDesat, targetDesat, elapsed / DesaturationDuration);
+            Desaturation = Mathf.Lerp(oldDesat, targetDesat, elapsed / DesaturationDuration);
             yield return null;
         }
     }
@@ -159,20 +159,15 @@ public class CharaEvent : MonoBehaviour {
     private bool IsSteppingThisFrame() {
         Vector2 position = transform.position;
         Vector2 delta = position - lastPosition;
-        return alwaysAnimates || (delta.sqrMagnitude > 0 && delta.sqrMagnitude < Map.TileSizePx) || parent.tracking ||
+        return alwaysAnimates || (delta.sqrMagnitude > 0 && delta.sqrMagnitude < Map.TileSizePx) || Parent.tracking ||
             (GetComponent<AvatarEvent>() && GetComponent<AvatarEvent>().wantsToTrack);
     }
 
     private void LoadSpritesheetData() {
         string path = DefaultMaterial2DPath;
-        foreach (SpriteRenderer renderer in renderers) {
-            if (renderer.material == null) {
-                renderer.material = Resources.Load<Material>(path);
-            }
-        }
 
         sprites = new Dictionary<string, Sprite>();
-        path = AssetDatabase.GetAssetPath(spritesheet);
+        path = AssetDatabase.GetAssetPath(Spritesheet);
         if (path.StartsWith("Assets/Resources/")) {
             path = path.Substring("Assets/Resources/".Length);
         }

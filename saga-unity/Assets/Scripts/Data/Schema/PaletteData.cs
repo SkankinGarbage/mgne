@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="Palette", menuName="Data/Graphics/")]
+[UnityEngine.CreateAssetMenu(fileName="Palette", menuName="Data/Graphics")]
 public class PaletteData : MainSchema {
 
     [UnityEngine.Tooltip("Output black - output color shaders use as the gameboy black, use rrr,ggg,bbb for" +

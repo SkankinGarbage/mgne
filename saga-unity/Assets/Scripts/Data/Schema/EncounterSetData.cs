@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EncounterSet", menuName="Data/Rpg/")]
+[UnityEngine.CreateAssetMenu(fileName="EncounterSet", menuName="Data/Rpg")]
 public class EncounterSetData : MainSchema {
     
     [UnityEngine.Tooltip("Possible encounters in this set")]

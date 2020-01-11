@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="MutationSettings", menuName="Data/Rpg/")]
+[UnityEngine.CreateAssetMenu(fileName="MutationSettings", menuName="Data/Rpg")]
 public class MutationSettingsData : MainSchema {
     
     [UnityEngine.Tooltip("Available mutant abilities")]

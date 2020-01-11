@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectAttack", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectAttack", menuName="Data")]
 public class EffectAttackData : EffectCombatData {
 
     [UnityEngine.Tooltip("Base power - power of the attack before multipliers")]

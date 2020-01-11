@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectStatCandy", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectStatCandy", menuName="Data")]
 public class EffectStatCandyData : AbilEffectData {
 
     [UnityEngine.Tooltip("Stat")]

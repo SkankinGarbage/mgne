@@ -70,12 +70,12 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
 
     public void PopulateFromMemory(Memory memory) {
         GetComponent<MapEvent>().SetPosition(memory.position);
-        GetComponent<CharaEvent>().facing = memory.facing;
+        GetComponent<CharaEvent>().Facing = memory.facing;
     }
 
     public void PopulateMemory(Memory memory) {
         memory.position = GetComponent<MapEvent>().position;
-        memory.facing = GetComponent<CharaEvent>().facing;
+        memory.facing = GetComponent<CharaEvent>().Facing;
     }
 
     public void PauseInput() {
@@ -87,7 +87,7 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
     }
 
     private void Interact() {
-        Vector2Int target = GetComponent<MapEvent>().position + GetComponent<CharaEvent>().facing.XY2D();
+        Vector2Int target = GetComponent<MapEvent>().position + GetComponent<CharaEvent>().Facing.XY2D();
         List<MapEvent> targetEvents = GetComponent<MapEvent>().parent.GetEventsAt(target);
         foreach (MapEvent tryTarget in targetEvents) {
             if (tryTarget.switchEnabled && !tryTarget.IsPassableBy(parent)) {
@@ -110,7 +110,7 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
         Vector2Int vectors = GetComponent<MapEvent>().position;
         Vector2Int vsd = dir.XY2D();
         Vector2Int target = vectors + vsd;
-        GetComponent<CharaEvent>().facing = dir;
+        GetComponent<CharaEvent>().Facing = dir;
         List<MapEvent> targetEvents = GetComponent<MapEvent>().parent.GetEventsAt(target);
 
         List<MapEvent> toCollide = new List<MapEvent>();

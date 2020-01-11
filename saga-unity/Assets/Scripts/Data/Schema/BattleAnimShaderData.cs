@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="BattleAnimShader", menuName="Data/Graphics/")]
+[UnityEngine.CreateAssetMenu(fileName="BattleAnimShader", menuName="Data/Graphics")]
 public class BattleAnimShaderData : BattleAnimData {
 
     [UnityEngine.Tooltip("Shader - will apply to all enemies")]

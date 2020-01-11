@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectBoost", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectBoost", menuName="Data")]
 public class EffectBoostData : EffectAllyTargetData {
 
     [UnityEngine.Tooltip("Stat to boost")]

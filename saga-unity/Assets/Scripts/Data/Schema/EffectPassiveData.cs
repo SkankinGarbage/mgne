@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectPassive", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectPassive", menuName="Data")]
 public class EffectPassiveData : AbilEffectData {
 
     [Newtonsoft.Json.JsonConverter(typeof(StatModDeserializer))]

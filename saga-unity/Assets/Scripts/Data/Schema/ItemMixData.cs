@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="ItemMix", menuName="Data/Rpg/")]
+[UnityEngine.CreateAssetMenu(fileName="ItemMix", menuName="Data/Rpg")]
 public class ItemMixData : MainSchema {
 
     [UnityEngine.Tooltip("Ingredients")]

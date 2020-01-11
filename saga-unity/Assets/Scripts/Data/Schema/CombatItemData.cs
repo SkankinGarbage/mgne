@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="CombatItem", menuName="Data/Rpg/")]
+[UnityEngine.CreateAssetMenu(fileName="CombatItem", menuName="Data/Rpg")]
 public class CombatItemData : MainSchema {
 
     [UnityEngine.Tooltip("Ability name - displayed in-game, potentially with $A special char codes")]

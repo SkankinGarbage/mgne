@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="EffectTransform", menuName="Data/")]
+[UnityEngine.CreateAssetMenu(fileName="EffectTransform", menuName="Data")]
 public class EffectTransformData : AbilEffectData {
 
     [UnityEngine.Tooltip("Sprite - change to this animation")]

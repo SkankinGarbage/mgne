@@ -1,4 +1,4 @@
-[UnityEngine.CreateAssetMenu(fileName="BattleAnimSeries", menuName="Data/Graphics/")]
+[UnityEngine.CreateAssetMenu(fileName="BattleAnimSeries", menuName="Data/Graphics")]
 public class BattleAnimSeriesData : BattleAnimData {
 
     [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]

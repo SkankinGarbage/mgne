@@ -11,7 +11,7 @@ using UnityEngine.Tilemaps;
  */
 [RequireComponent(typeof(Dispatch))]
 [RequireComponent(typeof(LuaCutsceneContext))]
-[RequireComponent(typeof(CustomProperty))]
+[RequireComponent(typeof(SuperCustomProperties))]
 [DisallowMultipleComponent]
 public abstract class MapEvent : MonoBehaviour {
 
@@ -127,6 +127,11 @@ public abstract class MapEvent : MonoBehaviour {
             CheckAutostart((bool)payload);
         });
 
+        var appearanceResult = luaObject.Evaluate(PropertyAppearance);
+        if (appearanceResult.IsNotNil() && GetComponent<CharaEvent>() != null) {
+            GetComponent<CharaEvent>().SetAppearanceByTag(appearanceResult.String);
+        }
+
         CheckEnabled();
     }
 
@@ -184,9 +189,11 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public string GetProperty(string propertyName) {
-        CustomProperty prop = null;
-        properties.TryGetCustomProperty(propertyName, out prop);
-        return prop.GetValueAsString();
+        if (properties.TryGetCustomProperty(propertyName, out CustomProperty prop)) {
+            return prop.GetValueAsString();
+        } else {
+            return "";
+        }
     }
 
     public IEnumerator PathToRoutine(Vector2Int location) {
@@ -278,13 +285,13 @@ public abstract class MapEvent : MonoBehaviour {
     public IEnumerator LinearStepRoutine(OrthoDir dir) {
         tracking = true;
         targetPositionPx = OwnTileToWorld(position);
-        if (TilesPerSecond == 0) {
-            transform.localPosition = targetPositionPx;
-        } else {
+        //if (TilesPerSecond == 0) {
+        //    transform.localPosition = targetPositionPx;
+        //} else {
             var tween = transform.DOLocalMove(targetPositionPx, 1.0f / TilesPerSecond, UsesSnap());
             tween.SetEase(Ease.Linear);
             yield return CoUtils.RunTween(tween);
-        }
+        //}
         tracking = false;
     }
 }
