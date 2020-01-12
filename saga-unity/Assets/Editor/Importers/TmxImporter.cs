@@ -21,8 +21,9 @@ public class MyTmxImporter : CustomTmxImporter {
                 var tmxObject = child.GetComponent<SuperObject>();
                 child.gameObject.AddComponent<MapEvent2D>();
                 var mapEvent = child.gameObject.GetComponent<MapEvent2D>();
-                mapEvent.size = new Vector2Int((int)tmxObject.m_Width / 16, (int)tmxObject.m_Height / 16);
-                mapEvent.properties = tmxObject.GetComponent<SuperCustomProperties>();
+                mapEvent.Size = new Vector2Int((int)tmxObject.m_Width / Map.PxPerTile, (int)tmxObject.m_Height / Map.PxPerTile);
+                mapEvent.Properties = tmxObject.GetComponent<SuperCustomProperties>();
+                mapEvent.Position = new Vector2Int((int)tmxObject.m_X / Map.PxPerTile, (int)tmxObject.m_Y / Map.PxPerTile);
 
                 var appearance = mapEvent.GetProperty(MapEvent.PropertyAppearance);
                 if (appearance != null && appearance.Length > 0) {

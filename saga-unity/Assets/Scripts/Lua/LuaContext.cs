@@ -142,7 +142,7 @@ public class LuaContext : MonoBehaviour {
         if (mapEvent == null) {
             return null;
         } else {
-            return mapEvent.luaObject;
+            return mapEvent.LuaObject;
         }
     }
 

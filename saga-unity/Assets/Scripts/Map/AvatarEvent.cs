@@ -28,7 +28,7 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
     }
 
     public bool OnCommand(InputManager.Command command, InputManager.Event eventType) {
-        if (GetComponent<MapEvent>().tracking || inputPaused) {
+        if (GetComponent<MapEvent>().Tracking || inputPaused) {
             return true;
         }
         switch (eventType) {
@@ -74,7 +74,7 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
     }
 
     public void PopulateMemory(Memory memory) {
-        memory.position = GetComponent<MapEvent>().position;
+        memory.position = GetComponent<MapEvent>().Position;
         memory.facing = GetComponent<CharaEvent>().Facing;
     }
 
@@ -87,8 +87,8 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
     }
 
     private void Interact() {
-        Vector2Int target = GetComponent<MapEvent>().position + GetComponent<CharaEvent>().Facing.XY2D();
-        List<MapEvent> targetEvents = GetComponent<MapEvent>().parent.GetEventsAt(target);
+        Vector2Int target = GetComponent<MapEvent>().Position + GetComponent<CharaEvent>().Facing.XY2D();
+        List<MapEvent> targetEvents = GetComponent<MapEvent>().Parent.GetEventsAt(target);
         foreach (MapEvent tryTarget in targetEvents) {
             if (tryTarget.switchEnabled && !tryTarget.IsPassableBy(parent)) {
                 tryTarget.GetComponent<Dispatch>().Signal(MapEvent.EventInteract, this);
@@ -96,8 +96,8 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
             }
         }
 
-        target = GetComponent<MapEvent>().position;
-        targetEvents = GetComponent<MapEvent>().parent.GetEventsAt(target);
+        target = GetComponent<MapEvent>().Position;
+        targetEvents = GetComponent<MapEvent>().Parent.GetEventsAt(target);
         foreach (MapEvent tryTarget in targetEvents) {
             if (tryTarget.switchEnabled && tryTarget.IsPassableBy(parent)) {
                 tryTarget.GetComponent<Dispatch>().Signal(MapEvent.EventInteract, this);
@@ -107,11 +107,11 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
     }
 
     private bool TryStep(OrthoDir dir) {
-        Vector2Int vectors = GetComponent<MapEvent>().position;
+        Vector2Int vectors = GetComponent<MapEvent>().Position;
         Vector2Int vsd = dir.XY2D();
         Vector2Int target = vectors + vsd;
         GetComponent<CharaEvent>().Facing = dir;
-        List<MapEvent> targetEvents = GetComponent<MapEvent>().parent.GetEventsAt(target);
+        List<MapEvent> targetEvents = GetComponent<MapEvent>().Parent.GetEventsAt(target);
 
         List<MapEvent> toCollide = new List<MapEvent>();
         bool passable = parent.CanPassAt(target);

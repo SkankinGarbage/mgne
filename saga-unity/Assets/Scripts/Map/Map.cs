@@ -9,9 +9,9 @@ using UnityEngine.Tilemaps;
 public abstract class Map : MonoBehaviour {
 
     /// <summary>The number of unity units a tile takes up</summary>
-    public const int TileSizePx = 16;
+    public const int PxPerTile = 16;
     /// <summary>The number of pixels that make up a tile</summary>
-    public const float UnityUnitScale = 0.16f;
+    public const float UnitsPerTile = 0.16f;
 
     public const string ResourcePath = "Maps/";
     
@@ -27,12 +27,12 @@ public abstract class Map : MonoBehaviour {
     public Vector2Int size {
         get {
             if (_size.x == 0) {
-                Vector3Int v3 = grid.transform.GetChild(0).GetComponent<Tilemap>().size;
-                _size = new Vector2Int(v3.x, v3.y);
+                _size = InternalGetSize();
             }
             return _size;
         }
     }
+    protected abstract Vector2Int InternalGetSize();
     public int width { get { return size.x; } }
     public int height { get { return size.y; } }
 
@@ -74,7 +74,7 @@ public abstract class Map : MonoBehaviour {
             passabilityMap[layer] = new bool[width, height];
             for (int x = 0; x < width; x += 1) {
                 for (int y = 0; y < height; y += 1) {
-                    PropertiedTile tile = TileAt(layer, x, y);
+                    PropertiedTile tile = TileAt(layer, x, y - 1);
                     passabilityMap[layer][x, y] =
                         tile == null ||
                         tile.IsPassable ||
@@ -144,7 +144,7 @@ public abstract class Map : MonoBehaviour {
         return FindPath(actor, to, width > height ? width : height);
     }
     public List<Vector2Int> FindPath(MapEvent actor, Vector2Int to, int maxPathLength) {
-        if (ManhattanDistance(actor.GetComponent<MapEvent>().position, to) > maxPathLength) {
+        if (ManhattanDistance(actor.GetComponent<MapEvent>().Position, to) > maxPathLength) {
             return null;
         }
         if (!actor.CanPassAt(to)) {
@@ -154,7 +154,7 @@ public abstract class Map : MonoBehaviour {
         HashSet<Vector2Int> visited = new HashSet<Vector2Int>();
         List<List<Vector2Int>> heads = new List<List<Vector2Int>>();
         List<Vector2Int> firstHead = new List<Vector2Int>();
-        firstHead.Add(actor.GetComponent<MapEvent>().position);
+        firstHead.Add(actor.GetComponent<MapEvent>().Position);
         heads.Add(firstHead);
 
         while (heads.Count > 0) {

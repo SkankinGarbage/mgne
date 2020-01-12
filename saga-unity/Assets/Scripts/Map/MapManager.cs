@@ -75,7 +75,7 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
         Assert.IsNotNull(activeMap);
         Map newMapInstance = InstantiateMap(mapName);
         MapEvent target = newMapInstance.GetEventNamed(targetEventName);
-        RawTeleport(newMapInstance, target.position);
+        RawTeleport(newMapInstance, target.Position);
     }
 
     private void RawTeleport(Map map, Vector2Int location) {

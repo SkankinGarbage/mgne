@@ -4,14 +4,14 @@ public class MapEvent2D : MapEvent {
 
     public static Vector2Int WorldToTile(Vector3 pos) {
         return new Vector2Int(
-            Mathf.RoundToInt(pos.x / Map.UnityUnitScale) * OrthoDir.East.Px2DX(),
-            Mathf.RoundToInt(pos.y / Map.UnityUnitScale) * OrthoDir.North.Px2DY());
+            Mathf.RoundToInt(pos.x / Map.UnitsPerTile) * OrthoDir.East.Px2DX(),
+            Mathf.RoundToInt(pos.y / Map.UnitsPerTile) * OrthoDir.North.Px2DY());
     }
 
     public static Vector3 TileToWorld(Vector2Int position) {
         return new Vector3(
-            position.x * Map.UnityUnitScale * OrthoDir.East.Px2DX(),
-            position.y * Map.UnityUnitScale * OrthoDir.North.Px2DY(),
+            position.x * Map.UnitsPerTile * OrthoDir.East.Px2DX(),
+            position.y * Map.UnitsPerTile * OrthoDir.North.Px2DY(),
             0);
     }
 
@@ -30,7 +30,7 @@ public class MapEvent2D : MapEvent {
     }
 
     public override OrthoDir DirectionTo(Vector2Int position) {
-        return OrthoDirExtensions.DirectionOf2D(position - this.position);
+        return OrthoDirExtensions.DirectionOf2D(position - this.Position);
     }
 
     public override Vector2Int OffsetForTiles(OrthoDir dir) {
@@ -38,13 +38,13 @@ public class MapEvent2D : MapEvent {
     }
 
     public override void SetScreenPositionToMatchTilePosition() {
-        Vector2 transform = new Vector2(Map.TileSizePx, Map.TileSizePx);
+        Vector2 transform = new Vector2(Map.PxPerTile, Map.PxPerTile);
         transform.x = transform.x * OrthoDir.East.Px2DX();
         transform.y = transform.y * OrthoDir.North.Px2DY();
-        this.transform.localPosition = Vector2.Scale(position, transform);
+        this.transform.localPosition = Vector2.Scale(Position, transform);
         GetComponent<RectTransform>().sizeDelta = new Vector2(
-            size.x * Map.TileSizePx / Map.UnityUnitScale, 
-            size.y * Map.TileSizePx / Map.UnityUnitScale);
+            Size.x * Map.PxPerTile / Map.UnitsPerTile, 
+            Size.y * Map.PxPerTile / Map.UnitsPerTile);
         GetComponent<RectTransform>().pivot = new Vector2(0.0f, 1.0f);
     }
 
@@ -53,7 +53,7 @@ public class MapEvent2D : MapEvent {
     }
 
     public override void SetDepth() {
-        if (parent != null) {
+        if (Parent != null) {
             gameObject.transform.localPosition = new Vector3(
                 gameObject.transform.localPosition.x,
                 gameObject.transform.localPosition.y,
@@ -70,24 +70,24 @@ public class MapEvent2D : MapEvent {
         if (GetComponent<CharaEvent>() == null || GetComponent<CharaEvent>().Spritesheet == null) {
             Gizmos.color = new Color(Gizmos.color.r, Gizmos.color.g, Gizmos.color.b, 0.5f);
             Gizmos.DrawCube(new Vector3(
-                    transform.position.x + size.x * Map.TileSizePx * OrthoDir.East.Px2DX() / 2.0f,
-                    transform.position.y + size.y * Map.TileSizePx * OrthoDir.North.Px2DY() / 2.0f,
+                    transform.position.x + Size.x * Map.PxPerTile * OrthoDir.East.Px2DX() / 2.0f,
+                    transform.position.y + Size.y * Map.PxPerTile * OrthoDir.North.Px2DY() / 2.0f,
                     transform.position.z - 0.001f),
-                new Vector3((size.x - delta) * Map.TileSizePx, (size.y - delta) * Map.TileSizePx, 0.002f));
+                new Vector3((Size.x - delta) * Map.PxPerTile, (Size.y - delta) * Map.PxPerTile, 0.002f));
             Gizmos.color = Color.white;
             Gizmos.DrawWireCube(new Vector3(
-                    transform.position.x + size.x * Map.TileSizePx * OrthoDir.East.Px2DX() / 2.0f,
-                    transform.position.y + size.y * Map.TileSizePx * OrthoDir.North.Px2DY() / 2.0f,
+                    transform.position.x + Size.x * Map.PxPerTile * OrthoDir.East.Px2DX() / 2.0f,
+                    transform.position.y + Size.y * Map.PxPerTile * OrthoDir.North.Px2DY() / 2.0f,
                     transform.position.z - 0.001f),
-                new Vector3((size.x - delta) * Map.TileSizePx, (size.y - delta) * Map.TileSizePx, 0.002f));
+                new Vector3((Size.x - delta) * Map.PxPerTile, (Size.y - delta) * Map.PxPerTile, 0.002f));
         }
     }
 
     protected override bool UsesSnap() {
-        return true;
+        return false;
     }
 
     private float DepthForPositionPx(float y) {
-        return (y / (parent.size.y * Map.TileSizePx)) * 0.1f;
+        return (y / (Parent.size.y * Map.PxPerTile)) * 0.1f;
     }
 }

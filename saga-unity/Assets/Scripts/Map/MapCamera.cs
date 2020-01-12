@@ -17,7 +17,13 @@ public class MapCamera : MonoBehaviour {
 
     }
 
-    public virtual Camera GetCameraComponent() {
-        return GetComponent<Camera>();
+    private Camera _camera;
+    public virtual Camera Camera {
+        get {
+            if (_camera == null) {
+                _camera = GetComponent<Camera>();
+            }
+            return _camera;
+        }
     }
 }

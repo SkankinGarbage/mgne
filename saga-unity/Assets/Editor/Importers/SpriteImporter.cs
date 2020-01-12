@@ -23,7 +23,7 @@ internal sealed class SpriteImporter : AssetPostprocessor {
                 int edgeSizeY = 16;
                 int cols = textureSize.x / edgeSizeX;
                 int rows = textureSize.y / edgeSizeY;
-                importer.spritePixelsPerUnit = Map.TileSizePx / Map.UnityUnitScale;
+                importer.spritePixelsPerUnit = Map.PxPerTile / Map.UnitsPerTile;
                 importer.spriteImportMode = SpriteImportMode.Multiple;
                 importer.spritesheet = new SpriteMetaData[rows * cols];
 

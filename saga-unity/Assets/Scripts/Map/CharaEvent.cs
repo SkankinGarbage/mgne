@@ -15,11 +15,12 @@ public class CharaEvent : MonoBehaviour {
 
     private const string DefaultMaterial2DPath = "Materials/Sprite2D";
     private const float DesaturationDuration = 0.5f;
-    private const float StepsPerSecond = 4.0f;
+    private const float StepsPerSecond = 2.0f;
 
     public Doll Doll;
 
     [SerializeField] private bool alwaysAnimates = true;
+    [SerializeField] [HideInInspector] private int stepCount = 4;
 
     private Dictionary<string, Sprite> sprites;
     private Vector2 lastPosition;
@@ -29,7 +30,7 @@ public class CharaEvent : MonoBehaviour {
     private bool stepping;
 
     public MapEvent Parent { get { return GetComponent<MapEvent>(); } }
-    public Map Map { get { return Parent.parent; } }
+    public Map Map { get { return Parent.Parent; } }
     public float Desaturation { get; set; }
 
     [SerializeField]
@@ -141,8 +142,8 @@ public class CharaEvent : MonoBehaviour {
     public IEnumerator StepRoutine(OrthoDir dir) {
         Facing = dir;
         Vector2Int offset = Parent.OffsetForTiles(dir);
-        Vector3 startPx = Parent.positionPx;
-        targetPx = Parent.OwnTileToWorld(Parent.position);
+        Vector3 startPx = Parent.PositionPx;
+        targetPx = Parent.OwnTileToWorld(Parent.Position);
         yield return Parent.LinearStepRoutine(dir);
     }
 
@@ -159,7 +160,7 @@ public class CharaEvent : MonoBehaviour {
     private bool IsSteppingThisFrame() {
         Vector2 position = transform.position;
         Vector2 delta = position - lastPosition;
-        return alwaysAnimates || (delta.sqrMagnitude > 0 && delta.sqrMagnitude < Map.TileSizePx) || Parent.tracking ||
+        return alwaysAnimates || (delta.sqrMagnitude > 0 && delta.sqrMagnitude < Map.PxPerTile) || Parent.Tracking ||
             (GetComponent<AvatarEvent>() && GetComponent<AvatarEvent>().wantsToTrack);
     }
 
@@ -177,10 +178,11 @@ public class CharaEvent : MonoBehaviour {
         foreach (Sprite sprite in Resources.LoadAll<Sprite>(path)) {
             sprites[sprite.name] = sprite;
         }
+        stepCount = Spritesheet.width / Map.PxPerTile;
     }
 
     private Sprite SpriteForMain() {
-        int x = Mathf.FloorToInt(moveTime * StepsPerSecond) % 4;
+        int x = Mathf.FloorToInt(moveTime * StepsPerSecond) % stepCount;
         if (x == 3) x = 1;
         if (!stepping) x = 1;
         return FrameBySlot(x);

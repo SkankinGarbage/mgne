@@ -22,6 +22,9 @@ public class TsxMap : Map {
 
     public override PropertiedTile TileAt(Tilemap layer, int x, int y) {
         var genericTile = layer.GetTile(TileToTilemapCoords(x, y));
+        if (genericTile == null) {
+            return null;
+        }
         TsxTile tsxTile = null;
         instantiatedTiles.TryGetValue(genericTile, out tsxTile);
         if (tsxTile == null) {
@@ -29,5 +32,9 @@ public class TsxMap : Map {
             instantiatedTiles[genericTile] = tsxTile;
         }
         return tsxTile;
+    }
+
+    protected override Vector2Int InternalGetSize() {
+        return new Vector2Int(Tsx.m_Width, Tsx.m_Height);
     }
 }

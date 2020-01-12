@@ -67,11 +67,11 @@ public class LuaMapEvent {
     }
 
     public int x() {
-        return mapEvent.position.x;
+        return mapEvent.Position.x;
     }
 
     public int y() {
-        return mapEvent.position.y;
+        return mapEvent.Position.y;
     }
 
     public void debuglog() {
