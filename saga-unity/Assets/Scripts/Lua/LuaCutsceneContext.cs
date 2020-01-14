@@ -72,6 +72,6 @@ public class LuaCutsceneContext : LuaContext {
     }
 
     private void Speak(DynValue speaker, DynValue text) {
-        RunTextboxRoutineFromLua(MapOverlayUI.Instance().textbox.SpeakRoutine(speaker.String, text.String));
+        RunTextboxRoutineFromLua(MapOverlayUI.Instance().textbox.SpeakRoutine(speaker.String, text.IsNil() ? null : text.String));
     }
 }
