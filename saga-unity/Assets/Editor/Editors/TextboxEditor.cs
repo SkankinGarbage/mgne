@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(Textbox))]
+[CustomEditor(typeof(Textbox), editorForChildClasses:true)]
 public class TextboxEditor : Editor {
 
     public override void OnInspectorGUI() {

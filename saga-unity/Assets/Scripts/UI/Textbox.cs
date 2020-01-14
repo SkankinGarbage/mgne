@@ -23,8 +23,8 @@ public class Textbox : MonoBehaviour, InputListener {
     [Space]
     [Header("Sizing")]
     public float minTextHeight = 12;
-    [HideInInspector] [SerializeField] private float textHeight;
-    [HideInInspector] [SerializeField] private float nameboxHeight;
+    [HideInInspector] [SerializeField] protected Vector2 textMaxSize;
+    [HideInInspector] [SerializeField] protected float nameboxHeight;
 
     public bool isDisplaying { get; private set; }
     
@@ -40,7 +40,7 @@ public class Textbox : MonoBehaviour, InputListener {
     }
 
     public void MemorizeSizes() {
-        textHeight = mainBox.sizeDelta.y;
+        textMaxSize = mainBox.sizeDelta;
         nameboxHeight = namebox.GetComponent<RectTransform>().sizeDelta.y;
     }
 
@@ -89,32 +89,26 @@ public class Textbox : MonoBehaviour, InputListener {
         } else {
             yield return EraseTextRoutine(textClearSeconds);
             if (namebox.text != speakerName) {
-                yield return CoUtils.RunParallel(new IEnumerator[] {
-                    CloseMainBoxRoutine(animationSeconds),
-                    HideNameBoxRoutine(animationSeconds),
-                }, this);
+                yield return NameboxSpeakerSwitchStartRoutine(animationSeconds);
                 namebox.enabled = speakerName != SystemSpeaker;
                 namebox.text = speakerName;
-                yield return CoUtils.RunParallel(new IEnumerator[] {
-                    ShowMainBoxRoutine(animationSeconds),
-                    ShowNameBoxRoutine(animationSeconds),
-                }, this);
+                yield return NameboxSpeakerSwitchEndRoutine(animationSeconds);
             }
         }
 
         yield return TypeRoutine(text);
     }
 
-    public void Hide() {
+    public virtual void Hide() {
         mainBox.anchoredPosition = new Vector3(mainBox.anchoredPosition.x, -minTextHeight * 2 + OverlapSlop);
         namebox.rectTransform.sizeDelta = new Vector2(mainBox.sizeDelta.x, 0.0f);
         mainBox.sizeDelta = new Vector2(mainBox.sizeDelta.x, minTextHeight);
     }
 
-    public void Show() {
+    public virtual void Show() {
         mainBox.anchoredPosition = new Vector3(mainBox.anchoredPosition.x, 0);
         namebox.rectTransform.sizeDelta = new Vector2(mainBox.sizeDelta.x, nameboxHeight);
-        mainBox.sizeDelta = new Vector2(mainBox.sizeDelta.x, textHeight);
+        mainBox.sizeDelta = new Vector2(textMaxSize.x, textMaxSize.y);
     }
 
     public IEnumerator DisableRoutine() {
@@ -137,31 +131,44 @@ public class Textbox : MonoBehaviour, InputListener {
         }, this);
     }
 
-    private IEnumerator ShowNameBoxRoutine(float seconds) {
+    protected virtual IEnumerator ShowNameBoxRoutine(float seconds) {
         yield return CoUtils.RunTween(namebox.GetComponent<RectTransform>().DOSizeDelta(new Vector2(mainBox.sizeDelta.x, nameboxHeight), seconds));
     }
-    private IEnumerator HideNameBoxRoutine(float seconds) {
+    protected virtual IEnumerator HideNameBoxRoutine(float seconds) {
         yield return CoUtils.RunTween(namebox.rectTransform.DOSizeDelta(new Vector2(namebox.rectTransform.sizeDelta.x, 0.0f), seconds));
     }
 
-    private IEnumerator EraseTextRoutine(float seconds) {
+    protected virtual IEnumerator EraseTextRoutine(float seconds) {
         yield return CoUtils.RunTween(textbox.GetComponent<CanvasGroup>().DOFade(0.0f, seconds));
     }
-    private IEnumerator EraseNameRoutine(float seconds) {
+    protected virtual IEnumerator EraseNameRoutine(float seconds) {
         yield return CoUtils.RunTween(namebox.GetComponent<CanvasGroup>().DOFade(0.0f, seconds));
     }
 
-    private IEnumerator ShowMainBoxRoutine(float seconds) {
+    protected virtual IEnumerator ShowMainBoxRoutine(float seconds) {
         yield return CoUtils.RunParallel(new IEnumerator[] {
-            CoUtils.RunTween(mainBox.DOSizeDelta(new Vector2(mainBox.sizeDelta.x, textHeight), seconds)),
+            CoUtils.RunTween(mainBox.DOSizeDelta(new Vector2(mainBox.sizeDelta.x, textMaxSize.y), seconds)),
             CoUtils.RunTween(mainBox.DOLocalMoveY(0.0f, seconds, true)),
         }, this);
     }
-    private IEnumerator CloseMainBoxRoutine(float seconds) {
+    protected virtual IEnumerator CloseMainBoxRoutine(float seconds) {
         yield return CoUtils.RunParallel(new IEnumerator[] {
             CoUtils.RunTween(mainBox.DOSizeDelta(new Vector2(mainBox.sizeDelta.x, minTextHeight), seconds)),
             CoUtils.RunTween(mainBox.DOLocalMoveY(-minTextHeight * 2 + OverlapSlop, seconds, true)),
         }, this);
+    }
+
+    protected virtual IEnumerator NameboxSpeakerSwitchStartRoutine(float seconds) {
+        yield return CoUtils.RunParallel(new IEnumerator[] {
+                    CloseMainBoxRoutine(seconds),
+                    HideNameBoxRoutine(seconds),
+                }, this);
+    }
+    protected virtual IEnumerator NameboxSpeakerSwitchEndRoutine(float seconds) {
+        yield return CoUtils.RunParallel(new IEnumerator[] {
+                    ShowMainBoxRoutine(animationSeconds),
+                    ShowNameBoxRoutine(animationSeconds),
+                }, this);
     }
 
     private IEnumerator TypeRoutine(string text) {

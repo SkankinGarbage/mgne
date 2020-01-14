@@ -3,7 +3,7 @@ using System.Collections;
 using System;
 using DG.Tweening;
 
-public class CoUtils {
+public static class CoUtils {
     
     public static IEnumerator RunAfterDelay(float delayInSeconds, Action toRun) {
         yield return new WaitForSeconds(delayInSeconds);
@@ -50,5 +50,31 @@ public class CoUtils {
         while (!done) {
             yield return null;
         }
+    }
+
+    public static IEnumerator StepResize(Action<Vector2> setter, Vector2 at, Vector2 to, int step, float duration) {
+        float elapsed = 0.0f;
+        while (elapsed < duration) {
+            elapsed += Time.deltaTime;
+            Vector2 delta = (to - at) * (elapsed / duration);
+            delta = delta / step;
+            delta.x = Mathf.Floor(delta.x);
+            delta.y = Mathf.Floor(delta.y);
+            delta *= step;
+            setter(at + delta);
+            yield return null;
+        }
+        setter(to);
+    }
+
+    public static IEnumerator StepResize2(Action<Vector2> setter, Vector2 at, Vector2 to, int step, float duration) {
+        float elapsed = 0.0f;
+        while (elapsed < duration) {
+            elapsed += Time.deltaTime;
+            var t = Mathf.Floor((elapsed / duration) * step) / step;
+            setter(to * t + at * (1f - t));
+            yield return null;
+        }
+        setter(to);
     }
 }

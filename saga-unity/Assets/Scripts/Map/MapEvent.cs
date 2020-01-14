@@ -157,6 +157,12 @@ public abstract class MapEvent : MonoBehaviour {
         DrawGizmoSelf();
     }
 
+    public void OnValidate() {
+        if (Properties == null) {
+            Properties = GetComponent<SuperCustomProperties>();
+        }
+    }
+
     public void CheckEnabled() {
         switchEnabled = !LuaObject.EvaluateBool(PropertyLuaHide, false);
     }
