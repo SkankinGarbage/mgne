@@ -20,5 +20,9 @@ public class TextboxEditor : Editor {
             box.MemorizeSizes();
             EditorUtility.SetDirty(box);
         }
+
+        if (GUILayout.Button("Test")) {
+            box.StartCoroutine(box.TestRoutine());
+        }
     }
 }

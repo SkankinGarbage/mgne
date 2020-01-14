@@ -14,6 +14,7 @@ public class MyTmxImporter : CustomTmxImporter {
         var tsxMap = map.gameObject.AddComponent<TsxMap>();
         tsxMap.grid = map.gameObject.GetComponentInChildren<Grid>();
         var objectLayer = map.gameObject.GetComponentInChildren<SuperObjectLayer>();
+        if (objectLayer == null) return;
         tsxMap.objectLayer = objectLayer.gameObject.AddComponent<ObjectLayer>();
 
         foreach (Transform child in objectLayer.transform) {

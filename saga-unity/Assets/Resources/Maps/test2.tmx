@@ -51,12 +51,6 @@
     <property name="onCollide" value="teleport('test.tmx', 18, 7)"/>
    </properties>
   </object>
-  <object id="2" name="test walk" type="Character" x="144" y="112" width="16" height="16">
-   <properties>
-    <property name="appearance" value="4dir_ffl2_human"/>
-    <property name="onInteract" value="walk(this, 3, 'NORTH')"/>
-   </properties>
-  </object>
   <object id="3" name="room" type="Ceiling" x="208" y="48">
    <properties>
     <property name="roofID" value="3"/>
@@ -77,17 +71,6 @@
   <object id="6" name="memory" type="Teleport Memory" x="240" y="96" width="16" height="16">
    <properties>
     <property name="displayName" value="Other Test Room"/>
-   </properties>
-  </object>
-  <object id="7" name="potion" type="Chest" x="176" y="48" width="16" height="16">
-   <properties>
-    <property name="item" value="item_testTransform"/>
-   </properties>
-  </object>
-  <object id="8" name="radiation" type="Event" x="16" y="16" width="16" height="16">
-   <properties>
-    <property name="hide" value="return hasItem('key_radSuit')"/>
-    <property name="onTurn" value="play('world4/radiation.lua'); playScene();"/>
    </properties>
   </object>
  </objectgroup>

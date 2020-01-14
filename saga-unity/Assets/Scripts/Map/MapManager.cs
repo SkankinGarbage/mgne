@@ -92,6 +92,9 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
     }
 
     private Map InstantiateMap(string mapName) {
+        if (mapName.EndsWith(".tmx")) {
+            mapName = mapName.Substring(0, mapName.IndexOf('.'));
+        }
         GameObject newMapObject = null;
         if (activeMap != null) {
             string localPath = Map.ResourcePath + mapName;
@@ -100,7 +103,7 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
         if (newMapObject == null) {
             newMapObject = Resources.Load<GameObject>(mapName);
         }
-        Assert.IsNotNull(newMapObject);
+        Assert.IsNotNull(newMapObject, "Couldn't find map " + mapName);
         return Instantiate(newMapObject).GetComponent<Map>();
     }
 

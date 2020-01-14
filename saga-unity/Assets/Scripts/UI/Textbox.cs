@@ -35,8 +35,6 @@ public class Textbox : MonoBehaviour, InputListener {
         textbox.text = "";
         mainBox.sizeDelta = new Vector2(mainBox.sizeDelta.x, 0.0f);
         advanceArrow.SetActive(false);
-
-        StartCoroutine(TestRoutine());
     }
 
     public void MemorizeSizes() {
@@ -80,7 +78,7 @@ public class Textbox : MonoBehaviour, InputListener {
     public IEnumerator SpeakRoutine(string speakerName, string text) {
         if (text == null || text.Length == 0) {
             text = speakerName;
-            speakerName = null;
+            speakerName = SystemSpeaker;
         }
         if (!isDisplaying) {
             namebox.enabled = speakerName != SystemSpeaker;
@@ -126,7 +124,7 @@ public class Textbox : MonoBehaviour, InputListener {
         Global.Instance().Input.PushListener(this);
 
         yield return CoUtils.RunParallel(new IEnumerator[] {
-            ShowNameBoxRoutine(animationSeconds),
+            namebox.enabled ? ShowNameBoxRoutine(animationSeconds) : CoUtils.Wait(0.0f),
             ShowMainBoxRoutine(animationSeconds),
         }, this);
     }

@@ -38,14 +38,10 @@ public class MapEvent2D : MapEvent {
     }
 
     public override void SetScreenPositionToMatchTilePosition() {
-        Vector2 transform = new Vector2(Map.PxPerTile, Map.PxPerTile);
-        transform.x = transform.x * OrthoDir.East.Px2DX();
-        transform.y = transform.y * OrthoDir.North.Px2DY();
-        this.transform.localPosition = Vector2.Scale(Position, transform);
-        GetComponent<RectTransform>().sizeDelta = new Vector2(
-            Size.x * Map.PxPerTile / Map.UnitsPerTile, 
-            Size.y * Map.PxPerTile / Map.UnitsPerTile);
-        GetComponent<RectTransform>().pivot = new Vector2(0.0f, 1.0f);
+        transform.localPosition = new Vector3(
+            Position.x * Map.UnitsPerTile * OrthoDir.East.Px2DX(),
+            Position.y * Map.UnitsPerTile * OrthoDir.North.Px2DY(),
+            transform.localPosition.z);
     }
 
     public override Vector3 InternalPositionToDisplayPosition(Vector3 position) {
