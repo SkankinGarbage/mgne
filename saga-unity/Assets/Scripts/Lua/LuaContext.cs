@@ -12,7 +12,9 @@ using System.IO;
  */
 public class LuaContext : MonoBehaviour {
     
-    private static readonly string DefinesPath = "Lua/Defines/GlobalDefines";
+    private const string DefinesPath = "Lua/Defines/GlobalDefines";
+    private const string ScenesPath = "Lua/Scenes";
+
     private static string defines;
 
     private Script _lua;
@@ -121,10 +123,19 @@ public class LuaContext : MonoBehaviour {
         activeScript = null;
     }
 
+    public IEnumerator RunRoutineFromFile(string filename) {
+        if (filename.Contains(".")) {
+            filename = filename.Substring(0, filename.IndexOf('.'));
+        }
+        var asset = Resources.Load<LuaSerializedScript>("Lua/" + filename);
+        yield return RunRoutine(asset.luaString);
+    }
+
     protected virtual void AssignGlobals() {
         lua.Globals["debugLog"] = (Action<DynValue>)DebugLog;
         lua.Globals["playSFX"] = (Action<DynValue>)PlaySFX;
         lua.Globals["cs_wait"] = (Action<DynValue>)Wait;
+        lua.Globals["cs_play"] = (Action<DynValue>)Play;
         lua.Globals["getSwitch"] = (Func<DynValue, DynValue>)GetSwitch;
         lua.Globals["setSwitch"] = (Action<DynValue, DynValue>)SetSwitch;
         lua.Globals["eventNamed"] = (Func<DynValue, LuaMapEvent>)EventNamed;
@@ -165,5 +176,9 @@ public class LuaContext : MonoBehaviour {
 
     private void PlaySFX(DynValue sfxKey) {
         Global.Instance().Audio.PlaySFX(sfxKey.String);
+    }
+
+    private void Play(DynValue filename) {
+        RunRoutineFromLua(RunRoutineFromFile(filename.String));
     }
 }
