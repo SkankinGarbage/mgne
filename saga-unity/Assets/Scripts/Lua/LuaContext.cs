@@ -5,6 +5,7 @@ using Coroutine = MoonSharp.Interpreter.Coroutine;
 using System;
 using UnityEngine.Assertions;
 using System.IO;
+using System.Collections.Generic;
 
 /**
  * A wrapper around Script that represents an environment where a script can execute. Only one
@@ -27,8 +28,7 @@ public class LuaContext : MonoBehaviour {
         }
     }
 
-    private LuaScript activeScript;
-    private int blockingRoutines;
+    private Stack<LuaScript> activeScripts = new Stack<LuaScript>();
     private bool forceKilled;
 
     public virtual void Awake() {
@@ -42,7 +42,7 @@ public class LuaContext : MonoBehaviour {
     }
 
     public bool IsRunning() {
-        return activeScript != null;
+        return activeScripts.Count == 0;
     }
 
     public DynValue CreateObject() {
@@ -69,14 +69,9 @@ public class LuaContext : MonoBehaviour {
             // leave the old instance infinitely suspended
             return;
         }
-        blockingRoutines += 1;
         Global.Instance().StartCoroutine(CoUtils.RunWithCallback(routine, () => {
-            blockingRoutines -= 1;
-            if (blockingRoutines <= 0) {
-                blockingRoutines = 0;
-                if (activeScript != null && !forceKilled) {
-                    activeScript.scriptRoutine.Resume();
-                }
+            if (activeScripts.Count > 0 && !forceKilled) {
+                activeScripts.Peek().scriptRoutine.Resume();
             }
         }));
     }
@@ -98,7 +93,6 @@ public class LuaContext : MonoBehaviour {
 
     // kills the current script, useful for debug only
     public void ForceTerminate() {
-        blockingRoutines = 0;
         forceKilled = true;
     }
 
@@ -108,8 +102,7 @@ public class LuaContext : MonoBehaviour {
     }
 
     public virtual IEnumerator RunRoutine(LuaScript script) {
-        Assert.IsNull(activeScript);
-        activeScript = script;
+        activeScripts.Push(script);
         forceKilled = false;
         try {
             script.scriptRoutine.Resume();
@@ -120,7 +113,7 @@ public class LuaContext : MonoBehaviour {
         while (script.scriptRoutine.State != CoroutineState.Dead && !forceKilled) {
             yield return null;
         }
-        activeScript = null;
+        activeScripts.Pop();
     }
 
     public IEnumerator RunRoutineFromFile(string filename) {

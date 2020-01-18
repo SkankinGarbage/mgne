@@ -7,22 +7,22 @@ public class ExpanderTextbox : Textbox {
     [SerializeField] private int StepSize = 16;
 
     public override void Hide() {
-        namebox.transform.parent.gameObject.SetActive(false);
+        SetNameboxEnabled(false);
         mainBox.gameObject.SetActive(false);
         mainBox.sizeDelta = new Vector2(minTextHeight, minTextHeight);
     }
     public override void Show() {
-        namebox.transform.parent.gameObject.SetActive(true);
+        SetNameboxEnabled(true);
         mainBox.gameObject.SetActive(true);
         mainBox.sizeDelta = new Vector2(textMaxSize.x, textMaxSize.y);
     }
 
     protected override IEnumerator ShowNameBoxRoutine(float seconds) {
         yield return CoUtils.Wait(seconds);
-        namebox.transform.parent.gameObject.SetActive(true);
+        SetNameboxEnabled(true);
     }
     protected override IEnumerator HideNameBoxRoutine(float seconds) {
-        namebox.transform.parent.gameObject.SetActive(false);
+        SetNameboxEnabled(false);
         yield return CoUtils.Wait(seconds);
     }
 
@@ -37,11 +37,11 @@ public class ExpanderTextbox : Textbox {
     }
 
     protected override IEnumerator NameboxSpeakerSwitchStartRoutine(float seconds) {
-        namebox.transform.parent.gameObject.SetActive(false);
+        SetNameboxEnabled(false);
         yield return CoUtils.Wait(seconds / 12f);
     }
     protected override IEnumerator NameboxSpeakerSwitchEndRoutine(float seconds) {
-        namebox.transform.parent.gameObject.SetActive(true);
+        SetNameboxEnabled(true);
         yield return null;
     }
 
@@ -50,5 +50,12 @@ public class ExpanderTextbox : Textbox {
         textbox.GetComponent<CanvasGroup>().alpha = 0.5f;
         yield return CoUtils.Wait(seconds / 2f);
         textbox.GetComponent<CanvasGroup>().alpha = 0.0f;
+    }
+
+    protected override void SetNameboxEnabled(bool enabled) {
+        namebox.transform.parent.gameObject.SetActive(enabled);
+    }
+    protected override bool IsNameboxEnabled() {
+        return namebox.transform.parent.gameObject.activeInHierarchy;
     }
 }

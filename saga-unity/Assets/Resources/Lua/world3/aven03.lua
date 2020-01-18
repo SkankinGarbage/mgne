@@ -1,0 +1,18 @@
+local hero1 = getHero(0).getName()
+local hero2 = getHero(3).getName()
+
+speak("Zkauba", "Aven! These traitors let the scientist go!")
+speak(hero1, "Her name's Janine. She's Jonas's twin.")
+speak("Aven", "Jonas had a twin? Hm...")
+speak("Aven", "That is bad news. But we have more problems. The gate machine is complete!")
+speak("Zkauba", "Then we were too late.")
+speak("Aven", "We have one more chance. If the machine has no power, the prince can't open the gate.")
+speak(hero2, "Then we attack the power plant?")
+speak("Aven", "Yes. Zkauba, go to the power plant and see what you can find.")
+speak(hero1, "And us?")
+speak("Aven", "The City of Angels runs a plutonium mine and refinery in the northeast. Sabotage it.")
+speak("Zkauba", "This time we'll bring you results!")
+speak("Aven", "I hope so. If the prince breaks into Babel... Well, every world will be at risk.")
+
+removeMember()
+sceneSwitch('aven03', true)

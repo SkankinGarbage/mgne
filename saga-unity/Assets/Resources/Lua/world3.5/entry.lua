@@ -1,0 +1,35 @@
+local hero1 = getHero(0).getName()
+local hero2 = getHero(1).getName()
+local hero3 = getHero(2).getName()
+
+walk('hero', 4, 'SOUTH')
+wait(0.8)
+walk('hero', 3, 'EAST')
+wait(0.4)
+walk('hero', 6, 'WEST')
+wait(0.4)
+walk('hero', 3, 'EAST')
+face('hero', 'SOUTH')
+wait(1.5)
+
+speak(hero3, "Wow...")
+speak("David", "Isn't it awful?")
+
+playSound('explode')
+shake(0.4)
+sceneSwitch('prince_appears', true)
+shake(0.4)
+face('hero', 'NORTH')
+
+speak("Prince", "See, " .. hero1 .. "?")
+speak(hero2, "You!")
+speak("Prince", "I gave you a chance, but this is what happens when you oppose me. My old rival Aven, then Jonas, and now you...")
+speak("Prince", "This world will suffer, and there's nothing you can do but watch it burn.")
+speak(hero1, "Stop!")
+
+walk('prince', 2, 'NORTH')
+sceneSwitch('prince_appears', false)
+wait(1.0)
+
+speak("David", "Let that monster go for now. We need to save our world!")
+sceneSwitch('world3.5_entry', true)

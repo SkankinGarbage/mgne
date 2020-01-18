@@ -21,7 +21,7 @@ public class TextboxEditor : Editor {
             EditorUtility.SetDirty(box);
         }
 
-        if (GUILayout.Button("Test")) {
+        if (Application.isPlaying && GUILayout.Button("Test")) {
             box.StartCoroutine(box.TestRoutine());
         }
     }

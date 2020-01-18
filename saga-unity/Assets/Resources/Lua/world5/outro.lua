@@ -1,0 +1,37 @@
+playBGM('ending')
+
+fade('white')
+wait(1.0)
+hideHero(true)
+teleport('world5/outro01.tmx', 10, 7, 'SOUTH', false)
+fade('normal')
+wait(12.0)
+
+fade('white')
+wait(1.0)
+teleport('world5/outro02.tmx', 10, 7, 'SOUTH', false)
+fade('normal')
+wait(12.0)
+
+fade('white')
+wait(1.0)
+teleport('world5/outro03.tmx', 10, 7, 'SOUTH', false)
+fade('normal')
+wait(11.5)
+
+fade('white')
+wait(1.0)
+teleport('world5/outro04.tmx', 10, 7, 'SOUTH', false)
+fade('normal')
+wait(16.0)
+
+fade('white')
+wait(1.0)
+teleport('world5/outro05.tmx', 10, 7, 'SOUTH', false)
+fade('normal')
+wait(3.0)
+
+speak("SaGa 4: Masters of the Demon World")
+speak("2016 WOMBATRPGs:                      psy_wombats + bob_esc")
+speak("Thank you for playing!")
+reset()

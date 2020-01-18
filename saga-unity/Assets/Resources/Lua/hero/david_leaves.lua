@@ -1,0 +1,22 @@
+local hero1 = getHero(0).getName()
+local hero2 = getHero(1).getName()
+
+sceneSwitch('david_appears', true)
+walk('david', 1, 'EAST')
+face('hero', 'EAST')
+face('david', 'WEST')
+wait(0.5)
+
+speak("David", "Are you really going to listen to that old man?")
+speak(hero1, "I'm here to find Jonas and Janine. You can do what you want.")
+speak("David", "Well, good luck finding your friends...")
+speak("David", "I'm going back to the grandmaster to become a knight. Just don't get in my way!")
+speak(hero2, "Goodbye again.")
+
+pathEvent('david', 'exit', false)
+wait(0.3)
+face('hero', 'SOUTH')
+wait(.8)
+sceneSwitch('david_appears', false)
+sceneSwitch('david_leaves', true)
+removeMember()

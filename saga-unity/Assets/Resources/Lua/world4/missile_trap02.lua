@@ -1,0 +1,15 @@
+walk('guard_l2', 2, 'EAST', false)
+walk('guard_r2', 2, 'WEST')
+face('guard_l2', 'NORTH')
+face('guard_r2', 'NORTH')
+
+playSound('explode')
+sceneSwitch('missile_trap02_01', true)
+shake(0.5, 4)
+wait(0.5)
+playSound('explode')
+sceneSwitch('missile_trap02_02', true)
+shake(0.5, 4)
+wait(0.5)
+
+sceneSwitch('missile_trap02', true)

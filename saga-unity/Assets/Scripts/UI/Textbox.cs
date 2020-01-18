@@ -59,15 +59,16 @@ public class Textbox : MonoBehaviour, InputListener {
     }
 
     public IEnumerator TestRoutine() {
-        yield return CoUtils.Wait(2.0f);
         isDisplaying = true;
         while (true) {
             yield return DisableRoutine();
             yield return CoUtils.Wait(1.0f);
-            yield return SpeakRoutine("Diaghilev", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do " +
+            yield return SpeakRoutine("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do " +
                 "eiusmod tempor incididunt ut labore et dolore magna aliqua.");
+            yield return SpeakRoutine("Diaghilev", "Or thus spake the ancestors.");
             yield return SpeakRoutine("Diaghilev", "Etc.");
             yield return SpeakRoutine("Homasa", "Hello I am someone completely different");
+            yield return SpeakRoutine("eom");
         }
     }
 
@@ -81,14 +82,14 @@ public class Textbox : MonoBehaviour, InputListener {
             speakerName = SystemSpeaker;
         }
         if (!isDisplaying) {
-            namebox.enabled = speakerName != SystemSpeaker;
+            SetNameboxEnabled(speakerName != SystemSpeaker);
             namebox.text = speakerName;
             yield return EnableRoutine();
         } else {
             yield return EraseTextRoutine(textClearSeconds);
             if (namebox.text != speakerName) {
                 yield return NameboxSpeakerSwitchStartRoutine(animationSeconds);
-                namebox.enabled = speakerName != SystemSpeaker;
+                SetNameboxEnabled(speakerName != SystemSpeaker);
                 namebox.text = speakerName;
                 yield return NameboxSpeakerSwitchEndRoutine(animationSeconds);
             }
@@ -109,6 +110,15 @@ public class Textbox : MonoBehaviour, InputListener {
         mainBox.sizeDelta = new Vector2(textMaxSize.x, textMaxSize.y);
     }
 
+    private IEnumerator EnableRoutine() {
+        isDisplaying = true;
+        Global.Instance().Input.PushListener(this);
+
+        yield return CoUtils.RunParallel(new IEnumerator[] {
+            IsNameboxEnabled() ? ShowNameBoxRoutine(animationSeconds) : CoUtils.Wait(0.0f),
+            ShowMainBoxRoutine(animationSeconds),
+        }, this);
+    }
     public IEnumerator DisableRoutine() {
         isDisplaying = false;
         yield return CoUtils.RunParallel(new IEnumerator[] {
@@ -117,16 +127,6 @@ public class Textbox : MonoBehaviour, InputListener {
             CloseMainBoxRoutine(animationSeconds),
         }, this);
         Global.Instance().Input.RemoveListener(this);
-    }
-
-    private IEnumerator EnableRoutine() {
-        isDisplaying = true;
-        Global.Instance().Input.PushListener(this);
-
-        yield return CoUtils.RunParallel(new IEnumerator[] {
-            namebox.enabled ? ShowNameBoxRoutine(animationSeconds) : CoUtils.Wait(0.0f),
-            ShowMainBoxRoutine(animationSeconds),
-        }, this);
     }
 
     protected virtual IEnumerator ShowNameBoxRoutine(float seconds) {
@@ -167,6 +167,13 @@ public class Textbox : MonoBehaviour, InputListener {
                     ShowMainBoxRoutine(animationSeconds),
                     ShowNameBoxRoutine(animationSeconds),
                 }, this);
+    }
+
+    protected virtual void SetNameboxEnabled(bool enabled) {
+        namebox.enabled = enabled;
+    }
+    protected virtual bool IsNameboxEnabled() {
+        return namebox.enabled;
     }
 
     private IEnumerator TypeRoutine(string text) {

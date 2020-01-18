@@ -1,0 +1,17 @@
+local hero = getHero(0).getName()
+local hero2 = getHero(1).getName()
+
+speak(hero, "Excuse me... Are you the governor of this city?")
+speak("Governor", "I am.")
+speak(hero, "We're looking for the artifacts of Hero. I heard you might know about one.")
+speak("Governor", "You are treasure hunters?")
+speak(hero, "Actually I'm looking for family, but I think they must be in Hero.")
+speak("Governor", "Well I'm sorry I don't have anything to give. We built a shrine for airseed years and years ago.")
+speak(hero2, "It sounds like we should go to that shrine.")
+speak("Governor", "Maybe. But the shrine is overrun with monsters. None of the townsfolk have been there in a long time.")
+speak("BORG", "I don't think we have much of a choice, " .. hero .. ".")
+speak("Governor", "A man named David left for that shrine the other day, but nobody's seen him since. Most people around here think he's dead.")
+speak(hero, "We'll have to be careful.")
+speak("Governor", "You have my permission to visit the shrine south of here. Whatever treasure you find there is yours to keep.")
+
+sceneSwitch('mayor01', true)
