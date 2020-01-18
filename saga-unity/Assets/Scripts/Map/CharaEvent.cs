@@ -30,7 +30,7 @@ public class CharaEvent : MonoBehaviour {
     private bool stepping;
 
     public MapEvent Parent { get { return GetComponent<MapEvent>(); } }
-    public Map Map { get { return Parent.Parent; } }
+    public Map Map { get { return Parent.Map; } }
     public float Desaturation { get; set; }
 
     [SerializeField]

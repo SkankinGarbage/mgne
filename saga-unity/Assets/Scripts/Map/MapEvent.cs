@@ -46,7 +46,7 @@ public abstract class MapEvent : MonoBehaviour {
         get { return transform.localPosition; }
     }
     
-    public Map Parent {
+    public Map Map {
         get {
             GameObject parentObject = gameObject;
             while (parentObject.transform.parent != null) {
@@ -187,17 +187,17 @@ public abstract class MapEvent : MonoBehaviour {
         if (!GetComponent<MapEvent>().switchEnabled) {
             return true;
         }
-        if (loc.x < 0 || loc.x >= Parent.width || loc.y < 0 || loc.y >= Parent.height) {
+        if (loc.x < 0 || loc.x >= Map.width || loc.y < 0 || loc.y >= Map.height) {
             return false;
         }
-        foreach (Tilemap layer in Parent.layers) {
-            if (layer.transform.position.z >= Parent.objectLayer.transform.position.z && 
-                    !Parent.IsChipPassableAt(layer, loc)) {
+        foreach (Tilemap layer in Map.layers) {
+            if (layer.transform.position.z >= Map.objectLayer.transform.position.z && 
+                    !Map.IsChipPassableAt(layer, loc)) {
                 return false;
             }
         }
         if (!IsPassable()) {
-            foreach (MapEvent mapEvent in Parent.GetEventsAt(loc)) {
+            foreach (MapEvent mapEvent in Map.GetEventsAt(loc)) {
                 if (!mapEvent.IsPassableBy(this)) {
                     return false;
                 }
@@ -216,7 +216,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public IEnumerator PathToRoutine(Vector2Int location) {
-        List<Vector2Int> path = Parent.FindPath(this, location);
+        List<Vector2Int> path = Map.FindPath(this, location);
         if (path == null) {
             yield break;
         }

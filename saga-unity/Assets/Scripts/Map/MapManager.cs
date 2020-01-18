@@ -47,38 +47,46 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
         }
     }
 
-    public IEnumerator TeleportRoutine(string mapName, Vector2Int location) {
+    public IEnumerator TeleportRoutine(string mapName, Vector2Int location, OrthoDir? facing = null, bool isRaw = false) {
         avatar.PauseInput();
         TransitionData data = Global.Instance().Database.Transitions.GetData(DefaultTransitionTag);
-        yield return camera.GetComponent<FadeImageEffect>().TransitionRoutine(data, () => {
-            RawTeleport(mapName, location);
-        });
+        if (!isRaw) {
+            yield return camera.GetComponent<FadeImageEffect>().TransitionRoutine(data, () => {
+                RawTeleport(mapName, location, facing);
+            });
+        } else {
+            RawTeleport(mapName, location, facing);
+        }
         avatar.UnpauseInput();
     }
 
-    public IEnumerator TeleportRoutine(string mapName, string targetEventName) {
+    public IEnumerator TeleportRoutine(string mapName, string targetEventName, OrthoDir? facing = null, bool isRaw = false) {
         avatar.PauseInput();
         TransitionData data = Global.Instance().Database.Transitions.GetData(DefaultTransitionTag);
-        yield return camera.GetComponent<FadeImageEffect>().TransitionRoutine(data, () => {
-            RawTeleport(mapName, targetEventName);
-        });
+        if (!isRaw) {
+            yield return camera.GetComponent<FadeImageEffect>().TransitionRoutine(data, () => {
+                RawTeleport(mapName, targetEventName, facing);
+            });
+        } else {
+            RawTeleport(mapName, targetEventName, facing);
+        }
         avatar.UnpauseInput();
     }
     
-    private void RawTeleport(string mapName, Vector2Int location) {
+    private void RawTeleport(string mapName, Vector2Int location, OrthoDir? facing = null) {
         Assert.IsNotNull(activeMap);
         Map newMapInstance = InstantiateMap(mapName);
-        RawTeleport(newMapInstance, location);
+        RawTeleport(newMapInstance, location, facing);
     }
 
-    private void RawTeleport(string mapName, string targetEventName) {
+    private void RawTeleport(string mapName, string targetEventName, OrthoDir? facing = null) {
         Assert.IsNotNull(activeMap);
         Map newMapInstance = InstantiateMap(mapName);
         MapEvent target = newMapInstance.GetEventNamed(targetEventName);
-        RawTeleport(newMapInstance, target.Position);
+        RawTeleport(newMapInstance, target.Position, facing);
     }
 
-    private void RawTeleport(Map map, Vector2Int location) {
+    private void RawTeleport(Map map, Vector2Int location, OrthoDir? facing = null) {
         Assert.IsNotNull(activeMap);
         Assert.IsNotNull(avatar);
 
@@ -89,6 +97,9 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
         activeMap = map;
         activeMap.OnTeleportTo();
         avatar.GetComponent<MapEvent>().SetPosition(location);
+        if (facing != null) {
+            avatar.Chara.Facing = facing.GetValueOrDefault(OrthoDir.North);
+        }
     }
 
     private Map InstantiateMap(string mapName) {
@@ -108,14 +119,13 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
     }
 
     private void AddInitialAvatar(Memory memory = null) {
-        // TODO:
-        avatar = Instantiate(Resources.Load<GameObject>("Prefabs/Map3D/Avatar3D")).GetComponent<AvatarEvent>();
+        avatar = Instantiate(Resources.Load<GameObject>("Prefabs/Avatar")).GetComponent<AvatarEvent>();
         if (memory != null) {
             avatar.PopulateFromMemory(memory);
         }
         avatar.transform.parent = activeMap.objectLayer.transform;
         activeMap.OnTeleportTo();
-        camera.target = avatar.GetComponent<MapEvent>();
+        camera.target = avatar.Parent;
         camera.ManualUpdate();
     }
 }

@@ -49,7 +49,7 @@ public class MapEvent2D : MapEvent {
     }
 
     public override void SetDepth() {
-        if (Parent != null) {
+        if (Map != null) {
             gameObject.transform.localPosition = new Vector3(
                 gameObject.transform.localPosition.x,
                 gameObject.transform.localPosition.y,
@@ -84,6 +84,6 @@ public class MapEvent2D : MapEvent {
     }
 
     private float DepthForPositionPx(float y) {
-        return (y / (Parent.size.y * Map.PxPerTile)) * 0.1f;
+        return (y / (Map.size.y * Map.PxPerTile)) * 0.1f;
     }
 }
