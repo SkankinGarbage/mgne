@@ -56,6 +56,7 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["cs_fadeOutBGM"] = (Action<DynValue>)FadeOutBGM;
         lua.Globals["cs_speak"] = (Action<DynValue, DynValue>)Speak;
         lua.Globals["cs_walk"] = (Action<DynValue, DynValue, DynValue, DynValue>)Walk;
+        lua.Globals["cs_path"] = (Action<DynValue, DynValue, DynValue, DynValue>)Path;
     }
 
     // === LUA CALLABLE ============================================================================
@@ -107,6 +108,41 @@ public class LuaCutsceneContext : LuaContext {
         } else {
             var function = eventLua.Table.Get("walk");
             function.Function.Call(steps, directionLua, waitLua);
+        }
+    }
+
+    private void Path(DynValue eventLua, DynValue targetArg1, DynValue targetArg2, DynValue targetArg3) {
+        bool wait;
+        Vector2Int target;
+        if (targetArg1.Type == DataType.String) {
+            var targetEvent = Global.Instance().Maps.activeMap.GetEventNamed(targetArg1.String);
+            if (targetEvent == null) {
+                Debug.LogError("Couldn't find event " + targetArg1.String);
+                return;
+            }
+            target = targetEvent.Position;
+            wait = targetArg2.Boolean;
+        } else {
+            target = new Vector2Int((int)targetArg1.Number, (int)targetArg2.Number);
+            wait = targetArg3.Boolean;
+        }
+
+        if (eventLua.Type == DataType.String) {
+            var @event = Global.Instance().Maps.activeMap.GetEventNamed(eventLua.String);
+            if (@event == null) {
+                Debug.LogError("Couldn't find event " + eventLua.String);
+                return;
+            }
+
+            var routine = @event.PathToRoutine(target);
+            if (wait) {
+                RunRoutineFromLua(routine);
+            } else {
+                @event.StartCoroutine(routine);
+            }
+        } else {
+            var function = eventLua.Table.Get("path");
+            function.Function.Call(eventLua, targetArg1, targetArg2, targetArg3);
         }
     }
 

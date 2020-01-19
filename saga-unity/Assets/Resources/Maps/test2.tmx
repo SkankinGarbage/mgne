@@ -54,7 +54,7 @@
   <object id="2" name="walker" type="Character" x="144" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
-    <property name="onInteract" value="walk('walker', 3, 'NORTH')"/>
+    <property name="onInteract" value="path('walker', 'memory', true)"/>
    </properties>
   </object>
   <object id="3" name="room" type="Ceiling" x="208" y="48">
