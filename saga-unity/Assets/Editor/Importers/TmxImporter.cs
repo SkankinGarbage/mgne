@@ -3,6 +3,7 @@ using System.Collections;
 using SuperTiled2Unity.Editor;
 using SuperTiled2Unity;
 using UnityEditor;
+using UnityEngine.Tilemaps;
 
 [AutoCustomTmxImporter]
 public class MyTmxImporter : CustomTmxImporter {
@@ -10,12 +11,18 @@ public class MyTmxImporter : CustomTmxImporter {
     private string dollPrefabPath = "Assets/Resources/Prefabs/Doll.prefab";
 
     public override void TmxAssetImported(TmxAssetImportedArgs args) {
+        var materials = GameboyMaterialSettings.GetDefault();
+
         var map = args.ImportedSuperMap;
         var tsxMap = map.gameObject.AddComponent<TsxMap>();
         tsxMap.grid = map.gameObject.GetComponentInChildren<Grid>();
         var objectLayer = map.gameObject.GetComponentInChildren<SuperObjectLayer>();
         if (objectLayer == null) return;
         tsxMap.objectLayer = objectLayer.gameObject.AddComponent<ObjectLayer>();
+
+        foreach (var layer in tsxMap.layers) {
+            layer.GetComponent<TilemapRenderer>().material = materials.BackgroundMaterial;
+        }
 
         foreach (Transform child in objectLayer.transform) {
             if (child.GetComponent<SuperObject>() != null) {
@@ -34,6 +41,7 @@ public class MyTmxImporter : CustomTmxImporter {
                         chara = mapEvent.gameObject.AddComponent<CharaEvent>();
                         var dollObject = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(dollPrefabPath));
                         doll = dollObject.GetComponent<Doll>();
+                        doll.Renderer.material = materials.ForegroundMaterial;
                         doll.transform.SetParent(mapEvent.transform);
                         chara.Doll = doll;
                     } else {

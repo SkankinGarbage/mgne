@@ -12,8 +12,7 @@ using UnityEditor;
  */
 [DisallowMultipleComponent]
 public class CharaEvent : MonoBehaviour {
-
-    private const string DefaultMaterial2DPath = "Materials/Sprite2D";
+    
     private const float DesaturationDuration = 0.5f;
     private const float StepsPerSecond = 2.0f;
 
@@ -71,7 +70,6 @@ public class CharaEvent : MonoBehaviour {
     }
 
     public void Start() {
-        CopyShaderValues();
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventEnabled, (object payload) => {
             bool enabled = (bool)payload;
             foreach (SpriteRenderer renderer in Renderers) {
@@ -84,8 +82,6 @@ public class CharaEvent : MonoBehaviour {
     }
 
     public void Update() {
-        CopyShaderValues();
-
         bool steppingThisFrame = IsSteppingThisFrame();
         stepping = steppingThisFrame || wasSteppingLastFrame;
         if (!steppingThisFrame && !wasSteppingLastFrame) {
@@ -131,15 +127,6 @@ public class CharaEvent : MonoBehaviour {
         Spritesheet = IndexDatabase.Instance().FieldSprites.GetData(fieldSpriteTag).spriteSheet;
     }
 
-    private void CopyShaderValues() {
-        foreach (SpriteRenderer renderer in Renderers) {
-            Material material = Application.isPlaying ? renderer.material : renderer.sharedMaterial;
-            if (material != null) {
-                material.SetFloat("_Desaturation", Desaturation);
-            } 
-        }
-    }
-
     public IEnumerator StepRoutine(OrthoDir dir) {
         Facing = dir;
         Vector2Int offset = Parent.OffsetForTiles(dir);
@@ -166,10 +153,8 @@ public class CharaEvent : MonoBehaviour {
     }
 
     private void LoadSpritesheetData() {
-        string path = DefaultMaterial2DPath;
-
         sprites = new Dictionary<string, Sprite>();
-        path = AssetDatabase.GetAssetPath(Spritesheet);
+        var path = AssetDatabase.GetAssetPath(Spritesheet);
         if (path.StartsWith("Assets/Resources/")) {
             path = path.Substring("Assets/Resources/".Length);
         }
