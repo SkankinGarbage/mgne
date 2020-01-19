@@ -6,10 +6,10 @@ using UnityEngine;
 [RequireComponent(typeof(CharaEvent))]
 public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
 
-    public bool wantsToTrack { get; private set; }
+    public bool WantsToTrack { get; private set; }
 
     private int pauseCount;
-    public bool inputPaused {
+    public bool InputPaused {
         get {
             return pauseCount > 0;
         }
@@ -42,11 +42,11 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
     }
 
     public virtual void Update() {
-        wantsToTrack = false;
+        WantsToTrack = false;
     }
 
     public bool OnCommand(InputManager.Command command, InputManager.Event eventType) {
-        if (Parent.Tracking || inputPaused) {
+        if (Parent.Tracking || InputPaused) {
             return true;
         }
         switch (eventType) {
@@ -104,6 +104,10 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
         pauseCount -= 1;
     }
 
+    public void SetHidden(bool hidden) {
+        Parent.SwitchEnabled = hidden;
+    }
+
     public void OnTeleport() {
         Chara.ResetAnimationTimer();
     }
@@ -112,7 +116,7 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
         Vector2Int target = Parent.Position + Chara.Facing.XY2D();
         List<MapEvent> targetEvents = Parent.Map.GetEventsAt(target);
         foreach (MapEvent tryTarget in targetEvents) {
-            if (tryTarget.switchEnabled && !tryTarget.IsPassableBy(Parent)) {
+            if (tryTarget.SwitchEnabled && !tryTarget.IsPassableBy(Parent)) {
                 tryTarget.GetComponent<Dispatch>().Signal(MapEvent.EventInteract, this);
                 return;
             }
@@ -121,7 +125,7 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
         target = Parent.Position;
         targetEvents = Parent.Map.GetEventsAt(target);
         foreach (MapEvent tryTarget in targetEvents) {
-            if (tryTarget.switchEnabled && tryTarget.IsPassableBy(Parent)) {
+            if (tryTarget.SwitchEnabled && tryTarget.IsPassableBy(Parent)) {
                 tryTarget.GetComponent<Dispatch>().Signal(MapEvent.EventInteract, this);
                 return;
             }
@@ -145,17 +149,17 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
         }
 
         if (passable) {
-            wantsToTrack = true;
+            WantsToTrack = true;
             StartCoroutine(CoUtils.RunWithCallback(Parent.StepRoutine(dir), () => {
                 foreach (MapEvent targetEvent in toCollide) {
-                    if (targetEvent.switchEnabled) {
+                    if (targetEvent.SwitchEnabled) {
                         targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventCollide, this);
                     }
                 }
             }));
         } else {
             foreach (MapEvent targetEvent in toCollide) {
-                if (targetEvent.switchEnabled && !targetEvent.IsPassableBy(Parent)) {
+                if (targetEvent.SwitchEnabled && !targetEvent.IsPassableBy(Parent)) {
                     targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventCollide, this);
                 }
             }

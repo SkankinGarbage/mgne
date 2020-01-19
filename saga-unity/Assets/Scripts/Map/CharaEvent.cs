@@ -162,7 +162,7 @@ public class CharaEvent : MonoBehaviour {
         Vector2 position = transform.position;
         Vector2 delta = position - lastPosition;
         return alwaysAnimates || (delta.sqrMagnitude > 0 && delta.sqrMagnitude < Map.PxPerTile) || Parent.Tracking ||
-            (GetComponent<AvatarEvent>() && GetComponent<AvatarEvent>().wantsToTrack);
+            (GetComponent<AvatarEvent>() && GetComponent<AvatarEvent>().WantsToTrack);
     }
 
     private void LoadSpritesheetData() {

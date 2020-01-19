@@ -106,7 +106,7 @@ public class LuaContext : MonoBehaviour {
         forceKilled = false;
         try {
             script.scriptRoutine.Resume();
-        } catch (Exception e) {
+        } catch (Exception) {
             Debug.Log("Exception during script: " + script + "\n context: " + this);
             throw;
         }
@@ -145,7 +145,7 @@ public class LuaContext : MonoBehaviour {
 
     // === LUA CALLABLE ============================================================================
 
-    private LuaMapEvent EventNamed(DynValue eventName) {
+    protected LuaMapEvent EventNamed(DynValue eventName) {
         MapEvent mapEvent = Global.Instance().Maps.activeMap.GetEventNamed(eventName.String);
         if (mapEvent == null) {
             return null;
@@ -154,28 +154,28 @@ public class LuaContext : MonoBehaviour {
         }
     }
 
-    private DynValue GetSwitch(DynValue switchName) {
+    protected DynValue GetSwitch(DynValue switchName) {
         bool value = Global.Instance().Memory.GetSwitch(switchName.String);
         return Marshal(value);
     }
 
-    private void SetSwitch(DynValue switchName, DynValue value) {
+    protected void SetSwitch(DynValue switchName, DynValue value) {
         Global.Instance().Memory.SetSwitch(switchName.String, value.Boolean);
     }
 
-    private void DebugLog(DynValue message) {
+    protected void DebugLog(DynValue message) {
         Debug.Log(message.CastToString());
     }
 
-    private void Wait(DynValue seconds) {
+    protected void Wait(DynValue seconds) {
         RunRoutineFromLua(CoUtils.Wait((float)seconds.Number));
     }
 
-    private void PlaySFX(DynValue sfxKey) {
+    protected void PlaySFX(DynValue sfxKey) {
         Global.Instance().Audio.PlaySFX(sfxKey.String);
     }
 
-    private void Play(DynValue filename) {
+    protected void Play(DynValue filename) {
         RunRoutineFromLua(RunRoutineFromFile(filename.String));
     }
 }

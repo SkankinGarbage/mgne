@@ -59,7 +59,7 @@ public abstract class MapEvent : MonoBehaviour {
         }
     }
     
-    public ObjectLayer layer {
+    public ObjectLayer Layer {
         get {
             GameObject parent = gameObject;
             while (parent.transform.parent != null) {
@@ -73,14 +73,14 @@ public abstract class MapEvent : MonoBehaviour {
         }
     }
 
-    private bool _switchEnabled = true;
-    public bool switchEnabled {
-        get { return _switchEnabled; }
+    private bool switchEnabled = true;
+    public bool SwitchEnabled {
+        get { return switchEnabled; }
         set {
-            if (value != _switchEnabled) {
+            if (value != switchEnabled) {
                 GetComponent<Dispatch>().Signal(EventEnabled, value);
             }
-            _switchEnabled = value;
+            switchEnabled = value;
         }
     }
 
@@ -163,7 +163,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public void CheckEnabled() {
-        switchEnabled = !LuaObject.EvaluateBool(PropertyLuaHide, false);
+        SwitchEnabled = !LuaObject.EvaluateBool(PropertyLuaHide, false);
     }
 
     public bool IsPassable() {
@@ -175,7 +175,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public bool IsPassableBy(MapEvent other) {
-        return IsPassable() || !switchEnabled;
+        return IsPassable() || !SwitchEnabled;
     }
 
     public OrthoDir DirectionTo(MapEvent other) {
@@ -183,7 +183,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public bool CanPassAt(Vector2Int loc) {
-        if (!GetComponent<MapEvent>().switchEnabled) {
+        if (!GetComponent<MapEvent>().SwitchEnabled) {
             return true;
         }
         if (loc.x < 0 || loc.x >= Map.width || loc.y < 0 || loc.y >= Map.height) {

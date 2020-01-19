@@ -47,6 +47,10 @@ public class LuaCutsceneContext : LuaContext {
     protected override void AssignGlobals() {
         base.AssignGlobals();
         lua.Globals["playBGM"] = (Action<DynValue>)PlayBGM;
+        lua.Globals["playSound"] = (Action<DynValue>)PlaySound;
+        lua.Globals["sceneSwitch"] = (Action<DynValue, DynValue>)SetSwitch;
+        lua.Globals["face"] = (Action<DynValue, DynValue>)Face;
+        lua.Globals["hideHero"] = (Action<DynValue>)PlayBGM;
         lua.Globals["cs_teleport"] = (Action<DynValue, DynValue, DynValue, DynValue, DynValue>)Teleport;
         lua.Globals["cs_targetTele"] = (Action<DynValue, DynValue, DynValue, DynValue>)TargetTeleport;
         lua.Globals["cs_fadeOutBGM"] = (Action<DynValue>)FadeOutBGM;
@@ -58,6 +62,10 @@ public class LuaCutsceneContext : LuaContext {
 
     private void PlayBGM(DynValue bgmKey) {
         Global.Instance().Audio.PlayBGM(bgmKey.String);
+    }
+
+    private void PlaySound(DynValue soundKey) {
+        Global.Instance().Audio.PlaySFX(soundKey.String);
     }
 
     private void Teleport(DynValue mapName, DynValue x, DynValue y, DynValue facingLua, DynValue rawLua) {
@@ -100,5 +108,18 @@ public class LuaCutsceneContext : LuaContext {
             var function = eventLua.Table.Get("walk");
             function.Function.Call(steps, directionLua, waitLua);
         }
+    }
+
+    private void Face(DynValue eventName, DynValue dir) {
+        var @event = Global.Instance().Maps.activeMap.GetEventNamed(eventName.String);
+        if (@event == null) {
+            Debug.LogError("Couldn't find event " + eventName.String);
+        } else {
+            @event.GetComponent<CharaEvent>().Facing = OrthoDirExtensions.Parse(dir.String);
+        }
+    }
+
+    private void HideHero(DynValue hidden) {
+        Global.Instance().Maps.avatar.SetHidden(hidden.Boolean);
     }
 }
