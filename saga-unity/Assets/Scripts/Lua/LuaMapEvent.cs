@@ -78,11 +78,16 @@ public class LuaMapEvent {
         Debug.Log("Debug: " + mapEvent.name);
     }
 
-    public void cs_pathTo(int x, int y) {
-        context.RunRoutineFromLua(mapEvent.PathToRoutine(new Vector2Int(x, y)));
+    public void cs_pathTo(int x, int y, bool wait = false) {
+        var routine = mapEvent.PathToRoutine(new Vector2Int(x, y));
+        if (wait) {
+            context.RunRoutineFromLua(routine);
+        } else {
+            mapEvent.StartCoroutine(routine);
+        }
     }
 
-    public void cs_walk(string directionName, int count) {
+    public void walk(string directionName, int count) {
        context.RunRoutineFromLua(mapEvent.GetComponent<MapEvent>().StepMultiRoutine(OrthoDirExtensions.Parse(directionName), count));
     }
 

@@ -71,7 +71,7 @@ public class LuaContext : MonoBehaviour {
         }
         Global.Instance().StartCoroutine(CoUtils.RunWithCallback(routine, () => {
             if (activeScripts.Count > 0 && !forceKilled) {
-                activeScripts.Peek().scriptRoutine.Resume();
+                ResumeAwaitedScript();
             }
         }));
     }
@@ -107,8 +107,8 @@ public class LuaContext : MonoBehaviour {
         try {
             script.scriptRoutine.Resume();
         } catch (Exception e) {
-            Debug.Log("Exception during script: " + script + "\n\nerror:\n" + e.Message);
-            throw e;
+            Debug.Log("Exception during script: " + script + "\n context: " + this);
+            throw;
         }
         while (script.scriptRoutine.State != CoroutineState.Dead && !forceKilled) {
             yield return null;
@@ -122,6 +122,10 @@ public class LuaContext : MonoBehaviour {
         }
         var asset = Resources.Load<LuaSerializedScript>("Lua/" + filename);
         yield return RunRoutine(asset.luaString);
+    }
+
+    protected void ResumeAwaitedScript() {
+        activeScripts.Peek().scriptRoutine.Resume();
     }
 
     protected virtual void AssignGlobals() {

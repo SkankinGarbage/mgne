@@ -72,9 +72,6 @@ public class CharaEvent : MonoBehaviour {
 
     public void Start() {
         CopyShaderValues();
-        GetComponent<Dispatch>().RegisterListener(MapEvent.EventMove, (object payload) => {
-            Facing = (OrthoDir)payload;
-        });
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventEnabled, (object payload) => {
             bool enabled = (bool)payload;
             foreach (SpriteRenderer renderer in Renderers) {
@@ -113,6 +110,10 @@ public class CharaEvent : MonoBehaviour {
 
     public void FaceToward(MapEvent other) {
         Facing = Parent.DirectionTo(other);
+    }
+
+    public void ResetAnimationTimer() {
+        moveTime = 0.0f;
     }
 
     public Sprite FrameBySlot(int x) {

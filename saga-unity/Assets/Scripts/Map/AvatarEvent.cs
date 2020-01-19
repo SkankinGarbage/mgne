@@ -104,6 +104,10 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
         pauseCount -= 1;
     }
 
+    public void OnTeleport() {
+        Chara.ResetAnimationTimer();
+    }
+
     private void Interact() {
         Vector2Int target = Parent.Position + Chara.Facing.XY2D();
         List<MapEvent> targetEvents = Parent.Map.GetEventsAt(target);

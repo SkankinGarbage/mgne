@@ -51,6 +51,7 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["cs_targetTele"] = (Action<DynValue, DynValue, DynValue, DynValue>)TargetTeleport;
         lua.Globals["cs_fadeOutBGM"] = (Action<DynValue>)FadeOutBGM;
         lua.Globals["cs_speak"] = (Action<DynValue, DynValue>)Speak;
+        lua.Globals["cs_walk"] = (Action<DynValue, DynValue, DynValue, DynValue>)Walk;
     }
 
     // === LUA CALLABLE ============================================================================
@@ -80,5 +81,24 @@ public class LuaCutsceneContext : LuaContext {
 
     private void Speak(DynValue speaker, DynValue text) {
         RunTextboxRoutineFromLua(MapOverlayUI.Instance().textbox.SpeakRoutine(speaker.String, text.IsNil() ? null : text.String));
+    }
+
+    private void Walk(DynValue eventLua, DynValue steps, DynValue directionLua, DynValue waitLua) {
+        if (eventLua.Type == DataType.String) {
+            var @event = Global.Instance().Maps.activeMap.GetEventNamed(eventLua.String);
+            if (@event == null) {
+                Debug.LogError("Couldn't find event " + eventLua.String);
+            } else {
+                var routine = @event.StepMultiRoutine(OrthoDirExtensions.Parse(directionLua.String), (int)steps.Number);
+                if (!waitLua.IsNil() && waitLua.Boolean) {
+                    RunRoutineFromLua(routine);
+                } else {
+                    @event.StartCoroutine(routine);
+                }
+            }
+        } else {
+            var function = eventLua.Table.Get("walk");
+            function.Function.Call(steps, directionLua, waitLua);
+        }
     }
 }

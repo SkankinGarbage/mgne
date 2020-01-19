@@ -14,8 +14,7 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(SuperCustomProperties))]
 [DisallowMultipleComponent]
 public abstract class MapEvent : MonoBehaviour {
-
-    public const string EventMove = "move";
+    
     public const string EventInteract = "interact";
     public const string EventCollide = "collide";
     public const string EventEnabled = "enabled";
@@ -215,17 +214,6 @@ public abstract class MapEvent : MonoBehaviour {
         }
     }
 
-    public IEnumerator PathToRoutine(Vector2Int location) {
-        List<Vector2Int> path = Map.FindPath(this, location);
-        if (path == null) {
-            yield break;
-        }
-        foreach (Vector2Int target in path) {
-            OrthoDir dir = DirectionTo(target);
-            yield return StartCoroutine(StepRoutine(dir));
-        }
-    }
-
     public bool ContainsPosition(Vector2Int loc) {
         Vector2Int pos1 = Position;
         Vector2Int pos2 = Position + Size;
@@ -309,5 +297,16 @@ public abstract class MapEvent : MonoBehaviour {
         yield return CoUtils.RunTween(tween);
         transform.position = TargetPositionPx;
         Tracking = false;
+    }
+
+    public IEnumerator PathToRoutine(Vector2Int location) {
+        List<Vector2Int> path = Map.FindPath(this, location);
+        if (path == null) {
+            yield break;
+        }
+        foreach (Vector2Int target in path) {
+            OrthoDir dir = DirectionTo(target);
+            yield return StartCoroutine(StepRoutine(dir));
+        }
     }
 }

@@ -97,6 +97,7 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
         activeMap = map;
         activeMap.OnTeleportTo();
         avatar.GetComponent<MapEvent>().SetPosition(location);
+        avatar.OnTeleport();
         if (facing != null) {
             avatar.Chara.Facing = facing.GetValueOrDefault(OrthoDir.North);
         }
