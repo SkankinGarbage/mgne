@@ -51,7 +51,7 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
         avatar.PauseInput();
         TransitionData data = Global.Instance().Database.Transitions.GetData(DefaultTransitionTag);
         if (!isRaw) {
-            yield return camera.GetComponent<FadeImageEffect>().TransitionRoutine(data, () => {
+            yield return camera.GetComponent<FadeComponent>().TransitionRoutine(data, () => {
                 RawTeleport(mapName, location, facing);
             });
         } else {
@@ -64,7 +64,7 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
         avatar.PauseInput();
         TransitionData data = Global.Instance().Database.Transitions.GetData(DefaultTransitionTag);
         if (!isRaw) {
-            yield return camera.GetComponent<FadeImageEffect>().TransitionRoutine(data, () => {
+            yield return camera.GetComponent<FadeComponent>().TransitionRoutine(data, () => {
                 RawTeleport(mapName, targetEventName, facing);
             });
         } else {

@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class FadeImageEffect : MonoBehaviour {
+public class FadeImageEffect : FadeComponent {
 
     public Shader shader;
 
@@ -42,13 +42,7 @@ public class FadeImageEffect : MonoBehaviour {
         }
     }
 
-    public IEnumerator TransitionRoutine(TransitionData transition, Action intermediate = null) {
-        yield return StartCoroutine(FadeRoutine(transition.GetFadeOut()));
-        intermediate?.Invoke();
-        yield return StartCoroutine(FadeRoutine(transition.GetFadeIn(), true));
-    }
-
-    public IEnumerator FadeRoutine(FadeData fade, bool invert = false, float timeMult = 1.0f) {
+    public override IEnumerator FadeRoutine(FadeData fade, bool invert = false, float timeMult = 1.0f) {
         currentFade = fade;
         reverse = invert;
         elapsedSeconds = 0.0f;

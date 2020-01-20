@@ -11,6 +11,8 @@
         _DGrayOut("Dark Gray out", Color) = (.226,.226,.226,1)
         _LGrayOut("Light Gray out", Color) = (.668,.668,.668,1)
         _WhiteOut("White out", Color) = (1,1,1,1)
+        _FadeOffset("Fade offset", Range(0,1)) = 0.0
+		_Invert ("Fade Invert", Range(0, 1)) = 0.0
 	}
 	SubShader
 	{
@@ -57,6 +59,7 @@
 			}
 			
 			sampler2D _MainTex;
+            sampler2D _MaskTexture;
             fixed4 _Black;
             fixed4 _DGray;
             fixed4 _LGray;
@@ -65,6 +68,11 @@
             fixed4 _DGrayOut;
             fixed4 _LGrayOut;
             fixed4 _WhiteOut;
+			float _FadeOffset;
+			float _SoftFudge;
+			int _Invert;
+			int _FlipX;
+			int _FlipY;
 
             float color_d(fixed4 c1, fixed4 c2) {
                 return abs(c1[0] - c2[0]) + abs(c1[1] - c2[1]) + abs(c1[2] - c2[2]);
@@ -74,23 +82,46 @@
 			{
 				fixed4 current = tex2D(_MainTex, i.uv);
                 current.rgb *= current.a;
+                
+				float weight = _FadeOffset;
+                if (_Invert) weight = 1.0 - weight;
 
                 float dBlack = color_d(current, _Black);
                 float dDgray = color_d(current, _DGray);
                 float dLgray = color_d(current, _LGray);
                 float dWhite = color_d(current, _White);
                 
+                int darkness = 0;
                 if (current.a > 0.0) {
                     if (dBlack <= dDgray && dBlack <= dLgray && dBlack <= dWhite) {
-                        return _BlackOut;
+                        darkness = 0;
                     }
                     if (dDgray <= dBlack && dDgray <= dLgray && dDgray <= dWhite) {
-                        return _DGrayOut;
+                        darkness = 1;
                     }
                     if (dLgray <= dBlack && dLgray <= dDgray && dLgray <= dWhite) {
-                        return _LGrayOut;
+                        darkness = 2;
                     }
                     if (dWhite <= dBlack && dWhite <= dDgray && dWhite <= dLgray) {
+                        darkness = 3;
+                    }
+                    
+                    if (weight > 0.25) darkness -= 1;
+                    if (weight > 0.50) darkness -= 1;
+                    if (weight > 0.75) darkness -= 1;
+                    if (darkness < 0) darkness = 0;
+                    if (darkness > 3) darkness = 3;
+                    
+                    if (darkness == 0) {
+                        return _BlackOut;
+                    }
+                    if (darkness == 1) {
+                        return _DGrayOut;
+                    }
+                    if (darkness == 2) {
+                        return _LGrayOut;
+                    }
+                    if (darkness == 3) {
                         return _WhiteOut;
                     }
                 }

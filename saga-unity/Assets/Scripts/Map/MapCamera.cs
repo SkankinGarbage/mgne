@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(FadeImageEffect))]
+[RequireComponent(typeof(FadeComponent))]
 public class MapCamera : MonoBehaviour {
     
     public MapEvent target;
