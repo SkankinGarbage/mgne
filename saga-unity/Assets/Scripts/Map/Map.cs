@@ -8,10 +8,10 @@ using UnityEngine.Tilemaps;
  */
 public abstract class Map : MonoBehaviour {
 
-    /// <summary>The number of unity units a tile takes up</summary>
+    /// <summary>The number of pixels a tile takes up</summary>
     public const int PxPerTile = 16;
     /// <summary>The number of pixels that make up a tile</summary>
-    public const float UnitsPerTile = 0.16f;
+    public const float UnitsPerTile = 1;
 
     public const string ResourcePath = "Maps/";
     

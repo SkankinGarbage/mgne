@@ -9,28 +9,14 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
   missingFiles: []
-  errors:
-  - "Custom importer 'MyTmxImporter' threw an exception. Message = 'There is no 'SpriteRenderer'
-    attached to the \"Doll\" game object, but a script is trying to access it.\nYou
-    probably need to add a SpriteRenderer to the game object \"Doll\". Or your script
-    needs to check if the component is attached before using it.', Stack:\n  at (wrapper
-    managed-to-native) UnityEngine.SpriteRenderer.set_sprite(UnityEngine.SpriteRenderer,UnityEngine.Sprite)\r\n
-    \ at CharaEvent.UpdateAppearance () [0x00038] in C:\\Users\\aking_2\\saga\\saga-unity\\Assets\\Scripts\\Map\\CharaEvent.cs:111
-    \r\n  at CharaEvent.set_Spritesheet (UnityEngine.Texture2D value) [0x0000f] in
-    C:\\Users\\aking_2\\saga\\saga-unity\\Assets\\Scripts\\Map\\CharaEvent.cs:44 \r\n
-    \ at CharaEvent.SetAppearanceByTag (System.String fieldSpriteTag) [0x00001] in
-    C:\\Users\\aking_2\\saga\\saga-unity\\Assets\\Scripts\\Map\\CharaEvent.cs:131
-    \r\n  at MyTmxImporter.TmxAssetImported (SuperTiled2Unity.Editor.TmxAssetImportedArgs
-    args) [0x001d4] in C:\\Users\\aking_2\\saga\\saga-unity\\Assets\\Editor\\Importers\\TmxImporter.cs:51
-    \r\n  at SuperTiled2Unity.Editor.TmxAssetImporter.RunCustomImporterType (System.Type
-    type) [0x00050] in C:\\Users\\aking_2\\saga\\saga-unity\\Assets\\SuperTiled2Unity\\Scripts\\Editor\\Importers\\TmxAssetImporter.cs:456 "
+  errors: []
   warnings:
   - Tileset 'welp' is an embedded tileset. Exported tilesets are preferred.
   missingSortingLayers: []
   missingLayers: []
   missingTags: []
   importerVersion: 21
-  pixelsPerUnit: 100
+  pixelsPerUnit: 16
   edgesPerEllipse: 32
   numberOfObjectsImported: 16
   tilesAsObjects: 0
@@ -38,4 +24,4 @@ ScriptedImporter:
   isIsometric: 0
   customImporterClassName: 
   internalTilesets:
-  - {instanceID: 0}
+  - {fileID: 4764264298581427369, guid: c2abee90a6de8404c9f32d65636a61b7, type: 3}
