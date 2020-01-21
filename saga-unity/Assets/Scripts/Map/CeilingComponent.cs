@@ -13,6 +13,9 @@ public class CeilingComponent : MonoBehaviour {
     private const string PropertyTileId = "roofID";
     private const string PropertyTileset = "roofTileset";
     private const string TilesetDirectory = "Assets/Resources/Maps/tilesets";
+
+    private const int StepMax = 10;
+    private const float Duration = 0.8f;
     
     [SerializeField] [HideInInspector] private Vector2[] uvs;
     [SerializeField] private int tileId = 0;
@@ -24,6 +27,10 @@ public class CeilingComponent : MonoBehaviour {
     [SerializeField] [HideInInspector] private MapEvent @event = null;
 
     private MaterialPropertyBlock propBlock;
+
+    private bool isWithin;
+
+    private int trisOffset, vertsOffset, uvsOffset, normsOffset;
 
 
     public void Reconfigure(MapEvent parent, TmxAssetImporter importer) {
@@ -53,17 +60,51 @@ public class CeilingComponent : MonoBehaviour {
         RecalculateBounds(importer);
     }
 
-    public void Awake() {
+    public void Start() {
         propBlock = new MaterialPropertyBlock();
         renderer.GetPropertyBlock(propBlock);
         propBlock.SetTexture("_MainTex", tilesetTexture);
+
+        transform.parent.GetComponent<Dispatch>().RegisterListener(MapEvent.EventStep, CheckStep);
     }
 
     public void Update() {
         renderer.SetPropertyBlock(propBlock);
     }
 
+    public void OnEnable() {
+        if (Global.Instance().Maps.avatar != null) {
+            isWithin = IsHeroWithin();
+        }
+        if (isWithin) {
+            BuildInverted();
+        } else {
+            BuildStandard();
+        }
+    }
+
+    public void OnValidate() {
+        renderer.sortingLayerName = "Default";
+        renderer.sortingOrder = 2;
+    }
+
+    public void CheckStep(object payload) {
+        if (!isWithin && IsHeroWithin()) {
+            StartCoroutine(EnterRoutine());
+        } else if (isWithin && !IsHeroWithin()) {
+            StartCoroutine(ExitRoutine());
+        }
+        isWithin = IsHeroWithin();
+    }
+
+    public bool IsHeroWithin() {
+        return ContainsTile(Global.Instance().Maps.avatar.Parent.Position);
+    }
+
     public void RecalculateBounds(TmxAssetImporter importer = null) {
+        RecalculateBounds(ContainsTile, importer);
+    }
+    public void RecalculateBounds(Func<Vector2Int, bool> rule, TmxAssetImporter importer = null) {
         var bounds = collider.bounds;
         var size = new Vector2Int(  Mathf.CeilToInt(bounds.size.x), 
                                     Mathf.CeilToInt(bounds.size.y)  );
@@ -86,63 +127,82 @@ public class CeilingComponent : MonoBehaviour {
         }
 
         mesh.Clear();
-        var verts = new Vector3[0];
-        var tris = new int[0];
-        var norms = new Vector3[0];
-        var uvs = new Vector2[0];
-        for (int x = 0; x <= size.x; x += 1) {
-            for (int y = 0; y <= size.y; y +=1) {
+        var verts = new Vector3[21 * 21 * size.x * size.y * 4];
+        var tris = new int[21 * 21 * size.x * size.y * 6];
+        var norms = new Vector3[21 * 21 * size.x * size.y * 4];
+        var uvs = new Vector2[21 * 21 * size.x * size.y * 4];
+        trisOffset = 0;
+        vertsOffset = 0;
+        normsOffset = 0;
+        uvsOffset = 0;
+        for (int x = -StepMax; x <= size.x + StepMax; x += 1) {
+            for (int y = -StepMax; y <= size.y + StepMax; y +=1) {
                 var tile = new Vector2Int(x + @event.Position.x, y + @event.Position.y);
-                if (ContainsTile(tile)) {
+                if (rule(tile)) {
                     AddTileQuadToMesh(tile, ref verts, ref tris, ref norms, ref uvs);
                 }
             }
         }
-        mesh.vertices = verts;
-        mesh.triangles = tris;
-        mesh.normals = norms;
-        mesh.uv = uvs;
+        var newVerts = new Vector3[vertsOffset];
+        var newTris = new int[trisOffset];
+        var newNorms = new Vector3[normsOffset];
+        var newUvs = new Vector2[uvsOffset];
+        Array.Copy(verts, newVerts, vertsOffset);
+        Array.Copy(tris, newTris, trisOffset);
+        Array.Copy(norms, newNorms, normsOffset);
+        Array.Copy(uvs, newUvs, uvsOffset);
+        mesh.vertices = newVerts;
+        mesh.triangles = newTris;
+        mesh.normals = newNorms;
+        mesh.uv = newUvs;
     }
 
     private bool ContainsTile(Vector2Int tile) {
-        Vector2 center = new Vector2(   (tile.x + 0.5f) * OrthoDir.East.XY2D().x, 
-                                        (tile.y + 0.5f) * OrthoDir.North.XY2D().y     );
+        Vector2 center = new Vector2(   (tile.x + 0.5f) * 1, 
+                                        (tile.y + 0.5f) * -1     );
         return collider.OverlapPoint(center);
     }
-
+    
     private void AddTileQuadToMesh(Vector2Int tile, ref Vector3[] verts, ref int[] tris, ref Vector3[] norms, ref Vector2[] uvs) {
+        
+        // optimized for -1 being the orthodir north
 
-        var vertOffset = verts.Length;
-        Array.Resize(ref verts, vertOffset + 4);
         var z = transform.position.z;
         var pos = tile - @event.Position;
-        verts[vertOffset + 0] = new Vector3(pos.x * Map.UnitsPerTile * OrthoDir.East.Px2DX(), pos.y * Map.UnitsPerTile * OrthoDir.North.Px2DY(), z);
-        verts[vertOffset + 1] = new Vector3((pos.x + 1) * Map.UnitsPerTile * OrthoDir.East.Px2DX(), pos.y * Map.UnitsPerTile * OrthoDir.North.Px2DY(), z);
-        verts[vertOffset + 2] = new Vector3(pos.x * Map.UnitsPerTile * OrthoDir.East.Px2DX(), (pos.y + 1) * Map.UnitsPerTile * OrthoDir.North.Px2DY(), z);
-        verts[vertOffset + 3] = new Vector3((pos.x + 1) * Map.UnitsPerTile * OrthoDir.East.Px2DX(), (pos.y + 1) * Map.UnitsPerTile * OrthoDir.North.Px2DY(), z);
-
-        var trisOffset = tris.Length;
-        Array.Resize(ref tris, trisOffset + 6);
-        tris[trisOffset + 0] = vertOffset + 0;
-        tris[trisOffset + 1] = vertOffset + 2;
-        tris[trisOffset + 2] = vertOffset + 1;
-        tris[trisOffset + 3] = vertOffset + 2;
-        tris[trisOffset + 4] = vertOffset + 3;
-        tris[trisOffset + 5] = vertOffset + 1;
-
-        var normsOffset = norms.Length;
-        Array.Resize(ref norms, normsOffset + 4);
+        verts[vertsOffset + 0].x = pos.x * Map.UnitsPerTile * 1;
+        verts[vertsOffset + 0].y = pos.y * Map.UnitsPerTile * -1;
+        verts[vertsOffset + 0].z = z;
+        verts[vertsOffset + 1].x = (pos.x + 1) * Map.UnitsPerTile * 1;
+        verts[vertsOffset + 1].y = pos.y * Map.UnitsPerTile * -1;
+        verts[vertsOffset + 1].z = z;
+        verts[vertsOffset + 2].x = pos.x * Map.UnitsPerTile * 1;
+        verts[vertsOffset + 2].y = (pos.y + 1) * Map.UnitsPerTile * -1;
+        verts[vertsOffset + 2].z = z;
+        verts[vertsOffset + 3].x = (pos.x + 1) * Map.UnitsPerTile * 1;
+        verts[vertsOffset + 3].y = (pos.y + 1) * Map.UnitsPerTile * -1;
+        verts[vertsOffset + 3].z = z;
+        
+        tris[trisOffset + 0] = vertsOffset + 0;
+        tris[trisOffset + 1] = vertsOffset + 2;
+        tris[trisOffset + 2] = vertsOffset + 1;
+        tris[trisOffset + 3] = vertsOffset + 2;
+        tris[trisOffset + 4] = vertsOffset + 3;
+        tris[trisOffset + 5] = vertsOffset + 1;
+        
         norms[normsOffset + 0] = -Vector3.forward;
         norms[normsOffset + 1] = -Vector3.forward;
         norms[normsOffset + 2] = -Vector3.forward;
         norms[normsOffset + 3] = -Vector3.forward;
-
-        var uvsOffset = uvs.Length;
-        Array.Resize(ref uvs, uvsOffset + 4);
+        
         uvs[uvsOffset + 0] = this.uvs[0];
         uvs[uvsOffset + 1] = this.uvs[1];
         uvs[uvsOffset + 2] = this.uvs[2];
         uvs[uvsOffset + 3] = this.uvs[3];
+
+        vertsOffset += 4;
+        trisOffset += 6;
+        normsOffset += 4;
+        uvsOffset += 4;
     }
 
     private void RecalculateUVs() {
@@ -153,9 +213,59 @@ public class CeilingComponent : MonoBehaviour {
 
         var @base = new Vector2(row / rowCount, col / colCount);
         uvs = new Vector2[4];
-        uvs[0] = new Vector2(@base.x, @base.y);
-        uvs[1] = new Vector2(@base.x + (float)Map.PxPerTile / tilesetTexture.width, @base.y);
-        uvs[2] = new Vector2(@base.x, @base.y + (float)Map.PxPerTile / tilesetTexture.height);
-        uvs[3] = new Vector2(@base.x + (float)Map.PxPerTile / tilesetTexture.width, @base.y + (float)Map.PxPerTile / tilesetTexture.height);
+        uvs[0] = new Vector2(@base.x, @base.y + (float)Map.PxPerTile / tilesetTexture.height);
+        uvs[1] = new Vector2(@base.x + (float)Map.PxPerTile / tilesetTexture.width, @base.y + (float)Map.PxPerTile / tilesetTexture.height);
+        uvs[2] = new Vector2(@base.x, @base.y);
+        uvs[3] = new Vector2(@base.x + (float)Map.PxPerTile / tilesetTexture.width, @base.y);
+    }
+
+    private void BuildStandard() {
+        RecalculateBounds(ContainsTile);
+    }
+
+    private void BuildInverted() {
+        RecalculateBounds(tile => {
+            return !ContainsTile(tile);
+        });
+    }
+
+    private void BuildByRange(Vector2Int at, float reach) {
+        RecalculateBounds(tile => {
+            var delta = (at - tile);
+            if (Math.Abs(delta.x) > Math.Abs(reach) || Math.Abs(delta.y) > Math.Abs(reach)) {
+                return ContainsTile(tile) ^ reach > 0;
+            }
+            return ContainsTile(tile) ^ reach < 0;
+        });
+    }
+
+    private IEnumerator EnterRoutine() {
+        yield return ScaleToRoutine(true);
+    }
+
+    private IEnumerator ExitRoutine() {
+        yield return ScaleToRoutine(false);
+    }
+
+    private IEnumerator ScaleToRoutine(bool invert) {
+        Global.Instance().Maps.avatar.PauseInput();
+        float elapsed = 0;
+        int atStep = 0;
+        while (elapsed < Duration) {
+            int newStep = Mathf.FloorToInt(elapsed / Duration * StepMax);
+            if (invert) newStep *= -1;
+            if (newStep != atStep) {
+                atStep = newStep;
+                BuildByRange(Global.Instance().Maps.avatar.Parent.Position, atStep);
+            }
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        if (invert) {
+            BuildInverted();
+        } else {
+            BuildStandard();
+        }
+        Global.Instance().Maps.avatar.UnpauseInput();
     }
 }

@@ -69,6 +69,7 @@ public class MyTmxImporter : CustomTmxImporter {
                     CeilingComponent ceil = mapEvent.GetComponentInChildren<CeilingComponent>();
                     if (ceil == null) {
                         var ceilingObject = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(CeilingPrefabPath));
+                        ceilingObject.layer = LayerMask.NameToLayer("Ceiling");
                         ceil = ceilingObject.GetComponent<CeilingComponent>();
                         ceilingObject.transform.SetParent(mapEvent.transform);
                         ceilingObject.transform.localPosition = new Vector3(0, 0, -1);

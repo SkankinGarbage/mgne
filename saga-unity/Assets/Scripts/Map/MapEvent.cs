@@ -18,6 +18,7 @@ public abstract class MapEvent : MonoBehaviour {
     public const string EventInteract = "interact";
     public const string EventCollide = "collide";
     public const string EventEnabled = "enabled";
+    public const string EventStep = "step";
     
     public const string PropertyLuaHide = "hide";
     public const string PropertyAppearance = "appearance";

@@ -98,6 +98,7 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
 
     public void PauseInput() {
         pauseCount += 1;
+        WantsToTrack = false;
     }
 
     public void UnpauseInput() {
@@ -151,14 +152,19 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
         if (passable) {
             WantsToTrack = true;
             StartCoroutine(CoUtils.RunWithCallback(Parent.StepRoutine(dir), () => {
-                foreach (MapEvent targetEvent in toCollide) {
+                foreach (var targetEvent in toCollide) {
                     if (targetEvent.SwitchEnabled) {
                         targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventCollide, this);
                     }
                 }
+                foreach (var targetEvent in Parent.Map.GetEvents<MapEvent>()) {
+                    if (targetEvent.SwitchEnabled) {
+                        targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventStep, this);
+                    }
+                }
             }));
         } else {
-            foreach (MapEvent targetEvent in toCollide) {
+            foreach (var targetEvent in toCollide) {
                 if (targetEvent.SwitchEnabled && !targetEvent.IsPassableBy(Parent)) {
                     targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventCollide, this);
                 }
