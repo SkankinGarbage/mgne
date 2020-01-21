@@ -8,7 +8,10 @@ using UnityEngine.Tilemaps;
 [AutoCustomTmxImporter]
 public class MyTmxImporter : CustomTmxImporter {
 
-    private string dollPrefabPath = "Assets/Resources/Prefabs/Doll.prefab";
+    private const string DollPrefabPath = "Assets/Resources/Prefabs/Doll.prefab";
+    private const string CeilingPrefabPath = "Assets/Resources/Prefabs/Ceiling.prefab";
+
+    private const string TypeCeiling = "Ceiling";
 
     public override void TmxAssetImported(TmxAssetImportedArgs args) {
         var materials = GameboyMaterialSettings.GetDefault();
@@ -39,7 +42,7 @@ public class MyTmxImporter : CustomTmxImporter {
                     Doll doll;
                     if (mapEvent.GetComponent<CharaEvent>() == null) {
                         chara = mapEvent.gameObject.AddComponent<CharaEvent>();
-                        var dollObject = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(dollPrefabPath));
+                        var dollObject = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(DollPrefabPath));
                         doll = dollObject.GetComponent<Doll>();
                         doll.Renderer.material = materials.ForegroundMaterial;
                         doll.transform.SetParent(mapEvent.transform);
@@ -60,6 +63,17 @@ public class MyTmxImporter : CustomTmxImporter {
                         // it's a literal
                         chara.SetAppearanceByTag(appearance);
                     }
+                }
+
+                if (tmxObject.m_Type == TypeCeiling) {
+                    CeilingComponent ceil = mapEvent.GetComponentInChildren<CeilingComponent>();
+                    if (ceil == null) {
+                        var ceilingObject = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(CeilingPrefabPath));
+                        ceil = ceilingObject.GetComponent<CeilingComponent>();
+                        ceilingObject.transform.SetParent(mapEvent.transform);
+                        ceilingObject.transform.localPosition = new Vector3(0, 0, -1);
+                    }
+                    ceil.Reconfigure(mapEvent, args.AssetImporter);
                 }
             }
         }

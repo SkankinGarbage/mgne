@@ -6,6 +6,8 @@ using UnityEngine.Tilemaps;
 
 public class FadeMaterialComponent : FadeComponent {
 
+    [SerializeField] private List<SpriteRenderer> renderersToFade = null;
+
     private List<Material> materialsToFade;
 
     public override IEnumerator FadeRoutine(FadeData fade, bool invert = false, float timeMult = 1) {
@@ -17,6 +19,9 @@ public class FadeMaterialComponent : FadeComponent {
         };
         foreach (var layer in Global.Instance().Maps.activeMap.layers) {
             materialsToFade.Add(layer.GetComponent<TilemapRenderer>()?.sharedMaterial);
+        }
+        foreach (var renderer in renderersToFade) {
+            materialsToFade.Add(renderer.sharedMaterial);
         }
 
         while (elapsed < transitionDuration) {
