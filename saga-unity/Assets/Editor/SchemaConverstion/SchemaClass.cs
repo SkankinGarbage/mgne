@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-/// <summary>
-/// Deserialized from JSON from the original MGNE
-/// </summary>
-public class SchemaClass {
+namespace Mgne1 {
 
-    public string name;
-    public bool excludeFromTree = false;
-    public string path = "";
+    /// <summary>
+    /// Deserialized from JSON from the original MGNE
+    /// </summary>
+    public class SchemaClass {
 
-    public SchemaField[] fields;
+        public string name;
+        public bool excludeFromTree = false;
+        public string path = "";
 
+        public SchemaField[] fields;
+
+    }
 }
+

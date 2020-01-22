@@ -3,6 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
+/// <summary>
+/// Bloated textbox ripped almost directly from Snowbound VN
+/// </summary>
 public class Textbox : MonoBehaviour, InputListener {
 
     private static readonly string SystemSpeaker = "SYSTEM";

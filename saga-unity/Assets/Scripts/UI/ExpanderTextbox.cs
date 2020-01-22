@@ -2,6 +2,9 @@
 using System.Collections;
 using DG.Tweening;
 
+/// <summary>
+/// Textbox. That expands from the center.
+/// </summary>
 public class ExpanderTextbox : Textbox {
 
     [SerializeField] private int StepSize = 16;

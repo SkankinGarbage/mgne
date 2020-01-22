@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="RecruitSelection", menuName="Data/Rpg")]
 public class RecruitSelectionData : MainSchema {
 

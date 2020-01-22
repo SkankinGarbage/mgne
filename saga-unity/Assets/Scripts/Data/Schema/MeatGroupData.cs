@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="MeatGroup", menuName="Data/Rpg")]
 public class MeatGroupData : MainSchema {
 

@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="Shop", menuName="Data/Rpg")]
 public class ShopData : MainSchema {
 

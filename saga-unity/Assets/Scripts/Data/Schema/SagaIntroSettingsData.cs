@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="SagaIntroSettings", menuName="Data/Settings")]
 public class SagaIntroSettingsData : MainSchema {
 

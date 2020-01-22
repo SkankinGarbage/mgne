@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
+/// <summary>
+/// Magic bullshit for java-style enums
+/// </summary>
 public static class EnumExtensions {
 
     public static TAttribute GetAttribute<TAttribute>(this Enum value) where TAttribute : Attribute {

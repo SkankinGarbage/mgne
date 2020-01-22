@@ -5,6 +5,9 @@ using System;
 using DG.Tweening;
 using UnityEngine.UI;
 
+/// <summary>
+/// Generic list controller. Needs testing.
+/// </summary>
 public class ListSelector : MonoBehaviour {
 
     private float HideShowDuration = 0.4f;

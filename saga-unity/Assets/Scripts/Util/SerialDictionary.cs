@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 
+/// <summary>
+/// Unity can't serialize normal dictionaries for arcane reasons
+/// </summary>
 [System.Serializable]
 public class SerialDictionary<K, V> {
 

@@ -4,6 +4,9 @@ using System.Collections;
 /// <summary>
 /// A wrapper class to get results out of coroutines
 /// </summary>
+/// <remarks>
+/// Somewhere along the way this should be replaced with tasks
+/// </remarks>
 /// <typeparam name="T">The expted result type from a coroutine</typeparam>
 public class Result<T> {
 

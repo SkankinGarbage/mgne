@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="ItemMixSet", menuName="Data/Rpg")]
 public class ItemMixSetData : MainSchema {
 

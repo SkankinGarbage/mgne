@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="EffectHeal", menuName="Data")]
 public class EffectHealData : EffectAllyTargetData {
 

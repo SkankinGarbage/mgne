@@ -3,7 +3,9 @@ using System.Collections;
 using UnityEngine;
 using Coroutine = MoonSharp.Interpreter.Coroutine;
 
-// represents an runnable piece of Lua, usually from an event field
+/// <summary>
+/// represents an runnable piece of Lua, usually from an event field
+/// </summary>
 public class LuaScript {
     
     protected LuaContext context;

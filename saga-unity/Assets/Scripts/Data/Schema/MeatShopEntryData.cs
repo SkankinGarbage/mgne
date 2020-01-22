@@ -1,3 +1,5 @@
+using Mgne1;
+
 [System.Serializable]
 public class MeatShopEntryData {
 

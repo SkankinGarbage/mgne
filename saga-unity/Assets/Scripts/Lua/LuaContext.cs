@@ -7,10 +7,9 @@ using UnityEngine.Assertions;
 using System.IO;
 using System.Collections.Generic;
 
-/**
- * A wrapper around Script that represents an environment where a script can execute. Only one
- * script can execute within a given context at a time.
- */
+/// <summary>
+///  A wrapper around Script that represents an environment where a script can execute.
+/// </summary>
 public class LuaContext : MonoBehaviour {
     
     private const string DefinesPath = "Lua/Defines/GlobalDefines";

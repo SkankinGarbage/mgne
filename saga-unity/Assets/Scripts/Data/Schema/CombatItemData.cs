@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="CombatItem", menuName="Data/Rpg")]
 public class CombatItemData : MainSchema {
 

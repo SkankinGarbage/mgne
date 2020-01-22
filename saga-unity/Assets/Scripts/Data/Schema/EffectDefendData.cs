@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="EffectDefend", menuName="Data")]
 public class EffectDefendData : EffectAllyTargetData {
 

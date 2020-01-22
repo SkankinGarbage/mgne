@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Mirrors whatever's in a spriterenderer onto an image
+/// </summary>
+/// <remarks>
+/// why does this exist?
+/// </remarks>
 [RequireComponent(typeof(Image))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class UISprite : MonoBehaviour {

@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="EffectStatus", menuName="Data")]
 public class EffectStatusData : EffectEnemyTargetData {
 

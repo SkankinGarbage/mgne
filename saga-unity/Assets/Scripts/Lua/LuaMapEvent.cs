@@ -2,6 +2,9 @@
 using System;
 using UnityEngine;
 
+/// <summary>
+/// All MapEvents own a lua equivalent that has functions stored on it
+/// </summary>
 [MoonSharpUserData]
 public class LuaMapEvent {
 

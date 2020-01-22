@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="BattleAnimSeries", menuName="Data/Graphics")]
 public class BattleAnimSeriesData : BattleAnimData {
 

@@ -2,12 +2,14 @@
 using UnityEngine;
 using System;
 
-/**
- * Listener system for quick messaging within the same game object (or not).
- * Heavily inspired by iOS GSD, provide event name and callback, and then at later date
- * that callback can be triggered by passing the event name. Make sure to unsubscribe
- * when the object is destroyed.
- */
+/// <summary>
+/// Listener system for quick messaging within the same game object (or not).
+/// </summary>
+/// <remarks>
+///  Heavily inspired by iOS GSD, provide event name and callback, and then at later date
+///  that callback can be triggered by passing the event name. Make sure to unsubscribe
+//   when the object is destroyed.
+/// </remarks>
 [HideInInspector]
 [DisallowMultipleComponent]
 public class Dispatch : MonoBehaviour {

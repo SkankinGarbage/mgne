@@ -32,8 +32,7 @@ public class AudioManager : MonoBehaviour, MemoryPopulater {
         
         sfxVolumeSetting = Global.Instance().Settings.GetFloatSetting(SettingsConstants.SoundEffectVolume);
         bgmVolumeSetting = Global.Instance().Settings.GetFloatSetting(SettingsConstants.BGMVolume);
-
-        gameObject.AddComponent<WaveSource>();
+        
         gameObject.AddComponent<AudioListener>();
     }
 
@@ -66,10 +65,6 @@ public class AudioManager : MonoBehaviour, MemoryPopulater {
 
     public AudioClip BGMClip() {
         return bgmSource.clip;
-    }
-
-    public WaveSource GetWaveSource() {
-        return GetComponent<WaveSource>();
     }
 
     public IEnumerator FadeOutRoutine(float durationSeconds) {

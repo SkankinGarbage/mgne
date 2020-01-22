@@ -1,3 +1,5 @@
+using Mgne1;
+
 [UnityEngine.CreateAssetMenu(fileName="Chara", menuName="Data/Rpg")]
 public class CharaData : MainSchema {
 

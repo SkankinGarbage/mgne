@@ -7,5 +7,4 @@ public class ObjectLayer : MonoBehaviour {
             return GetComponentInParent<Map>();
         }
     }
-
 }
