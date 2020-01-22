@@ -2,7 +2,7 @@
 
 The totally not trademark-infringing etc etc
 
-## Git setup instructions (Windows)
+## Git setup instructions for non-technical people (Windows)
 
 For the life of me I can't find where I typed all this up before so here it is again
 
@@ -14,6 +14,8 @@ For the life of me I can't find where I typed all this up before so here it is a
 
 4. Cool you have read access now! Whenever you want, rclick somewhere in the directory and do a Git Pull to sync with the repo. We only have one branch so expect things to break all the time.
 
+## I want to build the java game
+
 5. You now need to build the game. First off, install the JDK if you don't have it already http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
 6. Now you need to add java to your path. This is kind of annoying: https://www.java.com/en/download/help/path.xml
@@ -21,3 +23,7 @@ For the life of me I can't find where I typed all this up before so here it is a
 7. All you need to do now is run the buildscript at saga/src/build_saga.bat. If that blows up, report the error, but it should work.
 
 8. Now game.jar should magically appear in the game directory! You can run this by double-clicking it hopefully. The .exe launcher is usually just build for releases.
+
+### Hang on there's _more_ than a java game in here?
+
+There's a unity port in the works. Maybe more.
