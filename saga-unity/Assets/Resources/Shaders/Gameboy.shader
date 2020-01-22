@@ -12,7 +12,8 @@
         _LGrayOut("Light Gray out", Color) = (.668,.668,.668,1)
         _WhiteOut("White out", Color) = (1,1,1,1)
         _FadeOffset("Fade offset", Range(0,1)) = 0.0
-		_Invert ("Fade Invert", Range(0, 1)) = 0.0
+		_Invert("Fade Invert", Range(0, 1)) = 0.0
+        _FadeColorMod("FadeColorMod", Range(-1, 1)) = -1.0
 	}
 	SubShader
 	{
@@ -70,6 +71,7 @@
             fixed4 _WhiteOut;
 			float _FadeOffset;
 			float _SoftFudge;
+            float _FadeColorMod;
 			int _Invert;
 			int _FlipX;
 			int _FlipY;
@@ -106,9 +108,9 @@
                         darkness = 3;
                     }
                     
-                    if (weight > 0.25) darkness -= 1;
-                    if (weight > 0.50) darkness -= 1;
-                    if (weight > 0.75) darkness -= 1;
+                    if (weight > 0.25) darkness += _FadeColorMod;
+                    if (weight > 0.50) darkness += _FadeColorMod;
+                    if (weight > 0.75) darkness += _FadeColorMod;
                     if (darkness < 0) darkness = 0;
                     if (darkness > 3) darkness = 3;
                     

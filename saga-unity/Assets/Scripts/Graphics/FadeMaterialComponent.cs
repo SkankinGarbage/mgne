@@ -39,5 +39,6 @@ public class FadeMaterialComponent : FadeComponent {
     private void AssignShaderValues(Material material, FadeData fade, bool invert, float t) {
         material.SetFloat("_FadeOffset", invert ? (1.0f - t) : t);
         material.SetInt("_Invert", fade.invert ? 1 : 0);
+        material.SetFloat("_FadeColorMod", fade.brightnessMod);
     }
 }

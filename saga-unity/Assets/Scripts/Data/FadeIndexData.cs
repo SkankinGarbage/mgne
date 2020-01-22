@@ -11,20 +11,14 @@ public class FadeIndexData : GenericIndex<FadeData> {
 [Serializable]
 public class FadeData : GenericDataObject {
 
-    public Texture2D transitionMask;
-    public bool invert;
-    public bool flipHorizontal;
-    public bool flipVertical;
+    [Range(-1, 1)] public float brightnessMod;
     public float delay;
-    [Range(0.0f, 1.0f)] public float softEdgePercent;
+    public bool invert;
 
     // copy constructor
-    public FadeData(FadeData copySource) {
-        transitionMask = copySource.transitionMask;
-        invert = copySource.invert;
-        flipHorizontal = copySource.flipHorizontal;
-        flipVertical = copySource.flipVertical;
-        delay = copySource.delay;
-        softEdgePercent = copySource.softEdgePercent;
+    public FadeData(FadeData source) {
+        brightnessMod = source.brightnessMod;
+        delay = source.delay;
+        invert = source.invert;
     }
 }
