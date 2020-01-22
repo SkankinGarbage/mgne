@@ -180,6 +180,7 @@
   <object id="30" name="bort the bozo" type="Character" x="112" y="112" width="16" height="16">
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
+    <property name="face" value="SOUTH"/>
     <property name="onInteract" value="speak('BORG is added to the party'); addMember('chara_borg')"/>
    </properties>
   </object>

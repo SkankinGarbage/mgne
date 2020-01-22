@@ -57,6 +57,7 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["cs_speak"] = (Action<DynValue, DynValue>)Speak;
         lua.Globals["cs_walk"] = (Action<DynValue, DynValue, DynValue, DynValue>)Walk;
         lua.Globals["cs_path"] = (Action<DynValue, DynValue, DynValue, DynValue>)Path;
+        lua.Globals["fade"] = (Action<DynValue>)Fade;
     }
 
     // === LUA CALLABLE ============================================================================
@@ -157,5 +158,20 @@ public class LuaCutsceneContext : LuaContext {
 
     private void HideHero(DynValue hidden) {
         Global.Instance().Maps.avatar.SetHidden(hidden.Boolean);
+    }
+
+    private FadeData lastFade;
+    private void Fade(DynValue type) {
+        var typeString = type.String;
+        FadeData fade;
+        bool invert = false;
+        if (typeString == "normal") {
+            fade = lastFade;
+            invert = true;
+        } else {
+            fade = Global.Instance().Database.Fades.GetData(typeString);
+        }
+        lastFade = fade;
+        StartCoroutine(Global.Instance().Maps.camera.GetComponent<FadeComponent>().FadeRoutine(fade, invert));
     }
 }
