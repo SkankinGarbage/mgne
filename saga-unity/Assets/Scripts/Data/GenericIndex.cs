@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public abstract class GenericIndex<T> : ScriptableObject where T : GenericDataObject {
+public abstract class GenericIndex<T> : ScriptableObject where T : IKeyedDataObject {
 
     public List<T> dataObjects;
 
@@ -13,23 +13,23 @@ public abstract class GenericIndex<T> : ScriptableObject where T : GenericDataOb
         }
         tagToDataObject = new Dictionary<string, T>();
         foreach (T dataObject in dataObjects) {
-            tagToDataObject[dataObject.tag] = dataObject;
+            tagToDataObject[dataObject.Key] = dataObject;
         }
     }
 
-    public T GetData(string tag) {
-        if (!tagToDataObject.ContainsKey(tag.ToLower())) {
-            Debug.LogError("Index " + this.GetType().Name + " does not contain key\"" + tag + "\"");
-            return null;
+    public T GetData(string key) {
+        if (!tagToDataObject.ContainsKey(key.ToLower())) {
+            Debug.LogError("Index " + GetType().Name + " does not contain key\"" + key + "\"");
+            return default(T);
         }
-        return tagToDataObject[tag.ToLower()];
+        return tagToDataObject[key.ToLower()];
     }
 
     public T GetDataOrNull(string tag) {
         if (tagToDataObject.ContainsKey(tag.ToLower())) {
             return GetData(tag);
         } else {
-            return null;
+            return default(T);
         }
     }
 }

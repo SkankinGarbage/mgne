@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 
-public abstract class GenericDataObject {
+public abstract class GenericDataObject : IKeyedDataObject {
 
-    public string tag;
+    [SerializeField] private string tag = null;
+    public string Key { get { return tag; } }
 
 }
