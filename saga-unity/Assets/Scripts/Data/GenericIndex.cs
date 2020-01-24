@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEditor;
 
 public abstract class GenericIndex<T> : ScriptableObject where T : IKeyedDataObject {
 

@@ -17,6 +17,17 @@ public class StatSet : ISerializationCallbackReceiver {
         InitNewSet();
     }
 
+    public StatSet(StatSet other) {
+        stats = new Dictionary<StatTag, float>();
+        foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
+            Stat stat = Stat.Get(tag);
+            if (stat == null) {
+                continue;
+            }
+            stats[tag] = other[tag];
+        }
+    }
+
     private StatSet(StatDictionary stats) {
         Dictionary<string, float> statStrings = stats.ToDictionary();
         this.stats = new Dictionary<StatTag, float>();

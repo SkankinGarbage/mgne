@@ -3,7 +3,7 @@ using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
-public class EditorUtils {
+public class EditorUtils : MonoBehaviour {
 
     public static string NameFromPath(string path) {
         char[] splitters = { '/' };
