@@ -54,7 +54,7 @@ public class Inventory {
 
     /// <returns>True if that item at that slot can regenerate its uses</returns>
     public bool UsesRegenerateAt(int slot) {
-        return Items[slot] != null && Items[slot].RegeneratesUses;
+        return Items[slot] != null && Items[slot].CanRestoreUses;
     }
 
     /// <returns>The gold worth of the item in that slot, 0 for unsellable/unbuyable</returns>

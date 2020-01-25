@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-[CreateAssetMenu(fileName = "FieldSpriteDataIndexData", menuName = "Data/FieldSpriteData")]
+[CreateAssetMenu(fileName = "FieldSpriteDataIndexData", menuName = "Data/Index/FieldSpriteData")]
 public class FieldSpriteIndexData : GenericIndex<FieldSpriteData> {
 
 }

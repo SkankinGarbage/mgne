@@ -19,4 +19,10 @@ public class EquipmentInventory : Inventory {
         }
         return false;
     }
+
+    public void RestoreAbilityUses() {
+        foreach (var item in items) {
+            item.RestoreUses();
+        }
+    }
 }

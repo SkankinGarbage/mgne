@@ -9,18 +9,22 @@ public abstract class CombatItem {
     public int UsesWhenAdded { get; protected set; }
     public int UsesRemaining { get; protected set; }
 
-    public bool RegeneratesUses => Data.type == AbilityType.ABILITY;
+    public bool CanRestoreUses => Data.type == AbilityType.ABILITY;
     public int GoldValue => Data.cost * UsesRemaining / Data.uses;
     public bool IsBattleUseable => true; // TODO: effect.IsBattleUseable 
 
     public CombatItem(CombatItemData data) {
         Data = data;
-        UsesRemaining = Data.uses;
+        RestoreUses();
     }
 
     /// <param name="inventory">The inventory being added to, maybe null</param>
     public void OnAddedTo(Inventory inventory) {
         Container = inventory;
         UsesWhenAdded = UsesRemaining;
+    }
+
+    public void RestoreUses() {
+        UsesRemaining = Data.uses;
     }
 }
