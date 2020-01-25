@@ -5,7 +5,7 @@ using System.IO;
 
 public abstract class GenericIndex<T> : ScriptableObject where T : Object, IKeyedDataObject {
 
-    [SerializeField] private List<T> dataObjects;
+    [SerializeField] private List<T> dataObjects = null;
 
     private Dictionary<string, T> tagToDataObject;
 
@@ -15,6 +15,7 @@ public abstract class GenericIndex<T> : ScriptableObject where T : Object, IKeye
         }
         tagToDataObject = new Dictionary<string, T>();
         foreach (T dataObject in dataObjects) {
+            if (dataObject == null) continue;
             tagToDataObject[dataObject.Key] = dataObject;
         }
     }

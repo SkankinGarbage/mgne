@@ -8,33 +8,27 @@ using UnityEngine.Tilemaps;
  */
 public abstract class Map : MonoBehaviour {
 
+    #region Constants
+
     /// <summary>The number of pixels a tile takes up</summary>
     public const int PxPerTile = 16;
     /// <summary>The number of pixels that make up a tile</summary>
     public const float UnitsPerTile = 1;
 
     public const string ResourcePath = "Maps/";
-    
+
+    #endregion
+
+    #region Properties and getters
+
     public Grid grid;
     public ObjectLayer objectLayer;
 
-    public string bgmKey { get; private set; }
-    
+    public string BgmKey { get; protected set; }
+    public string MapName { get; protected set; }
+
     // true if the tile in question is passable at x,y
     private Dictionary<Tilemap, bool[,]> passabilityMap;
-
-    private Vector2Int _size;
-    public Vector2Int size {
-        get {
-            if (_size.x == 0) {
-                _size = InternalGetSize();
-            }
-            return _size;
-        }
-    }
-    protected abstract Vector2Int InternalGetSize();
-    public int width { get { return size.x; } }
-    public int height { get { return size.y; } }
 
     private List<Tilemap> _layers;
     public List<Tilemap> layers {
@@ -51,7 +45,22 @@ public abstract class Map : MonoBehaviour {
         }
     }
 
-    public void Start() {
+    private Vector2Int _size;
+    public Vector2Int size {
+        get {
+            if (_size.x == 0) {
+                _size = InternalGetSize();
+            }
+            return _size;
+        }
+    }
+    protected abstract Vector2Int InternalGetSize();
+    public int Width { get => size.x; }
+    public int Height { get => size.y; }
+
+    #endregion
+
+    public virtual void Start() {
         // TODO: figure out loading
         Global.Instance().Maps.activeMap = this;
     }
@@ -71,9 +80,9 @@ public abstract class Map : MonoBehaviour {
             passabilityMap = new Dictionary<Tilemap, bool[,]>();
         }
         if (!passabilityMap.ContainsKey(layer)) {
-            passabilityMap[layer] = new bool[width, height];
-            for (int x = 0; x < width; x += 1) {
-                for (int y = 0; y < height; y += 1) {
+            passabilityMap[layer] = new bool[Width, Height];
+            for (int x = 0; x < Width; x += 1) {
+                for (int y = 0; y < Height; y += 1) {
                     PropertiedTile tile = TileAt(layer, x, y - 1);
                     passabilityMap[layer][x, y] =
                         tile == null ||
@@ -130,8 +139,8 @@ public abstract class Map : MonoBehaviour {
     }
 
     public void OnTeleportTo() {
-        if (bgmKey != null) {
-            Global.Instance().Audio.PlayBGM(bgmKey);
+        if (BgmKey != null) {
+            Global.Instance().Audio.PlayBGM(BgmKey);
         }
     }
 
@@ -141,7 +150,7 @@ public abstract class Map : MonoBehaviour {
 
     // returns a list of coordinates to step to with the last one being the destination, or null
     public List<Vector2Int> FindPath(MapEvent actor, Vector2Int to) {
-        return FindPath(actor, to, width > height ? width : height);
+        return FindPath(actor, to, Width > Height ? Width : Height);
     }
     public List<Vector2Int> FindPath(MapEvent actor, Vector2Int to, int maxPathLength) {
         if (ManhattanDistance(actor.GetComponent<MapEvent>().Position, to) > maxPathLength) {

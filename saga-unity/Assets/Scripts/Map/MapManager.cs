@@ -2,9 +2,10 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class MapManager : MonoBehaviour, MemoryPopulater {
+public class MapManager : MonoBehaviour {
 
-    private static readonly string DefaultTransitionTag = "default";
+    public const string DefaultTransitionTag = "default";
+    public const string EventTeleport = "teleport";
 
     public Map activeMap { get; set; }
     public AvatarEvent avatar { get; set; }
@@ -30,21 +31,6 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
     public void SetUpInitialMap(string mapName) {
         activeMap = InstantiateMap(mapName);
         AddInitialAvatar();
-    }
-
-    public void PopulateMemory(Memory memory) {
-        if (activeMap != null) {
-            avatar.PopulateMemory(memory);
-            memory.mapName = activeMap.name;
-        }
-    }
-
-    public void PopulateFromMemory(Memory memory) {
-        if (memory.mapName != null) {
-            AddInitialAvatar();
-            activeMap = InstantiateMap(memory.mapName);
-            avatar.PopulateFromMemory(memory);
-        }
     }
 
     public IEnumerator TeleportRoutine(string mapName, Vector2Int location, OrthoDir? facing = null, bool isRaw = false) {
@@ -74,13 +60,11 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
     }
     
     private void RawTeleport(string mapName, Vector2Int location, OrthoDir? facing = null) {
-        Assert.IsNotNull(activeMap);
         Map newMapInstance = InstantiateMap(mapName);
         RawTeleport(newMapInstance, location, facing);
     }
 
     private void RawTeleport(string mapName, string targetEventName, OrthoDir? facing = null) {
-        Assert.IsNotNull(activeMap);
         Map newMapInstance = InstantiateMap(mapName);
         MapEvent target = newMapInstance.GetEventNamed(targetEventName);
         RawTeleport(newMapInstance, target.Position, facing);
@@ -96,6 +80,7 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
         Destroy(activeMap.gameObject);
         activeMap = map;
         activeMap.OnTeleportTo();
+        Global.Instance().Dispatch.Signal(EventTeleport, activeMap);
         avatar.GetComponent<MapEvent>().SetPosition(location);
         avatar.OnTeleport();
         if (facing != null) {
@@ -120,10 +105,8 @@ public class MapManager : MonoBehaviour, MemoryPopulater {
     }
 
     private void AddInitialAvatar(Memory memory = null) {
+        // TODO: 
         avatar = Instantiate(Resources.Load<GameObject>("Prefabs/Avatar")).GetComponent<AvatarEvent>();
-        if (memory != null) {
-            avatar.PopulateFromMemory(memory);
-        }
         avatar.transform.parent = activeMap.objectLayer.transform;
         activeMap.OnTeleportTo();
         camera.target = avatar.Parent;

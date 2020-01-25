@@ -10,6 +10,11 @@ public class Global : MonoBehaviour {
     public MemoryManager Memory { get; private set; }
     public AudioManager Audio { get; private set; }
     public SettingsCollection Settings { get; private set; }
+    public GameDataManager DataManager { get; private set; }
+    public Dispatch Dispatch { get; private set; }
+
+    public GameData Data => DataManager.Data;
+    public Party Party => Data.Party;
 
     private IndexDatabase database;
     public IndexDatabase Database {
@@ -47,11 +52,13 @@ public class Global : MonoBehaviour {
     private void InstantiateManagers() {
         gameObject.AddComponent<LuaCutsceneContext>();
 
+        Dispatch = gameObject.AddComponent<Dispatch>();
         Settings = gameObject.AddComponent<SettingsCollection>();
         Input = gameObject.AddComponent<InputManager>();
         Maps = gameObject.AddComponent<MapManager>();
         Memory = gameObject.AddComponent<MemoryManager>();
         Audio = gameObject.AddComponent<AudioManager>();
+        DataManager = gameObject.AddComponent<GameDataManager>();
     }
 
     private void SetFullscreenMode() {

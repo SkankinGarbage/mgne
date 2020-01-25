@@ -187,7 +187,7 @@ public abstract class MapEvent : MonoBehaviour {
         if (!GetComponent<MapEvent>().SwitchEnabled) {
             return true;
         }
-        if (loc.x < 0 || loc.x >= Map.width || loc.y < 0 || loc.y >= Map.height) {
+        if (loc.x < 0 || loc.x >= Map.Width || loc.y < 0 || loc.y >= Map.Height) {
             return false;
         }
         foreach (Tilemap layer in Map.layers) {

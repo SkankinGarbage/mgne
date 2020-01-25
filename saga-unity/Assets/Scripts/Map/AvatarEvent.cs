@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharaEvent))]
-public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
+public class AvatarEvent : MonoBehaviour, InputListener {
 
     public bool WantsToTrack { get; private set; }
 
@@ -84,16 +84,6 @@ public class AvatarEvent : MonoBehaviour, InputListener, MemoryPopulater {
             default:
                 return false;
         }
-    }
-
-    public void PopulateFromMemory(Memory memory) {
-        Parent.SetPosition(memory.position);
-        Chara.Facing = memory.facing;
-    }
-
-    public void PopulateMemory(Memory memory) {
-        memory.position = Parent.Position;
-        memory.facing = Chara.Facing;
     }
 
     public void PauseInput() {

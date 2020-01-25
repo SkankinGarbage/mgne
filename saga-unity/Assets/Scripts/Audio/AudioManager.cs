@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour, MemoryPopulater {
+public class AudioManager : MonoBehaviour {
 
     private const string NoBGMKey = "none";
     private const float FadeSeconds = 0.5f;
@@ -18,8 +18,6 @@ public class AudioManager : MonoBehaviour, MemoryPopulater {
     public string CurrentBGMKey { get; private set; }
 
     public void Awake() {
-        Global.Instance().Memory.RegisterMemoryPopulater(this);
-
         sfxSource = gameObject.AddComponent<AudioSource>();
         sfxSource.playOnAwake = false;
         sfxSource.loop = false;
@@ -85,14 +83,6 @@ public class AudioManager : MonoBehaviour, MemoryPopulater {
             yield return FadeOutRoutine(FadeSeconds);
         }
         PlayBGM(tag);
-    }
-
-    public void PopulateMemory(Memory memory) {
-        memory.bgmKey = CurrentBGMKey;
-    }
-
-    public void PopulateFromMemory(Memory memory) {
-        PlayBGM(memory.bgmKey);
     }
 
     private IEnumerator PlaySFXRoutine(AudioSource source, AudioClip clip) {

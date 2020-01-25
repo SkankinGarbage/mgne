@@ -4,22 +4,16 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 
-public class MemoryManager : MonoBehaviour, MemoryPopulater {
+public class MemoryManager : MonoBehaviour {
 
-    public const int CurrentSaveVersion = 2;
-    public const int LowestSupportedSaveVersion = 2;
+    public const int CurrentSaveVersion = 3;
+    public const int LowestSupportedSaveVersion = 3;
 
     private const string SystemMemoryName = "erebus.sav";
     private const string SaveGameSuffix = ".sav";
-    private const float ScreenshotScaleFactor = 6.0f;
-    private const float LoadDelaySeconds = 1.5f;
-    private const int MaxMessages = 200;
 
     private Dictionary<string, bool> switches;
     private Dictionary<string, int> variables;
-    private Dictionary<string, int> maxSeenCommands;
-    private List<MemoryPopulater> listeners;
-    private Texture2D screenshot;
     private float lastSystemSavedTimestamp;
 
     // this thing will be read by the dialog scene when spawning
@@ -32,24 +26,9 @@ public class MemoryManager : MonoBehaviour, MemoryPopulater {
 
     public void Awake() {
         switches = new Dictionary<string, bool>();
-        listeners = new List<MemoryPopulater>();
         variables = new Dictionary<string, int>();
-        maxSeenCommands = new Dictionary<string, int>();
         lastSystemSavedTimestamp = Time.realtimeSinceStartup;
         LoadOrCreateSystemMemory();
-        RegisterMemoryPopulater(this);
-
-        int width = (int)(Screen.width / ScreenshotScaleFactor);
-        int height = (int)(Screen.height / ScreenshotScaleFactor);
-        screenshot = new Texture2D(width, height, TextureFormat.RGB24, false);
-    }
-
-    public void OnDestroy() {
-        DestroyImmediate(screenshot);
-    }
-
-    public void RegisterMemoryPopulater(MemoryPopulater populater) {
-        listeners.Add(populater);
     }
 
     public bool GetSwitch(string switchName) {
@@ -78,28 +57,10 @@ public class MemoryManager : MonoBehaviour, MemoryPopulater {
         variables[variableName] = GetVariable(variableName) - 1;
     }
 
-    public bool HasSeenCommand(string sceneName, int commandIndex) {
-        if (maxSeenCommands.ContainsKey(sceneName)) {
-            return maxSeenCommands[sceneName] >= commandIndex;
-        } else {
-            return false;
-        }
-    }
-
-    public void AcknowledgeCommand(string sceneName, int commandIndex) {
-        if (maxSeenCommands.ContainsKey(sceneName)) {
-            maxSeenCommands[sceneName] = Math.Max(maxSeenCommands[sceneName], commandIndex);
-        } else {
-            maxSeenCommands[sceneName] = commandIndex;
-        }
-    }
-
     public void SaveToSlot(int slot) {
         Memory memory = new Memory();
 
-        foreach (MemoryPopulater listener in listeners) {
-            listener.PopulateMemory(memory);
-        }
+        // TODO:
 
         // we are included in listener list, heavy lifting is in PopulateMemory
         WriteJsonToFile(memory, FilePathForSlot(slot));
@@ -110,9 +71,7 @@ public class MemoryManager : MonoBehaviour, MemoryPopulater {
     // will instantly change globals and avatar to match the memory
     // assumes the main scene is the current scene
     public void LoadMemory(Memory memory) {
-        foreach (MemoryPopulater listener in listeners) {
-            listener.PopulateFromMemory(memory);
-        }
+        // TODO:
     }
 
     public void LoadFromLastSaveSlot() {
@@ -141,16 +100,6 @@ public class MemoryManager : MonoBehaviour, MemoryPopulater {
         lastSystemSavedTimestamp = currentTimestamp;
         SystemMemory.totalPlaySeconds += (int)Math.Round(deltaSeconds);
 
-        // seen history
-        SystemMemory.maxSeenCommandsKeys.Clear();
-        foreach (string key in maxSeenCommands.Keys) {
-            SystemMemory.maxSeenCommandsKeys.Add(key);
-        }
-        SystemMemory.maxSeenCommandsValues.Clear();
-        foreach (int value in maxSeenCommands.Values) {
-            SystemMemory.maxSeenCommandsValues.Add(value);
-        }
-
         // other garbage in other managers
         SystemMemory.settings = Global.Instance().Settings.ToMemory();
 
@@ -158,8 +107,6 @@ public class MemoryManager : MonoBehaviour, MemoryPopulater {
     }
 
     public void PopulateMemory(Memory memory) {
-        AttachScreenshotToMemory(memory);
-
         memory.variables = new SerialDictionary<string, int>(variables);
         memory.switches = new SerialDictionary<string, bool>(switches);
         memory.savedAt = CurrentTimestamp();
@@ -170,40 +117,6 @@ public class MemoryManager : MonoBehaviour, MemoryPopulater {
         // just need to handle the stuff actually stored in this manager
         switches = memory.switches.ToDictionary();
         variables = memory.variables.ToDictionary();
-    }
-
-    public Sprite SpriteFromBase64(string encodedString) {
-        int width = (int)(Screen.width / ScreenshotScaleFactor);
-        int height = (int)(Screen.height / ScreenshotScaleFactor);
-        byte[] pngBytes = Convert.FromBase64String(encodedString);
-        Texture2D texture = new Texture2D(width, height, TextureFormat.RGB24, false);
-        texture.LoadImage(pngBytes);
-        texture.Apply();
-        return Sprite.Create(texture, new Rect(0, 0, width, height), new Vector2(0, 0));
-    }
-
-    // takes a screenshot and keeps it in memory, to be saved later maybe
-    public void RememberScreenshot() {
-        int width = (int)(Screen.width / ScreenshotScaleFactor);
-        int height = (int)(Screen.height / ScreenshotScaleFactor);
-        RenderTexture renderTexture = new RenderTexture(width, height, 24);
-
-        List<Camera> cameras = new List<Camera>(Camera.allCameras);
-        cameras.Sort((Camera c1, Camera c2) => {
-            return c2.transform.GetSiblingIndex().CompareTo(c1.transform.GetSiblingIndex());
-        });
-        foreach (Camera camera in cameras) {
-            RenderTexture oldTexture = camera.targetTexture;
-            camera.targetTexture = renderTexture;
-            camera.Render();
-            camera.targetTexture = oldTexture;
-        }
-
-        RenderTexture active = RenderTexture.active;
-        RenderTexture.active = renderTexture;
-        screenshot.ReadPixels(new Rect(0, 0, width, height), 0, 0);
-        RenderTexture.active = active;
-        Destroy(renderTexture);
     }
 
     private void WriteJsonToFile(object toSerialize, string fileName) {
@@ -236,7 +149,6 @@ public class MemoryManager : MonoBehaviour, MemoryPopulater {
         }
 
         // time to populate from system memory
-        maxSeenCommands.Clear();
         for (int i = 0; i < SystemMemory.maxSeenCommandsKeys.Count; i += 1) {
             variables[SystemMemory.maxSeenCommandsKeys[i]] = SystemMemory.maxSeenCommandsValues[i];
         }
@@ -257,17 +169,5 @@ public class MemoryManager : MonoBehaviour, MemoryPopulater {
         System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
         dtDateTime = dtDateTime.AddSeconds(timestamp).ToLocalTime();
         return dtDateTime;
-    }
-
-    private void AttachScreenshotToMemory(Memory memory) {
-        byte[] pngBytes = screenshot.EncodeToPNG();
-        memory.base64ScreenshotPNG = Convert.ToBase64String(pngBytes);
-    }
-
-    private IEnumerator LoadActiveMemoryRoutine() {
-        //FadeComponent fade = FindObjectOfType<FadeComponent>();
-        //yield return fade.FadeToBlackRoutine();
-        yield return new WaitForSeconds(LoadDelaySeconds);
-        //ScenePlayer.LoadScreen();
     }
 }

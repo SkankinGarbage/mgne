@@ -7,6 +7,9 @@ using UnityEngine.Tilemaps;
 [RequireComponent(typeof(SuperMap))]
 public class TsxMap : Map {
 
+    private const string PropertyBgmKey = "bgm";
+    private const string PropertyName = "name";
+
     private static Dictionary<TileBase, TsxTile> instantiatedTiles 
         = new Dictionary<TileBase, TsxTile>();
 
@@ -18,6 +21,12 @@ public class TsxMap : Map {
             }
             return _tsx;
         }
+    }
+
+    public override void Start() {
+        base.Start();
+        BgmKey = GetProperty(PropertyBgmKey);
+        MapName = GetProperty(PropertyName);
     }
 
     public override PropertiedTile TileAt(Tilemap layer, int x, int y) {
@@ -36,5 +45,15 @@ public class TsxMap : Map {
 
     protected override Vector2Int InternalGetSize() {
         return new Vector2Int(Tsx.m_Width, Tsx.m_Height);
+    }
+
+    private SuperCustomProperties props;
+    protected string GetProperty(string propertyName) {
+        if (props == null) {
+            props = GetComponent<SuperCustomProperties>();
+        }
+        CustomProperty property;
+        props.TryGetCustomProperty(propertyName, out property);
+        return property?.GetValueAsString();
     }
 }
