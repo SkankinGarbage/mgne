@@ -25,4 +25,21 @@ public class EditorUtils : MonoBehaviour {
         mi.Invoke(importer, args);
         return new Vector2Int((int)args[0], (int)args[1]);
     }
+
+    [MenuItem("Assets/MGNE/PopulateIndex")]
+    public static void PopulateIndexCommand() {
+        (Selection.activeObject as CombatItemIndex).PopulateIndex();
+    }
+    [MenuItem("Assets/MGNE/PopulateIndex", true)]
+    private static bool PopulateIndexCommandValidation() {
+        var toCheck = Selection.activeObject?.GetType();
+        while (toCheck != null && toCheck != typeof(object)) {
+            var currentType = toCheck.IsGenericType ? toCheck.GetGenericTypeDefinition() : toCheck;
+            if (currentType == typeof(GenericIndex<>)) {
+                return true;
+            }
+            toCheck = toCheck.BaseType;
+        }
+        return false;
+    }
 }

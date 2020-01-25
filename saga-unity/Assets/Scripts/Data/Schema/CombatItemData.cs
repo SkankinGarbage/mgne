@@ -37,15 +37,3 @@ public class CombatItemData : MainSchema {
     [UnityEngine.Tooltip("Robo stats - these boosts are granted to robots that equip this")]
     public StatSet robostats;
 }
-
-[UnityEngine.CreateAssetMenu(fileName = "CombatItem", menuName = "Data/Index/Rpg/CombatItem")]
-public class CombatItemIndex : GenericIndex<CombatItemData> {
-    [MenuItem("MGNE/PopulateIndex")]
-    public static void PopulateIndex() {
-
-    }
-    [MenuItem("MGNE/PopulateIndex", true)]
-    private static bool PopulateIndexValidation() {
-        return true;
-    }
-}
