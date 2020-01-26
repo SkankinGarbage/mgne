@@ -12,4 +12,13 @@ public class FieldSpriteData : GenericDataObject {
 
     public Texture2D spriteSheet;
     public bool autoAnimate = true;
+
+    public IEnumerable<Sprite> LoadSprites() {
+        var path = ResourcePathForFieldSprite(spriteSheet);
+        return Resources.LoadAll<Sprite>(path);
+    }
+
+    public static string ResourcePathForFieldSprite(Texture2D spritesheet) {
+        return "Sprites/Charas/" + spritesheet.name;
+    }
 }

@@ -14,6 +14,8 @@ public class Unit {
     public float this[StatTag tag] { get => Stats[tag]; }
 
     public bool IsCarryingItemType(CombatItemData data) => Equipment.ContainsItemType(data);
+    public string Name => data.name?.Length > 0 ? data.name : data.species;
+    public string SpeciesString => data.species + " " + data.gender.Label();
 
     public bool IsDead {
         get {

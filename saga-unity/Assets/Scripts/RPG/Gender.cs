@@ -17,6 +17,6 @@ public class GenderAttribute : Attribute {
 
 public static class GenderExtensions {
 
-    public static string Label(this Race race) { return race.GetAttribute<GenderAttribute>().label; }
+    public static string Label(this Gender gender) { return gender.GetAttribute<GenderAttribute>().label; }
 
 }

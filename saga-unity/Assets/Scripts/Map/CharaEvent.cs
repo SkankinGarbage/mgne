@@ -1,16 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-using UnityEditor;
-
-#pragma warning disable 0649
 
 /**
  * For our purposes, a CharaEvent is anything that's going to be moving around the map
  * or has a physical appearance. For parallel process or whatevers, they won't have this.
  */
 [DisallowMultipleComponent]
+[RequireComponent(typeof(FieldSpritesheetComponent))]
 public class CharaEvent : MonoBehaviour {
     
     private const float DesaturationDuration = 0.5f;
@@ -19,9 +16,7 @@ public class CharaEvent : MonoBehaviour {
     public Doll Doll;
 
     [SerializeField] private bool alwaysAnimates = true;
-    [SerializeField] [HideInInspector] private int stepCount = 4;
-
-    private Dictionary<string, Sprite> sprites;
+    
     private Vector2 lastPosition;
     private bool wasSteppingLastFrame;
     private Vector3 targetPx;
@@ -30,22 +25,19 @@ public class CharaEvent : MonoBehaviour {
 
     public MapEvent Parent { get { return GetComponent<MapEvent>(); } }
     public Map Map { get { return Parent.Map; } }
-    public float Desaturation { get; set; }
+    public int StepCount => sprites.StepCount;
 
-    [SerializeField]
-    private Texture2D _spritesheet;
-    public Texture2D Spritesheet {
-        get { return _spritesheet; }
-        set {
-            _spritesheet = value;
-            LoadSpritesheetData();
-            UpdateAppearance();
+    private FieldSpritesheetComponent sprites;
+    public FieldSpritesheetComponent Sprites {
+        get {
+            if (sprites == null) {
+                sprites = GetComponent<FieldSpritesheetComponent>();
+            }
+            return sprites;
         }
     }
 
-    [SerializeField]
-    [HideInInspector]
-    private OrthoDir _facing = OrthoDir.South;
+    [SerializeField] [HideInInspector] private OrthoDir _facing = OrthoDir.South;
     public OrthoDir Facing {
         get { return _facing; }
         set {
@@ -58,15 +50,12 @@ public class CharaEvent : MonoBehaviour {
     protected List<SpriteRenderer> Renderers {
         get {
             if (_renderers == null) {
-                _renderers = new List<SpriteRenderer>();
-                _renderers.Add(Doll.Renderer);
+                _renderers = new List<SpriteRenderer> {
+                    Doll.Renderer
+                };
             }
             return _renderers;
         }
-    }
-
-    public static string NameForFrame(string sheetName, int x, int y) {
-        return sheetName + "_" + x + "_" + y;
     }
 
     public void Start() {
@@ -96,12 +85,7 @@ public class CharaEvent : MonoBehaviour {
     }
 
     public void UpdateAppearance() {
-        if (Spritesheet != null) {
-            if (sprites == null || sprites.Count == 0) {
-                LoadSpritesheetData();
-            }
-            Doll.Renderer.sprite = SpriteForMain();
-        }
+        Doll.Renderer.sprite = SpriteForMain();
     }
 
     public void FaceToward(MapEvent other) {
@@ -112,19 +96,9 @@ public class CharaEvent : MonoBehaviour {
         moveTime = 0.0f;
     }
 
-    public Sprite FrameBySlot(int x) {
-        return FrameByExplicitSlot(x, Facing.Ordinal());
-    }
-    public Sprite FrameByExplicitSlot(int x, int y) {
-        string name = NameForFrame(Spritesheet.name, x, y);
-        if (!sprites.ContainsKey(name)) {
-            Debug.LogError(this + " doesn't contain frame " + name);
-        }
-        return sprites[name];
-    }
-
     public void SetAppearanceByTag(string fieldSpriteTag) {
-        Spritesheet = IndexDatabase.Instance().FieldSprites.GetData(fieldSpriteTag).spriteSheet;
+        Sprites.SetByTag(fieldSpriteTag);
+        UpdateAppearance();
     }
 
     public IEnumerator StepRoutine(OrthoDir dir) {
@@ -135,16 +109,6 @@ public class CharaEvent : MonoBehaviour {
         yield return Parent.LinearStepRoutine(dir);
     }
 
-    public IEnumerator DesaturateRoutine(float targetDesat) {
-        float oldDesat = Desaturation;
-        float elapsed = 0.0f;
-        while (Desaturation != targetDesat) {
-            elapsed += Time.deltaTime;
-            Desaturation = Mathf.Lerp(oldDesat, targetDesat, elapsed / DesaturationDuration);
-            yield return null;
-        }
-    }
-
     private bool IsSteppingThisFrame() {
         Vector2 position = transform.position;
         Vector2 delta = position - lastPosition;
@@ -152,25 +116,10 @@ public class CharaEvent : MonoBehaviour {
             (GetComponent<AvatarEvent>() && GetComponent<AvatarEvent>().WantsToTrack);
     }
 
-    private void LoadSpritesheetData() {
-        sprites = new Dictionary<string, Sprite>();
-        var path = AssetDatabase.GetAssetPath(Spritesheet);
-        if (path.StartsWith("Assets/Resources/")) {
-            path = path.Substring("Assets/Resources/".Length);
-        }
-        if (path.EndsWith(".png")) {
-            path = path.Substring(0, path.Length - ".png".Length);
-        }
-        foreach (Sprite sprite in Resources.LoadAll<Sprite>(path)) {
-            sprites[sprite.name] = sprite;
-        }
-        stepCount = Spritesheet.width / Map.PxPerTile;
-    }
-
     private Sprite SpriteForMain() {
-        int x = Mathf.FloorToInt(moveTime * StepsPerSecond) % stepCount;
+        int x = Mathf.FloorToInt(moveTime * StepsPerSecond) % Sprites.StepCount;
         if (x == 3) x = 1;
         if (!stepping) x = 1;
-        return FrameBySlot(x);
+        return sprites.FrameBySlot(x, Facing);
     }
 }

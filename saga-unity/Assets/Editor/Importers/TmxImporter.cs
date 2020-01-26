@@ -40,6 +40,9 @@ public class MyTmxImporter : CustomTmxImporter {
                 if (appearance != null && appearance.Length > 0) {
                     CharaEvent chara;
                     Doll doll;
+                    if (mapEvent.GetComponent<FieldSpritesheetComponent>() == null) {
+                        mapEvent.gameObject.AddComponent<FieldSpritesheetComponent>();
+                    }
                     if (mapEvent.GetComponent<CharaEvent>() == null) {
                         chara = mapEvent.gameObject.AddComponent<CharaEvent>();
                         var dollObject = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(DollPrefabPath));
@@ -53,15 +56,15 @@ public class MyTmxImporter : CustomTmxImporter {
                     }
 
                     doll.transform.localPosition = Vector3.zero;
-                    
-                    var facing = mapEvent.GetProperty("face");
-                    if (facing != null && facing.Length > 0) {
-                        chara.Facing = OrthoDirExtensions.Parse(facing);
-                    }
 
                     if (IndexDatabase.Instance().FieldSprites.GetDataOrNull(appearance) != null) {
                         // it's a literal
                         chara.SetAppearanceByTag(appearance);
+                    }
+
+                    var facing = mapEvent.GetProperty("face");
+                    if (facing != null && facing.Length > 0) {
+                        chara.Facing = OrthoDirExtensions.Parse(facing);
                     }
                 }
 
