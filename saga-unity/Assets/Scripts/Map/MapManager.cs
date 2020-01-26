@@ -35,7 +35,7 @@ public class MapManager : MonoBehaviour {
 
     public IEnumerator TeleportRoutine(string mapName, Vector2Int location, OrthoDir? facing = null, bool isRaw = false) {
         avatar.PauseInput();
-        TransitionData data = Global.Instance().Database.Transitions.GetData(DefaultTransitionTag);
+        TransitionData data = IndexDatabase.Instance().Transitions.GetData(DefaultTransitionTag);
         if (!isRaw) {
             yield return camera.GetComponent<FadeComponent>().TransitionRoutine(data, () => {
                 RawTeleport(mapName, location, facing);
@@ -48,7 +48,7 @@ public class MapManager : MonoBehaviour {
 
     public IEnumerator TeleportRoutine(string mapName, string targetEventName, OrthoDir? facing = null, bool isRaw = false) {
         avatar.PauseInput();
-        TransitionData data = Global.Instance().Database.Transitions.GetData(DefaultTransitionTag);
+        TransitionData data = IndexDatabase.Instance().Transitions.GetData(DefaultTransitionTag);
         if (!isRaw) {
             yield return camera.GetComponent<FadeComponent>().TransitionRoutine(data, () => {
                 RawTeleport(mapName, targetEventName, facing);

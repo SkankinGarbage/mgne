@@ -15,8 +15,9 @@ public class GameData {
     public void DeductGP(int gp) { GP -= gp; }
 
     public GameData() {
-        GP = 0;
-        LocationName = "";
+        GP = 999;
+        LocationName = "Debug";
+        Party = new Party(IndexDatabase.Instance().Parties.defaultParty);
     }
 
     public void OnTeleportTo(Map map) {

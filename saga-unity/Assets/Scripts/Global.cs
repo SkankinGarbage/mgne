@@ -3,7 +3,6 @@
 public class Global : MonoBehaviour {
 
     private static Global instance;
-    private static bool destructing;
     
     public InputManager Input { get; private set; }
     public MapManager Maps { get; private set; }
@@ -15,16 +14,6 @@ public class Global : MonoBehaviour {
 
     public GameData Data => DataManager.Data;
     public Party Party => Data.Party;
-
-    private IndexDatabase database;
-    public IndexDatabase Database {
-        get {
-            if (database == null && !destructing) {
-                database = IndexDatabase.Instance();
-            }
-            return database;
-        }
-    }
 
     public static Global Instance() {
         if (instance == null) {
@@ -45,10 +34,6 @@ public class Global : MonoBehaviour {
         MoonSharp.Interpreter.UserData.RegisterAssembly();
     }
 
-    public void OnDestroy() {
-        destructing = true;
-    }
-
     private void InstantiateManagers() {
         gameObject.AddComponent<LuaCutsceneContext>();
 
@@ -59,6 +44,8 @@ public class Global : MonoBehaviour {
         Memory = gameObject.AddComponent<MemoryManager>();
         Audio = gameObject.AddComponent<AudioManager>();
         DataManager = gameObject.AddComponent<GameDataManager>();
+
+        DataManager.InitializeData();
     }
 
     private void SetFullscreenMode() {

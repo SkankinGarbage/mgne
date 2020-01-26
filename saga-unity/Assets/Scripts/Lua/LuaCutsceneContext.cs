@@ -169,7 +169,7 @@ public class LuaCutsceneContext : LuaContext {
             fade = lastFade;
             invert = true;
         } else {
-            fade = Global.Instance().Database.Fades.GetData(typeString);
+            fade = IndexDatabase.Instance().Fades.GetData(typeString);
         }
         lastFade = fade;
         StartCoroutine(Global.Instance().Maps.camera.GetComponent<FadeComponent>().FadeRoutine(fade, invert));

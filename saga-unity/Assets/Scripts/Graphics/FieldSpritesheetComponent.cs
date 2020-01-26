@@ -13,8 +13,12 @@ public class FieldSpritesheetComponent : MonoBehaviour {
 
     private Dictionary<string, Sprite> sprites;
 
+    public void Awake() {
+        LoadSpritesheetData(spritesheet);
+    }
+
     public void SetByTag(string tag) {
-        var spritesheet = Global.Instance().Database.FieldSprites.GetData(tag).spriteSheet;
+        var spritesheet = IndexDatabase.Instance().FieldSprites.GetData(tag).spriteSheet;
         LoadSpritesheetData(spritesheet);
     }
 
@@ -27,6 +31,9 @@ public class FieldSpritesheetComponent : MonoBehaviour {
     }
 
     public Sprite FrameByExplicitSlot(int x, int y) {
+        if (sprites == null) {
+            LoadSpritesheetData(spritesheet);
+        }
         string name = NameForFrame(spritesheet.name, x, y);
         if (!sprites.ContainsKey(name)) {
             Debug.LogError(this + " doesn't contain frame " + name);

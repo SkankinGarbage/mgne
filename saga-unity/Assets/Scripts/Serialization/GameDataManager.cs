@@ -7,6 +7,9 @@ public class GameDataManager : MonoBehaviour {
 
     public void Start() {
         Global.Instance().Dispatch.RegisterListener(MapManager.EventTeleport, OnTeleport);
+    }
+
+    public void InitializeData() {
         Data = new GameData();
     }
 

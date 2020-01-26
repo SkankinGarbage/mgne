@@ -28,7 +28,7 @@ public class EditorUtils : MonoBehaviour {
 
     [MenuItem("Assets/MGNE/PopulateIndex")]
     public static void PopulateIndexCommand() {
-        (Selection.activeObject as CombatItemIndex).PopulateIndex();
+        (Selection.activeObject as IIndexPopulater).PopulateIndex();
     }
     [MenuItem("Assets/MGNE/PopulateIndex", true)]
     private static bool PopulateIndexCommandValidation() {

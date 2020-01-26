@@ -43,7 +43,7 @@ public class AudioManager : MonoBehaviour {
         PlaySFX(enumValue.ToString());
     }
     public void PlaySFX(string key) {
-        AudioClip clip = Global.Instance().Database.SFX.GetData(key).clip;
+        AudioClip clip = IndexDatabase.Instance().SFX.GetData(key).clip;
         StartCoroutine(PlaySFXRoutine(sfxSource, clip));
     }
 
@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour {
                 bgmSource.Stop();
             } else {
                 bgmSource.volume = 1.0f;
-                AudioClip clip = Global.Instance().Database.BGM.GetData(key).track;
+                AudioClip clip = IndexDatabase.Instance().BGM.GetData(key).track;
                 bgmSource.clip = clip;
                 bgmSource.Play();
             }

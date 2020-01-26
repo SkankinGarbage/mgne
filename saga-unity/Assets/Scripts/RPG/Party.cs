@@ -5,7 +5,7 @@ using System.Linq;
 using System;
 using Random = UnityEngine.Random;
 
-public class Party {
+public class Party : IEnumerable<Unit> {
 
     public List<List<Unit>> Groups { get; private set; }
 
@@ -15,6 +15,9 @@ public class Party {
     public int Size => Members.Count();
     public bool HasFlag(StatTag flag) => AnyMembersMeetCritera(unit => unit[flag] > 0);
     public bool IsCarryingItemType(CombatItemData itemData) => AnyMembersMeetCritera(unit => unit.IsCarryingItemType(itemData));
+
+    public IEnumerator<Unit> GetEnumerator() { return Members.GetEnumerator(); }
+    IEnumerator IEnumerable.GetEnumerator() { return Members.GetEnumerator(); }
 
     public Party(PartyData data) {
         Groups = new List<List<Unit>>();

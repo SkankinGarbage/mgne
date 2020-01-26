@@ -3,13 +3,12 @@ using System.Collections;
 using UnityEditor;
 using System.IO;
 
-public class ScriptableObjectIndex<T> : GenericIndex<T> where T : ScriptableObject, IKeyedDataObject {
+public class ScriptableObjectIndex<T> : GenericIndex<T>, IIndexPopulater where T : ScriptableObject, IKeyedDataObject {
 
     private void RecursivelyPopulateFrom(string dirPath) {
-        dataObjects.Clear();
         foreach (var file in Directory.EnumerateFiles(dirPath)) {
             var asset = AssetDatabase.LoadAssetAtPath<T>(file);
-            if (!dataObjects.Contains(asset)) {
+            if (asset != null) {
                 dataObjects.Add(asset);
             }
         }
@@ -20,6 +19,7 @@ public class ScriptableObjectIndex<T> : GenericIndex<T> where T : ScriptableObje
     }
 
     public void PopulateIndex() {
+        dataObjects.Clear();
         var selectedPath = AssetDatabase.GetAssetPath(Selection.activeObject);
         var localPath = selectedPath.Substring(0, selectedPath.LastIndexOf('/'));
         RecursivelyPopulateFrom(localPath);
