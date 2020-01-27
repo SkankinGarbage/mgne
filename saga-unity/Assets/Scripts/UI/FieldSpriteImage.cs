@@ -24,7 +24,7 @@ public class FieldSpriteImage : MonoBehaviour {
             if (image == null) {
                 image = GetComponent<Image>();
             }
-            return Image;
+            return image;
         }
     }
 

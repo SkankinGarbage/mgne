@@ -5,6 +5,7 @@ public class Unit {
 
     // careful, only guaranteed for NPCs, as heroes are dynamic
     protected CharaData data;
+    protected string name;
 
     public StatSet Stats { get; private set; }
     public Status Status { get; private set; }
@@ -14,8 +15,8 @@ public class Unit {
     public float this[StatTag tag] { get => Stats[tag]; }
 
     public bool IsCarryingItemType(CombatItemData data) => Equipment.ContainsItemType(data);
-    public string Name => data.name?.Length > 0 ? data.name : data.species;
-    public string SpeciesString => data.species + " " + data.gender.Label();
+    public string Name => name?.Length > 0 ? name : data.name?.Length > 0 ? data.name : SpeciesString;
+    public string SpeciesString => (data.species?.Length > 0 ? data.species : data.race.ToString()) + " " + data.gender.Label();
 
     public bool IsDead {
         get {

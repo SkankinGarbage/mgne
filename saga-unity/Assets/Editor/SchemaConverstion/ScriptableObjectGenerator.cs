@@ -16,8 +16,8 @@ namespace Mgne1 {
         [MenuItem("MGNE Tools/Convert Json")]
         public static void ConvertJson() {
             var directoryPath = Application.dataPath + "/" + DataDirectory;
-            ConvertOrLinkDirectory(directoryPath, false);
-            AssetDatabase.SaveAssets();
+            //ConvertOrLinkDirectory(directoryPath, false);
+            //AssetDatabase.SaveAssets();
             ConvertOrLinkDirectory(directoryPath, true);
             AssetDatabase.SaveAssets();
         }
@@ -33,6 +33,10 @@ namespace Mgne1 {
 
         private static void ConvertOrLinkFile(string filePath, bool linkMode) {
             if (!filePath.EndsWith(".json")) {
+                return;
+            }
+
+            if (TypeForFilepath(filePath) == null) {
                 return;
             }
 
@@ -70,6 +74,7 @@ namespace Mgne1 {
 
             // copy from the linked version to the one on disk
             var destinationFields = storedAsset.GetType().GetFields();
+            EditorUtility.SetDirty(storedAsset);
             foreach (var destinationField in destinationFields) {
                 var sourceField = linkedAsset.GetType().GetField(destinationField.Name);
                 destinationField.SetValue(storedAsset, sourceField.GetValue(linkedAsset));

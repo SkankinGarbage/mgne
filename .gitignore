@@ -29,6 +29,7 @@ saga/game.jar
 saga/res/jar/SagaSchema.jar
 saga/SaGa4.exe
 *.jgdb
+saga-unity/Assets/DataJson
 
 # Unity garbage #
 #################

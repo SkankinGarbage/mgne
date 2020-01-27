@@ -92,13 +92,13 @@ namespace Mgne1 {
             var targetName = key + ".asset";
             foreach (string filePath in Directory.EnumerateFiles(dirPath)) {
                 if (filePath.EndsWith(targetName)) {
-                    return AssetDatabase.LoadAssetAtPath<MainSchema>(RelativePathForFilePath(filePath));
+                    return (MainSchema) AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(RelativePathForFilePath(filePath));
                 }
             }
             foreach (string directoryPath in Directory.EnumerateDirectories(dirPath)) {
                 foreach (string filePath in Directory.EnumerateFiles(directoryPath)) {
                     if (filePath.EndsWith(targetName)) {
-                        return AssetDatabase.LoadAssetAtPath<MainSchema>(RelativePathForFilePath(filePath));
+                        return (MainSchema) AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(RelativePathForFilePath(filePath));
                     }
                 }
             }

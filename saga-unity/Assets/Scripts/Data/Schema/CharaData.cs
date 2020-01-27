@@ -9,6 +9,9 @@ public class CharaData : MainSchema {
     [UnityEngine.Tooltip("Race")]
     public Race race;
 
+    [UnityEngine.Tooltip("Name")]
+    public new string name;
+
     [Newtonsoft.Json.JsonConverter(typeof(LinkerDeserializer))]
     [UnityEngine.Tooltip("Family - used for transformations, only monsters should have this")]
     public MonsterFamilyData family;
