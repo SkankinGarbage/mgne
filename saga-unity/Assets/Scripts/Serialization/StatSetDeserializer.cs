@@ -3,6 +3,7 @@ using System.Collections;
 using Newtonsoft.Json;
 using System;
 using Newtonsoft.Json.Linq;
+using UnityEditor;
 
 public class StatSetDeserializer : JsonConverter {
 
@@ -22,6 +23,7 @@ public class StatSetDeserializer : JsonConverter {
         foreach (StatTag flag in data.flags) {
             set[flag] = 1;
         }
+        set.OnBeforeSerialize();
         return set;
     }
 

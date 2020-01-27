@@ -74,11 +74,11 @@ namespace Mgne1 {
 
             // copy from the linked version to the one on disk
             var destinationFields = storedAsset.GetType().GetFields();
-            EditorUtility.SetDirty(storedAsset);
             foreach (var destinationField in destinationFields) {
                 var sourceField = linkedAsset.GetType().GetField(destinationField.Name);
                 destinationField.SetValue(storedAsset, sourceField.GetValue(linkedAsset));
             }
+            EditorUtility.SetDirty(storedAsset);
         }
 
         public static Type TypeForFilepath(string filePath) {
