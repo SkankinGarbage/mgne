@@ -10,6 +10,13 @@ public class ListSelector : MonoBehaviour {
 
     private int selection;
 
+    public async Task<string> SelectCommandAsync() {
+        var task = SelectItemAsync();
+        var result = await task;
+        if (task.IsCanceled) return await Task.FromCanceled<string>(new CancellationToken(true));
+        return GetCell(result).GetComponent<CommandCell>().CommandString;
+    }
+
     public async Task<int> SelectItemAsync() {
         var completion = new TaskCompletionSource<int>();
         

@@ -78,7 +78,7 @@ public static class CoUtils {
     public static IEnumerator StepResize2(Action<Vector2> setter, Vector2 at, Vector2 to, int step, float duration) {
         float elapsed = 0.0f;
         while (elapsed < duration) {
-            elapsed += Time.deltaTime;
+            elapsed += Time.fixedDeltaTime;
             var t = Mathf.Floor((elapsed / duration) * step) / step;
             setter(to * t + at * (1f - t));
             yield return null;

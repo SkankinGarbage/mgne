@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Threading.Tasks;
 
 public class MainMenuView : MonoBehaviour {
 
@@ -9,10 +10,12 @@ public class MainMenuView : MonoBehaviour {
     [SerializeField] private ListView partyCells = null;
 
     [SerializeField] private ListSelector mainMenu = null;
+    [SerializeField] private ExpanderComponent expander = null;
 
-    public async void OnEnable() {
+    public void OnEnable() {
+        expander.Hide();
         Populate();
-        var result = await mainMenu.SelectItemAsync();
+        MenuAync();
     }
 
     public void OnDisable() {
@@ -30,6 +33,19 @@ public class MainMenuView : MonoBehaviour {
     }
 
     public async void MenuAync() {
+        await expander.ShowRoutine();
+        while (true) {
+            var task = mainMenu.SelectCommandAsync();
+            var command = await task;
+            if (task.IsCanceled) {
+                break;
+            }
 
+            switch (command) {
+                // TODO:
+                default:
+                    break;
+            }
+        }
     }
 }
