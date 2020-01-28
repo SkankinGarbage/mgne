@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharaEvent))]
-public class AvatarEvent : MonoBehaviour, InputListener {
+public class AvatarEvent : MonoBehaviour, IInputListener {
 
     public bool WantsToTrack { get; private set; }
 

@@ -8,8 +8,15 @@ public class MainMenuView : MonoBehaviour {
     [SerializeField] private Text locationText = null;
     [SerializeField] private ListView partyCells = null;
 
-    public void OnEnable() {
+    [SerializeField] private ListSelector mainMenu = null;
+
+    public async void OnEnable() {
         Populate();
+        var result = await mainMenu.SelectItemAsync();
+    }
+
+    public void OnDisable() {
+        
     }
 
     public void Populate() {
@@ -20,5 +27,9 @@ public class MainMenuView : MonoBehaviour {
             var cell = obj.GetComponent<MainMenuCellView>();
             cell.Populate(unit);
         });
+    }
+
+    public async void MenuAync() {
+
     }
 }

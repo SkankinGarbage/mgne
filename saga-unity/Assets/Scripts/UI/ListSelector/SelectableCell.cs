@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ListCell : MonoBehaviour {
+public class SelectableCell : MonoBehaviour {
 
     public GameObject selectedState;
 
-    protected bool selectable;
+    protected bool selectable = true;
 
     public virtual void SetSelected(bool selected) {
         selectedState.SetActive(selected);

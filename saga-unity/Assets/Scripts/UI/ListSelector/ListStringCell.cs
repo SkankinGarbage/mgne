@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ListStringCell : ListCell {
+public class ListStringCell : SelectableCell {
 
     public Text text;
 

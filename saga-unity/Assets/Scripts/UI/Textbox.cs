@@ -6,7 +6,7 @@ using DG.Tweening;
 /// <summary>
 /// Bloated textbox ripped almost directly from Snowbound VN
 /// </summary>
-public class Textbox : MonoBehaviour, InputListener {
+public class Textbox : MonoBehaviour, IInputListener {
 
     private static readonly string SystemSpeaker = "SYSTEM";
     private static float OverlapSlop = 5f;

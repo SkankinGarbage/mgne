@@ -33,18 +33,18 @@ public class InputManager : MonoBehaviour {
     private static readonly float KeyRepeatSeconds = 0.5f;
 
     private Dictionary<Command, List<KeyCode>> keybinds;
-    private List<InputListener> listeners;
-    private List<InputListener> disabledListeners;
+    private List<IInputListener> listeners;
+    private List<IInputListener> disabledListeners;
     private Dictionary<Command, float> holdStartTimes;
     private List<KeyCode> fastKeys;
-    private Dictionary<string, InputListener> anonymousListeners;
+    private Dictionary<string, IInputListener> anonymousListeners;
     private bool simulatedAdvance;
 
     public void Awake() {
         keybinds = new Dictionary<Command, List<KeyCode>>();
         keybinds[Command.Left] = new List<KeyCode>(new[] { KeyCode.LeftArrow, KeyCode.A, KeyCode.Keypad4 });
         keybinds[Command.Right] = new List<KeyCode>(new[] { KeyCode.RightArrow, KeyCode.D, KeyCode.Keypad6 });
-        keybinds[Command.Up] = new List<KeyCode>(new[] { KeyCode.UpArrow, KeyCode.D, KeyCode.Keypad8 });
+        keybinds[Command.Up] = new List<KeyCode>(new[] { KeyCode.UpArrow, KeyCode.W, KeyCode.Keypad8 });
         keybinds[Command.Down] = new List<KeyCode>(new[] { KeyCode.DownArrow, KeyCode.S, KeyCode.Keypad2 });
         keybinds[Command.Confirm] = new List<KeyCode>(new[] { KeyCode.Space, KeyCode.Z, KeyCode.Return });
         keybinds[Command.Cancel] = new List<KeyCode>(new[] { KeyCode.Escape, KeyCode.B, KeyCode.X });
@@ -59,26 +59,26 @@ public class InputManager : MonoBehaviour {
         keybinds[Command.Rightclick] = new List<KeyCode>();
         fastKeys = new List<KeyCode>(new[] { KeyCode.LeftControl, KeyCode.RightControl });
 
-        listeners = new List<InputListener>();
-        disabledListeners = new List<InputListener>();
+        listeners = new List<IInputListener>();
+        disabledListeners = new List<IInputListener>();
 
-        listeners = new List<InputListener>();
+        listeners = new List<IInputListener>();
         holdStartTimes = new Dictionary<Command, float>();
 
-        anonymousListeners = new Dictionary<string, InputListener>();
+        anonymousListeners = new Dictionary<string, IInputListener>();
     }
 
     public void Update() {
-        List<InputListener> listeners = new List<InputListener>();
+        List<IInputListener> listeners = new List<IInputListener>();
         listeners.AddRange(this.listeners);
 
-        foreach (InputListener listener in listeners) {
+        foreach (IInputListener listener in listeners) {
             if (disabledListeners.Contains(listener)) {
                 continue;
             }
-
-            bool endProcessing = false; // ew.
-            foreach (Command command in System.Enum.GetValues(typeof(Command))) {
+            
+            foreach (Command command in Enum.GetValues(typeof(Command))) {
+                bool endProcessing = false; // ew.
                 foreach (KeyCode code in keybinds[command]) {
                     if (Input.GetKeyDown(code)) {
                         endProcessing |= listener.OnCommand(command, Event.Down);
@@ -100,31 +100,30 @@ public class InputManager : MonoBehaviour {
                 }
                 if (endProcessing) break;
             }
-            if (endProcessing) break;
         }
     }
 
     public void PushListener(string id, Func<Command, Event, bool> responder) {
-        InputListener listener = new AnonymousListener(responder);
+        IInputListener listener = new AnonymousListener(responder);
         anonymousListeners[id] = listener;
         PushListener(listener);
     }
-    public void PushListener(InputListener listener) {
+    public void PushListener(IInputListener listener) {
         listeners.Insert(0, listener);
     }
 
     public void RemoveListener(string id) {
         listeners.Remove(anonymousListeners[id]);
     }
-    public void RemoveListener(InputListener listener) {
+    public void RemoveListener(IInputListener listener) {
         listeners.Remove(listener);
     }
 
-    public void DisableListener(InputListener listener) {
+    public void DisableListener(IInputListener listener) {
         disabledListeners.Add(listener);
     }
 
-    public void EnableListener(InputListener listener) {
+    public void EnableListener(IInputListener listener) {
         if (disabledListeners.Contains(listener)) {
             disabledListeners.Remove(listener);
         }
@@ -143,7 +142,7 @@ public class InputManager : MonoBehaviour {
     // called by input listeners usually when interpreting clicks as answers to AwaitAdvance
     public void SimulateCommand(Command simulatedCommand) {
         simulatedAdvance = true;
-        InputListener listener = listeners[listeners.Count - 1];
+        IInputListener listener = listeners[listeners.Count - 1];
         if (!disabledListeners.Contains(listener)) {
             listener.OnCommand(simulatedCommand, Event.Down);
             listener.OnCommand(simulatedCommand, Event.Up);

@@ -5,7 +5,7 @@ using System;
 /// <summary>
 /// Wraps a function and turns it into an input listener
 /// </summary>
-public class AnonymousListener : InputListener {
+public class AnonymousListener : IInputListener {
 
     private Func<InputManager.Command, InputManager.Event, bool> eventResponder;
 
