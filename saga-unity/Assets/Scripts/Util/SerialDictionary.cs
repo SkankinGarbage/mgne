@@ -28,6 +28,6 @@ public class SerialDictionary<K, V> {
     }
 
     public bool IsEmpty() {
-        return keys != null;
+        return keys == null || keys.Count == 0;
     }
 }
