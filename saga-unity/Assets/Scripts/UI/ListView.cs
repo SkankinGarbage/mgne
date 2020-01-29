@@ -18,7 +18,7 @@ public class ListView : MonoBehaviour {
         foreach (var datum in data) {
             var gameObject = Instantiate(prefab);
             populater(gameObject, datum);
-            gameObject.transform.SetParent(transform);
+            gameObject.transform.SetParent(transform, worldPositionStays:false);
         }
     }
 

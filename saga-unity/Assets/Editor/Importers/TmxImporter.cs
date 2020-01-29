@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEngine.Tilemaps;
 
 [AutoCustomTmxImporter]
-public class MyTmxImporter : CustomTmxImporter {
+public class TmxImporter : CustomTmxImporter {
 
     private const string DollPrefabPath = "Assets/Resources/Prefabs/Doll.prefab";
     private const string CeilingPrefabPath = "Assets/Resources/Prefabs/Ceiling.prefab";

@@ -11,10 +11,12 @@ public class ListSelector : MonoBehaviour {
     private int selection;
 
     public async Task<string> SelectCommandAsync() {
-        var task = SelectItemAsync();
-        var result = await task;
-        if (task.IsCanceled) return await Task.FromCanceled<string>(new CancellationToken(true));
-        return GetCell(result).GetComponent<CommandCell>().CommandString;
+        var result = await SelectItemAsync();
+        if (result == -1) {
+            return null;
+        } else {
+            return GetCell(result).GetComponent<CommandCell>().CommandString;
+        }
     }
 
     public async Task<int> SelectItemAsync() {
@@ -33,7 +35,7 @@ public class ListSelector : MonoBehaviour {
             }
             switch (command) {
                 case InputManager.Command.Cancel:
-                    completion.SetCanceled();
+                    completion.SetResult(-1);
                     Global.Instance().Input.RemoveListener(listenerId);
                     break;
                 case InputManager.Command.Confirm:

@@ -165,6 +165,6 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
     }
 
     private void ShowMenu() {
-        // oh shiii
+        MainMenuView.ShowDefault();
     }
 }

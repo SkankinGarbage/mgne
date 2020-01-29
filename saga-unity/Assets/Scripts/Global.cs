@@ -15,6 +15,16 @@ public class Global : MonoBehaviour {
     public GameData Data => DataManager.Data;
     public Party Party => Data.Party;
 
+    private UIAnchorPoint ui;
+    public UIAnchorPoint UI {
+        get {
+            if (ui == null) {
+                ui = FindObjectOfType<UIAnchorPoint>();
+            }
+            return ui;
+        }
+    }
+
     public static Global Instance() {
         if (instance == null) {
             GameObject globalObject = new GameObject("Globals");
