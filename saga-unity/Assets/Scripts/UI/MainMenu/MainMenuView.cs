@@ -13,6 +13,7 @@ public class MainMenuView : MonoBehaviour {
 
     [SerializeField] private ListSelector mainMenu = null;
     [SerializeField] private ExpanderComponent expander = null;
+    [SerializeField] private GridSelector abilMenu = null;
 
     private FadeData Fade => IndexDatabase.Instance().Fades.GetData("show_menu");
 
@@ -42,6 +43,9 @@ public class MainMenuView : MonoBehaviour {
             var task = mainMenu.SelectCommandAsync();
             var command = await task;
             switch (command) {
+                case "Abil":
+                    await AbilSelect();
+                    return;
                 case null:
                     await expander.HideRoutine();
                     Close();
@@ -60,13 +64,14 @@ public class MainMenuView : MonoBehaviour {
         if (defaultMenu == null) {
             defaultMenu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<MainMenuView>();
             defaultMenu.transform.SetParent(Global.Instance().UI.transform, worldPositionStays:false);
-            //var rect = defaultMenu.GetComponent<RectTransform>();
-            //rect.anchoredPosition = new Vector2(0, 0);
-            //rect.offsetMax = new Vector2(0, 0);
-            //rect.offsetMin = new Vector2(0, 0);
-
         }
         Global.Instance().Maps.avatar.PauseInput();
         defaultMenu.gameObject.SetActive(true);
+    }
+
+    private async Task AbilSelect() {
+        mainMenu.ClearSelection();
+        int result = await abilMenu.SelectItemAsync();
+        Debug.Log(result);
     }
 }
