@@ -3,13 +3,14 @@ using System.Collections;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Threading;
+using System;
 
 public abstract class GenericSelector : MonoBehaviour {
 
     protected int selection;
 
-    public async Task<string> SelectCommandAsync() {
-        var result = await SelectItemAsync();
+    public async Task<string> SelectCommandAsync(Action<int> scanner = null) {
+        var result = await SelectItemAsync(scanner);
         if (result == -1) {
             return null;
         } else {
@@ -21,7 +22,7 @@ public abstract class GenericSelector : MonoBehaviour {
         GetCell(selection).SetSelected(false);
     }
 
-    public async Task<int> SelectItemAsync() {
+    public async Task<int> SelectItemAsync(Action<int> scanner = null) {
         var completion = new TaskCompletionSource<int>();
 
         selection = 0;
@@ -29,6 +30,7 @@ public abstract class GenericSelector : MonoBehaviour {
             MoveSelectionVertical(1);
         }
         GetCell(selection).SetSelected(true);
+        scanner?.Invoke(selection);
 
         string listenerId = "ListSelector" + gameObject.name;
         Global.Instance().Input.PushListener(listenerId, (InputManager.Command command, InputManager.Event ev) => {
@@ -37,32 +39,34 @@ public abstract class GenericSelector : MonoBehaviour {
             }
             switch (command) {
                 case InputManager.Command.Cancel:
-                    completion.SetResult(-1);
                     Global.Instance().Input.RemoveListener(listenerId);
+                    DisableSelection();
+                    completion.SetResult(-1);
                     break;
                 case InputManager.Command.Confirm:
-                    completion.SetResult(selection);
                     Global.Instance().Input.RemoveListener(listenerId);
+                    DisableSelection();
+                    completion.SetResult(selection);
                     break;
                 case InputManager.Command.Up:
                     MoveSelectionVertical(-1);
+                    scanner?.Invoke(selection);
                     break;
                 case InputManager.Command.Down:
                     MoveSelectionVertical(1);
+                    scanner?.Invoke(selection);
                     break;
                 case InputManager.Command.Left:
                     MoveSelectionHorizontal(-1);
+                    scanner?.Invoke(selection);
                     break;
                 case InputManager.Command.Right:
                     MoveSelectionHorizontal(1);
+                    scanner?.Invoke(selection);
                     break;
             }
             return true;
         });
-
-        await completion.Task;
-
-        DisableSelection();
 
         return await completion.Task;
     }

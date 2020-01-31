@@ -11,7 +11,7 @@ using System;
 /// </remarks>
 public class ListView : MonoBehaviour {
 
-    public GameObject prefab;
+    [SerializeField] private GameObject prefab = null;
 
     public void Populate<T>(IEnumerable<T> data, Action<GameObject, T> populater) {
         DestroyChildren();

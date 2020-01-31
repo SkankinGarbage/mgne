@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Inventory {
+public class Inventory : IEnumerable<CombatItem> {
 
     protected int capacity;
 
@@ -22,6 +22,9 @@ public class Inventory {
             items[slot] = value;
         }
     }
+
+    public IEnumerator<CombatItem> GetEnumerator() => Items.GetEnumerator();
+    IEnumerator IEnumerable.GetEnumerator() => items.GetEnumerator();
 
     public Inventory(int capacity) {
         this.capacity = capacity;

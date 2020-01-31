@@ -39,6 +39,10 @@ public class AudioManager : MonoBehaviour {
         sfxSource.volume = sfxVolumeSetting.Value * baseVolume;
     }
 
+    public static void PlayFail() {
+        Global.Instance().Audio.PlaySFX("fail");
+    }
+
     public void PlaySFX(Enum enumValue) {
         PlaySFX(enumValue.ToString());
     }

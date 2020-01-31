@@ -23,8 +23,14 @@ public class MainMenuView : MonoBehaviour {
         MenuAync();
     }
 
-    public void OnDisable() {
-        
+    private static MainMenuView defaultMenu;
+    public static void ShowDefault() {
+        if (defaultMenu == null) {
+            defaultMenu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<MainMenuView>();
+            defaultMenu.transform.SetParent(Global.Instance().UI.transform, worldPositionStays: false);
+        }
+        Global.Instance().Maps.avatar.PauseInput();
+        defaultMenu.gameObject.SetActive(true);
     }
 
     public void Populate() {
@@ -59,19 +65,14 @@ public class MainMenuView : MonoBehaviour {
         Global.Instance().Maps.avatar.UnpauseInput();
     }
 
-    private static MainMenuView defaultMenu;
-    public static void ShowDefault() {
-        if (defaultMenu == null) {
-            defaultMenu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<MainMenuView>();
-            defaultMenu.transform.SetParent(Global.Instance().UI.transform, worldPositionStays:false);
-        }
-        Global.Instance().Maps.avatar.PauseInput();
-        defaultMenu.gameObject.SetActive(true);
-    }
-
     private async Task AbilSelect() {
         mainMenu.ClearSelection();
-        int result = await abilMenu.SelectItemAsync();
-        Debug.Log(result);
+        int slot = await abilMenu.SelectItemAsync();
+        
+        if (slot >= 0) {
+            var unit = Global.Instance().Data.Party[slot];
+            var abilMenu = AbilMenuView.ShowDefault();
+            await abilMenu.DoMenuAsync(unit);
+        }
     }
 }
