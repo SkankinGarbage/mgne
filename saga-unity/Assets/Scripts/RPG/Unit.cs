@@ -16,6 +16,7 @@ public class Unit {
 
     public bool IsCarryingItemType(CombatItemData data) => Equipment.ContainsItemType(data);
     public string Name => name?.Length > 0 ? name : data.name?.Length > 0 ? data.name : SpeciesString;
+    public Race Race => data.race;
     public string SpeciesString => (data.species?.Length > 0 ? data.species : data.race.ToString()) + " " + data.gender.Label();
 
     public bool IsDead {
@@ -38,7 +39,7 @@ public class Unit {
     public Unit(CharaData data) {
         this.data = data;
         Stats = new StatSet(data.stats);
-        Equipment = new EquipmentInventory(this);
+        Equipment = new EquipmentInventory(this, data);
         FieldSpriteTag = data.appearance;
     }
 
@@ -58,5 +59,24 @@ public class Unit {
             Stats[StatTag.HP] = Stats[StatTag.MHP];
         }
         return (int) Stats[StatTag.HP] - old;
+    }
+
+    /// <summary>To be called from the inventory</summary>
+    public void OnEquip(CombatItem item) {
+        Stats += item.Stats;
+        if (Race == Race.ROBOT) {
+            item.HalveUses();
+            Stats += item.RoboStats;
+        }
+    }
+
+    /// <summary>To be called from the inventory</summary>
+    public void OnUnequip(CombatItem item) {
+        Stats -= item.Stats;
+        if (Race == Race.ROBOT) {
+            item.HalveUses();
+            Stats -= item.RoboStats;
+            Heal(0);
+        }
     }
 }

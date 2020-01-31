@@ -38,7 +38,7 @@ public class Inventory : IEnumerable<CombatItem> {
 
     /// <summary>Sets a combat item in the given inventory slot</summary>
     /// <returns>The item that used to be there, or null</returns>
-    public CombatItem SetSlot(int slot, CombatItem item) {
+    public virtual CombatItem SetSlot(int slot, CombatItem item) {
         if (slot >= capacity) {
             Debug.LogWarningFormat("Out of bounds inventory check " + slot);
             return null;

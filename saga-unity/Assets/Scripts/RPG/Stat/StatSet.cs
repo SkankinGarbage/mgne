@@ -79,18 +79,22 @@ public class StatSet : ISerializationCallbackReceiver {
         Add(tag, -value);
     }
 
-    public void AddSet(StatSet other) {
+    public static StatSet operator +(StatSet a, StatSet b) => a.AddSet(b);
+    public StatSet AddSet(StatSet other) {
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
             if (other.stats.ContainsKey(tag)) {
                 stats[tag] = Stat.Get(tag).combinator.Combine(stats[tag], other.stats[tag]);
             }
         }
+        return this;
     }
 
-    public void RemoveSet(StatSet other) {
+    public static StatSet operator -(StatSet a, StatSet b) => a.RemoveSet(b);
+    public StatSet RemoveSet(StatSet other) {
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
             stats[tag] = Stat.Get(tag).combinator.Decombine(stats[tag], other.stats[tag]);
         }
+        return this;
     }
 
     // === SERIALIZATION ===
