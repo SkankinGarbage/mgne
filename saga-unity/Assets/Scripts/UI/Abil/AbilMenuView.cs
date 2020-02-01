@@ -13,6 +13,7 @@ public class AbilMenuView : MonoBehaviour {
     [SerializeField] private ListView abilList = null;
     [SerializeField] private Text descriptionLabel = null;
     [SerializeField] private GenericSelector abilMenu = null;
+    [SerializeField] private MiniCharaSelectView miniSelect = null;
     
     public static AbilMenuView ShowDefault() {
         var menu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<AbilMenuView>();

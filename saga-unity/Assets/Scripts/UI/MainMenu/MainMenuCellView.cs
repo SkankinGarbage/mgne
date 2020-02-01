@@ -12,7 +12,12 @@ public class MainMenuCellView : MonoBehaviour {
     public void Populate(Unit unit) {
         nameText.text = unit.Name;
         hpText.text = unit[StatTag.HP] + "/" + unit[StatTag.MHP];
-        raceStatusText.text = unit.Status == null ? unit.SpeciesString : unit.Status.ToString();
+        if (unit.Status == null || unit.IsDead) {
+            raceStatusText.text = unit.Status == null ? unit.SpeciesString : unit.Status.ToString();
+        } else {
+            raceStatusText.text = unit.Status.ToString();
+        }
         sprite.Populate(unit.FieldSpriteTag);
+        sprite.facing = unit.IsDead ? OrthoDir.North : OrthoDir.South;
     }
 }

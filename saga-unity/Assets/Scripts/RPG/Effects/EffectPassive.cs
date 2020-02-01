@@ -4,7 +4,7 @@
 
     public EffectPassive(EffectPassiveData data, CombatItem item) : base(data, item) {
         this.data = data;
-        item.Stats += data.stats;
+        item.Stats.AddSet(data.stats);
     }
 
     public override bool IsBattleUsable() => false;

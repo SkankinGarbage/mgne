@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(FieldSpritesheetComponent))]
 public class FieldSpriteImage : MonoBehaviour {
 
-    [SerializeField] private OrthoDir facing = OrthoDir.South;
+    public OrthoDir facing = OrthoDir.South;
 
     private FieldSpritesheetComponent spritesheet;
     public FieldSpritesheetComponent Spritesheet {
