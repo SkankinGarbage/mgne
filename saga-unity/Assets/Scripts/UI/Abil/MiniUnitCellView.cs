@@ -13,7 +13,6 @@ public class MiniUnitCellView : MonoBehaviour {
         } else {
             statusText.text = unit.Status.ToString();
         }
-        sprite.Populate(unit.FieldSpriteTag);
-        sprite.facing = unit.IsDead ? OrthoDir.North : OrthoDir.South;
+        sprite.Populate(unit);
     }
 }

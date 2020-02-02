@@ -13,7 +13,7 @@ public class AbilMenuView : MonoBehaviour {
     [SerializeField] private ListView abilList = null;
     [SerializeField] private Text descriptionLabel = null;
     [SerializeField] private GenericSelector abilMenu = null;
-    [SerializeField] private MiniCharaSelectView miniSelect = null;
+    [SerializeField] private MiniUnitSelectView miniSelect = null;
     
     public static AbilMenuView ShowDefault() {
         var menu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<AbilMenuView>();
@@ -56,6 +56,13 @@ public class AbilMenuView : MonoBehaviour {
                 }
             }
         }
+    }
+
+    public async Task<Unit> SelectUnitTarget() {
+        miniSelect.gameObject.SetActive(true);
+        var unit = await miniSelect.SelectUnitAsync(Global.Instance().Data.Party);
+        miniSelect.gameObject.SetActive(false);
+        return unit;
     }
 
     public IEnumerator CloseRoutine() {

@@ -17,7 +17,6 @@ public class MainMenuCellView : MonoBehaviour {
         } else {
             raceStatusText.text = unit.Status.ToString();
         }
-        sprite.Populate(unit.FieldSpriteTag);
-        sprite.facing = unit.IsDead ? OrthoDir.North : OrthoDir.South;
+        sprite.Populate(unit);
     }
 }

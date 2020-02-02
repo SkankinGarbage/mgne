@@ -32,4 +32,9 @@ public class FieldSpriteImage : MonoBehaviour {
         Spritesheet.SetByTag(tag);
         Image.sprite = Spritesheet.FrameForDirection(facing);
     }
+
+    public void Populate(Unit unit) {
+        Populate(unit.FieldSpriteTag);
+        facing = unit.IsDead ? OrthoDir.North : OrthoDir.South;
+    }
 }
