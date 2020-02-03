@@ -7,6 +7,7 @@ using System.Collections;
 public class GameData {
 
     public Party Party { get; private set; }
+    public PartyInventory Inventory { get; private set; }
     public int GP { get; private set; }
     public string LocationName { get; private set; }
     public string CurrentBGMKey { get; private set; }
@@ -18,6 +19,7 @@ public class GameData {
         GP = 999;
         LocationName = "Debug";
         Party = new Party(IndexDatabase.Instance().Parties.defaultParty);
+        Inventory = new PartyInventory();
     }
 
     public void OnTeleportTo(Map map) {

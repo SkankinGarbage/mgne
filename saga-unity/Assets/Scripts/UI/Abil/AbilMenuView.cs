@@ -36,12 +36,12 @@ public class AbilMenuView : MonoBehaviour {
         return await abilMenu.SelectItemAsync(slot => {
             var item = unit.Equipment[slot];
             descriptionLabel.text = item == null ? "" : item.Data.itemDescription;
-        });
+        }, true);
     }
 
     public async Task DoMenuAsync(Unit unit) {
-        Populate(unit);
         while (true) {
+            Populate(unit);
             var slot = await SelectSlotAsync(unit);
             if (slot == -1) {
                 break;

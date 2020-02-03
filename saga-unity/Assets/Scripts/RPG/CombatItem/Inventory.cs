@@ -108,13 +108,15 @@ public class Inventory : IEnumerable<CombatItem> {
     }
 
     /// <param name="item">The item to drop, assuming it's in the inventory</param>
-    public void Drop(CombatItem item) {
-        Drop(SlotForItem(item));
+    public CombatItem Drop(CombatItem item) {
+        return Drop(SlotForItem(item));
     }
 
     /// <param name="item">The slot to drop from</param>
-    public void Drop(int slot) {
+    public CombatItem Drop(int slot) {
+        var oldOccupant = items[slot];
         items[slot] = null;
+        return oldOccupant;
     }
 
     /// <returns>True if any item is based off of that data type</returns>

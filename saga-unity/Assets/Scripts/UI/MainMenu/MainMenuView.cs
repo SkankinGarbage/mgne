@@ -52,6 +52,9 @@ public class MainMenuView : MonoBehaviour {
                 case "Abil":
                     await AbilSelect();
                     return;
+                case "Equip":
+                    await EquipSelect();
+                    break;
                 case null:
                     await expander.HideRoutine();
                     Close();
@@ -73,6 +76,19 @@ public class MainMenuView : MonoBehaviour {
             var unit = Global.Instance().Data.Party[slot];
             var abilMenu = AbilMenuView.ShowDefault();
             await abilMenu.DoMenuAsync(unit);
+            await abilMenu.CloseRoutine();
+        }
+    }
+
+    private async Task EquipSelect() {
+        mainMenu.ClearSelection();
+        int slot = await abilMenu.SelectItemAsync();
+
+        if (slot >= 0) {
+            var unit = Global.Instance().Data.Party[slot];
+            var equipMenu = EquipMenuView.ShowDefault();
+            await equipMenu.DoMenuAsync(unit);
+            await equipMenu.CloseRoutine();
         }
     }
 }

@@ -22,10 +22,11 @@ public abstract class GenericSelector : MonoBehaviour {
         GetCell(selection).SetSelected(false);
     }
 
-    public async Task<int> SelectItemAsync(Action<int> scanner = null) {
+    public async Task<int> SelectItemAsync(Action<int> scanner = null, bool leavePointerEnabled = false) {
         var completion = new TaskCompletionSource<int>();
 
-        selection = 0;
+        if (!leavePointerEnabled) selection = 0;
+        UpdateSelection(selection);
         while (!GetCell(selection).IsSelectable()) {
             MoveSelectionVertical(1);
         }
@@ -40,12 +41,12 @@ public abstract class GenericSelector : MonoBehaviour {
             switch (command) {
                 case InputManager.Command.Cancel:
                     Global.Instance().Input.RemoveListener(listenerId);
-                    DisableSelection();
+                    if (!leavePointerEnabled) TurnOffPointer();
                     completion.SetResult(-1);
                     break;
                 case InputManager.Command.Confirm:
                     Global.Instance().Input.RemoveListener(listenerId);
-                    DisableSelection();
+                    if (!leavePointerEnabled) TurnOffPointer();
                     completion.SetResult(selection);
                     break;
                 case InputManager.Command.Up:
@@ -71,6 +72,12 @@ public abstract class GenericSelector : MonoBehaviour {
         return await completion.Task;
     }
 
+    public void TurnOffPointer() {
+        foreach (SelectableCell child in GetCells()) {
+            child.GetComponent<SelectableCell>().SetSelected(false);
+        }
+    }
+
     protected abstract int CellCount();
 
     protected abstract SelectableCell GetCell(int index);
@@ -91,11 +98,5 @@ public abstract class GenericSelector : MonoBehaviour {
         if (newSelection >= CellCount()) newSelection = 0;
         GetCell(newSelection).SetSelected(true);
         selection = newSelection;
-    }
-
-    private void DisableSelection() {
-        foreach (SelectableCell child in GetCells()) {
-            child.GetComponent<SelectableCell>().SetSelected(false);
-        }
     }
 }

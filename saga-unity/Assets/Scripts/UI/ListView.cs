@@ -14,17 +14,26 @@ public class ListView : MonoBehaviour {
     [SerializeField] private GameObject prefab = null;
 
     public void Populate<T>(IEnumerable<T> data, Action<GameObject, T> populater) {
-        DestroyChildren();
+        var index = 0;
         foreach (var datum in data) {
-            var gameObject = Instantiate(prefab);
+            GameObject gameObject;
+            if (transform.childCount > index) {
+                gameObject = Instantiate(prefab);
+                gameObject.transform.SetParent(transform, worldPositionStays: false);
+            } else {
+                var child = transform.GetChild(index);
+                gameObject = child.gameObject;
+            }
+            
             populater(gameObject, datum);
-            gameObject.transform.SetParent(transform, worldPositionStays:false);
+            
+            index += 1;
         }
-    }
 
-    private void DestroyChildren() {
-        foreach (RectTransform child in transform) {
-            Destroy(child.gameObject);
+        // destroy extra children
+        var offset = index;
+        for (; index < transform.childCount; index += 1) {
+            Destroy(transform.GetChild(index - offset).gameObject);
         }
     }
 }
