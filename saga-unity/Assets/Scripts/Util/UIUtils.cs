@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Text;
 
 public class UIUtils {
 
@@ -22,5 +23,21 @@ public class UIUtils {
 
     public static double CurrentTimestamp() {
         return DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+    }
+
+    /// <returns>The input string with ascii characters for glyphs replacing $A, $B etc</returns>
+    public static string GlyphifyString(string input) {
+        StringBuilder output = new StringBuilder();
+        for (int i = 0; i < input.Length; i += 1) {
+            if (input[i] == '$') {
+                int ascii = input[i + 1];
+                ascii += 232 - 'A'; // glyph $A starts at 232
+                output.Append((char)ascii);
+                i += 1;
+            } else {
+                output.Append(input[i]);
+            }
+        }
+        return output.ToString();
     }
 }

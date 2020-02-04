@@ -16,6 +16,7 @@ public class CombatItem {
     public bool IsBattleUseable => true; // TODO: effect.IsBattleUseable 
     public bool IsMapUseable => true;
     public StatSet RoboStats => Data.robostats;
+    public string Name => UIUtils.GlyphifyString(Data.abilityName);
 
     public CombatItem(CombatItemData data) {
         Data = data;

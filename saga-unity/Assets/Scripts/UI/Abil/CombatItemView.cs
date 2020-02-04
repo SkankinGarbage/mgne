@@ -8,7 +8,7 @@ public class CombatItemView : MonoBehaviour {
     [SerializeField] private Text usesLabel = null;
 
     public void Populate(CombatItem item) {
-        nameLabel.text = item?.Data.abilityName;
+        nameLabel.text = item?.Name;
         usesLabel.text = item?.Data.uses > 0 ? item.UsesRemaining.ToString() : "";
     }
 }
