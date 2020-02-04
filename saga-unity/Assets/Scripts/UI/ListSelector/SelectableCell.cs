@@ -3,12 +3,12 @@ using System.Collections;
 
 public class SelectableCell : MonoBehaviour {
 
-    public GameObject selectedState;
+    [SerializeField] private GameObject selectedState = null;
 
     protected bool selectable = true;
 
     public virtual void SetSelected(bool selected) {
-        selectedState.SetActive(selected);
+        selectedState?.SetActive(selected);
     }
 
     public virtual void SetSelectable(bool selectable) {

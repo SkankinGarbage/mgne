@@ -32,8 +32,12 @@ public class ListView : MonoBehaviour {
 
         // destroy extra children
         var offset = index;
+        List<GameObject> toDestroy = new List<GameObject>();
         for (; index < transform.childCount; index += 1) {
-            Destroy(transform.GetChild(index - offset).gameObject);
+            toDestroy.Add(transform.GetChild(index - offset).gameObject);
+        }
+        foreach (var obj in toDestroy) {
+            DestroyImmediate(obj);
         }
     }
 }

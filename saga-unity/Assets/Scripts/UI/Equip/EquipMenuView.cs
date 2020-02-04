@@ -11,10 +11,8 @@ public class EquipMenuView : MonoBehaviour {
     [SerializeField] private MainMenuCellView unitCell = null;
     [SerializeField] private List<StatLabelView> statLabels = null;
 
-    [SerializeField] private ListView equipList = null;
-    [SerializeField] private GenericSelector equipMenu = null;
-    [SerializeField] private ListView inventoryList = null;
-    [SerializeField] private GenericSelector inventoryMenu = null;
+    [SerializeField] private CombatItemList equipList = null;
+    [SerializeField] private CombatItemList inventoryList = null;
 
     public static EquipMenuView ShowDefault() {
         var menu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<EquipMenuView>();
@@ -27,12 +25,8 @@ public class EquipMenuView : MonoBehaviour {
         foreach (var label in statLabels) {
             label.Populate(unit.Stats);
         }
-        equipList.Populate(unit.Equipment, (obj, item) => {
-            obj.GetComponent<CombatItemView>().Populate(item);
-        });
-        inventoryList.Populate(Global.Instance().Data.Inventory, (obj, item) => {
-            obj.GetComponent<CombatItemView>().Populate(item);
-        });
+        equipList.Populate(unit.Equipment);
+        inventoryList.Populate(Global.Instance().Data.Inventory);
     }
 
     public async Task DoMenuAsync(Unit unit) {
@@ -40,7 +34,7 @@ public class EquipMenuView : MonoBehaviour {
         while (true) {
             Populate(unit);
 
-            var equipSlot = await equipMenu.SelectItemAsync(null, true);
+            var equipSlot = await equipList.Selector.SelectItemAsync(null, true);
             if (equipSlot == -1) {
                 break;
             }
@@ -49,7 +43,7 @@ public class EquipMenuView : MonoBehaviour {
                 continue;
             }
 
-            var inventorySlot = await inventoryMenu.SelectItemAsync();
+            var inventorySlot = await inventoryList.Selector.SelectItemAsync();
             if (inventorySlot == -1) {
                 continue;
             }

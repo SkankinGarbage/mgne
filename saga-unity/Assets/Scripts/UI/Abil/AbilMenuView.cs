@@ -10,9 +10,8 @@ public class AbilMenuView : MonoBehaviour {
 
     [SerializeField] private MainMenuCellView unitCell = null;
     [SerializeField] private List<StatLabelView> statLabels = null;
-    [SerializeField] private ListView abilList = null;
+    [SerializeField] private CombatItemList abilList = null;
     [SerializeField] private Text descriptionLabel = null;
-    [SerializeField] private GenericSelector abilMenu = null;
     [SerializeField] private MiniUnitSelectView miniSelect = null;
     
     public static AbilMenuView ShowDefault() {
@@ -27,13 +26,11 @@ public class AbilMenuView : MonoBehaviour {
         foreach (var label in statLabels) {
             label.Populate(unit.Stats);
         }
-        abilList.Populate(unit.Equipment, (obj, item) => {
-            obj.GetComponent<CombatItemView>().Populate(item);
-        });
+        abilList.Populate(unit.Equipment);
     }
 
     public async Task<int> SelectSlotAsync(Unit unit) {
-        return await abilMenu.SelectItemAsync(slot => {
+        return await abilList.Selector.SelectItemAsync(slot => {
             var item = unit.Equipment[slot];
             descriptionLabel.text = item == null ? "" : item.Data.itemDescription;
         }, true);

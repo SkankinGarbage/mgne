@@ -26,11 +26,10 @@ public abstract class GenericSelector : MonoBehaviour {
         var completion = new TaskCompletionSource<int>();
 
         if (!leavePointerEnabled) selection = 0;
-        UpdateSelection(selection);
         while (!GetCell(selection).IsSelectable()) {
             MoveSelectionVertical(1);
         }
-        GetCell(selection).SetSelected(true);
+        UpdateSelection(selection);
         scanner?.Invoke(selection);
 
         string listenerId = "ListSelector" + gameObject.name;
@@ -93,6 +92,7 @@ public abstract class GenericSelector : MonoBehaviour {
     }
 
     protected void UpdateSelection(int newSelection) {
+        int oldSelection = selection;
         GetCell(selection).SetSelected(false);
         if (newSelection < 0) newSelection = CellCount() - 1;
         if (newSelection >= CellCount()) newSelection = 0;
