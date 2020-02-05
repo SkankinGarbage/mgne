@@ -8,11 +8,12 @@ public class Unit {
     protected string name;
 
     public StatSet Stats { get; private set; }
-    public Status Status { get; private set; }
+    public StatSet BaseStats { get; private set; }
+    public Status Status { get; set; }
     public EquipmentInventory Equipment { get; private set; }
     public string FieldSpriteTag { get; private set; }
 
-    public float this[StatTag tag] { get => Stats[tag]; }
+    public int this[StatTag tag] { get => (int) Stats[tag]; }
 
     public bool IsCarryingItemType(CombatItemData data) => Equipment.ContainsItemType(data);
     public string Name => name?.Length > 0 ? name : data.name?.Length > 0 ? data.name : SpeciesString;
@@ -39,6 +40,7 @@ public class Unit {
     public Unit(CharaData data) {
         this.data = data;
         Stats = new StatSet(data.stats);
+        BaseStats = new StatSet(data.stats);
         Equipment = new EquipmentInventory(this, data);
         FieldSpriteTag = data.appearance;
     }
@@ -78,5 +80,10 @@ public class Unit {
             Stats -= item.RoboStats;
             Heal(0);
         }
+    }
+
+    public void PermanentlyModifyStat(StatTag stat, int delta) {
+        BaseStats[stat] += delta;
+        Stats[stat] += delta;
     }
 }

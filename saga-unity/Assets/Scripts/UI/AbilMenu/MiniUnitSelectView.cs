@@ -20,4 +20,12 @@ public class MiniUnitSelectView : MonoBehaviour {
         if (slot == -1) return null;
         return party[slot];
     }
+
+    public async Task<Unit> SelectUnitTargetAsync() {
+        bool wasActive = gameObject.activeInHierarchy;
+        gameObject.SetActive(true);
+        var unit = await SelectUnitAsync(Global.Instance().Data.Party);
+        gameObject.SetActive(wasActive);
+        return unit;
+    }
 }

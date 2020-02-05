@@ -55,13 +55,6 @@ public class AbilMenuView : MonoBehaviour {
         }
     }
 
-    public async Task<Unit> SelectUnitTarget() {
-        miniSelect.gameObject.SetActive(true);
-        var unit = await miniSelect.SelectUnitAsync(Global.Instance().Data.Party);
-        miniSelect.gameObject.SetActive(false);
-        return unit;
-    }
-
     public IEnumerator CloseRoutine() {
         Destroy(gameObject);
         yield break; ;

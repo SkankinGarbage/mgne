@@ -5,10 +5,10 @@ public class EffectStatCandyData : AbilEffectData {
     public StatTag stat;
 
     [UnityEngine.Tooltip("Min gain")]
-    public StatTag minGain;
+    public int minGain;
 
     [UnityEngine.Tooltip("Max gain")]
-    public StatTag maxGain;
+    public int maxGain;
 
     [UnityEngine.Tooltip("Restricted races - only these races allowed to consume")]
     public Race[] restrictRace;

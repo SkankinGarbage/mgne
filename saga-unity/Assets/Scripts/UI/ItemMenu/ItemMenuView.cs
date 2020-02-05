@@ -46,6 +46,7 @@ public class ItemMenuView : MonoBehaviour {
             string command = await useDropMenu.SelectCommandAsync();
             switch (command) {
                 case "Use":
+                    int charSlot = await unitSelector.SelectItemAsync();
                     // TODO
                     break;
                 case "Drop":

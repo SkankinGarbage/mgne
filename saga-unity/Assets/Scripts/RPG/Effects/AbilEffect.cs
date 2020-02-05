@@ -18,7 +18,20 @@ public abstract class AbilEffect {
     public abstract bool IsMapUsable();
     public virtual bool CanTargetDead() => false;
 
-    public virtual void OnMapUse(AbilMenuView menu) {
+    public virtual void OnMapUse(MiniUnitSelectView menu, Unit user) {
         Debug.LogError("Unimplemented map use for item " + this);
+    }
+
+    public void PlayMainSound() {
+        // TODO: extract audio from battle anim
+    }
+
+    protected void FinishMapEffect(bool affected) {
+        if (affected) {
+            item.DeductUse();
+            PlayMainSound();
+        } else {
+            AudioManager.PlayFail();
+        }
     }
 }

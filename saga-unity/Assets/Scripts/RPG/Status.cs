@@ -11,4 +11,12 @@ public class Status {
     public Status(StatusData data) {
         Data = data;
     }
+
+    /// <summary>Remove the status off the victim, out of battle</summary>
+    public void Heal(Unit victim) {
+        if (Data.lethality == LethalityType.DEATH) {
+            victim.Heal(1);
+        }
+        victim.Status = null;
+    }
 }

@@ -44,6 +44,13 @@ public class CombatItem {
         DiscardIfNeeded();
     }
 
+    public void DeductUse() {
+        if (UsesRemaining > 0) {
+            UsesRemaining -= 1;
+        }
+        DiscardIfNeeded();
+    }
+
     public void DiscardIfNeeded() {
         if (UsesRemaining > 0) return;
         if (Data.uses == 0) return;
