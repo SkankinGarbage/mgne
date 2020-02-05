@@ -55,6 +55,9 @@ public class MainMenuView : MonoBehaviour {
                 case "Equip":
                     await EquipSelect();
                     break;
+                case "Items":
+                    await ItemSelect();
+                    break;
                 case null:
                     await expander.HideRoutine();
                     Close();
@@ -90,5 +93,11 @@ public class MainMenuView : MonoBehaviour {
             await equipMenu.DoMenuAsync(unit);
             await equipMenu.CloseRoutine();
         }
+    }
+
+    public async Task ItemSelect() {
+        var itemMenu = ItemMenuView.ShowDefault();
+        itemMenu.Populate();
+        await itemMenu.DoMenuAsync();
     }
 }

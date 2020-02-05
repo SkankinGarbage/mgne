@@ -6,11 +6,11 @@ public class PointerComponent : MonoBehaviour {
     [SerializeField] private PointerLayer pointers = null;
 
     public void Update() {
-        pointers?.SetPointerAt(transform);
+        pointers?.SetPointerAt(gameObject);
     }
 
     public void OnDisable() {
-        pointers?.HidePointer(transform);
+        pointers?.HidePointer(gameObject);
     }
 
     public void Populate(PointerLayer pointers) {

@@ -14,6 +14,8 @@ public class CombatItemView : MonoBehaviour {
         this.pointers = pointers != null ? pointers : this.pointers;
         ownedPointer.Populate(this.pointers);
 
-        gameObject.name = item.Name;
+        if (item != null) {
+            gameObject.name = item.Name;
+        }
     }
 }

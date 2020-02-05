@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SelectableCell : MonoBehaviour {
 
-    [SerializeField] private GameObject selectedState = null;
+    public GameObject selectedState = null;
 
     protected bool selectable = true;
 

@@ -6,11 +6,12 @@ public class MiniUnitSelectView : MonoBehaviour {
 
     [SerializeField] private DynamicListSelector selector = null;
     [SerializeField] private ListView partyCells = null;
+    [SerializeField] private PointerLayer pointers = null;
 
     public void Populate() {
         partyCells.Populate(Global.Instance().Party, (obj, unit) => {
             var cell = obj.GetComponent<MiniUnitCellView>();
-            cell.Populate(unit);
+            cell.Populate(unit, pointers);
         });
     }
 
