@@ -46,8 +46,14 @@ public class ItemMenuView : MonoBehaviour {
             string command = await useDropMenu.SelectCommandAsync();
             switch (command) {
                 case "Use":
-                    int charSlot = await unitSelector.SelectItemAsync();
-                    // TODO
+                    if (item != null) {
+                        if (item.IsMapUseable) {
+                            // await item.OnMapUseDeferred(this);
+                        } else {
+                            AudioManager.PlayFail();
+                            await Task.Delay(100);
+                        }
+                    }
                     break;
                 case "Drop":
                     items.Drop(item);

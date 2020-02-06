@@ -105,6 +105,16 @@ public class Party : IEnumerable<Unit> {
         }
     }
 
+    /// <returns>The ordinal of the group the unit is in, or -1 for not found</returns>
+    public int GetSlotForUnit(Unit unit) {
+        for (var i = 0; i < Groups.Count; i += 1) {
+            if (Groups[i].Contains(unit)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     private bool AnyMembersMeetCritera(Func<Unit, bool> critera) {
         foreach (var unit in Members) {
             if (critera(unit)) {
