@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
 public class ReorderCellView : MonoBehaviour {
@@ -7,6 +6,8 @@ public class ReorderCellView : MonoBehaviour {
     [SerializeField] private MainMenuCellView unitCell = null;
     [SerializeField] private Text ordinalText = null;
     [SerializeField] private Text descriptionText = null;
+
+    public FieldSpriteImage Sprite { get => unitCell.Sprite; }
 
     public void Populate(Unit unit, int ordinal) {
         switch (ordinal) {

@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-public class EquipMenuView : MonoBehaviour {
-
-    private const string PrefabPath = "Prefabs/UI/Equip/EquipMenu";
+public class EquipMenuView : FullScreenMenuView {
 
     [SerializeField] private MainMenuCellView unitCell = null;
     [SerializeField] private List<StatLabelView> statLabels = null;
@@ -15,9 +13,7 @@ public class EquipMenuView : MonoBehaviour {
     [SerializeField] private CombatItemList inventoryList = null;
 
     public static EquipMenuView ShowDefault() {
-        var menu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<EquipMenuView>();
-        menu.transform.SetParent(Global.Instance().UI.transform, worldPositionStays: false);
-        return menu;
+        return Instantiate<EquipMenuView>("Prefabs/UI/Equip/EquipMenu");
     }
 
     public void Populate(Unit unit) {
@@ -52,10 +48,5 @@ public class EquipMenuView : MonoBehaviour {
             unit.Equipment.SetSlot(equipSlot, inventory.Drop(inventorySlot));
             inventory.SetSlot(inventorySlot, oldOccupant);
         }
-    }
-
-    public IEnumerator CloseRoutine() {
-        Destroy(gameObject);
-        yield break; ;
     }
 }

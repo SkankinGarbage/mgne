@@ -9,6 +9,8 @@ public class MainMenuCellView : MonoBehaviour {
     [SerializeField] private Text raceStatusText = null;
     [SerializeField] private FieldSpriteImage sprite = null;
 
+    public FieldSpriteImage Sprite { get => sprite; }
+
     public void Populate(Unit unit) {
         nameText.text = unit.Name;
         hpText.text = unit[StatTag.HP] + "/" + unit[StatTag.MHP];

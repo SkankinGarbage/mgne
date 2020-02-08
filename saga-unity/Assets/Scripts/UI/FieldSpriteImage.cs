@@ -8,6 +8,9 @@ public class FieldSpriteImage : MonoBehaviour {
 
     public OrthoDir facing = OrthoDir.South;
 
+    public bool animates = false;
+    public int stepsPerSecond = 2;
+
     private FieldSpritesheetComponent spritesheet;
     public FieldSpritesheetComponent Spritesheet {
         get {
@@ -28,7 +31,11 @@ public class FieldSpriteImage : MonoBehaviour {
         }
     }
 
+    private new string tag;
+    private float elapsed;
+
     public void Populate(string tag) {
+        this.tag = tag;
         Spritesheet.SetByTag(tag);
         Image.sprite = Spritesheet.FrameForDirection(facing);
     }
@@ -36,5 +43,14 @@ public class FieldSpriteImage : MonoBehaviour {
     public void Populate(Unit unit) {
         Populate(unit.FieldSpriteTag);
         facing = unit.IsDead ? OrthoDir.North : OrthoDir.South;
+    }
+
+    public void Update() {
+        if (animates) {
+            elapsed += Time.deltaTime;
+        } else {
+            elapsed = 0;
+        }
+        Image.sprite = Spritesheet.FrameBySlot((int)(elapsed * stepsPerSecond) % Spritesheet.StepCount, facing);
     }
 }

@@ -3,9 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-public class MainMenuView : MonoBehaviour {
-
-    private const string PrefabPath = "Prefabs/UI/MainMenu/MainMenu";
+public class MainMenuView : FullScreenMenuView {
 
     [SerializeField] private Text gpText = null;
     [SerializeField] private Text locationText = null;
@@ -26,8 +24,7 @@ public class MainMenuView : MonoBehaviour {
     private static MainMenuView defaultMenu;
     public static void ShowDefault() {
         if (defaultMenu == null) {
-            defaultMenu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<MainMenuView>();
-            defaultMenu.transform.SetParent(Global.Instance().UI.transform, worldPositionStays: false);
+            defaultMenu = Instantiate<MainMenuView>("Prefabs/UI/MainMenu/MainMenu");
         }
         Global.Instance().Maps.avatar.PauseInput();
         defaultMenu.gameObject.SetActive(true);
@@ -51,12 +48,15 @@ public class MainMenuView : MonoBehaviour {
             switch (command) {
                 case "Abil":
                     await AbilSelect();
-                    return;
+                    break;
                 case "Equip":
                     await EquipSelect();
                     break;
                 case "Items":
                     await ItemSelect();
+                    break;
+                case "Order":
+                    await OrderSelect();
                     break;
                 case null:
                     await expander.HideRoutine();
@@ -99,5 +99,11 @@ public class MainMenuView : MonoBehaviour {
         var itemMenu = ItemMenuView.ShowDefault();
         itemMenu.Populate();
         await itemMenu.DoMenuAsync();
+    }
+
+    public async Task OrderSelect() {
+        var orderMenu = OrderMenuView.ShowDefault();
+        orderMenu.Populate();
+        await orderMenu.DoMenuAsync();
     }
 }

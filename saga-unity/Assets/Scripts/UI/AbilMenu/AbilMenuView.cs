@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-public class AbilMenuView : MonoBehaviour {
-
-    private const string PrefabPath = "Prefabs/UI/Abil/AbilMenu";
+public class AbilMenuView : FullScreenMenuView {
 
     [SerializeField] private MainMenuCellView unitCell = null;
     [SerializeField] private List<StatLabelView> statLabels = null;
@@ -15,9 +13,7 @@ public class AbilMenuView : MonoBehaviour {
     [SerializeField] private MiniUnitSelectView miniSelect = null;
     
     public static AbilMenuView ShowDefault() {
-        var menu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<AbilMenuView>();
-        menu.transform.SetParent(Global.Instance().UI.transform, worldPositionStays: false);
-        return menu;
+        return Instantiate< AbilMenuView>("Prefabs/UI/Abil/AbilMenu");
     }
 
     public void Populate(Unit unit) {
@@ -53,10 +49,5 @@ public class AbilMenuView : MonoBehaviour {
                 }
             }
         }
-    }
-
-    public IEnumerator CloseRoutine() {
-        Destroy(gameObject);
-        yield break; ;
     }
 }

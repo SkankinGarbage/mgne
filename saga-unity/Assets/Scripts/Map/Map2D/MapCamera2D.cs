@@ -9,6 +9,8 @@ public class MapCamera2D : MapCamera {
     public override void ManualUpdate() {
         base.ManualUpdate();
 
+        if (target == null) return;
+        
         // assume the target is moving pixel-perfect (w/e)
         Vector3 targetPos = new Vector3(target.transform.position.x, target.transform.position.y, Camera.transform.position.z);
         Camera.transform.position = new Vector3(

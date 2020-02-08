@@ -3,10 +3,12 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class FadeMaterialComponent : FadeComponent {
 
     [SerializeField] private List<SpriteRenderer> renderersToFade = null;
+    [SerializeField] private List<Image> imagesToFade = null;
 
     private List<Material> materialsToFade;
 
@@ -22,6 +24,9 @@ public class FadeMaterialComponent : FadeComponent {
         }
         foreach (var renderer in renderersToFade) {
             materialsToFade.Add(renderer.sharedMaterial);
+        }
+        foreach (var image in imagesToFade) {
+            materialsToFade.Add(image.material);
         }
 
         while (elapsed < transitionDuration) {

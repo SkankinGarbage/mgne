@@ -9,8 +9,8 @@ public class GridSelector : GenericSelector {
     [SerializeField] private int colCount = 2;
 
 
-    int Col => selection % colCount;
-    int Row => selection / colCount;
+    int Col => Selection % colCount;
+    int Row => Selection / colCount;
 
     protected override int CellCount() {
         return grid.transform.childCount;
@@ -32,7 +32,7 @@ public class GridSelector : GenericSelector {
         col += delta;
         if (col < 0) col = colCount - 1;
         if (col >= colCount) col = 0;
-        UpdateSelection(CellIndexAt(row, col));
+        Selection = CellIndexAt(row, col);
     }
 
     protected override void MoveSelectionVertical(int delta) {
@@ -47,7 +47,7 @@ public class GridSelector : GenericSelector {
         } else if (CellIndexAt(col, row) >= CellCount()) {
             row = 0;
         }
-        UpdateSelection(CellIndexAt(row, col));
+        Selection = CellIndexAt(row, col);
     }
 
     private int CellIndexAt(int row, int col) {

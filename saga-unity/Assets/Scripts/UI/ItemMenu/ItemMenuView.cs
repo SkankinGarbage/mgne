@@ -3,9 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-public class ItemMenuView : MonoBehaviour {
-
-    private const string PrefabPath = "Prefabs/UI/Item/ItemMenu";
+public class ItemMenuView : FullScreenMenuView {
 
     [SerializeField] private CombatItemList inventory = null;
     [SerializeField] private DynamicListSelector unitSelector = null;
@@ -15,9 +13,7 @@ public class ItemMenuView : MonoBehaviour {
     [SerializeField] private Text description = null;
 
     public static ItemMenuView ShowDefault() {
-        var menu = Instantiate(Resources.Load<GameObject>(PrefabPath)).GetComponent<ItemMenuView>();
-        menu.transform.SetParent(Global.Instance().UI.transform, worldPositionStays: false);
-        return menu;
+        return Instantiate<ItemMenuView>("Prefabs/UI/Item/ItemMenu");
     }
 
     public void Populate() {
@@ -65,10 +61,5 @@ public class ItemMenuView : MonoBehaviour {
         }
 
         await CloseRoutine();
-    }
-
-    public IEnumerator CloseRoutine() {
-        Destroy(gameObject);
-        yield break; ;
     }
 }
