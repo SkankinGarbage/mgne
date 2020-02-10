@@ -13,6 +13,8 @@ public class ListView : MonoBehaviour {
 
     [SerializeField] private GameObject prefab = null;
 
+    public event Action<int> OnPopulate;
+
     public void Populate<T>(IEnumerable<T> data, Action<GameObject, T> populater) {
         var index = 0;
         foreach (var datum in data) {
@@ -30,6 +32,8 @@ public class ListView : MonoBehaviour {
             index += 1;
         }
 
+        int dataSize = index;
+
         // destroy extra children
         var offset = index;
         List<GameObject> toDestroy = new List<GameObject>();
@@ -39,5 +43,7 @@ public class ListView : MonoBehaviour {
         foreach (var obj in toDestroy) {
             DestroyImmediate(obj);
         }
+
+        OnPopulate(dataSize);
     }
 }

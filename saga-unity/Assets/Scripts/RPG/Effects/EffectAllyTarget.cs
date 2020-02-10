@@ -11,7 +11,7 @@ public abstract class EffectAllyTarget : AbilEffect {
 
     public override bool IsBattleUsable() => true;
 
-    public override async void OnMapUse(MiniUnitSelectView menu, Unit user) {
+    public override async void OnMapUse(UnitList menu, Unit user) {
         switch (data.projector) {
             case AllyProjectorType.ALLY_PARTY:
             case AllyProjectorType.PLAYER_PARTY_ENEMY_GROUP:

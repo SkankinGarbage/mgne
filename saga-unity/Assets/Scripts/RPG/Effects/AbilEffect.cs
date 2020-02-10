@@ -18,7 +18,7 @@ public abstract class AbilEffect {
     public abstract bool IsMapUsable();
     public virtual bool CanTargetDead() => false;
 
-    public virtual void OnMapUse(MiniUnitSelectView menu, Unit user) {
+    public virtual void OnMapUse(UnitList menu, Unit user) {
         Debug.LogError("Unimplemented map use for item " + this);
     }
 
