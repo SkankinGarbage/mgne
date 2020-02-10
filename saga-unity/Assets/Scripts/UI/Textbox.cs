@@ -6,33 +6,22 @@ using DG.Tweening;
 /// <summary>
 /// Bloated textbox ripped almost directly from Snowbound VN
 /// </summary>
-public class Textbox : MonoBehaviour, IInputListener {
+public class Textbox : TextAutotyper {
 
     private static readonly string SystemSpeaker = "SYSTEM";
     private static float OverlapSlop = 5f;
 
-    [Header("Config")]
-    public float charsPerSecond = 120f;
     public float animationSeconds = 0.2f;
     public float textClearSeconds = 0.1f;
 
-    [Space]
-    [Header("Hookups")]
     public Text namebox;
-    public Text textbox;
     public RectTransform mainBox;
-    public GameObject advanceArrow;
 
-    [Space]
-    [Header("Sizing")]
     public float minTextHeight = 12;
     [HideInInspector] [SerializeField] protected Vector2 textMaxSize;
     [HideInInspector] [SerializeField] protected float nameboxHeight;
 
     public bool isDisplaying { get; private set; }
-    
-    private bool hurried;
-    private bool confirmed;
 
     public void Start() {
         textbox.text = "";
@@ -43,22 +32,6 @@ public class Textbox : MonoBehaviour, IInputListener {
     public void MemorizeSizes() {
         textMaxSize = mainBox.sizeDelta;
         nameboxHeight = namebox.GetComponent<RectTransform>().sizeDelta.y;
-    }
-
-    public bool OnCommand(InputManager.Command command, InputManager.Event eventType) {
-        switch (eventType) {
-            case InputManager.Event.Down:
-                if (command == InputManager.Command.Confirm) {
-                    hurried = true;
-                }
-                break;
-            case InputManager.Event.Up:
-                if (command == InputManager.Command.Confirm) {
-                    confirmed = true;
-                }
-                break;
-        }
-        return true;
     }
 
     public IEnumerator TestRoutine() {
@@ -177,34 +150,5 @@ public class Textbox : MonoBehaviour, IInputListener {
     }
     protected virtual bool IsNameboxEnabled() {
         return namebox.enabled;
-    }
-
-    private IEnumerator TypeRoutine(string text) {
-        hurried = false;
-        float elapsed = 0.0f;
-        float total = text.Length / charsPerSecond;
-        textbox.GetComponent<CanvasGroup>().alpha = 1.0f;
-        while (elapsed <= total) {
-            elapsed += Time.deltaTime;
-            int charsToShow = Mathf.FloorToInt(elapsed * charsPerSecond);
-            int cutoff = charsToShow > text.Length ? text.Length : charsToShow;
-            textbox.text = text.Substring(0, cutoff);
-            textbox.text += "<color=#00000000>";
-            textbox.text += text.Substring(cutoff);
-            textbox.text += "</color>";
-            yield return null;
-
-            if (hurried) {
-                break;
-            }
-        }
-        textbox.text = text;
-
-        confirmed = false;
-        advanceArrow.SetActive(true);
-        while (!confirmed) {
-            yield return null;
-        }
-        advanceArrow.SetActive(false);
     }
 }

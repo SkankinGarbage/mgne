@@ -25,7 +25,7 @@ public class MapManager : MonoBehaviour {
 
     public void Start() {
         activeMap = FindObjectOfType<Map>();
-        avatar = activeMap.GetComponentInChildren<AvatarEvent>();
+        avatar = activeMap?.GetComponentInChildren<AvatarEvent>();
     }
 
     public void SetUpInitialMap(string mapName) {

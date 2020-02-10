@@ -9,9 +9,9 @@ public class PaddingExpanderComponent : MonoBehaviour {
     [SerializeField] private GridLayoutGroup grid = null;
     [SerializeField] private HorizontalOrVerticalLayoutGroup group = null;
     [SerializeField] private ListView list = null;
-    [SerializeField] private int threshold;
-    [SerializeField] private int belowThresholdSpacing;
-    [SerializeField] private int aboveThresholdSpacing;
+    [SerializeField] private int threshold = 0;
+    [SerializeField] private int belowThresholdSpacing = 0;
+    [SerializeField] private int aboveThresholdSpacing = 0;
 
     public void OnEnable() {
         list.OnPopulate += List_OnPopulate;
