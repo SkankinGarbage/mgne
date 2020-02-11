@@ -33,9 +33,10 @@ public class BattleBox : TextAutotyper {
         yield return WriteLineRoutine("BobHuman dealt 10 damages!");
         yield return WriteLineRoutine("BubHuman deflected by ESP.");
         yield return WriteLineRoutine("");
-        yield return WriteLineRoutine("Der dicke Dachdecker deckt Dir dein Dach, drum dank dem dicken Dachdecker, " +
-            "dass der dicke Dachdecker Dir Dein Dach deckte. Der dicke Dachdecker deckt Dir dein Dach, drum dank dem " +
-            "dicken Dachdecker, dass der dicke Dachdecker Dir Dein Dach deckte.");
+        yield return WriteLineRoutine("This is a run-on sentence which is composed of multiple sentences in sequence" +
+            " strung together in a nonsense fashion. My hope is that this stress the multiline capabilities of the" +
+            " text area, and hopefully illustrates that even when the text exceeds one box length, everything is still" +
+            " handled properly.");
         yield return WriteLineRoutine("");
         yield return WriteLineRoutine("Now wasn't that fun?");
     }
@@ -44,7 +45,6 @@ public class BattleBox : TextAutotyper {
         Global.Instance().Input.PushListener(this);
 
         var words = line.Split(' ');
-        int previouslyFullLines = fullLines;
         for (var at = 0; at < words.Length; at += 1) {
             int added = 0;
             var firstLine = new StringBuilder();
@@ -71,22 +71,20 @@ public class BattleBox : TextAutotyper {
                 for (var i = 0; i < lineCount - 1; i += 1) {
                     lines[i] = lines[i + 1];
                 }
-                lines[lineCount - 1] = line;
+                lines[lineCount - 1] = firstLine.ToString();
             }
 
             typingStartIndex = 0;
             var fullMessage = new StringBuilder();
             for (var i = 0; i < lineCount; i += 1) {
-                if (i < previouslyFullLines) {
-                    typingStartIndex += lines[i].Length + 1; // +1 for newline
+                if (i < fullLines - 1) {
+                    typingStartIndex += lines[i].Length + 2; // +2 for \r\n
                 }
 
                 fullMessage.AppendLine(lines[i]);
             }
-
-            if (line.Length == 0) {
-                yield return TypeRoutine(fullMessage.ToString(), false);
-            }
+            
+            yield return TypeRoutine(fullMessage.ToString(), false);
         }
 
         Global.Instance().Input.RemoveListener(this);
