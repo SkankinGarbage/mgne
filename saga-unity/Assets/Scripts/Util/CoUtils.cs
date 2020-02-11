@@ -2,6 +2,7 @@
 using System.Collections;
 using System;
 using DG.Tweening;
+using System.Threading.Tasks;
 
 /// <summary>
 /// A set of functions for chaining together coroutines like they were promises
@@ -84,5 +85,11 @@ public static class CoUtils {
             yield return null;
         }
         setter(to);
+    }
+
+    public static IEnumerator TaskRoutine(Task task) {
+        while (!task.IsCompleted) {
+            yield return null;
+        }
     }
 }

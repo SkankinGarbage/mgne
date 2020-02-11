@@ -58,6 +58,7 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["cs_walk"] = (Action<DynValue, DynValue, DynValue, DynValue>)Walk;
         lua.Globals["cs_path"] = (Action<DynValue, DynValue, DynValue, DynValue>)Path;
         lua.Globals["fade"] = (Action<DynValue>)Fade;
+        lua.Globals["cs_battle"] = (Action<DynValue, DynValue>)Battle;
     }
 
     // === LUA CALLABLE ============================================================================
@@ -173,5 +174,12 @@ public class LuaCutsceneContext : LuaContext {
         }
         lastFade = fade;
         StartCoroutine(Global.Instance().Maps.camera.GetComponent<FadeComponent>().FadeRoutine(fade, invert));
+    }
+
+    private void Battle(DynValue partyLua, DynValue bgmLua) {
+        var partyTag = partyLua.String;
+        var bgmTag = bgmLua.IsNil() ? null : bgmLua.String;
+        var party = IndexDatabase.Instance().Parties.GetData(partyTag);
+        RunRoutineFromLua(BattleView.SpawnBattleRoutine(party, bgmTag));
     }
 }

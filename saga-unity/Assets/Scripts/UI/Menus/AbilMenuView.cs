@@ -13,7 +13,7 @@ public class AbilMenuView : FullScreenMenuView {
     [SerializeField] private UnitList miniSelect = null;
     
     public static AbilMenuView ShowDefault() {
-        return Instantiate< AbilMenuView>("Prefabs/UI/Abil/AbilMenu");
+        return Instantiate<AbilMenuView>("Prefabs/UI/Abil/AbilMenu");
     }
 
     public void Populate(Unit unit) {

@@ -60,6 +60,8 @@ public class TmxImporter : CustomTmxImporter {
                     if (IndexDatabase.Instance().FieldSprites.GetDataOrNull(appearance) != null) {
                         // it's a literal
                         chara.SetAppearanceByTag(appearance);
+                    } else {
+                        // this should be okay... it's a lua string
                     }
 
                     var facing = mapEvent.GetProperty("face");
