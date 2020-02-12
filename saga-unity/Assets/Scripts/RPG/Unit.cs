@@ -87,4 +87,8 @@ public class Unit {
         BaseStats[stat] += delta;
         Stats[stat] += delta;
     }
+
+    public LuaUnit GetLuaUnit(LuaContext context) {
+        return new LuaUnit(this, context);
+    }
 }

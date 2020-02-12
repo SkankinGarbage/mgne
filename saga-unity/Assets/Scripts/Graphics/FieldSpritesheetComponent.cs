@@ -14,7 +14,9 @@ public class FieldSpritesheetComponent : MonoBehaviour {
     private Dictionary<string, Sprite> sprites;
 
     public void Awake() {
-        LoadSpritesheetData(spritesheet);
+        if (spritesheet != null) {
+            LoadSpritesheetData(spritesheet);
+        }
     }
 
     public void SetByTag(string tag) {

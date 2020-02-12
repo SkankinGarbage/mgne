@@ -130,7 +130,7 @@ public abstract class MapEvent : MonoBehaviour {
         GetComponent<Dispatch>().RegisterListener(EventEnabled, (object payload) => {
             CheckAutostart((bool)payload);
         });
-
+        
         var appearanceResult = LuaObject.Evaluate(PropertyAppearance);
         if (appearanceResult.IsNotNil() && GetComponent<CharaEvent>() != null) {
             GetComponent<CharaEvent>().SetAppearanceByTag(appearanceResult.String);
@@ -232,6 +232,14 @@ public abstract class MapEvent : MonoBehaviour {
         LuaObject.Set(PropertyLuaAutostart, GetProperty(PropertyLuaAutostart));
         LuaObject.Set(PropertyLuaCollide, GetProperty(PropertyLuaCollide));
         LuaObject.Set(PropertyLuaInteract, GetProperty(PropertyLuaInteract));
+
+        var appearance = GetProperty(PropertyAppearance);
+        var prefix = "lua(";
+        if (appearance.StartsWith(prefix)) {
+            var luaString = appearance.Substring(prefix.Length, appearance.Length - prefix.Length - 1);
+            LuaObject.Set(PropertyAppearance, luaString);
+        }
+        
     }
 
     private void CheckAutostart(bool enabled) {

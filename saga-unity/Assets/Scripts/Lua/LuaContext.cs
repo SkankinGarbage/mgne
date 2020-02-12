@@ -135,6 +135,7 @@ public class LuaContext : MonoBehaviour {
         lua.Globals["getSwitch"] = (Func<DynValue, DynValue>)GetSwitch;
         lua.Globals["setSwitch"] = (Action<DynValue, DynValue>)SetSwitch;
         lua.Globals["eventNamed"] = (Func<DynValue, LuaMapEvent>)EventNamed;
+        lua.Globals["getHero"] = (Func<DynValue, DynValue>)GetHero;
     }
 
     protected void LoadDefines(string path) {
@@ -176,5 +177,10 @@ public class LuaContext : MonoBehaviour {
 
     protected void Play(DynValue filename) {
         RunRoutineFromLua(RunRoutineFromFile(filename.String));
+    }
+
+    protected DynValue GetHero(DynValue slot) {
+        var obj = Global.Instance().Party[(int)slot.Number - 1].GetLuaUnit(this);
+        return UserData.Create(obj);
     }
 }

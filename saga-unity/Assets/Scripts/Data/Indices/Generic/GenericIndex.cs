@@ -16,7 +16,7 @@ public abstract class GenericIndex<T> : ScriptableObject where T : IKeyedDataObj
         tagToDataObject = new Dictionary<string, T>();
         foreach (T dataObject in dataObjects) {
             if (dataObject == null || dataObject.Key == null) continue;
-            tagToDataObject[dataObject.Key] = dataObject;
+            tagToDataObject[dataObject.Key.ToLower()] = dataObject;
         }
     }
 
