@@ -81,6 +81,7 @@ public static class CoUtils {
         while (elapsed < duration) {
             elapsed += Time.fixedDeltaTime;
             var t = Mathf.Floor((elapsed / duration) * step) / step;
+            if (t > 1) t = 1;
             setter(to * t + at * (1f - t));
             yield return null;
         }

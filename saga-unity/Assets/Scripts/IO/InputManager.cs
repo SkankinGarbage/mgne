@@ -151,18 +151,13 @@ public class InputManager : MonoBehaviour {
 
     public IEnumerator AwaitConfirm() {
         bool advance = false;
-        simulatedAdvance = false;
         while (advance == false) {
             foreach (KeyCode code in keybinds[Command.Confirm]) {
-                if (Input.GetKeyDown(code)) {
+                if (Input.GetKeyUp(code)) {
                     advance = true;
                 }
             }
-            if (simulatedAdvance) {
-                advance = true;
-            }
             yield return null;
         }
-        simulatedAdvance = false;
     }
 }

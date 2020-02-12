@@ -11,6 +11,16 @@ public class BattleBox : TextAutotyper {
     int fullLines;
     private string[] lines;
 
+    private ExpanderComponent expander;
+    private ExpanderComponent Expander {
+        get {
+            if (expander == null) {
+                expander = GetComponent<ExpanderComponent>();
+            }
+            return expander;
+        }
+    }
+
     public void Start() {
         lines = new string[lineCount];
         Clear();
@@ -88,5 +98,19 @@ public class BattleBox : TextAutotyper {
         }
 
         Global.Instance().Input.RemoveListener(this);
+    }
+
+    public IEnumerator ShowRoutine() {
+        if (Expander != null) {
+            Expander.Hide();
+            yield return Expander.ShowRoutine();
+        }
+    }
+
+    public IEnumerator HideRoutine() {
+        if (Expander != null) {
+            Expander.Show();
+            yield return Expander.HideRoutine();
+        }
     }
 }

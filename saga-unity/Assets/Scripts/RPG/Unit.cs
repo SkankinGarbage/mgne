@@ -20,6 +20,7 @@ public class Unit {
     public Race Race => data.race;
     public string SpeciesString => (data.species?.Length > 0 ? data.species : data.race.ToString()) + " " + data.gender.Label();
     public string Portrait => data.portrait;
+    public bool IsAlive => !IsDead;
 
     public bool IsDead {
         get {

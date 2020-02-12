@@ -3,9 +3,9 @@ using System.Collections;
 
 public class BattleView : FullScreenMenuView {
 
+    [SerializeField] public GenericSelector fightRunMenu = null;
     [SerializeField] private BattleBox battlebox = null;
     [SerializeField] private UnitList unitList = null;
-    [SerializeField] private GenericSelector fightRunMenu = null;
     [SerializeField] private ListView dollList = null;
     [SerializeField] private ListView battlerList = null;
     [SerializeField] private ListView monsterNameList = null;
@@ -40,5 +40,19 @@ public class BattleView : FullScreenMenuView {
         Global.Instance().Audio.PlayBGM(bgmTag);
         var menu = Show(data);
         yield return menu.Battle.BattleRoutine(menu);
+    }
+
+    public IEnumerator WriteLineRoutine(string line) {
+        if (!battlebox.isActiveAndEnabled) {
+            battlebox.gameObject.SetActive(true);
+            yield return battlebox.ShowRoutine();
+        }
+        yield return battlebox.WriteLineRoutine(line);
+    }
+
+    public IEnumerator HideBattleboxRoutine() {
+        if (battlebox.isActiveAndEnabled) {
+            yield return battlebox.HideRoutine();
+        }
     }
 }

@@ -15,6 +15,7 @@ public class Party : IEnumerable<Unit> {
     public int Size => Members.Count();
     public bool HasFlag(StatTag flag) => AnyMembersMeetCritera(unit => unit[flag] > 0);
     public bool IsCarryingItemType(CombatItemData itemData) => AnyMembersMeetCritera(unit => unit.IsCarryingItemType(itemData));
+    public bool IsAnyAlive => Members.Any(unit => unit.IsAlive);
 
     public IEnumerator<Unit> GetEnumerator() { return Members.GetEnumerator(); }
     IEnumerator IEnumerable.GetEnumerator() { return Members.GetEnumerator(); }
