@@ -44,6 +44,6 @@ public class ListView : MonoBehaviour {
             DestroyImmediate(obj);
         }
 
-        OnPopulate(dataSize);
+        OnPopulate?.Invoke(dataSize);
     }
 }

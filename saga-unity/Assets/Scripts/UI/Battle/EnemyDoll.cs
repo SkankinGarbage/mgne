@@ -20,7 +20,14 @@ public class EnemyDoll : MonoBehaviour {
     }
 
     public Sprite LoadSpriteFromPortraitName(string portrait) {
-        var path = PortraitPath + portrait;
+        var index = portrait.LastIndexOf('/');
+        string tag;
+        if (index > 0) {
+            tag = portrait.Substring(index + 1, portrait.Length - index - ".png".Length - 1);
+        } else {
+            tag = portrait;
+        }
+        var path = PortraitPath + tag;
         return Resources.Load<Sprite>(path);
     }
 }
