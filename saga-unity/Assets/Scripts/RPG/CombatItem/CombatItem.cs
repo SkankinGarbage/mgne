@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 public class CombatItem {
 
@@ -10,6 +11,7 @@ public class CombatItem {
     public int UsesWhenAdded { get; protected set; }
     public int UsesRemaining { get; protected set; }
     public StatSet Stats { get; protected set; }
+    public AbilEffect Effect { get; protected set; }
 
     public bool CanRestoreUses => Data.type == AbilityType.ABILITY;
     public int GoldValue => Data.cost * UsesRemaining / Data.uses;
@@ -22,6 +24,7 @@ public class CombatItem {
         Data = data;
         RestoreUses();
         Stats = new StatSet();
+        Effect = AbilEffectFactory.CreateEffect(data.warhead, this);
     }
 
     /// <param name="inventory">The inventory being added to, maybe null</param>

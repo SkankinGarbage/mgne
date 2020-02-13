@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AbilEffectFactory {
     
-    public AbilEffect CreateEffect(AbilEffectData data, CombatItem item) {
+    public static AbilEffect CreateEffect(AbilEffectData data, CombatItem item) {
         var dataType = data.GetType();
         if (typeof(EffectAttackData).IsAssignableFrom(dataType)) {
 			return new EffectAttack((EffectAttackData) data, item);

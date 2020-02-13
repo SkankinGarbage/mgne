@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using UnityEngine;
 /// <summary>
 /// Warhead superclass
 /// </summary>
@@ -34,4 +36,6 @@ public abstract class AbilEffect {
             AudioManager.PlayFail();
         }
     }
+
+    public abstract Task<List<Unit>> AcquireTargetsAsync(Unit actor, Battle battle, bool useAI);
 }

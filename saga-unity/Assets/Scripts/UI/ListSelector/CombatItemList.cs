@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class CombatItemList : ListView {
 
+    [SerializeField] private bool includeNonCombatItems = true;
     [SerializeField] private PointerLayer pointers = null;
 
     private GenericSelector selector;
@@ -18,7 +19,11 @@ public class CombatItemList : ListView {
     public void Populate(IEnumerable<CombatItem> items) {
         Populate(items, (obj, item) => {
             var view = obj.GetComponent<CombatItemView>();
-            view.Populate(item, pointers);
+            if (!includeNonCombatItems && item != null && !item.IsBattleUseable) {
+                view.Populate(null, pointers);
+            } else {
+                view.Populate(item, pointers);
+            }
         });
     }
 }

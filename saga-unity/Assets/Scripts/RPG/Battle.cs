@@ -1,6 +1,6 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 /// <summary>
 /// Battle model class for an in-progress fite
@@ -14,6 +14,8 @@ public class Battle {
     public bool IsDone { get; private set; }
     public bool IsVictory => !Enemy.IsAnyAlive;
     public bool IsDefeat => !Player.IsAnyAlive;
+
+    private Intent[] intents;
 
     public Battle(PartyData enemy) {
         Player = Global.Instance().Party;
@@ -36,6 +38,8 @@ public class Battle {
 
     private async Task BattleAsync() {
         while (!IsDone) {
+            InitializeIntents();
+            View.PopulateForFightRun();
             var fightRunCommand = await View.fightRunMenu.SelectCommandAsync();
             switch (fightRunCommand) {
                 case "FIGHT":
@@ -52,14 +56,33 @@ public class Battle {
         }
     }
 
-    private async Task FightAsync() {
-        await Task.Delay(100);
+    /// <returns>True if succeeded, false if canceled</returns>
+    private async Task<bool> FightAsync() {
+        int unitIndex = 0;
+        while (unitIndex < Player.Size && unitIndex > 0) {
+            var succeeded = await ConstructIntentForPlayerAsync(intents[unitIndex]);
+            unitIndex += succeeded ? 1 : -1;
+        }
+        return unitIndex > 0;
     }
 
     private async Task EndCombatAsync() {
         IsDone = true;
         await View.CloseRoutine();
         // TODO: handle death + retry
+    }
+
+    /// <returns>True if succeeded, false if canceled</returns>
+    private async Task<bool> ConstructIntentForPlayerAsync(Intent intent) {
+        View.PopulateForUnitIntentSelect(intent);
+        var selector = View.inventory.Selector;
+        selector.Selection = intent.FindIndexForItem();
+        int slot = await selector.SelectItemAsync(null, true);
+        if (slot == -1) {
+            return false;
+        } else {
+
+        }
     }
 
     #endregion
@@ -69,6 +92,13 @@ public class Battle {
     /// <returns>True if got away successfully</returns>
     private bool TryEscapeChance() {
         return true; // lol
+    }
+
+    private void InitializeIntents() {
+        intents = new Intent[Player.Size];
+        for (var i = 0; i < Player.Size; i += 1) {
+            intents[i] = new Intent(Player[i], this);
+        }
     }
 
     #endregion

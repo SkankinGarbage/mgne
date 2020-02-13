@@ -4,11 +4,14 @@ using System.Collections;
 public class BattleView : FullScreenMenuView {
 
     [SerializeField] public GenericSelector fightRunMenu = null;
+    [SerializeField] public CombatItemList inventory = null;
     [SerializeField] private BattleBox battlebox = null;
     [SerializeField] private UnitList unitList = null;
     [SerializeField] private ListView dollList = null;
     [SerializeField] private ListView battlerList = null;
     [SerializeField] private ListView monsterNameList = null;
+    [SerializeField] private UnitCellView unitCell = null;
+    [SerializeField] private GameObject inventoryArea = null;
 
     public Battle Battle { get; private set; }
 
@@ -31,6 +34,21 @@ public class BattleView : FullScreenMenuView {
         monsterNameList.Populate(battle.Enemy.Groups, (obj, group) => {
             obj.GetComponent<EnemyNameCellView>().Populate(group);
         });
+    }
+
+    public void PopulateForUnitIntentSelect(Intent intent) {
+        battlebox.gameObject.SetActive(false);
+        unitCell.gameObject.SetActive(true);
+        inventoryArea.SetActive(true);
+
+        inventory.Populate(intent.Actor.Equipment);
+        unitCell.Populate(intent.Actor);
+    }
+
+    public void PopulateForFightRun() {
+        battlebox.gameObject.SetActive(false);
+        unitCell.gameObject.SetActive(false);
+        inventoryArea.SetActive(false);
     }
 
     public static IEnumerator SpawnBattleRoutine(PartyData data, string bgmTag = null) {
