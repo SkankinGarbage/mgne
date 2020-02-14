@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitList : MonoBehaviour {
 
-    [SerializeField] private DynamicListSelector selector = null;
+    [SerializeField] public DynamicListSelector selector = null;
     [SerializeField] private ListView partyCells = null;
     [SerializeField] private PointerLayer pointers = null;
 

@@ -7,6 +7,8 @@ using System;
 
 public abstract class GenericSelector : MonoBehaviour {
 
+    private string ListenerId => "ListSelector" + gameObject.name;
+
     private int selection;
     public int Selection {
         set {
@@ -43,9 +45,8 @@ public abstract class GenericSelector : MonoBehaviour {
         Selection = Selection;
         scanner?.Invoke(Selection);
 
-        bool canceled = false;
-        string listenerId = "ListSelector" + gameObject.name;
-        Global.Instance().Input.PushListener(listenerId, (InputManager.Command command, InputManager.Event ev) => {
+        bool canceled = false; 
+        Global.Instance().Input.PushListener(ListenerId, (InputManager.Command command, InputManager.Event ev) => {
             if (ev != InputManager.Event.Down && ev != InputManager.Event.Repeat) {
                 return true;
             }
@@ -54,13 +55,13 @@ public abstract class GenericSelector : MonoBehaviour {
             }
             switch (command) {
                 case InputManager.Command.Cancel:
-                    Global.Instance().Input.RemoveListener(listenerId);
+                    Global.Instance().Input.RemoveListener(ListenerId);
                     canceled = true;
                     if (!leavePointerEnabled) TurnOffPointer();
                     completion.SetResult(-1);
                     break;
                 case InputManager.Command.Confirm:
-                    Global.Instance().Input.RemoveListener(listenerId);
+                    Global.Instance().Input.RemoveListener(ListenerId);
                     if (!leavePointerEnabled) TurnOffPointer();
                     completion.SetResult(Selection);
                     break;
@@ -87,9 +88,44 @@ public abstract class GenericSelector : MonoBehaviour {
         return await completion.Task;
     }
 
+    public async Task<bool> ConfirmSelectionAsync() {
+        var completion = new TaskCompletionSource<bool>();
+        bool canceled = false;
+        Global.Instance().Input.PushListener(ListenerId, (InputManager.Command command, InputManager.Event ev) => {
+            if (ev != InputManager.Event.Down && ev != InputManager.Event.Repeat) {
+                return true;
+            }
+            if (canceled) {
+                return true;
+            }
+            switch (command) {
+                case InputManager.Command.Cancel:
+                    Global.Instance().Input.RemoveListener(ListenerId);
+                    canceled = true;
+                    TurnOffPointer();
+                    completion.SetResult(false);
+                    break;
+                case InputManager.Command.Confirm:
+                    Global.Instance().Input.RemoveListener(ListenerId);
+                    TurnOffPointer();
+                    completion.SetResult(true);
+                    break;
+            }
+            return true;
+        });
+
+        return await completion.Task;
+    }
+
     public void TurnOffPointer() {
         foreach (SelectableCell child in GetCells()) {
             child.GetComponent<SelectableCell>().SetSelected(false);
+        }
+    }
+
+    public void SelectAll() {
+        foreach (var cell in GetCells()) {
+            cell.SetSelected(true);
         }
     }
 

@@ -37,5 +37,8 @@ public abstract class AbilEffect {
         }
     }
 
-    public abstract Task<List<Unit>> AcquireTargetsAsync(Unit actor, Battle battle, bool useAI);
+    public virtual Task<List<Unit>> AcquireTargetsAsync(Unit actor, Battle battle, bool useAI) {
+        Debug.LogError("Unimplemented combat use for item " + this);
+        return null;
+    }
 }
