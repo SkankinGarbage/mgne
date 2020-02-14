@@ -37,6 +37,7 @@ public class Battle {
     #region Control
 
     private async Task BattleAsync() {
+        Global.Instance().Input.PushListener(ToString(), (cmd, ev) => { return true; });
         while (!IsDone) {
             InitializeIntents();
             View.PopulateForFightRun();
@@ -54,12 +55,13 @@ public class Battle {
                     break;
             }
         }
+        Global.Instance().Input.RemoveListener(ToString());
     }
 
     /// <returns>True if succeeded, false if canceled</returns>
     private async Task<bool> FightAsync() {
         int unitIndex = 0;
-        while (unitIndex < Player.Size && unitIndex > 0) {
+        while (unitIndex < Player.Size && unitIndex >= 0) {
             var succeeded = await ConstructIntentForPlayerAsync(intents[unitIndex]);
             unitIndex += succeeded ? 1 : -1;
         }
@@ -73,16 +75,25 @@ public class Battle {
     }
 
     /// <returns>True if succeeded, false if canceled</returns>
-    private async Task<bool> ConstructIntentForPlayerAsync(Intent intent) {
+    private async Task<bool> ConstructIntentForPlayerAsync(Intent intent, CombatItem selectedItem = null) {
         View.PopulateForUnitIntentSelect(intent);
         var selector = View.inventory.Selector;
         selector.Selection = intent.FindIndexForItem();
-        int slot = await selector.SelectItemAsync(null, true);
-        if (slot == -1) {
-            return false;
-        } else {
-
+        while (selectedItem == null || !selectedItem.IsBattleUseable) {
+            var slot = await selector.SelectItemAsync(null, true);
+            if (slot == -1) {
+                return false;
+            }
+            selectedItem = intent.Actor.Equipment[slot];
         }
+
+        var targets = await selectedItem.Effect.AcquireTargetsAsync(intent.Actor, this, false);
+        if (targets == null) {
+            return await ConstructIntentForPlayerAsync(intent, selectedItem);
+        }
+
+        intent.Targets.AddRange(targets);
+        return true;
     }
 
     #endregion

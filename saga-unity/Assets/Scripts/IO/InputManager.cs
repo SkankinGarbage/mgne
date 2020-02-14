@@ -38,7 +38,6 @@ public class InputManager : MonoBehaviour {
     private Dictionary<Command, float> holdStartTimes;
     private List<KeyCode> fastKeys;
     private Dictionary<string, IInputListener> anonymousListeners;
-    private bool simulatedAdvance;
 
     public void Awake() {
         keybinds = new Dictionary<Command, List<KeyCode>>();
@@ -136,17 +135,6 @@ public class InputManager : MonoBehaviour {
             }
         }
         return false;
-    }
-
-    // simulates the user pushing a command
-    // called by input listeners usually when interpreting clicks as answers to AwaitAdvance
-    public void SimulateCommand(Command simulatedCommand) {
-        simulatedAdvance = true;
-        IInputListener listener = listeners[listeners.Count - 1];
-        if (!disabledListeners.Contains(listener)) {
-            listener.OnCommand(simulatedCommand, Event.Down);
-            listener.OnCommand(simulatedCommand, Event.Up);
-        }
     }
 
     public IEnumerator AwaitConfirm() {

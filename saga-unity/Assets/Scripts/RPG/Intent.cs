@@ -43,6 +43,7 @@ public class Intent {
     /// <returns>The index of the used item in the inventory of the actor</returns>
     public int FindIndexForItem() {
         if (Item == null) {
+            // todo: history
             return 0;
         } else {
             return Actor.Equipment.SlotForItem(Item);

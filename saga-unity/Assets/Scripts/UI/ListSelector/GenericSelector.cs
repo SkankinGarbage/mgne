@@ -47,12 +47,13 @@ public abstract class GenericSelector : MonoBehaviour {
 
         bool canceled = false; 
         Global.Instance().Input.PushListener(ListenerId, (InputManager.Command command, InputManager.Event ev) => {
-            if (ev != InputManager.Event.Down && ev != InputManager.Event.Repeat) {
+            if (ev != InputManager.Event.Up) {
                 return true;
             }
             if (canceled) {
                 return true;
             }
+            Debug.Log(command + ", " + ev);
             switch (command) {
                 case InputManager.Command.Cancel:
                     Global.Instance().Input.RemoveListener(ListenerId);
