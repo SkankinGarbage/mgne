@@ -71,6 +71,7 @@ public class Party : IEnumerable<Unit> {
     /// </summary>
     public List<Unit> SelectFrontfacingGroup() {
         List<List<Unit>> weightedGroups = new List<List<Unit>>();
+        var added = 0;
         for (int i = 0; i < Groups.Count(); i += 1) {
             List<Unit> group = Groups[i];
             bool active = false;
@@ -82,7 +83,7 @@ public class Party : IEnumerable<Unit> {
             }
             if (!active) continue;
             int weight;
-            switch (i) {
+            switch (added) {
                 case 0: weight = 3; break;
                 case 1: weight = 2; break;
                 default: weight = 1; break;
@@ -90,6 +91,7 @@ public class Party : IEnumerable<Unit> {
             for (int j = 0; j < weight; j += 1) {
                 weightedGroups.Add(group);
             }
+            added += 1;
         }
         int index = Random.Range(0, weightedGroups.Count);
         return weightedGroups[index];

@@ -88,7 +88,7 @@ public abstract class GenericSelector : MonoBehaviour {
         return await completion.Task;
     }
 
-    public async Task<bool> ConfirmSelectionAsync() {
+    public async Task<bool> ConfirmSelectionAsync(bool clearSelectionWhenDone = true) {
         var completion = new TaskCompletionSource<bool>();
         bool canceled = false;
         Global.Instance().Input.PushListener(ListenerId, (InputManager.Command command, InputManager.Event ev) => {
@@ -114,7 +114,11 @@ public abstract class GenericSelector : MonoBehaviour {
             return true;
         });
 
-        return await completion.Task;
+        var result = await completion.Task;
+        if (clearSelectionWhenDone) {
+            ClearSelection();
+        }
+        return result;
     }
 
     public void TurnOffPointer() {

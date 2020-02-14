@@ -6,6 +6,7 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] public GenericSelector fightRunMenu = null;
     [SerializeField] public CombatItemList inventory = null;
     [SerializeField] public UnitList allyList = null;
+    [SerializeField] public GenericSelector enemySelector = null;
     [SerializeField] private BattleBox battlebox = null;
     [SerializeField] private UnitList unitList = null;
     [SerializeField] private ListView dollList = null;

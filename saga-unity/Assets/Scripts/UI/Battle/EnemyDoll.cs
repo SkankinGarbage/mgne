@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
 
+[RequireComponent(typeof(SelectableCell))]
 public class EnemyDoll : MonoBehaviour {
 
     private const string PortraitPath = "Sprites/Battlers/";
@@ -11,9 +12,11 @@ public class EnemyDoll : MonoBehaviour {
 
     public void Populate(IEnumerable<Unit> enemyGroup) {
         if (enemyGroup.Any(enemy => !enemy.IsDead)) {
+            GetComponent<SelectableCell>().SetSelectable(true);
             var enemy = enemyGroup.First();
             image.sprite = LoadSpriteFromPortraitName(enemy.Portrait);
         } else {
+            GetComponent<SelectableCell>().SetSelectable(false);
             image.sprite = null;
         }
         image.SetNativeSize();
