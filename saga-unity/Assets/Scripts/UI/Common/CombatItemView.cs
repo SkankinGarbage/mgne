@@ -12,7 +12,9 @@ public class CombatItemView : MonoBehaviour {
         nameLabel.text = item?.Name;
         usesLabel.text = item?.Data.uses > 0 ? item.UsesRemaining.ToString() : "";
         this.pointers = pointers != null ? pointers : this.pointers;
-        ownedPointer.Populate(this.pointers);
+        if (ownedPointer != null) {
+            ownedPointer.Populate(this.pointers);
+        }
 
         if (item != null) {
             gameObject.name = item.Name;

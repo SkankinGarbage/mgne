@@ -19,7 +19,7 @@ public class ListView : MonoBehaviour {
         var index = 0;
         foreach (var datum in data) {
             GameObject gameObject;
-            if (transform.childCount > index) {
+            if (index >= transform.childCount) {
                 gameObject = Instantiate(prefab);
                 gameObject.transform.SetParent(transform, worldPositionStays: false);
             } else {
