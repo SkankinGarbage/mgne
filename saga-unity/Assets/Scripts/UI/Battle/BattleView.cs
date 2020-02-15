@@ -7,7 +7,7 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] public CombatItemList inventory = null;
     [SerializeField] public UnitList allyList = null;
     [SerializeField] public GenericSelector enemySelector = null;
-    [SerializeField] private BattleBox battlebox = null;
+    [SerializeField] public BattleBox battlebox = null;
     [SerializeField] private UnitList unitList = null;
     [SerializeField] private ListView dollList = null;
     [SerializeField] private ListView battlerList = null;
@@ -83,5 +83,10 @@ public class BattleView : FullScreenMenuView {
         if (battlebox.isActiveAndEnabled) {
             yield return battlebox.HideRoutine();
         }
+    }
+
+    public IEnumerator PrintDoesNothingRoutine(Unit actor) {
+        yield return WriteLineRoutine(actor + " does nothing.");
+        yield return WriteLineRoutine("");
     }
 }

@@ -11,6 +11,7 @@ public class Unit {
     public StatSet BaseStats { get; private set; }
     public Status Status { get; set; }
     public EquipmentInventory Equipment { get; private set; }
+    public AIBase AI { get; private set; }
     public string FieldSpriteTag { get; private set; }
 
     public int this[StatTag tag] { get => (int) Stats[tag]; }
@@ -21,6 +22,7 @@ public class Unit {
     public string SpeciesString => (data.species?.Length > 0 ? data.species : data.race.ToString()) + " " + data.gender.Label();
     public string Portrait => data.portrait;
     public bool IsAlive => !IsDead;
+    public bool CanAct => IsAlive && (Status == null || !Status.PreventsIntentions) && Equipment.ContainsBattleUseableItems();
 
     public bool IsDead {
         get {
@@ -45,6 +47,7 @@ public class Unit {
         BaseStats = new StatSet(data.stats);
         Equipment = new EquipmentInventory(this, data);
         FieldSpriteTag = data.appearance;
+        AI = new AIRandom(this);
     }
 
     public void RestoreHP() {

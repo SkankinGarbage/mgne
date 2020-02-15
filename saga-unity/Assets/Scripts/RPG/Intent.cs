@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Linq;
 using UnityEngine;
 
 public class Intent {
@@ -7,11 +9,10 @@ public class Intent {
     public CombatItem Item { get; private set; }
     public List<Unit> Targets { get; private set; }
     public int Priority { get; private set; }
-
-    protected Battle battle;
+    public Battle Battle { get; private set; }
 
     public Intent(Unit actor, Battle battle) {
-        this.battle = battle;
+        Battle = battle;
         Actor = actor;
         Targets = new List<Unit>();
         Priority = actor[StatTag.AGI];
@@ -48,5 +49,17 @@ public class Intent {
         } else {
             return Actor.Equipment.SlotForItem(Item);
         }
+    }
+
+    public async Task ResolveAsync() {
+        if (!Actor.CanAct) {
+            return;
+        }
+        if (!Targets.Any(unit => unit.IsAlive) && !Item.Effect.CanTargetDead()) {
+            await Battle.View.PrintDoesNothingRoutine(Actor);
+            return;
+        }
+
+        await Item.Effect.ResolveAsync(this);
     }
 }

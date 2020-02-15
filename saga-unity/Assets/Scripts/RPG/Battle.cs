@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Linq;
+using System;
 
 /// <summary>
 /// Battle model class for an in-progress fite
@@ -34,11 +36,9 @@ public class Battle {
         yield return CoUtils.TaskRoutine(BattleAsync());
     }
 
-    #region Control
-
     private async Task BattleAsync() {
-        Global.Instance().Input.PushListener(ToString(), (cmd, ev) => { return true; });
         while (!IsDone) {
+            View.battlebox.Clear();
             InitializeIntents();
             View.PopulateForFightRun();
             var fightRunCommand = await View.fightRunMenu.SelectCommandAsync();
@@ -47,29 +47,39 @@ public class Battle {
                     await FightAsync();
                     break;
                 case "RUN":
-                    if (TryEscapeChance()) {
-                        await WriteLineAsync();
-                        await WriteLineAsync("Escaped!", true);
-                        await EndCombatAsync();
-                    }
+                    await RunAsync();
                     break;
             }
         }
-        Global.Instance().Input.RemoveListener(ToString());
+        await EndCombatAsync();
     }
 
     /// <returns>True if succeeded, false if canceled</returns>
     private async Task<bool> FightAsync() {
-        int unitIndex = 0;
+        var unitIndex = AdvanceUnitIndex(-1, 1);
         while (unitIndex < Player.Size && unitIndex >= 0) {
             var succeeded = await ConstructIntentForPlayerAsync(intents[unitIndex]);
-            unitIndex += succeeded ? 1 : -1;
+            unitIndex = AdvanceUnitIndex(unitIndex, succeeded ? 1 : -1);
         }
-        return unitIndex > 0;
+        if (unitIndex < 0) {
+            return false;
+        }
+
+        var allIntents = intents.ToList();
+        foreach (var enemy in Enemy) {
+            if (enemy.CanAct) {
+                allIntents.Add(ConstructIntentForEnemy(enemy));
+            }
+        }
+        allIntents.Sort(new Comparison<Intent>((a, b) => a.Priority - b.Priority));
+
+        await ResolveIntentsAsync(allIntents);
+
+        return true;
     }
 
     private async Task EndCombatAsync() {
-        IsDone = true;
+        await Global.Instance().Input.AwaitConfirm();
         await View.CloseRoutine();
         // TODO: handle death + retry
     }
@@ -97,9 +107,24 @@ public class Battle {
         return true;
     }
 
-    #endregion
+    private async Task ResolveIntentsAsync(List<Intent> intents) {
+        foreach (var intent in intents) {
+            await intent.ResolveAsync();
 
-    #region Model
+            if (IsVictory || IsDefeat) {
+                IsDone = true;
+                break;
+            }
+        }
+    }
+
+    private async Task RunAsync() {
+        if (TryEscapeChance()) {
+            await WriteLineAsync();
+            await WriteLineAsync("Escaped!", true);
+            IsDone = true;
+        }
+    }
 
     /// <returns>True if got away successfully</returns>
     private bool TryEscapeChance() {
@@ -113,5 +138,14 @@ public class Battle {
         }
     }
 
-    #endregion
+    private Intent ConstructIntentForEnemy(Unit enemy) {
+        return enemy.AI.ConstructIntent(this);
+    }
+
+    private int AdvanceUnitIndex(int index, int delta) {
+        do {
+            index += delta;
+        } while (index < Player.Size && index >= 0 && !Player[index].CanAct);
+        return index;
+    }
 }

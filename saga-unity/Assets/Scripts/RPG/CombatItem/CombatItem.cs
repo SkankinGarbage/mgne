@@ -15,7 +15,7 @@ public class CombatItem {
 
     public bool CanRestoreUses => Data.type == AbilityType.ABILITY;
     public int GoldValue => Data.cost * UsesRemaining / Data.uses;
-    public bool IsBattleUseable => true; // TODO: effect.IsBattleUseable 
+    public bool IsBattleUseable => Effect.IsBattleUsable() && (UsesRemaining > 0 || Data.uses == 0);
     public bool IsMapUseable => true;
     public StatSet RoboStats => Data.robostats;
     public string Name => UIUtils.GlyphifyString(Data.abilityName);

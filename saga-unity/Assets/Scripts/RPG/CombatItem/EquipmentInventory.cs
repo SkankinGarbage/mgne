@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EquipmentInventory : Inventory {
 
-    private const int Capacity = 8;
+    public const int Capacity = 8;
 
     private Unit owner;
 

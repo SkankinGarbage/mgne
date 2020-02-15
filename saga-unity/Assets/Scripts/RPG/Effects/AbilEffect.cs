@@ -41,4 +41,9 @@ public abstract class AbilEffect {
         Debug.LogError("Unimplemented combat use for item " + this);
         return null;
     }
+
+    public virtual async Task ResolveAsync(Intent intent) {
+        await intent.Battle.WriteLineAsync(intent.Actor + " uses " + intent.Item + ".");
+        await intent.Battle.WriteLineAsync("");
+    }
 }

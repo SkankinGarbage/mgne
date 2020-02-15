@@ -6,6 +6,7 @@ public class Status {
     public StatusData Data { get; private set; }
 
     public bool IsDeadly => Data.lethality == LethalityType.DEADLY || Data.lethality == LethalityType.DEATH;
+    public bool PreventsIntentions => IsDeadly || Data.randomChance > 0 || Data.preventChance > 0;
     public override string ToString() => Data.fullName;
 
     public Status(StatusData data) {
@@ -19,4 +20,5 @@ public class Status {
         }
         victim.Status = null;
     }
+
 }
