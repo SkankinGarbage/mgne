@@ -75,23 +75,24 @@ public class Battle {
     }
 
     /// <returns>True if succeeded, false if canceled</returns>
-    private async Task<bool> ConstructIntentForPlayerAsync(Intent intent, CombatItem selectedItem = null) {
+    private async Task<bool> ConstructIntentForPlayerAsync(Intent intent) {
         View.PopulateForUnitIntentSelect(intent);
         var selector = View.inventory.Selector;
         selector.Selection = intent.FindIndexForItem();
-        while (selectedItem == null || !selectedItem.IsBattleUseable) {
+        do {
             var slot = await selector.SelectItemAsync(null, true);
+            selector.ClearSelection();
             if (slot == -1) {
                 return false;
             }
-            selectedItem = intent.Actor.Equipment[slot];
-        }
+            intent.SetItem(intent.Actor.Equipment[slot]);
+        } while (intent.Item == null || !intent.Item.IsBattleUseable);
 
-        var targets = await selectedItem.Effect.AcquireTargetsAsync(intent.Actor, this, false);
+        var targets = await intent.Item.Effect.AcquireTargetsAsync(intent.Actor, this, false);
         if (targets == null) {
-            return await ConstructIntentForPlayerAsync(intent, selectedItem);
+            return await ConstructIntentForPlayerAsync(intent);
         }
-
+        
         intent.Targets.AddRange(targets);
         return true;
     }
