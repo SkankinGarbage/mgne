@@ -12,24 +12,55 @@ public class Battle {
     public Party Player { get; private set; }
     public Party Enemy { get; private set; }
     public BattleView View { get; private set; }
+    
 
     public bool IsDone { get; private set; }
     public bool IsVictory => !Enemy.IsAnyAlive;
     public bool IsDefeat => !Player.IsAnyAlive;
 
-    private Intent[] intents;
+    private Intent[] playerIntents;
+    private List<Intent> allIntents;
+    private Dictionary<Unit, List<EffectDefend>> defenses;
 
     public Battle(PartyData enemy) {
         Player = Global.Instance().Party;
         Enemy = new Party(enemy);
     }
 
-    public async Task WriteLineAsync(string line = "", bool awaitConfirm = false) {
-        await View.WriteLineRoutine(line);
-        if (awaitConfirm) {
-            await Global.Instance().Input.AwaitConfirm();
+    #region Model
+
+    public List<EffectDefend> GetDefensesForUnit(Unit unit) {
+        if (defenses.ContainsKey(unit)) {
+            return defenses[unit];
+        } else {
+            return new List<EffectDefend>();
         }
     }
+
+    /// <returns>True if the action was canceled</returns>
+    public bool CancelAction(Unit target) {
+        foreach (var intent in allIntents) {
+            if (intent.Actor == target && !intent.IsFinished) {
+                intent.Targets.Clear();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public async Task CheckDeathAsync(Unit target, bool silent = false) {
+        if (!target.IsDead) return;
+        if (!silent) await WriteLineAsync(BattleBox.Tab + target.Name + " is defeated.");
+    }
+
+    /// <returns>True if got away successfully</returns>
+    private bool TryEscapeChance() {
+        return true; // lol
+    }
+
+    #endregion
+
+    #region Control flow
 
     public IEnumerator BattleRoutine(BattleView view) {
         View = view;
@@ -58,14 +89,14 @@ public class Battle {
     private async Task<bool> FightAsync() {
         var unitIndex = AdvanceUnitIndex(-1, 1);
         while (unitIndex < Player.Size && unitIndex >= 0) {
-            var succeeded = await ConstructIntentForPlayerAsync(intents[unitIndex]);
+            var succeeded = await ConstructIntentForPlayerAsync(playerIntents[unitIndex]);
             unitIndex = AdvanceUnitIndex(unitIndex, succeeded ? 1 : -1);
         }
         if (unitIndex < 0) {
             return false;
         }
 
-        var allIntents = intents.ToList();
+        allIntents = playerIntents.ToList();
         foreach (var enemy in Enemy) {
             if (enemy.CanAct) {
                 allIntents.Add(ConstructIntentForEnemy(enemy));
@@ -102,13 +133,13 @@ public class Battle {
         if (targets == null) {
             return await ConstructIntentForPlayerAsync(intent);
         }
-        
+
         intent.Targets.AddRange(targets);
         return true;
     }
 
-    private async Task ResolveIntentsAsync(List<Intent> intents) {
-        foreach (var intent in intents) {
+    private async Task ResolveIntentsAsync() {
+        foreach (var intent in allIntents) {
             await intent.ResolveAsync();
 
             if (IsVictory || IsDefeat) {
@@ -126,15 +157,10 @@ public class Battle {
         }
     }
 
-    /// <returns>True if got away successfully</returns>
-    private bool TryEscapeChance() {
-        return true; // lol
-    }
-
     private void InitializeIntents() {
-        intents = new Intent[Player.Size];
+        playerIntents = new Intent[Player.Size];
         for (var i = 0; i < Player.Size; i += 1) {
-            intents[i] = new Intent(Player[i], this);
+            playerIntents[i] = new Intent(Player[i], this);
         }
     }
 
@@ -148,4 +174,17 @@ public class Battle {
         } while (index < Player.Size && index >= 0 && !Player[index].CanAct);
         return index;
     }
+
+    #endregion
+
+    #region Util
+
+    public async Task WriteLineAsync(string line = "", bool awaitConfirm = false) {
+        await View.WriteLineRoutine(line);
+        if (awaitConfirm) {
+            await Global.Instance().Input.AwaitConfirm();
+        }
+    }
+
+    #endregion
 }

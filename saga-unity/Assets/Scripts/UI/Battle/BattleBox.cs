@@ -5,6 +5,8 @@ using System.Text;
 
 public class BattleBox : TextAutotyper {
 
+    public const string Tab = "  ";
+
     [SerializeField] private int lineCount = 0;
     [SerializeField] private int widthInChars = 0;
 

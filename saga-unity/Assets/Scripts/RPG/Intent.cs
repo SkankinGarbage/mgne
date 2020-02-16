@@ -10,12 +10,15 @@ public class Intent {
     public List<Unit> Targets { get; private set; }
     public int Priority { get; private set; }
     public Battle Battle { get; private set; }
+    public bool IsRecursivelyTriggered { get; private set; }
+    public bool IsFinished { get; private set; }
 
-    public Intent(Unit actor, Battle battle) {
+    public Intent(Unit actor, Battle battle, bool isRecursivelyTriggered = false) {
         Battle = battle;
         Actor = actor;
         Targets = new List<Unit>();
         Priority = actor[StatTag.AGI];
+        IsRecursivelyTriggered = isRecursivelyTriggered;
         if (Priority > 0) {
             Priority += Random.Range(0, Priority);
         }
@@ -61,5 +64,7 @@ public class Intent {
         }
 
         await Item.Effect.ResolveAsync(this);
+
+        IsFinished = true;
     }
 }

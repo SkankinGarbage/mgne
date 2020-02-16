@@ -43,7 +43,7 @@ public abstract class AbilEffect {
     }
 
     public virtual async Task ResolveAsync(Intent intent) {
-        await intent.Battle.WriteLineAsync(intent.Actor + " uses " + intent.Item + ".");
+        await intent.Battle.WriteLineAsync(intent.ToString());
         await intent.Battle.WriteLineAsync("");
     }
 }

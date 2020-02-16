@@ -89,4 +89,9 @@ public class BattleView : FullScreenMenuView {
         yield return WriteLineRoutine(actor + " does nothing.");
         yield return WriteLineRoutine("");
     }
+
+    public IEnumerator PlayBackDamageRoutine(Unit target, int damage) {
+        // TODO
+        yield return; 
+    }
 }

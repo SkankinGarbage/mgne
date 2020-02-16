@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class Unit {
 
@@ -16,13 +17,18 @@ public class Unit {
 
     public int this[StatTag tag] { get => (int) Stats[tag]; }
 
+    public bool Is(StatTag flag) => Stats[flag] > 0;
     public bool IsCarryingItemType(CombatItemData data) => Equipment.ContainsItemType(data);
     public string Name => name?.Length > 0 ? name : data.name?.Length > 0 ? data.name : SpeciesString;
     public Race Race => data.race;
     public string SpeciesString => (data.species?.Length > 0 ? data.species : data.race.ToString()) + " " + data.gender.Label();
+    public MonsterFamilyData MonsterFamily => Race == Race.MONSTER ? data.family : null;
     public string Portrait => data.portrait;
     public bool IsAlive => !IsDead;
     public bool CanAct => IsAlive && (Status == null || !Status.PreventsIntentions) && Equipment.ContainsBattleUseableItems();
+    public bool IsWeakTo(DamageType type) => type.WeakFlags().Any(flag => Is(flag));
+    public bool IsImmuneTo(DamageType type) => type.ImmuneFlags().Any(flag => Is(flag));
+    public bool IsResistantTo(DamageType type) => type.ResistFlags().Any(flag => Is(flag));
 
     public bool IsDead {
         get {
@@ -94,5 +100,26 @@ public class Unit {
 
     public LuaUnit GetLuaUnit(LuaContext context) {
         return new LuaUnit(this, context);
+    }
+
+    /// <summary>
+    /// Inflicts damage from a combat source. Does not apply defense.
+    /// </summary>
+    /// <param name="damage">The raw damage to inflict</param>
+    /// <param name="physical">True if the damage was from a physical source</param>
+    /// <returns>True if any damage was actually taken</returns>
+    public bool InflictDamage(int damage, bool physical) {
+        Stats[StatTag.HP] -= damage;
+        //if (mutantManager != null) {
+        //    mutantManager.recordEvent(MutantEvent.DAMAGED);
+        //    if (physical) {
+        //        mutantManager.recordEvent(MutantEvent.DAMAGED_PHYSICALLY);
+        //    }
+        //}
+        if (Stats[StatTag.HP] <= 0) {
+            Stats[StatTag.HP] = 0;
+            return true;
+        }
+        return false;
     }
 }
