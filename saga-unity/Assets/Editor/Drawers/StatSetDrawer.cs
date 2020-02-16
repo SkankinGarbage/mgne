@@ -26,8 +26,8 @@ public class StatSetDrawer : PropertyDrawer {
             if (stat == null) continue;
             EditorGUI.LabelField(
                 new Rect(pos.x, 24 + pos.y + seen * 18, pos.width, EditorGUIUtility.singleLineHeight),
-                stat.nameShort + ": ");
-            if (stat.useBinaryEditor) {
+                stat.NameShort + ": ");
+            if (stat.UseBinaryEditor) {
                 SetStatValue(property, stat, EditorGUI.Toggle(
                     new Rect(pos.x + 148, 24 + pos.y + seen * 18, pos.width, EditorGUIUtility.singleLineHeight),
                     (GetStatValue(property, stat) > 0.0f)) ? 1.0f : 0.0f);
@@ -53,11 +53,11 @@ public class StatSetDrawer : PropertyDrawer {
         SerializedProperty values = serialDictionary.FindPropertyRelative("values");
 
         for (int i = 0; i < keys.arraySize; i += 1) {
-            if (keys.GetArrayElementAtIndex(i).stringValue == stat.nameShort) {
+            if (keys.GetArrayElementAtIndex(i).stringValue == stat.NameShort) {
                 return values.GetArrayElementAtIndex(i).floatValue;
             }
         }
-        return stat.combinator.Identity();
+        return stat.Combinator.Identity();
     }
 
     private void SetStatValue(SerializedProperty property, Stat stat, float value) {
@@ -66,7 +66,7 @@ public class StatSetDrawer : PropertyDrawer {
         SerializedProperty values = serialDictionary.FindPropertyRelative("values");
 
         for (int i = 0; i < keys.arraySize; i += 1) {
-            if (keys.GetArrayElementAtIndex(i).stringValue == stat.nameShort) {
+            if (keys.GetArrayElementAtIndex(i).stringValue == stat.NameShort) {
                 values.GetArrayElementAtIndex(i).floatValue = value;
                 return;
             }
@@ -76,7 +76,7 @@ public class StatSetDrawer : PropertyDrawer {
         values.arraySize += 1;
         keys.InsertArrayElementAtIndex(keys.arraySize - 1);
         values.InsertArrayElementAtIndex(values.arraySize - 1);
-        keys.GetArrayElementAtIndex(keys.arraySize - 1).stringValue = stat.nameShort;
+        keys.GetArrayElementAtIndex(keys.arraySize - 1).stringValue = stat.NameShort;
         values.GetArrayElementAtIndex(values.arraySize - 1).floatValue = value;
     }
 }

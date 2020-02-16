@@ -46,7 +46,7 @@ public class StatSet : ISerializationCallbackReceiver {
             if (stat == null) {
                 continue;
             }
-            stats[tag] = stat.combinator.Identity();
+            stats[tag] = stat.Combinator.Identity();
         }
     }
 
@@ -83,7 +83,7 @@ public class StatSet : ISerializationCallbackReceiver {
     public StatSet AddSet(StatSet other) {
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
             if (other.stats.ContainsKey(tag)) {
-                stats[tag] = Stat.Get(tag).combinator.Combine(stats[tag], other.stats[tag]);
+                stats[tag] = Stat.Get(tag).Combinator.Combine(stats[tag], other.stats[tag]);
             }
         }
         return this;
@@ -92,7 +92,7 @@ public class StatSet : ISerializationCallbackReceiver {
     public static StatSet operator -(StatSet a, StatSet b) => a.RemoveSet(b);
     public StatSet RemoveSet(StatSet other) {
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
-            stats[tag] = Stat.Get(tag).combinator.Decombine(stats[tag], other.stats[tag]);
+            stats[tag] = Stat.Get(tag).Combinator.Decombine(stats[tag], other.stats[tag]);
         }
         return this;
     }

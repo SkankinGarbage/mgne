@@ -9,7 +9,7 @@ public class StatLabelView : MonoBehaviour {
     [SerializeField] private Text value = null;
 
     public void Populate(StatSet stats) {
-        var tag = Stat.Get(stat).nameShort;
+        var tag = Stat.Get(stat).NameShort;
         if (tag.Length < 4) tag += ":";
         label.text = tag;
         value.text = Mathf.FloorToInt(stats[stat]).ToString();

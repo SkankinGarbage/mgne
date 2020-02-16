@@ -12,7 +12,6 @@ public class Battle {
     public Party Player { get; private set; }
     public Party Enemy { get; private set; }
     public BattleView View { get; private set; }
-    
 
     public bool IsDone { get; private set; }
     public bool IsVictory => !Enemy.IsAnyAlive;
@@ -21,10 +20,14 @@ public class Battle {
     private Intent[] playerIntents;
     private List<Intent> allIntents;
     private Dictionary<Unit, List<EffectDefend>> defenses;
+    private List<TempStats> boosts;
 
     public Battle(PartyData enemy) {
         Player = Global.Instance().Party;
         Enemy = new Party(enemy);
+
+        boosts = new List<TempStats>();
+        defenses = new Dictionary<Unit, List<EffectDefend>>();
     }
 
     #region Model
@@ -35,6 +38,10 @@ public class Battle {
         } else {
             return new List<EffectDefend>();
         }
+    }
+
+    public void AddBoost(Unit target, StatSet boost) {
+        boosts.Add(new TempStats(target, boost));
     }
 
     /// <returns>True if the action was canceled</returns>
@@ -104,13 +111,18 @@ public class Battle {
         }
         allIntents.Sort(new Comparison<Intent>((a, b) => a.Priority - b.Priority));
 
-        await ResolveIntentsAsync(allIntents);
+        await ResolveIntentsAsync();
         await Global.Instance().Input.AwaitConfirm();
 
         return true;
     }
 
     private async Task EndCombatAsync() {
+        foreach (var boost in boosts) {
+            boost.Decombine();
+        }
+        boosts.Clear();
+
         await View.CloseRoutine();
         // TODO: handle death + retry
     }

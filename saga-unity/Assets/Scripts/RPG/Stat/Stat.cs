@@ -9,18 +9,20 @@ using System.Collections.Generic;
  */
 public class Stat {
 
-    public CombinationStrategy combinator { get; private set; }
-    public StatTag tag { get; private set; }
-    public string nameShort { get; private set; }
-    public bool useBinaryEditor { get; private set; }
+    public CombinationStrategy Combinator { get; private set; }
+    public StatTag Tag { get; private set; }
+    public string NameShort { get; private set; }
+    public string NameLong { get; private set; }
+    public bool UseBinaryEditor { get; private set; }
 
     private static Dictionary<StatTag, Stat> stats;
 
-    private Stat(StatTag tag, CombinationStrategy combinator, string nameShort, bool useBinaryEditor) {
-        this.combinator = combinator;
-        this.tag = tag;
-        this.nameShort = nameShort;
-        this.useBinaryEditor = useBinaryEditor;
+    private Stat(StatTag tag, CombinationStrategy combinator, string nameShort, string nameLong, bool useBinaryEditor) {
+        Combinator = combinator;
+        Tag = tag;
+        NameShort = nameShort;
+        NameLong = nameLong;
+        UseBinaryEditor = useBinaryEditor;
     }
 
     public static Stat Get(StatTag tag) {
@@ -39,12 +41,12 @@ public class Stat {
 
     private static void InitializeStats() {
         stats = new Dictionary<StatTag, Stat>();
-        AddStat(StatTag.MHP);
-        AddStat(StatTag.HP);
-        AddStat(StatTag.STR);
-        AddStat(StatTag.AGI);
-        AddStat(StatTag.DEF);
-        AddStat(StatTag.MANA);
+        AddStat(StatTag.MHP, "Max health");
+        AddStat(StatTag.HP, "Health");
+        AddStat(StatTag.STR, "Strength");
+        AddStat(StatTag.AGI, "Agility");
+        AddStat(StatTag.DEF, "Defense");
+        AddStat(StatTag.MANA, "Mana");
 
         foreach (StatTag tag in new StatTag[] {     StatTag.RESIST_DAMAGE,
                 StatTag.RESIST_WEAPON,
@@ -81,11 +83,11 @@ public class Stat {
         }
     }
 
-    private static void AddStat(StatTag tag) {
-        stats[tag] = new Stat(tag, CombinationAdditive.Instance(), tag.ToString(), false);
+    private static void AddStat(StatTag tag, string longName = null) {
+        stats[tag] = new Stat(tag, CombinationAdditive.Instance(), tag.ToString(), longName, false);
     }
 
     private static void AddFlag(StatTag tag) {
-        stats[tag] = new Stat(tag, CombinationAdditive.Instance(), tag.ToString(), true);
+        stats[tag] = new Stat(tag, CombinationAdditive.Instance(), tag.ToString(), null, true);
     }
 }
