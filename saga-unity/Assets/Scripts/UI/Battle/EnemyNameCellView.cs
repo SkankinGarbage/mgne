@@ -13,4 +13,8 @@ public class EnemyNameCellView : MonoBehaviour {
         int alive = enemies.Where(enemy => !enemy.IsDead).Count();
         enemyNumber.text = "x" + alive;
     }
+
+    public override string ToString() {
+        return base.ToString() + " " + enemyName.text + " " + enemyNumber.text;
+    }
 }

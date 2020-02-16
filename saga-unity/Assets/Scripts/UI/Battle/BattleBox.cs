@@ -27,9 +27,14 @@ public class BattleBox : TextAutotyper {
     }
 
     public void Clear() {
-        fullLines = 0;
-        for (var i = 0; i < lineCount; i += 1) {
-            lines[i] = "";
+        if (lines == null) {
+            lines = new string[lineCount];
+        } else {
+            fullLines = 0;
+            for (var i = 0; i < lineCount; i += 1) {
+                lines[i] = "";
+            }
+
         }
         textbox.text = "";
     }

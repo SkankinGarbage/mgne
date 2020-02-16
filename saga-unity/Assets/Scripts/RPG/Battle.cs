@@ -74,12 +74,12 @@ public class Battle {
         allIntents.Sort(new Comparison<Intent>((a, b) => a.Priority - b.Priority));
 
         await ResolveIntentsAsync(allIntents);
+        await Global.Instance().Input.AwaitConfirm();
 
         return true;
     }
 
     private async Task EndCombatAsync() {
-        await Global.Instance().Input.AwaitConfirm();
         await View.CloseRoutine();
         // TODO: handle death + retry
     }
