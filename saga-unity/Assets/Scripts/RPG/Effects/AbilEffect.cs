@@ -20,12 +20,30 @@ public abstract class AbilEffect {
     public abstract bool IsMapUsable();
     public virtual bool CanTargetDead() => false;
 
-    public virtual void OnMapUse(UnitList menu, Unit user) {
+    public virtual void ApplyMapUse(UnitList menu, Unit user) {
         Debug.LogError("Unimplemented map use for item " + this);
     }
 
     public void PlayMainSound() {
         // TODO: extract audio from battle anim
+    }
+
+    public virtual void OnRoundStart(Intent intent) {
+        // default is nothing
+    } 
+
+    public virtual Task<List<Unit>> AcquireTargetsAsync(Unit actor, Battle battle, bool useAI) {
+        Debug.LogError("Unimplemented combat use for item " + this);
+        return null;
+    }
+
+    public virtual List<Unit> AcquireRandomTargets(Unit actor, Battle battle) {
+        return new List<Unit>();
+    }
+
+    public virtual async Task ResolveAsync(Intent intent) {
+        await intent.Battle.WriteLineAsync(intent.ToString());
+        await intent.Battle.WriteLineAsync("");
     }
 
     protected void FinishMapEffect(bool affected) {
@@ -35,15 +53,5 @@ public abstract class AbilEffect {
         } else {
             AudioManager.PlayFail();
         }
-    }
-
-    public virtual Task<List<Unit>> AcquireTargetsAsync(Unit actor, Battle battle, bool useAI) {
-        Debug.LogError("Unimplemented combat use for item " + this);
-        return null;
-    }
-
-    public virtual async Task ResolveAsync(Intent intent) {
-        await intent.Battle.WriteLineAsync(intent.ToString());
-        await intent.Battle.WriteLineAsync("");
     }
 }

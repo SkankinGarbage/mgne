@@ -12,7 +12,7 @@ public class EffectStatCandy : AbilEffect {
     public override bool IsBattleUsable() => false;
     public override bool IsMapUsable() => true;
 
-    public override async void OnMapUse(UnitList menu, Unit user) {
+    public override async void ApplyMapUse(UnitList menu, Unit user) {
         bool affected;
         var target = await menu.SelectUnitTargetAsync();
         if (target != null) {

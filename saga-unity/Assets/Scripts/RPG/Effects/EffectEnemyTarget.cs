@@ -74,6 +74,26 @@ public abstract class EffectEnemyTarget : AbilEffect {
         await FinishIntentResolution(intent);
     }
 
+    public override List<Unit> AcquireRandomTargets(Unit actor, Battle battle) {
+        switch (data.projector) {
+            case OffenseProjectorType.SINGLE_ENEMY:
+                var possibleTargets = new List<Unit>();
+                possibleTargets.AddRange(battle.Enemy);
+                possibleTargets.AddRange(battle.Player);
+                return new List<Unit>() { possibleTargets[Random.Range(0, possibleTargets.Count)] };
+            case OffenseProjectorType.GROUP_ENEMY:
+                var possibleGroups = new List<List<Unit>>();
+                foreach (var player in battle.Player) {
+                    possibleGroups.Add(new List<Unit>() { player });
+                }
+                possibleGroups.AddRange(battle.Enemy.Groups);
+                return possibleGroups[Random.Range(0, possibleGroups.Count)];
+            case OffenseProjectorType.ALL_ENEMY:
+                return new List<Unit>(Random.Range(0.0f, 1.0f) > 0.5f ? battle.Player.Members : battle.Enemy.Members);
+        }
+        return null;
+    }
+
     protected abstract int CalcAttackPower(Intent intent);
 
     protected abstract bool CheckIfHits(Intent intent, Unit target, int power, float roll);

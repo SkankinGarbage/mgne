@@ -40,8 +40,19 @@ public class Battle {
         }
     }
 
-    public void AddBoost(Unit target, StatSet boost) {
-        boosts.Add(new TempStats(target, boost));
+    public void AddBoost(Unit target, StatSet boost, bool oneRoundOnly = false) {
+        boosts.Add(new TempStats(target, boost, oneRoundOnly = false));
+    }
+
+    public void AddDefense(Unit defender, EffectDefend defense) {
+        List<EffectDefend> defenseList;
+        if (defenses.ContainsKey(defender)) {
+            defenseList = defenses[defender];
+        } else {
+            defenseList = new List<EffectDefend>();
+            defenses[defender] = defenseList;
+        }
+        defenseList.Add(defense);
     }
 
     /// <returns>True if the action was canceled</returns>
@@ -88,6 +99,9 @@ public class Battle {
                     await RunAsync();
                     break;
             }
+            if (!IsDone) {
+                await UpdateForEndOfRoundAsync();
+            }
         }
         await EndCombatAsync();
     }
@@ -110,6 +124,9 @@ public class Battle {
             }
         }
         allIntents.Sort(new Comparison<Intent>((a, b) => a.Priority - b.Priority));
+        foreach (var intent in allIntents) {
+            intent.OnRoundStart();
+        }
 
         await ResolveIntentsAsync();
         await Global.Instance().Input.AwaitConfirm();
@@ -117,11 +134,36 @@ public class Battle {
         return true;
     }
 
+    private async Task UpdateForEndOfRoundAsync() {
+        allIntents.Clear();
+        defenses.Clear();
+        var toClear = boosts.Where(boost => boost.IsOneRoundOnly);
+        foreach (var boost in toClear) {
+            boost.Decombine();
+            boosts.Remove(boost);
+        }
+
+        var participants = new List<Unit>();
+        participants.AddRange(Enemy);
+        participants.AddRange(Player);
+        foreach (var unit in participants) {
+            await unit.UpdateForEndOfRoundAsync(this);
+            if (IsVictory || IsDefeat) {
+                IsDone = true;
+                break;
+            }
+        }
+    }
+
     private async Task EndCombatAsync() {
         foreach (var boost in boosts) {
             boost.Decombine();
         }
         boosts.Clear();
+
+        foreach (var unit in Player) {
+            unit.Status?.UpdateForEndOfCombat(unit);
+        }
 
         await View.CloseRoutine();
         // TODO: handle death + retry

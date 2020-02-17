@@ -36,6 +36,17 @@ public class EquipmentInventory : Inventory {
         return false;
     }
 
+    public CombatItem SelectRandomBattleItem() {
+        int offset = Random.Range(0, capacity);
+        for (int i = 0; i < capacity; i += 1) {
+            var toCheck = items[(i + offset) % capacity];
+            if (toCheck != null && toCheck.IsBattleUseable) {
+                return toCheck;
+            }
+        }
+        return null;
+    }
+
     public void RestoreAbilityUses() {
         foreach (var item in items) {
             item.RestoreUses();

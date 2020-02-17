@@ -16,7 +16,7 @@ public class EffectDebuff : EffectEnemyTarget {
 
         var debuffMult = power / 100f;
         if (data.defendStat.HasValue) {
-            debuffMult -= target.[data.defendStat] * 0.66f / 100f;
+            debuffMult -= target[data.defendStat.Value] * 0.66f / 100f;
         }
         if (debuffMult > .5f) {
             debuffMult = .5f;
@@ -28,7 +28,7 @@ public class EffectDebuff : EffectEnemyTarget {
         }
         if (debuffPower > 0) {
             var mod = new StatSet();
-            mod.[data.drainStat] = -1 * debuffPower;
+            mod[data.drainStat] = -1 * debuffPower;
             battle.AddBoost(target, mod);
             await battle.WriteLineAsync(tab + victimname + "'s " + statName + " is down by "  + debuffPower + ".");
         } else {
@@ -39,7 +39,7 @@ public class EffectDebuff : EffectEnemyTarget {
     protected override int CalcAttackPower(Intent intent) {
         int power = data.power;
         if (data.attackStat != null) {
-            power += data.[data.attackStat] / 2;
+            power += intent.Actor[data.attackStat.Value] / 2;
         }
         return power;
     }

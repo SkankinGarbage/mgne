@@ -29,6 +29,16 @@ public class Intent {
         Targets.Clear();
     }
 
+    public void OnRoundStart() {
+        Item.Effect.OnRoundStart(this);
+    }
+
+    public async Task Randomize() {
+        await Battle.WriteLineAsync(Actor.Name + " is confused.");
+        Item = Actor.Equipment.SelectRandomBattleItem();
+        Item.Effect.AcquireRandomTargets(Actor, Battle);
+    }
+
     public override string ToString() {
         var actorname = Actor.Name;
         if (Item == null) {
@@ -57,6 +67,9 @@ public class Intent {
     public async Task ResolveAsync() {
         if (!Actor.CanAct) {
             return;
+        }
+        if (Actor.IsConfused) {
+            await Randomize();
         }
         if (!Targets.Any(unit => unit.IsAlive) && !Item.Effect.CanTargetDead()) {
             await Battle.View.PrintDoesNothingRoutine(Actor);

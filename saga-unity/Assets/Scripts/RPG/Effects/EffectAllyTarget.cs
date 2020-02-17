@@ -12,7 +12,7 @@ public abstract class EffectAllyTarget : AbilEffect {
 
     public override bool IsBattleUsable() => true;
 
-    public override async void OnMapUse(UnitList menu, Unit user) {
+    public override async void ApplyMapUse(UnitList menu, Unit user) {
         switch (data.projector) {
             case AllyProjectorType.ALLY_PARTY:
             case AllyProjectorType.PLAYER_PARTY_ENEMY_GROUP:
@@ -69,6 +69,26 @@ public abstract class EffectAllyTarget : AbilEffect {
                     var confirmed = await battle.View.allyList.selector.ConfirmSelectionAsync();
                     return confirmed ? new List<Unit>() { actor } : null;
                 }
+        }
+        return null;
+    }
+
+    public override List<Unit> AcquireRandomTargets(Unit actor, Battle battle) {
+        switch (data.projector) {
+            case AllyProjectorType.PLAYER_PARTY_ENEMY_GROUP:
+                var possibleGroups = new List<List<Unit>>();
+                possibleGroups.Add(new List<Unit>(battle.Player));
+                possibleGroups.AddRange(battle.Enemy.Groups);
+                return possibleGroups[Random.Range(0, possibleGroups.Count)];
+            case AllyProjectorType.ALLY_PARTY:
+                return new List<Unit>(Random.Range(0.0f, 1.0f) > 0.5f ? battle.Player.Members : battle.Enemy.Members);
+            case AllyProjectorType.SINGLE_ALLY:
+                var possibleTargets = new List<Unit>();
+                possibleTargets.AddRange(battle.Enemy);
+                possibleTargets.AddRange(battle.Player);
+                return new List<Unit>() { possibleTargets[Random.Range(0, possibleTargets.Count)] };
+            case AllyProjectorType.USER:
+                return new List<Unit>() { actor };
         }
         return null;
     }
