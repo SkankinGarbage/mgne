@@ -48,7 +48,7 @@ public abstract class EffectCombat : EffectEnemyTarget {
             await intent.Battle.CheckDeathAsync(target, true);
         } else {
             // This attack may have damaged the victim
-            int damage = CalcAttackPower(intent);
+            var damage = await CalculateAttackPowerAsync(intent);
             if (!HasFlag(OffenseFlag.IGNORE_RESISTANCES)) {
                 if (target.IsImmuneTo(data.damType)) {
                     await intent.Battle.WriteLineAsync(tab + victimname + " is immune to " + itemname + ".");
@@ -83,11 +83,37 @@ public abstract class EffectCombat : EffectEnemyTarget {
         }
     }
 
-    protected override bool CheckIfHits(Intent intent, Unit target, int power, float roll) {
-        if (data.miss == MissType.ALWAYS_HITS) return true;
-        int temp = 100 - (target[StatTag.AGI] + CalculateShieldDodgeBonus(intent.Battle, target) - intent.Actor[StatTag.AGI]);
-        float chance = temp / 100f;
-        return roll < chance;
+    protected override async Task<bool> CheckHitAsync(Intent intent, Unit target, int power, float roll) {
+        var tab = BattleBox.Tab;
+        var username = intent.Actor.Name;
+        var victimname = target.Name;
+
+        if (HasFlag(OffenseFlag.ONLY_AFFECT_UNDEAD) && !target.Is(StatTag.UNDEAD)) {
+            // Enemy is exempt
+            await intent.Battle.WriteLineAsync(tab + "Nothing happens.");
+            return false;
+
+        } else if (HasFlag(OffenseFlag.ONLY_AFFECT_HUMANS) && target.Race != Race.HUMAN) {
+            // Enemy is exempt
+            await intent.Battle.WriteLineAsync(tab + "Nothing happens.");
+            return false;
+
+        } else if (!CheckCombatFormulaHit(intent.Battle, intent.Actor, target, roll)) {
+            // We missed... why?
+            if (CalculateShieldDodgeBonus(intent.Battle, target) > 0) {
+                var defenses = intent.Battle.GetDefensesForUnit(target);
+                var blocker = defenses.FirstOrDefault();
+                var shield = blocker.Item;
+                await shield.Effect.OnBlock(intent.Battle, target);
+            } else {
+                await intent.Battle.WriteLineAsync(tab + username + " misses " + victimname + ".");
+            }
+            return false;
+
+        } else {
+            // We actually hit the jerk
+            return true;
+        }
     }
 
     protected int CalcStatPower(Unit actor, StatTag? powerStat, int power) {
@@ -142,4 +168,8 @@ public abstract class EffectCombat : EffectEnemyTarget {
 
     /// <summary>Only relevant for mutant stuff</summary>
     protected abstract bool IsPhysical();
+
+    protected abstract Task<int> CalculateDamageAsync(Battle battle, int power, Unit target);
+
+    protected abstract bool CheckCombatFormulaHit(Battle battle, Unit user, Unit target, float roll);
 }

@@ -92,6 +92,6 @@ public class BattleView : FullScreenMenuView {
 
     public IEnumerator PlayBackDamageRoutine(Unit target, int damage) {
         // TODO
-        yield return; 
+        yield return null; 
     }
 }

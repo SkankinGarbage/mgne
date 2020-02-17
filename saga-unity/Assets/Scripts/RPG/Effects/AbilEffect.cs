@@ -32,6 +32,11 @@ public abstract class AbilEffect {
         // default is nothing
     } 
 
+    public virtual Task OnBlock(Battle battle, Unit user) {
+        Debug.LogError("Unimplemented block for item " + this);
+        return Task.FromResult(0);
+    }
+
     public virtual Task<List<Unit>> AcquireTargetsAsync(Unit actor, Battle battle, bool useAI) {
         Debug.LogError("Unimplemented combat use for item " + this);
         return null;

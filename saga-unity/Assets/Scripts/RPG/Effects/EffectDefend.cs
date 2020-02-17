@@ -52,6 +52,12 @@ public class EffectDefend : EffectAllyTarget {
         }
     }
 
+    public override async Task OnBlock(Battle battle, Unit user) {
+        var tab = BattleBox.Tab;
+        var victimname = user.Name;
+        await battle.WriteLineAsync(tab + victimname + " deflects by " + defendName + ".");
+    }
+
     public DefendResult DefendAgainst(Intent attackIntent, Unit target, DamageType damType) {
         // TODO:
         return new DefendResult() {

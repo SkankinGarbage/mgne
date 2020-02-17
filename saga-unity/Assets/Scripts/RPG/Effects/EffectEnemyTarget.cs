@@ -62,11 +62,11 @@ public abstract class EffectEnemyTarget : AbilEffect {
                 targets.AddRange(intent.Targets);
                 break;
         }
-        
-        var power = CalcAttackPower(battle, intent.Actor);
+
+        var power = await CalculateAttackPowerAsync(intent);
         var roll = Random.Range(0.0f, 1.0f);
         foreach (var target in targets) {
-            if (CheckIfHits(intent, target, power, roll)) {
+            if (await CheckHitAsync(intent, target, power, roll)) {
                 await ApplyEffect(intent, target, power);
             }
         }
@@ -94,11 +94,11 @@ public abstract class EffectEnemyTarget : AbilEffect {
         return null;
     }
 
-    protected abstract int CalcAttackPower(Intent intent);
-
-    protected abstract bool CheckIfHits(Intent intent, Unit target, int power, float roll);
+    protected abstract Task<int> CalculateAttackPowerAsync(Intent intent);
 
     protected abstract Task ApplyEffect(Intent intent, Unit target, int power);
+
+    protected abstract Task<bool> CheckHitAsync(Intent intent, Unit target, int power, float roll);
 
     protected virtual Task FinishIntentResolution(Intent intent) {
         // default is nothing

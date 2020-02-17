@@ -36,7 +36,7 @@ public class EffectDebuff : EffectEnemyTarget {
         }
     }
 
-    protected override int CalcAttackPower(Intent intent) {
+    protected override int CalculateAttackPowerAsync(Intent intent) {
         int power = data.power;
         if (data.attackStat != null) {
             power += intent.Actor[data.attackStat.Value] / 2;
