@@ -83,6 +83,13 @@ public abstract class EffectCombat : EffectEnemyTarget {
         }
     }
 
+    protected override bool CheckIfHits(Intent intent, Unit target, int power, float roll) {
+        if (data.miss == MissType.ALWAYS_HITS) return true;
+        int temp = 100 - (target[StatTag.AGI] + CalculateShieldDodgeBonus(intent.Battle, target) - intent.Actor[StatTag.AGI]);
+        float chance = temp / 100f;
+        return roll < chance;
+    }
+
     protected int CalcStatPower(Unit actor, StatTag? powerStat, int power) {
         int temp = power;
         int result = 0;
