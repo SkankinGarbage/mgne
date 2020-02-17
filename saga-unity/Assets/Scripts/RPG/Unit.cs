@@ -29,6 +29,7 @@ public class Unit {
     public bool IsWeakTo(DamageType type) => type.WeakFlags().Any(flag => Is(flag));
     public bool IsImmuneTo(DamageType type) => type.ImmuneFlags().Any(flag => Is(flag));
     public bool IsResistantTo(DamageType type) => type.ResistFlags().Any(flag => Is(flag));
+    public bool IsResistantTo(Status status) => Stats[status.Data.resistFlag] > 0;
 
     public bool IsDead {
         get {
@@ -139,6 +140,19 @@ public class Unit {
             if (toRegen > 0) {
                 await battle.WriteLineAsync(Name + " recovers by " + toRegen + ".");
                 Heal(toRegen);
+            }
+        }
+    }
+
+    public async Task TryApplyStatusAsync(Status status, Battle battle) {
+        var tab = BattleBox.Tab;
+        if (status.Data.lethality == LethalityType.DEATH) {
+            await battle.WriteLineAsync(tab + Name + status.Data.inflictString + ".");
+            InflictDamage((int) Stats[StatTag.MHP], false);
+        } else {
+            if (Status == null || Status.Data.priority < status.Data.priority) {
+                await battle.WriteLineAsync(tab + Name + status.Data.inflictString + ".");
+                Status = status;
             }
         }
     }
