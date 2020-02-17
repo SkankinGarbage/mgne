@@ -36,15 +36,15 @@ public class EffectDebuff : EffectEnemyTarget {
         }
     }
 
-    protected override int CalculateAttackPowerAsync(Intent intent) {
+    protected override Task<int> CalculateAttackPowerAsync(Intent intent) {
         int power = data.power;
         if (data.attackStat != null) {
             power += intent.Actor[data.attackStat.Value] / 2;
         }
-        return power;
+        return Task.FromResult(power);
     }
 
-    protected override bool CheckIfHits(Intent intent, Unit target, int power, float roll) {
-        return true;
+    protected override Task<bool> CheckHitAsync(Intent intent, Unit target, int power, float roll) {
+        return Task.FromResult(true);
     }
 }

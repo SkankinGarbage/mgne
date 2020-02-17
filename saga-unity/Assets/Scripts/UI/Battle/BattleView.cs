@@ -20,6 +20,9 @@ public class BattleView : FullScreenMenuView {
         var battle = new Battle(enemyParty);
         var menu = Instantiate<BattleView>("Prefabs/UI/Battle/BattleView");
         menu.Populate(battle);
+
+        Global.Instance().Input.PushListener(menu.ToString(), (cmd, x) => true);
+
         return menu;
     }
 
@@ -93,5 +96,10 @@ public class BattleView : FullScreenMenuView {
     public IEnumerator PlayBackDamageRoutine(Unit target, int damage) {
         // TODO
         yield return null; 
+    }
+
+    public override IEnumerator CloseRoutine() {
+        Global.Instance().Input.RemoveListener(ToString());
+        return base.CloseRoutine();
     }
 }

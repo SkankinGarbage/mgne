@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class EquipmentInventory : Inventory {
 
@@ -12,7 +11,7 @@ public class EquipmentInventory : Inventory {
         for (int i = 0; i < capacity && i < data.equipped.Length; i += 1) {
             var itemData = data.equipped[i];
             if (itemData != null) {
-                items[i] = new CombatItem(itemData);
+                SetSlot(i, new CombatItem(itemData));
             }
         }
     }
