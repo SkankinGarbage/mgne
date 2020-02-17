@@ -36,10 +36,14 @@ public class Status {
 
     public async Task CheckHealAsync(Battle battle, Unit unit) {
         if (Random.Range(0, 100) < Data.recoverChance) {
-            await battle.WriteLineAsync("");
-            await battle.WriteLineAsync(unit.Name + " " + Data.healString + ".");
-            Heal(unit);
+            await HealAsync(battle, unit);
         }
+    }
+
+    public async Task HealAsync(Battle battle, Unit unit) {
+        await battle.WriteLineAsync("");
+        await battle.WriteLineAsync(unit.Name + " " + Data.healString + ".");
+        Heal(unit);
     }
 
     public async Task UpdateForEndOfRoundAsync(Battle battle, Unit unit) {
