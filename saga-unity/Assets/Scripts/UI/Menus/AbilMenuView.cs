@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 public class AbilMenuView : FullScreenMenuView {
 
+    [SerializeField] public UnitList miniSelect = null;
     [SerializeField] private UnitCellView unitCell = null;
     [SerializeField] private List<StatLabelView> statLabels = null;
     [SerializeField] private CombatItemList abilList = null;
     [SerializeField] private Text descriptionLabel = null;
-    [SerializeField] private UnitList miniSelect = null;
     
     public static AbilMenuView ShowDefault() {
         return Instantiate<AbilMenuView>("Prefabs/UI/Abil/AbilMenu");
@@ -42,7 +42,7 @@ public class AbilMenuView : FullScreenMenuView {
             var item = unit.Equipment[slot];
             if (item != null) {
                 if (item.IsMapUseable) {
-                    await item.OnMapUseDeferred(this);
+                    await item.UseOnMapAsync(this, unit);
                 } else {
                     AudioManager.PlayFail();
                     await Task.Delay(100);

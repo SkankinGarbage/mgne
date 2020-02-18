@@ -77,6 +77,7 @@ public class Intent {
         }
 
         await Item.Effect.ResolveAsync(this);
+        Item.DeductUse();
 
         IsFinished = true;
     }

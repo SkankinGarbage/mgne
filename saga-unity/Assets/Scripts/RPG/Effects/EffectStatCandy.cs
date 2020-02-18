@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class EffectStatCandy : AbilEffect {
@@ -12,9 +13,11 @@ public class EffectStatCandy : AbilEffect {
     public override bool IsBattleUsable() => false;
     public override bool IsMapUsable() => true;
 
-    public override async void ApplyMapUse(UnitList menu, Unit user) {
+    public override async Task UseOnMapAsync(AbilMenuView menu, Unit user) {
         bool affected;
-        var target = await menu.SelectUnitTargetAsync();
+
+        var target = await menu.miniSelect.SelectUnitTargetAsync();
+
         if (target != null) {
             if (data.restrictRace.Where(x => x == target.Race).Count() == 0) {
                 affected = false;

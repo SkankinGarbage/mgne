@@ -70,13 +70,12 @@ public class InputManager : MonoBehaviour {
     public void Update() {
         List<IInputListener> listeners = new List<IInputListener>();
         listeners.AddRange(this.listeners);
-
-        foreach (IInputListener listener in listeners) {
-            if (disabledListeners.Contains(listener)) {
-                continue;
-            }
-            
-            foreach (Command command in Enum.GetValues(typeof(Command))) {
+        
+        foreach (Command command in Enum.GetValues(typeof(Command))) {
+            foreach (IInputListener listener in listeners) {
+                if (disabledListeners.Contains(listener)) {
+                    continue;
+                }
                 bool endProcessing = false; // ew.
                 foreach (KeyCode code in keybinds[command]) {
                     if (Input.GetKeyDown(code)) {

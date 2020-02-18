@@ -12,19 +12,33 @@ public abstract class EffectAllyTarget : AbilEffect {
 
     public override bool IsBattleUsable() => true;
 
-    public override async void ApplyMapUse(UnitList menu, Unit user) {
+    public override async Task UseOnMapAsync(AbilMenuView menu, Unit user) {
+        bool wasActive, confirmed;
         switch (data.projector) {
             case AllyProjectorType.ALLY_PARTY:
             case AllyProjectorType.PLAYER_PARTY_ENEMY_GROUP:
-                ApplyMapEffect(user, Global.Instance().Data.Party);
+                menu.miniSelect.selector.SelectAll();
+                wasActive = menu.miniSelect.gameObject.activeSelf;
+                menu.miniSelect.gameObject.SetActive(true);
+                confirmed = await menu.miniSelect.selector.ConfirmSelectionAsync();
+                menu.miniSelect.gameObject.SetActive(wasActive);
+                if (confirmed) {
+                    ApplyMapEffect(user, Global.Instance().Data.Party);
+                }
+                item.DeductUse();
                 break;
             case AllyProjectorType.SINGLE_ALLY:
-                var target = await menu.SelectUnitTargetAsync();
+                var target = await menu.miniSelect.SelectUnitTargetAsync();
                 if (target != null) {
                     ApplyMapEffect(user, new Unit[] { target });
                 }
                 break;
             case AllyProjectorType.USER:
+                menu.miniSelect.selector.SelectAll();
+                wasActive = menu.miniSelect.gameObject.activeSelf;
+                menu.miniSelect.gameObject.SetActive(true);
+                confirmed = await menu.miniSelect.selector.ConfirmSelectionAsync();
+                menu.miniSelect.gameObject.SetActive(wasActive);
                 if (user != null) {
                     ApplyMapEffect(user, new Unit[] { user });
                 }

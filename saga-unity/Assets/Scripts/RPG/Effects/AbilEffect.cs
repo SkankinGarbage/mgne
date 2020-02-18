@@ -20,8 +20,9 @@ public abstract class AbilEffect {
     public abstract bool IsMapUsable();
     public virtual bool CanTargetDead() => false;
 
-    public virtual void ApplyMapUse(UnitList menu, Unit user) {
+    public virtual Task UseOnMapAsync(AbilMenuView menu, Unit user) {
         Debug.LogError("Unimplemented map use for item " + this);
+        return Task.FromResult(0);
     }
 
     public void PlayMainSound() {

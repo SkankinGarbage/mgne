@@ -37,9 +37,8 @@ public class CombatItem {
         UsesRemaining = Data.uses;
     }
 
-    public async Task OnMapUseDeferred(AbilMenuView menu) {
-        // TODO:
-        await Task.Delay(0);
+    public async Task UseOnMapAsync(AbilMenuView menu, Unit user) {
+        await Effect.UseOnMapAsync(menu, user);
     }
 
     public void HalveUses() {
