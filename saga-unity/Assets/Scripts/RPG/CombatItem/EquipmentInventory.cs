@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class EquipmentInventory : Inventory {
 
@@ -36,14 +37,17 @@ public class EquipmentInventory : Inventory {
     }
 
     public CombatItem SelectRandomBattleItem() {
-        int offset = Random.Range(0, capacity);
-        for (int i = 0; i < capacity; i += 1) {
-            var toCheck = items[(i + offset) % capacity];
-            if (toCheck != null && toCheck.IsBattleUseable) {
-                return toCheck;
+        var possible = new List<CombatItem>();
+        foreach (var item in this) {
+            if (item != null && item.IsBattleUseable) {
+                possible.Add(item);
             }
         }
-        return null;
+        if (possible.Count == 0) {
+            return null;
+        } else {
+            return possible[Random.Range(0, possible.Count)];
+        }
     }
 
     public void RestoreAbilityUses() {

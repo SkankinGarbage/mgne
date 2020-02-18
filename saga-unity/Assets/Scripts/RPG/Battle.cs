@@ -120,7 +120,8 @@ public class Battle {
         allIntents = playerIntents.ToList();
         foreach (var enemy in Enemy) {
             if (enemy.CanAct) {
-                allIntents.Add(ConstructIntentForEnemy(enemy));
+                var intent = await ConstructIntentForEnemyAsync(enemy);
+                allIntents.Add(intent);
             }
         }
         allIntents.Sort(new Comparison<Intent>((a, b) => a.Priority - b.Priority));
@@ -195,6 +196,7 @@ public class Battle {
     private async Task ResolveIntentsAsync() {
         foreach (var intent in allIntents) {
             await intent.ResolveAsync();
+            await WriteLineAsync("");
 
             if (IsVictory || IsDefeat) {
                 IsDone = true;
@@ -218,8 +220,8 @@ public class Battle {
         }
     }
 
-    private Intent ConstructIntentForEnemy(Unit enemy) {
-        return enemy.AI.ConstructIntent(this);
+    private Task<Intent> ConstructIntentForEnemyAsync(Unit enemy) {
+        return enemy.AI.ConstructIntentAsync(this);
     }
 
     private int AdvanceUnitIndex(int index, int delta) {

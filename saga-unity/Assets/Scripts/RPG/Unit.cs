@@ -55,6 +55,7 @@ public class Unit {
         Equipment = new EquipmentInventory(this, data);
         FieldSpriteTag = data.appearance;
         AI = new AIRandom(this);
+        RestoreHP();
     }
 
     public void RestoreHP() {

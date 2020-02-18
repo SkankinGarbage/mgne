@@ -7,6 +7,7 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
     [SerializeField] protected Text textbox;
     [SerializeField] protected float charsPerSecond = 120f;
     [SerializeField] protected GameObject advanceArrow;
+    [SerializeField] protected bool speedUpWhenHurried;
 
     protected bool hurried;
     protected bool confirmed;
@@ -15,6 +16,7 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
 
     public bool OnCommand(InputManager.Command command, InputManager.Event eventType) {
         switch (eventType) {
+            case InputManager.Event.Hold:
             case InputManager.Event.Down:
                 if (command == InputManager.Command.Confirm) {
                     hurried = true;
@@ -44,8 +46,14 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
             textbox.text += "</color>";
             yield return null;
 
+            elapsed += Time.deltaTime;
             if (hurried) {
-                break;
+                hurried = false;
+                if (speedUpWhenHurried) {
+                    elapsed += Time.deltaTime * 4;
+                } else {
+                    break;
+                }
             }
         }
         textbox.text = text;

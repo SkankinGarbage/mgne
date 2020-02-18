@@ -55,6 +55,8 @@ public class BattleView : FullScreenMenuView {
         unitCell.gameObject.SetActive(false);
         inventory.gameObject.SetActive(false);
         allyList.gameObject.SetActive(false);
+
+        unitList.Populate();
     }
 
     public void PopulateForAllySelection() {
@@ -89,11 +91,11 @@ public class BattleView : FullScreenMenuView {
     }
 
     public IEnumerator PrintDoesNothingRoutine(Unit actor) {
-        yield return WriteLineRoutine(actor + " does nothing.");
-        yield return WriteLineRoutine("");
+        yield return WriteLineRoutine(actor.Name + " does nothing.");
     }
 
     public IEnumerator PlayBackDamageRoutine(Unit target, int damage) {
+        yield return WriteLineRoutine(BattleBox.Tab + target.Name + " takes " + damage + " damage.");
         // TODO
         yield return null; 
     }

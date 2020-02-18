@@ -7,7 +7,7 @@ public class Intent {
 
     public Unit Actor { get; private set; }
     public CombatItem Item { get; private set; }
-    public List<Unit> Targets { get; private set; }
+    public List<Unit> Targets { get; set; }
     public int Priority { get; private set; }
     public Battle Battle { get; private set; }
     public bool IsRecursivelyTriggered { get; private set; }

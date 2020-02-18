@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Threading.Tasks;
 
 public class AIRandom : AIBase {
 
@@ -7,22 +6,10 @@ public class AIRandom : AIBase {
 
     }
 
-    protected override void PopulateIntent(Intent intent, Party allies, Party enemy) {
-        var index = Random.Range(0, EquipmentInventory.Capacity);
-        CombatItem item = null;
-        var tries = 0;
-        while ((item == null || !item.IsBattleUseable) && tries < EquipmentInventory.Capacity) {
-            item = actor.Equipment[index];
-            tries += 1;
-            index += 1;
-            if (index >= EquipmentInventory.Capacity) {
-                index = 0;
-            }
-        }
-
-        intent.SetItem(item);
-        if (item != null) {
-            item.Effect.AcquireTargetsAsync(actor, intent.Battle, true);
+    protected override async Task PopulateIntentAsync(Intent intent, Party allies, Party enemy) {
+        intent.SetItem(intent.Actor.Equipment.SelectRandomBattleItem());
+        if (intent.Item != null) {
+            intent.Targets = await intent.Item.Effect.AcquireTargetsAsync(actor, intent.Battle, true);
         }
     }
 }
