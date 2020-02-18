@@ -1,9 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
-using Newtonsoft.Json.Linq;
-using UnityEditor;
 
 public class StatSetDeserializer : JsonConverter {
 

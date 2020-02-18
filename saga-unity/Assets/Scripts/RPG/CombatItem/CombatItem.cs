@@ -20,11 +20,21 @@ public class CombatItem {
     public StatSet RoboStats => Data.robostats;
     public string Name => UIUtils.GlyphifyString(Data.abilityName);
 
-    public CombatItem(CombatItemData data) {
+    protected CombatItem() {
+        Stats = new StatSet();
+    }
+
+    public CombatItem(CombatItemData data) : this() {
         Data = data;
         RestoreUses();
-        Stats = new StatSet();
         Effect = AbilEffectFactory.CreateEffect(data.warhead, this);
+    }
+
+    public CombatItem(SerializedCombatItem data) : this() {
+        Data = IndexDatabase.Instance().CombatItems.GetData(data.dataKey);
+        UsesWhenAdded = data.usesWhenAdded;
+        UsesRemaining = data.usesRemaining;
+        Effect = AbilEffectFactory.CreateEffect(Data.warhead, this);
     }
 
     /// <param name="inventory">The inventory being added to, maybe null</param>

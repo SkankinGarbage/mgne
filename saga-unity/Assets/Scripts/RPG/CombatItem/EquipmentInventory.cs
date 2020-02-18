@@ -7,12 +7,25 @@ public class EquipmentInventory : Inventory {
 
     private Unit owner;
 
-    public EquipmentInventory(Unit unit, CharaData data) : base(Capacity) {
+    protected EquipmentInventory(Unit unit) : base(Capacity) {
+        owner = unit;
+    }
+
+    public EquipmentInventory(Unit unit, CharaData data) : this(unit) {
         owner = unit;
         for (int i = 0; i < capacity && i < data.equipped.Length; i += 1) {
             var itemData = data.equipped[i];
             if (itemData != null) {
                 SetSlot(i, new CombatItem(itemData));
+            }
+        }
+    }
+
+    public EquipmentInventory(Unit unit, List<SerializedCombatItem> items) : this(unit) {
+        for (var i = 0; i < items.Count; i += 1) {
+            var item = items[i];
+            if (item != null) {
+                SetSlot(i, new CombatItem(item));
             }
         }
     }

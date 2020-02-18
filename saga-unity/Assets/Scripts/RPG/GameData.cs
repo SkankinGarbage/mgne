@@ -1,13 +1,13 @@
-﻿using UnityEngine;
-using System.Collections;
-
-/// <summary>
+﻿/// <summary>
 /// The generic stuff that used to be attached to the player party, such as location, gp, etc.
 /// </summary>
+[System.Serializable]
 public class GameData {
 
+    private const int InventoryCapacity = 10;
+
     public Party Party { get; private set; }
-    public PartyInventory Inventory { get; private set; }
+    public Inventory Inventory { get; private set; }
     public int GP { get; private set; }
     public string LocationName { get; private set; }
     public string CurrentBGMKey { get; private set; }
@@ -19,7 +19,7 @@ public class GameData {
         GP = 999;
         LocationName = "Debug";
         Party = new Party(IndexDatabase.Instance().Parties.defaultParty);
-        Inventory = new PartyInventory();
+        Inventory = new Inventory(InventoryCapacity);
     }
 
     public void OnTeleportTo(Map map) {

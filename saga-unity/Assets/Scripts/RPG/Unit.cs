@@ -3,26 +3,30 @@ using System.Threading.Tasks;
 
 public class Unit {
 
-    // careful, only guaranteed for NPCs, as heroes are dynamic
-    protected CharaData data;
+    // serialized
+    protected CharaData data; // not guaranteed for heroes
     protected string name;
-
-    public StatSet Stats { get; private set; }
     public StatSet BaseStats { get; private set; }
     public Status Status { get; set; }
     public EquipmentInventory Equipment { get; private set; }
+
+    // transient
+    public StatSet Stats { get; private set; }
     public AIBase AI { get; private set; }
-    public string FieldSpriteTag { get; private set; }
+    public int LastCombatSlot { get; set; }
 
     public int this[StatTag tag] { get => (int) Stats[tag]; }
 
+    public MonsterFamilyData MonsterFamily => Race == Race.MONSTER ? data.family : null;
+    public Race Race => data.race;
+    public string DataKey => data?.key;
+    public string FieldSpriteTag => data.appearance;
+    public string Name => name?.Length > 0 ? name : data.name?.Length > 0 ? data.name : SpeciesString;
+    public string SpeciesString => (data.species?.Length > 0 ? data.species : data.race.ToString()) + " " + data.gender.Label();
+    public string Portrait => data.portrait;
+    public int GP => data.gp;
     public bool Is(StatTag flag) => Stats[flag] > 0;
     public bool IsCarryingItemType(CombatItemData data) => Equipment.ContainsItemType(data);
-    public string Name => name?.Length > 0 ? name : data.name?.Length > 0 ? data.name : SpeciesString;
-    public Race Race => data.race;
-    public string SpeciesString => (data.species?.Length > 0 ? data.species : data.race.ToString()) + " " + data.gender.Label();
-    public MonsterFamilyData MonsterFamily => Race == Race.MONSTER ? data.family : null;
-    public string Portrait => data.portrait;
     public bool CanAct => IsAlive && (Status == null || !Status.PreventsIntentions) && Equipment.ContainsBattleUseableItems();
     public bool IsAlive => !IsDead;
     public bool IsConfused => Status != null && Status.Confuses;
@@ -48,14 +52,28 @@ public class Unit {
     /// created, as afterwise they'll be serialized and loaded up that way, or created on the fly
     /// for monsters
     /// </summary>
-    public Unit(CharaData data) {
+    public Unit() {
+        AI = new AIRandom(this);
+    }
+
+    public Unit(CharaData data) : this() {
         this.data = data;
-        Stats = new StatSet(data.stats);
         BaseStats = new StatSet(data.stats);
         Equipment = new EquipmentInventory(this, data);
-        FieldSpriteTag = data.appearance;
-        AI = new AIRandom(this);
         RestoreHP();
+    }
+
+    public Unit(SerializedUnit serialized) : this() {
+        if (serialized.dataKey?.Length > 0) {
+            data = IndexDatabase.Instance().Units.GetData(serialized.dataKey);
+        }
+        Stats = new StatSet(serialized.baseStats);
+        BaseStats = new StatSet(serialized.baseStats);
+        Equipment = new EquipmentInventory(this, serialized.equipment);
+        
+        if (serialized.dataKey?.Length > 0) {
+            Status = new Status(IndexDatabase.Instance().Statuses.GetData(serialized.dataKey));
+        }
     }
 
     public void RestoreHP() {

@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System;
 using Random = UnityEngine.Random;
 
+[Serializable]
 public class Party : IEnumerable<Unit> {
 
     public List<List<Unit>> Groups { get; private set; }
@@ -12,6 +12,7 @@ public class Party : IEnumerable<Unit> {
     public Unit this[int slot] { get => Groups[slot][0]; }
     
     public IEnumerable<Unit> Members => Groups.SelectMany(unit => unit);
+    public Unit Leader => Members.First(unit => unit.IsAlive);
     public int Size => Members.Count();
     public bool HasFlag(StatTag flag) => AnyMembersMeetCritera(unit => unit[flag] > 0);
     public bool IsCarryingItemType(CombatItemData itemData) => AnyMembersMeetCritera(unit => unit.IsCarryingItemType(itemData));

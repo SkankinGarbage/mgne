@@ -166,6 +166,16 @@ public class Battle {
             unit.Status?.UpdateForEndOfCombat(unit);
         }
 
+        if (IsVictory) {
+            await WriteLineAsync("");
+            await WriteLineAsync(Player.Leader + " is victorious.");
+            await WriteLineAsync("");
+
+            int gp = Enemy.Select(unit => unit.GP).Aggregate((x, y) => x + y);
+            await WriteLineAsync("Found " + gp + " gold pieces.");
+            Global.Instance().Data.AddGP(gp);
+        }
+
         await View.CloseRoutine();
         // TODO: handle death + retry
     }

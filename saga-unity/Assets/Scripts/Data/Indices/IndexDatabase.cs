@@ -10,6 +10,8 @@ public class IndexDatabase : ScriptableObject {
     public FieldSpriteIndexData FieldSprites;
     public CombatItemIndex CombatItems;
     public PartyIndex Parties;
+    public UnitIndex Units;
+    public StatusIndex Statuses;
 
     public static IndexDatabase Instance() {
         return Resources.Load<IndexDatabase>("Database/Database");

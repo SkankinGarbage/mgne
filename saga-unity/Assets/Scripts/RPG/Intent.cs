@@ -57,8 +57,7 @@ public class Intent {
     /// <returns>The index of the used item in the inventory of the actor</returns>
     public int FindIndexForItem() {
         if (Item == null) {
-            // todo: history
-            return 0;
+            return Actor.LastCombatSlot;
         } else {
             return Actor.Equipment.SlotForItem(Item);
         }
@@ -78,6 +77,7 @@ public class Intent {
 
         await Item.Effect.ResolveAsync(this);
         Item.DeductUse();
+        Actor.LastCombatSlot = Actor.Equipment.SlotForItem(Item);
 
         IsFinished = true;
     }
