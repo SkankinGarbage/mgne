@@ -27,6 +27,22 @@ public class StatSet : ISerializationCallbackReceiver {
         }
     }
 
+    public StatSet(SerializedStatSet serialized) {
+        stats = new Dictionary<StatTag, float>();
+        this[StatTag.STR] = serialized.str;
+        this[StatTag.DEF] = serialized.def;
+        this[StatTag.AGI] = serialized.agi;
+        this[StatTag.MANA] = serialized.mana;
+        this[StatTag.HP] = serialized.hp;
+        this[StatTag.MHP] = serialized.mhp;
+        foreach (StatTag flag in serialized.flags) {
+            this[flag] = 1;
+        }
+        for (var i = 0; i < serialized.flagKeys?.Count; i += 1) {
+            this[serialized.flagKeys[i]] = serialized.flagValues[i];
+        }
+    }
+
     private StatSet(StatDictionary stats) {
         Dictionary<string, float> statStrings = stats.ToDictionary();
         this.stats = new Dictionary<StatTag, float>();

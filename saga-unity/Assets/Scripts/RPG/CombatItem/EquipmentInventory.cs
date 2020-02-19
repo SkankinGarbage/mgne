@@ -12,7 +12,6 @@ public class EquipmentInventory : Inventory {
     }
 
     public EquipmentInventory(Unit unit, CharaData data) : this(unit) {
-        owner = unit;
         for (int i = 0; i < capacity && i < data.equipped.Length; i += 1) {
             var itemData = data.equipped[i];
             if (itemData != null) {

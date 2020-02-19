@@ -59,6 +59,7 @@ public class Unit {
     public Unit(CharaData data) : this() {
         this.data = data;
         BaseStats = new StatSet(data.stats);
+        Stats = new StatSet(data.stats);
         Equipment = new EquipmentInventory(this, data);
         RestoreHP();
     }

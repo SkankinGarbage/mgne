@@ -2,10 +2,11 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-public class UnitSerializer : JsonConverter<Unit> {
+public class UnitConverter : JsonConverter<Unit> {
 
     public override void WriteJson(JsonWriter writer, Unit value, JsonSerializer serializer) {
-        writer.WriteValue(new SerializedUnit(value));
+        var toSerialize = new SerializedUnit(value);
+        serializer.Serialize(writer, toSerialize);
     }
 
     public override Unit ReadJson(JsonReader reader, Type objectType, Unit existingValue, bool hasExistingValue, JsonSerializer serializer) {
