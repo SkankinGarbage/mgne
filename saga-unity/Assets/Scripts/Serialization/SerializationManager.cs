@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class SerializationManager : MonoBehaviour {
 
+    public const int SaveSlotCount = 5;
+
     private const int CurrentSaveVersion = 1;
     private const string SystemMemoryName = "mgne2.sav";
     private const string SaveGameSuffix = ".sav";
@@ -25,9 +27,10 @@ public class SerializationManager : MonoBehaviour {
 
     public void SaveToSlot(int slot) {
         Data.SaveVersion = CurrentSaveVersion;
-
         WriteJsonToFile(Data, FilePathForSlot(slot));
+
         System.LastSaveSlot = slot;
+        System.SaveInfo[slot] = new SaveInfoData(Data);
         SaveSystemMemory();
     }
 
@@ -51,6 +54,7 @@ public class SerializationManager : MonoBehaviour {
     public void SaveSystemMemory() {
         WriteJsonToFile(System, GetSystemMemoryFilepath());
     }
+
     /// <remarks>
     /// will instantly change globals and avatar to match the memory, assumes the main scene is the current scene
     /// </remarks>

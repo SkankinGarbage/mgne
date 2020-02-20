@@ -18,7 +18,7 @@ public class GameData {
 
     // meta info
     public int SaveVersion { get; set; }
-    public double SavedAt { get; set; }
+    public long SavedAt { get; set; }
 
     public void AddGP(int gp) { GP += gp; }
     public void DeductGP(int gp) { GP -= gp; }
