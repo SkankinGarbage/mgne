@@ -155,12 +155,12 @@ public class LuaContext : MonoBehaviour {
     }
 
     protected DynValue GetSwitch(DynValue switchName) {
-        bool value = Global.Instance().Memory.GetSwitch(switchName.String);
+        bool value = Global.Instance().Data.GetSwitch(switchName.String);
         return Marshal(value);
     }
 
     protected void SetSwitch(DynValue switchName, DynValue value) {
-        Global.Instance().Memory.SetSwitch(switchName.String, value.Boolean);
+        Global.Instance().Data.SetSwitch(switchName.String, value.Boolean);
     }
 
     protected void DebugLog(DynValue message) {

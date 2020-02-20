@@ -76,7 +76,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
                         ShowMenu();
                         return false;
                     case InputManager.Command.Debug:
-                        Global.Instance().Memory.SaveToSlot(0);
+                        Global.Instance().Serialization.SaveToSlot(0);
                         return false;
                     default:
                         return false;

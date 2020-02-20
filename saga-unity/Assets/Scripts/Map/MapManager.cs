@@ -104,9 +104,9 @@ public class MapManager : MonoBehaviour {
         return Instantiate(newMapObject).GetComponent<Map>();
     }
 
-    private void AddInitialAvatar(Memory memory = null) {
-        // TODO: 
+    private void AddInitialAvatar() {
         avatar = Instantiate(Resources.Load<GameObject>("Prefabs/Avatar")).GetComponent<AvatarEvent>();
+        avatar.Chara.SetAppearanceByTag(Global.Instance().Party.Leader.FieldSpriteTag);
         avatar.transform.parent = activeMap.objectLayer.transform;
         activeMap.OnTeleportTo();
         camera.target = avatar.Parent;

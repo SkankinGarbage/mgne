@@ -6,13 +6,12 @@ public class Global : MonoBehaviour {
     
     public InputManager Input { get; private set; }
     public MapManager Maps { get; private set; }
-    public MemoryManager Memory { get; private set; }
     public AudioManager Audio { get; private set; }
-    public SettingsCollection Settings { get; private set; }
-    public GameDataManager DataManager { get; private set; }
+    public SerializationManager Serialization { get; private set; }
     public Dispatch Dispatch { get; private set; }
 
-    public GameData Data => DataManager.Data;
+    public GameData Data => Serialization.Data;
+    public SystemData System => Serialization.System;
     public Party Party => Data.Party;
 
     private UIAnchorPoint ui;
@@ -35,34 +34,28 @@ public class Global : MonoBehaviour {
         return instance;
     }
 
-    public void Update() {
-        SetFullscreenMode();
-    }
-
     public void Awake() {
         DontDestroyOnLoad(gameObject);
         MoonSharp.Interpreter.UserData.RegisterAssembly();
+
+        Serialization.System.SettingFullScreen.OnModify += () => {
+            SetFullscreenMode();
+        };
     }
 
     private void InstantiateManagers() {
         gameObject.AddComponent<LuaCutsceneContext>();
 
         Dispatch = gameObject.AddComponent<Dispatch>();
-        Settings = gameObject.AddComponent<SettingsCollection>();
         Input = gameObject.AddComponent<InputManager>();
         Maps = gameObject.AddComponent<MapManager>();
-        Memory = gameObject.AddComponent<MemoryManager>();
         Audio = gameObject.AddComponent<AudioManager>();
-        DataManager = gameObject.AddComponent<GameDataManager>();
+        Serialization = gameObject.AddComponent<SerializationManager>();
 
-        DataManager.InitializeData();
+        Serialization.InitializeData();
     }
 
     private void SetFullscreenMode() {
-        // not sure if this "check" is necessary
-        // actually performing this here is kind of a hack
-        if (Settings != null && Screen.fullScreen != Settings.GetBoolSetting(SettingsConstants.Fullscreen).Value) {
-            Screen.fullScreen = Settings.GetBoolSetting(SettingsConstants.Fullscreen).Value;
-        }
+        Screen.fullScreen = Serialization.System.SettingFullScreen.Value;
     }
 }

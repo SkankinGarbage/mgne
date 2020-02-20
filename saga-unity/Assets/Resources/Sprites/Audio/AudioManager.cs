@@ -27,10 +27,10 @@ public class AudioManager : MonoBehaviour {
         bgmSource.loop = true;
 
         CurrentBGMKey = NoBGMKey;
-        
-        sfxVolumeSetting = Global.Instance().Settings.GetFloatSetting(SettingsConstants.SoundEffectVolume);
-        bgmVolumeSetting = Global.Instance().Settings.GetFloatSetting(SettingsConstants.BGMVolume);
-        
+
+        sfxVolumeSetting = Global.Instance().Serialization.System.SettingSoundEffectVolume;
+        bgmVolumeSetting = Global.Instance().Serialization.System.SettingMusicVolume;
+
         gameObject.AddComponent<AudioListener>();
     }
 

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System;
 using System.Text;
 
-public class UIUtils {
+public static class UIUtils {
 
     public static void AttachAndCenter(GameObject parent, GameObject child) {
         RectTransform parentTransform = parent.GetComponent<RectTransform>();
@@ -13,16 +12,6 @@ public class UIUtils {
         childTransform.anchorMax = childTransform.anchorMin;
         childTransform.anchoredPosition3D = new Vector3(0.0f, 0.0f, 0.0f);
         childTransform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-    }
-
-    public static DateTime TimestampToDateTime(double timestamp) {
-        System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
-        dtDateTime = dtDateTime.AddSeconds(timestamp).ToLocalTime();
-        return dtDateTime;
-    }
-
-    public static double CurrentTimestamp() {
-        return DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
     }
 
     /// <returns>The input string with ascii characters for glyphs replacing $A, $B etc</returns>
@@ -39,5 +28,15 @@ public class UIUtils {
             }
         }
         return output.ToString();
+    }
+
+    public static DateTime TimestampToDateTime(long timestamp) {
+        var offset = DateTimeOffset.FromUnixTimeSeconds(timestamp);
+        return offset.DateTime;
+    }
+
+    public static long CurrentTimestamp() {
+        var offset = DateTimeOffset.UtcNow;
+        return offset.ToUnixTimeSeconds();
     }
 }
