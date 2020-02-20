@@ -11,7 +11,7 @@ public class Global : MonoBehaviour {
     public Dispatch Dispatch { get; private set; }
 
     public GameData Data => Serialization.Data;
-    public SystemData System => Serialization.System;
+    public SystemData SystemData => Serialization.SystemData;
     public Party Party => Data.Party;
 
     private UIAnchorPoint ui;
@@ -37,25 +37,26 @@ public class Global : MonoBehaviour {
     public void Awake() {
         DontDestroyOnLoad(gameObject);
         MoonSharp.Interpreter.UserData.RegisterAssembly();
+    }
 
-        Serialization.System.SettingFullScreen.OnModify += () => {
+    public void Start() {
+        Serialization.SystemData.SettingFullScreen.OnModify += () => {
             SetFullscreenMode();
         };
+        SetFullscreenMode();
     }
 
     private void InstantiateManagers() {
         gameObject.AddComponent<LuaCutsceneContext>();
 
         Dispatch = gameObject.AddComponent<Dispatch>();
+        Serialization = gameObject.AddComponent<SerializationManager>();
         Input = gameObject.AddComponent<InputManager>();
         Maps = gameObject.AddComponent<MapManager>();
         Audio = gameObject.AddComponent<AudioManager>();
-        Serialization = gameObject.AddComponent<SerializationManager>();
-
-        Serialization.InitializeData();
     }
 
     private void SetFullscreenMode() {
-        Screen.fullScreen = Serialization.System.SettingFullScreen.Value;
+        Screen.fullScreen = Serialization.SystemData.SettingFullScreen.Value;
     }
 }

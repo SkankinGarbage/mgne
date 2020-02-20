@@ -58,6 +58,9 @@ public class MainMenuView : FullScreenMenuView {
                 case "Order":
                     await OrderSelect();
                     break;
+                case "Save":
+                    await SaveSelect();
+                    break;
                 case null:
                     await expander.HideRoutine();
                     Close();
@@ -95,15 +98,20 @@ public class MainMenuView : FullScreenMenuView {
         }
     }
 
-    public async Task ItemSelect() {
+    private async Task ItemSelect() {
         var itemMenu = ItemMenuView.ShowDefault();
         itemMenu.Populate();
         await itemMenu.DoMenuAsync();
     }
 
-    public async Task OrderSelect() {
+    private async Task OrderSelect() {
         var orderMenu = OrderMenuView.ShowDefault();
         orderMenu.Populate();
         await orderMenu.DoMenuAsync();
+    }
+
+    private async Task SaveSelect() {
+        var saveMenu = SaveMenuView.ShowDefault();
+        await saveMenu.DoMenuAsync(SaveMenuView.Mode.Save);
     }
 }

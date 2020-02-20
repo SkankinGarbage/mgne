@@ -1,24 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 /// <summary>
 /// The generic stuff that used to be attached to the player party, such as location, gp, etc.
 /// </summary>
-[System.Serializable]
+[JsonObject(MemberSerialization.OptIn)]
 public class GameData {
 
     private const int InventoryCapacity = 10;
 
-    public Party Party { get; private set; }
-    public Inventory Inventory { get; private set; }
-    public int GP { get; private set; }
-    public string LocationName { get; private set; }
-    public string CurrentBGMKey { get; private set; }
+    [JsonProperty] public Party Party { get; private set; }
+    [JsonProperty] public Inventory Inventory { get; private set; }
+    [JsonProperty] public int GP { get; private set; }
+    [JsonProperty] public string LocationName { get; private set; }
+    [JsonProperty] public string CurrentBGMKey { get; private set; }
 
-    public Dictionary<string, int> Variables { get; private set; }
-    public Dictionary<string, bool> Switches { get; private set; }
+    [JsonProperty] public Dictionary<string, int> Variables { get; private set; }
+    [JsonProperty] public Dictionary<string, bool> Switches { get; private set; }
 
     // meta info
-    public int SaveVersion { get; set; }
-    public long SavedAt { get; set; }
+    [JsonProperty] public int SaveVersion { get; set; }
+    [JsonProperty] public long SavedAt { get; set; }
 
     public void AddGP(int gp) { GP += gp; }
     public void DeductGP(int gp) { GP -= gp; }

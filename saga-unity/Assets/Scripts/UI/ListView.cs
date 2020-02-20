@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Collections;
 
 /// <summary>
 /// Adds children and populates them
@@ -44,5 +44,9 @@ public class ListView : MonoBehaviour {
         }
 
         OnPopulate?.Invoke(dataSize);
+    }
+
+    public IEnumerable GetCells() {
+        return transform;
     }
 }

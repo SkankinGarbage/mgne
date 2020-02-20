@@ -28,10 +28,12 @@ public class AudioManager : MonoBehaviour {
 
         CurrentBGMKey = NoBGMKey;
 
-        sfxVolumeSetting = Global.Instance().Serialization.System.SettingSoundEffectVolume;
-        bgmVolumeSetting = Global.Instance().Serialization.System.SettingMusicVolume;
-
         gameObject.AddComponent<AudioListener>();
+    }
+
+    public void Start() {
+        sfxVolumeSetting = Global.Instance().Serialization.SystemData.SettingSoundEffectVolume;
+        bgmVolumeSetting = Global.Instance().Serialization.SystemData.SettingMusicVolume;
     }
 
     public void Update() {

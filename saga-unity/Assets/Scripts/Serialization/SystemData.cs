@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 
-[System.Serializable]
+[JsonObject(MemberSerialization.OptIn)]
 public class SystemData {
 
-    public int LastSaveSlot { get; set; } = -1;
+    [JsonProperty] public int LastSaveSlot { get; set; } = -1;
 
-    public SaveInfoData[] SaveInfo { get; private set; } = new SaveInfoData[SerializationManager.SaveSlotCount];
+    [JsonProperty] public SaveInfoData[] SaveInfo { get; private set; } = new SaveInfoData[SerializationManager.SaveSlotCount];
 
-    public Setting<bool> SettingFullScreen { get; private set; } =               new Setting<bool>(false);
-    public Setting<float> SettingMusicVolume { get; private set; } =             new Setting<float>(0.9f);
-    public Setting<float> SettingSoundEffectVolume { get; private set; } =       new Setting<float>(0.9f);
+    [JsonProperty] public Setting<bool> SettingFullScreen { get; private set; } =               new Setting<bool>(false);
+    [JsonProperty] public Setting<float> SettingMusicVolume { get; private set; } =             new Setting<float>(0.9f);
+    [JsonProperty] public Setting<float> SettingSoundEffectVolume { get; private set; } =       new Setting<float>(0.9f);
 }

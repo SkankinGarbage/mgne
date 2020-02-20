@@ -39,4 +39,8 @@ public static class UIUtils {
         var offset = DateTimeOffset.UtcNow;
         return offset.ToUnixTimeSeconds();
     }
+
+    public static string FormatDateTime(DateTime time) {
+        return time.ToString("yyyy'-'MM'-'dd");
+    }
 }

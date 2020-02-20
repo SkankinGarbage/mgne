@@ -37,7 +37,9 @@ public class FieldSpriteImage : MonoBehaviour {
     public void Populate(string tag) {
         this.tag = tag;
         Spritesheet.SetByTag(tag);
-        Image.sprite = Spritesheet.FrameForDirection(facing);
+        if (tag != null) {
+            Image.sprite = Spritesheet.FrameForDirection(facing);
+        }
     }
 
     public void Populate(Unit unit) {

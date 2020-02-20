@@ -20,8 +20,13 @@ public class FieldSpritesheetComponent : MonoBehaviour {
     }
 
     public void SetByTag(string tag) {
-        var spritesheet = IndexDatabase.Instance().FieldSprites.GetData(tag).spriteSheet;
-        LoadSpritesheetData(spritesheet);
+        if (tag == null) {
+            spritesheet = null;
+            sprites = new Dictionary<string, Sprite>();
+        } else {
+            var spritesheet = IndexDatabase.Instance().FieldSprites.GetDataOrNull(tag).spriteSheet;
+            LoadSpritesheetData(spritesheet);
+        }
     }
 
     public void SetByTexture(Texture2D spritesheet) {
@@ -33,6 +38,9 @@ public class FieldSpritesheetComponent : MonoBehaviour {
     }
 
     public Sprite FrameByExplicitSlot(int x, int y) {
+        if (spritesheet == null) {
+            return null;
+        }
         if (sprites == null) {
             LoadSpritesheetData(spritesheet);
         }

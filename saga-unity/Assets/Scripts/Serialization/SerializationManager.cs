@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using Newtonsoft.Json;
+using System.IO;
 using UnityEngine;
 
 public class SerializationManager : MonoBehaviour {
@@ -6,19 +7,26 @@ public class SerializationManager : MonoBehaviour {
     public const int SaveSlotCount = 5;
 
     private const int CurrentSaveVersion = 1;
-    private const string SystemMemoryName = "mgne2.sav";
+    private const string SystemMemoryName = "system.sav";
     private const string SaveGameSuffix = ".sav";
 
     public GameData Data { get; private set; }
-    public SystemData System { get; private set; }
+    public SystemData SystemData { get; private set; }
 
-    public void Start() {
-        Global.Instance().Dispatch.RegisterListener(MapManager.EventTeleport, OnTeleport);
+    private JsonSerializer serializer;
+
+    public void Awake() {
+        var settings = new JsonSerializerSettings();
+        settings.Converters.Add(new StatSetConverter());
+        settings.Converters.Add(new UnitConverter());
+        serializer = JsonSerializer.Create(settings);
+
+        Data = new GameData();
         LoadOrCreateSystemMemory();
     }
 
-    public void InitializeData() {
-        Data = new GameData();
+    public void Start() {
+        Global.Instance().Dispatch.RegisterListener(MapManager.EventTeleport, OnTeleport);
     }
 
     public void OnDestroy() {
@@ -27,15 +35,16 @@ public class SerializationManager : MonoBehaviour {
 
     public void SaveToSlot(int slot) {
         Data.SaveVersion = CurrentSaveVersion;
+        Data.SavedAt = UIUtils.CurrentTimestamp();
         WriteJsonToFile(Data, FilePathForSlot(slot));
 
-        System.LastSaveSlot = slot;
-        System.SaveInfo[slot] = new SaveInfoData(Data);
+        SystemData.LastSaveSlot = slot;
+        SystemData.SaveInfo[slot] = new SaveInfoData(Data);
         SaveSystemMemory();
     }
 
     public void LoadFromLastSaveSlot() {
-        SetGameData(LoadGameDataForSlot(System.LastSaveSlot));
+        SetGameData(LoadGameDataForSlot(SystemData.LastSaveSlot));
     }
 
     public GameData LoadGameDataForSlot(int slot) {
@@ -48,11 +57,11 @@ public class SerializationManager : MonoBehaviour {
     }
 
     public bool DoSavedGamesExist() {
-        return System.LastSaveSlot > -1;
+        return SystemData.LastSaveSlot > -1;
     }
 
     public void SaveSystemMemory() {
-        WriteJsonToFile(System, GetSystemMemoryFilepath());
+        WriteJsonToFile(SystemData, GetSystemMemoryFilepath());
     }
 
     /// <remarks>
@@ -66,17 +75,14 @@ public class SerializationManager : MonoBehaviour {
     private void WriteJsonToFile(object toSerialize, string fileName) {
         FileStream file = File.Open(fileName, FileMode.Create);
         StreamWriter writer = new StreamWriter(file);
-        writer.Write(JsonUtility.ToJson(toSerialize));
+        serializer.Serialize(writer, toSerialize);
         writer.Flush();
         writer.Close();
-        file.Close();
     }
 
-
     private T ReadJsonFromFile<T>(string fileName) {
-        string json = File.ReadAllText(fileName);
-        T result = JsonUtility.FromJson<T>(json);
-        return result;
+        var json = File.ReadAllText(fileName);
+        return serializer.Deserialize<T>(new JsonTextReader(new StringReader(json)));
     }
 
     private string GetSystemMemoryFilepath() {
@@ -93,9 +99,9 @@ public class SerializationManager : MonoBehaviour {
     private void LoadOrCreateSystemMemory() {
         string path = GetSystemMemoryFilepath();
         if (File.Exists(path)) {
-            System = ReadJsonFromFile<SystemData>(path);
+            SystemData = ReadJsonFromFile<SystemData>(path);
         } else {
-            System = new SystemData();
+            SystemData = new SystemData();
         }
     }
 
