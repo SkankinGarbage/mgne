@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using UnityEngine;
+
 /// <summary>
 /// The generic stuff that used to be attached to the player party, such as location, gp, etc.
 /// </summary>
@@ -13,6 +15,9 @@ public class GameData {
     [JsonProperty] public int GP { get; private set; }
     [JsonProperty] public string LocationName { get; private set; }
     [JsonProperty] public string CurrentBGMKey { get; private set; }
+
+    [JsonProperty] public string MapPath { get; set; }
+    [JsonProperty] public Vector2Int MapLocation { get; set; }
 
     [JsonProperty] public Dictionary<string, int> Variables { get; private set; }
     [JsonProperty] public Dictionary<string, bool> Switches { get; private set; }

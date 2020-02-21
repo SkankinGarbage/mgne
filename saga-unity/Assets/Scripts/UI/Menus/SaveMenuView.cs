@@ -20,26 +20,25 @@ public class SaveMenuView : FullScreenMenuView {
         });
     }
 
-    /// <returns>True if any saving/loading occurred</returns>
-    public async Task<bool> DoMenuAsync(Mode mode) {
-        bool? result = null;
+    /// <returns>The slot saved to or to load from, or -1 if none</returns>
+    public async Task<int> DoMenuAsync(Mode mode) {
+        int result = -1;
         while (true) {
             Populate(mode);
             var slot = await CellSelector.SelectItemAsync(null, true);
             if (slot == -1) {
                 break;
             }
-
-            result = true; 
+            
             if (mode == Mode.Load) {
-                Global.Instance().Serialization.LoadGameDataForSlot(slot);
-                break;
+                return slot;
             } else if (mode == Mode.Save) {
                 Global.Instance().Serialization.SaveToSlot(slot);
+                result = slot;
             }
         }
 
         await CloseRoutine();
-        return result.Value;
+        return result;
     }
 }

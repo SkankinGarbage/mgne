@@ -24,6 +24,7 @@ public abstract class Map : MonoBehaviour {
     public Grid grid;
     public ObjectLayer objectLayer;
 
+    public string InternalName { get; set; } = "test"; // hack for dev
     public string BgmKey { get; protected set; }
     public string MapName { get; protected set; }
 
@@ -62,7 +63,7 @@ public abstract class Map : MonoBehaviour {
 
     public virtual void Start() {
         // TODO: figure out loading
-        Global.Instance().Maps.activeMap = this;
+        Global.Instance().Maps.ActiveMap = this;
     }
 
     public Vector3Int TileToTilemapCoords(Vector2Int loc) {

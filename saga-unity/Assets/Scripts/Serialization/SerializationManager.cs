@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
+using System.Collections;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SerializationManager : MonoBehaviour {
 
@@ -36,6 +38,8 @@ public class SerializationManager : MonoBehaviour {
     public void SaveToSlot(int slot) {
         Data.SaveVersion = CurrentSaveVersion;
         Data.SavedAt = UIUtils.CurrentTimestamp();
+        Data.MapPath = Global.Instance().Maps.ActiveMap.InternalName;
+        Data.MapLocation = Global.Instance().Maps.Avatar.GetComponent<MapEvent>().Position;
         WriteJsonToFile(Data, FilePathForSlot(slot));
 
         SystemData.LastSaveSlot = slot;
@@ -64,12 +68,21 @@ public class SerializationManager : MonoBehaviour {
         WriteJsonToFile(SystemData, GetSystemMemoryFilepath());
     }
 
+    public IEnumerator LoadGameRoutine(int slot) {
+        Data = LoadGameDataForSlot(slot);
+        SceneManager.LoadScene("Map2D", LoadSceneMode.Single);
+        var transition = IndexDatabase.Instance().Transitions.GetData(FadeComponent.DefaultTransitionTag);
+        yield return Global.Instance().Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(transition.GetFadeOut(), false, 0.0f);
+        yield return Global.Instance().Maps.TeleportRoutine(Data.MapPath, Data.MapLocation, OrthoDir.South, true);
+        yield return Global.Instance().Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(transition.GetFadeIn(), true);
+    }
+
     /// <remarks>
     /// will instantly change globals and avatar to match the memory, assumes the main scene is the current scene
     /// </remarks>
     private void SetGameData(GameData data) {
         Data = data;
-        Global.Instance().Maps.avatar.Chara.SetAppearanceByTag(data.Party.Leader.FieldSpriteTag);
+        Global.Instance().Maps.Avatar.Chara.SetAppearanceByTag(data.Party.Leader.FieldSpriteTag);
     }
 
     private void WriteJsonToFile(object toSerialize, string fileName) {

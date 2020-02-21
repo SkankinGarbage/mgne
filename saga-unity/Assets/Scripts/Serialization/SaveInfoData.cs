@@ -1,13 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Linq;
 
-[System.Serializable]
+[JsonObject(MemberSerialization.OptIn)]
 public class SaveInfoData {
 
-    public string LeaderName { get; private set; }
-    public string Location { get; private set; }
-    public long Timestamp { get; private set; }
-    public List<string> FieldSpriteTags { get; private set; }
+    [JsonProperty] public string LeaderName { get; private set; }
+    [JsonProperty] public string Location { get; private set; }
+    [JsonProperty] public long Timestamp { get; private set; }
+    [JsonProperty] public List<string> FieldSpriteTags { get; private set; }
+
+    public SaveInfoData() {
+        // serialized
+    }
 
     public SaveInfoData(GameData data) {
         LeaderName = data.Party.Leader.Name;

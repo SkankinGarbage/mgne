@@ -36,7 +36,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
     }
 
     public void Start() {
-        Global.Instance().Maps.avatar = this;
+        Global.Instance().Maps.Avatar = this;
         Global.Instance().Input.PushListener(this);
         pauseCount = 0;
     }
@@ -92,7 +92,9 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
     }
 
     public void UnpauseInput() {
-        pauseCount -= 1;
+        if (pauseCount > 0) {
+            pauseCount -= 1;
+        }
     }
 
     public void SetHidden(bool hidden) {

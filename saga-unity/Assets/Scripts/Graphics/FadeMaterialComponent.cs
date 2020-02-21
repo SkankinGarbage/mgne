@@ -16,11 +16,12 @@ public class FadeMaterialComponent : FadeComponent {
         float elapsed = 0.0f;
         float transitionDuration = fade.delay * timeMult;
 
-        materialsToFade = new List<Material>() {
-            Global.Instance().Maps.avatar.Chara.Doll.Renderer.sharedMaterial,
-        };
-        foreach (var layer in Global.Instance().Maps.activeMap.layers) {
-            materialsToFade.Add(layer.GetComponent<TilemapRenderer>()?.sharedMaterial);
+        materialsToFade = new List<Material>();
+        if (Global.Instance().Maps.ActiveMap != null) {
+            materialsToFade.Add(Global.Instance().Maps.Avatar.Chara.Doll.Renderer.sharedMaterial);
+            foreach (var layer in Global.Instance().Maps.ActiveMap.layers) {
+                materialsToFade.Add(layer.GetComponent<TilemapRenderer>()?.sharedMaterial);
+            }
         }
         foreach (var renderer in renderersToFade) {
             materialsToFade.Add(renderer.sharedMaterial);

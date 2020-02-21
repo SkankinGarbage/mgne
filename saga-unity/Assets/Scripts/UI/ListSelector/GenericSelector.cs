@@ -22,8 +22,8 @@ public abstract class GenericSelector : MonoBehaviour {
         get => selection;
     }
 
-    public async Task<string> SelectCommandAsync(Action<int> scanner = null) {
-        var result = await SelectItemAsync(scanner);
+    public async Task<string> SelectCommandAsync(Action<int> scanner = null, bool keepSelection = false) {
+        var result = await SelectItemAsync(scanner, keepSelection);
         if (result == -1) {
             return null;
         } else {

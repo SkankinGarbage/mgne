@@ -146,7 +146,7 @@ public class LuaContext : MonoBehaviour {
     // === LUA CALLABLE ============================================================================
 
     protected LuaMapEvent EventNamed(DynValue eventName) {
-        MapEvent mapEvent = Global.Instance().Maps.activeMap.GetEventNamed(eventName.String);
+        MapEvent mapEvent = Global.Instance().Maps.ActiveMap.GetEventNamed(eventName.String);
         if (mapEvent == null) {
             return null;
         } else {

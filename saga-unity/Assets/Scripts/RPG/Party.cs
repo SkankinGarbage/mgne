@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using Random = UnityEngine.Random;
+using Newtonsoft.Json;
 
-[Serializable]
+[JsonObject(MemberSerialization.OptIn)]
 public class Party : IEnumerable<Unit> {
 
-    public List<List<Unit>> Groups { get; private set; }
+    [JsonProperty] public List<List<Unit>> Groups { get; private set; }
 
     public Unit this[int slot] { get => Groups[slot][0]; }
     

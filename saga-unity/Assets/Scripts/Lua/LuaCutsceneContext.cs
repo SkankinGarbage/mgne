@@ -8,15 +8,15 @@ public class LuaCutsceneContext : LuaContext {
     private static readonly string DefinesPath = "Lua/Defines/CutsceneDefines";
 
     public override IEnumerator RunRoutine(LuaScript script) {
-        if (Global.Instance().Maps.avatar != null) {
-            Global.Instance().Maps.avatar.PauseInput();
+        if (Global.Instance().Maps.Avatar != null) {
+            Global.Instance().Maps.Avatar.PauseInput();
         }
         yield return base.RunRoutine(script);
         if (MapOverlayUI.Instance().textbox.isDisplaying) {
             yield return MapOverlayUI.Instance().textbox.DisableRoutine();
         }
-        if (Global.Instance().Maps.avatar != null) {
-            Global.Instance().Maps.avatar.UnpauseInput();
+        if (Global.Instance().Maps.Avatar != null) {
+            Global.Instance().Maps.Avatar.UnpauseInput();
         }
     }
 
@@ -96,7 +96,7 @@ public class LuaCutsceneContext : LuaContext {
 
     private void Walk(DynValue eventLua, DynValue steps, DynValue directionLua, DynValue waitLua) {
         if (eventLua.Type == DataType.String) {
-            var @event = Global.Instance().Maps.activeMap.GetEventNamed(eventLua.String);
+            var @event = Global.Instance().Maps.ActiveMap.GetEventNamed(eventLua.String);
             if (@event == null) {
                 Debug.LogError("Couldn't find event " + eventLua.String);
             } else {
@@ -117,7 +117,7 @@ public class LuaCutsceneContext : LuaContext {
         bool wait;
         Vector2Int target;
         if (targetArg1.Type == DataType.String) {
-            var targetEvent = Global.Instance().Maps.activeMap.GetEventNamed(targetArg1.String);
+            var targetEvent = Global.Instance().Maps.ActiveMap.GetEventNamed(targetArg1.String);
             if (targetEvent == null) {
                 Debug.LogError("Couldn't find event " + targetArg1.String);
                 return;
@@ -130,7 +130,7 @@ public class LuaCutsceneContext : LuaContext {
         }
 
         if (eventLua.Type == DataType.String) {
-            var @event = Global.Instance().Maps.activeMap.GetEventNamed(eventLua.String);
+            var @event = Global.Instance().Maps.ActiveMap.GetEventNamed(eventLua.String);
             if (@event == null) {
                 Debug.LogError("Couldn't find event " + eventLua.String);
                 return;
@@ -149,7 +149,7 @@ public class LuaCutsceneContext : LuaContext {
     }
 
     private void Face(DynValue eventName, DynValue dir) {
-        var @event = Global.Instance().Maps.activeMap.GetEventNamed(eventName.String);
+        var @event = Global.Instance().Maps.ActiveMap.GetEventNamed(eventName.String);
         if (@event == null) {
             Debug.LogError("Couldn't find event " + eventName.String);
         } else {
@@ -158,7 +158,7 @@ public class LuaCutsceneContext : LuaContext {
     }
 
     private void HideHero(DynValue hidden) {
-        Global.Instance().Maps.avatar.SetHidden(hidden.Boolean);
+        Global.Instance().Maps.Avatar.SetHidden(hidden.Boolean);
     }
 
     private FadeData lastFade;
@@ -173,7 +173,7 @@ public class LuaCutsceneContext : LuaContext {
             fade = IndexDatabase.Instance().Fades.GetData(typeString);
         }
         lastFade = fade;
-        StartCoroutine(Global.Instance().Maps.camera.GetComponent<FadeComponent>().FadeRoutine(fade, invert));
+        StartCoroutine(Global.Instance().Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(fade, invert));
     }
 
     private void Battle(DynValue partyLua, DynValue bgmLua) {

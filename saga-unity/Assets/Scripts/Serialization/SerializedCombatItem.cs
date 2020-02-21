@@ -5,6 +5,10 @@ public class SerializedCombatItem {
     public int usesRemaining;
     public int usesWhenAdded;
 
+    public SerializedCombatItem() {
+        // serialized
+    }
+
     public SerializedCombatItem(CombatItem item) {
         dataKey = item.Data.key;
         usesRemaining = item.UsesRemaining;

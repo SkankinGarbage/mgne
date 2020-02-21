@@ -72,8 +72,8 @@ public class Unit {
         BaseStats = new StatSet(serialized.baseStats);
         Equipment = new EquipmentInventory(this, serialized.equipment);
         
-        if (serialized.dataKey?.Length > 0) {
-            Status = new Status(IndexDatabase.Instance().Statuses.GetData(serialized.dataKey));
+        if (serialized.statusKey?.Length > 0) {
+            Status = new Status(IndexDatabase.Instance().Statuses.GetData(serialized.statusKey));
         }
     }
 

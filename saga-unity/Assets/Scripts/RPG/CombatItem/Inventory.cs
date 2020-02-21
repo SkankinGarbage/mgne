@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
-[System.Serializable]
+[JsonObject(MemberSerialization.OptIn)]
 public class Inventory : IEnumerable<CombatItem> {
 
-    protected int capacity;
+    [JsonProperty] protected int capacity;
 
-    protected CombatItem[] items;
+    [JsonProperty] protected CombatItem[] items;
     private List<CombatItem> Items {
         get {
             // warning: will contain nulls

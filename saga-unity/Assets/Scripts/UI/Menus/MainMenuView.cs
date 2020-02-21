@@ -26,7 +26,7 @@ public class MainMenuView : FullScreenMenuView {
         if (defaultMenu == null) {
             defaultMenu = Instantiate<MainMenuView>("Prefabs/UI/MainMenu/MainMenu");
         }
-        Global.Instance().Maps.avatar.PauseInput();
+        Global.Instance().Maps.Avatar.PauseInput();
         defaultMenu.gameObject.SetActive(true);
     }
 
@@ -71,7 +71,7 @@ public class MainMenuView : FullScreenMenuView {
 
     public void Close() {
         gameObject.SetActive(false);
-        Global.Instance().Maps.avatar.UnpauseInput();
+        Global.Instance().Maps.Avatar.UnpauseInput();
     }
 
     private async Task AbilSelect() {

@@ -73,7 +73,7 @@ public class CeilingComponent : MonoBehaviour {
     }
 
     public void OnEnable() {
-        if (Global.Instance().Maps.avatar != null) {
+        if (Global.Instance().Maps.Avatar != null) {
             isWithin = IsHeroWithin();
         }
         if (isWithin) {
@@ -98,7 +98,7 @@ public class CeilingComponent : MonoBehaviour {
     }
 
     public bool IsHeroWithin() {
-        return ContainsTile(Global.Instance().Maps.avatar.Parent.Position);
+        return ContainsTile(Global.Instance().Maps.Avatar.Parent.Position);
     }
 
     public void RecalculateBounds(TmxAssetImporter importer = null) {
@@ -248,7 +248,7 @@ public class CeilingComponent : MonoBehaviour {
     }
 
     private IEnumerator ScaleToRoutine(bool invert) {
-        Global.Instance().Maps.avatar.PauseInput();
+        Global.Instance().Maps.Avatar.PauseInput();
         float elapsed = 0;
         int atStep = 0;
         while (elapsed < Duration) {
@@ -256,7 +256,7 @@ public class CeilingComponent : MonoBehaviour {
             if (invert) newStep *= -1;
             if (newStep != atStep) {
                 atStep = newStep;
-                BuildByRange(Global.Instance().Maps.avatar.Parent.Position, atStep);
+                BuildByRange(Global.Instance().Maps.Avatar.Parent.Position, atStep);
             }
             elapsed += Time.deltaTime;
             yield return null;
@@ -266,6 +266,6 @@ public class CeilingComponent : MonoBehaviour {
         } else {
             BuildStandard();
         }
-        Global.Instance().Maps.avatar.UnpauseInput();
+        Global.Instance().Maps.Avatar.UnpauseInput();
     }
 }

@@ -66,7 +66,7 @@ public class CharaEvent : MonoBehaviour {
             }
         });
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventInteract, (object payload) => {
-            Facing = Parent.DirectionTo(Global.Instance().Maps.avatar.GetComponent<MapEvent>());
+            Facing = Parent.DirectionTo(Global.Instance().Maps.Avatar.GetComponent<MapEvent>());
         });
     }
 

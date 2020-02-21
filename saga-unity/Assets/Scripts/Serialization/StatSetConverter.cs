@@ -1,20 +1,17 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-public class StatSetConverter : JsonConverter {
+public class StatSetConverter : JsonConverter<StatSet> {
 
-    public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer) {
-        throw new NotImplementedException("WriteJson");
-    }
-
-    public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {
-        SerializedStatSet data = serializer.Deserialize<SerializedStatSet>(reader);
+    public override StatSet ReadJson(JsonReader reader, Type objectType, StatSet existingValue, bool hasExistingValue, JsonSerializer serializer) {
+        var data = serializer.Deserialize<SerializedStatSet>(reader);
         StatSet set = new StatSet(data);
         set.OnBeforeSerialize();
         return set;
     }
 
-    public override bool CanConvert(Type objectType) {
-        return typeof(SerializedStatSet).IsAssignableFrom(objectType);
+    public override void WriteJson(JsonWriter writer, StatSet value, JsonSerializer serializer) {
+        var toSerialize = new SerializedStatSet(value);
+        serializer.Serialize(writer, toSerialize);
     }
 }

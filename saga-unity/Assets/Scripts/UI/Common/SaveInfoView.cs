@@ -9,7 +9,7 @@ public class SaveInfoView : MonoBehaviour {
     [SerializeField] private Text LocationName = null;
 
     public void Populate(SaveInfoData info, SaveMenuView.Mode mode, int slot) {
-        if (info == null) {
+        if (info == null || info.Timestamp == 0) {
             GetComponent<SelectableCell>().SetSelectable(mode == SaveMenuView.Mode.Save);
             LeaderName.text = "Slot " + slot;
             Timestamp.text = null;

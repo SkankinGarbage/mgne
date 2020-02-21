@@ -9,6 +9,10 @@ public class SerializedUnit {
     public StatSet baseStats;
     public List<SerializedCombatItem> equipment;
 
+    public SerializedUnit() {
+        // serialized
+    }
+
     public SerializedUnit(Unit unit) {
         dataKey = unit.DataKey;
         name = unit.Name;
