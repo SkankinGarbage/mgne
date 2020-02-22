@@ -22,6 +22,10 @@ public class Party : IEnumerable<Unit> {
     public IEnumerator<Unit> GetEnumerator() { return Members.GetEnumerator(); }
     IEnumerator IEnumerable.GetEnumerator() { return Members.GetEnumerator(); }
 
+    public Party() {
+        // serialized
+    }
+
     public Party(PartyData data) {
         Groups = new List<List<Unit>>();
         foreach (var entry in data.members) {
