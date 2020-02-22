@@ -10,7 +10,7 @@ public class GameData {
 
     private const int InventoryCapacity = 10;
 
-    [JsonProperty] public Party Party { get; private set; }
+    [JsonProperty] public Party Party { get; set; }
     [JsonProperty] public Inventory Inventory { get; private set; }
     [JsonProperty] public int GP { get; private set; }
     [JsonProperty] public string LocationName { get; private set; }
@@ -32,7 +32,7 @@ public class GameData {
     public GameData() {
         GP = 999;
         LocationName = "Debug";
-        Party = new Party(IndexDatabase.Instance().Parties.defaultParty);
+        
         Inventory = new Inventory(InventoryCapacity);
         Variables = new Dictionary<string, int>();
         Switches = new Dictionary<string, bool>();

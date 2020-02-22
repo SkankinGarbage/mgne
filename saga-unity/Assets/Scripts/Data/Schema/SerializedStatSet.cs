@@ -28,8 +28,12 @@ public class SerializedStatSet {
     public List<StatTag> flagKeys;
     public List<float> flagValues;
 
+    public SerializedStatSet() {
+        // serialized
+    }
+
     public SerializedStatSet(StatSet stats) {
-        hp = (int) stats[StatTag.HP];
+        hp = (int)stats[StatTag.HP];
         mhp = (int)stats[StatTag.MHP];
         str = (int)stats[StatTag.STR];
         def = (int)stats[StatTag.DEF];
@@ -41,7 +45,7 @@ public class SerializedStatSet {
 
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
             Stat stat = Stat.Get(tag);
-            if (stat.UseBinaryEditor) {
+            if (stat.UseBinaryEditor && stats[tag] != 0) {
                 flagKeys.Add(tag);
                 flagValues.Add(stats[tag]);
             }

@@ -13,7 +13,7 @@ public class Party : IEnumerable<Unit> {
     public Unit this[int slot] { get => Groups[slot][0]; }
     
     public IEnumerable<Unit> Members => Groups.SelectMany(unit => unit);
-    public Unit Leader => Members.First(unit => unit.IsAlive);
+    public Unit Leader => IsAnyAlive ? Members.First(unit => unit.IsAlive) : Members.FirstOrDefault();
     public int Size => Members.Count();
     public bool HasFlag(StatTag flag) => AnyMembersMeetCritera(unit => unit[flag] > 0);
     public bool IsCarryingItemType(CombatItemData itemData) => AnyMembersMeetCritera(unit => unit.IsCarryingItemType(itemData));
@@ -39,6 +39,10 @@ public class Party : IEnumerable<Unit> {
 
     public bool Contains(Unit toFind) {
         return IndexFor(toFind) >= 0;
+    }
+
+    public void AddMember(Unit member) {
+        Groups.Add(new List<Unit>() { member });
     }
 
     /// <returns>The index of the group containing the given unit, or -1 if not found</returns>

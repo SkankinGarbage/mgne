@@ -35,11 +35,13 @@ public class StatSet : ISerializationCallbackReceiver {
         this[StatTag.MANA] = serialized.mana;
         this[StatTag.HP] = serialized.hp;
         this[StatTag.MHP] = serialized.mhp;
-        foreach (StatTag flag in serialized.flags) {
-            this[flag] = 1;
-        }
-        for (var i = 0; i < serialized.flagKeys?.Count; i += 1) {
-            this[serialized.flagKeys[i]] = serialized.flagValues[i];
+        if (serialized.flags != null) {
+            foreach (StatTag flag in serialized.flags) {
+                this[flag] = 1;
+            }
+            for (var i = 0; i < serialized.flagKeys?.Count; i += 1) {
+                this[serialized.flagKeys[i]] = serialized.flagValues[i];
+            }
         }
     }
 
@@ -98,7 +100,11 @@ public class StatSet : ISerializationCallbackReceiver {
     public StatSet AddSet(StatSet other) {
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
             if (other.stats.ContainsKey(tag)) {
-                stats[tag] = Stat.Get(tag).Combinator.Combine(stats[tag], other.stats[tag]);
+                float val1 = 0;
+                float val2 = 0;
+                stats.TryGetValue(tag, out val1);
+                other.stats.TryGetValue(tag, out val2);
+                stats[tag] = Stat.Get(tag).Combinator.Combine(val1, val2);
             }
         }
         return this;

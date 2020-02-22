@@ -24,6 +24,7 @@ public class SerializationManager : MonoBehaviour {
         serializer = JsonSerializer.Create(settings);
 
         Data = new GameData();
+        Data.Party = new Party(IndexDatabase.Instance().Parties.defaultParty);
         LoadOrCreateSystemMemory();
     }
 

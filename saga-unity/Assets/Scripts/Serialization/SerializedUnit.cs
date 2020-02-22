@@ -6,7 +6,7 @@ public class SerializedUnit {
     public string dataKey;
     public string name;
     public string statusKey;
-    public StatSet baseStats;
+    public SerializedStatSet baseStats;
     public List<SerializedCombatItem> equipment;
 
     public SerializedUnit() {
@@ -17,7 +17,7 @@ public class SerializedUnit {
         dataKey = unit.DataKey;
         name = unit.Name;
         statusKey = unit.Status?.Data.Key;
-        baseStats = unit.BaseStats;
+        baseStats = new SerializedStatSet(unit.BaseStats);
 
         equipment = new List<SerializedCombatItem>();
         foreach (var item in unit.Equipment) {
