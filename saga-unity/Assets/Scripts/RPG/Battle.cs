@@ -20,6 +20,7 @@ public class Battle {
     private Intent[] playerIntents;
     private List<Intent> allIntents;
     private Dictionary<Unit, List<EffectDefend>> defenses;
+    private Dictionary<Unit, MutationManager> mutationManagers;
     private List<TempStats> boosts;
 
     public Battle(PartyData enemy) {
@@ -28,6 +29,7 @@ public class Battle {
 
         boosts = new List<TempStats>();
         defenses = new Dictionary<Unit, List<EffectDefend>>();
+        mutationManagers = new Dictionary<Unit, MutationManager>();
     }
 
     #region Model
@@ -38,6 +40,13 @@ public class Battle {
         } else {
             return new List<EffectDefend>();
         }
+    }
+
+    public MutationManager GetMutationManagerForUnit(Unit unit) {
+        if (!mutationManagers.ContainsKey(unit)) {
+            mutationManagers[unit] = new MutationManager(unit, this);
+        }
+        return mutationManagers[unit];
     }
 
     public void AddBoost(Unit target, StatSet boost, bool oneRoundOnly = false) {

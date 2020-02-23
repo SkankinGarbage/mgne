@@ -128,17 +128,19 @@ public class Unit {
     /// <summary>
     /// Inflicts damage from a combat source. Does not apply defense.
     /// </summary>
+    /// <param name="battle">The battle context in which this occurs, or null</param>
     /// <param name="damage">The raw damage to inflict</param>
     /// <param name="physical">True if the damage was from a physical source</param>
     /// <returns>True if any damage was actually taken</returns>
-    public bool InflictDamage(int damage, bool physical) {
+    public bool InflictDamage(Battle battle, int damage, bool physical) {
         Stats[StatTag.HP] -= damage;
-        //if (mutantManager != null) {
-        //    mutantManager.recordEvent(MutantEvent.DAMAGED);
-        //    if (physical) {
-        //        mutantManager.recordEvent(MutantEvent.DAMAGED_PHYSICALLY);
-        //    }
-        //}
+        if (battle != null) {
+            var manager = battle.GetMutationManagerForUnit(this);
+            manager.RecordEvent(MutantEvent.DAMAGED);
+            if (physical) {
+                manager.RecordEvent(MutantEvent.DAMAGED_PHYSICALLY);
+            }
+        }
         if (Stats[StatTag.HP] <= 0) {
             Stats[StatTag.HP] = 0;
             return true;
@@ -170,7 +172,7 @@ public class Unit {
         var tab = BattleBox.Tab;
         if (status.Data.lethality == LethalityType.DEATH) {
             await battle.WriteLineAsync(tab + Name + status.Data.inflictString + ".");
-            InflictDamage((int) Stats[StatTag.MHP], false);
+            InflictDamage(battle, (int) Stats[StatTag.MHP], false);
         } else {
             if (Status == null || Status.Data.priority < status.Data.priority) {
                 await battle.WriteLineAsync(tab + Name + status.Data.inflictString + ".");

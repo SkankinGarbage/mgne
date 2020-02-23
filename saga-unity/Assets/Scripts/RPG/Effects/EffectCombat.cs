@@ -39,7 +39,7 @@ public abstract class EffectCombat : EffectEnemyTarget {
             // no need to print a message because the block effect will cover it
         } else if (IsTargetWeak(target) && HasFlag(OffenseFlag.CRITICAL_ON_WEAKNESS)) {
             // This attack insta-killed the victim
-            target.InflictDamage(target[StatTag.MHP], false);
+            target.InflictDamage(intent.Battle, target[StatTag.MHP], false);
             await intent.Battle.WriteLineAsync("");
             await intent.Battle.WriteLineAsync("");
             await intent.Battle.WriteLineAsync(tab + tab + "CRITICAL HIT!");
@@ -60,7 +60,7 @@ public abstract class EffectCombat : EffectEnemyTarget {
             }
             if (damage > 0) {
                 await intent.Battle.View.PlayBackDamageRoutine(target, damage);
-                target.InflictDamage(damage, IsPhysical());
+                target.InflictDamage(intent.Battle, damage, IsPhysical());
                 await intent.Battle.CheckDeathAsync(target);
                 if (HasFlag(OffenseFlag.DRAIN_LIFE) && !target.Is(StatTag.UNDEAD)) {
                     int healed = intent.Actor.Heal(damage);

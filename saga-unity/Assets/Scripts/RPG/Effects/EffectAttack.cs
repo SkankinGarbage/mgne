@@ -30,4 +30,24 @@ public class EffectAttack : EffectCombat {
         float chance = temp / 100f;
         return roll < chance;
     }
+
+    protected override Task FinishIntentResolution(Intent intent) {
+        var manager = intent.Battle.GetMutationManagerForUnit(intent.Actor);
+        switch (data.attackStat) {
+            case StatTag.AGI:
+                manager.RecordEvent(MutantEvent.USED_AGI);
+                break;
+            case StatTag.MANA:
+                manager.RecordEvent(MutantEvent.USED_MANA);
+                break;
+            case StatTag.STR:
+                manager.RecordEvent(MutantEvent.USED_STR);
+                break;
+            default:
+                // doesn't matter
+                break;
+        }
+
+        return base.FinishIntentResolution(intent);
+    }
 }

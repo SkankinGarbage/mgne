@@ -79,6 +79,10 @@ public class Intent {
         Item.DeductUse();
         Actor.LastCombatSlot = Actor.Equipment.SlotForItem(Item);
 
+        if (Item.CanRestoreUses) {
+            Battle.GetMutationManagerForUnit(Actor).RecordEvent(MutantEvent.USED_ABILITY);
+        }
+
         IsFinished = true;
     }
 }
