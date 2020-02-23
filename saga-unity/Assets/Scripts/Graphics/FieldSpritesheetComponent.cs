@@ -20,9 +20,9 @@ public class FieldSpritesheetComponent : MonoBehaviour {
     }
 
     public void SetByTag(string tag) {
+        
         if (tag == null) {
-            spritesheet = null;
-            sprites = new Dictionary<string, Sprite>();
+            tag = "null";
         } else {
             var spritesheet = IndexDatabase.Instance().FieldSprites.GetDataOrNull(tag).spriteSheet;
             LoadSpritesheetData(spritesheet);

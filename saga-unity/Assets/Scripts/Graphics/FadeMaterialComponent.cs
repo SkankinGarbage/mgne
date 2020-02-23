@@ -9,6 +9,7 @@ public class FadeMaterialComponent : FadeComponent {
 
     [SerializeField] private List<SpriteRenderer> renderersToFade = null;
     [SerializeField] private List<Image> imagesToFade = null;
+    [SerializeField] private List<Text> textsToFade = null;
 
     private List<Material> materialsToFade;
 
@@ -28,6 +29,9 @@ public class FadeMaterialComponent : FadeComponent {
         }
         foreach (var image in imagesToFade) {
             materialsToFade.Add(image.material);
+        }
+        foreach (var text in textsToFade) {
+            materialsToFade.Add(text.material);
         }
 
         while (elapsed < transitionDuration) {
