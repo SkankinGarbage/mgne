@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
@@ -8,7 +7,6 @@ public class GridSelector : GenericSelector {
     [SerializeField] private GridLayoutGroup grid = null;
     [SerializeField] private int colCount = 2;
 
-
     int Col => Selection % colCount;
     int Row => Selection / colCount;
 
@@ -16,7 +14,7 @@ public class GridSelector : GenericSelector {
         return grid.transform.childCount;
     }
 
-    protected override SelectableCell GetCell(int index) {
+    public override SelectableCell GetCell(int index) {
         return grid.transform.GetChild(index).GetComponent<SelectableCell>();
     }
 
@@ -44,7 +42,7 @@ public class GridSelector : GenericSelector {
             while (CellIndexAt(row, col) >= CellCount()) {
                 row -= 1;
             }
-        } else if (CellIndexAt(col, row) >= CellCount()) {
+        } else if (CellIndexAt(row, col) >= CellCount()) {
             row = 0;
         }
         Selection = CellIndexAt(row, col);

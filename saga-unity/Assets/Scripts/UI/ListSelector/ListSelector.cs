@@ -5,7 +5,7 @@ public class ListSelector : GenericSelector {
     public List<SelectableCell> cells;
     public bool horizontal;
 
-    protected override SelectableCell GetCell(int index) {
+    public override SelectableCell GetCell(int index) {
         return cells[index];
     }
 

@@ -59,6 +59,7 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["cs_path"] = (Action<DynValue, DynValue, DynValue, DynValue>)Path;
         lua.Globals["fade"] = (Action<DynValue>)Fade;
         lua.Globals["cs_battle"] = (Action<DynValue, DynValue>)Battle;
+        lua.Globals["cs_recruit"] = (Action<DynValue>)Recruit;
     }
 
     // === LUA CALLABLE ============================================================================
@@ -181,5 +182,10 @@ public class LuaCutsceneContext : LuaContext {
         var bgmTag = bgmLua.IsNil() ? null : bgmLua.String;
         var party = IndexDatabase.Instance().Parties.GetData(partyTag);
         RunRoutineFromLua(BattleView.SpawnBattleRoutine(party, bgmTag));
+    }
+
+    private void Recruit(DynValue recruitKey) {
+        var data = IndexDatabase.Instance().Recruits.GetData(recruitKey.String);
+        RunRoutineFromLua(CoUtils.TaskRoutine(RecruitMenu.ShowDefault().DoMenuAsync(data)));
     }
 }

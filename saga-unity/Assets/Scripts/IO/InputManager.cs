@@ -11,15 +11,8 @@ public class InputManager : MonoBehaviour {
         Up,
         Down,
         Confirm,
-        Cancel,
         Menu,
-        Skip,
-        Save,
-        Load,
-        Log,
-        Auto,
-        Click,
-        Rightclick,
+        Cancel,
         Debug,
     };
 
@@ -46,16 +39,9 @@ public class InputManager : MonoBehaviour {
         keybinds[Command.Up] = new List<KeyCode>(new[] { KeyCode.UpArrow, KeyCode.W, KeyCode.Keypad8 });
         keybinds[Command.Down] = new List<KeyCode>(new[] { KeyCode.DownArrow, KeyCode.S, KeyCode.Keypad2 });
         keybinds[Command.Confirm] = new List<KeyCode>(new[] { KeyCode.Space, KeyCode.Z, KeyCode.Return });
-        keybinds[Command.Cancel] = new List<KeyCode>(new[] { KeyCode.Escape, KeyCode.B, KeyCode.X });
+        keybinds[Command.Cancel] = new List<KeyCode>(new[] { KeyCode.B, KeyCode.X, KeyCode.Backspace });
         keybinds[Command.Debug] = new List<KeyCode>(new[] { KeyCode.F9 });
-        keybinds[Command.Auto] = new List<KeyCode>(new[] { KeyCode.A });
-        keybinds[Command.Menu] = new List<KeyCode>(new[] { KeyCode.Escape, KeyCode.C, KeyCode.Backspace });
-        keybinds[Command.Skip] = new List<KeyCode>(new[] { KeyCode.S });
-        keybinds[Command.Save] = new List<KeyCode>();
-        keybinds[Command.Load] = new List<KeyCode>();
-        keybinds[Command.Log] = new List<KeyCode>(new[] { KeyCode.L });
-        keybinds[Command.Click] = new List<KeyCode>();
-        keybinds[Command.Rightclick] = new List<KeyCode>();
+        keybinds[Command.Menu] = new List<KeyCode>(new[] { KeyCode.Escape, KeyCode.C });
         fastKeys = new List<KeyCode>(new[] { KeyCode.LeftControl, KeyCode.RightControl });
 
         listeners = new List<IInputListener>();
@@ -138,13 +124,13 @@ public class InputManager : MonoBehaviour {
 
     public IEnumerator AwaitConfirm() {
         bool advance = false;
-        while (advance == false) {
+        do {
             foreach (KeyCode code in keybinds[Command.Confirm]) {
-                if (Input.GetKeyUp(code)) {
+                if (Input.GetKeyDown(code)) {
                     advance = true;
                 }
             }
             yield return null;
-        }
+        } while (advance == false);
     }
 }

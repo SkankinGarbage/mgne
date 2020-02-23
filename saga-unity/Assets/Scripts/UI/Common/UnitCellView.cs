@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.Serialization;
 
 public class UnitCellView : MonoBehaviour {
 
@@ -23,7 +21,7 @@ public class UnitCellView : MonoBehaviour {
             } else {
                 raceStatusText.text = unit.Status.ToString();
             }
-        } else {
+        } else if (hpText != null) {
             if (unit.Status == null || unit.IsDead) {
                 hpText.text = unit[StatTag.HP] + "/" + unit[StatTag.MHP];
             } else {

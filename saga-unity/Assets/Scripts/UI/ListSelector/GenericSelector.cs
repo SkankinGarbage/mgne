@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Threading;
 using System;
 
 public abstract class GenericSelector : MonoBehaviour {
+
+    public const int CodeCancel = -1;
+    public const int CodeMenu = -2;
 
     private string ListenerId => "ListSelector" + gameObject.name;
 
@@ -24,7 +25,7 @@ public abstract class GenericSelector : MonoBehaviour {
 
     public async Task<string> SelectCommandAsync(Action<int> scanner = null, bool keepSelection = false) {
         var result = await SelectItemAsync(scanner, keepSelection);
-        if (result == -1) {
+        if (result < 0) {
             return null;
         } else {
             return GetCell(result).GetComponent<CommandCell>().CommandString;
@@ -54,11 +55,17 @@ public abstract class GenericSelector : MonoBehaviour {
                 return true;
             }
             switch (command) {
+                case InputManager.Command.Menu:
+                    Global.Instance().Input.RemoveListener(ListenerId);
+                    canceled = true;
+                    if (!leavePointerEnabled) TurnOffPointer();
+                    completion.SetResult(CodeMenu);
+                    break;
                 case InputManager.Command.Cancel:
                     Global.Instance().Input.RemoveListener(ListenerId);
                     canceled = true;
                     if (!leavePointerEnabled) TurnOffPointer();
-                    completion.SetResult(-1);
+                    completion.SetResult(CodeCancel);
                     break;
                 case InputManager.Command.Confirm:
                     Global.Instance().Input.RemoveListener(ListenerId);
@@ -135,7 +142,7 @@ public abstract class GenericSelector : MonoBehaviour {
 
     protected abstract int CellCount();
 
-    protected abstract SelectableCell GetCell(int index);
+    public abstract SelectableCell GetCell(int index);
 
     protected abstract IEnumerable<SelectableCell> GetCells();
 

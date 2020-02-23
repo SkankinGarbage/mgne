@@ -19,7 +19,7 @@ public class DynamicListSelector : GenericSelector {
         return List.transform.childCount;
     }
 
-    protected override SelectableCell GetCell(int index) {
+    public override SelectableCell GetCell(int index) {
         return List.transform.GetChild(index).GetComponent<SelectableCell>();
     }
 

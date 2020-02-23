@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
@@ -43,8 +42,7 @@ public class MainMenuView : FullScreenMenuView {
     public async void MenuAync() {
         await expander.ShowRoutine();
         while (true) {
-            var task = mainMenu.SelectCommandAsync();
-            var command = await task;
+            var command = await mainMenu.SelectCommandAsync();
             switch (command) {
                 case "Abil":
                     await AbilSelect();
