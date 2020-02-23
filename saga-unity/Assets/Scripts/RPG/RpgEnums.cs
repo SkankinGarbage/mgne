@@ -94,3 +94,14 @@ public enum MissType {
     ALWAYS_HITS,
 
 }
+
+public enum MutantEvent {
+
+    DAMAGED,
+    DAMAGED_PHYSICALLY,
+    USED_ABILITY,
+    USED_MANA,
+    USED_STR,
+    USED_AGI
+
+}

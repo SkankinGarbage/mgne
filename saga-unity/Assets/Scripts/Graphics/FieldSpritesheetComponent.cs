@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class FieldSpritesheetComponent : MonoBehaviour {
@@ -20,7 +19,6 @@ public class FieldSpritesheetComponent : MonoBehaviour {
     }
 
     public void SetByTag(string tag) {
-        
         if (tag == null) {
             tag = "null";
         } else {

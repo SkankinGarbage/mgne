@@ -15,6 +15,7 @@ public class Party : IEnumerable<Unit> {
     public IEnumerable<Unit> Members => Groups.SelectMany(unit => unit);
     public Unit Leader => IsAnyAlive ? Members.First(unit => unit.IsAlive) : Members.FirstOrDefault();
     public int Size => Members.Count();
+    public int HighestMeatLevel => Members.Max(unit => unit.MeatLevel);
     public bool HasFlag(StatTag flag) => AnyMembersMeetCritera(unit => unit[flag] > 0);
     public bool IsCarryingItemType(CombatItemData itemData) => AnyMembersMeetCritera(unit => unit.IsCarryingItemType(itemData));
     public bool IsAnyAlive => Members.Any(unit => unit.IsAlive);
