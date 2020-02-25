@@ -40,10 +40,8 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
             elapsed += Time.deltaTime;
             int charsToShow = Mathf.FloorToInt(elapsed * charsPerSecond) + typingStartIndex;
             int cutoff = charsToShow > text.Length ? text.Length : charsToShow;
+            // Debug.Log("elapsed: " + elapsed + ", total: " + total + " , toShow:" + charsToShow + ", cutoff:" + cutoff);
             textbox.text = text.Substring(0, cutoff);
-            textbox.text += "<color=#00000000>";
-            textbox.text += text.Substring(cutoff);
-            textbox.text += "</color>";
             yield return null;
 
             elapsed += Time.deltaTime;

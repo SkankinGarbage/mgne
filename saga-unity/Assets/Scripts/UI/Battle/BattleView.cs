@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class BattleView : FullScreenMenuView {
 
@@ -8,11 +10,13 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] public UnitList allyList = null;
     [SerializeField] public GenericSelector enemySelector = null;
     [SerializeField] public BattleBox battlebox = null;
+    [SerializeField] public ListSelector mutationSelector = null;
     [SerializeField] private UnitList unitList = null;
     [SerializeField] private ListView dollList = null;
     [SerializeField] private ListView battlerList = null;
     [SerializeField] private ListView monsterNameList = null;
     [SerializeField] private UnitCellView unitCell = null;
+    [SerializeField] private ListView mutationView = null;
 
     public Battle Battle { get; private set; }
 
@@ -98,6 +102,19 @@ public class BattleView : FullScreenMenuView {
         yield return WriteLineRoutine(BattleBox.Tab + target.Name + " takes " + damage + " damage.");
         // TODO
         yield return null; 
+    }
+
+    public IEnumerator ShowMutationMenuRoutine(List<Mutation> mutations) {
+        for (var i = 0; i < 6; i += 1) yield return WriteLineRoutine("");
+        mutationSelector.gameObject.SetActive(true);
+        mutationView.Populate(mutations, (obj, mutation) => {
+            obj.GetComponent<Text>().text = mutation.Description;
+        });
+        yield return mutationSelector.GetComponent<ExpanderComponent>().ShowRoutine();
+    }
+
+    public IEnumerator HideMutationMenuRoutine() {
+        yield return mutationSelector.GetComponent<ExpanderComponent>().HideRoutine();
     }
 
     public override IEnumerator CloseRoutine() {

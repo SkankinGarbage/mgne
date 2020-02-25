@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class MutationManager : MonoBehaviour {
+public class MutationManager {
 
     protected const int MhpGainMin = 5;
     protected const int MhpGainMax = 19;

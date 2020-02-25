@@ -177,12 +177,17 @@ public class Battle {
 
         if (IsVictory) {
             await WriteLineAsync("");
-            await WriteLineAsync(Player.Leader + " is victorious.");
+            await WriteLineAsync(Player.Leader.Name + " is victorious.");
             await WriteLineAsync("");
 
             int gp = Enemy.Select(unit => unit.GP).Aggregate((x, y) => x + y);
             await WriteLineAsync("Found " + gp + " gold pieces.");
             Global.Instance().Data.AddGP(gp);
+            await Global.Instance().Input.AwaitConfirm();
+
+            foreach (var unit in Player) {
+                await DoMutationsForUnitAsync(unit);
+            }
         }
 
         await View.CloseRoutine();
@@ -248,6 +253,30 @@ public class Battle {
             index += delta;
         } while (index < Player.Size && index >= 0 && !Player[index].CanAct);
         return index;
+    }
+
+    private async Task DoMutationsForUnitAsync(Unit unit) {
+        if (!unit.IsAlive || unit.Race != Race.MUTANT || UnityEngine.Random.Range(0, 100) > MutationManager.MutationsTable.mutationChance) {
+            return;
+        }
+        var options = GetMutationManagerForUnit(unit).GenerateOptions();
+
+        await WriteLineAsync("");
+        await WriteLineAsync("");
+        await WriteLineAsync(unit.Name + " mutates.");
+        await View.ShowMutationMenuRoutine(options);
+        var selection = -1;
+        while (selection < 0) {
+            selection = await View.mutationSelector.SelectItemAsync(null, true);
+        }
+
+        var mutation = options[selection];
+        mutation.Apply();
+        await View.HideMutationMenuRoutine();
+        await View.WriteLineRoutine(mutation.Message);
+        await Global.Instance().Input.AwaitConfirm();
+        
+
     }
 
     #endregion

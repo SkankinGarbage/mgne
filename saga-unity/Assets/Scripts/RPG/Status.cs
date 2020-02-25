@@ -20,7 +20,7 @@ public class Status {
             await battle.WriteLineAsync(tab + target.Name + Data.inflictString + ".");
         }
         if (Data.lethality == LethalityType.DEATH) {
-            target.InflictDamage(target[StatTag.HP], false);
+            target.InflictDamage(battle, target[StatTag.HP], false);
         } else {
             target.Status = this;
         }
@@ -52,7 +52,7 @@ public class Status {
             if (Data.dotStat.HasValue) {
                 dot += unit[Data.dotStat.Value] / 10;
             }
-            unit.InflictDamage(dot, false);
+            unit.InflictDamage(battle, dot, false);
             await battle.WriteLineAsync(unit.Name + Data.inflictString + ", " + unit.Name + " takes " + dot + " damage.");
             await battle.CheckDeathAsync(unit);
         } else if (Data.preventChance > 0) {

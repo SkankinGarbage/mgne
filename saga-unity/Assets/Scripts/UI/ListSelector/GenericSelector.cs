@@ -10,6 +10,8 @@ public abstract class GenericSelector : MonoBehaviour {
 
     private string ListenerId => "ListSelector" + gameObject.name;
 
+    public bool horizontal;
+
     private int selection;
     public int Selection {
         set {
@@ -147,7 +149,9 @@ public abstract class GenericSelector : MonoBehaviour {
     protected abstract IEnumerable<SelectableCell> GetCells();
 
     protected virtual void MoveSelectionHorizontal(int delta) {
-
+        if (horizontal) {
+            Selection = delta + Selection;
+        }
     }
 
     protected virtual void MoveSelectionVertical(int delta) {
