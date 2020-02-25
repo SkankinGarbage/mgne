@@ -17,7 +17,7 @@ public class Unit {
 
     public int this[StatTag tag] { get => (int) Stats[tag]; }
 
-    public MonsterFamilyData MonsterFamily => Race == Race.MONSTER ? data.family : null;
+    public MonsterFamily MonsterFamily => Race == Race.MONSTER ? new MonsterFamily(data.family) : null;
     public Race Race => data.race;
     public string DataKey => data?.key;
     public string FieldSpriteTag => data.appearance;
@@ -119,6 +119,24 @@ public class Unit {
     public void PermanentlyModifyStat(StatTag stat, int delta) {
         BaseStats[stat] += delta;
         Stats[stat] += delta;
+    }
+
+    public void TransformInto(CharaData newForm) {
+        // destroy old stuff
+        foreach (var item in Equipment) {
+            Equipment.Drop(item);
+        }
+
+        // copy relevant stuff
+        data = newForm;
+
+        // create new stuff
+        BaseStats = new StatSet(newForm.stats);
+        Stats = new StatSet(newForm.stats);
+        Heal((int) Stats[StatTag.MHP]);
+        Status = null;
+        Equipment = new EquipmentInventory(this, newForm);
+        Global.Instance().Maps.Avatar.UpdateAppearance();
     }
 
     public LuaUnit GetLuaUnit(LuaContext context) {

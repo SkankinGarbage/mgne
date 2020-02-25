@@ -13,6 +13,7 @@ public class IndexDatabase : ScriptableObject {
     public UnitIndex Units;
     public StatusIndex Statuses;
     public RecruitIndex Recruits;
+    public MeatGroupIndex MeatGroups;
 
     public static IndexDatabase Instance() {
         return Resources.Load<IndexDatabase>("Database/Database");

@@ -35,4 +35,8 @@ public abstract class GenericIndex<T> : ScriptableObject where T : IKeyedDataObj
             return default;
         }
     }
+
+    public List<T> GetAll() {
+        return dataObjects;
+    }
 }

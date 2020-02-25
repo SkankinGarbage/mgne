@@ -45,6 +45,10 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
         WantsToTrack = false;
     }
 
+    public void UpdateAppearance() {
+        Chara.SetAppearanceByTag(Global.Instance().Party.Leader.FieldSpriteTag);
+    }
+
     public bool OnCommand(InputManager.Command command, InputManager.Event eventType) {
         if (Parent.Tracking || InputPaused) {
             return true;
@@ -67,11 +71,12 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
                     default:
                         return false;
                 }
-            case InputManager.Event.Up:
+            case InputManager.Event.Down:
                 switch (command) {
                     case InputManager.Command.Confirm:
                         Interact();
                         return false;
+                    case InputManager.Command.Menu:
                     case InputManager.Command.Cancel:
                         ShowMenu();
                         return false;
