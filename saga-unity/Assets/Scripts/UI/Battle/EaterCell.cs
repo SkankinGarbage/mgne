@@ -13,14 +13,14 @@ public class EaterCell : MonoBehaviour {
         if (unit.Race == Race.MONSTER) {
             if (toForm == null) {
                 fromText.text = "Nothing";
-                toText.text = "happens ";
+                toText.text = "happens   ";
             } else {
                 fromText.text = unit.SpeciesString;
                 toText.text = "to " + toForm.species;
             }
         } else {
-            fromText.text = "";
-            toText.text = "";
+            fromText.text = "Nothing";
+            toText.text = "happens   ";
         }
         GetComponent<SelectableCell>().SetSelectable(unit.IsAlive);
     }

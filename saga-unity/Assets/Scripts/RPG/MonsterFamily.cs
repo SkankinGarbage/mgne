@@ -24,9 +24,13 @@
         if (meatGroup == null) {
             return null;
         }
+        
 
         // Find the outgoing link from our family with their meat group
         TransformationData link = null;
+        if (eater.MonsterFamily == null) {
+            return null;
+        }
         foreach (var transform in eater.MonsterFamily.data.transformations) {
             if (meatGroup.key == transform.eat.key) {
                 link = transform;
