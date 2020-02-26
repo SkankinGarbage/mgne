@@ -2,24 +2,32 @@
 
     private MonsterFamilyData data;
 
+    public string Key => data.key;
+
     public MonsterFamily(MonsterFamilyData data) {
         this.data = data;
     }
 
-    public void TransformEater(Unit eater, Unit dropper) {
+    public static void TransformEater(Unit eater, Unit dropper) {
         var result = GetTransformResult(eater, dropper);
         if (result != null) {
             eater.TransformInto(result);
         }
     }
 
-    public CharaData GetTransformResult(Unit eater, Unit dropper) {
+    public static CharaData GetTransformResult(Unit eater, Unit dropper) {
         var otherFamily = dropper.MonsterFamily;
+        if (otherFamily == null) {
+            return null;
+        }
         var meatGroup = otherFamily.FindMeatGroup();
+        if (meatGroup == null) {
+            return null;
+        }
 
         // Find the outgoing link from our family with their meat group
         TransformationData link = null;
-        foreach (var transform in data.transformations) {
+        foreach (var transform in eater.MonsterFamily.data.transformations) {
             if (meatGroup.key == transform.eat.key) {
                 link = transform;
                 break;

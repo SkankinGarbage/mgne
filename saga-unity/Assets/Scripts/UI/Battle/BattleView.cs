@@ -11,12 +11,15 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] public GenericSelector enemySelector = null;
     [SerializeField] public BattleBox battlebox = null;
     [SerializeField] public ListSelector mutationSelector = null;
+    [SerializeField] public ListSelector eatYesNoSelector = null;
+    [SerializeField] public DynamicListSelector eaterSelector = null;
     [SerializeField] private UnitList unitList = null;
     [SerializeField] private ListView dollList = null;
     [SerializeField] private ListView battlerList = null;
     [SerializeField] private ListView monsterNameList = null;
     [SerializeField] private UnitCellView unitCell = null;
     [SerializeField] private ListView mutationView = null;
+    [SerializeField] private ListView eaterView = null;
 
     public Battle Battle { get; private set; }
 
@@ -115,6 +118,29 @@ public class BattleView : FullScreenMenuView {
 
     public IEnumerator HideMutationMenuRoutine() {
         yield return mutationSelector.GetComponent<ExpanderComponent>().HideRoutine();
+    }
+
+    public IEnumerator ShowEatYesNoMenuRoutine() {
+        for (var i = 0; i < 5; i += 1) yield return WriteLineRoutine("");
+        yield return eatYesNoSelector.GetComponent<ExpanderComponent>().ShowRoutine();
+    }
+
+    public IEnumerator HideEatYesNoRoutine() {
+        yield return eatYesNoSelector.GetComponent<ExpanderComponent>().HideRoutine();
+    }
+
+    public IEnumerator ShowEaterMenuRoutine(Unit dropper) {
+        eaterSelector.gameObject.SetActive(true);
+        eaterView.Populate(Global.Instance().Party, (obj, unit) => {
+            obj.GetComponent<EaterCell>().Populate(unit, MonsterFamily.GetTransformResult(unit, dropper));
+        });
+        eaterSelector.gameObject.SetActive(true);
+        yield return null;
+    }
+
+    public IEnumerator HideEaterMenuRoutine() {
+        eaterSelector.gameObject.SetActive(false);
+        yield return null;
     }
 
     public override IEnumerator CloseRoutine() {

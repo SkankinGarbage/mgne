@@ -135,7 +135,7 @@ public abstract class EffectCombat : EffectEnemyTarget {
         }
         if (target.MonsterFamily != null) {
             foreach (var family in data.slayerFamiles) {
-                if (target.MonsterFamily == family) {
+                if (target.MonsterFamily.Key == family.key) {
                     return true;
                 }
             }

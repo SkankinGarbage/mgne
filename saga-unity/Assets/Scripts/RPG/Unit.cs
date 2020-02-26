@@ -27,6 +27,7 @@ public class Unit {
     public void SetName(string name) => this.name = name;
     public int GP => data.gp;
     public int MeatLevel => data.meatEatLevel;
+    public int MeatDropChance => data.meatDropChance;
     public bool Is(StatTag flag) => Stats[flag] > 0;
     public bool IsCarryingItemType(CombatItemData data) => Equipment.ContainsItemType(data);
     public bool CanAct => IsAlive && (Status == null || !Status.PreventsIntentions) && Equipment.ContainsBattleUseableItems();

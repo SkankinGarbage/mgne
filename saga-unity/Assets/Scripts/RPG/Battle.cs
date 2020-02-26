@@ -188,6 +188,7 @@ public class Battle {
             foreach (var unit in Player) {
                 await DoMutationsForUnitAsync(unit);
             }
+            await DoMeatAsync();
         }
 
         await View.CloseRoutine();
@@ -275,8 +276,54 @@ public class Battle {
         await View.HideMutationMenuRoutine();
         await View.WriteLineRoutine(mutation.Message);
         await Global.Instance().Input.AwaitConfirm();
-        
+    }
 
+    private async Task<bool> DoMeatAsync() {
+        var roll = UnityEngine.Random.Range(0, 100);
+        var offset = UnityEngine.Random.Range(0, Enemy.Size);
+        Unit dropper = null;
+        for (var i = 0; i < Enemy.Size; i += 1) {
+            var index = (i + offset) % Enemy.Size;
+            if (roll < Enemy[index].MeatDropChance) {
+                dropper = Enemy[index];
+                break;
+            }
+        }
+        if (dropper == null) {
+            return false;
+        }
+
+        await WriteLineAsync("");
+        await WriteLineAsync("");
+        await WriteLineAsync("Found meat of " + dropper.Name + ".");
+        await View.ShowEatYesNoMenuRoutine();
+
+        var command = await View.eatYesNoSelector.SelectCommandAsync();
+        await View.HideEatYesNoRoutine();
+        if (command != "EAT") {
+            return false;
+        }
+
+        await View.ShowEaterMenuRoutine(dropper);
+        var selection = await View.eaterSelector.SelectItemAsync();
+        await View.HideEaterMenuRoutine();
+        if (selection < 0) {
+            return false;
+        }
+        
+        var eater = Player[selection];
+        if (eater == null) {
+            return false;
+        }
+
+        CharaData newForm = MonsterFamily.GetTransformResult(eater, dropper);
+        if (newForm != null) {
+            await WriteLineAsync(eater.Name + " transformed into " + newForm.species + ".");
+            MonsterFamily.TransformEater(eater, dropper);
+        } else {
+            await WriteLineAsync("Nothing happened.");
+        }
+        return true;
     }
 
     #endregion
