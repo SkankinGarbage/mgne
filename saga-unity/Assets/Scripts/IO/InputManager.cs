@@ -132,5 +132,6 @@ public class InputManager : MonoBehaviour {
             }
             yield return null;
         } while (advance == false);
+        yield return null;
     }
 }

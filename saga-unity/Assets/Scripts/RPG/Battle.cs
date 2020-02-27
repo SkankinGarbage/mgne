@@ -323,6 +323,7 @@ public class Battle {
         } else {
             await WriteLineAsync("Nothing happened.");
         }
+        await Global.Instance().Input.AwaitConfirm();
         return true;
     }
 

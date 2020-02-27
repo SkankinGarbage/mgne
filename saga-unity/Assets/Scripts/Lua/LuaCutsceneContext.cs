@@ -20,10 +20,6 @@ public class LuaCutsceneContext : LuaContext {
         }
     }
 
-    public void Start() {
-        //lua.Globals["avatar"] = Global.Instance().Maps.Avatar.GetComponent<MapEvent>().luaObject;
-    }
-
     public override void Awake() {
         base.Awake();
         LoadDefines(DefinesPath);
@@ -60,6 +56,7 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["fade"] = (Action<DynValue>)Fade;
         lua.Globals["cs_battle"] = (Action<DynValue, DynValue>)Battle;
         lua.Globals["cs_recruit"] = (Action<DynValue>)Recruit;
+        lua.Globals["cs_inn"] = (Action)Inn;
     }
 
     // === LUA CALLABLE ============================================================================
@@ -187,5 +184,9 @@ public class LuaCutsceneContext : LuaContext {
     private void Recruit(DynValue recruitKey) {
         var data = IndexDatabase.Instance().Recruits.GetData(recruitKey.String);
         RunRoutineFromLua(CoUtils.TaskRoutine(RecruitMenu.ShowDefault().DoMenuAsync(data)));
+    }
+
+    private void Inn() {
+        RunRoutineFromLua(CoUtils.TaskRoutine(InnMenuView.ShowDefault().DoMenuAsync()));
     }
 }
