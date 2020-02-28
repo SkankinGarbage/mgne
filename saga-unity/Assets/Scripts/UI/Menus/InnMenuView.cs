@@ -7,14 +7,12 @@ using System.Linq;
 public class InnMenuView : FullScreenMenuView {
     
     [SerializeField] private Text headerText = null;
-    [SerializeField] private Text gpText = null;
+    [SerializeField] private GoldView gp = null;
     [SerializeField] private ListView partyCells = null;
     [SerializeField] private ListSelector mainMenu = null;
     [SerializeField] private ExpanderComponent expander = null;
 
     [SerializeField] private string sfxKey = "inn";
-
-    private string gpSuffix;
     
     public static InnMenuView ShowDefault() {
         var menu = Instantiate<InnMenuView>("Prefabs/UI/Inn/InnMenu");
@@ -30,8 +28,7 @@ public class InnMenuView : FullScreenMenuView {
             headerText.text = $"It'll cost {cost} GP to spend the night.";
         }
 
-        if (gpSuffix == null) gpSuffix = gpText.text;
-        gpText.text = Global.Instance().Data.GP + " " + gpSuffix;
+        gp.Populate();
 
         partyCells.Populate(Global.Instance().Party, (obj, unit) => {
             var cell = obj.GetComponent<UnitCellView>();

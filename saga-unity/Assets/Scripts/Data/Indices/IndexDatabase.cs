@@ -14,6 +14,7 @@ public class IndexDatabase : ScriptableObject {
     public StatusIndex Statuses;
     public RecruitIndex Recruits;
     public MeatGroupIndex MeatGroups;
+    public ShopIndex Shops;
 
     public static IndexDatabase Instance() {
         return Resources.Load<IndexDatabase>("Database/Database");

@@ -57,6 +57,7 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["cs_battle"] = (Action<DynValue, DynValue>)Battle;
         lua.Globals["cs_recruit"] = (Action<DynValue>)Recruit;
         lua.Globals["cs_inn"] = (Action)Inn;
+        lua.Globals["cs_shop"] = (Action<DynValue>)Shop;
     }
 
     // === LUA CALLABLE ============================================================================
@@ -188,5 +189,10 @@ public class LuaCutsceneContext : LuaContext {
 
     private void Inn() {
         RunRoutineFromLua(CoUtils.TaskRoutine(InnMenuView.ShowDefault().DoMenuAsync()));
+    }
+
+    private void Shop(DynValue shopKey) {
+        var data = IndexDatabase.Instance().Shops.GetData(shopKey.String);
+        RunRoutineFromLua(CoUtils.TaskRoutine(ShopMenuView.ShowDefault(data).DoMenuAsync()));
     }
 }
