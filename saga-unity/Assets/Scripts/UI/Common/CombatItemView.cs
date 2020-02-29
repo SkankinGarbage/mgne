@@ -24,8 +24,12 @@ public class CombatItemView : MonoBehaviour {
         }
 
         if (costLabel != null) {
-            var goldValue = item.GoldValue;
-            costLabel.text = goldValue > 0 ? goldValue.ToString() : "";
+            if (item == null ) {
+                costLabel.text = "";
+            } else {
+                var goldValue = item.GoldValue;
+                costLabel.text = goldValue > 0 ? goldValue.ToString() : "";
+            }
         }
 
         GetComponent<SelectableCell>().SetSelectable(item != null || allowSelectNull);

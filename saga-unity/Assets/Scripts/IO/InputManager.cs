@@ -124,6 +124,7 @@ public class InputManager : MonoBehaviour {
 
     public IEnumerator AwaitConfirm() {
         bool advance = false;
+        yield return null;
         do {
             foreach (KeyCode code in keybinds[Command.Confirm]) {
                 if (Input.GetKeyDown(code)) {
@@ -132,6 +133,5 @@ public class InputManager : MonoBehaviour {
             }
             yield return null;
         } while (advance == false);
-        yield return null;
     }
 }

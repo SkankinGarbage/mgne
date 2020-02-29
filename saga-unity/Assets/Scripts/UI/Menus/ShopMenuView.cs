@@ -83,11 +83,12 @@ public class ShopMenuView : FullScreenMenuView {
                 headerText.text = "You can't carry that.";
                 continue;
             }
-            headerText.text = "Sold!";
-            Global.Instance().Audio.PlaySFX(buySfxKey);
 
             Global.Instance().Data.DeductGP(item.cost);
             Global.Instance().Data.Inventory.Add(new CombatItem(item));
+            Populate(false);
+            headerText.text = "Sold!";
+            Global.Instance().Audio.PlaySFX(buySfxKey);
             await Global.Instance().Input.AwaitConfirm();
         }
     }
