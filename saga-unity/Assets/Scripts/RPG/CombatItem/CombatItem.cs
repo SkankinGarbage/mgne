@@ -1,7 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using System.Threading.Tasks;
 
 public class CombatItem {
 
@@ -14,7 +11,7 @@ public class CombatItem {
     public AbilEffect Effect { get; protected set; }
 
     public bool CanRestoreUses => Data.type == AbilityType.ABILITY;
-    public int GoldValue => Data.cost * UsesRemaining / Data.uses;
+    public int GoldValue => Data.uses > 0 ? Data.cost * UsesRemaining / Data.uses : Data.cost;
     public bool IsBattleUseable => Effect.IsBattleUsable() && (UsesRemaining > 0 || Data.uses == 0);
     public bool IsMapUseable => true;
     public StatSet RoboStats => Data.robostats;

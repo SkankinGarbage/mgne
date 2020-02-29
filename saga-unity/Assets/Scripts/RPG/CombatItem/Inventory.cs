@@ -101,7 +101,7 @@ public class Inventory : IEnumerable<CombatItem> {
     public int Add(CombatItem item) {
         for (int i = 0; i < capacity; i += 1) {
             if (Items[i] == null && !IsSlotReservedAt(i)) {
-                Items[i] = item;
+                items[i] = item;
                 return i;
             }
         }

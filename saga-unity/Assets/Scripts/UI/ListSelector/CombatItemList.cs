@@ -26,4 +26,11 @@ public class CombatItemList : ListView {
             }
         });
     }
+
+    public void Populate(IEnumerable<CombatItemData> datas) {
+        Populate(datas, (obj, itemData) => {
+            var view = obj.GetComponent<CombatItemView>();
+            view.Populate(new CombatItem(itemData), pointers);
+        });
+    }
 }
