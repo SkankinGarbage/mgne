@@ -15,12 +15,12 @@ public abstract class FadeComponent : MonoBehaviour {
     public abstract IEnumerator FadeRoutine(FadeData fade, bool invert = false, float timeMult = 1.0f);
 
     public IEnumerator FadeOutRoutine(string tag = DefaultTransitionTag) {
-        TransitionData data = IndexDatabase.Instance().Transitions.GetData(DefaultTransitionTag);
+        TransitionData data = IndexDatabase.Instance().Transitions.GetData(tag);
         yield return FadeRoutine(data.GetFadeOut());
     }
 
     public IEnumerator FadeInRoutine(string tag = DefaultTransitionTag) {
-        TransitionData data = IndexDatabase.Instance().Transitions.GetData(DefaultTransitionTag);
+        TransitionData data = IndexDatabase.Instance().Transitions.GetData(tag);
         yield return FadeRoutine(data.GetFadeIn(), true);
     }
 }

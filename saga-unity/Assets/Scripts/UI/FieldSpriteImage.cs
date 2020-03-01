@@ -38,7 +38,10 @@ public class FieldSpriteImage : MonoBehaviour {
         this.tag = tag;
         Spritesheet.SetByTag(tag);
         if (tag != null) {
+            gameObject.SetActive(true);
             Image.sprite = Spritesheet.FrameForDirection(facing);
+        } else {
+            gameObject.SetActive(false);
         }
     }
 

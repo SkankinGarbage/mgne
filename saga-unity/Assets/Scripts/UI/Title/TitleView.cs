@@ -4,6 +4,12 @@ using System.Threading.Tasks;
 public class TitleView : FullScreenMenuView {
 
     [SerializeField] private ListSelector mainMenu = null;
+    [SerializeField] private TextScrollView scrollView = null;
+    [Space]
+    [SerializeField] private RecruitSelectionData recruitLeader = null;
+    [SerializeField] private RecruitSelectionData recruitFollower = null;
+    [SerializeField] private string defaultMapKey = "world1/parish";
+    [SerializeField] private string defaultMapTarget = "start";
 
     private FadeComponent fade;
 
@@ -21,7 +27,7 @@ public class TitleView : FullScreenMenuView {
             var command = await task;
             switch (command) {
                 case "START":
-                    SelectStart();
+                    await SelectStart();
                     return;
                 case "CONTINUE":
                     bool continued = await SelectContinue();
@@ -36,8 +42,21 @@ public class TitleView : FullScreenMenuView {
         }
     }
 
-    private void SelectStart() {
-        
+    private async Task SelectStart() {
+        await fade.FadeOutRoutine("white");
+        scrollView.gameObject.SetActive(true);
+        await fade.FadeInRoutine("white");
+        await scrollView.ScrollRoutine();
+
+        await fade.FadeOutRoutine("black");
+        await RecruitAsync(recruitLeader);
+        await RecruitAsync(recruitFollower);
+        await RecruitAsync(recruitFollower);
+        await RecruitAsync(recruitFollower);
+
+        await Task.Delay(1000);
+        await Global.Instance().Maps.TeleportRoutine(defaultMapKey, defaultMapTarget, OrthoDir.South, true);
+        await fade.FadeInRoutine("black_long");
     }
 
     private async Task<bool> SelectContinue() {
@@ -55,5 +74,14 @@ public class TitleView : FullScreenMenuView {
     private async Task SelectOptions() {
         // TODO
         await Task.Delay(100);
+    }
+
+    private async Task RecruitAsync(RecruitSelectionData data) {
+        var menu = RecruitMenu.ShowDefault();
+        var recruitTask = menu.DoMenuAsync(data, autoclose: false);
+        await fade.FadeInRoutine("black");
+        await recruitTask;
+        await fade.FadeOutRoutine("black");
+        await menu.CloseRoutine();
     }
 }

@@ -13,16 +13,6 @@ public class RecruitCellView : MonoBehaviour {
         } else {
             sprite.Populate(data.appearance);
             recruitName.text = data.species;
-            switch (data.gender) {
-                case Gender.MALE:
-                    recruitName.text += " M";
-                    break;
-                case Gender.FEMALE:
-                    recruitName.text += " F";
-                    break;
-                case Gender.NONE:
-                    break;
-            }
         }
     }
 }

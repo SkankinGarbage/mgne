@@ -3,6 +3,7 @@
 	Properties
 	{
 		[PerRendererData] _MainTex ("Main Texture", 2D) = "white" {}
+        _FadeBorderSize("Fade border size", Range(0, 0.5)) = 0
         _Black("Black in", Color) = (0,0,0,1)
         _DGray("Dark Gray in", Color) = (.226,.226,.226,1)
         _LGray("Light Gray in", Color) = (.668,.668,.668,1)
@@ -72,6 +73,7 @@
 			float _FadeOffset;
 			float _SoftFudge;
             float _FadeColorMod;
+            float _FadeBorderSize;
 			int _Invert;
 			int _FlipX;
 			int _FlipY;
@@ -111,6 +113,15 @@
                     if (weight > 0.25) darkness += _FadeColorMod;
                     if (weight > 0.50) darkness += _FadeColorMod;
                     if (weight > 0.75) darkness += _FadeColorMod;
+                    
+                    float y = i.vertex.y / 480.0;
+                    if (y <       _FadeBorderSize / 3)        darkness += 1;
+                    if (y <       _FadeBorderSize * 2 / 3)    darkness += 1;
+                    if (y <       _FadeBorderSize)            darkness += 1;
+                    if (y > 1.0 - (_FadeBorderSize / 3))      darkness += 1;
+                    if (y > 1.0 - (_FadeBorderSize * 2 / 3))  darkness += 1;
+                    if (y > 1.0 - (_FadeBorderSize))          darkness += 1;
+                    
                     if (darkness < 0) darkness = 0;
                     if (darkness > 3) darkness = 3;
                     

@@ -32,7 +32,7 @@ public class RecruitMenu : FullScreenMenuView {
         });
     }
 
-    public async Task DoMenuAsync(RecruitSelectionData data) {
+    public async Task DoMenuAsync(RecruitSelectionData data, bool autoclose = true) {
         Populate(data);
         while (true) {
             var slot = await recruitSelector.SelectItemAsync(null, true);
@@ -45,7 +45,9 @@ public class RecruitMenu : FullScreenMenuView {
                 }
             }
         }
-        await CloseRoutine();
+        if (autoclose) {
+            await CloseRoutine();
+        }
     }
 
     private async Task ShowInfo() {
@@ -120,12 +122,12 @@ public class RecruitMenu : FullScreenMenuView {
 
         if (result.Value) {
             Global.Instance().Data.Party.AddMember(unit);
+        } else {
+            recruitCells.gameObject.SetActive(true);
+            recruitSummary.gameObject.SetActive(true);
+            unitCell.gameObject.SetActive(false);
+            letterList.gameObject.SetActive(false);
         }
-
-        recruitCells.gameObject.SetActive(true);
-        recruitSummary.gameObject.SetActive(true);
-        unitCell.gameObject.SetActive(false);
-        letterList.gameObject.SetActive(false);
         return result.Value;
     }
 

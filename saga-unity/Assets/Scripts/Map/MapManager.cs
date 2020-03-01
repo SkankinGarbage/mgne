@@ -43,7 +43,8 @@ public class MapManager : MonoBehaviour {
     }
 
     public IEnumerator TeleportRoutine(string mapName, string targetEventName, OrthoDir? facing = null, bool isRaw = false) {
-        Avatar.PauseInput();
+        bool avatarExists = Avatar != null;
+        if (avatarExists) Avatar.PauseInput();
         TransitionData data = IndexDatabase.Instance().Transitions.GetData(FadeComponent.DefaultTransitionTag);
         if (!isRaw) {
             yield return Camera.GetComponent<FadeComponent>().TransitionRoutine(data, () => {
@@ -52,7 +53,7 @@ public class MapManager : MonoBehaviour {
         } else {
             RawTeleport(mapName, targetEventName, facing);
         }
-        Avatar.UnpauseInput();
+        if (avatarExists) Avatar.UnpauseInput();
     }
     
     private void RawTeleport(string mapName, Vector2Int location, OrthoDir? facing = null) {
