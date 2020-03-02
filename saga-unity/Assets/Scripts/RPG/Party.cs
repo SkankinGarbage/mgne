@@ -24,11 +24,10 @@ public class Party : IEnumerable<Unit> {
     IEnumerator IEnumerable.GetEnumerator() { return Members.GetEnumerator(); }
 
     public Party() {
-        // serialized
+        Groups = new List<List<Unit>>();
     }
 
-    public Party(PartyData data) {
-        Groups = new List<List<Unit>>();
+    public Party(PartyData data) : this() {
         foreach (var entry in data.members) {
             var Group = new List<Unit>();
             for (var i = 0; i < entry.count; i += 1) {

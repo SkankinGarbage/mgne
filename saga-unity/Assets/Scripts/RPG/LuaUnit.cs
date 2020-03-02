@@ -4,20 +4,24 @@ using UnityEngine;
 [MoonSharpUserData]
 public class LuaUnit {
 
-    public DynValue luaValue { get; private set; }
+    public DynValue LuaValue { get; private set; }
 
     private Unit unit;
-    private LuaContext context;
+    private readonly LuaContext context;
 
     public LuaUnit(Unit unit, LuaContext context) {
         this.unit = unit;
         this.context = context;
-        luaValue = context.CreateObject();
+        LuaValue = context.CreateObject();
     }
 
     // === CALLED BY LUA === 
 
     public string getSpriteName() {
         return unit.FieldSpriteTag;
+    }
+
+    public string getName() {
+        return unit.Name;
     }
 }

@@ -22,9 +22,11 @@ public class SerializationManager : MonoBehaviour {
         settings.Converters.Add(new StatSetConverter());
         settings.Converters.Add(new UnitConverter());
         serializer = JsonSerializer.Create(settings);
-
-        Data = new GameData();
-        Data.Party = new Party(IndexDatabase.Instance().Parties.defaultParty);
+        
+        Data = new GameData {
+            Party = new Party(),
+        };
+        // Data.Party = new Party(IndexDatabase.Instance().Parties.defaultParty);
         LoadOrCreateSystemMemory();
     }
 

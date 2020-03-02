@@ -60,14 +60,12 @@ public class CharaEvent : MonoBehaviour {
 
     public void Start() {
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventEnabled, (object payload) => {
-            bool enabled = (bool)payload;
-            foreach (SpriteRenderer renderer in Renderers) {
-                renderer.enabled = enabled;
-            }
+            UpdateEnabled((bool)payload);
         });
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventInteract, (object payload) => {
             Facing = Parent.DirectionTo(Global.Instance().Maps.Avatar.GetComponent<MapEvent>());
         });
+        UpdateEnabled(Parent.SwitchEnabled);
     }
 
     public void Update() {
@@ -82,6 +80,12 @@ public class CharaEvent : MonoBehaviour {
         lastPosition = transform.position;
 
         UpdateAppearance();
+    }
+
+    public void UpdateEnabled(bool enabled) {
+        foreach (SpriteRenderer renderer in Renderers) {
+            renderer.enabled = enabled;
+        }
     }
 
     public void UpdateAppearance() {

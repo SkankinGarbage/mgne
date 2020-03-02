@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 using System;
+using System.Linq;
 
 public class RecruitMenu : FullScreenMenuView {
 
@@ -108,7 +109,9 @@ public class RecruitMenu : FullScreenMenuView {
                     letterIndex -= 1;
                 }
             } else if (selection == GenericSelector.CodeMenu) {
-                unit.SetName(new string(nameArray));
+                if (nameArray.Select(@char => @char != 0 && @char != ' ').Count() > 0) {
+                    unit.SetName(new string(nameArray));
+                }
                 result = true;
             } else {
                 if (letterIndex == 0) {

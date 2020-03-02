@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="20" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="35">
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="20" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="37">
  <properties>
   <property name="battle_bgm" value="world1_battle"/>
   <property name="bgm" value="world3"/>
@@ -199,6 +199,20 @@
    <properties>
     <property name="appearance" value="4dir_ffl2_human"/>
     <property name="onInteract" value="speak('david is added to the party'); addMember('chara_david')"/>
+   </properties>
+  </object>
+  <object id="35" name="switch2" type="Character" x="256" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_janine"/>
+    <property name="hide" value="return getSwitch('saga_testswitch')"/>
+    <property name="onInteract" value="speak(' only here if the testswitch is off')"/>
+   </properties>
+  </object>
+  <object id="36" name="switch2" type="Character" x="224" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_janine"/>
+    <property name="hide" value="return not getSwitch('saga_testswitch')"/>
+    <property name="onInteract" value="speak('I disappear if the switch is not set')"/>
    </properties>
   </object>
  </objectgroup>

@@ -140,6 +140,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public void Update() {
+        CheckEnabled();
         if (Tracking) {
             var resolution = Map.UnitsPerTile / Map.PxPerTile;
             var x = Mathf.Round(pixelImperfectPos.x * (1.0f / resolution)) * resolution;
