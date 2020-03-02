@@ -50,6 +50,7 @@ public class TitleView : FullScreenMenuView {
         await scrollView.ScrollRoutine();
 
         await fade.FadeOutRoutine("black");
+        Global.Instance().Data.Party = new Party();
         await RecruitAsync(recruitLeader);
         await RecruitAsync(recruitFollower);
         await RecruitAsync(recruitFollower);

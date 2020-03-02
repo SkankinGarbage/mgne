@@ -26,7 +26,7 @@ public class SerializationManager : MonoBehaviour {
         Data = new GameData {
             Party = new Party(),
         };
-        // Data.Party = new Party(IndexDatabase.Instance().Parties.defaultParty);
+        Data.Party = new Party(IndexDatabase.Instance().Parties.defaultParty);
         LoadOrCreateSystemMemory();
     }
 

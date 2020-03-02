@@ -90,6 +90,12 @@ public class LuaCutsceneContext : LuaContext {
     }
 
     private void Speak(DynValue speaker, DynValue text) {
+        var speakerString = speaker.IsNil() ? null : speaker.String;
+        var textString = text.IsNil() ? null : text.String;
+        if (speaker.String.Contains(":")) {
+            speakerString = speakerString.Split(':')[0];
+            textString = speakerString.Split(':')[1].Substring(1);
+        }
         RunTextboxRoutineFromLua(MapOverlayUI.Instance().textbox.SpeakRoutine(speaker.String, text.IsNil() ? null : text.String));
     }
 

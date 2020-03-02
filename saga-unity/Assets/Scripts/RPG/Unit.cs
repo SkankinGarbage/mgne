@@ -21,7 +21,7 @@ public class Unit {
     public Race Race => data.race;
     public string DataKey => data?.key;
     public string FieldSpriteTag => data.appearance;
-    public string SpeciesString => (data.species?.Length > 0 ? data.species : data.race.ToString()) + " " + data.gender.Label();
+    public string SpeciesString => data.species?.Length > 0 ? data.species : (data.race.Name() + " " + data.gender.Label());
     public string Portrait => data.portrait;
     public string Name => name?.Length > 0 ? name : data.name?.Length > 0 ? data.name : SpeciesString;
     public void SetName(string name) => this.name = name;

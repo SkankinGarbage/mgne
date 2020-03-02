@@ -94,10 +94,14 @@ public class MapManager : MonoBehaviour {
             mapName = mapName.Substring(0, mapName.IndexOf('.'));
         }
         GameObject newMapObject = null;
-        mapName = Map.ResourcePath + mapName;
+        
         newMapObject = Resources.Load<GameObject>(mapName);
         if (newMapObject == null) {
             newMapObject = Resources.Load<GameObject>(mapName);
+        }
+        if (newMapObject == null) {
+            var name2 = Map.ResourcePath + mapName;
+            newMapObject = Resources.Load<GameObject>(name2);
         }
         Assert.IsNotNull(newMapObject, "Couldn't find map " + mapName);
         var map = Instantiate(newMapObject).GetComponent<Map>();

@@ -94,7 +94,9 @@ public class RecruitMenu : FullScreenMenuView {
         int letterIndex = 0;
         bool? result = null;
         while (!result.HasValue) {
-            unit.SetName(new string(nameArray));
+            if (nameArray.Select(@char => @char != 0 && @char != ' ').Count() > 0) {
+                unit.SetName(new string(nameArray).Trim());
+            }
             unitCell.Populate(unit);
             ShowLetterHighlight(letterIndex);
             var selection = await letterSelector.SelectItemAsync(null, true);
@@ -109,9 +111,6 @@ public class RecruitMenu : FullScreenMenuView {
                     letterIndex -= 1;
                 }
             } else if (selection == GenericSelector.CodeMenu) {
-                if (nameArray.Select(@char => @char != 0 && @char != ' ').Count() > 0) {
-                    unit.SetName(new string(nameArray));
-                }
                 result = true;
             } else {
                 if (letterIndex == 0) {
