@@ -180,7 +180,7 @@ public class LuaContext : MonoBehaviour {
     }
 
     protected DynValue GetHero(DynValue slot) {
-        var obj = Global.Instance().Party[(int)slot.Number - 1].GetLuaUnit(this);
+        var obj = Global.Instance().Party[(int)slot.Number].GetLuaUnit(this);
         return UserData.Create(obj);
     }
 }

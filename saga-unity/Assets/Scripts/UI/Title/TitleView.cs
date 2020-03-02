@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 public class TitleView : FullScreenMenuView {
 
@@ -55,8 +56,8 @@ public class TitleView : FullScreenMenuView {
         await RecruitAsync(recruitFollower);
 
         await Task.Delay(1000);
-        await Global.Instance().Maps.TeleportRoutine(defaultMapKey, defaultMapTarget, OrthoDir.South, true);
-        await fade.FadeInRoutine("black_long");
+
+        Global.Instance().StartCoroutine(Global.Instance().Serialization.StartGameRoutine(defaultMapKey, defaultMapTarget));
     }
 
     private async Task<bool> SelectContinue() {

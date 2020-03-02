@@ -78,6 +78,14 @@ public class SerializationManager : MonoBehaviour {
         yield return Global.Instance().Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(transition.GetFadeIn(), true);
     }
 
+    public IEnumerator StartGameRoutine(string map, string target) {
+        SceneManager.LoadScene("Map2D", LoadSceneMode.Single);
+        var transition = IndexDatabase.Instance().Transitions.GetData(FadeComponent.DefaultTransitionTag);
+        yield return Global.Instance().Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(transition.GetFadeOut(), false, 0.0f);
+        yield return Global.Instance().Maps.TeleportRoutine(map, target, OrthoDir.South, true);
+        yield return Global.Instance().Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(transition.GetFadeIn(), true);
+    }
+
     /// <remarks>
     /// will instantly change globals and avatar to match the memory, assumes the main scene is the current scene
     /// </remarks>

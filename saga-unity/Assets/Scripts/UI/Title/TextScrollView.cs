@@ -12,7 +12,7 @@ public class TextScrollView : MonoBehaviour {
         float elapsed = 0;
         float @base = textArea.rectTransform.anchoredPosition.y;
         while (elapsed < scrollSeconds) {
-            elapsed += Time.deltaTime * (Global.Instance().Input.IsFastKeyDown() ? 5 : 1);
+            elapsed += Time.deltaTime * (Global.Instance().Input.IsFastKeyDown() ? 7 : 1);
             float offset = elapsed / scrollSeconds * scrollDistance;
             textArea.rectTransform.anchoredPosition = new Vector2(textArea.rectTransform.anchoredPosition.x, @base + offset);
             yield return null;

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="48" height="45" tilewidth="16" tileheight="16" nextobjectid="102">
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="48" height="45" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="104">
  <properties>
   <property name="bgm" value="home_town"/>
   <property name="name" value="Forest Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="48" height="45">
+ <layer id="1" name="Tile Layer 1" width="48" height="45">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2UOw7CMBBEHVEgQYdEkS6pgAMARe5/LxLJlqxh17GJYweY4kn5+60zuwdjzIEQQgghhJAfZQ/U9knlDOT+frPSPrvvXkaulttCp1yuMfvs1rqPPCzPCv8/FvRsFGq4dYnP+75b6F/fX/OR8j+xdv+m+ms+Uv4naue/BX9tnszlv8a+O/8+4Ok/K/Vrjfy3QG/ePfGd2PyXqMM5O/C+5K/lH/NWoo8/8dfy718v1cet0ftvsOeDUleIEtn3/Y+WOa+teKP/yZLqUHtuSv44kySkGubW6lb098GeRrAW/72UunP5S4T8sZbYuqX5thRtnVCPfrs/1iId55hLuwL0yjEhhBDyr7wAgyj0KcAhAAA=
+   H4sIAAAAAAAECu2WsU4EMQxE90SBdHRIFHR3FfABHAX//19kpB0xGiVhL94gHbiwnHjt+NmMgOOyLMe03EFqIDWQGkgNpAZSA6mB1MAf1cB9mUvt1v73fSr8anvzH3b6ueuOcea7L+X8utrbxl6s9Vlbcc8bueuOcWav93K+rPaxkX+kf7TGOcFfs2ifkfrTlXtTbtfVSP9ojfK3eDzOGVxXUZaReuVv8Xic/K6rkf6RmueiHeVv/T5xTvLTRxgiteA/F+Mbzsk4PFnVu640f9YZzGrKT07v7ZycwXXFPK/f886dg9vZW/zOSX7XG/P25PW3RvhdV+TX+G/9HQM/+9Nzxs/1Gzxj9MxteebN9uR/KIywFs/W+Gxef5/8j4UdBk7P6d11rl7erG81fsR+MuXhDBqrnU9X7qb2hsfITwZ4xM4d89lY6/Ha3ftH77UeiPX49RtylV+/1c5RXq+v9UDs0DGtuUV+nU1n1bPm4Ox723K/K3WzDczsoWfG0n/vJ3eRu0gNpAZSA/9DA1+DKPQpwCEAAA==
   </data>
  </layer>
- <layer name="Tile Layer 2" width="48" height="45">
+ <layer id="2" name="Tile Layer 2" width="48" height="45">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XUQ6DIAxAuf9pdgh/+GB+72s32BkWE5o0jCJCW2rWlzTTifKopYl7CGEn4nmDuKs35b/aZ8Z/tcuM/2qPf/afuT8JjdXy34TGesiFRB1xO7SubwbWcFbLreup434Pj1qU1MZo7o3euWBcj7/m3sBz4bWUQM85+OQIxnKN11KS0DH2x2uQXguVazw/RM2zBTxf430ENBe44vyOgJ+l4T/rS6Gxd2dp1ZWkN5VzyudK/df8OfdCq17igGePP1ctaVLra6v838T/Z3UF3hz5H+0zj+wYCf+IjkN2hV8ub6keWYOz92t6b8W5pPsrByd4vtm60cw7Bt7BbA1ZoadvpvDba61w9u2PXS3lvtU7qX5oKfcj+9KK+0Gt7i359YC9rdT1FTi/6RzHcRyaL6JwP+DAIQAA
+   H4sIAAAAAAAECu2UTW4DIQyF5/6n6SG6yaLJuqvcIGcor82TXhDmZ/BQJsKSAxiDPxtPbtu23Qy9BvvsmmKfnVn5Yn7dO8Nc+c/AGzOSP7afZf0O/D21/mr4j2rxrWVC/Wt9U36fDedbfFOxlq3vrVi/I/qId9eOJYbcPvoot1/L0ONX6uXcPthz+z1c66zPNzJrHUPrvEiKc+S3URuLfi/wYZHiH/ltaCwygikW+GEf8ngq5nomlYunrRRLcwGbCtlhU36seS9HT2a9S/k0FucYqeCKOWGzBHH4RhrziDkYGAu8EI5/q/ZfzfsIZr3Tg9fKUN9YY3rOrdi19kdwhKbEkzO+y+oRi8eyp7hp05iIp+ueucWOuJegYPUQZfTqJQ+u2ju05jrXvFrntbFjv3tseK7xVlBLyO1R/1zfWPFh/wgKRvRWLGpnHmCFYPTi3sv+C9L4w1jXcK5XeVcjwi531p2Hj2T/DkGgnqK16u0bvcuTsXQX34Dx975BKc6ofeRRygE+6sfcRzHm4uT6iNw8zzy5/s8R3BZ7zE1O8M9Se9YyHnN8uT3mOGoESwv7KK6WOORnLi1nZ/AFN3uC4wxci2FVYFVgVeDdKvADonA/4MAhAAA=
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
+ <objectgroup id="3" name="Object Layer 1">
   <object id="73" name="friend" type="Character" x="416" y="544" width="16" height="16">
    <properties>
     <property name="appearance" value="lua(return getHero(1).getSpriteName())"/>
@@ -194,5 +194,6 @@
    </properties>
   </object>
   <object id="97" name="borg_target" type="Event" x="432" y="432" width="16" height="16"/>
+  <object id="103" name="start" type="target" x="416" y="464" width="16" height="16"/>
  </objectgroup>
 </map>
