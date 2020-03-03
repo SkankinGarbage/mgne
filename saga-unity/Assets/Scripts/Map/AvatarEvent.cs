@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +8,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
     public bool WantsToTrack { get; private set; }
 
     private int pauseCount;
-    public bool InputPaused {
+    public bool IsInputPaused {
         get {
             return pauseCount > 0;
         }
@@ -50,7 +49,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
     }
 
     public bool OnCommand(InputManager.Command command, InputManager.Event eventType) {
-        if (Parent.Tracking || InputPaused) {
+        if (Parent.Tracking || IsInputPaused) {
             return true;
         }
         switch (eventType) {
@@ -148,18 +147,21 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
 
         if (passable) {
             WantsToTrack = true;
-            StartCoroutine(CoUtils.RunWithCallback(Parent.StepRoutine(dir), () => {
-                foreach (var targetEvent in toCollide) {
-                    if (targetEvent.SwitchEnabled) {
-                        targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventCollide, this);
+            StartCoroutine(CoUtils.RunParallel(new System.Collections.IEnumerator[] {
+                CoUtils.RunWithCallback(Parent.StepRoutine(dir), () => {
+                    foreach (var targetEvent in toCollide) {
+                        if (targetEvent.SwitchEnabled) {
+                            targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventCollide, this);
+                        }
                     }
-                }
-                foreach (var targetEvent in Parent.Map.GetEvents<MapEvent>()) {
-                    if (targetEvent.SwitchEnabled) {
-                        targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventStep, this);
+                    foreach (var targetEvent in Parent.Map.GetEvents<MapEvent>()) {
+                        if (targetEvent.SwitchEnabled) {
+                            targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventStep, this);
+                        }
                     }
-                }
-            }));
+                }),
+                OnStepStartRoutine(),
+            }, this));
         } else {
             foreach (var targetEvent in toCollide) {
                 if (targetEvent.SwitchEnabled && !targetEvent.IsPassableBy(Parent)) {
@@ -169,6 +171,11 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
         }
         
         return true;
+    }
+
+    private IEnumerator OnStepStartRoutine() {
+        Global.Instance().Maps.ActiveMap.OnStepStarted();
+        yield return null;
     }
 
     private void ShowMenu() {

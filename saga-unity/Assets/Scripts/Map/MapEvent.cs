@@ -20,17 +20,20 @@ public abstract class MapEvent : MonoBehaviour {
     public const string EventEnabled = "enabled";
     public const string EventStep = "step";
     
-    public const string PropertyLuaHide = "hide";
     public const string PropertyAppearance = "appearance";
     public const string PropertyPassable = "passable";
 
+    public const string PropertyLuaHide = "hide";
     public const string PropertyLuaCollide = "onCollide";
     public const string PropertyLuaInteract = "onInteract";
     public const string PropertyLuaAutostart = "onEnter";
+    public const string PropertyLuaBehavior = "onBehavior";
 
     protected const int TilesPerSecond = 4;
+    protected const float BehaviorMaxDelaySeconds = 7.0f;
 
     private Vector3 pixelImperfectPos;
+    private float toNextBehavior;
 
     // Editor properties
     public Vector2Int Position = new Vector2Int(0, 0);
@@ -117,6 +120,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public void Start() {
+        toNextBehavior = Random.Range(0.5f, 1.0f) * BehaviorMaxDelaySeconds;
         pixelImperfectPos = PositionPx;
 
         GenerateLua();
@@ -147,6 +151,10 @@ public abstract class MapEvent : MonoBehaviour {
             var y = Mathf.Round(pixelImperfectPos.y * (1.0f / resolution)) * resolution;
             transform.position = new Vector3(x, y, transform.position.z);
         }
+        if (!Global.Instance().Maps.Avatar.IsInputPaused) {
+            toNextBehavior -= Time.deltaTime;
+            CheckBehavior();
+        }
     }
 
     public void OnDrawGizmos() {
@@ -162,6 +170,10 @@ public abstract class MapEvent : MonoBehaviour {
         if (Properties == null) {
             Properties = GetComponent<SuperCustomProperties>();
         }
+    }
+
+    public void OnStepStarted() {
+        CheckBehavior();
     }
 
     public void CheckEnabled() {
@@ -210,7 +222,11 @@ public abstract class MapEvent : MonoBehaviour {
 
     public string GetProperty(string propertyName) {
         if (Properties.TryGetCustomProperty(propertyName, out CustomProperty prop)) {
-            return prop.GetValueAsString();
+            var str = prop.GetValueAsString();
+            //if (str.StartsWith("this.")) {
+            //    str = str.Substring("this.".Length);
+            //}
+            return str;
         } else {
             return "";
         }
@@ -233,6 +249,7 @@ public abstract class MapEvent : MonoBehaviour {
         LuaObject.Set(PropertyLuaAutostart, GetProperty(PropertyLuaAutostart));
         LuaObject.Set(PropertyLuaCollide, GetProperty(PropertyLuaCollide));
         LuaObject.Set(PropertyLuaInteract, GetProperty(PropertyLuaInteract));
+        LuaObject.Set(PropertyLuaBehavior, GetProperty(PropertyLuaBehavior));
 
         var appearance = GetProperty(PropertyAppearance);
         var prefix = "lua(";
@@ -247,6 +264,13 @@ public abstract class MapEvent : MonoBehaviour {
         LuaContext context = GetComponent<LuaContext>();
         if (enabled && !context.IsRunning()) {
             LuaObject.Run(PropertyLuaAutostart);
+        }
+    }
+
+    private void CheckBehavior() {
+        if (toNextBehavior <= 0) {
+            toNextBehavior = Random.Range(0.5f, 1.0f) * BehaviorMaxDelaySeconds;
+            LuaObject.Run(PropertyLuaBehavior);
         }
     }
 

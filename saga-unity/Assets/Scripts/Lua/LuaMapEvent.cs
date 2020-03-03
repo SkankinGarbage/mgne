@@ -1,5 +1,6 @@
 ﻿using MoonSharp.Interpreter;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -12,11 +13,14 @@ public class LuaMapEvent {
 
     private MapEvent mapEvent;
     private LuaContext context;
+    private Dictionary<string, DynValue> values;
 
     public LuaMapEvent(MapEvent mapEvent) {
         this.mapEvent = mapEvent;
+        values = new Dictionary<string, DynValue>();
         context = mapEvent.GetComponent<LuaContext>();
-        luaValue = context.CreateObject();
+        luaValue = context.Marshal(this);
+        context.lua.Globals["this"] = luaValue;
     }
 
     // meant to be called with the key/value of a lualike property on a Tiled object
@@ -24,37 +28,35 @@ public class LuaMapEvent {
     [MoonSharpHidden]
     public void Set(string name, string luaChunk) {
         if (luaChunk != null && luaChunk.Length > 0) {
-            luaValue.Table.Set(name, context.Load(luaChunk));
+            values[name] = context.Load(luaChunk);
         }
     }
 
     [MoonSharpHidden]
     public void Run(string eventName, Action callback = null) {
-        DynValue function = luaValue.Table.Get(eventName);
-        if (function == DynValue.Nil) {
+        if (!values.ContainsKey(eventName)) {
             callback?.Invoke();
         } else {
-            LuaScript script = new LuaScript(context, function);
+            LuaScript script = new LuaScript(context, values[eventName]);
             Global.Instance().StartCoroutine(CoUtils.RunWithCallback(script.RunRoutine(), callback));
         }
     }
 
     [MoonSharpHidden]
     public DynValue Evaluate(string propertyName) {
-        DynValue function = luaValue.Table.Get(propertyName);
-        if (function == DynValue.Nil) {
+        if (!values.ContainsKey(propertyName)) {
             return DynValue.Nil;
         } else {
-            return context.Evaluate(function);
+            return context.Evaluate(values[propertyName]);
         }
     }
 
     [MoonSharpHidden]
     public bool EvaluateBool(string propertyName, bool defaultValue = false) {
-        DynValue result = Evaluate(propertyName);
-        if (result == DynValue.Nil) {
+        if (!values.ContainsKey(propertyName)) {
             return defaultValue;
         } else {
+            DynValue result = Evaluate(propertyName);
             return result.Boolean;
         }
     }
@@ -91,10 +93,29 @@ public class LuaMapEvent {
     }
 
     public void walk(string directionName, int count) {
-       context.RunRoutineFromLua(mapEvent.GetComponent<MapEvent>().StepMultiRoutine(OrthoDirExtensions.Parse(directionName), count));
+       context.RunRoutineFromLua(mapEvent.StepMultiRoutine(OrthoDirExtensions.Parse(directionName), count));
+    }
+
+    public void wander() {
+        var offset = UnityEngine.Random.Range(0, 4);
+        for (var @base = 0; @base < 4; @base += 1) {
+            var ordinal = (offset + @base) % 4;
+            var dir = (OrthoDir)ordinal;
+            var newPos = mapEvent.Position + dir.XY2D();
+            if (mapEvent.Map.IsChipPassableAt(newPos)) {
+                if (Global.Instance().Maps.Avatar.Parent.Position == newPos) {
+                    mapEvent.GetComponent<CharaEvent>().Facing = dir;
+                    Run(MapEvent.PropertyLuaCollide);
+                    break;
+                } else if (mapEvent.CanPassAt(newPos)) {
+                    context.RunRoutineFromLua(mapEvent.StepRoutine(dir));
+                    break;
+                }
+            }
+        }
     }
 
     public void cs_step(string directionName) {
-        context.RunRoutineFromLua(mapEvent.GetComponent<MapEvent>().StepRoutine(OrthoDirExtensions.Parse(directionName)));
+        context.RunRoutineFromLua(mapEvent.StepRoutine(OrthoDirExtensions.Parse(directionName)));
     }
 }

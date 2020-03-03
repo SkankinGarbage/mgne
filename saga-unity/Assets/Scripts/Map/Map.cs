@@ -96,6 +96,16 @@ public abstract class Map : MonoBehaviour {
         return passabilityMap[layer][loc.x, loc.y];
     }
 
+    public bool IsChipPassableAt(Vector2Int loc) {
+        foreach (Tilemap layer in layers) {
+            if (layer.transform.position.z >= objectLayer.transform.position.z &&
+                    !IsChipPassableAt(layer, loc)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     // careful, this implementation is straight from MGNE, it's efficiency is questionable, to say the least
     // it does support bigger than 1*1 events though
     public List<MapEvent> GetEventsAt(Vector2Int loc) {
@@ -129,8 +139,8 @@ public abstract class Map : MonoBehaviour {
     }
 
     public MapEvent GetEventNamed(string eventName) {
-        foreach (ObjectLayer layer in GetComponentsInChildren<ObjectLayer>()) {
-            foreach (MapEvent mapEvent in layer.GetComponentsInChildren<MapEvent>()) {
+        foreach (var layer in GetComponentsInChildren<ObjectLayer>()) {
+            foreach (var mapEvent in layer.GetComponentsInChildren<MapEvent>()) {
                 if (mapEvent.name == eventName) {
                     return mapEvent;
                 }
@@ -147,6 +157,12 @@ public abstract class Map : MonoBehaviour {
 
     public void OnTeleportAway() {
 
+    }
+
+    public void OnStepStarted() {
+        foreach (var mapEvent in GetEvents<MapEvent>()) {
+            mapEvent.OnStepStarted();
+        }
     }
 
     // returns a list of coordinates to step to with the last one being the destination, or null
