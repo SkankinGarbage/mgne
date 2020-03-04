@@ -49,6 +49,9 @@ public class LuaContext : MonoBehaviour {
     }
 
     public DynValue Marshal(object toMarshal) {
+        // touch globals to make sure assembly registered
+        Global.Instance();
+
         return DynValue.FromObject(lua, toMarshal);
     }
 

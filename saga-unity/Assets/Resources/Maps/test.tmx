@@ -30,7 +30,7 @@
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eAG1kEEKwDAIBP1a731BL/lfb/1hFToQylLE2MOyiXFHyTCz0azdeRnF3K8+9lI9h2dPV/j1eDdPzZ1r7IfPb5VzF4fZXTw4OPzN/z3EveLBJLfKe+8Ht+orPJVVtexuKqtqWZ7q+4sHt8NvTcNgUA==
+   eAG1kDEKwDAIRb1a956gS+7XrTeMQh6IOARjB/n6jU/JEJHRHLfyLDwXz6v1fR1z5qNv9aPxLv2WdvOyvd7jPtT3KnkXh91dPDgo/Ev/3YK6osZk7pQX74Nb1RNeNpt5u7dls5m3y8ve/cWD26ETQ6JgiQ==
   </data>
  </layer>
  <layer id="2" name="Tile Layer 2" width="20" height="15">
@@ -38,7 +38,7 @@
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eAFjYBgFoyEwGgKjITA0QgAABLAAAQ==
+   eAFjYEAF21G5FPMOUGzCqAGjITAaAqMhAAkBAI9qAXg=
   </data>
  </layer>
  <objectgroup id="3" name="Object Layer 1">

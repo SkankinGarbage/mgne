@@ -9,12 +9,13 @@ using UnityEngine;
 [MoonSharpUserData]
 public class LuaMapEvent {
 
-    public DynValue luaValue { get; private set; }
+    [MoonSharpHidden] public DynValue luaValue { get; private set; }
 
-    private MapEvent mapEvent;
-    private LuaContext context;
-    private Dictionary<string, DynValue> values;
+    [MoonSharpHidden] private MapEvent mapEvent;
+    [MoonSharpHidden] private LuaContext context;
+    [MoonSharpHidden] private Dictionary<string, DynValue> values;
 
+    [MoonSharpHidden]
     public LuaMapEvent(MapEvent mapEvent) {
         this.mapEvent = mapEvent;
         values = new Dictionary<string, DynValue>();
@@ -34,7 +35,7 @@ public class LuaMapEvent {
 
     [MoonSharpHidden]
     public void Run(string eventName, Action callback = null) {
-        if (!values.ContainsKey(eventName)) {
+        if (!values.ContainsKey(eventName) || values[eventName] == null) {
             callback?.Invoke();
         } else {
             LuaScript script = new LuaScript(context, values[eventName]);

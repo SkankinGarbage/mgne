@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.2" tiledversion="1.3.1" name="lower" tilewidth="16" tileheight="16" tilecount="175" columns="7">
- <image source="lower2.PNG" width="112" height="400"/>
+ <image source="lower.PNG" width="112" height="400"/>
  <tile id="3">
   <properties>
    <property name="x" value=""/>
