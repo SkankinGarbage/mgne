@@ -203,11 +203,8 @@ public abstract class MapEvent : MonoBehaviour {
         if (loc.x < 0 || loc.x >= Map.Width || loc.y < 0 || loc.y >= Map.Height) {
             return false;
         }
-        foreach (Tilemap layer in Map.layers) {
-            if (layer.transform.position.z >= Map.objectLayer.transform.position.z && 
-                    !Map.IsChipPassableAt(layer, loc)) {
-                return false;
-            }
+        if (!Map.IsChipPassableAt(loc)) {
+            return false;
         }
         if (!IsPassable()) {
             foreach (MapEvent mapEvent in Map.GetEventsAt(loc)) {

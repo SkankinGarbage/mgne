@@ -107,7 +107,7 @@ public class LuaMapEvent {
                     mapEvent.GetComponent<CharaEvent>().Facing = dir;
                     Run(MapEvent.PropertyLuaCollide);
                     break;
-                } else if (mapEvent.CanPassAt(newPos)) {
+                } else if (mapEvent.CanPassAt(newPos) && mapEvent.Map.GetEventAt<MapEvent>(newPos) == null) {
                     context.RunRoutineFromLua(mapEvent.StepRoutine(dir));
                     break;
                 }

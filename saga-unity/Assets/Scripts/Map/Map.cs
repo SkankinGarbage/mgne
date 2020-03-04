@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperTiled2Unity;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -29,7 +30,7 @@ public abstract class Map : MonoBehaviour {
     public string MapName { get; protected set; }
 
     // true if the tile in question is passable at x,y
-    private Dictionary<Tilemap, bool[,]> passabilityMap;
+    private Dictionary<Tilemap, short[,]> passabilityMap;
 
     private List<Tilemap> _layers;
     public List<Tilemap> layers {
@@ -76,19 +77,19 @@ public abstract class Map : MonoBehaviour {
 
     public abstract PropertiedTile TileAt(Tilemap layer, int x, int y);
 
-    public bool IsChipPassableAt(Tilemap layer, Vector2Int loc) {
+    public short IsChipPassableAt(Tilemap layer, Vector2Int loc) {
         if (passabilityMap == null) {
-            passabilityMap = new Dictionary<Tilemap, bool[,]>();
+            passabilityMap = new Dictionary<Tilemap, short[,]>();
         }
         if (!passabilityMap.ContainsKey(layer)) {
-            passabilityMap[layer] = new bool[Width, Height];
+            passabilityMap[layer] = new short[Width, Height];
             for (int x = 0; x < Width; x += 1) {
                 for (int y = 0; y < Height; y += 1) {
                     PropertiedTile tile = TileAt(layer, x, y - 1);
-                    passabilityMap[layer][x, y] =
-                        tile == null ||
-                        tile.IsPassable ||
-                        !tile.IsImpassable;
+                    if (tile != null) {
+                        if (tile.IsPassable) passabilityMap[layer][x, y] += 1;
+                        if (tile.IsImpassable) passabilityMap[layer][x, y] -= 1;
+                    }
                 }
             }
         }
@@ -97,13 +98,11 @@ public abstract class Map : MonoBehaviour {
     }
 
     public bool IsChipPassableAt(Vector2Int loc) {
+        short total = 0;
         foreach (Tilemap layer in layers) {
-            if (layer.transform.position.z >= objectLayer.transform.position.z &&
-                    !IsChipPassableAt(layer, loc)) {
-                return false;
-            }
+            total += IsChipPassableAt(layer, loc);
         }
-        return true;
+        return total >= 0;
     }
 
     // careful, this implementation is straight from MGNE, it's efficiency is questionable, to say the least
