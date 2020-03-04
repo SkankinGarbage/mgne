@@ -32,7 +32,7 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
     }
 
     protected IEnumerator TypeRoutine(string text, bool waitForConfirm = true) {
-        hurried = false;
+        hurried = false; 
         float elapsed = 0.0f;
         float total = (text.Length - typingStartIndex) / charsPerSecond;
         textbox.GetComponent<CanvasGroup>().alpha = 1.0f;
@@ -40,8 +40,10 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
             elapsed += Time.deltaTime;
             int charsToShow = Mathf.FloorToInt(elapsed * charsPerSecond) + typingStartIndex;
             int cutoff = charsToShow > text.Length ? text.Length : charsToShow;
-            // Debug.Log("elapsed: " + elapsed + ", total: " + total + " , toShow:" + charsToShow + ", cutoff:" + cutoff);
             textbox.text = text.Substring(0, cutoff);
+            textbox.text += "<color=#aa000000>";
+            textbox.text += text.Substring(cutoff);
+            textbox.text += "</color>";
             yield return null;
 
             elapsed += Time.deltaTime;

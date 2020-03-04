@@ -44,12 +44,14 @@
 			{
 				float4 vertex : POSITION;
 				float2 uv : TEXCOORD0;
+                float4 color : COLOR;
 			};
 
 			struct v2f
 			{
 				float2 uv : TEXCOORD0;
 				float4 vertex : SV_POSITION;
+                float4 color : COLOR;
 			};
 
 			v2f vert (appdata v)
@@ -57,6 +59,7 @@
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.uv;
+                o.color = v.color;
 				return o;
 			}
 			
@@ -89,6 +92,8 @@
                 
 				float weight = _FadeOffset;
                 if (_Invert) weight = 1.0 - weight;
+                
+                if (i.color.a == 0.0) return float4(1, 0, 0, 0);
 
                 float dBlack = color_d(current, _Black);
                 float dDgray = color_d(current, _DGray);
