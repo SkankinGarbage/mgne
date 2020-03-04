@@ -78,6 +78,7 @@ public abstract class Map : MonoBehaviour {
     public abstract PropertiedTile TileAt(Tilemap layer, int x, int y);
 
     public short IsChipPassableAt(Tilemap layer, Vector2Int loc) {
+        var groundLayer = layer.GetComponent<TilemapRenderer>().sortingOrder <= 2;
         if (passabilityMap == null) {
             passabilityMap = new Dictionary<Tilemap, short[,]>();
         }
@@ -88,7 +89,7 @@ public abstract class Map : MonoBehaviour {
                     PropertiedTile tile = TileAt(layer, x, y - 1);
                     if (tile != null) {
                         if (tile.IsPassable) passabilityMap[layer][x, y] += 1;
-                        if (tile.IsImpassable) passabilityMap[layer][x, y] -= 1;
+                        if (tile.IsImpassable && groundLayer) passabilityMap[layer][x, y] -= 1;
                     }
                 }
             }
