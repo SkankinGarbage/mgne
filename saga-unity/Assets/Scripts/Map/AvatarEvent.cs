@@ -50,43 +50,43 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
 
     public bool OnCommand(InputManager.Command command, InputManager.Event eventType) {
         if (Parent.Tracking || IsInputPaused) {
-            return true;
+            return false;
         }
         switch (eventType) {
             case InputManager.Event.Hold:
                 switch (command) {
                     case InputManager.Command.Up:
                         TryStep(OrthoDir.North);
-                        return false;
+                        return true;
                     case InputManager.Command.Down:
                         TryStep(OrthoDir.South);
-                        return false;
+                        return true;
                     case InputManager.Command.Right:
                         TryStep(OrthoDir.East);
-                        return false;
+                        return true;
                     case InputManager.Command.Left:
                         TryStep(OrthoDir.West);
-                        return false;
+                        return true;
                     default:
-                        return false;
+                        return true;
                 }
             case InputManager.Event.Down:
                 switch (command) {
                     case InputManager.Command.Confirm:
                         Interact();
-                        return false;
+                        return true;
                     case InputManager.Command.Menu:
                     case InputManager.Command.Cancel:
                         ShowMenu();
-                        return false;
+                        return true;
                     case InputManager.Command.Debug:
                         Global.Instance().Serialization.SaveToSlot(0);
-                        return false;
+                        return true;
                     default:
-                        return false;
+                        return true;
                 }
             default:
-                return false;
+                return true;
         }
     }
 
@@ -110,8 +110,13 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
     }
 
     private void Interact() {
-        Vector2Int target = Parent.Position + Chara.Facing.XY2D();
-        List<MapEvent> targetEvents = Parent.Map.GetEventsAt(target);
+        var offset = Chara.Facing.XY2D();
+        var target = Parent.Position + offset;
+        var targetEvents = Parent.Map.GetEventsAt(target);
+        if (Parent.Map.HasTilePropertyAt(target, tile => tile == null ? tile.IsCounter : false)) {
+            target += offset;
+            targetEvents.AddRange(Parent.Map.GetEventsAt(target));
+        }
         foreach (MapEvent tryTarget in targetEvents) {
             if (tryTarget.SwitchEnabled && !tryTarget.IsPassableBy(Parent)) {
                 tryTarget.GetComponent<Dispatch>().Signal(MapEvent.EventInteract, this);

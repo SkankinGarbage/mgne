@@ -53,12 +53,13 @@ public class InputManager : MonoBehaviour {
         anonymousListeners = new Dictionary<string, IInputListener>();
     }
 
+    private List<IInputListener> listenersTemp = new List<IInputListener>();
     public void Update() {
-        List<IInputListener> listeners = new List<IInputListener>();
-        listeners.AddRange(this.listeners);
+        listenersTemp.Clear();
+        listenersTemp.AddRange(listeners);
         
         foreach (Command command in Enum.GetValues(typeof(Command))) {
-            foreach (IInputListener listener in listeners) {
+            foreach (IInputListener listener in listenersTemp) {
                 if (disabledListeners.Contains(listener)) {
                     continue;
                 }

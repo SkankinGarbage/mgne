@@ -106,6 +106,16 @@ public abstract class Map : MonoBehaviour {
         return total >= 0;
     }
 
+    public bool HasTilePropertyAt(Vector2Int loc, Func<PropertiedTile, bool> rule) {
+        foreach (Tilemap layer in layers) {
+            var tile = TileAt(layer, loc.x, loc.y);
+            if (rule(tile)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     // careful, this implementation is straight from MGNE, it's efficiency is questionable, to say the least
     // it does support bigger than 1*1 events though
     public List<MapEvent> GetEventsAt(Vector2Int loc) {
