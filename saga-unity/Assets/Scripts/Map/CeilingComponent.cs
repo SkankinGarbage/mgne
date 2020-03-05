@@ -85,7 +85,7 @@ public class CeilingComponent : MonoBehaviour {
 
     public void OnValidate() {
         renderer.sortingLayerName = "Default";
-        renderer.sortingOrder = 5;
+        renderer.sortingOrder = 6;
     }
 
     public void CheckStep(object payload) {
@@ -211,7 +211,7 @@ public class CeilingComponent : MonoBehaviour {
         var col = tileId % colCount;
         var row = tileId / colCount;
 
-        var @base = new Vector2(col / colCount, (rowCount - row - 1) / rowCount);
+        var @base = new Vector2((float)col / colCount, (float)(rowCount - row - 1) / rowCount);
         uvs = new Vector2[4];
         uvs[0] = new Vector2(@base.x, @base.y + (float)Map.PxPerTile / tilesetTexture.height);
         uvs[1] = new Vector2(@base.x + (float)Map.PxPerTile / tilesetTexture.width, @base.y + (float)Map.PxPerTile / tilesetTexture.height);
