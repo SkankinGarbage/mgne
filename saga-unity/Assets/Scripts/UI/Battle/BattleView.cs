@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BattleView : FullScreenMenuView {
 
+    [SerializeField] private AnimFrameSpriteComponent battleFramePrefab;
+    [Space]
     [SerializeField] public GenericSelector fightRunMenu = null;
     [SerializeField] public CombatItemList inventory = null;
     [SerializeField] public UnitList allyList = null;
@@ -22,6 +24,9 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] private ListView eaterView = null;
 
     public Battle Battle { get; private set; }
+
+    // group index -> frames
+    private Dictionary<int, List<AnimFrameSpriteComponent>> battleFrames = new Dictionary<int, List<AnimFrameSpriteComponent>>();
 
     public static BattleView Show(PartyData enemyParty) {
         var battle = new Battle(enemyParty);
@@ -72,6 +77,10 @@ public class BattleView : FullScreenMenuView {
         allyList.gameObject.SetActive(true);
 
         allyList.Populate();
+    }
+
+    public void ShowBattleAnimationFrame(BattleStepData data, List<Unit> target) {
+
     }
 
     public static IEnumerator SpawnBattleRoutine(PartyData data, string bgmTag = null) {
