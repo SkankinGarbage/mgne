@@ -113,7 +113,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
         var offset = Chara.Facing.XY2D();
         var target = Parent.Position + offset;
         var targetEvents = Parent.Map.GetEventsAt(target);
-        if (Parent.Map.HasTilePropertyAt(target, tile => tile == null ? tile.IsCounter : false)) {
+        if (Parent.Map.HasTilePropertyAt(target, tile => tile != null ? tile.IsCounter : false)) {
             target += offset;
             targetEvents.AddRange(Parent.Map.GetEventsAt(target));
         }

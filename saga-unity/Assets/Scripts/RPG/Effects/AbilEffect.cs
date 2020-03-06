@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 /// <summary>
@@ -58,6 +59,19 @@ public abstract class AbilEffect {
             PlayMainSound();
         } else {
             AudioManager.PlayFail();
+        }
+    }
+
+    protected virtual async Task PlayBattleAnimAsync(Intent intent) {
+        if (Item.Anim == null) {
+            return;
+        }
+
+        if (intent.Battle.Player.Contains(intent.Actor)) {
+            var aliveTargets = new List<Unit>(intent.Targets.Where(unit => unit.IsAlive));
+            await Item.Anim.PlayAsync(intent.Battle.View, aliveTargets);
+        } else {
+            // enemy battle animation
         }
     }
 }

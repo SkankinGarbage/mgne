@@ -62,6 +62,8 @@ public class EffectHeal : EffectAllyTarget {
                 break;
         }
 
+        await PlayBattleAnimAsync(intent);
+
         foreach (var target in targets) {
             var targetname = target.Name;
             var heal = target.Heal(CalculatePower(user));

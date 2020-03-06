@@ -61,6 +61,8 @@ public class EffectRevive : EffectAllyTarget {
                 break;
         }
 
+        await PlayBattleAnimAsync(intent);
+
         var affected = false;
         foreach (var victim in targets) {
             if (victim[StatTag.HP] <= 0) {

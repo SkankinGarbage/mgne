@@ -21,7 +21,7 @@ public class OrderMenuView : FullScreenMenuView {
     public void Populate() {
         unitList.Populate(Global.Instance().Party, (obj, unit) => {
             var cell = obj.GetComponent<ReorderCellView>();
-            cell.Populate(unit, Global.Instance().Party.GetSlotForUnit(unit));
+            cell.Populate(unit, Global.Instance().Party.GroupIndexForUnit(unit));
         });
         UpdateTitleCopy(false);
     }

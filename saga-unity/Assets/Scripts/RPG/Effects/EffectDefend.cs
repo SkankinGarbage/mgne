@@ -48,6 +48,7 @@ public class EffectDefend : EffectAllyTarget {
                     targetName = "";
                     break;
             }
+            await PlayBattleAnimAsync(intent);
             await intent.Battle.WriteLineAsync(intent.Actor.Name + " defends " + targetName + " by " + defendName + ".");
         }
     }

@@ -1,15 +1,27 @@
 ﻿using UnityEngine;
-using System.Collections;
 
+[RequireComponent(typeof(ObjectPool))]
 public class AnimFrameSpritePool : MonoBehaviour {
 
-    // Use this for initialization
-    void Start() {
+    [SerializeField] private AnimFrameSpriteComponent framePrefab = null;
 
+    private ObjectPool pool;
+    private ObjectPool Pool {
+        get {
+            if (pool == null) {
+                pool = GetComponent<ObjectPool>();
+            }
+            return pool;
+        }
     }
 
-    // Update is called once per frame
-    void Update() {
+    public AnimFrameSpriteComponent GetFrame(BattleStepData data, Vector2 origin) {
+        var frame = Pool.GetInstance().GetComponent<AnimFrameSpriteComponent>();
+        frame.Populate(data, origin);
+        return frame;
+    }
 
+    public void DisposeFrame(AnimFrameSpriteComponent frame) {
+        Pool.FreeInstance(frame.gameObject);
     }
 }

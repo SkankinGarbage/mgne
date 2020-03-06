@@ -49,4 +49,8 @@ public class ListView : MonoBehaviour {
     public IEnumerable GetCells() {
         return transform;
     }
+
+    public GameObject GetCell(int index) {
+        return transform.GetChild(index).gameObject;
+    }
 }

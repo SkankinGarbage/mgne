@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : Object {
+public class ObjectPool : MonoBehaviour {
 
     private GameObject prefab;
     private List<GameObject> unusedInstances;
@@ -29,14 +28,16 @@ public class ObjectPool : Object {
             return instance;
         } else {
             instance = Instantiate(prefab);
+            instance.transform.SetParent(transform, false);
             allInstances.Add(instance);
         }
+        instance.SetActive(true);
         return instance;
     }
 
     public void FreeInstance(GameObject instance) {
         Debug.Assert(allInstances.Contains(instance));
-        instance.transform.parent = null;
+        instance.SetActive(false);
         unusedInstances.Add(instance);
     }
 }

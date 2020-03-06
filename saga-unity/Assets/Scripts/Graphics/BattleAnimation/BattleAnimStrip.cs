@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using UnityEngine;
 
 public class BattleAnimStrip : BattleAnim {
 
@@ -11,29 +12,29 @@ public class BattleAnimStrip : BattleAnim {
     }
 
     protected override async Task PlayInternalAsync(BattleView view, List<Unit> targets) {
-        await RenderRoutine();
+        await RenderRoutine(view, targets);
     }
 
-    private IEnumerator RenderRoutine(BattleStepData step, BattleView view, List<Unit> targets) {
+    private IEnumerator RenderRoutine(BattleView view, List<Unit> targets) {
+        var routines = new List<IEnumerator>();
+        foreach (var step in data.steps) {
+            routines.Add(RenderStepRoutine(step, view, targets));
+        }
+        yield return CoUtils.RunParallel(routines.ToArray(), view);
+    }
+
+    private IEnumerator RenderStepRoutine(BattleStepData data, BattleView view, List<Unit> targets) {
         float elapsed = 0.0f;
-        for (var finished = 0; finished < data.steps.Length; ) {
-            foreach (var step in data.steps) {
-                if (elapsed > step.duration + step.start) {
-                    finished += 1;
-                    HideStepIfNeeded(step, view, targets);
-                } else if (elapsed > step.start) {
-                    RenderStepIfNeeded(step, view, targets);
-                }
+        List<AnimFrameSpriteComponent> frames = null;
+        while (elapsed < data.start + data.duration) {
+            elapsed += Time.deltaTime;
+            if (elapsed > data.start && frames == null) {
+                frames = view.ShowBattleAnimationFrame(data, targets);
             }
             yield return null;
         }
-    }
-
-    private void RenderStepIfNeeded(BattleStepData step, BattleView view, List<Unit> targets) {
-        view
-    }
-
-    private void HideStepIfNeeded(BattleStepData step, BattleView view, List<Unit> targets) {
-
+        if (frames != null) {
+            view.HideBattleAnimationFrames(frames);
+        }
     }
 }

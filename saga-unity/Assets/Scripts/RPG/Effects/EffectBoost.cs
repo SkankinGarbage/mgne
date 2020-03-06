@@ -26,6 +26,7 @@ public class EffectBoost : EffectAllyTarget {
             power += user[data.powerStat.Value];
         }
         await battle.WriteLineAsync(username + " uses " + itemname + ".");
+        await PlayBattleAnimAsync(intent);
         foreach (var victim in targets) {
             var victimname = victim.Name;
             var boost = power;

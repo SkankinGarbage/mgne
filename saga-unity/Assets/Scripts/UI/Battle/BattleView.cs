@@ -4,9 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class BattleView : FullScreenMenuView {
-
-    [SerializeField] private AnimFrameSpriteComponent battleFramePrefab;
-    [Space]
+    
     [SerializeField] public GenericSelector fightRunMenu = null;
     [SerializeField] public CombatItemList inventory = null;
     [SerializeField] public UnitList allyList = null;
@@ -22,11 +20,9 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] private UnitCellView unitCell = null;
     [SerializeField] private ListView mutationView = null;
     [SerializeField] private ListView eaterView = null;
+    [SerializeField] private AnimFrameSpritePool framePool = null;
 
     public Battle Battle { get; private set; }
-
-    // group index -> frames
-    private Dictionary<int, List<AnimFrameSpriteComponent>> battleFrames = new Dictionary<int, List<AnimFrameSpriteComponent>>();
 
     public static BattleView Show(PartyData enemyParty) {
         var battle = new Battle(enemyParty);
@@ -79,8 +75,26 @@ public class BattleView : FullScreenMenuView {
         allyList.Populate();
     }
 
-    public void ShowBattleAnimationFrame(BattleStepData data, List<Unit> target) {
+    public List<AnimFrameSpriteComponent> ShowBattleAnimationFrame(BattleStepData data, List<Unit> targets) {
+        var groupIndices = new HashSet<int>();
+        foreach (var target in targets) {
+            groupIndices.Add(Battle.Enemy.GroupIndexForUnit(target));
+        }
 
+        var frames = new List<AnimFrameSpriteComponent>();
+        foreach (var index in groupIndices) {
+            var targetCell = battlerList.GetCell(index);
+            var origin = targetCell.GetComponent<RectTransform>().anchoredPosition;
+            var frame = framePool.GetFrame(data, origin);
+            frames.Add(frame);
+        }
+        return frames;
+    }
+
+    public void HideBattleAnimationFrames(List<AnimFrameSpriteComponent> frames) {
+        foreach (var frame in frames) {
+            framePool.DisposeFrame(frame);
+        }
     }
 
     public static IEnumerator SpawnBattleRoutine(PartyData data, string bgmTag = null) {

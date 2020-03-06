@@ -17,6 +17,16 @@ public class CombatItem {
     public StatSet RoboStats => Data.robostats;
     public string Name => UIUtils.GlyphifyString(Data.abilityName);
 
+    private BattleAnim anim;
+    public BattleAnim Anim {
+        get {
+            if (anim == null && Data.anim != null) {
+                anim = BattleAnimationFactory.Create(Data.anim);
+            }
+            return anim;
+        }
+    }
+
     protected CombatItem() {
         Stats = new StatSet();
     }

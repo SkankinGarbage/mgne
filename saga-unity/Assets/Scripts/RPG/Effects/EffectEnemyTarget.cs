@@ -62,6 +62,7 @@ public abstract class EffectEnemyTarget : AbilEffect {
                 targets.AddRange(intent.Targets);
                 break;
         }
+        await PlayBattleAnimAsync(intent);
 
         var power = await CalculateAttackPowerAsync(intent);
         var roll = Random.Range(0.0f, 1.0f);
