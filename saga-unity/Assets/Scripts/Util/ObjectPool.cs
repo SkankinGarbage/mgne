@@ -3,16 +3,10 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour {
 
-    private GameObject prefab;
-    private List<GameObject> unusedInstances;
-    private List<GameObject> allInstances;
+    [SerializeField] private GameObject prefab = null;
 
-    public ObjectPool(GameObject prefab) {
-        this.prefab = prefab;
-
-        unusedInstances = new List<GameObject>();
-        allInstances = new List<GameObject>();
-    }
+    private List<GameObject> unusedInstances = new List<GameObject>();
+    private List<GameObject> allInstances = new List<GameObject>();
 
     public void OnDestroy() {
         foreach (GameObject instance in unusedInstances) {

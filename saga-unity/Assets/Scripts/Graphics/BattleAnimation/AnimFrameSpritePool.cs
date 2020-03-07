@@ -3,8 +3,6 @@
 [RequireComponent(typeof(ObjectPool))]
 public class AnimFrameSpritePool : MonoBehaviour {
 
-    [SerializeField] private AnimFrameSpriteComponent framePrefab = null;
-
     private ObjectPool pool;
     private ObjectPool Pool {
         get {
