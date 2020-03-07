@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 public abstract class BattleAnim {
@@ -11,7 +10,7 @@ public abstract class BattleAnim {
     }
 
     public void PlaySound() {
-        if (data.sound != null) {
+        if (data.sound != null && data.sound.Length > 0) {
             Global.Instance().Audio.PlaySFX(data.sound);
         }
     }
