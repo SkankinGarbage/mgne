@@ -33,22 +33,4 @@ public class BattleAnimSeries : BattleAnim {
         }
         yield return CoUtils.RunParallel(routines.ToArray(), view);
     }
-
-    private IEnumerator RenderStepRoutine(BattleStepData data, BattleView view, List<Unit> targets, Vector2 offset) {
-        float elapsed = 0.0f;
-        List<AnimFrameSpriteComponent> frames = null;
-        while (elapsed < data.start + data.duration) {
-            elapsed += Time.deltaTime;
-            if (elapsed >= data.start && frames == null) {
-                frames = view.ShowBattleAnimationFrame(data, targets);
-                foreach (var frame in frames) {
-                    frame.ApplyOffset(offset);
-                }
-            }
-            yield return null;
-        }
-        if (frames != null) {
-            view.HideBattleAnimationFrames(frames);
-        }
-    }
 }

@@ -33,4 +33,12 @@ public class ObjectPool : MonoBehaviour {
         instance.gameObject.SetActive(false);
         unusedInstances.Add(instance);
     }
+
+    public void FreeAll() {
+        foreach (var instance in allInstances) {
+            if (!unusedInstances.Contains(instance)) {
+                FreeInstance(instance);
+            }
+        }
+    }
 }

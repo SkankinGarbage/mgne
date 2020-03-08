@@ -18,23 +18,8 @@ public class BattleAnimStrip : BattleAnim {
     private IEnumerator RenderRoutine(BattleView view, List<Unit> targets) {
         var routines = new List<IEnumerator>();
         foreach (var step in data.steps) {
-            routines.Add(RenderStepRoutine(step, view, targets));
+            routines.Add(RenderStepRoutine(step, view, targets, new Vector2(0, 0)));
         }
         yield return CoUtils.RunParallel(routines.ToArray(), view);
-    }
-
-    private IEnumerator RenderStepRoutine(BattleStepData data, BattleView view, List<Unit> targets) {
-        float elapsed = 0.0f;
-        List<AnimFrameSpriteComponent> frames = null;
-        while (elapsed < data.start + data.duration) {
-            elapsed += Time.deltaTime;
-            if (elapsed >= data.start && frames == null) {
-                frames = view.ShowBattleAnimationFrame(data, targets);
-            }
-            yield return null;
-        }
-        if (frames != null) {
-            view.HideBattleAnimationFrames(frames);
-        }
     }
 }

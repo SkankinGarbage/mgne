@@ -22,4 +22,8 @@ public class AnimFrameSpritePool : MonoBehaviour {
     public void DisposeFrame(AnimFrameSpriteComponent frame) {
         Pool.FreeInstance(frame.gameObject);
     }
+
+    public void DisposeAll() {
+        Pool.FreeAll();
+    }
 }

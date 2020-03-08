@@ -9,7 +9,7 @@ public class BattleAnimSound : BattleAnim {
         this.data = data;
     }
 
-    protected override Task PlayInternalAsync(BattleView view, List<Unit> targets) {
-        throw new System.NotImplementedException();
+    protected override async Task PlayInternalAsync(BattleView view, List<Unit> targets) {
+        await Task.Delay((int)(data.duration * 1000));
     }
 }

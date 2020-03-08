@@ -13,6 +13,7 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] public ListSelector mutationSelector = null;
     [SerializeField] public ListSelector eatYesNoSelector = null;
     [SerializeField] public DynamicListSelector eaterSelector = null;
+    [SerializeField] public AnimFrameSpritePool framePool = null;
     [SerializeField] private UnitList unitList = null;
     [SerializeField] private ListView dollList = null;
     [SerializeField] private ListView battlerList = null;
@@ -20,7 +21,6 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] private UnitCellView unitCell = null;
     [SerializeField] private ListView mutationView = null;
     [SerializeField] private ListView eaterView = null;
-    [SerializeField] private AnimFrameSpritePool framePool = null;
 
     public Battle Battle { get; private set; }
 
