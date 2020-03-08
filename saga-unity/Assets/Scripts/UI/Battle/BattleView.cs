@@ -48,6 +48,10 @@ public class BattleView : FullScreenMenuView {
         });
     }
 
+    public void UpdateForMemberChange() {
+        Populate(Battle);
+    }
+
     public void PopulateForUnitIntentSelect(Intent intent) {
         battlebox.gameObject.SetActive(false);
         unitCell.gameObject.SetActive(true);

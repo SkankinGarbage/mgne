@@ -19,19 +19,18 @@ public class ObjectPool : MonoBehaviour {
         if (unusedInstances.Count > 0) {
             instance = unusedInstances[0];
             unusedInstances.RemoveAt(0);
-            return instance;
         } else {
             instance = Instantiate(prefab);
             instance.transform.SetParent(transform, false);
             allInstances.Add(instance);
         }
-        instance.SetActive(true);
+        instance.gameObject.SetActive(true);
         return instance;
     }
 
     public void FreeInstance(GameObject instance) {
         Debug.Assert(allInstances.Contains(instance));
-        instance.SetActive(false);
+        instance.gameObject.SetActive(false);
         unusedInstances.Add(instance);
     }
 }

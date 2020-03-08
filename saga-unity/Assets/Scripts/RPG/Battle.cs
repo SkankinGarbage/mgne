@@ -77,6 +77,7 @@ public class Battle {
 
     public async Task CheckDeathAsync(Unit target, bool silent = false) {
         if (!target.IsDead) return;
+        View.UpdateForMemberChange();
         if (!silent) await WriteLineAsync(BattleBox.Tab + target.Name + " is defeated.");
     }
 

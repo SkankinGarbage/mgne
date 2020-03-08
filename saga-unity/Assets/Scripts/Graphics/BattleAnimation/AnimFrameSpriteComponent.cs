@@ -1,20 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
 public class AnimFrameSpriteComponent : MonoBehaviour {
 
     private const string BattleAnimDirectory = "Sprites/BattleAnim/";
 
-    private Image image;
-    private Image Image {
-        get {
-            if (image == null) {
-                image = GetComponent<Image>();
-            }
-            return image;
-        }
-    }
+    [SerializeField] private Image image = null;
 
     public void Populate(BattleStepData data, Vector2 origin) {
         var spriteName = data.sprite;
@@ -25,14 +16,20 @@ public class AnimFrameSpriteComponent : MonoBehaviour {
             spriteName = spriteName.Substring(0, spriteName.IndexOf(".png"));
         }
         var sprite = Resources.Load<Sprite>(BattleAnimDirectory + spriteName);
-        Image.sprite = sprite;
-        Image.SetNativeSize();
+        image.sprite = sprite;
+        image.SetNativeSize();
 
-        var transform = GetComponent<RectTransform>();
+        var transform = image.GetComponent<RectTransform>();
         transform.anchoredPosition = transform.anchoredPosition + new Vector2(data.x, data.y);
 
         if (data.rotation == RotationType.ROTATION_ENABLED) {
+            var transform2 = image.GetComponent<RectTransform>();
             transform.localEulerAngles = new Vector3(0, 0, Random.Range(0, 4) * 90);
         }
+    }
+
+    public void ApplyOffset(Vector2 offset) {
+        var transform = GetComponent<RectTransform>();
+        transform.anchoredPosition = transform.anchoredPosition + offset;
     }
 }

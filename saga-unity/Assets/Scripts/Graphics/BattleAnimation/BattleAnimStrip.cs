@@ -28,7 +28,7 @@ public class BattleAnimStrip : BattleAnim {
         List<AnimFrameSpriteComponent> frames = null;
         while (elapsed < data.start + data.duration) {
             elapsed += Time.deltaTime;
-            if (elapsed > data.start && frames == null) {
+            if (elapsed >= data.start && frames == null) {
                 frames = view.ShowBattleAnimationFrame(data, targets);
             }
             yield return null;
