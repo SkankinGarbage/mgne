@@ -1,27 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 public class DollArea : MonoBehaviour {
 
-    [SerializeField] private List<EnemyDollSprite> availableCells;
-    [SerializeField] private Camera cam;
+    [SerializeField] private List<EnemyDollSprite> availableCells = null;
+    [SerializeField] private Camera cam = null;
 
-    private Dictionary<EnemyDoll, EnemyDollSprite> sprites = new Dictionary<EnemyDoll, EnemyDollSprite>();
-    private Dictionary<EnemyDoll, float> positionRatios = new Dictionary<EnemyDoll, float>();
+    private Dictionary<Unit, EnemyDollSprite> sprites = new Dictionary<Unit, EnemyDollSprite>();
+    private Dictionary<Unit, float> positionRatios = new Dictionary<Unit, float>();
 
-    public Sprite Populate(EnemyDoll ui, IEnumerable<Unit> enemyGroup, float positionRatio) {
+    public Sprite Populate(IEnumerable<Unit> enemyGroup, float positionRatio) {
+        var enemy = enemyGroup.First();
         EnemyDollSprite sprite = null;
-        if (!sprites.ContainsKey(ui)) {
+        if (!sprites.ContainsKey(enemy)) {
             var doll = availableCells[0];
             availableCells.RemoveAt(0);
             doll.transform.SetParent(transform);
             sprite = doll.GetComponent<EnemyDollSprite>();
-            sprites[ui] = sprite;
+            sprites[enemy] = sprite;
         } else {
-            sprite = sprites[ui];
+            sprite = sprites[enemy];
         }
-        positionRatios[ui] = positionRatio;
+        positionRatios[enemy] = positionRatio;
         return sprite.Populate(enemyGroup);
+    }
+
+    public Vector3 OffsetForEnemy(IEnumerable<Unit> enemyGroup) {
+        var enemy = enemyGroup.First();
+        return sprites[enemy].transform.localPosition;
     }
 
     public void LateUpdate() {

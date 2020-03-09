@@ -13,7 +13,7 @@ public class AnimFrameSpritePool : MonoBehaviour {
         }
     }
 
-    public AnimFrameSpriteComponent GetFrame(BattleStepData data, Vector2 origin) {
+    public AnimFrameSpriteComponent GetFrame(BattleStepData data, Vector3 origin) {
         var frame = Pool.GetInstance().GetComponent<AnimFrameSpriteComponent>();
         frame.Populate(data, origin);
         return frame;

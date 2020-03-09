@@ -92,8 +92,7 @@ public class BattleView : FullScreenMenuView {
         var frames = new List<AnimFrameSpriteComponent>();
         foreach (var index in groupIndices) {
             var targetCell = battlerList.GetCell(index);
-            var origin = targetCell.GetComponent<RectTransform>().anchoredPosition;
-            var frame = framePool.GetFrame(data, origin);
+            var frame = framePool.GetFrame(data, dollArea.OffsetForEnemy(Battle.Enemy.Groups[index]));
             frames.Add(frame);
         }
         return frames;

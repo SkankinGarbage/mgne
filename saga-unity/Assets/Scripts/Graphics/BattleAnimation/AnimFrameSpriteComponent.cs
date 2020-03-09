@@ -5,26 +5,25 @@ public class AnimFrameSpriteComponent : MonoBehaviour {
 
     private const string BattleAnimDirectory = "Sprites/BattleAnim/";
 
-    [SerializeField] private Image image = null;
+    [SerializeField] private new SpriteRenderer renderer = null;
 
-    public void Populate(BattleStepData data, Vector2 origin) {
-        image.sprite = SpriteForStep(data);
+    public void Populate(BattleStepData data, Vector3 origin) {
+        renderer.sprite = SpriteForStep(data);
 
-        var transform = image.GetComponent<RectTransform>();
-        transform.anchoredPosition = transform.anchoredPosition + new Vector2(data.x, -1 * data.y);
-        transform.sizeDelta = new Vector2(image.sprite.bounds.size.x, image.sprite.bounds.size.y);
+        var transform = renderer.transform;
+        transform.position = new Vector3(origin.x, origin.y, transform.position.z);
 
-        var transform2 = image.GetComponent<RectTransform>();
+        var transform2 = renderer.transform;
         if (data.rotation == RotationType.ROTATION_ENABLED) {
             transform.localEulerAngles = new Vector3(0, 0, Random.Range(0, 4) * 90);
         } else {
             transform.localEulerAngles = new Vector3(0, 0, 0);
         }
+        ApplyOffset(new Vector3(data.x, data.y, 0));
     }
 
-    public void ApplyOffset(Vector2 offset) {
-        var transform = GetComponent<RectTransform>();
-        transform.anchoredPosition = transform.anchoredPosition + offset * new Vector2(1, -1);
+    public void ApplyOffset(Vector3 offset) {
+        transform.localPosition = transform.localPosition + new Vector3(offset.x / 16, offset.y * -1/16, 0);
     }
 
     public static Sprite SpriteForStep(BattleStepData data) {
