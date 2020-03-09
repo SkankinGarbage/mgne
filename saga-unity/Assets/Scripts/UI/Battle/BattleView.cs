@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class BattleView : FullScreenMenuView {
     
@@ -21,16 +23,17 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] private UnitCellView unitCell = null;
     [SerializeField] private ListView mutationView = null;
     [SerializeField] private ListView eaterView = null;
+    [SerializeField] private DollArea dollArea = null;
 
     public Battle Battle { get; private set; }
 
-    public static BattleView Show(PartyData enemyParty) {
+    public static async Task<BattleView> ShowAsync(PartyData enemyParty) {
         var battle = new Battle(enemyParty);
-        var menu = Instantiate<BattleView>("Prefabs/UI/Battle/BattleView");
+        await SceneManager.LoadSceneAsync("Battle", LoadSceneMode.Additive);
+        var menu = FindObjectOfType<BattleView>();
         menu.Populate(battle);
 
         Global.Instance().Input.PushListener(menu.ToString(), (cmd, x) => true);
-
         return menu;
     }
 
@@ -41,7 +44,8 @@ public class BattleView : FullScreenMenuView {
             obj.GetComponent<BattlerDoll>().Populate(unit);
         });
         battlerList.Populate(battle.Enemy.Groups, (obj, group) => {
-            obj.GetComponent<EnemyDoll>().Populate(group);
+            var posRatio = (float)(battle.Enemy.Groups.IndexOf(group) + 1) / (battle.Enemy.Groups.Count + 1);
+            obj.GetComponent<EnemyDoll>().Populate(group, dollArea, posRatio);
         });
         monsterNameList.Populate(battle.Enemy.Groups, (obj, group) => {
             obj.GetComponent<EnemyNameCellView>().Populate(group);
@@ -106,7 +110,9 @@ public class BattleView : FullScreenMenuView {
             bgmTag = Global.Instance().Data.CurrentBGMKey;
         }
         Global.Instance().Audio.PlayBGM(bgmTag);
-        var menu = Show(data);
+        var task = ShowAsync(data);
+        yield return CoUtils.TaskRoutine(task);
+        var menu = task.Result;
         yield return menu.Battle.BattleRoutine(menu);
     }
 
@@ -172,6 +178,7 @@ public class BattleView : FullScreenMenuView {
 
     public override IEnumerator CloseRoutine() {
         Global.Instance().Input.RemoveListener(ToString());
-        return base.CloseRoutine();
+        Destroy(this);
+        yield return null;
     }
 }

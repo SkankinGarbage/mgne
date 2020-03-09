@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Threading.Tasks;
-using UnityEngine.SceneManagement;
 
 public class TitleView : FullScreenMenuView {
 

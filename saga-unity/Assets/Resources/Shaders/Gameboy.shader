@@ -93,7 +93,7 @@
 				float weight = _FadeOffset;
                 if (_Invert) weight = 1.0 - weight;
                 
-                if (i.color.a == 0.0) return float4(1, 0, 0, 0);
+                if (i.color.a == 0.0) return float4(1, 1, 1, 0);
 
                 float dBlack = color_d(current, _Black);
                 float dDgray = color_d(current, _DGray);
