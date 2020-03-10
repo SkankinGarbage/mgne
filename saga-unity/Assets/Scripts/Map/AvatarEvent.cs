@@ -102,7 +102,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
     }
 
     public void SetHidden(bool hidden) {
-        Parent.SwitchEnabled = hidden;
+        Parent.IsSwitchEnabled = hidden;
     }
 
     public void OnTeleport() {
@@ -118,7 +118,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
             targetEvents.AddRange(Parent.Map.GetEventsAt(target));
         }
         foreach (MapEvent tryTarget in targetEvents) {
-            if (tryTarget.SwitchEnabled && !tryTarget.IsPassableBy(Parent)) {
+            if (tryTarget.IsSwitchEnabled && !tryTarget.IsPassableBy(Parent)) {
                 tryTarget.GetComponent<Dispatch>().Signal(MapEvent.EventInteract, this);
                 return;
             }
@@ -127,7 +127,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
         target = Parent.Position;
         targetEvents = Parent.Map.GetEventsAt(target);
         foreach (MapEvent tryTarget in targetEvents) {
-            if (tryTarget.SwitchEnabled && tryTarget.IsPassableBy(Parent)) {
+            if (tryTarget.IsSwitchEnabled && tryTarget.IsPassableBy(Parent)) {
                 tryTarget.GetComponent<Dispatch>().Signal(MapEvent.EventInteract, this);
                 return;
             }
@@ -155,12 +155,12 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
             StartCoroutine(CoUtils.RunParallel(new System.Collections.IEnumerator[] {
                 CoUtils.RunWithCallback(Parent.StepRoutine(dir), () => {
                     foreach (var targetEvent in toCollide) {
-                        if (targetEvent.SwitchEnabled) {
+                        if (targetEvent.IsSwitchEnabled) {
                             targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventCollide, this);
                         }
                     }
                     foreach (var targetEvent in Parent.Map.GetEvents<MapEvent>()) {
-                        if (targetEvent.SwitchEnabled) {
+                        if (targetEvent.IsSwitchEnabled) {
                             targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventStep, this);
                         }
                     }
@@ -169,7 +169,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
             }, this));
         } else {
             foreach (var targetEvent in toCollide) {
-                if (targetEvent.SwitchEnabled && !targetEvent.IsPassableBy(Parent)) {
+                if (targetEvent.IsSwitchEnabled && !targetEvent.IsPassableBy(Parent)) {
                     targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventCollide, this);
                 }
             }

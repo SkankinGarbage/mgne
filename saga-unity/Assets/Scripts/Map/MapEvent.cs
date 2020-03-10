@@ -44,6 +44,7 @@ public abstract class MapEvent : MonoBehaviour {
     public LuaMapEvent LuaObject { get; private set; }
     public Vector3 TargetPositionPx { get; set; }
     public bool Tracking { get; private set; }
+    public bool ImpassabilityOverride { get; set; }
     
     public Vector3 PositionPx {
         get { return transform.localPosition; }
@@ -78,7 +79,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     private bool switchEnabled = true;
-    public bool SwitchEnabled {
+    public bool IsSwitchEnabled {
         get { return switchEnabled; }
         set {
             if (value != switchEnabled) {
@@ -177,19 +178,20 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public void CheckEnabled() {
-        SwitchEnabled = !LuaObject.EvaluateBool(PropertyLuaHide, false);
+        IsSwitchEnabled = !LuaObject.EvaluateBool(PropertyLuaHide, false);
     }
 
     public bool IsPassable() {
         string passable = GetProperty(PropertyPassable);
         if (passable == "IMPASSABLE") return false;
         if (passable == "PASSABLE") return true;
+        if (ImpassabilityOverride) return false;
         if (GetComponent<CharaEvent>() != null) return false;
         return true;
     }
 
     public bool IsPassableBy(MapEvent other) {
-        return IsPassable() || !SwitchEnabled;
+        return IsPassable() || !IsSwitchEnabled;
     }
 
     public OrthoDir DirectionTo(MapEvent other) {
@@ -197,7 +199,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public bool CanPassAt(Vector2Int loc) {
-        if (!GetComponent<MapEvent>().SwitchEnabled) {
+        if (!GetComponent<MapEvent>().IsSwitchEnabled) {
             return true;
         }
         if (loc.x < 0 || loc.x >= Map.Width || loc.y < 0 || loc.y >= Map.Height) {

@@ -65,7 +65,7 @@ public class CharaEvent : MonoBehaviour {
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventInteract, (object payload) => {
             Facing = Parent.DirectionTo(Global.Instance().Maps.Avatar.GetComponent<MapEvent>());
         });
-        UpdateEnabled(Parent.SwitchEnabled);
+        UpdateEnabled(Parent.IsSwitchEnabled);
     }
 
     public void Update() {

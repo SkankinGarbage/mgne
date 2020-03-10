@@ -10,8 +10,10 @@ public class TmxImporter : CustomTmxImporter {
 
     private const string DollPrefabPath = "Assets/Resources/Prefabs/Doll.prefab";
     private const string CeilingPrefabPath = "Assets/Resources/Prefabs/Ceiling.prefab";
+    private const string ChestPrefabPath = "Assets/Resources/Prefabs/Chest.prefab";
 
     private const string TypeCeiling = "Ceiling";
+    private const string TypeChest = "Chest";
 
     public override void TmxAssetImported(TmxAssetImportedArgs args) {
         var materials = GameboyMaterialSettings.GetDefault();
@@ -80,6 +82,15 @@ public class TmxImporter : CustomTmxImporter {
                         ceilingObject.transform.localPosition = new Vector3(0, 0, -1);
                     }
                     ceil.Reconfigure(mapEvent, args.AssetImporter);
+                } else if (tmxObject.m_Type == TypeChest) {
+                    ChestComponent chest = mapEvent.GetComponentInChildren<ChestComponent>();
+                    if (chest == null) {
+                        var chestObject = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(ChestPrefabPath));
+                        chest = chestObject.GetComponent<ChestComponent>();
+                        chestObject.transform.SetParent(mapEvent.transform);
+                        chestObject.transform.localPosition = new Vector3(0, 0, 0);
+                    }
+                    chest.Reconfigure(mapEvent, args.AssetImporter);
                 }
             }
         }

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="37" height="35" tilewidth="16" tileheight="16" nextobjectid="14">
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="37" height="35" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="14">
  <properties>
   <property name="bgm" value="home_town"/>
   <property name="name" value="Forest Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>
  <tileset firstgid="176" source="../tilesets/upper.tsx"/>
- <layer name="Tile Layer 1" width="37" height="35">
+ <layer id="1" name="Tile Layer 1" width="37" height="35">
   <properties>
    <property name="z" value="0"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+2XMQrDMAxFNXoqZMsNSpYmS5ve/2SNB1MTkKxv2U4GfRBkCF9PShASkQvRQxEtvTR54vMqRC3T18j0EQJlSrVMTH1cD85MQQiUKdUyM/VxPejJJHk9j1gUeUYyvY/YAaZpAJO29uQz34yp5Xwq5eXeyfPE/06aT8sFTPG/k+bTDjLleWtnZku96N/fQHL/z7F1Ysp7Hkjuv+V7uFwu12j1mPtWz9JtUHMnWD1Lt0HNnWD1RPYvhMni6UzO1JoJ2VO1TBbP/DYo7anaO8Hqieyp2r20h+fV+gGa+FyYPBQAAA==
+   H4sIAAAAAAAECu1XO05EMQzckgqJjhusaIAG2PufDE8x0ih4nbHyli02lqI48dieOB+9dzpt6VTgOcCz5sabxZnZmQe4j6LB7ormvISTjh2deYD9LhrsrgDL9b2Izjny4lh7zQP9qWiKDVgpwHJ9r6JzDnbFcB695oF+JKcq1jlyvV3Jdy9OX8Hnp8EJ+5+tUfkHpJRZzbP4nNM8jIP9p117xZaEwshY6u/qmgf6rM240D7jxDwZT9goOHd6J0cdZ9KVozjh3OmdHHWcSVdYB3LTsaO7eTq49wCzztgf6k7/2UnUwGrNwWmseTXu7EeD0obuCuwK7AocUgHnrVeMk1Txjj7GhI/z5gMDrCOrMeFfvfVq63BSv0rPYmIu+47J5jL/rG6rMVf9N6e/e/roe4f181xRv9Zn52ecU1/cFR1n+uiv/wbwr94q9z9hNWbnO9X9Lr1FzLGW/z3+BZr4XJg8FAAA
   </data>
  </layer>
- <layer name="Tile Layer 2" width="37" height="35">
+ <layer id="2" name="Tile Layer 2" width="37" height="35">
   <properties>
    <property name="z" value=".5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC2NgGAWjgDbgIhQPJnALikFgK4VmbaZQPzawj0L9e4hUtxWNHgxgHxqNDvjQaGqDM2ToQXbTJgrNGi7g2kA7YBSMglEwCkbBKBgFo4BIsIOAPDltZWxmore9KWmDU9pfQDeHUBucluAlEL8C4tdUNJPa7XBqxh21wGCIu1Ew8gAAEazRZjwUAAA=
+   H4sIAAAAAAAECmNgGAWjIUCbELgINBaEBxO4BXQMCIPAVghFNrmZbJ24Ne7DLUWUzB6iVCH8TmkYEGkdUcpgfofR6Jr4oAIwGl2eUv4ZMgyAuQVEb0LST45ZSNqHNPPakHb9qONHQ2A0BEZDYDQERkNgNARGUgjsIOBZctrK2MyEmYNOE7AeqzSutjJWxXgEYeag03i0UF3qJdDEV0D8moomU7sdjh5nMD4VnUyyUehxBuOTbNCohtEQICEEABGs0WY8FAAA
   </data>
  </layer>
- <objectgroup name="Object Layer 1">
+ <objectgroup id="3" name="Object Layer 1">
   <object id="1" type="Event" x="64" y="144" width="16" height="16">
    <properties>
     <property name="onCollide" value="teleport('world1/parish_interior.tmx', 24, 4)"/>
@@ -109,20 +109,20 @@
    </properties>
   </object>
  </objectgroup>
- <layer name="Tile Layer 3" width="37" height="35">
+ <layer id="4" name="Tile Layer 3" width="37" height="35">
   <properties>
    <property name="z" value="2"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WsQ0AIAhEUSZwFLUR999MCydQLhT+l1xLfokZAAB4VbIDjrrXLtdFTWPPLzdFTQAAAL9Q/KmvN1tIRexND6nQ38ywAJBkYp08FAAA
+   H4sIAAAAAAAECu3WMQ5AERBFUSuwFDTY/87QToV5091JFF/yb+RUkxKDAAIIIIAAAl6B7A2I/i+7Uz9PE73BZvq+GJ9n2hjfCCCAAAIIIIAAAk8CEXuqt3n2VfV4m2dfVU9EU/3Gm94CkGRinTwUAAA=
   </data>
  </layer>
- <layer name="Tile Layer 4" width="37" height="35">
+ <layer id="5" name="Tile Layer 4" width="37" height="35">
   <properties>
    <property name="z" value="2.5"/>
   </properties>
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3WsQkAMAwDQe+/TdpM5wXSBSMwdwMIlV8FAGx00gcebvoAAABxE536uznRqVvatwG3NEJWPBQAAA==
+   H4sIAAAAAAAECu3WsQ0AIAgEQPbfxtbpLBzBPCHmGACeo6FKESBAgAABAj8KrIFL7YGZRCJAgAABAgQIEOgVSPyprz0Tf2qiZ++l7rQDtzRCVjwUAAA=
   </data>
  </layer>
 </map>
