@@ -134,7 +134,7 @@ public class Battle {
                 allIntents.Add(intent);
             }
         }
-        allIntents.Sort(new Comparison<Intent>((a, b) => a.Priority - b.Priority));
+        allIntents.Sort(new Comparison<Intent>((a, b) => b.Priority - a.Priority));
         foreach (var intent in allIntents) {
             intent.OnRoundStart();
         }

@@ -177,7 +177,10 @@ public class BattleView : FullScreenMenuView {
 
     public override IEnumerator CloseRoutine() {
         Global.Instance().Input.RemoveListener(ToString());
-        Destroy(this);
-        yield return null;
+        yield return CoUtils.TaskRoutine(CloseAsync());
+    }
+
+    public async Task CloseAsync() {
+        await SceneManager.UnloadSceneAsync("Battle");
     }
 }

@@ -25,18 +25,18 @@ public class BattleAnimShots : BattleAnim {
 
         var sprite = AnimFrameSpriteComponent.SpriteForStep(data.anim.steps[0]);
         var rows = Mathf.CeilToInt((float)data.count / data.cols);
-        var width = (int)(data.cols * (sprite.bounds.size.x + data.padX) + (rows * gainX));
-        var height = (int)(rows * (sprite.bounds.size.y + data.padY) + (data.cols * gainY));
+        var width = (int)(data.cols * (sprite.bounds.size.x * 16 + data.padX) + (rows * gainX));
+        var height = (int)(rows * (sprite.bounds.size.y * 16 + data.padY) + (data.cols * gainY));
         var startX = -1 * width / 2;
         var startY = -1 * height / 2;
         
         for (var i = 0; i < data.count; i += 1) {
             int col = i % data.cols;
             int row = (i - col) / rows;
-            var offX = (int)(startX + col * (sprite.bounds.size.x + data.padX) +
+            var offX = (int)(startX + col * (sprite.bounds.size.x * 16 + data.padX) +
                     (gainX * row) +
                     (Random.Range(0, 1.0f) * data.jitterX * 2) - data.jitterX);
-            var offY = (int)(startY + row * (sprite.bounds.size.y + data.padY) +
+            var offY = (int)(startY + row * (sprite.bounds.size.y * 16 + data.padY) +
                         (gainY * col) +
                         (Random.Range(0, 1.0f) * data.jitterY * 2) - data.jitterY);
             if (mirrorHoriz) {
