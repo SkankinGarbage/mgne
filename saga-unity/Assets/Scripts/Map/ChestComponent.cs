@@ -7,6 +7,7 @@ public class ChestComponent : MonoBehaviour {
 
     private const string PropertyItem = "item";
     private const string PropertyKeyItem = "keyItem";
+    private const string PropertyCollectable = "collectable";
     private const string PropertyVisible = "visible";
 
     [SerializeField] private Sprite closedSprite = null;
@@ -19,6 +20,7 @@ public class ChestComponent : MonoBehaviour {
     [SerializeField] private string encounterKey = null;
     [SerializeField] private bool isInivisble = false;
     [SerializeField] private bool isKey = false;
+    [SerializeField] private bool isCollectable = false;
 
     private string switchName;
     private string SwitchName {
@@ -43,6 +45,10 @@ public class ChestComponent : MonoBehaviour {
         }
         if (props.TryGetCustomProperty(PropertyKeyItem, out prop)) {
             isKey = true;
+            itemKey = prop.GetValueAsString();
+        }
+        if (props.TryGetCustomProperty(PropertyCollectable, out prop)) {
+            isCollectable = true;
             itemKey = prop.GetValueAsString();
         }
     }
@@ -83,17 +89,28 @@ public class ChestComponent : MonoBehaviour {
             var party = IndexDatabase.Instance().Parties.GetData(encounterKey);
             yield return BattleView.SpawnBattleRoutine(party);
         } else if (itemKey != null && itemKey.Length > 0) {
-            var item = new CombatItem(IndexDatabase.Instance().CombatItems.GetData(itemKey));
-            if (Global.Instance().Data.Inventory.IsFull()) {
-                yield return textbox.SpeakRoutine("No room for more items.");
-            } else {
+            if (isCollectable) {
+                var collectable = IndexDatabase.Instance().Collectables.GetData(itemKey);
                 Global.Instance().Audio.PlaySFX(sfxKey);
-                if (isKey) {
-                    yield return textbox.SpeakRoutine("Retrieved the " + item.Name + ".");
+                Global.Instance().Data.Collectables.AddItem(collectable);
+                if (collectable.chestName != null && collectable.chestName.Length > 0) {
+                    yield return textbox.SpeakRoutine("Retrieved " + UIUtils.GlyphifyString(collectable.chestName) + ".");
                 } else {
-                    yield return textbox.SpeakRoutine("Retrieved a " + item.Name + ".");
+                    yield return textbox.SpeakRoutine("Retrieved a " + UIUtils.GlyphifyString(collectable.displayName) + ".");
                 }
-                Global.Instance().Data.Inventory.Add(item);
+            } else {
+                var item = new CombatItem(IndexDatabase.Instance().CombatItems.GetData(itemKey));
+                if (Global.Instance().Data.Inventory.IsFull()) {
+                    yield return textbox.SpeakRoutine("No room for more items.");
+                } else {
+                    Global.Instance().Audio.PlaySFX(sfxKey);
+                    Global.Instance().Data.Inventory.Add(item);
+                    if (isKey) {
+                        yield return textbox.SpeakRoutine("Retrieved the " + item.Name + ".");
+                    } else {
+                        yield return textbox.SpeakRoutine("Retrieved a " + item.Name + ".");
+                    }
+                }
             }
             yield return textbox.DisableRoutine();
         } else {

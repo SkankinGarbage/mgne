@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class UnitList : MonoBehaviour {
 
-    [SerializeField] public DynamicListSelector selector = null;
+    [SerializeField] public GenericSelector selector = null;
     [SerializeField] private ListView partyCells = null;
     [SerializeField] private PointerLayer pointers = null;
 

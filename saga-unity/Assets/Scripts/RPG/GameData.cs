@@ -12,6 +12,7 @@ public class GameData {
 
     [JsonProperty] public Party Party { get; set; }
     [JsonProperty] public Inventory Inventory { get; private set; }
+    [JsonProperty] public CollectableInventory Collectables { get; private set; }
     [JsonProperty] public int GP { get; private set; }
     [JsonProperty] public string LocationName { get; private set; }
     [JsonProperty] public string CurrentBGMKey { get; private set; }
@@ -34,6 +35,7 @@ public class GameData {
         LocationName = "Debug";
         
         Inventory = new Inventory(InventoryCapacity);
+        Collectables = new CollectableInventory();
         Variables = new Dictionary<string, int>();
         Switches = new Dictionary<string, bool>();
     }

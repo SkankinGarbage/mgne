@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 public class ItemMenuView : FullScreenMenuView {
 
     [SerializeField] private CombatItemList inventory = null;
-    [SerializeField] private DynamicListSelector unitSelector = null;
+    [SerializeField] private GenericSelector unitSelector = null;
     [SerializeField] private ListView unitCells = null;
     [SerializeField] private ListSelector useDropMenu = null;
     [SerializeField] private PointerLayer pointers = null;
     [SerializeField] private Text description = null;
+    [SerializeField] private ListView collectablesList = null;
 
     public static ItemMenuView ShowDefault() {
         return Instantiate<ItemMenuView>("Prefabs/UI/Item/ItemMenu");
@@ -22,6 +23,16 @@ public class ItemMenuView : FullScreenMenuView {
             var cell = obj.GetComponent<UnitCellView>();
             cell.Populate(unit, pointers);
         });
+
+        var displayCounts = new List<KeyValuePair<CollectableData, int>>(Global.Instance().Data.Collectables.DisplayCounts);
+        if (displayCounts.Count > 0) {
+            collectablesList.gameObject.SetActive(true);
+            collectablesList.Populate(displayCounts, (obj, pair) => {
+                obj.GetComponent<CollectableView>().Populate(pair.Key, pair.Value);
+            });
+        } else {
+            collectablesList.gameObject.SetActive(false);
+        }
     }
 
     public async Task DoMenuAsync() {

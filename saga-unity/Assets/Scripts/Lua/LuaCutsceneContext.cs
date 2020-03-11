@@ -46,14 +46,17 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["playSound"] = (Action<DynValue>)PlaySound;
         lua.Globals["sceneSwitch"] = (Action<DynValue, DynValue>)SetSwitch;
         lua.Globals["face"] = (Action<DynValue, DynValue>)Face;
+        lua.Globals["fade"] = (Action<DynValue>)Fade;
         lua.Globals["hideHero"] = (Action<DynValue>)PlayBGM;
+        lua.Globals["addItem"] = (Action<DynValue, DynValue>)AddItem;
+        lua.Globals["addCollectable"] = (Action<DynValue>)AddCollectable;
+        lua.Globals["removeItem"] = (Action<DynValue, DynValue>)RemoveItem;
         lua.Globals["cs_teleport"] = (Action<DynValue, DynValue, DynValue, DynValue, DynValue>)Teleport;
         lua.Globals["cs_targetTele"] = (Action<DynValue, DynValue, DynValue, DynValue>)TargetTeleport;
         lua.Globals["cs_fadeOutBGM"] = (Action<DynValue>)FadeOutBGM;
         lua.Globals["cs_speak"] = (Action<DynValue, DynValue>)Speak;
         lua.Globals["cs_walk"] = (Action<DynValue, DynValue, DynValue, DynValue>)Walk;
         lua.Globals["cs_path"] = (Action<DynValue, DynValue, DynValue, DynValue>)Path;
-        lua.Globals["fade"] = (Action<DynValue>)Fade;
         lua.Globals["cs_battle"] = (Action<DynValue, DynValue>)Battle;
         lua.Globals["cs_recruit"] = (Action<DynValue>)Recruit;
         lua.Globals["cs_inn"] = (Action)Inn;
@@ -200,5 +203,32 @@ public class LuaCutsceneContext : LuaContext {
     private void Shop(DynValue shopKey) {
         var data = IndexDatabase.Instance().Shops.GetData(shopKey.String);
         RunRoutineFromLua(CoUtils.TaskRoutine(ShopMenuView.ShowDefault(data).DoMenuAsync()));
+    }
+
+    private void AddItem(DynValue itemLua, DynValue isCollectableLua) {
+        var key = itemLua.String;
+        var isCollectable = isCollectableLua.IsNil() || isCollectableLua.Boolean;
+        if (isCollectable) {
+            Global.Instance().Data.Collectables.AddItem(key);
+        } else {
+            var data = IndexDatabase.Instance().CombatItems.GetData(key);
+            var item = new CombatItem(data);
+            Global.Instance().Data.Inventory.Add(item);
+        }
+    }
+
+    private void AddCollectable(DynValue itemLua) {
+        Global.Instance().Data.Collectables.AddItem(itemLua.String);
+    }
+
+    private void RemoveItem(DynValue itemLua, DynValue isCollectableLua) {
+        var key = itemLua.String;
+        var isCollectable = isCollectableLua.IsNil() || isCollectableLua.Boolean;
+        if (isCollectable) {
+            Global.Instance().Data.Collectables.RemoveItem(key);
+        } else {
+            var data = IndexDatabase.Instance().CombatItems.GetData(key);
+            Global.Instance().Data.Inventory.DropItemType(data);
+        }
     }
 }

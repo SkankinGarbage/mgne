@@ -5,13 +5,14 @@ public class UnitCellView : MonoBehaviour {
 
     [SerializeField] private Text nameText = null;
     [SerializeField] private Text hpText = null;
+    [SerializeField] private Text mhpText = null;
     [SerializeField] private Text raceStatusText = null;
     [SerializeField] private FieldSpriteImage sprite = null;
 
     public FieldSpriteImage Sprite { get => sprite; }
 
     public void Populate(Unit unit, PointerLayer pointers = null) {
-        if (name != null) {
+        if (nameText != null) {
             nameText.text = unit.Name;
         }
         if (raceStatusText != null) {
@@ -22,12 +23,20 @@ public class UnitCellView : MonoBehaviour {
                 raceStatusText.text = unit.Status.ToString();
             }
         } else if (hpText != null) {
-            if (unit.Status == null || unit.IsDead) {
-                hpText.text = unit[StatTag.HP] + "/" + unit[StatTag.MHP];
+            if (mhpText != null) {
+                mhpText.text = "/" + unit[StatTag.MHP];
+                if (unit.Status == null || unit.IsDead) {
+                    hpText.text = unit[StatTag.HP].ToString();
+                } else {
+                    hpText.text = unit.Status.Data.tag;
+                }
             } else {
-                hpText.text = unit.Status.ToString() + "/" + unit[StatTag.MHP];
+                if (unit.Status == null || unit.IsDead) {
+                    hpText.text = unit[StatTag.HP] + "/" + unit[StatTag.MHP];
+                } else {
+                    hpText.text = unit.Status.ToString() + "/" + unit[StatTag.MHP];
+                }
             }
-            hpText.text = unit[StatTag.HP] + "/" + unit[StatTag.MHP];
         }
         sprite.Populate(unit);
 
