@@ -23,13 +23,22 @@ public class Battle {
     private Dictionary<Unit, MutationManager> mutationManagers;
     private List<TempStats> boosts;
 
+    private Party BackupPlayer, BackupEnemy;
+
     public Battle(PartyData enemy) {
         Player = Global.Instance().Party;
+        Initialize(enemy);
+    }
+
+    private void Initialize(PartyData enemy) {
         Enemy = new Party(enemy);
 
         boosts = new List<TempStats>();
         defenses = new Dictionary<Unit, List<EffectDefend>>();
         mutationManagers = new Dictionary<Unit, MutationManager>();
+
+        BackupPlayer = Player.Copy();
+        BackupEnemy = Enemy.Copy();
     }
 
     #region Model
@@ -84,6 +93,12 @@ public class Battle {
     /// <returns>True if got away successfully</returns>
     private bool TryEscapeChance() {
         return true; // lol
+    }
+
+    public void Reset() {
+        Player = BackupPlayer.Copy();
+        Enemy = BackupEnemy.Copy();
+        View.Populate(this);
     }
 
     #endregion
@@ -190,10 +205,14 @@ public class Battle {
                 await DoMutationsForUnitAsync(unit);
             }
             await DoMeatAsync();
+            await View.CloseRoutine();
+        } else {
+            await WriteLineAsync("");
+            await WriteLineAsync("");
+            await WriteLineAsync(Player.Leader.Name + " is defeated...");
+            await View.retry.RetryAsync(this);
         }
-
-        await View.CloseRoutine();
-        // TODO: handle death + retry
+        
     }
 
     /// <returns>True if succeeded, false if canceled</returns>

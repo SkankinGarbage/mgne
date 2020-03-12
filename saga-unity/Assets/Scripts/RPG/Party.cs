@@ -37,6 +37,18 @@ public class Party : IEnumerable<Unit> {
         }
     }
 
+    public Party Copy() {
+        Party copy = new Party();
+        foreach (var group in Groups) {
+            var newGroup = new List<Unit>();
+            foreach (var unit in group) {
+                newGroup.Add(unit.Copy());
+            }
+            copy.Groups.Add(newGroup);
+        }
+        return copy;
+    }
+
     public bool Contains(Unit toFind) {
         return IndexFor(toFind) >= 0;
     }

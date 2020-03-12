@@ -16,6 +16,7 @@ public class BattleView : FullScreenMenuView {
     [SerializeField] public ListSelector eatYesNoSelector = null;
     [SerializeField] public DynamicListSelector eaterSelector = null;
     [SerializeField] public AnimFrameSpritePool framePool = null;
+    [SerializeField] public RetryView retry = null;
     [SerializeField] private UnitList unitList = null;
     [SerializeField] private ListView dollList = null;
     [SerializeField] private ListView battlerList = null;

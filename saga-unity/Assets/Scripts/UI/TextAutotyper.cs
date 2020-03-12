@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class TextAutotyper : MonoBehaviour, IInputListener {
 
-    [SerializeField] protected Text textbox;
+    [SerializeField] public Text textbox;
     [SerializeField] protected float charsPerSecond = 120f;
     [SerializeField] protected GameObject advanceArrow;
     [SerializeField] protected bool speedUpWhenHurried;
@@ -31,7 +31,7 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
         return true;
     }
 
-    protected IEnumerator TypeRoutine(string text, bool waitForConfirm = true) {
+    public IEnumerator TypeRoutine(string text, bool waitForConfirm = true) {
         hurried = false; 
         float elapsed = 0.0f;
         float total = (text.Length - typingStartIndex) / charsPerSecond;

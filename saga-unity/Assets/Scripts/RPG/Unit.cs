@@ -80,6 +80,10 @@ public class Unit {
         }
     }
 
+    public Unit Copy() {
+        return new Unit(new SerializedUnit(this));
+    }
+
     public void RestoreHP() {
         Heal((int) Stats[StatTag.MHP]);
     }
