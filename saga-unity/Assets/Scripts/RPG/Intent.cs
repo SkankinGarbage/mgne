@@ -72,7 +72,11 @@ public class Intent {
         if (Actor.IsConfused) {
             await Randomize();
         }
-        if (!Targets.Any(unit => unit.IsAlive) && !Item.Effect.CanTargetDead()) {
+
+        if (!Item.Effect.CanTargetDead()) {
+            Targets = new List<Unit>(Targets.Where(unit => unit.IsAlive));
+        }
+        if (Targets.Count == 0) {
             await Battle.View.PrintDoesNothingRoutine(Actor);
             return;
         }

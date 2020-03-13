@@ -96,7 +96,10 @@ public class Battle {
     }
 
     public void Reset() {
+        IsDone = false;
+        View.PopulateForFightRun();
         Player = BackupPlayer.Copy();
+        Global.Instance().Data.Party = Player;
         Enemy = BackupEnemy.Copy();
         View.Populate(this);
     }
@@ -129,9 +132,10 @@ public class Battle {
             }
             if (!IsDone) {
                 await UpdateForEndOfRoundAsync();
+            } else {
+                await EndCombatAsync();
             }
         }
-        await EndCombatAsync();
     }
 
     /// <returns>True if succeeded, false if canceled</returns>
@@ -209,13 +213,13 @@ public class Battle {
             }
             await DoMeatAsync();
             await View.CloseRoutine();
-        } else {
+        } else if (IsDefeat) {
             await WriteLineAsync("");
             await WriteLineAsync("");
             await WriteLineAsync(Player.Leader.Name + " is defeated...");
+            await Global.Instance().Input.AwaitConfirm();
             await View.retry.RetryAsync(this);
         }
-        
     }
 
     /// <returns>True if succeeded, false if canceled</returns>

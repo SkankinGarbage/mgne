@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(CanvasGroup))]
 public class TextAutotyper : MonoBehaviour, IInputListener {
 
     [SerializeField] public Text textbox;

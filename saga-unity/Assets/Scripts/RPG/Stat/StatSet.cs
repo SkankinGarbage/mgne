@@ -16,8 +16,7 @@ public class StatSet : ISerializationCallbackReceiver {
         InitNewSet();
     }
 
-    public StatSet(StatSet other) {
-        stats = new Dictionary<StatTag, float>();
+    public StatSet(StatSet other) : this() {
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
             Stat stat = Stat.Get(tag);
             if (stat == null) {
@@ -27,7 +26,7 @@ public class StatSet : ISerializationCallbackReceiver {
         }
     }
 
-    public StatSet(SerializedStatSet serialized) {
+    public StatSet(SerializedStatSet serialized) : this() {
         stats = new Dictionary<StatTag, float>();
         this[StatTag.STR] = serialized.str;
         this[StatTag.DEF] = serialized.def;
@@ -45,7 +44,7 @@ public class StatSet : ISerializationCallbackReceiver {
         }
     }
 
-    private StatSet(StatDictionary stats) {
+    private StatSet(StatDictionary stats) : this() {
         Dictionary<string, float> statStrings = stats.ToDictionary();
         this.stats = new Dictionary<StatTag, float>();
         foreach (var stat in statStrings) {
@@ -82,7 +81,7 @@ public class StatSet : ISerializationCallbackReceiver {
     }
 
     public float this[StatTag tag] {
-        get { return stats[tag]; }
+        get { return stats.ContainsKey(tag) ? stats[tag] : 0; }
         set { stats[tag] = value; }
     }
 
