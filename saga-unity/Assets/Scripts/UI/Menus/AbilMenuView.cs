@@ -36,7 +36,7 @@ public class AbilMenuView : FullScreenMenuView {
         while (true) {
             Populate(unit);
             var slot = await SelectSlotAsync(unit);
-            if (slot == -1) {
+            if (slot < 0) {
                 break;
             }
             var item = unit.Equipment[slot];

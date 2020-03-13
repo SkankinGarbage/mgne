@@ -35,7 +35,7 @@ public class OrderMenuView : FullScreenMenuView {
             Populate();
             UpdateTitleCopy(false);
             int slot1 = await unitSelector.SelectItemAsync(null, true);
-            if (slot1 == -1) {
+            if (slot1 < 0) {
                 break;
             }
             UpdateTitleCopy(true);

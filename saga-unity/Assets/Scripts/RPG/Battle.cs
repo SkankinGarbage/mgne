@@ -115,7 +115,10 @@ public class Battle {
             View.battlebox.Clear();
             InitializeIntents();
             View.PopulateForFightRun();
-            var fightRunCommand = await View.fightRunMenu.SelectCommandAsync();
+            string fightRunCommand = null;
+            do {
+                fightRunCommand = await View.fightRunMenu.SelectCommandAsync();
+            } while (fightRunCommand == null);
             switch (fightRunCommand) {
                 case "FIGHT":
                     await FightAsync();
@@ -223,7 +226,7 @@ public class Battle {
         do {
             var slot = await selector.SelectItemAsync(null, true);
             selector.ClearSelection();
-            if (slot == -1) {
+            if (slot < 0) {
                 return false;
             }
             intent.SetItem(intent.Actor.Equipment[slot]);

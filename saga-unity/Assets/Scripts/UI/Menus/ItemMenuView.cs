@@ -40,7 +40,7 @@ public class ItemMenuView : FullScreenMenuView {
         while (true) {
             Populate();
             int slot = await inventory.Selector.SelectItemAsync(x => description.text = items[x]?.Data?.itemDescription, true);
-            if (slot == -1) {
+            if (slot < 0) {
                 break;
             }
             CombatItem item = items[slot];

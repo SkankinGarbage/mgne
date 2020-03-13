@@ -16,7 +16,7 @@ public class UnitList : MonoBehaviour {
 
     public async Task<Unit> SelectUnitAsync(Party party) {
         var slot = await selector.SelectItemAsync();
-        if (slot == -1) return null;
+        if (slot < 0) return null;
         return party[slot];
     }
 

@@ -31,7 +31,7 @@ public class EquipMenuView : FullScreenMenuView {
             Populate(unit);
 
             var equipSlot = await equipList.Selector.SelectItemAsync(null, true);
-            if (equipSlot == -1) {
+            if (equipSlot < 0) {
                 break;
             }
             if (unit.Equipment.IsSlotReservedAt(equipSlot)) {
@@ -40,7 +40,7 @@ public class EquipMenuView : FullScreenMenuView {
             }
 
             var inventorySlot = await inventoryList.Selector.SelectItemAsync();
-            if (inventorySlot == -1) {
+            if (inventorySlot < 0) {
                 continue;
             }
 

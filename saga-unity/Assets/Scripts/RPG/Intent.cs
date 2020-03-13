@@ -30,7 +30,9 @@ public class Intent {
     }
 
     public void OnRoundStart() {
-        Item.Effect.OnRoundStart(this);
+        if (Item != null) {
+            Item.Effect.OnRoundStart(this);
+        }
     }
 
     public async Task Randomize() {

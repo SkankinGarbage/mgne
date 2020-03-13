@@ -7,5 +7,6 @@ public class BattlerDoll : MonoBehaviour {
 
     public void Populate(Unit unit) {
         image.Populate(unit.FieldSpriteTag);
+        image.animates = unit.IsAlive;
     }
 }
