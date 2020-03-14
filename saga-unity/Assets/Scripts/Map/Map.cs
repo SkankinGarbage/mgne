@@ -26,8 +26,6 @@ public abstract class Map : MonoBehaviour {
     public ObjectLayer objectLayer;
 
     public string InternalName { get; set; } = "test"; // hack for dev
-    public string BgmKey { get; protected set; }
-    public string MapName { get; protected set; }
 
     // true if the tile in question is passable at x,y
     private Dictionary<Tilemap, short[,]> passabilityMap;
@@ -59,6 +57,9 @@ public abstract class Map : MonoBehaviour {
     protected abstract Vector2Int InternalGetSize();
     public int Width { get => size.x; }
     public int Height { get => size.y; }
+
+    public abstract string MapName { get; }
+    public abstract string BgmKey { get; }
 
     #endregion
 

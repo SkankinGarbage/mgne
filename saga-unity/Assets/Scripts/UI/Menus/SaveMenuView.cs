@@ -26,7 +26,7 @@ public class SaveMenuView : FullScreenMenuView {
         while (true) {
             Populate(mode);
             var slot = await CellSelector.SelectItemAsync(null, true);
-            if (slot == -1) {
+            if (slot < 0) {
                 break;
             }
             

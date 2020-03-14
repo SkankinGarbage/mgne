@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using SuperTiled2Unity;
 using System.Collections.Generic;
 using UnityEngine.Tilemaps;
@@ -13,6 +12,9 @@ public class TsxMap : Map {
     private static Dictionary<TileBase, TsxTile> instantiatedTiles 
         = new Dictionary<TileBase, TsxTile>();
 
+    public override string MapName { get => GetProperty(PropertyName); }
+    public override string BgmKey { get => GetProperty(PropertyBgmKey); }
+
     private SuperMap _tsx;
     public SuperMap Tsx {
         get {
@@ -21,12 +23,6 @@ public class TsxMap : Map {
             }
             return _tsx;
         }
-    }
-
-    public override void Start() {
-        base.Start();
-        BgmKey = GetProperty(PropertyBgmKey);
-        MapName = GetProperty(PropertyName);
     }
 
     public override PropertiedTile TileAt(Tilemap layer, int x, int y) {

@@ -31,9 +31,6 @@ public class GameData {
     public void DeductGP(int gp) { GP -= gp; }
 
     public GameData() {
-        GP = 999;
-        LocationName = "Debug";
-        
         Inventory = new Inventory(InventoryCapacity);
         Collectables = new CollectableInventory();
         Variables = new Dictionary<string, int>();
