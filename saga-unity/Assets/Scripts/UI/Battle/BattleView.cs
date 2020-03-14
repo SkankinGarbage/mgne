@@ -135,9 +135,10 @@ public class BattleView : FullScreenMenuView {
     }
 
     public IEnumerator PlayBackDamageRoutine(Unit target, int damage) {
-        yield return WriteLineRoutine(BattleBox.Tab + target.Name + " takes " + damage + " damage.");
-        // TODO
-        yield return null; 
+        yield return CoUtils.RunParallel(new IEnumerator[] {
+            WriteLineRoutine(BattleBox.Tab + target.Name + " takes " + damage + " damage."),
+            AnimateDamageRoutine(target, damage),
+        }, this);
     }
 
     public IEnumerator ShowMutationMenuRoutine(List<Mutation> mutations) {
@@ -174,6 +175,16 @@ public class BattleView : FullScreenMenuView {
     public IEnumerator HideEaterMenuRoutine() {
         eaterSelector.gameObject.SetActive(false);
         yield return null;
+    }
+
+    public IEnumerator AnimateDamageRoutine(Unit target, int damage) {
+        foreach (Transform cell in dollList.GetCells()) {
+            var battler = cell.GetComponent<BattlerDoll>();
+            if (battler.Unit == target) {
+                yield return battler.TakeDamageRoutine(damage);
+                yield break;
+            }
+        }
     }
 
     public override IEnumerator CloseRoutine() {
