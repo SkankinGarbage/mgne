@@ -12,13 +12,14 @@ ScriptedImporter:
   errors: []
   warnings:
   - Tileset 'welp' is an embedded tileset. Exported tilesets are preferred.
+  - Pixels Per Unit mismatch between map (100) and tileset 'tilesets/upper.tsx' (16)
   missingSortingLayers: []
   missingLayers: []
   missingTags: []
   importerVersion: 21
   pixelsPerUnit: 16
   edgesPerEllipse: 32
-  numberOfObjectsImported: 16
+  numberOfObjectsImported: 17
   tilesAsObjects: 0
   sortingMode: 0
   isIsometric: 0

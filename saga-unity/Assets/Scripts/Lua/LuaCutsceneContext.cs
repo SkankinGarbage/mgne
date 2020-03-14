@@ -20,8 +20,8 @@ public class LuaCutsceneContext : LuaContext {
         }
     }
 
-    public override void Awake() {
-        base.Awake();
+    public override void Initialize() {
+        base.Initialize();
         LoadDefines(DefinesPath);
     }
 
@@ -96,10 +96,10 @@ public class LuaCutsceneContext : LuaContext {
         var speakerString = speaker.IsNil() ? null : speaker.String;
         var textString = text.IsNil() ? null : text.String;
         if (speaker.String.Contains(":")) {
-            textString = speakerString.Split(':')[1].Substring(1);
+            textString = speakerString.Split(':')[1].Substring(2);
             speakerString = speakerString.Split(':')[0];
         }
-        RunTextboxRoutineFromLua(MapOverlayUI.Instance().textbox.SpeakRoutine(speaker.String, text.IsNil() ? null : text.String));
+        RunTextboxRoutineFromLua(MapOverlayUI.Instance().textbox.SpeakRoutine(speakerString, textString));
     }
 
     private void Walk(DynValue eventLua, DynValue steps, DynValue directionLua, DynValue waitLua) {
@@ -181,7 +181,8 @@ public class LuaCutsceneContext : LuaContext {
             fade = IndexDatabase.Instance().Fades.GetData(typeString);
         }
         lastFade = fade;
-        StartCoroutine(Global.Instance().Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(fade, invert));
+        var globals = Global.Instance();
+        globals.StartCoroutine(globals.Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(fade, invert));
     }
 
     private void Battle(DynValue partyLua, DynValue bgmLua) {

@@ -19,7 +19,7 @@ public class LuaMapEvent {
     public LuaMapEvent(MapEvent mapEvent) {
         this.mapEvent = mapEvent;
         values = new Dictionary<string, DynValue>();
-        context = mapEvent.GetComponent<LuaContext>();
+        context = mapEvent.GetComponent<LuaComponent>().Context;
         luaValue = context.Marshal(this);
         context.lua.Globals["this"] = luaValue;
     }

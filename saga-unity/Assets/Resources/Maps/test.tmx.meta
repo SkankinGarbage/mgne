@@ -12,6 +12,8 @@ ScriptedImporter:
   errors: []
   warnings:
   - Tileset 'welp' is an embedded tileset. Exported tilesets are preferred.
+  - Pixels Per Unit mismatch between map (100) and tileset 'tilesets/lower.tsx' (16)
+  - Pixels Per Unit mismatch between map (100) and tileset 'tilesets/upper.tsx' (16)
   missingSortingLayers: []
   missingLayers: []
   missingTags: []

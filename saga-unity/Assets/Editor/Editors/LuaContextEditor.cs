@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEditor;
 
-[CustomEditor(typeof(LuaCutsceneContext))]
+[CustomEditor(typeof(LuaComponent))]
 public class LuaContextEditor : Editor {
 
     private string customLua;
@@ -10,9 +10,10 @@ public class LuaContextEditor : Editor {
     public override void OnInspectorGUI() {
         base.OnInspectorGUI();
 
-        LuaContext context = (LuaContext)target;
+        LuaComponent component = (LuaComponent)target;
+        LuaContext context = component.Context;
         
-        if (Application.IsPlaying(context)) {
+        if (Application.IsPlaying(component)) {
             GUILayout.Space(12);
 
             if (!context.IsRunning()) {
@@ -28,7 +29,7 @@ public class LuaContextEditor : Editor {
             if (!context.IsRunning()) {
                 if (GUILayout.Button("Run")) {
                     LuaScript script = new LuaScript(context, customLua);
-                    context.StartCoroutine(script.RunRoutine());
+                    component.StartCoroutine(script.RunRoutine());
                 }
             } else {
                 EditorGUI.EndDisabledGroup();
@@ -41,7 +42,8 @@ public class LuaContextEditor : Editor {
     }
 
     public override bool RequiresConstantRepaint() {
-        LuaContext context = (LuaContext)target;
+        LuaComponent component = (LuaComponent)target;
+        LuaContext context = component.Context;
         return base.RequiresConstantRepaint() || context.IsRunning();
     }
 }

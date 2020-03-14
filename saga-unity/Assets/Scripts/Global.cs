@@ -47,8 +47,6 @@ public class Global : MonoBehaviour {
     }
 
     private void InstantiateManagers() {
-        gameObject.AddComponent<LuaCutsceneContext>();
-
         Dispatch = gameObject.AddComponent<Dispatch>();
         Serialization = gameObject.AddComponent<SerializationManager>();
         Input = gameObject.AddComponent<InputManager>();

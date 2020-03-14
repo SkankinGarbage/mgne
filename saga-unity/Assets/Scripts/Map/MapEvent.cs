@@ -6,12 +6,10 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-/**
- * The generic "thing on the map" class for MGNT.
- */
+
 [RequireComponent(typeof(Dispatch))]
-[RequireComponent(typeof(LuaCutsceneContext))]
 [RequireComponent(typeof(SuperCustomProperties))]
+[RequireComponent(typeof(LuaComponent))]
 [DisallowMultipleComponent]
 public abstract class MapEvent : MonoBehaviour {
     
@@ -75,6 +73,16 @@ public abstract class MapEvent : MonoBehaviour {
                 }
             }
             return null;
+        }
+    }
+
+    private LuaContext context;
+    protected LuaContext Context {
+        get {
+            if (context == null) {
+                context = GetComponent<LuaComponent>().Context;
+            }
+            return context;
         }
     }
 
@@ -260,8 +268,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     private void CheckAutostart(bool enabled) {
-        LuaContext context = GetComponent<LuaContext>();
-        if (enabled && !context.IsRunning()) {
+        if (enabled && !Context.IsRunning()) {
             LuaObject.Run(PropertyLuaAutostart);
         }
     }
@@ -289,7 +296,7 @@ public abstract class MapEvent : MonoBehaviour {
         if (lua == null || lua.Length == 0) {
             return null;
         } else {
-            return new LuaScript(GetComponent<LuaContext>(), lua);
+            return new LuaScript(Context, lua);
         }
     }
 
@@ -297,7 +304,7 @@ public abstract class MapEvent : MonoBehaviour {
         if (lua == null || lua.Length == 0) {
             return null;
         } else {
-           return GetComponent<LuaContext>().CreateCondition(lua);
+           return Context.CreateCondition(lua);
         }
     }
 

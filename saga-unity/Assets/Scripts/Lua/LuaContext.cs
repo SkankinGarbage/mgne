@@ -3,14 +3,12 @@ using System.Collections;
 using MoonSharp.Interpreter;
 using Coroutine = MoonSharp.Interpreter.Coroutine;
 using System;
-using UnityEngine.Assertions;
-using System.IO;
 using System.Collections.Generic;
 
 /// <summary>
 ///  A wrapper around Script that represents an environment where a script can execute.
 /// </summary>
-public class LuaContext : MonoBehaviour {
+public class LuaContext {
     
     private const string DefinesPath = "Lua/Defines/GlobalDefines";
     private const string ScenesPath = "Lua/Scenes";
@@ -30,7 +28,7 @@ public class LuaContext : MonoBehaviour {
     private Stack<LuaScript> activeScripts = new Stack<LuaScript>();
     private bool forceKilled;
 
-    public virtual void Awake() {
+    public virtual void Initialize() {
         LoadDefines(DefinesPath);
         AssignGlobals();
     }
