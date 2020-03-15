@@ -55,11 +55,36 @@ public abstract class Map : MonoBehaviour {
         }
     }
     protected abstract Vector2Int InternalGetSize();
+
+    protected bool triedEncounterSet;
+    protected BaseEncounterSet encounterSet;
+    protected BaseEncounterSet EncounterSet {
+        get {
+            if (!triedEncounterSet) {
+                triedEncounterSet = true;
+                var key = EncounterKey;
+                if (key != null) {
+                    var data = IndexDatabase.Instance().EncounterSets.GetData(EncounterKey);
+                    encounterSet = new EncounterSet(data);
+                } else {
+                    key = TerrainEncounterKey;
+                    if (key != null) {
+                        var data = IndexDatabase.Instance().TerrainEncounterSets.GetData(EncounterKey);
+                        encounterSet = new TerrainEncounterSet(data);
+                    }
+                }
+            }
+            return encounterSet;
+        }
+    }
+
     public int Width { get => size.x; }
     public int Height { get => size.y; }
 
     public abstract string MapName { get; }
     public abstract string BgmKey { get; }
+    public abstract string EncounterKey { get; }
+    public abstract string TerrainEncounterKey { get; }
 
     #endregion
 
@@ -173,6 +198,12 @@ public abstract class Map : MonoBehaviour {
     public void OnStepStarted() {
         foreach (var mapEvent in GetEvents<MapEvent>()) {
             mapEvent.OnStepStarted();
+        }
+    }
+
+    public void OnStepEnded() {
+        if (EncounterSet != null) {
+            EncounterSet.CheckForEncounterOnStep();
         }
     }
 

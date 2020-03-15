@@ -16,6 +16,8 @@ public class IndexDatabase : ScriptableObject {
     public MeatGroupIndex MeatGroups;
     public ShopIndex Shops;
     public CollectableIndex Collectables;
+    public EncounterSetIndex EncounterSets;
+    public TerrainEncounterSetIndex TerrainEncounterSets;
 
     public static IndexDatabase Instance() {
         return Resources.Load<IndexDatabase>("Database/Database");

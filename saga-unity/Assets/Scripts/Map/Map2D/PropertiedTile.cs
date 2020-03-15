@@ -6,6 +6,8 @@ public abstract class PropertiedTile {
 
     public abstract bool EqualsTile(TileBase tile);
 
+    public abstract int TerrainId { get; }
+
     protected abstract string GetProperty(string propertyName);
 
     #endregion

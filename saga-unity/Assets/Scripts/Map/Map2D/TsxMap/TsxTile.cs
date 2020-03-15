@@ -7,6 +7,8 @@ public class TsxTile : PropertiedTile {
     private SuperTile tile;
     private Dictionary<string, string> properties;
 
+    public override int TerrainId => tile.m_TileId;
+
     public TsxTile(SuperTile tile) {
         this.tile = tile;
         properties = new Dictionary<string, string>();

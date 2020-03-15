@@ -34,6 +34,8 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
         }
     }
 
+    public Map Map => Parent.Map;
+
     public void Start() {
         Global.Instance().Maps.Avatar = this;
         Global.Instance().Input.PushListener(this);
@@ -152,7 +154,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
 
         if (passable) {
             WantsToTrack = true;
-            StartCoroutine(CoUtils.RunParallel(new System.Collections.IEnumerator[] {
+            StartCoroutine(CoUtils.RunParallel(new IEnumerator[] {
                 CoUtils.RunWithCallback(Parent.StepRoutine(dir), () => {
                     foreach (var targetEvent in toCollide) {
                         if (targetEvent.IsSwitchEnabled) {
@@ -164,6 +166,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
                             targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventStep, this);
                         }
                     }
+                    Global.Instance().Maps.ActiveMap.OnStepEnded();
                 }),
                 OnStepStartRoutine(),
             }, this));

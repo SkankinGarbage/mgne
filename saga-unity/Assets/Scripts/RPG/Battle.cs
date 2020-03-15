@@ -25,14 +25,13 @@ public class Battle {
 
     private Party BackupPlayer, BackupEnemy;
 
-    public Battle(PartyData enemy) {
+    public Battle(Party enemy) {
         Player = Global.Instance().Party;
         Initialize(enemy);
     }
 
-    private void Initialize(PartyData enemy) {
-        Enemy = new Party(enemy);
-
+    private void Initialize(Party enemy) {
+        Enemy = enemy;
         boosts = new List<TempStats>();
         defenses = new Dictionary<Unit, List<EffectDefend>>();
         mutationManagers = new Dictionary<Unit, MutationManager>();

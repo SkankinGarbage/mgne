@@ -27,13 +27,30 @@ public class Party : IEnumerable<Unit> {
         Groups = new List<List<Unit>>();
     }
 
+    public Party(EncounterData encounter) {
+        foreach (var member in encounter.members) {
+            var group = new List<Unit>();
+            int amount;
+            if (member.amount.Contains('-')) {
+                var split = member.amount.Split('-');
+                amount = Random.Range(int.Parse(split[0]), int.Parse(split[1]) + 1);
+            } else {
+                amount = int.Parse(member.amount);
+            }
+            for (int i = 0; i < amount; i += 1) {
+                group.Add(new Unit(member.enemy));
+            }
+            Groups.Add(group);
+        }
+    }
+
     public Party(PartyData data) : this() {
         foreach (var entry in data.members) {
-            var Group = new List<Unit>();
+            var group = new List<Unit>();
             for (var i = 0; i < entry.count; i += 1) {
-                Group.Add(new Unit(entry.monster));
+                group.Add(new Unit(entry.monster));
             }
-            Groups.Add(Group);
+            Groups.Add(group);
         }
     }
 

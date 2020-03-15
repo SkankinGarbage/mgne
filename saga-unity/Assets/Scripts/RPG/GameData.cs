@@ -15,7 +15,7 @@ public class GameData {
     [JsonProperty] public CollectableInventory Collectables { get; private set; }
     [JsonProperty] public int GP { get; private set; }
     [JsonProperty] public string LocationName { get; private set; }
-    [JsonProperty] public string CurrentBGMKey { get; private set; }
+    [JsonProperty] public string BattleBGMKey { get; private set; } = "battle1";
 
     [JsonProperty] public string MapPath { get; set; }
     [JsonProperty] public Vector2Int MapLocation { get; set; }
@@ -39,7 +39,6 @@ public class GameData {
 
     public void OnTeleportTo(Map map) {
         LocationName = map.MapName;
-        CurrentBGMKey = map.BgmKey;
     }
 
     public bool GetSwitch(string switchName) {
@@ -66,5 +65,9 @@ public class GameData {
 
     public void DecrementVariable(string variableName) {
         Variables[variableName] = GetVariable(variableName) - 1;
+    }
+
+    public void SetVariable(string variableName, int value) {
+        Variables[variableName] = value;
     }
 }

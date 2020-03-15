@@ -8,12 +8,16 @@ public class TsxMap : Map {
 
     private const string PropertyBgmKey = "bgm";
     private const string PropertyName = "name";
+    private const string PropertyEncounter = "encounter";
+    private const string PropertyTerrainEncounter = "terrain_encounter";
 
     private static Dictionary<TileBase, TsxTile> instantiatedTiles 
         = new Dictionary<TileBase, TsxTile>();
 
     public override string MapName { get => GetProperty(PropertyName); }
     public override string BgmKey { get => GetProperty(PropertyBgmKey); }
+    public override string EncounterKey { get => GetProperty(PropertyEncounter); }
+    public override string TerrainEncounterKey { get => GetProperty(PropertyTerrainEncounter); }
 
     private SuperMap _tsx;
     public SuperMap Tsx {
