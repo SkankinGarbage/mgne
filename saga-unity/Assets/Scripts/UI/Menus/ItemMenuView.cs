@@ -3,10 +3,10 @@ using UnityEngine.UI;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-public class ItemMenuView : FullScreenMenuView {
+public class ItemMenuView : FullScreenMenuView, IItemUseableMenu {
 
     [SerializeField] private CombatItemList inventory = null;
-    [SerializeField] private GenericSelector unitSelector = null;
+    [SerializeField] private UnitList unitSelector = null;
     [SerializeField] private ListView unitCells = null;
     [SerializeField] private ListSelector useDropMenu = null;
     [SerializeField] private PointerLayer pointers = null;
@@ -55,7 +55,7 @@ public class ItemMenuView : FullScreenMenuView {
                 case "Use":
                     if (item != null) {
                         if (item.IsMapUseable) {
-                            // await item.OnMapUseDeferred(this);
+                            await item.UseOnMapAsync(this, null);
                         } else {
                             AudioManager.PlayFail();
                             await Task.Delay(100);
@@ -72,5 +72,25 @@ public class ItemMenuView : FullScreenMenuView {
         }
 
         await CloseRoutine();
+    }
+
+    public Task<Unit> SelectUnitTargetAsync() {
+        return unitSelector.SelectUnitTargetAsync();
+    }
+
+    public Task<bool> ConfirmSelectionAsync() {
+        return unitSelector.selector.ConfirmSelectionAsync();
+    }
+
+    public void SelectAll() {
+        unitSelector.selector.SelectAll();
+    }
+
+    public bool IsActive() {
+        return unitSelector.gameObject.activeSelf;
+    }
+
+    public void SetActive(bool active) {
+        unitSelector.gameObject.SetActive(active);
     }
 }

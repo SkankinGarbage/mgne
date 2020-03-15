@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="76" height="70" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="19">
+ <properties>
+  <property name="battle_bgm" value="world1_battle"/>
+  <property name="bgm" value="world1"/>
+  <property name="name" value="Home World"/>
+  <property name="terrainEncounter" value="terrain_world1"/>
+ </properties>
+ <tileset firstgid="1" source="../../../../../saga/res/maps/tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../../../../../saga/res/maps/tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="76" height="70">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2WzW4cMQyDk0fzsX2Ktqeeir7/qUMgH0AQtsfe3flZ1AeDkixLFKNJ8v3j4+P7gef3gbWP5H1V7aXX3D4uvZZeR36ra7/Wfq39mtuBpdd5en1u/1/ptDR/9vfXt0rtWqzV/05xdBL/2hHXZ/Tymsxdi3F3d3TuaUtLxaQXus7Mk/Va/kzNK3PRozaH7riXXuTM6MabEbxSh5HerRnQCV2UJ73YMeLP9Kj1Hql3h5zk3tJDes3yzdo9f7b2Vfk5g+8XtnL8mxzhmnX3/L2acHHce/Pq+94M4uX3rpfi8MYGPe7vR+zefNR17OUfddeaQ7x0p75C12uEC+9b9T1Oj15d1wm7l3/EnXNOW5y85yO/v5gra7tPD2L4idRyzJwzfPWHKwgn7/+IXryv9VAv7kH61+7g5Mi7s9F5yhan5PCsXq5Z1na/bL3z+L3sGr/MOdp3zcQnOT2qV61Wa5baXhX72cEJbNU5K56aiSt8Z/XSTJxR/t6fN/SXjw2ScyXCWbOKF9xm9NJbzsws7Bd9QWrgC4ndAT+/5nVeo3rxVnjULM7rqB4zdWuzjug1q9Xe3LrnwD994lfiZ+yGtNrTS284o9yzT/rli4fQz2j9s/LEW8f79fQiP9/4+7TLlwYez/f8PvOcu9rJvaWX8jizs5QvzYS1GvzteUfdat8kMwpntcr8Xo2r9fI5Wzbz+By+Y/6O3BkstluyVY+YbGkE3kEvcYCTeI0c9PLcGY0yt2x9iXlNbPg5kn8WJhf5aAcvchKlF7EZvmV71zteS3nqAZdEzz3aFo88rhV25uC7XsT2OJcdrXRPrcTUyv29vq+6r3FCJzBz8PkexYVYovPUXRk8WSd9tKK39znadi5o5Oj3bksvjsd7dnmBXmiVeLRO1Pf5kgO+56Rd+y4zx/2yo5nntmx4gcxyFiYveGRcft7N6lWrOROjf+JZWqnPDN/MPUqvHq/UCk5natbjB58aul7lSe1r9UdiZ+tEvxFumZN6lRdp9sjPjznOxNQDn28AH3S9iD2CWZ+ZZ2rx5goc5YleyVHv0SAxa3NPXD71iI1gsXe8PxvFUz3B7N/Sizdo0UJ0yHvvQ84elhvo5bxlSx8Ovs/h+anBjE8dr71n31Uv8UYzR8WZs4a6r2nmMex8r7etU7Y7P/n2TN85qq/0UUzoPIh7LG1qSZPa+bHFf0XdVg1qCckpm62DfwXCBxQHt+E0ohe5Lfyz1f4b82r+POrPadW6Ki5e6g0/MPlILz95/wq/bD1Gzit6PVpD+oy8Zb/0nckeeTOTM6KTcmZqHpErvTi9+jW98h1+DaVzrz53ZctrHXLugJoxefjc6KUY+5Vv0qdeK849WEIrxRUDscm/EmszeUwa9Y64t3bI67RmlBY6ugfTbr09O655dHp92S/Q/19QTG+f0cv7u149TlfdOdfk4DulPPdbdtbo1c9c+e+ul/ZG2jiyX8TdTw1m9cr3d/N9Hrdb+7MXz/m8Zt69o695tB/i7rbvjtu1PfP9Sj2p/Y7atDgzLyjdXCO3lZM+7zKePnktHq+O/9y4nnU0K73cViz92Tzyj0bxXGdpsHZg7cDagbUDawfWDqwdWDuwdmDtwP+4A/8AN4vkDSBTAAA=
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="76" height="70">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3Zuw6CMBQAUEz0/7/J1dXJ1cRfcJZGGhoGQiEIXA8D0NDH7WkDTWkaBwECBAgQIECAAAECBMYFruOPPSVAgACBCQKXU9Pc2nzldUKxzbI8Nmv523CySt+f8rpxSLtuPn+r312UOb3roAV3GIF7F+m5fY+lI6e/KWcCywVey6tQAwECBAjsQMAadAeD8KMQfLvnQXOb56YUgTUF0r6To05g6z3DumjlJkCAAAECBAjEEbAOizOWetIL2E/sLaLd+Z8cbUT1J6LAM2Kn9InAAQWs8+sHbfj+Gqbra4xfYq159g//Pofza5iOP3v0cA2BPI/yNbVR3q/RpjrjCZTv9vK+pqdzy9W0IS8BAgQIECBAgAABAgQIEFgq8AFjR56SIFMAAA==
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="Hometown" type="Event" x="352" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/parish.tmx', 26, 33, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="2" name="Pass" type="Event" x="336" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/pass01.tmx', 38, 10, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="3" name="Pass" type="Event" x="368" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="play('world1/pass_teleport.lua')"/>
+   </properties>
+  </object>
+  <object id="4" name="autostart" type="Event" x="336" y="160" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('borg4')"/>
+    <property name="onEnter" value="play('world1/borg04.lua')"/>
+   </properties>
+  </object>
+  <object id="5" name="River Town" type="Event" x="400" y="496" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/rivertown.tmx', 24, 8, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="6" name="River Town" type="Event" x="400" y="704" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/shrine01.tmx', 13, 39, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="7" name="Plains Town" type="Event" x="928" y="672" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/plainstown.tmx', 14, 25, 'EAST')"/>
+   </properties>
+  </object>
+  <object id="8" name="Southern Stronghold" type="Event" x="864" y="832" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/hq01.tmx', 11, 8, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="9" name="Mountain Town" type="Event" x="800" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/mountaintown.tmx', 28, 35, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="10" name="Cave of Hero" type="Event" x="928" y="320" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/herocave01.tmx', 18, 30, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="11" name="Castle of Hero" type="Event" x="944" y="288" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/fortress_f1.tmx', 13, 20, 'EAST')"/>
+   </properties>
+  </object>
+  <object id="12" name="Oracle's Palace" type="Event" x="912" y="288" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/oracle_f1.tmx', 20, 13, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="13" name="Mirror Shrine" type="Event" x="976" y="288" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/mirror.tmx', 30, 40, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="14" name="Gate" type="Event" x="944" y="256" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/gate.tmx', 26, 32, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="15" name="Gate" type="Event" x="912" y="224" width="80" height="32">
+   <properties>
+    <property name="onCollide" value="teleport('hero/gate.tmx', 26, 32, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="16" name="Gate" type="Event" x="976" y="256" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/gate.tmx', 26, 32, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="17" name="Gate" type="Event" x="912" y="256" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('hero/gate.tmx', 26, 32, 'NORTH')"/>
+   </properties>
+  </object>
+  <object id="18" name="block" type="Event" x="960" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_mountain"/>
+    <property name="hide" value="return getSwitch('hero_done')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

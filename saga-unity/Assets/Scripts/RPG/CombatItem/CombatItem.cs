@@ -54,7 +54,7 @@ public class CombatItem {
         UsesRemaining = Data.uses;
     }
 
-    public async Task UseOnMapAsync(AbilMenuView menu, Unit user) {
+    public async Task UseOnMapAsync(IItemUseableMenu menu, Unit user) {
         await Effect.UseOnMapAsync(menu, user);
     }
 

@@ -39,6 +39,7 @@ public class GameData {
 
     public void OnTeleportTo(Map map) {
         LocationName = map.MapName;
+        BattleBGMKey = map.BattleBgmKey;
     }
 
     public bool GetSwitch(string switchName) {

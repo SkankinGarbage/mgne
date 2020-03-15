@@ -85,6 +85,7 @@ public abstract class Map : MonoBehaviour {
     public abstract string BgmKey { get; }
     public abstract string EncounterKey { get; }
     public abstract string TerrainEncounterKey { get; }
+    public abstract string BattleBgmKey { get; }
 
     #endregion
 

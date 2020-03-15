@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 
-public class AbilMenuView : FullScreenMenuView {
+public class AbilMenuView : FullScreenMenuView, IItemUseableMenu {
 
     [SerializeField] public UnitList miniSelect = null;
     [SerializeField] private UnitCellView unitCell = null;
@@ -49,5 +49,25 @@ public class AbilMenuView : FullScreenMenuView {
                 }
             }
         }
+    }
+
+    public Task<Unit> SelectUnitTargetAsync() {
+        return miniSelect.SelectUnitTargetAsync();
+    }
+
+    public void SelectAll() {
+        miniSelect.selector.SelectAll();
+    }
+
+    public bool IsActive() {
+        return miniSelect.gameObject.activeSelf;
+    }
+
+    public void SetActive(bool active) {
+        miniSelect.gameObject.SetActive(active);
+    }
+
+    public Task<bool> ConfirmSelectionAsync() {
+        return miniSelect.selector.ConfirmSelectionAsync();
     }
 }
