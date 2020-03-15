@@ -176,6 +176,9 @@ public abstract class Map : MonoBehaviour {
     }
 
     public MapEvent GetEventNamed(string eventName) {
+        if (eventName == "hero") {
+            return Global.Instance().Maps.Avatar.Parent;
+        }
         foreach (var layer in GetComponentsInChildren<ObjectLayer>()) {
             foreach (var mapEvent in layer.GetComponentsInChildren<MapEvent>()) {
                 if (mapEvent.name == eventName) {

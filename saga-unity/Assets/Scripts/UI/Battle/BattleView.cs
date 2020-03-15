@@ -28,8 +28,8 @@ public class BattleView : FullScreenMenuView {
 
     public Battle Battle { get; private set; }
 
-    public static async Task<BattleView> ShowAsync(Party enemy) {
-        var battle = new Battle(enemy);
+    public static async Task<BattleView> ShowAsync(Party enemy, string bgmKey) {
+        var battle = new Battle(enemy, bgmKey);
         await SceneManager.LoadSceneAsync("Battle", LoadSceneMode.Additive);
         var menu = FindObjectOfType<BattleView>();
         menu.Populate(battle);
@@ -112,8 +112,7 @@ public class BattleView : FullScreenMenuView {
         if (bgmTag == null) {
             bgmTag = Global.Instance().Data.BattleBGMKey;
         }
-        Global.Instance().Audio.PlayBGM(bgmTag);
-        var task = ShowAsync(enemy);
+        var task = ShowAsync(enemy, bgmTag);
         yield return CoUtils.TaskRoutine(task);
         var menu = task.Result;
         yield return menu.Battle.BattleRoutine(menu);

@@ -121,7 +121,6 @@ public class LuaCutsceneContext : LuaContext {
                     RunRoutineFromLua(routine);
                 } else {
                     @event.StartCoroutine(routine);
-                    ResumeNextFrame();
                 }
             }
         } else {
@@ -158,7 +157,6 @@ public class LuaCutsceneContext : LuaContext {
                 RunRoutineFromLua(routine);
             } else {
                 @event.StartCoroutine(routine);
-                ResumeNextFrame();
             }
         } else {
             var function = eventLua.Table.Get("path");

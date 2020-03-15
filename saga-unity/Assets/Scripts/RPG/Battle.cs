@@ -22,10 +22,12 @@ public class Battle {
     private Dictionary<Unit, List<EffectDefend>> defenses;
     private Dictionary<Unit, MutationManager> mutationManagers;
     private List<TempStats> boosts;
+    private string bgmKey;
 
     private Party BackupPlayer, BackupEnemy;
 
-    public Battle(Party enemy) {
+    public Battle(Party enemy, string bgmKey) {
+        this.bgmKey = bgmKey;
         Player = Global.Instance().Party;
         Initialize(enemy);
     }
@@ -101,6 +103,7 @@ public class Battle {
         Global.Instance().Data.Party = Player;
         Enemy = BackupEnemy.Copy();
         View.Populate(this);
+        Global.Instance().Audio.PlayBGM(bgmKey);
     }
 
     #endregion
@@ -109,6 +112,7 @@ public class Battle {
 
     public IEnumerator BattleRoutine(BattleView view) {
         View = view;
+        Global.Instance().Audio.PlayBGM(bgmKey);
         yield return CoUtils.TaskRoutine(BattleAsync());
     }
 
@@ -198,6 +202,7 @@ public class Battle {
         }
 
         if (IsVictory) {
+            Global.Instance().Audio.PlayBGM("victory");
             await WriteLineAsync("");
             await WriteLineAsync(Player.Leader.Name + " is victorious.");
             await WriteLineAsync("");
@@ -213,6 +218,7 @@ public class Battle {
             await DoMeatAsync();
             await View.CloseRoutine();
         } else if (IsDefeat) {
+            Global.Instance().Audio.PlayBGM("defeat");
             await WriteLineAsync("");
             await WriteLineAsync("");
             await WriteLineAsync(Player.Leader.Name + " is defeated...");
