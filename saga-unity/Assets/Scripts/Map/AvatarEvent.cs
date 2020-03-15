@@ -102,7 +102,7 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
     }
 
     public void SetHidden(bool hidden) {
-        Parent.IsSwitchEnabled = hidden;
+        Global.Instance().Data.SetSwitch("hide_hero", hidden);
     }
 
     public void OnTeleport() {

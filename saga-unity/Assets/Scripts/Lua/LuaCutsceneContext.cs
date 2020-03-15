@@ -40,6 +40,14 @@ public class LuaCutsceneContext : LuaContext {
         base.RunRoutineFromLua(routine);
     }
 
+    protected void ResumeNextFrame() {
+        Global.Instance().StartCoroutine(ResumeRoutine());
+    }
+    protected IEnumerator ResumeRoutine() {
+        yield return null;
+        ResumeAwaitedScript();
+    }
+
     protected override void AssignGlobals() {
         base.AssignGlobals();
         lua.Globals["playBGM"] = (Action<DynValue>)PlayBGM;
@@ -47,7 +55,7 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["sceneSwitch"] = (Action<DynValue, DynValue>)SetSwitch;
         lua.Globals["face"] = (Action<DynValue, DynValue>)Face;
         lua.Globals["fade"] = (Action<DynValue>)Fade;
-        lua.Globals["hideHero"] = (Action<DynValue>)PlayBGM;
+        lua.Globals["hideHero"] = (Action<DynValue>)HideHero;
         lua.Globals["addItem"] = (Action<DynValue, DynValue>)AddItem;
         lua.Globals["addCollectable"] = (Action<DynValue>)AddCollectable;
         lua.Globals["removeItem"] = (Action<DynValue, DynValue>)RemoveItem;
@@ -113,6 +121,7 @@ public class LuaCutsceneContext : LuaContext {
                     RunRoutineFromLua(routine);
                 } else {
                     @event.StartCoroutine(routine);
+                    ResumeNextFrame();
                 }
             }
         } else {
@@ -149,6 +158,7 @@ public class LuaCutsceneContext : LuaContext {
                 RunRoutineFromLua(routine);
             } else {
                 @event.StartCoroutine(routine);
+                ResumeNextFrame();
             }
         } else {
             var function = eventLua.Table.Get("path");
