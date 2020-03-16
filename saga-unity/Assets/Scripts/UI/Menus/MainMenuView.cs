@@ -103,6 +103,10 @@ public class MainMenuView : FullScreenMenuView {
     }
 
     private async Task OrderSelect() {
+        if (Global.Instance().Data.GetSwitch("disable_reorder")) {
+            Global.Instance().Audio.PlaySFX("fail");
+            return;
+        }
         var orderMenu = OrderMenuView.ShowDefault();
         orderMenu.Populate();
         await orderMenu.DoMenuAsync();

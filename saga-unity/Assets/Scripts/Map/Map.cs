@@ -254,9 +254,9 @@ public abstract class Map : MonoBehaviour {
                         case OrthoDir.West:     next.x -= 1;    break;
                         case OrthoDir.South:    next.y -= 1;    break;
                     }
-                    if (!visited.Contains(next) && actor.CanPassAt(next) &&
-                        (actor.GetComponent<CharaEvent>() == null ||
-                             actor.CanPassAt(next))) {
+                    if (!visited.Contains(next) && 
+                            actor.CanPassAt(next) &&
+                            (actor.GetComponent<CharaEvent>() == null || actor.CanPassAt(next) || next == to)) {
                         List<Vector2Int> newHead = new List<Vector2Int>(head) { next };
                         heads.Add(newHead);
                         visited.Add(next);

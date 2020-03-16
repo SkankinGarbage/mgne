@@ -346,7 +346,7 @@ public abstract class MapEvent : MonoBehaviour {
         }
         foreach (Vector2Int target in path) {
             OrthoDir dir = DirectionTo(target);
-            yield return StartCoroutine(StepRoutine(dir));
+            yield return StepRoutine(dir);
         }
     }
 }

@@ -54,17 +54,19 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["playSound"] = (Action<DynValue>)PlaySound;
         lua.Globals["sceneSwitch"] = (Action<DynValue, DynValue>)SetSwitch;
         lua.Globals["face"] = (Action<DynValue, DynValue>)Face;
-        lua.Globals["fade"] = (Action<DynValue>)Fade;
         lua.Globals["hideHero"] = (Action<DynValue>)HideHero;
+        lua.Globals["addMember"] = (Action<DynValue>)AddMember;
         lua.Globals["addItem"] = (Action<DynValue, DynValue>)AddItem;
         lua.Globals["addCollectable"] = (Action<DynValue>)AddCollectable;
         lua.Globals["removeItem"] = (Action<DynValue, DynValue>)RemoveItem;
         lua.Globals["cs_teleport"] = (Action<DynValue, DynValue, DynValue, DynValue, DynValue>)Teleport;
         lua.Globals["cs_targetTele"] = (Action<DynValue, DynValue, DynValue, DynValue>)TargetTeleport;
         lua.Globals["cs_fadeOutBGM"] = (Action<DynValue>)FadeOutBGM;
+        lua.Globals["cs_fade"] = (Action<DynValue>)Fade;
         lua.Globals["cs_speak"] = (Action<DynValue, DynValue>)Speak;
         lua.Globals["cs_walk"] = (Action<DynValue, DynValue, DynValue, DynValue>)Walk;
         lua.Globals["cs_path"] = (Action<DynValue, DynValue, DynValue, DynValue>)Path;
+        lua.Globals["cs_pathEvent"] = (Action<DynValue, DynValue, DynValue>)PathEvent;
         lua.Globals["cs_battle"] = (Action<DynValue, DynValue>)Battle;
         lua.Globals["cs_recruit"] = (Action<DynValue>)Recruit;
         lua.Globals["cs_inn"] = (Action)Inn;
@@ -157,10 +159,23 @@ public class LuaCutsceneContext : LuaContext {
                 RunRoutineFromLua(routine);
             } else {
                 @event.StartCoroutine(routine);
+                ResumeNextFrame();
             }
         } else {
             var function = eventLua.Table.Get("path");
             function.Function.Call(eventLua, targetArg1, targetArg2, targetArg3);
+        }
+    }
+
+    private void PathEvent(DynValue moverLua, DynValue targetLua, DynValue waitLua) {
+        var map = Global.Instance().Maps.ActiveMap;
+        var mover = map.GetEventNamed(moverLua.String);
+        var target = map.GetEventNamed(targetLua.String);
+        var routine = mover.PathToRoutine(target.Position);
+        if (waitLua.IsNil() || waitLua.Boolean) {
+            RunRoutineFromLua(routine);
+        } else {
+            mover.StartCoroutine(routine);
         }
     }
 
@@ -190,7 +205,7 @@ public class LuaCutsceneContext : LuaContext {
         }
         lastFade = fade;
         var globals = Global.Instance();
-        globals.StartCoroutine(globals.Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(fade, invert));
+        RunRoutineFromLua(globals.Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(fade, invert));
     }
 
     private void Battle(DynValue partyLua, DynValue bgmLua) {
@@ -239,5 +254,10 @@ public class LuaCutsceneContext : LuaContext {
             var data = IndexDatabase.Instance().CombatItems.GetData(key);
             Global.Instance().Data.Inventory.DropItemType(data);
         }
+    }
+
+    private void AddMember(DynValue unitLua) {
+        var data = IndexDatabase.Instance().Units.GetData(unitLua.String);
+        Global.Instance().Party.AddMember(new Unit(data));
     }
 }

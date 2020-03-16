@@ -6,8 +6,8 @@
   <property name="name" value="Home World"/>
   <property name="terrainEncounter" value="terrain_world1"/>
  </properties>
- <tileset firstgid="1" source="../../../../../saga/res/maps/tilesets/lower.tsx"/>
- <tileset firstgid="176" source="../../../../../saga/res/maps/tilesets/upper.tsx"/>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
  <layer id="1" name="Tile Layer 1" width="76" height="70">
   <properties>
    <property name="z" value="0"/>

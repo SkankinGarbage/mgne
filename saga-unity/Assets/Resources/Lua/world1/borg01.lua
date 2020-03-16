@@ -27,12 +27,13 @@ speak("Janine", "Goodbye " .. hero .. "!");
 face("clone", "SOUTH")
 walk("jonas", 10, "SOUTH", false)
 walk("janine", 10, "SOUTH", true);
+fadeOutBGM()
 
 fade('black')
 teleport('world1/parish_interior.tmx', 24, 8, 'EAST', true)
 sceneSwitch('opening_flashback', false)
 hideHero(false)
-playBGM('hometown')
+playBGM('home_town')
 face('borg', 'WEST')
 fade('normal')
 

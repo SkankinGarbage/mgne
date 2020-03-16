@@ -25,6 +25,7 @@ public class SaveMenuView : FullScreenMenuView {
         int result = -1;
         while (true) {
             Populate(mode);
+            CellSelector.Selection = Global.Instance().SystemData.LastSaveSlot;
             var slot = await CellSelector.SelectItemAsync(null, true);
             if (slot < 0) {
                 break;
@@ -33,6 +34,7 @@ public class SaveMenuView : FullScreenMenuView {
             if (mode == Mode.Load) {
                 return slot;
             } else if (mode == Mode.Save) {
+                Global.Instance().Audio.PlaySFX("save");
                 Global.Instance().Serialization.SaveToSlot(slot);
                 result = slot;
             }
