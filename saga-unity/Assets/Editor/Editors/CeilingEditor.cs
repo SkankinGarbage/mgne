@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEditor;
 
 [CustomEditor(typeof(CeilingComponent))]
@@ -12,6 +11,9 @@ public class CeilingEditor : Editor {
         if (GUILayout.Button("Recalculate bounds")) {
             ceiling.RecalculateBounds();
             EditorUtility.SetDirty(ceiling);
+        }
+        if (GUILayout.Button("Debug bounds")) {
+            ceiling.DebugBounds();
         }
     }
 }

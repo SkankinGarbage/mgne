@@ -38,16 +38,12 @@ public class BattleView : FullScreenMenuView {
         Global.Instance().Audio.PlayBGM(null);
         Global.Instance().Audio.PlaySFX("encounter");
         BattleView menu = null;
-        Global.Instance().StartCoroutine(CoUtils.RunAfterDelay(0.8f, () => {
-            if (menu != null) {
-                menu.PlayBattleBGM();
-            }
-        }));
 
         await Global.Instance().Maps.FadeOutRoutine("white");
         await SceneManager.LoadSceneAsync("Battle", LoadSceneMode.Additive);
         menu = FindObjectOfType<BattleView>();
         menu.Populate(battle);
+        menu.PlayBattleBGM();
         await Global.Instance().Maps.FadeInRoutine("white");
 
         Global.Instance().Input.PushListener(menu.ToString(), (cmd, x) => true);
@@ -214,6 +210,6 @@ public class BattleView : FullScreenMenuView {
         await Global.Instance().Maps.FadeOutRoutine("white");
         Global.Instance().Audio.PlayBGM(Global.Instance().Data.CurrentBGMKey);
         await SceneManager.UnloadSceneAsync("Battle");
-        await Global.Instance().Maps.FadeOutRoutine("white");
+        await Global.Instance().Maps.FadeInRoutine("white");
     }
 }

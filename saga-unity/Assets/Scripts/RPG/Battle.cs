@@ -223,6 +223,8 @@ public class Battle {
             await WriteLineAsync(Player.Leader.Name + " is defeated...");
             await Global.Instance().Input.AwaitConfirm();
             await View.retry.RetryAsync(this);
+        } else {
+            await View.CloseRoutine();
         }
     }
 

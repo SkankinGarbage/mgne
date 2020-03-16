@@ -5,6 +5,7 @@ using System;
 using SuperTiled2Unity;
 using UnityEditor;
 using SuperTiled2Unity.Editor;
+using System.Text;
 
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(MeshFilter))]
@@ -120,9 +121,10 @@ public class CeilingComponent : MonoBehaviour {
                 filter.sharedMesh = new Mesh();
             }
             mesh = filter.sharedMesh;
-            mesh.name = "Ceiling mesh";
+            var meshName = "Ceiling mesh " + @event.Position.x + "," + @event.Position.y;
+            mesh.name = meshName;
             if (importer != null) {
-                importer.SuperImportContext.AddObjectToAsset("Ceiling mesh", mesh);
+                importer.SuperImportContext.AddObjectToAsset(meshName, mesh);
             }
         }
 
@@ -157,10 +159,29 @@ public class CeilingComponent : MonoBehaviour {
         mesh.uv = newUvs;
     }
 
+    public void DebugBounds() {
+        var output = new StringBuilder();
+        var bounds = collider.bounds;
+        var size = new Vector2Int(Mathf.CeilToInt(bounds.size.x),
+                                    Mathf.CeilToInt(bounds.size.y));
+        for (int y = -StepMax; y <= size.y + StepMax; y += 1) {
+            for (int x = -StepMax; x <= size.x + StepMax; x += 1) {
+                var tile = new Vector2Int(x + @event.Position.x, y + @event.Position.y);
+                if (ContainsTile(tile)) {
+                    output.Append("x");
+                } else {
+                    output.Append("o");
+                }
+            }
+            output.Append("\n");
+        }
+        Debug.Log(output.ToString());
+    }
+
     private bool ContainsTile(Vector2Int tile) {
-        Vector2 center = new Vector2(   (tile.x + 0.5f) * 1, 
-                                        (tile.y + 0.5f) * -1     );
-        return collider.OverlapPoint(center);
+        Vector2 center = new Vector2(   (tile.x + 0.6f) * 1, 
+                                        (tile.y + 0.6f) * -1     );
+        return collider.ClosestPoint(center) == center;
     }
     
     private void AddTileQuadToMesh(Vector2Int tile, ref Vector3[] verts, ref int[] tris, ref Vector3[] norms, ref Vector2[] uvs) {
