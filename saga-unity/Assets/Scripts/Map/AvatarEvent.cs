@@ -166,7 +166,9 @@ public class AvatarEvent : MonoBehaviour, IInputListener {
                             targetEvent.GetComponent<Dispatch>().Signal(MapEvent.EventStep, this);
                         }
                     }
-                    Global.Instance().Maps.ActiveMap.OnStepEnded();
+                    if (toCollide.Count == 0) {
+                        Global.Instance().Maps.ActiveMap.OnStepEnded();
+                    }
                 }),
                 OnStepStartRoutine(),
             }, this));

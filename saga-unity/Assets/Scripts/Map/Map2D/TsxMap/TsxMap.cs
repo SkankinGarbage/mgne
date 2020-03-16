@@ -9,7 +9,7 @@ public class TsxMap : Map {
     private const string PropertyBgmKey = "bgm";
     private const string PropertyName = "name";
     private const string PropertyEncounter = "encounter";
-    private const string PropertyTerrainEncounter = "terrain_encounter";
+    private const string PropertyTerrainEncounter = "terrainEncounter";
     private const string PropertyBattleBgm = "battle_bgm";
 
     private static Dictionary<TileBase, TsxTile> instantiatedTiles 

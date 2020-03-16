@@ -27,13 +27,14 @@ public class LuaCutsceneContext : LuaContext {
 
     public override void RunRoutineFromLua(IEnumerator routine) {
         if (MapOverlayUI.Instance().textbox.isDisplaying) {
-            routine = CoUtils.RunSequence(new IEnumerator[] {
+            MapOverlayUI.Instance().textbox.MarkHiding();
+            base.RunRoutineFromLua(CoUtils.RunSequence(new IEnumerator[] {
                 MapOverlayUI.Instance().textbox.DisableRoutine(),
                 routine,
-            });
+            }));
+        } else {
+            base.RunRoutineFromLua(routine);
         }
-
-        base.RunRoutineFromLua(routine);
     }
 
     public void RunTextboxRoutineFromLua(IEnumerator routine) {

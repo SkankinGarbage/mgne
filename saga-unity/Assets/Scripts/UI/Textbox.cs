@@ -34,6 +34,10 @@ public class Textbox : TextAutotyper {
         nameboxHeight = namebox.GetComponent<RectTransform>().sizeDelta.y;
     }
 
+    public void MarkHiding() {
+        isDisplaying = false;
+    }
+
     public IEnumerator TestRoutine() {
         isDisplaying = true;
         while (true) {

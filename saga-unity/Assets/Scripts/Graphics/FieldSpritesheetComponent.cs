@@ -9,6 +9,7 @@ public class FieldSpritesheetComponent : MonoBehaviour {
     public int StepCount => stepCount;
 
     public string Name => spritesheet == null ? "" : spritesheet.name;
+    public bool IsSingleFrame => spritesheet != null && spritesheet.width == Map.PxPerTile;
 
     private Dictionary<string, Sprite> sprites;
 
@@ -41,6 +42,10 @@ public class FieldSpritesheetComponent : MonoBehaviour {
         }
         if (sprites == null) {
             LoadSpritesheetData(spritesheet);
+        }
+        if (IsSingleFrame) {
+            x = 0;
+            y = 0;
         }
         string name = NameForFrame(spritesheet.name, x, y);
         if (!sprites.ContainsKey(name)) {
