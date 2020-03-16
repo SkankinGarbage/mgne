@@ -28,11 +28,27 @@ public class BattleView : FullScreenMenuView {
 
     public Battle Battle { get; private set; }
 
+    public void PlayBattleBGM() => Global.Instance().Audio.PlayBGM(Battle.BgmKey);
+    public void PlayVictoryBGM() => Global.Instance().Audio.PlayBGM("victory");
+    public void PlayDefeatBGM() => Global.Instance().Audio.PlayBGM("defeat");
+
     public static async Task<BattleView> ShowAsync(Party enemy, string bgmKey) {
         var battle = new Battle(enemy, bgmKey);
+
+        Global.Instance().Audio.PlayBGM(null);
+        Global.Instance().Audio.PlaySFX("encounter");
+        BattleView menu = null;
+        Global.Instance().StartCoroutine(CoUtils.RunAfterDelay(0.8f, () => {
+            if (menu != null) {
+                menu.PlayBattleBGM();
+            }
+        }));
+
+        await Global.Instance().Maps.FadeOutRoutine("white");
         await SceneManager.LoadSceneAsync("Battle", LoadSceneMode.Additive);
-        var menu = FindObjectOfType<BattleView>();
+        menu = FindObjectOfType<BattleView>();
         menu.Populate(battle);
+        await Global.Instance().Maps.FadeInRoutine("white");
 
         Global.Instance().Input.PushListener(menu.ToString(), (cmd, x) => true);
         return menu;
@@ -195,6 +211,9 @@ public class BattleView : FullScreenMenuView {
     }
 
     public async Task CloseAsync() {
+        await Global.Instance().Maps.FadeOutRoutine("white");
+        Global.Instance().Audio.PlayBGM(Global.Instance().Data.CurrentBGMKey);
         await SceneManager.UnloadSceneAsync("Battle");
+        await Global.Instance().Maps.FadeOutRoutine("white");
     }
 }

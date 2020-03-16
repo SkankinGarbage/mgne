@@ -45,7 +45,7 @@ public class CombatItem {
     }
 
     /// <param name="inventory">The inventory being added to, maybe null</param>
-    public void OnAddedTo(Inventory inventory) {
+    public void OnAddedTo(Inventory inventory, bool isEquip) {
         Container = inventory;
         UsesWhenAdded = UsesRemaining;
     }

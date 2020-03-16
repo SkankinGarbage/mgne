@@ -45,8 +45,8 @@ public class EquipMenuView : FullScreenMenuView {
             }
 
             var oldOccupant = unit.Equipment.Drop(equipSlot);
-            unit.Equipment.SetSlot(equipSlot, inventory.Drop(inventorySlot));
-            inventory.SetSlot(inventorySlot, oldOccupant);
+            unit.Equipment.SetSlot(equipSlot, inventory.Drop(inventorySlot), true);
+            inventory.SetSlot(inventorySlot, oldOccupant, true);
         }
     }
 }

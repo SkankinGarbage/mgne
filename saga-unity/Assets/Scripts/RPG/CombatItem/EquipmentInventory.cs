@@ -15,7 +15,7 @@ public class EquipmentInventory : Inventory {
         for (int i = 0; i < capacity && i < data.equipped.Length; i += 1) {
             var itemData = data.equipped[i];
             if (itemData != null) {
-                SetSlot(i, new CombatItem(itemData));
+                SetSlot(i, new CombatItem(itemData), firstEquip:true);
             }
         }
     }
@@ -24,16 +24,16 @@ public class EquipmentInventory : Inventory {
         for (var i = 0; i < items.Count; i += 1) {
             var item = items[i];
             if (item != null) {
-                SetSlot(i, new CombatItem(item));
+                SetSlot(i, new CombatItem(item), firstEquip:false);
             }
         }
     }
 
-    public override CombatItem SetSlot(int slot, CombatItem item) {
+    public override CombatItem SetSlot(int slot, CombatItem item, bool firstEquip) {
         var old = items[slot];
-        if (old != null) owner.OnUnequip(old);
-        var result = base.SetSlot(slot, item);
-        if (item != null) owner.OnEquip(item);
+        if (old != null) owner.OnUnequip(old, firstEquip);
+        if (item != null) owner.OnEquip(item, firstEquip);
+        var result = base.SetSlot(slot, item, firstEquip);
         return result;
     }
 

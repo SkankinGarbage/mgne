@@ -27,7 +27,7 @@ public class Party : IEnumerable<Unit> {
         Groups = new List<List<Unit>>();
     }
 
-    public Party(EncounterData encounter) {
+    public Party(EncounterData encounter) : this() {
         foreach (var member in encounter.members) {
             var group = new List<Unit>();
             int amount;

@@ -93,7 +93,7 @@ public class RecruitMenu : FullScreenMenuView {
         Array.Resize(ref nameArray, 10);
         int letterIndex = 0;
         bool? result = null;
-        while (!result.HasValue) {
+        while (!result.HasValue && letterIndex < 10) {
             if (nameArray.Select(@char => @char != 0 && @char != ' ').Count() > 0) {
                 unit.SetName(new string(nameArray).Trim());
             }
@@ -101,14 +101,14 @@ public class RecruitMenu : FullScreenMenuView {
             ShowLetterHighlight(letterIndex);
             var selection = await letterSelector.SelectItemAsync(null, true);
             if (selection == GenericSelector.CodeCancel) {
-                if (new string(nameArray).Trim().Length > 0) {
+                if (new string(nameArray).Trim().Length > 0 && letterIndex == 0) {
                     for (int i = 0; i < 10; i += 1) nameArray[i] = ' ';
                 }
                 if (letterIndex == 0) {
                     result = false;
                 } else {
-                    nameArray[letterIndex] = ' ';
                     letterIndex -= 1;
+                    nameArray[letterIndex] = ' ';
                 }
             } else if (selection == GenericSelector.CodeMenu) {
                 result = true;
@@ -122,7 +122,8 @@ public class RecruitMenu : FullScreenMenuView {
             }
         }
 
-        if (result.Value) {
+        if (!result.HasValue || result.Value) {
+            unit.SetName(new string(nameArray).Trim());
             Global.Instance().Data.Party.AddMember(unit);
         } else {
             recruitCells.gameObject.SetActive(true);

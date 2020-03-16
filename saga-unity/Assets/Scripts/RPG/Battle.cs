@@ -12,6 +12,7 @@ public class Battle {
     public Party Player { get; private set; }
     public Party Enemy { get; private set; }
     public BattleView View { get; private set; }
+    public string BgmKey { get; private set; }
 
     public bool IsDone { get; private set; }
     public bool IsVictory => !Enemy.IsAnyAlive;
@@ -22,12 +23,11 @@ public class Battle {
     private Dictionary<Unit, List<EffectDefend>> defenses;
     private Dictionary<Unit, MutationManager> mutationManagers;
     private List<TempStats> boosts;
-    private string bgmKey;
 
     private Party BackupPlayer, BackupEnemy;
 
     public Battle(Party enemy, string bgmKey) {
-        this.bgmKey = bgmKey;
+        this.BgmKey = bgmKey;
         Player = Global.Instance().Party;
         Initialize(enemy);
     }
@@ -103,7 +103,7 @@ public class Battle {
         Global.Instance().Data.Party = Player;
         Enemy = BackupEnemy.Copy();
         View.Populate(this);
-        Global.Instance().Audio.PlayBGM(bgmKey);
+        View.PlayBattleBGM();
     }
 
     #endregion
@@ -112,7 +112,6 @@ public class Battle {
 
     public IEnumerator BattleRoutine(BattleView view) {
         View = view;
-        Global.Instance().Audio.PlayBGM(bgmKey);
         yield return CoUtils.TaskRoutine(BattleAsync());
     }
 
@@ -202,7 +201,7 @@ public class Battle {
         }
 
         if (IsVictory) {
-            Global.Instance().Audio.PlayBGM("victory");
+            View.PlayVictoryBGM();
             await WriteLineAsync("");
             await WriteLineAsync(Player.Leader.Name + " is victorious.");
             await WriteLineAsync("");
@@ -218,7 +217,7 @@ public class Battle {
             await DoMeatAsync();
             await View.CloseRoutine();
         } else if (IsDefeat) {
-            Global.Instance().Audio.PlayBGM("defeat");
+            View.PlayDefeatBGM();
             await WriteLineAsync("");
             await WriteLineAsync("");
             await WriteLineAsync(Player.Leader.Name + " is defeated...");

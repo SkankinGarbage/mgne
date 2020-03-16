@@ -339,8 +339,8 @@ public abstract class MapEvent : MonoBehaviour {
         Tracking = false;
     }
 
-    public IEnumerator PathToRoutine(Vector2Int location) {
-        List<Vector2Int> path = Map.FindPath(this, location);
+    public IEnumerator PathToRoutine(Vector2Int location, bool ignoreEvents=false) {
+        List<Vector2Int> path = Map.FindPath(this, location, ignoreEvents);
         if (path == null) {
             yield break;
         }

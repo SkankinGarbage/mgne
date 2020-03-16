@@ -25,13 +25,13 @@ public class TerrainEncounterSet : BaseEncounterSet {
 
     protected TerrainEncounterSetMemberData GetCurrentSet() {
         var avatar = Global.Instance().Maps.Avatar;
-        var tile = avatar.Map.TileAt(avatar.Map.layers[0], avatar.Parent.Position.x, avatar.Parent.Position.y);
+        var tile = avatar.Map.TileAt(avatar.Map.layers[0], avatar.Parent.Position.x, avatar.Parent.Position.y - 1);
         if (tile == null) {
             return null;
         }
         foreach (var member in data.members) {
             var terrainString = member.terrain;
-            var idString = terrainString.Substring(terrainString.IndexOf('/'));
+            var idString = terrainString.Substring(terrainString.IndexOf('/') + 1);
             var id = int.Parse(idString);
             if (tile.TerrainId == id) {
                 return member;

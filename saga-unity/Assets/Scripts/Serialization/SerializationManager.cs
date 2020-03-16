@@ -77,6 +77,7 @@ public class SerializationManager : MonoBehaviour {
         var transition = IndexDatabase.Instance().Transitions.GetData(FadeComponent.DefaultTransitionTag);
         yield return Global.Instance().Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(transition.GetFadeOut(), false, 0.0f);
         yield return Global.Instance().Maps.TeleportRoutine(Data.MapPath, Data.MapLocation, OrthoDir.South, true);
+        Global.Instance().Audio.PlayBGM(Data.CurrentBGMKey);
         yield return Global.Instance().Maps.Camera.GetComponent<FadeComponent>().FadeRoutine(transition.GetFadeIn(), true);
     }
 

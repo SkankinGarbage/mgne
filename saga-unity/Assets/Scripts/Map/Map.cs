@@ -212,14 +212,14 @@ public abstract class Map : MonoBehaviour {
     }
 
     // returns a list of coordinates to step to with the last one being the destination, or null
-    public List<Vector2Int> FindPath(MapEvent actor, Vector2Int to) {
-        return FindPath(actor, to, Width > Height ? Width : Height);
+    public List<Vector2Int> FindPath(MapEvent actor, Vector2Int to, bool ignoreEvents = false) {
+        return FindPath(actor, to, Width > Height ? Width : Height, ignoreEvents);
     }
-    public List<Vector2Int> FindPath(MapEvent actor, Vector2Int to, int maxPathLength) {
+    public List<Vector2Int> FindPath(MapEvent actor, Vector2Int to, int maxPathLength, bool ignoreEvents = false) {
         if (ManhattanDistance(actor.GetComponent<MapEvent>().Position, to) > maxPathLength) {
             return null;
         }
-        if (!actor.CanPassAt(to)) {
+        if (!actor.CanPassAt(to) && !ignoreEvents) {
             return null;
         }
 
@@ -255,8 +255,7 @@ public abstract class Map : MonoBehaviour {
                         case OrthoDir.South:    next.y -= 1;    break;
                     }
                     if (!visited.Contains(next) && 
-                            actor.CanPassAt(next) &&
-                            (actor.GetComponent<CharaEvent>() == null || actor.CanPassAt(next) || next == to)) {
+                            (ignoreEvents || actor.GetComponent<CharaEvent>() == null || actor.CanPassAt(next) || next == to)) {
                         List<Vector2Int> newHead = new List<Vector2Int>(head) { next };
                         heads.Add(newHead);
                         visited.Add(next);

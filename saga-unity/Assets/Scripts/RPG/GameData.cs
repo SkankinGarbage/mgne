@@ -15,6 +15,7 @@ public class GameData {
     [JsonProperty] public CollectableInventory Collectables { get; private set; }
     [JsonProperty] public int GP { get; private set; }
     [JsonProperty] public string LocationName { get; private set; }
+    [JsonProperty] public string CurrentBGMKey { get; private set; }
     [JsonProperty] public string BattleBGMKey { get; private set; } = "battle1";
 
     [JsonProperty] public string MapPath { get; set; }
@@ -40,6 +41,7 @@ public class GameData {
     public void OnTeleportTo(Map map) {
         LocationName = map.MapName;
         BattleBGMKey = map.BattleBgmKey;
+        CurrentBGMKey = map.BgmKey;
     }
 
     public bool GetSwitch(string switchName) {

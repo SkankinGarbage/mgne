@@ -32,6 +32,8 @@ public class SaveMenuView : FullScreenMenuView {
             }
             
             if (mode == Mode.Load) {
+                Global.Instance().Audio.PlayBGM(null);
+                Global.Instance().Audio.PlaySFX("load");
                 return slot;
             } else if (mode == Mode.Save) {
                 Global.Instance().Audio.PlaySFX("save");

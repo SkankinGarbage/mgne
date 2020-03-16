@@ -172,7 +172,7 @@ public class LuaCutsceneContext : LuaContext {
         var map = Global.Instance().Maps.ActiveMap;
         var mover = map.GetEventNamed(moverLua.String);
         var target = map.GetEventNamed(targetLua.String);
-        var routine = mover.PathToRoutine(target.Position);
+        var routine = mover.PathToRoutine(target.Position, ignoreEvents:true);
         if (waitLua.IsNil() || waitLua.Boolean) {
             RunRoutineFromLua(routine);
         } else {

@@ -38,7 +38,7 @@ public class AbilMutation : Mutation {
     public override Stat Stat => null;
 
     public override void Apply() {
-        unit.Equipment.SetSlot(loseSlot, gainAbil);
+        unit.Equipment.SetSlot(loseSlot, gainAbil, true);
     }
 
     private static CombatItem GenerateMutationAbility(Unit unit, int level) {
