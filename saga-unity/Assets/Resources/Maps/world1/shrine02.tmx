@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="12">
+ <properties>
+  <property name="bgm" value="minor_dungeon"/>
+  <property name="encounter" value="encounterset_level00_danger03"/>
+  <property name="name" value="Airseed Shrine"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="32" height="32">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECtWSS04EMQxEB8SSBRILrsL9T4afNE8quZ2eTIsFRIrKseuT9Mzt9v/WW115tX/7Nauc9wpiM8964l+5U/roP2Hm93l6UO8udfp9ltBafK0eG661M5FZ1rt3SB16/SfM/D7vPjv5cNR1v+kMd+rTyxnv0LvK5Zqy00dfe3qKeRc59rzDMrwGaPo31ztRDujOufc0G4QH52wxT40+Zoj8J5mBbmegusmrxsuVb8jaDLH79rtcyTcv32FvynMGPprLUTN9AGZk+0bQnu95uff0gW+dCN+Z78lejQ/LLDLc9LhH5usHMsszNRr43h/Uw3m1DguduflOvDJfPxBenqnNT033Ldph9XzfpU+fp2fW8LzDpKE3rc71XT0f3mpzD2fq8m7Od/LRu/VU77ljzq/kdz/O+lCn/8TNeeq6z/R+evD83cX0wd//MNzvu0adczjo9PAM72wx93cXez59fT+ipk9+6qxBfapcLvLh9U2fjX9mfNXZDGdi97iSb26i/hMmzzrvQe9sdY3f2X5H7tB7ntWab/8snxk8NX5bvRL1A7NvrVYveDtLX3WgXonmgNm3Tr2eO/n4yQfTJ2tzwOxnnT747qx8l3o8rVd36nPP6beTDyc11PzP7Ok7oZzk28P32aV28nM2YfKfzXzEn/LsPdL+tfkPU5mUzAAQAAA=
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="32" height="32">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3QAQ0AAADCoPdPbQ8HESgMGDBgwIABAwYMGDBgwICB94EBEQAcxwAQAAA=
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="chest" type="Chest" x="400" y="144" width="16" height="16">
+   <properties>
+    <property name="item" value="hand_bronze"/>
+   </properties>
+  </object>
+  <object id="2" name="tele" type="Event" x="160" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/shrine01.tmx', 21, 26)"/>
+   </properties>
+  </object>
+  <object id="3" name="tele" type="Event" x="352" y="448" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/shrine01.tmx', 29, 26)"/>
+   </properties>
+  </object>
+  <object id="5" name="room" type="Ceiling" x="64" y="288">
+   <properties>
+    <property name="roofID" value="3"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 64,0 64,-48 80,-48 80,-160 288,-160 288,-144 320,-144 320,16 400,16 400,-256 0,-256"/>
+  </object>
+  <object id="6" name="door" type="Door" x="240" y="144" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_bars"/>
+    <property name="keyItem" value="key_shrineKey"/>
+   </properties>
+  </object>
+  <object id="8" name="chest" type="Chest" x="320" y="80" width="16" height="16">
+   <properties>
+    <property name="item" value="body_bronze"/>
+   </properties>
+  </object>
+  <object id="9" name="tele" type="Event" x="256" y="304" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/shrine03.tmx', 16, 16)"/>
+   </properties>
+  </object>
+  <object id="10" name="door" type="Door" x="352" y="160" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_bars"/>
+    <property name="keyItem" value="key_shrineKey"/>
+   </properties>
+  </object>
+  <object id="11" name="chest" type="Chest" x="112" y="128" width="16" height="16">
+   <properties>
+    <property name="item" value="item_agi24"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="4" name="Tile Layer 3" width="32" height="32">
+  <properties>
+   <property name="z" value="2"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2SQQoAIAgEPXTs1v//0BO7GyGCGtR0U7ddHBThQQACEIAABCAAAQjcItCLgk85oyi/KqdonadiTrcRtaTln30b2f5RnLRP0w2j9uoNO5mWQM29evV9K71+Xv0W+EljATW/J+0AEAAA
+  </data>
+ </layer>
+ <layer id="5" name="Tile Layer 4" width="32" height="32">
+  <properties>
+   <property name="z" value="2.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3QoQ0AMAgEQPbfqLaTVZJgAN1DQXgQF6EIECBAgAABAgQIECBAgEAKnGxH3TbfPb1doOy3+XL+zfgAC6bILAAQAAA=
+  </data>
+ </layer>
+</map>

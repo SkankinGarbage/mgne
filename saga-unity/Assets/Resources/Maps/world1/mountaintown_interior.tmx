@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="36" height="29" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="10">
+ <properties>
+  <property name="bgm" value="no_change"/>
+  <property name="name" value="Mountain Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="36" height="29">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu1UwQ2EMAxjgPK6Ndh/vosfkawK4hjd56RUiuqW2JjQ5jyO43wRQSnHG83krFB2Ajw1kONoIjf9fAI70fXjaCI3/VyBnej6cTSRO37q/zD16dWH65RYzXH8ysF8Pqu8f4dXqGaAl1jNpZlNx9HlHgEeryus/DD3l7rqvfN8KjAV+J8K3PXIzp76wo7GU47qxftz6KiBnJ2n1umPe2kHd/10tDgn/VzxLU50/TiayB0/9X+Y+vTqw3VKrObOfU8NPqu59zQv6hPg8brCyg9zHV2+/+DxusLKD3Md3S/oEh8bUBAAAA==
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="36" height="29">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu1WQQqAMAzb///j1Ysv8OLBH0w/4Q4tlEJl60r1EEFSJUlD2GGl4IloYCcTxgjPGY+TxIwzXj3ag0iMPRovZyOhRq/fiK428tXeW4m+yKIihH7yOWYMNYcZGkADaAANoAE0kNLAQlssTAkhlqw0WyiowyPfQTVKI+seJzme2fJ9y+LZk62xzg3/z86Dff9s4AGyu4xVUBAAAA==
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="tele" type="Event" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/mountaintown.tmx', 17, 22)"/>
+   </properties>
+  </object>
+  <object id="2" name="tele" type="Event" x="48" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/mountaintown.tmx', 28, 27)"/>
+   </properties>
+  </object>
+  <object id="3" name="tele" type="Event" x="400" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/mountaintown.tmx', 28, 19)"/>
+   </properties>
+  </object>
+  <object id="4" name="tele" type="Event" x="400" y="432" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/mountaintown.tmx', 28, 23)"/>
+   </properties>
+  </object>
+  <object id="5" name="inn" type="Character" x="48" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onInteract" value="inn()"/>
+   </properties>
+  </object>
+  <object id="6" name="shop" type="Character" x="400" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onInteract" value="shop('shop_world1_potions')"/>
+   </properties>
+  </object>
+  <object id="7" name="wiseman" type="Character" x="48" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="hide" value="return hasItem('key_artifactHeatgoggle')"/>
+    <property name="onInteract" value="play('world1/wiseman01.lua')"/>
+   </properties>
+  </object>
+  <object id="8" name="shop" type="Character" x="400" y="352" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onInteract" value="shop('shop_mountaintown_weapon')"/>
+   </properties>
+  </object>
+  <object id="9" name="wiseman" type="Character" x="48" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="hide" value="return not hasItem('key_artifactHeatgoggle')"/>
+    <property name="onInteract" value="play('world1/wiseman02.lua')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="4" name="Tile Layer 3" width="36" height="29">
+  <properties>
+   <property name="z" value="1.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3WsQkAMAzEQA+QVN5/14xgInhSRB5APFe5ylNAAQXeC+zQBNpdoT2026E9qW5orlkFFFBAAQUU+EiA/nETEe3SP27aQ7upP+6mewAjgbVGUBAAAA==
+  </data>
+ </layer>
+ <layer id="5" name="Tile Layer 4" width="36" height="29">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3WoQ0AMAgEQPbfprbT1WOaEhBNDgfiCaeIUAQIECCQBVYeNPXV3N20P8dM5eY9egIECBAgQIDA7wLVP+52dzV36o97yT0sId9hUBAAAA==
+  </data>
+ </layer>
+</map>

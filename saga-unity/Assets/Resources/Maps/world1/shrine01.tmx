@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="51" height="49" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="7">
+ <properties>
+  <property name="bgm" value="minor_dungeon"/>
+  <property name="encounter" value="encounterset_level00_danger03"/>
+  <property name="name" value="Airseed Shrine"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="51" height="49">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2WsW4cMQxEz3DKdPkide7yC0maxI2d/6+iKR4wIKg9StoLrtiCIMUlhzPi7eLa7XZrRXvpdZl96fkdyzDJtSK3mTqwM7+jg94Ml1w7WQ+40cPlDB+x/dxO0uOYMT5DAxgRO57bpp6IF8/wOMNH7OzcNvQI7wyeuxjisasDLV87Vma7HL0/w1dONeIRbVYbWr51rMycy26c4SvnWmb5Uy8daHnrcWa7/L0/w1fOtYgP/Ga8+mTCOprjfHbioxlwwbcJTfTIj7Ts8B71ZnpUC58ZDbH22bSIT+RYOatPdrQXvjOje67mwXnUXlwLnHyWcnxHeb7iHSPigycubdHQIX80S99Mnsszu+K9j29v1EKN8yFuE9ro4bsvfnGWzlHPPU3ww6tfOBk+s+Eywz/WgvF7MAttzIQf3vdDDk8PGJmW9z4XDvjIsXKmV/6eFvjAD76Zp4YefFWL+FT4xxr1yUZa4nx4wde1kKPGPfuLubiXyK96RsdIi3iOtMAJ/vLkMi8c4fkz5aIWcany9zr1Ydle0HJPj/PLYvVXtTi/aowGfKZFd40ecZzVRD064u6U971UuY/qjrSIv7TIvnfT7Gi+h/hMZ/WB4bXcjWuBC37EOcvT4xziPHbjnODmfcQ8w9MXd4IW+uCS8azk6Bces6MWncUDTtRVvfoyHcIFQ/PhIl/h7jXeKyzNG81En9cohot7MLyW/uipiVp29Agrzqmc4eK+0hdrXIvf92ysO1jVEjmtnl3Lyk6kWX3PpkW8Vq2iRfe2a0c7Yy+rGtQnHVUt/n7PxuJa0QIffOt9VaPH79xnet7f79nYcUb4cKly9zp65f2efZbn//S6VXOcEb7zcZ4zsTD8nn2W51d1qM9xRviuRfGMBtXG/tFZ/zt3tBz954ozxWtkP/uzqv0a6Pvo+c8N+zvAfen5H92q/Gbuc+b+xOMM2935SN+lZW8/117uf4v0G3v9z/bIvVxa1vd57eV6Xx79/ly/ses39ky/sX+PNNCtDCcAAA==
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="51" height="49">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2XMQrDMBRDc//bZCk0S6FTD9AzlBwjzfZxI75D+WrBL1Mi25L1BgdPEw8EIAABCEDg9wQuhi04MvYaN0MXR8Ze42Ho4sgw1CACAocEnodqv/jt+v6ksWdmnLPxsen52s++qPKkpTyBAAhA4B8IXJNNZOPJcuvwvUlr/43teDPd+ll976v2j7Cq733V/rFL9b2v2j924R0CFQTU2aL0s3tQPko/6x/nq7NF6XFtz7vyUXqPp5qjzhalKx+lKx+lKx/0sQm83vXXsRHQHgIQgAAEIAABCHwQ2ADC3vvFDCcAAA==
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="spellbook" type="Chest" x="608" y="160" width="16" height="16">
+   <properties>
+    <property name="item" value="spell_fire"/>
+   </properties>
+  </object>
+  <object id="2" name="tele" type="Event" x="192" y="640" width="448" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 44)"/>
+   </properties>
+  </object>
+  <object id="3" name="door" type="Event" x="400" y="304" width="16" height="16">
+   <properties>
+    <property name="hide" value="return hasItem('key_shrineKey')"/>
+    <property name="onInteract" value="speak('It\'s locked.')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="4" name="tele" type="Event" x="336" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/shrine02.tmx', 10, 27)"/>
+   </properties>
+  </object>
+  <object id="5" name="tele" type="Event" x="464" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/shrine02.tmx', 22, 27)"/>
+   </properties>
+  </object>
+  <object id="6" name="tele" type="Event" x="400" y="304" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not hasItem('key_shrineKey')"/>
+    <property name="onCollide" value="teleport('world1/shrine03.tmx', 16, 25)"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

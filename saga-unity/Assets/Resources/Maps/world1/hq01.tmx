@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="48" height="48" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="17">
+ <properties>
+  <property name="bgm" value="generic_cave"/>
+  <property name="encounter" value="encounterset_level00_danger05"/>
+  <property name="name" value="Southern Cave"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="48" height="48">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu1WQYoDQQicL+wtsDnlFXnC/v9FOwUpKETddZyeEPDQaFeXWg6mO/dt2+6z5hvMDMwMzAwsnYHnB3/f7137175g9b3AnmsFrjmP+tD32NftZdkDcZxhnY0f1WvjoO1HFvbgVHD2avNEuNXQ2WtN+shHX22E214ZE+EdvTaWtdRGOiNcY//jWw2dvVcv0nkm3tFsY7UHPVuNa62uD61ejgj3uMAifoRHeSo47gnk5x3J2AzHWYXv5WedjoUG3hOw1PQXDm6FD/3K72jWWOREbi7sce7h2lOXrxo6PnWoRT7d07c9ET/C72jWWGpQG+lRjvpH+Kqh46sO+pGeM/GOZhtL3bB6thrXWl0f/5+9HBFue2Vslc+4rsX/Zy+Hh+Megn7etRpX5WvsFb7eobiPvB5UR5WvsSt8e4din9Wp8rNcZ5zpb5p+lpcctRl/9ZnqoJ/VJEdtxl99pjroZzXJUZvxrziraqnyr+ihWiN6F6p53sX33oV3aZm6+Zsx32e+z8zAzMDMwMzAzMDMwMzAZ87AL85JLKUAJAAA
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="48" height="48">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3XwQqAIAyAYd//dbp06Na1S5cOPU0bBg1ByQRp9Q+MMrPtK8hCIBBAAAEEEPifwJApec30v6lbc5ykzWeztezSt0mrDZ2rV2iONrQWjSd5xyvjtmcN9r6jPXC8b98jr2V8oQav9uSNAAJ1AkvdcEYjgAACtwQ8/MuUCkn/E0pjOdcuYL9Fuo72vJb2nHv7k2QGBBBAAAEEEEAAAQQQQOASOAC95UUYACQAAA==
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="2" name="tele" type="Event" x="176" y="112" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 54, 52)"/>
+   </properties>
+  </object>
+  <object id="3" name="tele" type="Event" x="176" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/hq02.tmx', 11, 18)"/>
+   </properties>
+  </object>
+  <object id="4" name="tele" type="Event" x="272" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/hq02.tmx', 17, 18)"/>
+   </properties>
+  </object>
+  <object id="5" name="tele" type="Event" x="464" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/hq02.tmx', 29, 18)"/>
+   </properties>
+  </object>
+  <object id="6" name="tele" type="Event" x="560" y="512" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/hq02.tmx', 35, 26)"/>
+   </properties>
+  </object>
+  <object id="7" name="chest" type="Chest" x="240" y="192" width="16" height="16">
+   <properties>
+    <property name="item" value="wpn_swordLong"/>
+   </properties>
+  </object>
+  <object id="8" name="chest" type="Chest" x="336" y="432" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_potion"/>
+   </properties>
+  </object>
+  <object id="9" name="door" type="Event" x="176" y="256" width="16" height="32">
+   <properties>
+    <property name="appearance" value="anim_bars"/>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onInteract" value="speak('It\'s locked.')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="10" name="guard" type="Character" x="160" y="224" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+   </properties>
+  </object>
+  <object id="11" name="guard" type="Character" x="192" y="224" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+   </properties>
+  </object>
+  <object id="12" name="guard" type="Character" x="176" y="320" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+    <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+   </properties>
+  </object>
+  <object id="13" name="guard" type="Character" x="240" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="EAST"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+    <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+   </properties>
+  </object>
+  <object id="14" name="guard" type="Character" x="400" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+    <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+   </properties>
+  </object>
+  <object id="15" name="guard" type="Character" x="560" y="320" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+    <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+   </properties>
+  </object>
+  <object id="16" name="guard" type="Character" x="464" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onCollide" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+    <property name="onInteract" value="battle('encounter_lvl00_GOBLIN2-3_SPRITE0-1_BUZZARD0-1')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

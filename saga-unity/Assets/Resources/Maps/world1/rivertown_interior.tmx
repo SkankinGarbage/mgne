@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="38" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="34">
+ <properties>
+  <property name="bgm" value="no_change"/>
+  <property name="name" value="River Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="38" height="32">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu1VS6rDMAxM982qZyp01/vfpprCgCoUfRySULBAT7Y1I83zJ12XZVkHXCipjdTVnLt06Di4FQOuU5dYansIv+MdXZ26xFLXU3R1vKOrU5fYqev3PG5yPnTukY5X7Rc1IWo9HFOXjsjp+dZYYKmBy146VnTxbTKCz3EUU1EC2NKlNXpj8Pg2GYHjOIpH66rUH8Vs3QHuY5Qf7VnhRfcguy+V+qOY6B5k92W05+TNHfj3HYi+I1Hu6P8bvaNvjZcD52hDD+9b4+nh2lm6XqLNuqeVa1fq8n7ruVbVBdyI446AZ/cKc2rwYkcXz74aWRuR5/NWY08P18gVeGi6NntkkbUR2a8ayQ1FSXJP7T3cqat2pmedI/pEjntn89kZIm85Xh2LwRxWeb+oZ3FfcvLHcrw6FoM5LHu3yKOexYGbmeV4dSwG8w99jeenABMAAA==
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="38" height="32">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECmNgGAXDPQS2Qj2ITtPb3y+BFr4C4tdQi/fhoKHCI5bagcPn6PEH4+NQjlMYPR7QFRKSR1dPK/5gcQet/Ddq7mgIjIbAaAiMhsBoCIyGwGgIEBsCZ5AUIrORhAcFE9Z+A7X5kTGs/U+KI/kZIapx0aSYRU21ElB34aLx2YUcd8hsZD24xJHVDEf2SPX3cIzLwewnAKD5KvYAEwAA
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="innkeep" type="Character" x="64" y="48" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="inn()"/>
+   </properties>
+  </object>
+  <object id="6" name="shop" type="Character" x="480" y="96" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_rivertown_weapon')"/>
+   </properties>
+  </object>
+  <object id="7" name="shop" type="Character" x="416" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_rivertown_armor')"/>
+   </properties>
+  </object>
+  <object id="8" name="shop" type="Character" x="544" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="shop('shop_world1_potions')"/>
+   </properties>
+  </object>
+  <object id="9" name="NPC" type="Character" x="160" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Eastern cities are a little reclusive. You won\'t find a place more hospitable than this!')"/>
+   </properties>
+  </object>
+  <object id="14" name="NPC" type="Character" x="80" y="368" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="EAST"/>
+    <property name="onInteract" value="speak('This bar is popular with treasure hunters, like that silly group at the table.'); speak('If you want my advice, you should be a well-balanced party and carefully consider who attacks what so as to defeat as many monsters as possible before they can hurt you.')"/>
+   </properties>
+  </object>
+  <object id="15" name="mayor" type="Character" x="480" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return (getSwitch('mayor01') or getSwitch('shrine_done'))"/>
+    <property name="onInteract" value="play('world1/mayor01.lua')"/>
+   </properties>
+  </object>
+  <object id="16" name="mayor" type="Character" x="480" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return (not getSwitch('mayor01') or getSwitch('shrine_done'))"/>
+    <property name="onInteract" value="speak('The shrine is south of here. Whatever treasure you find there is yours to keep.')"/>
+   </properties>
+  </object>
+  <object id="17" name="mayor" type="Character" x="480" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elder"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onInteract" value="speak('David came back from the shrine. He spoke very highly of you, I am impressed.')"/>
+   </properties>
+  </object>
+  <object id="18" name="NPC" type="Character" x="48" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('Strength is best! A strong human can crush a monster in one blow before it attacks.')"/>
+   </properties>
+  </object>
+  <object id="19" name="NPC" type="Character" x="48" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('Agility is best! A fast human can stun or attack before a monster even moves.')"/>
+   </properties>
+  </object>
+  <object id="20" name="NPC" type="Character" x="32" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_golem"/>
+    <property name="face" value="EAST"/>
+    <property name="onInteract" value="speak('Defense is best! A sturdy monster does not care if the enemy gets a few attacks in.')"/>
+   </properties>
+  </object>
+  <object id="21" name="NPC" type="Character" x="64" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_m"/>
+    <property name="face" value="WEST"/>
+    <property name="onInteract" value="speak('Mana is best! A powerful mutant can take down huge numbers of enemies.')"/>
+   </properties>
+  </object>
+  <object id="22" name="npc" type="Character" x="192" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('Monsters attack the front two party members much more often than those in back. Reorder wisely!')"/>
+   </properties>
+  </object>
+  <object id="24" name="npc" type="Character" x="208" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onInteract" value="speak('It\'s hard to hit monsters that are a lot faster than you. Agility is important.')"/>
+   </properties>
+  </object>
+  <object id="25" name="tele" type="Event" x="64" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown.tmx', 'inn')"/>
+   </properties>
+  </object>
+  <object id="26" name="inn" type="Target" x="64" y="112" width="16" height="16"/>
+  <object id="27" name="tele" type="Event" x="480" y="176" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown.tmx', 'shops')"/>
+   </properties>
+  </object>
+  <object id="28" name="shops" type="Target" x="480" y="160" width="16" height="16"/>
+  <object id="29" name="tele" type="Event" x="160" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown.tmx', 'pub')"/>
+   </properties>
+  </object>
+  <object id="30" name="pub" type="Target" x="160" y="464" width="16" height="16"/>
+  <object id="31" name="tele" type="Event" x="448" y="480" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown.tmx', 'house')"/>
+   </properties>
+  </object>
+  <object id="32" name="house" type="Target" x="448" y="464" width="16" height="16"/>
+  <object id="33" name="house" type="Target" x="448" y="464" width="16" height="16"/>
+ </objectgroup>
+ <layer id="4" name="Tile Layer 3" width="38" height="32">
+  <properties>
+   <property name="z" value="1.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3XMQ4AIAhDUQ6Ak/e/KxO7TRpi9Ds3YJ4MGMFBAAEENIGlxcfSOdZJa7S1+HNp5kV70t/nRdMijQACCCCAAAII3CPg2ntddVrG9U9y1el7ufbe0zoF+Z7iBwATAAA=
+  </data>
+ </layer>
+ <layer id="5" name="Tile Layer 4" width="38" height="32">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3XoQ0AMAgEQPbfprbTVdVXIEj/GOADFwRUKQIECPwhsIaOsYf2ld6WfUnfAPMTIECAAAECBDIEuu7erpyr3vUnveYc3TPq7QATAAA=
+  </data>
+ </layer>
+</map>

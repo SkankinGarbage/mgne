@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="36" height="12" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="9">
+ <properties>
+  <property name="bgm" value="no_change"/>
+  <property name="name" value="Plains Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="36" height="12">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2UsQ7AIAhEHTv5G02nTm3//8/KGy5xEAVnL7lAIpwcbayllJqklU+R1aQeEO8E1UfvCKu69L0JZuZZ0UX/SDAzz4runqf/PbT3vZ/5ftiR9qR8FK18CulF/2nqwWnU+0Ovci9eNAXg+eEO7wzZx6h3glrlXvxoCqD12XrzPEd9Bq7ulrQ+W2+eZ/n8AYPcB8LABgAA
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="36" height="12">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECmNgGAUDFQKbgRaDMD5AjBqY/q1QBjoNkydE7wEqAGF8gBg1MP37oAx0GiZPS/ol0PBXQPyaypacIWDeNQLyIOkdUDXo8QTjE2EETZSgxxOMTxPL6GAoMXmHGDV0cOqoFWSGAACb3EK9wAYAAA==
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="inn" type="Character" x="48" y="64" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="onInteract" value="inn()"/>
+   </properties>
+  </object>
+  <object id="2" type="Event" x="48" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/plainstown.tmx', 30, 25)"/>
+   </properties>
+  </object>
+  <object id="3" type="Event" x="448" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/plainstown.tmx', 39, 27)"/>
+   </properties>
+  </object>
+  <object id="4" name="champion" type="Character" x="448" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onInteract" value="play('world1/champion01.lua')"/>
+   </properties>
+  </object>
+  <object id="5" name="champion" type="Character" x="448" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_dead"/>
+    <property name="hide" value="return (not getSwitch('shrine_done')) or (getSwitch('champion_dead'))"/>
+    <property name="onInteract" value="play('world1/champion02.lua')"/>
+   </properties>
+  </object>
+  <object id="6" name="champion" type="Character" x="448" y="80" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_dead"/>
+    <property name="hide" value="return not getSwitch('champion_dead')"/>
+    <property name="onInteract" value="speak('He is dead.')"/>
+   </properties>
+  </object>
+  <object id="7" name="autostart" type="Event" x="0" y="0" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onEnter" value="playBGM('world1_town')"/>
+   </properties>
+  </object>
+  <object id="8" name="autostart" type="Event" x="16" y="0" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onEnter" value="playBGM('generic_cave')"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="4" name="Tile Layer 3" width="36" height="12">
+  <properties>
+   <property name="z" value="1.0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECmNgGAWjITAaAqMhMPAhwDfwTkBxgT4KjzYcUvxsRhsnoJhKDz+jWEiAQ8jPAKf36lvABgAA
+  </data>
+ </layer>
+ <layer id="5" name="Tile Layer 4" width="36" height="12">
+  <properties>
+   <property name="z" value="1.5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECmNgGAWjITAaAqMhMBoC6CGwEV1ggPm76GD/UPMzAENkJ/DABgAA
+  </data>
+ </layer>
+</map>

@@ -69,7 +69,7 @@ public abstract class Map : MonoBehaviour {
                 } else {
                     key = TerrainEncounterKey;
                     if (key != null) {
-                        var data = IndexDatabase.Instance().TerrainEncounterSets.GetData(EncounterKey);
+                        var data = IndexDatabase.Instance().TerrainEncounterSets.GetData(TerrainEncounterKey);
                         encounterSet = new TerrainEncounterSet(data);
                     }
                 }

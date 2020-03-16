@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="50" height="48" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="12">
+ <properties>
+  <property name="bgm" value="generic_cave"/>
+  <property name="encounter" value="encounterset_level00_danger01"/>
+  <property name="name" value="North Passage"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="50" height="48">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu1YQQ7DIAzrD7bbDutpr9j/XzZ8sGRFZUohIFrlgJKGYBxigdR927Y9R55BaiA1kBpIDaQGltLAd1A/3gWXQ99/xmB74roW/tPg2fnW70/B5VAMxmB74roW/svg2fnW70fB5VAMxmB74roWvsWz863fUXxrOMoLGkWe1armtPq1/aPiygsaBa7Vqub0+MA+Wh8VJ3btbDjfa6P41nDIL+s41gvPhxbnpO8F/ai44rEn3DvSAlvfC/pRccUbXQfxZ9nIPszG0jOavXfkflmH776KPPN/WNmP8/3gXQ+rZ6vxVn9mP3jXwypfjbf6M+vQvZSvxiN87fUIP4KjB2MEd8VUDrW45rT6ij3b9/wjQF2zeZ3dz/OP4Ap1eOrOOtbRI94b9APW07tVc/DeoA7YVTl6eKEGDk/+qjmsAXZVjh5ed6nDU2vmXFur2b/sX2rg/hr4AW2ZAKSAJQAA
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="50" height="48">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3QAQ0AAAzCMPwrurzrgHQKliYiQIAAAQIECBAgQIAAAQIECBAgQIAAAQKdAte57ZoAAQIECBAgQIAAAQIEhgQeb1SHgoAlAAA=
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="tele" type="Event" x="608" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 21, 27)"/>
+   </properties>
+  </object>
+  <object id="2" name="room" type="Ceiling" x="160" y="160">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 48,0 48,80 32,80 32,128 16,128 16,80 0,80"/>
+  </object>
+  <object id="3" name="room" type="Ceiling" x="256" y="160">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 48,0 48,80 32,80 32,128 16,128 16,80 0,80"/>
+  </object>
+  <object id="4" name="room" type="Ceiling" x="352" y="160">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 48,0 48,80 32,80 32,128 16,128 16,80 0,80"/>
+  </object>
+  <object id="5" name="room" type="Ceiling" x="448" y="160">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 48,0 48,80 32,80 32,128 16,128 16,80 0,80"/>
+  </object>
+  <object id="6" name="roof" type="Ceiling" x="480" y="512">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="0,0 16,0 16,48 32,48 32,128 -16,128 -16,48 0,48"/>
+  </object>
+  <object id="7" name="potion" type="Chest" x="368" y="208" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_potion"/>
+   </properties>
+  </object>
+  <object id="8" name="hp200" type="Chest" x="464" y="208" width="16" height="16">
+   <properties>
+    <property name="item" value="item_hp200"/>
+   </properties>
+  </object>
+  <object id="9" name="bronze shield" type="Chest" x="176" y="208" width="16" height="16">
+   <properties>
+    <property name="item" value="shield_bronze"/>
+   </properties>
+  </object>
+  <object id="10" name="spellbook" type="Chest" x="480" y="608" width="16" height="16">
+   <properties>
+    <property name="item" value="wpn_gunColt"/>
+   </properties>
+  </object>
+  <object id="11" name="tele" type="Event" x="336" y="512" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/pass02.tmx', 10, 9)"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="35" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="5">
+ <properties>
+  <property name="bgm" value="generic_cave"/>
+  <property name="encounter" value="encounterset_level00_danger05"/>
+  <property name="name" value="Southern Cave"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="35" height="32">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2VsQqAMAxE63fYya9wdXPz///GRDwIVUg7pBW5IZwloX1cr5hTSplFD5gBZoAZuDKwfsiHo4KlF6/HMgurzqjaivi/eCzLzaJqawTLJAybVKkjWMozPR/L+ZZ1696t839h8d5KpC+75BI+Kod9K7pGDxrNAi+UQ9lQukYPGs0CL8BgFT1oNIs9u+Yb9xWpbxyR53l7Wx5vlv3n26Yn9IQZ6JuBE6kuH7CAEQAA
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="35" height="32">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3QoREAMAgDQPYfsPNgGoND85gcQfFVhgABAgQIECBAgACBKfB+kZz3q3s8klcd/E2AAIGtQAPpRY2TgBEAAA==
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="tele" type="Event" x="160" y="144" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/hq02.tmx', 23, 33)"/>
+   </properties>
+  </object>
+  <object id="2" name="tele" type="Event" x="304" y="160" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 54, 52)"/>
+   </properties>
+  </object>
+  <object id="3" name="chest" type="Chest" x="240" y="304" width="16" height="16">
+   <properties>
+    <property name="item" value="key_artifactFlashlight"/>
+    <property name="keyItem" value="KEY_ITEM"/>
+   </properties>
+  </object>
+  <object id="4" name="boss" type="Character" x="240" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_bird"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return getSwitch('hq_dead')"/>
+    <property name="onInteract" value="play('world1/hqboss.lua')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

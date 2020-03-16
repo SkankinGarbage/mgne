@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="48" height="48" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="17">
+ <properties>
+  <property name="bgm" value="world1_town"/>
+  <property name="name" value="Mountain Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="48" height="48">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2XwWocMRBE1xgCgfjknHKa/Y6c5v9/ynqwRZpCM+tqdiE2OhTdI1V3P8nCxq+Xy+U10MvwPlMJS8f7THZ6d5iSmsV//v6Su+x4v9v9b+PNHqlz1s6dJjXOdMTOuns/852wdLzOkPDv40wu79dhSmqYJwbye/x48aGaa81jwtLx+rx7/O6v3/vkTB2mpIb5Yia/noj9z6j2S1g6Xs1SPOOXJ4kdpqTGWb4a/5/Lv/dDfsbPHp572oYH4UvusuOFiVmI/BGiF6JXhympebnNYh75I0QvRK+EpeNlBrMQ+Zl+jn0J34+JWN9uIu8wJTU+z5nYl8ROZO33RN4vYel4fd7bYKrSefA5//tYc3m/DlNS4/P8TnWWGT9rM21jHbGXsHS8zGAWIv9l0nnY8/vXz6ZGfNtN5B2mpMbn+XvQNz7x/x053zpbjd4vYel4fR7fRxI/EY/OVqP36zAlNT6vMp7lR2f0fglLx+vznJm34mt8U1ffvXLv12FKanzejHW2Rl1998q9X8LS8fo8seo+iVqrkbr67pV7vw5TUuPz+IZT90ms3MrxHWkbe4j9hKXjZU4VM2HUfRLFXKN+h+JXDXEzdZiSGp8nlsp6lMtbo/dLWDpenyeWfdzjEbevy0ut9+swJTX+vxQMEpz7kHiVK2pdkTrvl7B0vNcxswoGaS85jKzXKG5F9q+mDlNSw8xEe/HDzbfirE/C0vHOZj5yrcOU1DySddYrYVne5/+9XHe87ni9gfUG1htYb2C9gf/vDXwAfveJQQAkAAA=
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="48" height="48">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3UQQqAIBCFYbtM979G+7blJTpADDIgg9JmeGD8QpkaPvwyS6EggAACCCCAAAJ6gTNExnYYponAUOAY9tKJQK7AnTuddDb7R/atXdLgn4aZpRWvW2utu5+bvgavZ6u4ZgML9LP/dR/p0UVJk6o0LTeM/Z/r2c/2dW727/KMAAIIIIAAAggggAACCCCAgFLgBdqO3isAJAAA
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="tele" type="Event" x="176" y="576" width="416" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 50, 25)"/>
+   </properties>
+  </object>
+  <object id="2" name="NPC" type="Character" x="368" y="464" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Before Hero was sealed, this city was along a busy trade route.')"/>
+   </properties>
+  </object>
+  <object id="3" name="tele" type="Event" x="176" y="528" width="16" height="48">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 50, 25)"/>
+   </properties>
+  </object>
+  <object id="4" name="tele" type="Event" x="576" y="528" width="16" height="48">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 50, 25)"/>
+   </properties>
+  </object>
+  <object id="5" name="NPC" type="Character" x="368" y="240" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Our city\'s treasures are all safe in the stronghold.')"/>
+   </properties>
+  </object>
+  <object id="6" name="NPC" type="Character" x="272" y="400" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I hear when Hero was sealed, some knights were still trapped inside.')"/>
+   </properties>
+  </object>
+  <object id="7" name="NPC" type="Character" x="240" y="528" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_slime"/>
+    <property name="face" value="EAST"/>
+    <property name="onInteract" value="speak('Elemental stones are a rare treasure nowadays, but they say a powerful magician could use them to create lost magic.')"/>
+   </properties>
+  </object>
+  <object id="8" name="NPC" type="Character" x="480" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="NORTH"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The magus eye is the pride of the city. The wearer will never stumble into any traps!')"/>
+   </properties>
+  </object>
+  <object id="9" name="NPC" type="Character" x="400" y="304" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('When I was a kid I fell into the town well. It\'s surprisingly deep!')"/>
+   </properties>
+  </object>
+  <object id="10" name="tele" type="Event" x="272" y="336" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/mountaintown_interior.tmx', 3, 8)"/>
+   </properties>
+  </object>
+  <object id="11" name="tele" type="Event" x="448" y="416" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/mountaintown_interior.tmx', 3, 26)"/>
+   </properties>
+  </object>
+  <object id="12" name="tele" type="Event" x="448" y="352" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/mountaintown_interior.tmx', 25, 26)"/>
+   </properties>
+  </object>
+  <object id="13" name="tele" type="Event" x="448" y="288" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/mountaintown_interior.tmx', 25, 8)"/>
+   </properties>
+  </object>
+  <object id="14" name="door" type="Event" x="304" y="224" width="16" height="16">
+   <properties>
+    <property name="onInteract" value="speak('It\'s locked.')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="15" name="well1" type="Event" x="368" y="384" width="16" height="16">
+   <properties>
+    <property name="hide" value="return hasItem('key_artifactScuba')"/>
+    <property name="onInteract" value="speak(getHero(0).getName(), 'The well looks too deep to dive without drowning.')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+  <object id="16" name="well2" type="Event" x="368" y="384" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not hasItem('key_artifactScuba')"/>
+    <property name="onInteract" value="play('world1/well.lua')"/>
+    <property name="passable" value="IMPASSABLE"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

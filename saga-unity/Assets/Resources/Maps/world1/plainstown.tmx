@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="58" height="48" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="22">
+ <properties>
+  <property name="bgm" value="no_change"/>
+  <property name="name" value="Plains Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="58" height="48">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2XwUoEQQxER/YgevDmN4gnT+rBb1H//y9MgQVFSHfPwDJRqENIptO9k5fU9rKXbdsuNvfAGrAGrAFrwBqwBqwBa8AasAasgX+ngZuYWYed/R8SjJ9hX4V9D3pwH+s07dFtrGfTvMYdnPr+VUy+u19W3f8Ya9k0r3EH5955KmPF+Rqcb2LvESubxh2c+v5VTFb61f5RvoNz7zxHNc/W2Q943dfBqe8/Euc7B896HmzQN01ZOzj3zpOzIctDMGRjDn7Whw5OrW0Wcz6cS75b8czz2JN7gGfmOzj3zhM16kxn9yv2zfrQwckeX9OD8ynsRew5Yr6jg/PIPFnnyoOzmjfWcbaDc1VzlUe9tCpfren+Dk6+n76qEWv4fajuUKyPzozWz+Yk28hrneCp7hac1X2I9fOY032dnOCAaY1aG3Kz71w1a56H52eDu4OT/c5zIC/z7EP2zFe/l3+N8yN6vOIkD/nJwPWVpnV/xzwxH9aqDIyZW/mZpvPZDk7ywPM7hDjXdvSZn1udO5sTNbAe9VVt11w7m9PvO//ud8/dc2vAGrAGrAFrwBqwBtYa+AG8RIv1gCsAAA==
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="58" height="48">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3VMQqAMAwFUO9/LhcHz+AgqJNnsIJZhK6x0ieUYBHy85Q6DC4CBAgQIECAAAECBAgQIECAwD8Fzid21H9OITUBAgTaE5hKpPtsXdqLlpoo/i9RU5snNrvni3ee2LbrVluZfn+to9yPnajMncxZGzPOlKi151rcX1sMJdPnAvEtR/08kAAECBAgQIAAAQIECBBIErgA5FbEDYArAAA=
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="NPC" type="Character" x="416" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('You\'re not welcome here.')"/>
+   </properties>
+  </object>
+  <object id="2" type="Event" x="208" y="224" width="512" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 58, 42)"/>
+   </properties>
+  </object>
+  <object id="3" type="Event" x="480" y="384" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/plainstown_interior.tmx', 3, 8)"/>
+   </properties>
+  </object>
+  <object id="5" type="Event" x="208" y="240" width="16" height="336">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 58, 42)"/>
+   </properties>
+  </object>
+  <object id="7" type="Event" x="624" y="416" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/plainstown_interior.tmx', 28, 9)"/>
+   </properties>
+  </object>
+  <object id="8" name="NPC" type="Character" x="400" y="512" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_knight"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('For years this town has held the monsters at bay. Those thankless other cities send no support.')"/>
+   </properties>
+  </object>
+  <object id="9" name="NPC" type="Character" x="576" y="320" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_beetle"/>
+    <property name="face" value="NORTH"/>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Our champion wields an everburning torch. His might allows us to stand against our enemies.')"/>
+   </properties>
+  </object>
+  <object id="10" name="NPC" type="Character" x="608" y="464" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="WEST"/>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('This place is really just a camp, set up by our heroic ancestors to stem the flow of monsters from the south.')"/>
+   </properties>
+  </object>
+  <object id="11" name="NPC" type="Character" x="272" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="SOUTH"/>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('It\'s thanks to us warriors that your pathetic hometown isn\'t crawling with beasts.')"/>
+   </properties>
+  </object>
+  <object id="12" name="NPC" type="Character" x="432" y="288" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_dead"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onInteract" value="speak('He is dead.')"/>
+   </properties>
+  </object>
+  <object id="13" name="NPC" type="Character" x="256" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_dead"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onInteract" value="speak('He is dead.')"/>
+   </properties>
+  </object>
+  <object id="14" name="NPC" type="Character" x="416" y="512" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_dead"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onInteract" value="speak('He is dead.')"/>
+   </properties>
+  </object>
+  <object id="15" name="NPC" type="Character" x="624" y="464" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_dead"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onInteract" value="speak('He is dead.')"/>
+   </properties>
+  </object>
+  <object id="16" name="NPC" type="Character" x="560" y="336" width="16" height="16">
+   <properties>
+    <property name="appearance" value="anim_dead"/>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onInteract" value="speak('He is dead.')"/>
+   </properties>
+  </object>
+  <object id="17" type="Event" x="208" y="576" width="512" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 58, 42)"/>
+   </properties>
+  </object>
+  <object id="18" type="Event" x="704" y="240" width="16" height="336">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 58, 42)"/>
+   </properties>
+  </object>
+  <object id="19" name="autostart" type="Event" x="224" y="240" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('shrine_done')"/>
+    <property name="onEnter" value="playBGM('world1_town')"/>
+   </properties>
+  </object>
+  <object id="21" name="autostart" type="Event" x="240" y="240" width="16" height="16">
+   <properties>
+    <property name="hide" value="return not getSwitch('shrine_done')"/>
+    <property name="onEnter" value="playBGM('generic_cave')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

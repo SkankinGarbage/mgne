@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="48" height="49" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="33">
+ <properties>
+  <property name="bgm" value="world1_town"/>
+  <property name="name" value="River Town"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="48" height="49">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2ZTU4DMQxGC5VYIFjBBna9BgfgCFwB7n8C8kk86ZPx/FbOdJGFZSd24hePJy3lfDqdzjco343pZ4XcIruYBv+xfTXqP+p/zd0w+ud//7y1e21J7lqMy30Yy7e0h/wV9fe87y1HJs4uO+PP1mnO96/mv7R8mazhz9Zprgc/tYucU+Os/jH2sbFL2Luyf1QniRgeEolsGX+2TvzsXcnvfK8tZxRnU2zG/9zmoyiW59CL/6nllLyY+Hmm+D0G+wh+587sKX7O7VqxnKFX/ck5p7P+mTprNb/uhznWzJfxZ3HMcQ9V3P+XP35/R7HJH/UefuWp4IeNd841PvFGwbdW6xlU8s/1b6x3HOsM8XxxXM3PPe2a2sL70TijxBjGrrW+mt/zRRv+r8bxaaIxscTw7qDlr+TX3msl4/e1Ys0+gyv5qd+cVn75M37WEePvv2z5e/DzvF1HNvF7/2f9E++BXvyxbtSO/JwlG0/NsaZH/WPdNPb8YnDBh3ZfZh95/8CIFh/2Wj34///2oN9y9L1WNcw+tzQ/9z5vqX3192fnd2a/z+Hd2j/auye/M/u9FPk5M/NTuge/53bm7O8p6n+r/NldGu9Tzuu9ho1PmjNW94/nXLKpv+L8WWH7+h78qo3E887Zzp89K611bvav+PuFvffyZ+eEXdr3r+b3XG5HRq8/Po+fsiv49fvDksCIzviX9pC/gv/S9l0SuNEZ/9Ie8lfwX/P/oK1rB3/+HW5rHffGj/qP+u/tHa0b/XNs/6x9dr8JNIygwCQAAA==
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="48" height="49">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2XQQqDMBBF09N4/03PUPEEXbQVL+FWBvJBEJ06GIP4hDCY/PmTeUrElLggAAEIQAACEIAABO5G4HfhhptHShp72vhk8XdPUiFtO/NVLxa3rn91Wx4112z/1rfXZ809UhsCawT03iqu6ZivS+BZt3y4+jtnvnLUfdiQxBCBwcmyb9joaFheEtC5qbhUMAMBCHgEOk9w8np/cr0jy9lZpHGkb0kv7Vfn6PxfsmRdvGME9JwUYy5kQQACEIAABCAAgfsSmACnk425wCQAAA==
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="3" type="Event" x="160" y="128" width="16" height="528">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 31)"/>
+   </properties>
+  </object>
+  <object id="4" type="Event" x="160" y="112" width="448" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 31)"/>
+   </properties>
+  </object>
+  <object id="5" name="NPC" type="Character" x="416" y="432" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('Before the portals in Hero opened, this town used to be at war with most of its neighbors.')"/>
+   </properties>
+  </object>
+  <object id="6" name="NPC" type="Character" x="224" y="496" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_bird"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('I tried to visit the Airseed Shrine once, but I couldn\'t find a way over the mountains.')"/>
+   </properties>
+  </object>
+  <object id="7" name="NPC" type="Character" x="544" y="416" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_horse"/>
+    <property name="face" value="WEST"/>
+    <property name="onInteract" value="speak('The governor lives in this house. Be polite!')"/>
+   </properties>
+  </object>
+  <object id="8" name="NPC" type="Character" x="416" y="208" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_mutant_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Welcome to the river city! It\'s a hard journey to come south over the mountains.')"/>
+   </properties>
+  </object>
+  <object id="9" name="NPC" type="Character" x="304" y="560" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_slime"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('A pub can be a good place to find information... or just a good drink.')"/>
+   </properties>
+  </object>
+  <object id="10" name="NPC" type="Character" x="432" y="608" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The robots that hail from beyond Hero are amazing. They gain the power of items equipped to them.')"/>
+   </properties>
+  </object>
+  <object id="11" name="NPC" type="Character" x="288" y="384" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_m"/>
+    <property name="face" value="EAST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('The swamps south of here can be tricky to traverse. I don\'t think any have been down that way in years.')"/>
+   </properties>
+  </object>
+  <object id="12" name="NPC" type="Character" x="208" y="224" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_elf"/>
+    <property name="hide" value="return getSwitch('opening_flashback')"/>
+    <property name="onInteract" value="speak('Now that Hero is sealed off, this town is the most active trading hub on the continent.')"/>
+   </properties>
+  </object>
+  <object id="13" name="NPC" type="Character" x="544" y="272" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_human_f"/>
+    <property name="face" value="WEST"/>
+    <property name="onBehavior" value="this.wander()"/>
+    <property name="onInteract" value="speak('Once in a while a shop might have a relic from Hero, but magical items are rare nowadays.')"/>
+   </properties>
+  </object>
+  <object id="19" type="Event" x="160" y="656" width="448" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 25, 31)"/>
+   </properties>
+  </object>
+  <object id="21" name="NPC" type="Character" x="528" y="496" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="WEST"/>
+    <property name="onInteract" value="speak('Here in the river city we built a shrine to the airseed, a magical artifact that lets you breathe where others suffocate.')"/>
+   </properties>
+  </object>
+  <object id="22" name="NPC" type="Character" x="512" y="480" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="SOUTH"/>
+    <property name="onInteract" value="speak('The champion of the plains town wields the everburning torch, a magical weapon that gives off light even without air.')"/>
+   </properties>
+  </object>
+  <object id="23" name="NPC" type="Character" x="512" y="512" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('In the city keep of the mountain town, their wiseman guards the magus eye, a magical talisman that guides the user away from invisible traps.')"/>
+   </properties>
+  </object>
+  <object id="24" name="NPC" type="Character" x="288" y="592" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_rat"/>
+    <property name="face" value="NORTH"/>
+    <property name="onInteract" value="speak('A man named David stopped by here a few weeks ago. I hear he had one of the four artifacts that unseal Hero!')"/>
+   </properties>
+  </object>
+  <object id="25" name="inn" type="Target" x="272" y="256" width="16" height="16"/>
+  <object id="26" name="tele" type="Event" x="272" y="240" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown_interior.tmx', 'inn')"/>
+   </properties>
+  </object>
+  <object id="27" name="tele" type="Event" x="496" y="256" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown_interior.tmx', 'shops')"/>
+   </properties>
+  </object>
+  <object id="28" name="shops" type="Target" x="496" y="272" width="16" height="16"/>
+  <object id="29" name="tele" type="Event" x="320" y="544" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown_interior.tmx', 'pub')"/>
+   </properties>
+  </object>
+  <object id="30" name="pub" type="Target" x="320" y="560" width="16" height="16"/>
+  <object id="31" name="tele" type="Event" x="512" y="400" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="targetTele('world1/rivertown_interior.tmx', 'house')"/>
+   </properties>
+  </object>
+  <object id="32" name="house" type="Target" x="512" y="416" width="16" height="16"/>
+ </objectgroup>
+</map>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="51" height="46" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="10">
+ <properties>
+  <property name="bgm" value="generic_cave"/>
+  <property name="encounter" value="encounterset_level00_danger01"/>
+  <property name="name" value="North Passage"/>
+ </properties>
+ <tileset firstgid="1" source="../tilesets/lower.tsx"/>
+ <tileset firstgid="176" source="../tilesets/upper.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="51" height="46">
+  <properties>
+   <property name="z" value="0"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu2Wy43DMAxE3UEKSE5bxSJN5Jb+S1nP4QEDQZZsSNTCAA/C6EPNcEQa8GvbtleOfIPsgeyB7IHsgX/qgd+FutFan4VeorWi+f3fI1rrsbAu0VrR/F6XaK3PwrpEa0Xze12itaL5V3t5Luqz6HcT/88+VviJ9vLYfWhE+NH7+JCO99zsOV7wM5Nf7+NDGnibqeNc7od9NIXau7rWHedljjd40ZuJaMGJplC6rbXulOe6I074hGgIFe9ns+bounap21rX8lSuzkeuzsPeTETXtV2zNy+9eHwtT85rZyN7XhNpwIUee1fX8JToeuXZ6LpWk7Oc+GzFK3eG4kb0Wjo6K9+7F+/nPS/yoNwZXpPeXdc5O8cL8bzhGdTdVpzXQLG+Rm8UXR8v7PGGZ5D8jmLhriF6o15cGx32WM/E914TDedEb9RLjdt1NCemhd8LcUexo17E69w1H8TMQuVc4xr1UvJSf2qAZk9Hb9CLWXlO3vLBXNjLQd+uvAh7sSvPr3ggL3278iJk767o39hdPZB3erl/P1LLxKxl9kD2QPbA/XvgD/vQeuWoJAAA
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="51" height="46">
+  <properties>
+   <property name="z" value=".5"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAECu3QMQEAAAgCMPvHNIkJCKCOlwdWJQQIECBAgAABAgQIECBAgAABAgQIECBAgACBLNC5Wtdc+rIO32ACBAgQIECAAIH3AgMVXO6aqCQAAA==
+  </data>
+ </layer>
+ <objectgroup id="3" name="Object Layer 1">
+  <object id="1" name="tele" type="Event" x="160" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/pass01.tmx', 21, 31)"/>
+   </properties>
+  </object>
+  <object id="2" name="room" type="Ceiling" x="384" y="320">
+   <properties>
+    <property name="roofID" value="27"/>
+    <property name="roofTileset" value="lower"/>
+   </properties>
+   <polygon points="-128,-32 176,-32 176,80 32,80 32,112 16,112 16,80 -128,80"/>
+  </object>
+  <object id="3" name="potion" type="Chest" x="400" y="576" width="16" height="16">
+   <properties>
+    <property name="item" value="pot_potion"/>
+   </properties>
+  </object>
+  <object id="4" name="gold glove" type="Chest" x="464" y="368" width="16" height="16">
+   <properties>
+    <property name="item" value="helm_bronze"/>
+   </properties>
+  </object>
+  <object id="5" name="str24" type="Chest" x="336" y="368" width="16" height="16">
+   <properties>
+    <property name="item" value="item_str24"/>
+   </properties>
+  </object>
+  <object id="6" name="tele" type="Event" x="592" y="128" width="16" height="16">
+   <properties>
+    <property name="onCollide" value="teleport('world1/overworld.tmx', 23, 28, 'SOUTH')"/>
+   </properties>
+  </object>
+  <object id="7" name="puppet" type="Character" x="592" y="192" width="16" height="16">
+   <properties>
+    <property name="appearance" value="4dir_demon"/>
+    <property name="hide" value="return getSwitch('puppet_dead')"/>
+   </properties>
+  </object>
+  <object id="8" name="trigger" type="Event" x="592" y="224" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('puppet_dead')"/>
+    <property name="onCollide" value="play('world1/borg03.lua')"/>
+   </properties>
+  </object>
+  <object id="9" name="trigger" type="Event" x="592" y="176" width="16" height="16">
+   <properties>
+    <property name="hide" value="return getSwitch('puppet_dead')"/>
+    <property name="onCollide" value="play('world1/borg03.lua')"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
