@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class EquipmentInventory : Inventory {
 
-    public const int Capacity = 8;
+    public const int DefaultCapacity = 8;
 
     private Unit owner;
 
-    protected EquipmentInventory(Unit unit) : base(Capacity) {
+    protected EquipmentInventory(Unit unit) : base(DefaultCapacity) {
         owner = unit;
     }
 
     public EquipmentInventory(Unit unit, CharaData data) : this(unit) {
-        for (int i = 0; i < capacity && i < data.equipped.Length; i += 1) {
+        for (int i = 0; i < base.Capacity && i < data.equipped.Length; i += 1) {
             var itemData = data.equipped[i];
             if (itemData != null) {
                 SetSlot(i, new CombatItem(itemData), firstEquip:true);
@@ -39,7 +39,7 @@ public class EquipmentInventory : Inventory {
 
     /// <returns>True if at least one item can be used in battle</returns>
     public bool ContainsBattleUseableItems() {
-        for (int slot = 0; slot < capacity; slot += 1) {
+        for (int slot = 0; slot < base.Capacity; slot += 1) {
             var toCheck = items[slot];
             if (toCheck != null && toCheck.IsBattleUseable && toCheck.UsesRemaining > 0) {
                 return true;
@@ -64,7 +64,7 @@ public class EquipmentInventory : Inventory {
 
     public void RestoreAbilityUses() {
         foreach (var item in items) {
-            item.RestoreUses();
+            item?.RestoreUses();
         }
     }
 }

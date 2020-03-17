@@ -71,7 +71,7 @@ public class Unit {
         if (serialized.dataKey?.Length > 0) {
             data = IndexDatabase.Instance().Units.GetData(serialized.dataKey);
         }
-        Stats = new StatSet(serialized.baseStats);
+        Stats = new StatSet(serialized.currentStats ?? serialized.baseStats);
         BaseStats = new StatSet(serialized.baseStats);
         Equipment = new EquipmentInventory(this, serialized.equipment);
         SetName(serialized.name);
@@ -105,10 +105,12 @@ public class Unit {
 
     /// <summary>To be called from the inventory</summary>
     public void OnEquip(CombatItem item, bool firstEquip) {
-        Stats += item.Stats;
-        if (Race == Race.ROBOT) {
-            if (firstEquip) item.HalveUses();
-            Stats += item.RoboStats;
+        if (firstEquip) {
+            Stats += item.Stats;
+            if (Race == Race.ROBOT) {
+                item.HalveUses();
+                Stats += item.RoboStats;
+            }
         }
     }
 

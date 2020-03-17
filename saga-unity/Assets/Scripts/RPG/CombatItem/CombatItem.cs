@@ -45,9 +45,11 @@ public class CombatItem {
     }
 
     /// <param name="inventory">The inventory being added to, maybe null</param>
-    public void OnAddedTo(Inventory inventory, bool isEquip) {
+    public void OnAddedTo(Inventory inventory, bool isFirstEquip) {
         Container = inventory;
-        UsesWhenAdded = UsesRemaining;
+        if (isFirstEquip) {
+            UsesWhenAdded = UsesRemaining;
+        }
     }
 
     public void RestoreUses() {

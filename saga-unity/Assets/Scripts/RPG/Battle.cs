@@ -233,6 +233,7 @@ public class Battle {
         View.PopulateForUnitIntentSelect(intent);
         var selector = View.inventory.Selector;
         selector.Selection = intent.FindIndexForItem();
+        View.inventory.MoveSelectionToUseableItem(intent.Actor.Equipment);
         do {
             var slot = await selector.SelectItemAsync(null, true);
             selector.ClearSelection();

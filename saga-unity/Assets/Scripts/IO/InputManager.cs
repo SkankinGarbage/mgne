@@ -124,15 +124,15 @@ public class InputManager : MonoBehaviour {
     }
 
     public IEnumerator AwaitConfirm() {
-        bool advance = false;
-        yield return null;
-        do {
-            foreach (KeyCode code in keybinds[Command.Confirm]) {
-                if (Input.GetKeyDown(code)) {
-                    advance = true;
-                }
+        var id = "confirm";
+        var done = false;
+        PushListener(id, (command, type) => {
+            if (type == Event.Down) {
+                RemoveListener(id);
+                done = true;
             }
-            yield return null;
-        } while (advance == false);
+            return true;
+        });
+        while (!done) yield return null;
     }
 }

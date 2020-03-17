@@ -85,7 +85,7 @@ public abstract class Map : MonoBehaviour {
     public abstract string BgmKey { get; }
     public abstract string EncounterKey { get; }
     public abstract string TerrainEncounterKey { get; }
-    public abstract string BattleBgmKey { get; }
+    public abstract string BattleBGMKey { get; }
 
     #endregion
 
@@ -99,7 +99,7 @@ public abstract class Map : MonoBehaviour {
     }
 
     public Vector3Int TileToTilemapCoords(int x, int y) {
-        return new Vector3Int(x, -1 * (y + 1), 0);
+        return new Vector3Int(x, -1 * y, 0);
     }
 
     public abstract PropertiedTile TileAt(Tilemap layer, int x, int y);
@@ -113,7 +113,7 @@ public abstract class Map : MonoBehaviour {
             passabilityMap[layer] = new short[Width, Height];
             for (int x = 0; x < Width; x += 1) {
                 for (int y = 0; y < Height; y += 1) {
-                    PropertiedTile tile = TileAt(layer, x, y - 1);
+                    PropertiedTile tile = TileAt(layer, x, y);
                     if (tile != null) {
                         if (tile.IsPassable) passabilityMap[layer][x, y] += 1;
                         if (tile.IsImpassable && groundLayer) passabilityMap[layer][x, y] -= 1;

@@ -21,6 +21,7 @@ public class SerializationManager : MonoBehaviour {
         var settings = new JsonSerializerSettings();
         settings.Converters.Add(new StatSetConverter());
         settings.Converters.Add(new UnitConverter());
+        settings.Converters.Add(new InventoryConverter());
         serializer = JsonSerializer.Create(settings);
         
         Data = new GameData {

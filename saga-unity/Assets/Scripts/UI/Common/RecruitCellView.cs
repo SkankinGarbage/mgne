@@ -12,7 +12,13 @@ public class RecruitCellView : MonoBehaviour {
             recruitName.text = "More information";
         } else {
             sprite.Populate(data.appearance);
-            recruitName.text = data.species;
+            if (data.species == null || data.species.Length == 0) {
+                recruitName.text = data.race.Name().ToUpper();
+                while (recruitName.text.Length < 10) recruitName.text += " ";
+                recruitName.text += data.gender.Label();
+            } else {
+                recruitName.text = data.species;
+            }
         }
     }
 }

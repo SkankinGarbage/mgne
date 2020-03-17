@@ -27,7 +27,7 @@ public abstract class AbilEffect {
     }
 
     public void PlayMainSound() {
-        // TODO: extract audio from battle anim
+        item.Anim.PlaySound();
     }
 
     public virtual void OnRoundStart(Intent intent) {
@@ -71,7 +71,7 @@ public abstract class AbilEffect {
             var aliveTargets = new List<Unit>(intent.Targets.Where(unit => unit.IsAlive));
             await Item.Anim.PlayAsync(intent.Battle.View, aliveTargets);
         } else {
-            // enemy battle animation
+            PlayMainSound();
         }
     }
 }

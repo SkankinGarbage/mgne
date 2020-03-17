@@ -44,6 +44,7 @@ public class BattleView : FullScreenMenuView {
         menu = FindObjectOfType<BattleView>();
         menu.Populate(battle);
         menu.PlayBattleBGM();
+        menu.PopulateForFightRun();
         await Global.Instance().Maps.FadeInRoutine("white");
 
         Global.Instance().Input.PushListener(menu.ToString(), (cmd, x) => true);

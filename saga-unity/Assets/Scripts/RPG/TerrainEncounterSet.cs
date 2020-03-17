@@ -25,7 +25,7 @@ public class TerrainEncounterSet : BaseEncounterSet {
 
     protected TerrainEncounterSetMemberData GetCurrentSet() {
         var avatar = Global.Instance().Maps.Avatar;
-        var tile = avatar.Map.TileAt(avatar.Map.layers[0], avatar.Parent.Position.x, avatar.Parent.Position.y - 1);
+        var tile = avatar.Map.TileAt(avatar.Map.layers[0], avatar.Parent.Position.x, avatar.Parent.Position.y);
         if (tile == null) {
             return null;
         }

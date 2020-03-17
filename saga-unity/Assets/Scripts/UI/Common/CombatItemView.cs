@@ -11,7 +11,10 @@ public class CombatItemView : MonoBehaviour {
 
     [SerializeField] private bool allowSelectNull = true;
 
+    public CombatItem Item { get; private set; }
+
     public void Populate(CombatItem item, PointerLayer pointers = null) {
+        Item = item;
         nameLabel.text = item?.Name;
         usesLabel.text = item?.Data.uses > 0 ? item.UsesRemaining.ToString() : "";
         this.pointers = pointers != null ? pointers : this.pointers;

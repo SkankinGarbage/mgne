@@ -18,7 +18,7 @@ public class TsxMap : Map {
     public override string BgmKey { get => GetProperty(PropertyBgmKey); }
     public override string EncounterKey { get => GetProperty(PropertyEncounter); }
     public override string TerrainEncounterKey { get => GetProperty(PropertyTerrainEncounter); }
-    public override string BattleBgmKey { get => GetProperty(PropertyBattleBgm); }
+    public override string BattleBGMKey { get => GetProperty(PropertyBattleBgm); }
 
     private SuperMap _tsx;
     public SuperMap Tsx {

@@ -33,4 +33,11 @@ public class CombatItemList : ListView {
             view.Populate(new CombatItem(itemData), pointers);
         });
     }
+
+    public void MoveSelectionToUseableItem(Inventory inventory) {
+        var size = inventory.Capacity;
+        var off = 0;
+        for (; off < size && GetCell((off + selector.Selection) % size).GetComponent<CombatItemView>().Item == null; off += 1) ;
+        selector.Selection = (off + selector.Selection) % size;
+    }
 }

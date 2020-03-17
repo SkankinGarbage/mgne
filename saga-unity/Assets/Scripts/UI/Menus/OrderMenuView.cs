@@ -32,22 +32,34 @@ public class OrderMenuView : FullScreenMenuView {
 
     public async Task DoMenuAsync() {
         while (true) {
+            destinationSelector.ClearSelection();
+
             Populate();
             UpdateTitleCopy(false);
             int slot1 = await unitSelector.SelectItemAsync(null, true);
             if (slot1 < 0) {
                 break;
             }
+            if (Global.Instance().Party[slot1].Is(StatTag.EQUIPMENT_FIX)) {
+                Global.Instance().Audio.PlaySFX("fail");
+                continue;
+            }
             UpdateTitleCopy(true);
 
             destinationSelector.Selection = slot1;
             int slot2 = await destinationSelector.SelectItemAsync(null, true);
-            if (slot2 != -1 && slot1 != slot2) {
-                await SwapRoutine(slot1, slot2);
+            if (Global.Instance().Party[slot1].Is(StatTag.EQUIPMENT_FIX)) {
+                Global.Instance().Audio.PlaySFX("fail");
+                continue;
             }
+            if (slot2 < 0 || slot1 == slot2) {
+                continue;
+            }
+            await SwapRoutine(slot1, slot2);
             unitSelector.Selection = slot2;
             destinationSelector.ClearSelection();
         }
+        await CloseRoutine();
     }
 
     private IEnumerator SwapRoutine(int slot1, int slot2) {

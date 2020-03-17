@@ -39,12 +39,8 @@ public class InnMenuView : FullScreenMenuView {
     public async Task DoMenuAsync() {
         await expander.ShowRoutine();
         var command = await mainMenu.SelectCommandAsync();
-        switch (command) {
-            case "Pay":
-                await TryHealAsync();
-                break;
-            default:
-                break;
+        if (command == "Pay") {
+            await TryHealAsync();
         }
         await CloseRoutine();
     }
@@ -61,7 +57,7 @@ public class InnMenuView : FullScreenMenuView {
             Populate(healed: true);
             await Global.Instance().Input.AwaitConfirm();
         } else {
-            headerText.text = $"You must may first.";
+            headerText.text = $"You must pay first.";
             await Global.Instance().Input.AwaitConfirm();
         }
     }

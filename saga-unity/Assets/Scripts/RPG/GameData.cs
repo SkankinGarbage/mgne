@@ -39,8 +39,8 @@ public class GameData {
     }
 
     public void OnTeleportTo(Map map) {
-        LocationName = map.MapName;
-        BattleBGMKey = map.BattleBgmKey;
+        if (map.MapName != null && map.MapName.Length > 0) LocationName = map.MapName;
+        if (map.BattleBGMKey != null && map.BattleBGMKey.Length > 0) BattleBGMKey = map.BattleBGMKey;
         CurrentBGMKey = map.BgmKey;
     }
 

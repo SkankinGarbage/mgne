@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 [JsonObject(MemberSerialization.OptIn)]
 public class Inventory : IEnumerable<CombatItem> {
 
-    [JsonProperty] protected int capacity;
+    [JsonProperty] public int Capacity { get; protected set; }
 
     [JsonProperty] protected CombatItem[] items;
     private List<CombatItem> Items {
@@ -28,8 +28,17 @@ public class Inventory : IEnumerable<CombatItem> {
     IEnumerator IEnumerable.GetEnumerator() => items.GetEnumerator();
 
     public Inventory(int capacity) {
-        this.capacity = capacity;
+        Capacity = capacity;
         items = new CombatItem[capacity];
+    }
+
+    public Inventory(List<SerializedCombatItem> serialized) : this(serialized.Count) {
+        for (var i = 0; i < Capacity; i += 1) {
+            var item = serialized[i];
+            if (item != null) {
+                SetSlot(i, new CombatItem(item), false);
+            }
+        }
     }
 
     /// <summary>Reserved slots are mutant/monster abils and can't be filled normally</summary>
@@ -40,7 +49,7 @@ public class Inventory : IEnumerable<CombatItem> {
     /// <summary>Sets a combat item in the given inventory slot</summary>
     /// <returns>The item that used to be there, or null</returns>
     public virtual CombatItem SetSlot(int slot, CombatItem item, bool isEquip) {
-        if (slot >= capacity) {
+        if (slot >= Capacity) {
             Debug.LogWarningFormat("Out of bounds inventory check " + slot);
             return null;
         } else {
@@ -69,7 +78,7 @@ public class Inventory : IEnumerable<CombatItem> {
     /// <returns>The slot containing this exact item, or -1 for doesn't contain</returns>
     public int SlotForItem(CombatItem item) {
         if (item == null) return -1;
-        for (int i = 0; i < capacity; i += 1) {
+        for (int i = 0; i < Capacity; i += 1) {
             if (Items[i] == item) {
                 return i;
             }
@@ -80,7 +89,7 @@ public class Inventory : IEnumerable<CombatItem> {
     /// <returns>The first index containing an item built off the given data</returns>
     public int SlotForItemType(CombatItemData data) {
         if (data == null) return -1;
-        for (int i = 0; i < capacity; i += 1) {
+        for (int i = 0; i < Capacity; i += 1) {
             if (Items[i].Data == data) {
                 return i;
             }
@@ -89,7 +98,7 @@ public class Inventory : IEnumerable<CombatItem> {
     }
 
     public bool IsFull() {
-        for (int i = 0; i < capacity; i += 1) {
+        for (int i = 0; i < Capacity; i += 1) {
             if (items[i] == null && !IsSlotReservedAt(i)) {
                 return false;
             }
@@ -99,7 +108,7 @@ public class Inventory : IEnumerable<CombatItem> {
 
     /// <returns>The index the item was added at, or -1 if failed to do so</returns>
     public int Add(CombatItem item) {
-        for (int i = 0; i < capacity; i += 1) {
+        for (int i = 0; i < Capacity; i += 1) {
             if (Items[i] == null && !IsSlotReservedAt(i)) {
                 items[i] = item;
                 return i;
