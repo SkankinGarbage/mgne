@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
+
 /// <summary>
 /// Warhead superclass
 /// </summary>
@@ -27,7 +28,11 @@ public abstract class AbilEffect {
     }
 
     public void PlayMainSound() {
-        item.Anim.PlaySound();
+        if (item.Anim != null) {
+            item.Anim.PlaySound();
+        } else {
+            Global.Instance().Audio.PlaySFX("item");
+        }
     }
 
     public virtual void OnRoundStart(Intent intent) {

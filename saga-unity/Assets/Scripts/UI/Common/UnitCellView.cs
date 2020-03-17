@@ -7,9 +7,7 @@ public class UnitCellView : MonoBehaviour {
     [SerializeField] private Text hpText = null;
     [SerializeField] private Text mhpText = null;
     [SerializeField] private Text raceStatusText = null;
-    [SerializeField] private FieldSpriteImage sprite = null;
-
-    public FieldSpriteImage Sprite { get => sprite; }
+    [SerializeField] public FieldSpriteImage sprite = null;
 
     public void Populate(Unit unit, PointerLayer pointers = null) {
         if (nameText != null) {

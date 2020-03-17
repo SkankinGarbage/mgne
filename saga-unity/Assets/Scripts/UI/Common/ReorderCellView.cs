@@ -7,7 +7,14 @@ public class ReorderCellView : MonoBehaviour {
     [SerializeField] private Text ordinalText = null;
     [SerializeField] private Text descriptionText = null;
 
-    public FieldSpriteImage Sprite { get => unitCell.Sprite; }
+    public FieldSpriteImage Sprite {
+        get {
+            return unitCell.sprite;
+        }
+        set {
+            unitCell.sprite = value;
+        }
+    }
 
     public void Populate(Unit unit, int ordinal) {
         switch (ordinal) {

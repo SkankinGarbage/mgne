@@ -94,5 +94,7 @@ public class OrderMenuView : FullScreenMenuView {
         unitSelector.Selection = oldSel1;
         destinationSelector.Selection = oldSel2;
         sprite1.animates = false;
+
+        unitSelector.transform.GetChild(slot2).GetComponent<ReorderCellView>().Sprite = sprite1;
     }
 }

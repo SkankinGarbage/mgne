@@ -6,6 +6,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
 
     private const string NoBGMKey = "none";
+    private const string NoChangeBGMKey = "no_change";
     private const float FadeSeconds = 0.5f;
 
     private AudioSource sfxSource;
@@ -54,7 +55,7 @@ public class AudioManager : MonoBehaviour {
     }
 
     public void PlayBGM(string key) {
-        if (key != CurrentBGMKey) {
+        if (key != CurrentBGMKey && key != NoChangeBGMKey) {
             CurrentBGMKey = key;
             if (key == null || key == NoBGMKey) {
                 bgmSource.Stop();

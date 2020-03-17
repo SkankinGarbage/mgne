@@ -42,6 +42,7 @@ public class MainMenuView : FullScreenMenuView {
     public async void MenuAync() {
         await expander.ShowRoutine();
         while (true) {
+            Populate();
             var command = await mainMenu.SelectCommandAsync();
             switch (command) {
                 case "Abil":

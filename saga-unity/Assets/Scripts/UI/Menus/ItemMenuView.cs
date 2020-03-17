@@ -51,6 +51,7 @@ public class ItemMenuView : FullScreenMenuView, IItemUseableMenu {
             Vector3 offset = default;
             useDropMenu.transform.position = inventory.transform.GetChild(slot).transform.position + offset;
             string command = await useDropMenu.SelectCommandAsync();
+            useDropMenu.gameObject.SetActive(false);
             switch (command) {
                 case "Use":
                     if (item != null) {
@@ -68,7 +69,6 @@ public class ItemMenuView : FullScreenMenuView, IItemUseableMenu {
                 default:
                     break;
             }
-            useDropMenu.gameObject.SetActive(false);
         }
 
         await CloseRoutine();
