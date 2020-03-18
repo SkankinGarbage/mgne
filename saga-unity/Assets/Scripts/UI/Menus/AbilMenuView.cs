@@ -23,6 +23,7 @@ public class AbilMenuView : FullScreenMenuView, IItemUseableMenu {
             label.Populate(unit.Stats);
         }
         abilList.Populate(unit.Equipment);
+        miniSelect.Populate();
     }
 
     public async Task<int> SelectSlotAsync(Unit unit) {

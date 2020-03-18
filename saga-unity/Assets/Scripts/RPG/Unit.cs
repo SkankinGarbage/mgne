@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 
 public class Unit {
 
+    private const int DefaultMeatChance = 38;
+
     // serialized
     protected CharaData data; // not guaranteed for heroes
     protected string name;
@@ -27,7 +29,7 @@ public class Unit {
     public void SetName(string name) => this.name = name;
     public int GP => data.gp;
     public int MeatLevel => data.meatEatLevel;
-    public int MeatDropChance => data.meatDropChance;
+    public int MeatDropChance => data.meatDropChance > 0 ? data.meatDropChance : (MonsterFamily != null ? DefaultMeatChance : 0);
     public bool Is(StatTag flag) => Stats[flag] > 0;
     public bool IsCarryingItemType(CombatItemData data) => Equipment.ContainsItemType(data);
     public bool CanAct => IsAlive && (Status == null || !Status.PreventsIntentions) && Equipment.ContainsBattleUseableItems();

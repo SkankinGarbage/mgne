@@ -72,7 +72,11 @@ public class MapManager : MonoBehaviour {
             AddInitialAvatar(map);
         } else {
             Avatar.transform.SetParent(map.objectLayer.transform, false);
-        }        
+        }
+        Avatar.GetComponent<MapEvent>().SetPosition(location);
+        if (facing != null) {
+            Avatar.Chara.Facing = facing.GetValueOrDefault(OrthoDir.North);
+        }
 
         if (ActiveMap != null) {
             ActiveMap.OnTeleportAway();
@@ -82,11 +86,8 @@ public class MapManager : MonoBehaviour {
         ActiveMap = map;
         ActiveMap.OnTeleportTo();
         Global.Instance().Dispatch.Signal(EventTeleport, ActiveMap);
-        Avatar.GetComponent<MapEvent>().SetPosition(location);
         Avatar.OnTeleport();
-        if (facing != null) {
-            Avatar.Chara.Facing = facing.GetValueOrDefault(OrthoDir.North);
-        }
+
     }
 
     private Map InstantiateMap(string mapName) {

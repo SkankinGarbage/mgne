@@ -314,7 +314,10 @@ public class Battle {
 
     private async Task<bool> DoMeatAsync() {
         var roll = UnityEngine.Random.Range(0, 100);
-        var offset = UnityEngine.Random.Range(0, Enemy.Size);
+        var offset = 0;
+        if (Enemy.Size > 1) {
+            offset = UnityEngine.Random.Range(0, Enemy.Size);
+        }
         Unit dropper = null;
         for (var i = 0; i < Enemy.Size; i += 1) {
             var index = (i + offset) % Enemy.Size;

@@ -3,6 +3,8 @@
 public class Global : MonoBehaviour {
 
     private static Global instance;
+
+    public static bool Destructing { get; private set; }
     
     public InputManager Input { get; private set; }
     public MapManager Maps { get; private set; }
@@ -44,6 +46,10 @@ public class Global : MonoBehaviour {
             SetFullscreenMode();
         };
         SetFullscreenMode();
+    }
+
+    public void OnDestroy() {
+        Destructing = true;
     }
 
     private void InstantiateManagers() {

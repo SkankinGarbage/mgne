@@ -74,6 +74,26 @@ public class CeilingComponent : MonoBehaviour {
     }
 
     public void OnEnable() {
+        UpdateImmediate();
+        Global.Instance().Dispatch.RegisterListener(MapManager.EventTeleport, OnTeleport);
+    }
+
+    public void OnDisable() {
+        if (!Global.Destructing) {
+            Global.Instance().Dispatch.UnregisterListener(MapManager.EventTeleport, OnTeleport);
+        }
+    }
+
+    public void OnValidate() {
+        renderer.sortingLayerName = "Default";
+        renderer.sortingOrder = 6;
+    }
+
+    public void OnTeleport(object payload) {
+        UpdateImmediate();
+    }
+
+    public void UpdateImmediate() {
         if (Global.Instance().Maps.Avatar != null) {
             isWithin = IsHeroWithin();
         }
@@ -82,11 +102,6 @@ public class CeilingComponent : MonoBehaviour {
         } else {
             BuildStandard();
         }
-    }
-
-    public void OnValidate() {
-        renderer.sortingLayerName = "Default";
-        renderer.sortingOrder = 6;
     }
 
     public void CheckStep(object payload) {
