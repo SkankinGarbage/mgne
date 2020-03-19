@@ -19,8 +19,26 @@ public static class UIUtils {
         StringBuilder output = new StringBuilder();
         for (int i = 0; i < input.Length; i += 1) {
             if (input[i] == '$') {
-                int ascii = input[i + 1];
-                ascii += 232 - 'A'; // glyph $A starts at 232
+                var @char = input[i + 1];
+                int ascii = @char + 232 - 'A'; // glyph $A starts at 232
+                if (@char == 'I') ascii = 208;
+                else if (@char == 'J') ascii = 209;
+                else if (@char == 'K') ascii = 210;
+                else if (@char == 'L') ascii = 211;
+                else if (@char == 'M') ascii = 212;
+                else if (@char == 'N') ascii = 206;
+                else if (@char == 'O') ascii = 224;
+                else if (@char == 'P') ascii = 225;
+                else if (@char == 'Q') ascii = 226;
+                else if (@char == 'R') ascii = 227;
+                else if (@char == 'S') ascii = 228;
+                else if (@char == 'T') ascii = 229;
+                else if (@char == 'U') ascii = 230;
+                else if (@char == 'V') ascii = 214;
+                else if (@char == 'W') ascii = 215;
+                else if (@char == 'X') ascii = 216;
+                else if (@char == 'Y') ascii = 217;
+                else if (@char == 'Z') ascii = 218;
                 output.Append((char)ascii);
                 i += 1;
             } else {
