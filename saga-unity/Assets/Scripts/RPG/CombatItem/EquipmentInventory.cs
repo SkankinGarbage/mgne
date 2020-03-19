@@ -12,7 +12,7 @@ public class EquipmentInventory : Inventory {
     }
 
     public EquipmentInventory(Unit unit, CharaData data) : this(unit) {
-        for (int i = 0; i < base.Capacity && i < data.equipped.Length; i += 1) {
+        for (int i = 0; i < Capacity && i < data.equipped.Length; i += 1) {
             var itemData = data.equipped[i];
             if (itemData != null) {
                 SetSlot(i, new CombatItem(itemData), firstEquip:true);
@@ -27,6 +27,10 @@ public class EquipmentInventory : Inventory {
                 SetSlot(i, new CombatItem(item), firstEquip:false);
             }
         }
+    }
+
+    public override bool UsesRegenerateAt(int slot) {
+        return base.UsesRegenerateAt(slot) || owner.Race == Race.ROBOT;
     }
 
     public override CombatItem SetSlot(int slot, CombatItem item, bool firstEquip) {
@@ -63,8 +67,11 @@ public class EquipmentInventory : Inventory {
     }
 
     public void RestoreAbilityUses() {
-        foreach (var item in items) {
-            item?.RestoreUses();
+        for (var i = 0; i < Capacity; i += 1) {
+            var item = items[i];
+            if (UsesRegenerateAt(i)) {
+                item?.RestoreUses();
+            }
         }
     }
 }

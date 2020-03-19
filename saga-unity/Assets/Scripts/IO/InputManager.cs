@@ -123,7 +123,7 @@ public class InputManager : MonoBehaviour {
         return false;
     }
 
-    public IEnumerator AwaitConfirm() {
+    public IEnumerator ConfirmRoutine() {
         var id = "confirm";
         var done = false;
         PushListener(id, (command, type) => {

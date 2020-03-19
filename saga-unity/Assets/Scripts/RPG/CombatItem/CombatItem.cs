@@ -56,12 +56,13 @@ public class CombatItem {
         UsesRemaining = Data.uses;
     }
 
-    public async Task UseOnMapAsync(IItemUseableMenu menu, Unit user) {
-        await Effect.UseOnMapAsync(menu, user);
+    public async Task<bool> UseOnMapAsync(IItemUseableMenu menu, Unit user) {
+        return await Effect.UseOnMapAsync(menu, user);
     }
 
     public void HalveUses() {
         UsesRemaining /= 2;
+        UsesWhenAdded = UsesRemaining;
         DiscardIfNeeded();
     }
 
@@ -77,6 +78,7 @@ public class CombatItem {
         if (Data.uses == 0) return;
         if (Data.type == AbilityType.ABILITY) return;
         if (Container == null) return;
+        if (Container.UsesRegenerateAt(Container.SlotForItem(this))) return;
 
         Container.Drop(this);
     }

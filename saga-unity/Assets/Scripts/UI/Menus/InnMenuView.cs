@@ -55,10 +55,10 @@ public class InnMenuView : FullScreenMenuView {
             Global.Instance().Audio.PlaySFX(sfxKey);
             Global.Instance().Party.InnlikeHeal();
             Populate(healed: true);
-            await Global.Instance().Input.AwaitConfirm();
+            await Global.Instance().Input.ConfirmRoutine();
         } else {
             headerText.text = $"You must pay first.";
-            await Global.Instance().Input.AwaitConfirm();
+            await Global.Instance().Input.ConfirmRoutine();
         }
     }
 

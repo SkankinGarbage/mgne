@@ -93,4 +93,8 @@ public class ItemMenuView : FullScreenMenuView, IItemUseableMenu {
     public void SetActive(bool active) {
         unitSelector.gameObject.SetActive(active);
     }
+
+    public void Repopulate() {
+        Populate();
+    }
 }

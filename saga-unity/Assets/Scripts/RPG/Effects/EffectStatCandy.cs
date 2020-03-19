@@ -13,9 +13,11 @@ public class EffectStatCandy : AbilEffect {
     public override bool IsBattleUsable() => false;
     public override bool IsMapUsable() => true;
 
-    public override async Task UseOnMapAsync(IItemUseableMenu menu, Unit user) {
-        bool affected;
+    public override async Task<bool> UseOnMapAsync(IItemUseableMenu menu, Unit user) {
+        var affected = false;
+        var wasActive = menu.IsActive();
 
+        menu.SetActive(true);
         var target = await menu.SelectUnitTargetAsync();
 
         if (target != null) {
@@ -32,5 +34,11 @@ public class EffectStatCandy : AbilEffect {
             }
             FinishMapEffect(affected);
         }
+        if (affected) {
+            menu.Repopulate();
+            await Global.Instance().Input.ConfirmRoutine();
+            menu.SetActive(wasActive);
+        }
+        return affected;
     }
 }

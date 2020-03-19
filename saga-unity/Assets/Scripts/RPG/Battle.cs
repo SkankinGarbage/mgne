@@ -164,7 +164,7 @@ public class Battle {
         }
 
         await ResolveIntentsAsync();
-        await Global.Instance().Input.AwaitConfirm();
+        await Global.Instance().Input.ConfirmRoutine();
 
         return true;
     }
@@ -209,7 +209,7 @@ public class Battle {
             int gp = Enemy.Select(unit => unit.GP).Aggregate((x, y) => x + y);
             await WriteLineAsync("Found " + gp + " gold pieces.");
             Global.Instance().Data.AddGP(gp);
-            await Global.Instance().Input.AwaitConfirm();
+            await Global.Instance().Input.ConfirmRoutine();
 
             foreach (var unit in Player) {
                 await DoMutationsForUnitAsync(unit);
@@ -221,7 +221,7 @@ public class Battle {
             await WriteLineAsync("");
             await WriteLineAsync("");
             await WriteLineAsync(Player.Leader.Name + " is defeated...");
-            await Global.Instance().Input.AwaitConfirm();
+            await Global.Instance().Input.ConfirmRoutine();
             await View.retry.RetryAsync(this);
         } else {
             await View.CloseRoutine();
@@ -309,7 +309,7 @@ public class Battle {
         mutation.Apply();
         await View.HideMutationMenuRoutine();
         await View.WriteLineRoutine(mutation.Message);
-        await Global.Instance().Input.AwaitConfirm();
+        await Global.Instance().Input.ConfirmRoutine();
     }
 
     private async Task<bool> DoMeatAsync() {
@@ -360,7 +360,7 @@ public class Battle {
         } else {
             await WriteLineAsync("Nothing happened.");
         }
-        await Global.Instance().Input.AwaitConfirm();
+        await Global.Instance().Input.ConfirmRoutine();
         return true;
     }
 
@@ -371,7 +371,7 @@ public class Battle {
     public async Task WriteLineAsync(string line = "", bool awaitConfirm = false) {
         await View.WriteLineRoutine(line);
         if (awaitConfirm) {
-            await Global.Instance().Input.AwaitConfirm();
+            await Global.Instance().Input.ConfirmRoutine();
         }
     }
 

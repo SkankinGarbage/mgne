@@ -133,7 +133,9 @@ public class Unit {
     public void TransformInto(CharaData newForm) {
         // destroy old stuff
         foreach (var item in Equipment) {
-            Equipment.Drop(item);
+            if (item != null) {
+                Equipment.Drop(item);
+            }
         }
 
         // copy relevant stuff

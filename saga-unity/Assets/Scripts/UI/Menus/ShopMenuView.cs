@@ -89,7 +89,7 @@ public class ShopMenuView : FullScreenMenuView {
             Populate(false);
             headerText.text = "Sold!";
             Global.Instance().Audio.PlaySFX(buySfxKey);
-            await Global.Instance().Input.AwaitConfirm();
+            await Global.Instance().Input.ConfirmRoutine();
         }
     }
 

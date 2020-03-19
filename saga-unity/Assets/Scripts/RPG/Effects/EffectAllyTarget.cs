@@ -12,31 +12,49 @@ public abstract class EffectAllyTarget : AbilEffect {
 
     public override bool IsBattleUsable() => true;
 
-    public override async Task UseOnMapAsync(IItemUseableMenu menu, Unit user) {
-        bool wasActive, confirmed;
+    public override async Task<bool> UseOnMapAsync(IItemUseableMenu menu, Unit user) {
+        var wasActive = menu.IsActive();
+        var confirmed = false;
+        var affected = false;
         switch (data.projector) {
             case AllyProjectorType.ALLY_PARTY:
             case AllyProjectorType.PLAYER_PARTY_ENEMY_GROUP:
                 menu.SelectAll();
-                wasActive = menu.IsActive();
                 menu.SetActive(true);
                 confirmed = await menu.ConfirmSelectionAsync();
-                menu.SetActive(wasActive);
                 if (confirmed) {
-                    ApplyMapEffect(user, Global.Instance().Data.Party);
+                    affected = ApplyMapEffect(user, Global.Instance().Data.Party);
+                    menu.Repopulate();
+                    await Global.Instance().Input.ConfirmRoutine();
                 }
-                item.DeductUse();
-                break;
+                menu.SetActive(wasActive);
+                return affected;
             case AllyProjectorType.SINGLE_ALLY:
-                var target = await menu.SelectUnitTargetAsync();
-                if (target != null) {
-                    ApplyMapEffect(user, new Unit[] { target });
+                menu.SetActive(true);
+                while (true) {
+                    var target = await menu.SelectUnitTargetAsync();
+                    if (target != null) {
+                        if (!target.IsAlive ^ CanTargetDead()) {
+                            Global.Instance().Audio.PlaySFX("fail");
+                        } else {
+                            affected = ApplyMapEffect(user, new Unit[] { target });
+                            if (affected) {
+                                menu.Repopulate();
+                                await Global.Instance().Input.ConfirmRoutine();
+                                menu.SetActive(wasActive);
+                                return true;
+                            }
+                        }
+                    } else {
+                        break;
+                    }
                 }
-                break;
+                menu.SetActive(wasActive);
+                return false;
             case AllyProjectorType.USER:
-                ApplyMapEffect(user, new Unit[] { user });
-                break;
+                return ApplyMapEffect(user, new Unit[] { user });
         }
+        return false;
     }
 
     public override async Task<List<Unit>> AcquireTargetsAsync(Unit actor, Battle battle, bool useAI) {
@@ -100,7 +118,8 @@ public abstract class EffectAllyTarget : AbilEffect {
         return null;
     }
 
-    protected virtual void ApplyMapEffect(Unit caster, IEnumerable<Unit> targets) {
+    protected virtual bool ApplyMapEffect(Unit caster, IEnumerable<Unit> targets) {
         Debug.LogError("Not implemented: ApplyMapEffect");
+        return false;
     }
 }

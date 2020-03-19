@@ -10,7 +10,7 @@ public class EaterCell : MonoBehaviour {
 
     public void Populate(Unit unit, CharaData toForm) {
         sprite.Populate(unit);
-        if (unit.Race == Race.MONSTER) {
+        if (unit.Race == Race.MONSTER && unit.IsAlive) {
             if (toForm == null) {
                 fromText.text = "Nothing";
                 toText.text = "happens   ";

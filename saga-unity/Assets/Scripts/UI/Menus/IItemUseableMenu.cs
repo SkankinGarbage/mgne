@@ -11,4 +11,6 @@ public interface IItemUseableMenu {
     bool IsActive();
 
     void SetActive(bool active);
+
+    void Repopulate();
 }

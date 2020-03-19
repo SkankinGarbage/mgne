@@ -212,7 +212,11 @@ public class LuaCutsceneContext : LuaContext {
     private void Battle(DynValue partyLua, DynValue bgmLua) {
         var partyTag = partyLua.String;
         var bgmTag = bgmLua.IsNil() ? null : bgmLua.String;
-        var party = IndexDatabase.Instance().Parties.GetData(partyTag);
+        var party = new Party(IndexDatabase.Instance().Parties.GetDataOrNull(partyTag));
+        if (party == null) {
+            var encounterData = IndexDatabase.Instance().Encounters.GetData(partyTag);
+            party = new Party(encounterData);
+        }
         RunRoutineFromLua(BattleView.SpawnBattleRoutine(party, bgmTag));
     }
 

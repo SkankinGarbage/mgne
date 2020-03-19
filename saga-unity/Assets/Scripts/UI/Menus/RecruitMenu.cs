@@ -54,7 +54,7 @@ public class RecruitMenu : FullScreenMenuView {
     private async Task ShowInfo() {
         infoText.gameObject.SetActive(true);
         recruitCells.gameObject.SetActive(false);
-        await Global.Instance().Input.AwaitConfirm();
+        await Global.Instance().Input.ConfirmRoutine();
         infoText.gameObject.SetActive(false);
         recruitCells.gameObject.SetActive(true);
     }

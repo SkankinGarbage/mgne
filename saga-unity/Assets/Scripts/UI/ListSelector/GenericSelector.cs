@@ -150,11 +150,15 @@ public abstract class GenericSelector : MonoBehaviour {
 
     protected virtual void MoveSelectionHorizontal(int delta) {
         if (horizontal) {
-            Selection = delta + Selection;
+            do {
+                Selection = delta + Selection;
+            } while (!GetCell(Selection).IsSelectable());
         }
     }
 
     protected virtual void MoveSelectionVertical(int delta) {
-        Selection = delta + Selection;
+        do {
+            Selection = delta + Selection;
+        } while (!GetCell(Selection).IsSelectable());
     }
 }

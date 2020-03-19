@@ -18,6 +18,7 @@ public class IndexDatabase : ScriptableObject {
     public CollectableIndex Collectables;
     public EncounterSetIndex EncounterSets;
     public TerrainEncounterSetIndex TerrainEncounterSets;
+    public EncounterIndex Encounters;
 
     public static IndexDatabase Instance() {
         return Resources.Load<IndexDatabase>("Database/Database");

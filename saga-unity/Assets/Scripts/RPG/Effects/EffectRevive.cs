@@ -12,7 +12,7 @@ public class EffectRevive : EffectAllyTarget {
     public override bool IsMapUsable() => true;
     public override bool CanTargetDead() => true;
 
-    protected override void ApplyMapEffect(Unit caster, IEnumerable<Unit> targets) {
+    protected override bool ApplyMapEffect(Unit caster, IEnumerable<Unit> targets) {
         bool affected = false;
         foreach (Unit victim in targets) {
             if (victim[StatTag.HP] <= 0) {
@@ -22,6 +22,7 @@ public class EffectRevive : EffectAllyTarget {
             }
         }
         FinishMapEffect(affected);
+        return affected;
     }
 
     private int CalculatePower(Unit user) {

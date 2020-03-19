@@ -12,7 +12,7 @@ public class EffectHeal : EffectAllyTarget {
     
     public override bool IsMapUsable() => true;
 
-    protected override void ApplyMapEffect(Unit caster, IEnumerable<Unit> targets) {
+    protected override bool ApplyMapEffect(Unit caster, IEnumerable<Unit> targets) {
         bool affected = false;
         foreach (var victim in targets) {
             var user = caster ?? victim;
@@ -32,6 +32,7 @@ public class EffectHeal : EffectAllyTarget {
             }
         }
         FinishMapEffect(affected);
+        return affected;
     }
 
     public override async Task ResolveAsync(Intent intent) {

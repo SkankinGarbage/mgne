@@ -66,7 +66,7 @@ public class Inventory : IEnumerable<CombatItem> {
     }
 
     /// <returns>True if that item at that slot can regenerate its uses</returns>
-    public bool UsesRegenerateAt(int slot) {
+    public virtual bool UsesRegenerateAt(int slot) {
         return Items[slot] != null && Items[slot].CanRestoreUses;
     }
 

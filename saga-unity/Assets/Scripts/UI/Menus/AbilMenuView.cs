@@ -11,12 +11,15 @@ public class AbilMenuView : FullScreenMenuView, IItemUseableMenu {
     [SerializeField] private List<StatLabelView> statLabels = null;
     [SerializeField] private CombatItemList abilList = null;
     [SerializeField] private Text descriptionLabel = null;
-    
+
+    private Unit unit;
+
     public static AbilMenuView ShowDefault() {
         return Instantiate<AbilMenuView>("Prefabs/UI/Abil/AbilMenu");
     }
 
     public void Populate(Unit unit) {
+        this.unit = unit;
         unitCell.Populate(unit);
 
         foreach (var label in statLabels) {
@@ -70,5 +73,10 @@ public class AbilMenuView : FullScreenMenuView, IItemUseableMenu {
 
     public Task<bool> ConfirmSelectionAsync() {
         return miniSelect.selector.ConfirmSelectionAsync();
+    }
+
+    public void Repopulate() {
+        miniSelect.Populate();
+        Populate(unit);
     }
 }
