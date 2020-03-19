@@ -30,7 +30,7 @@
 		Cull Off 
         ZTest Always
         ZWrite Off
-        Blend One OneMinusSrcAlpha
+        Blend SrcAlpha OneMinusSrcAlpha
 
 		Pass
 		{
@@ -93,7 +93,9 @@
 				float weight = _FadeOffset;
                 if (_Invert) weight = 1.0 - weight;
                 
-                if (i.color.a == 0.0) return float4(_WhiteOut.r, _WhiteOut.g, _WhiteOut.b, 0);
+                if (current.a <= 0.0) {
+                    return fixed4(_WhiteOut.r, _WhiteOut.g, _WhiteOut.b, current.a);
+                }
 
                 float dBlack = color_d(current, _Black);
                 float dDgray = color_d(current, _DGray);
@@ -101,47 +103,45 @@
                 float dWhite = color_d(current, _White);
                 
                 int darkness = 0;
-                if (current.a > 0.0) {
-                    if (dBlack <= dDgray && dBlack <= dLgray && dBlack <= dWhite) {
-                        darkness = 0;
-                    }
-                    if (dDgray <= dBlack && dDgray <= dLgray && dDgray <= dWhite) {
-                        darkness = 1;
-                    }
-                    if (dLgray <= dBlack && dLgray <= dDgray && dLgray <= dWhite) {
-                        darkness = 2;
-                    }
-                    if (dWhite <= dBlack && dWhite <= dDgray && dWhite <= dLgray) {
-                        darkness = 3;
-                    }
-                    
-                    if (weight > 0.25) darkness += _FadeColorMod;
-                    if (weight > 0.50) darkness += _FadeColorMod;
-                    if (weight > 0.75) darkness += _FadeColorMod;
-                    
-                    float y = i.vertex.y / 480.0;
-                    if (y <       _FadeBorderSize / 3)        darkness += 1;
-                    if (y <       _FadeBorderSize * 2 / 3)    darkness += 1;
-                    if (y <       _FadeBorderSize)            darkness += 1;
-                    if (y > 1.0 - (_FadeBorderSize / 3))      darkness += 1;
-                    if (y > 1.0 - (_FadeBorderSize * 2 / 3))  darkness += 1;
-                    if (y > 1.0 - (_FadeBorderSize))          darkness += 1;
-                    
-                    if (darkness < 0) darkness = 0;
-                    if (darkness > 3) darkness = 3;
-                    
-                    if (darkness == 0) {
-                        return _BlackOut;
-                    }
-                    if (darkness == 1) {
-                        return _DGrayOut;
-                    }
-                    if (darkness == 2) {
-                        return _LGrayOut;
-                    }
-                    if (darkness == 3) {
-                        return _WhiteOut;
-                    }
+                if (dBlack <= dDgray && dBlack <= dLgray && dBlack <= dWhite) {
+                    darkness = 0;
+                }
+                if (dDgray <= dBlack && dDgray <= dLgray && dDgray <= dWhite) {
+                    darkness = 1;
+                }
+                if (dLgray <= dBlack && dLgray <= dDgray && dLgray <= dWhite) {
+                    darkness = 2;
+                }
+                if (dWhite <= dBlack && dWhite <= dDgray && dWhite <= dLgray) {
+                    darkness = 3;
+                }
+                
+                if (weight > 0.25) darkness += _FadeColorMod;
+                if (weight > 0.50) darkness += _FadeColorMod;
+                if (weight > 0.75) darkness += _FadeColorMod;
+                
+                float y = i.vertex.y / 480.0;
+                if (y <       _FadeBorderSize / 3)        darkness += 1;
+                if (y <       _FadeBorderSize * 2 / 3)    darkness += 1;
+                if (y <       _FadeBorderSize)            darkness += 1;
+                if (y > 1.0 - (_FadeBorderSize / 3))      darkness += 1;
+                if (y > 1.0 - (_FadeBorderSize * 2 / 3))  darkness += 1;
+                if (y > 1.0 - (_FadeBorderSize))          darkness += 1;
+                
+                if (darkness < 0) darkness = 0;
+                if (darkness > 3) darkness = 3;
+                
+                if (darkness == 0) {
+                    return _BlackOut;
+                }
+                if (darkness == 1) {
+                    return _DGrayOut;
+                }
+                if (darkness == 2) {
+                    return _LGrayOut;
+                }
+                if (darkness == 3) {
+                    return _WhiteOut;
                 }
 				return current;
 			}
