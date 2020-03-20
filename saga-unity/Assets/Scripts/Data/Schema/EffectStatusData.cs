@@ -11,8 +11,8 @@ public class EffectStatusData : EffectEnemyTargetData {
     public int hit = 80;
 
     [UnityEngine.Tooltip("Accuracy stat - added to chance to hit")]
-    public StatTag? accStat = StatTag.MANA;
+    public StatTag accStat = StatTag.MANA;
 
     [UnityEngine.Tooltip("Evasion stat - subtracted from chance to hit")]
-    public StatTag? evadeStat = StatTag.MANA;
+    public StatTag evadeStat = StatTag.MANA;
 }

@@ -29,6 +29,9 @@ public abstract class BaseEncounterSet {
 
         // okay, you should see something
         var encounters = GetEncounters();
+        if (encounters == null) {
+            return;
+        }
         var totalWeight = encounters.Aggregate(0, (acc, data) => acc + data.weight);
         var roll = Random.Range(0, totalWeight);
         EncounterSetMemberData encounter = null;

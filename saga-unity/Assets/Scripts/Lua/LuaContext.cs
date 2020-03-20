@@ -137,6 +137,7 @@ public class LuaContext {
         lua.Globals["setSwitch"] = (Action<DynValue, DynValue>)SetSwitch;
         lua.Globals["eventNamed"] = (Func<DynValue, LuaMapEvent>)EventNamed;
         lua.Globals["getHero"] = (Func<DynValue, DynValue>)GetHero;
+        lua.Globals["hasItem"] = (Func<DynValue, DynValue>)HasItem;
     }
 
     protected void LoadDefines(string path) {
@@ -145,6 +146,12 @@ public class LuaContext {
     }
 
     // === LUA CALLABLE ============================================================================
+
+    protected DynValue HasItem(DynValue itemLua) {
+        var key = itemLua.String;
+        var data = IndexDatabase.Instance().CombatItems.GetData(key);
+        return Marshal(Global.Instance().Data.Inventory.ContainsItemType(data));
+    }
 
     protected LuaMapEvent EventNamed(DynValue eventName) {
         MapEvent mapEvent = Global.Instance().Maps.ActiveMap.GetEventNamed(eventName.String);

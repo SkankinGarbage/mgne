@@ -15,8 +15,8 @@ public class EffectDebuff : EffectEnemyTarget {
         var battle = intent.Battle;
 
         var debuffMult = power / 100f;
-        if (data.defendStat.HasValue) {
-            debuffMult -= target[data.defendStat.Value] * 0.66f / 100f;
+        if (data.defendStat != StatTag.NONE) {
+            debuffMult -= target[data.defendStat] * 0.66f / 100f;
         }
         if (debuffMult > .5f) {
             debuffMult = .5f;
@@ -38,8 +38,8 @@ public class EffectDebuff : EffectEnemyTarget {
 
     protected override Task<int> CalculateAttackPowerAsync(Intent intent) {
         int power = data.power;
-        if (data.attackStat != null) {
-            power += intent.Actor[data.attackStat.Value] / 2;
+        if (data.attackStat != StatTag.NONE) {
+            power += intent.Actor[data.attackStat] / 2;
         }
         return Task.FromResult(power);
     }

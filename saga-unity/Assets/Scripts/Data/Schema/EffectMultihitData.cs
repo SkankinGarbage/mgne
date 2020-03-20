@@ -9,8 +9,8 @@ public class EffectMultihitData : EffectCombatData {
     public string hits;
 
     [UnityEngine.Tooltip("Attack stat - this stat is quartered and then multiplied by power")]
-    public StatTag? attackStat = StatTag.STR;
+    public StatTag attackStat = StatTag.STR;
 
     [UnityEngine.Tooltip("Defend stat - this stat is subtracted from incoming damage")]
-    public StatTag? defendStat = StatTag.DEF;
+    public StatTag defendStat = StatTag.DEF;
 }

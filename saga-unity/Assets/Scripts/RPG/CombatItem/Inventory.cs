@@ -90,7 +90,7 @@ public class Inventory : IEnumerable<CombatItem> {
     public int SlotForItemType(CombatItemData data) {
         if (data == null) return -1;
         for (int i = 0; i < Capacity; i += 1) {
-            if (Items[i].Data == data) {
+            if (Items[i]?.Data == data) {
                 return i;
             }
         }

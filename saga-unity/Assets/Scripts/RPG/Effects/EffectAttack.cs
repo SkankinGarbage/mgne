@@ -18,8 +18,8 @@ public class EffectAttack : EffectCombat {
     }
 
     protected override Task<int> CalculateDamageAsync(Battle battle, int power, Unit target) {
-        if (data.defendStat.HasValue && !target.IsWeakTo(data.damType)) {
-            power -= target[data.defendStat.Value];
+        if (data.defendStat != StatTag.NONE && !target.IsWeakTo(data.damType)) {
+            power -= target[data.defendStat];
         }
         return Task.FromResult(power);
     }

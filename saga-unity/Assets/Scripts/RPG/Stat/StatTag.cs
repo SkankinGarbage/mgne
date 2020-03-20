@@ -39,4 +39,6 @@
     REGENERATING,
 
     EQUIPMENT_FIX,
+
+    NONE,
 }

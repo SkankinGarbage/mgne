@@ -27,8 +27,8 @@ public class EffectRevive : EffectAllyTarget {
 
     private int CalculatePower(Unit user) {
         int heal = data.power;
-        if (data.powerStat != null) {
-            heal *= user[(StatTag)data.powerStat];
+        if (data.powerStat != StatTag.NONE) {
+            heal *= user[data.powerStat];
         }
         heal += data.@base;
         return heal;

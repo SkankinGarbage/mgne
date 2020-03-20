@@ -20,7 +20,9 @@ public class TerrainEncounterSet : BaseEncounterSet {
     }
 
     protected override List<EncounterSetMemberData> GetEncounters() {
-        return new List<EncounterSetMemberData>(GetCurrentSet().encounters.encounters);
+        var set = GetCurrentSet();
+        if (set == null) return null;
+        return new List<EncounterSetMemberData>(set.encounters.encounters);
     }
 
     protected TerrainEncounterSetMemberData GetCurrentSet() {

@@ -8,7 +8,7 @@ public class EffectBoostData : EffectAllyTargetData {
     public int power = 0;
 
     [UnityEngine.Tooltip("Power stat - this stat is added to base power")]
-    public StatTag? powerStat;
+    public StatTag powerStat = StatTag.NONE;
 
     [UnityEngine.Tooltip("Cap - boosted stat will never exceed this value, 0 for unlimited")]
     public int cap;

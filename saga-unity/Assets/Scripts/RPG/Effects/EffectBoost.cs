@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 public class EffectBoost : EffectAllyTarget {
 
@@ -22,8 +21,8 @@ public class EffectBoost : EffectAllyTarget {
         var targets = intent.Targets;
         int power = data.power;
 
-        if (data.powerStat.HasValue) {
-            power += user[data.powerStat.Value];
+        if (data.powerStat != StatTag.NONE) {
+            power += user[data.powerStat];
         }
         await battle.WriteLineAsync(username + " uses " + itemname + ".");
         await PlayBattleAnimAsync(intent);

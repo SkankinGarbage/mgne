@@ -23,11 +23,11 @@ public class EffectFixed : EffectCombat {
 
     protected override bool CheckCombatFormulaHit(Battle battle, Unit user, Unit target, float roll) {
         var temp = 100 - (data.accuracy - CalculateShieldDodgeBonus(battle, target));
-        if (data.accStat.HasValue) {
-            temp -= user[data.accStat.Value];
+        if (data.accStat != StatTag.NONE) {
+            temp -= user[data.accStat];
         }
-        if (data.dodgeStat.HasValue) {
-            temp += target[data.dodgeStat.Value];
+        if (data.dodgeStat != StatTag.NONE) {
+            temp += target[data.dodgeStat];
         }
         float chance = temp / 100f;
         return roll > chance;

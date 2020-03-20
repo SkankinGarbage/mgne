@@ -17,8 +17,8 @@ public class EffectStatus : EffectEnemyTarget {
 
     protected override Task<int> CalculateAttackPowerAsync(Intent intent) {
         var power = data.hit;
-        if (data.accStat.HasValue) {
-            power += intent.Actor[data.accStat.Value];
+        if (data.accStat != StatTag.NONE) {
+            power += intent.Actor[data.accStat];
         }
         return Task.FromResult(power);
     }
@@ -30,8 +30,8 @@ public class EffectStatus : EffectEnemyTarget {
         if (target.IsResistantTo(status)) {
             temp -= 255;
         }
-        if (data.evadeStat.HasValue) {
-            temp -= target[data.evadeStat.Value];
+        if (data.evadeStat != StatTag.NONE) {
+            temp -= target[data.evadeStat];
         }
         float chance = temp / 100f;
         var hit = roll < chance;

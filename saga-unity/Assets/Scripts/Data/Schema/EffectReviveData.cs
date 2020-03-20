@@ -8,5 +8,5 @@ public class EffectReviveData : EffectAllyTargetData {
     public int power = 0;
 
     [UnityEngine.Tooltip("Power stat - this stat is quartered and multiplied by power")]
-    public StatTag? powerStat;
+    public StatTag powerStat = StatTag.NONE;
 }

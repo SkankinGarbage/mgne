@@ -82,8 +82,8 @@ public class EffectHeal : EffectAllyTarget {
 
     private int CalculatePower(Unit user) {
         int heal = data.power;
-        if (data.powerStat != null) {
-            heal *= user[(StatTag)data.powerStat];
+        if (data.powerStat != StatTag.NONE) {
+            heal *= user[data.powerStat];
         }
         if (data.powerStat != StatTag.MANA || user.BaseStats[StatTag.MANA] > 0) {
             // this prevents humans from healing a fixed amount with curative items despite 0 mana

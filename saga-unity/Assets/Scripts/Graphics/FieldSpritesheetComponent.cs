@@ -9,8 +9,8 @@ public class FieldSpritesheetComponent : MonoBehaviour {
     public int StepCount => stepCount;
 
     public string Name => spritesheet == null ? "" : spritesheet.name;
-    public bool IsSingleFrame => spritesheet != null && spritesheet.width == Map.PxPerTile;
-    public bool IsSingleStrip => spritesheet != null && spritesheet.height == Map.PxPerTile;
+    public bool IsSingleFrame => spritesheet != null && spritesheet.width < Map.PxPerTile * 2;
+    public bool IsSingleStrip => spritesheet != null && spritesheet.height < Map.PxPerTile * 4;
 
     private Dictionary<string, Sprite> sprites;
 
