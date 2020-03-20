@@ -36,7 +36,7 @@ public class EffectStatCandy : AbilEffect {
         }
         if (affected) {
             menu.Repopulate();
-            await Global.Instance().Input.ConfirmRoutine();
+            await menu.ConfirmAsync();
             menu.SetActive(wasActive);
         }
         return affected;

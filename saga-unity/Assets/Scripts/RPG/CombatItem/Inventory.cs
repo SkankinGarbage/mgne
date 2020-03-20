@@ -110,7 +110,7 @@ public class Inventory : IEnumerable<CombatItem> {
     public int Add(CombatItem item) {
         for (int i = 0; i < Capacity; i += 1) {
             if (Items[i] == null && !IsSlotReservedAt(i)) {
-                items[i] = item;
+                SetSlot(i, item, true);
                 return i;
             }
         }

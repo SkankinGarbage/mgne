@@ -25,7 +25,7 @@ public abstract class EffectAllyTarget : AbilEffect {
                 if (confirmed) {
                     affected = ApplyMapEffect(user, Global.Instance().Data.Party);
                     menu.Repopulate();
-                    await Global.Instance().Input.ConfirmRoutine();
+                    await menu.ConfirmAsync();
                 }
                 menu.SetActive(wasActive);
                 return affected;
@@ -40,7 +40,7 @@ public abstract class EffectAllyTarget : AbilEffect {
                             affected = ApplyMapEffect(user, new Unit[] { target });
                             if (affected) {
                                 menu.Repopulate();
-                                await Global.Instance().Input.ConfirmRoutine();
+                                await menu.ConfirmAsync();
                                 menu.SetActive(wasActive);
                                 return true;
                             }

@@ -30,7 +30,7 @@
 		Cull Off 
         ZTest Always
         ZWrite Off
-        Blend SrcAlpha OneMinusSrcAlpha
+        Blend One OneMinusSrcAlpha
 
 		Pass
 		{
@@ -88,13 +88,14 @@
 			fixed4 frag (v2f i) : SV_Target
 			{
 				fixed4 current = tex2D(_MainTex, i.uv);
+                current.a *= i.color.a;
                 current.rgb *= current.a;
                 
 				float weight = _FadeOffset;
                 if (_Invert) weight = 1.0 - weight;
                 
                 if (current.a <= 0.0) {
-                    return fixed4(_WhiteOut.r, _WhiteOut.g, _WhiteOut.b, current.a);
+                    return fixed4(current.r, current.g, current.b, 0.0);
                 }
 
                 float dBlack = color_d(current, _Black);

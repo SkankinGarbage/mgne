@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.3.1" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="48" height="49" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="33">
  <properties>
-  <property name="bgm" value="world1_town"/>
+  <property name="bgm" value="town"/>
   <property name="name" value="River Town"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/lower.tsx"/>

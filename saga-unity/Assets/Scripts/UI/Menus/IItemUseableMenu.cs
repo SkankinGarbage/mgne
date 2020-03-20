@@ -13,4 +13,6 @@ public interface IItemUseableMenu {
     void SetActive(bool active);
 
     void Repopulate();
+
+    Task ConfirmAsync();
 }

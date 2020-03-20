@@ -97,4 +97,9 @@ public class ItemMenuView : FullScreenMenuView, IItemUseableMenu {
     public void Repopulate() {
         Populate();
     }
+
+    public Task ConfirmAsync() {
+        // immediate
+        return Task.CompletedTask;
+    }
 }

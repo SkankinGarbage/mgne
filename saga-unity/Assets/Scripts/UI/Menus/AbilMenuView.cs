@@ -79,4 +79,8 @@ public class AbilMenuView : FullScreenMenuView, IItemUseableMenu {
         miniSelect.Populate();
         Populate(unit);
     }
+
+    public async Task ConfirmAsync() {
+        await Global.Instance().Input.ConfirmRoutine();
+    }
 }
