@@ -1,5 +1,4 @@
 ﻿using SuperTiled2Unity;
-using SuperTiled2Unity.Editor;
 using System.Collections;
 using UnityEngine;
 
@@ -32,7 +31,9 @@ public class ChestComponent : MonoBehaviour {
         }
     }
 
-    public void Reconfigure(MapEvent parent, TmxAssetImporter importer) {
+    #if UNITY_EDITOR
+
+    public void Reconfigure(MapEvent parent, SuperTiled2Unity.Editor.TmxAssetImporter importer) {
         @event = GetComponentInParent<MapEvent>();
 
         var props = parent.Properties;
@@ -51,6 +52,8 @@ public class ChestComponent : MonoBehaviour {
             itemKey = prop.GetValueAsString();
         }
     }
+
+    #endif
 
     public void Start() {
         @event.GetComponent<Dispatch>().RegisterListener(MapEvent.EventInteract, (object payload) => {

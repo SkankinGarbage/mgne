@@ -4,7 +4,6 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Mgne1 {
@@ -23,6 +22,7 @@ namespace Mgne1 {
         }
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer) {
+#if UNITY_EDITOR
             if (UseLinks) {
                 if (reader.TokenType == JsonToken.Null) {
                     return null;
@@ -62,13 +62,16 @@ namespace Mgne1 {
                 }
                 return null;
             }
-
+#else
+            return null;
+#endif
         }
 
         public override bool CanConvert(Type objectType) {
             return typeof(MainSchema).IsAssignableFrom(objectType);
         }
 
+#if UNITY_EDITOR
         public static MainSchema FindAssetForJson(Type schemaSubclass, string key) {
             string dirPath = Application.dataPath + "/" + DatabaseDirectory + "/" + schemaSubclass.ToString().Replace("Data", "");
 
@@ -110,5 +113,6 @@ namespace Mgne1 {
             var relativePath = filePath.Substring(filePath.LastIndexOf(prefix));
             return relativePath;
         }
+#endif
     }
 }

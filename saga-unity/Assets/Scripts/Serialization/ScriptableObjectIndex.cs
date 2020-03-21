@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class ScriptableObjectIndex<T> : GenericIndex<T>, IIndexPopulater where T : ScriptableObject, IKeyedDataObject {
 
+#if UNITY_EDITOR
     private void RecursivelyPopulateFrom(string dirPath) {
         foreach (var file in Directory.EnumerateFiles(dirPath)) {
             var asset = AssetDatabase.LoadAssetAtPath<T>(file);
@@ -17,8 +18,11 @@ public class ScriptableObjectIndex<T> : GenericIndex<T>, IIndexPopulater where T
         }
         EditorUtility.SetDirty(this);
     }
+#endif
+
 
     public void PopulateIndex() {
+#if UNITY_EDITOR
         if (dataObjects == null) {
             dataObjects = new List<T>();
         } else {
@@ -27,5 +31,6 @@ public class ScriptableObjectIndex<T> : GenericIndex<T>, IIndexPopulater where T
         var selectedPath = AssetDatabase.GetAssetPath(Selection.activeObject);
         var localPath = selectedPath.Substring(0, selectedPath.LastIndexOf('/'));
         RecursivelyPopulateFrom(localPath);
+#endif
     }
 }

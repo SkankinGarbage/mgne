@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEditor;
 
 [UnityEngine.CreateAssetMenu(fileName = "GameboyMaterialSettings", menuName = "Data/Graphics/GameboyMaterialSettings")]
@@ -10,7 +9,11 @@ public class GameboyMaterialSettings : ScriptableObject {
     public Material BackgroundMaterial;
     public Material ForegroundMaterial;
 
+#if UNITY_EDITOR
+
     public static GameboyMaterialSettings GetDefault() {
         return AssetDatabase.LoadAssetAtPath<GameboyMaterialSettings>(DefaultPath);
     }
+
+#endif
 }

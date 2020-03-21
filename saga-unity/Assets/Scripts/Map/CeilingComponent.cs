@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 using System;
 using SuperTiled2Unity;
 using UnityEditor;
-using SuperTiled2Unity.Editor;
 using System.Text;
 
 [RequireComponent(typeof(MeshRenderer))]
@@ -33,8 +31,9 @@ public class CeilingComponent : MonoBehaviour {
 
     private int trisOffset, vertsOffset, uvsOffset, normsOffset;
 
+    #if UNITY_EDITOR
 
-    public void Reconfigure(MapEvent parent, TmxAssetImporter importer) {
+    public void Reconfigure(MapEvent parent, SuperTiled2Unity.Editor.TmxAssetImporter importer) {
         collider = parent.GetComponent<PolygonCollider2D>();
         renderer = GetComponent<MeshRenderer>();
         filter = GetComponent<MeshFilter>();
@@ -60,6 +59,17 @@ public class CeilingComponent : MonoBehaviour {
 
         RecalculateMesh(importer);
     }
+
+    public void RecalculateMesh(SuperTiled2Unity.Editor.TmxAssetImporter importer = null) {
+        var mesh = RecalculateMesh(ContainsTile);
+        if (importer != null) {
+            var meshName = "Ceiling mesh " + @event.Position.x + "," + @event.Position.y;
+            mesh.name = meshName;
+            importer.SuperImportContext.AddObjectToAsset(meshName, mesh);
+        }
+    }
+
+    #endif
 
     public void Start() {
         propBlock = new MaterialPropertyBlock();
@@ -134,11 +144,8 @@ public class CeilingComponent : MonoBehaviour {
         }
         return new BoundsInt(minX, minY, 0, maxX, maxY, 0);
     }
-
-    public void RecalculateMesh(TmxAssetImporter importer = null) {
-        RecalculateMesh(ContainsTile, importer);
-    }
-    public void RecalculateMesh(Func<Vector2Int, bool> rule, TmxAssetImporter importer = null) {
+    
+    public Mesh RecalculateMesh(Func<Vector2Int, bool> rule) {
         var bounds = CalculateBounds();
         var size = new Vector2Int(Mathf.CeilToInt(bounds.size.x), Mathf.CeilToInt(bounds.size.y));
 
@@ -153,11 +160,6 @@ public class CeilingComponent : MonoBehaviour {
                 filter.sharedMesh = new Mesh();
             }
             mesh = filter.sharedMesh;
-            var meshName = "Ceiling mesh " + @event.Position.x + "," + @event.Position.y;
-            mesh.name = meshName;
-            if (importer != null) {
-                importer.SuperImportContext.AddObjectToAsset(meshName, mesh);
-            }
         }
 
         mesh.Clear();
@@ -189,6 +191,8 @@ public class CeilingComponent : MonoBehaviour {
         mesh.triangles = newTris;
         mesh.normals = newNorms;
         mesh.uv = newUvs;
+
+        return mesh;
     }
 
     public void DebugBounds() {

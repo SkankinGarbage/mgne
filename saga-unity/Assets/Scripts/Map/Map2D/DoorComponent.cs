@@ -1,5 +1,4 @@
 ﻿using SuperTiled2Unity;
-using SuperTiled2Unity.Editor;
 using System.Collections;
 using UnityEngine;
 
@@ -32,12 +31,16 @@ public class DoorComponent : MonoBehaviour {
 
     private bool IsOpen => Global.Instance().Data.GetSwitch(SwitchName);
 
-    public void Reconfigure(MapEvent parent, TmxAssetImporter importer) {
+    #if UNITY_EDITOR
+
+    public void Reconfigure(MapEvent parent, SuperTiled2Unity.Editor.TmxAssetImporter importer) {
         var props = parent.Properties;
         if (props.TryGetCustomProperty(PropertyKeyItem, out CustomProperty prop)) {
             itemKey = prop.GetValueAsString();
         }
     }
+
+    #endif
 
     public void OnEnable() {
         GetComponent<Dispatch>().RegisterListener(MapEvent.EventInteract, OnInteract);

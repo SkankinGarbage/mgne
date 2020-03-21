@@ -166,6 +166,7 @@ public abstract class MapEvent : MonoBehaviour {
         }
     }
 
+#if UNITY_EDITOR
     public void OnDrawGizmos() {
         if (Selection.activeGameObject == gameObject) {
             Gizmos.color = Color.red;
@@ -174,6 +175,7 @@ public abstract class MapEvent : MonoBehaviour {
         }
         DrawGizmoSelf();
     }
+#endif
 
     public void OnValidate() {
         if (Properties == null) {
