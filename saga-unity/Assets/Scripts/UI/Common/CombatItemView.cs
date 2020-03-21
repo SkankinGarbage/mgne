@@ -16,7 +16,7 @@ public class CombatItemView : MonoBehaviour {
     public void Populate(CombatItem item, PointerLayer pointers = null) {
         Item = item;
         nameLabel.text = item?.Name;
-        usesLabel.text = item?.Data.uses > 0 ? item.UsesRemaining.ToString() : "";
+        usesLabel.text = item?.Data.uses > 0 ? item.UsesRemaining.ToString() : "--";
         this.pointers = pointers != null ? pointers : this.pointers;
         if (ownedPointer != null) {
             ownedPointer.Populate(this.pointers);

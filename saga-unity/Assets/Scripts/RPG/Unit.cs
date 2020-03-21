@@ -183,7 +183,9 @@ public class Unit {
         }
         if (Status != null) {
             await Status.CheckHealAsync(battle, this);
-            await Status?.UpdateForEndOfRoundAsync(battle, this);
+            if (Status != null) {
+                await Status.UpdateForEndOfRoundAsync(battle, this);
+            }
         }
         if (Is(StatTag.REGENERATING)) {
             var toRegen = (int) (Stats[StatTag.MHP] / 10f);

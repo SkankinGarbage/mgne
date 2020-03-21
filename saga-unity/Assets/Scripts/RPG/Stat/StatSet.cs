@@ -58,10 +58,9 @@ public class StatSet : ISerializationCallbackReceiver {
     private void InitNewSet() {
         stats = new Dictionary<StatTag, float>();
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
+            if (tag == StatTag.NONE) continue;
             Stat stat = Stat.Get(tag);
-            if (stat == null) {
-                continue;
-            }
+            if (stat == null) continue;
             stats[tag] = stat.Combinator.Identity();
         }
     }
@@ -98,6 +97,7 @@ public class StatSet : ISerializationCallbackReceiver {
     public static StatSet operator +(StatSet a, StatSet b) => a.AddSet(b);
     public StatSet AddSet(StatSet other) {
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
+            if (tag == StatTag.NONE) continue;
             if (other.stats.ContainsKey(tag)) {
                 float val1 = 0;
                 float val2 = 0;
@@ -112,6 +112,7 @@ public class StatSet : ISerializationCallbackReceiver {
     public static StatSet operator -(StatSet a, StatSet b) => a.RemoveSet(b);
     public StatSet RemoveSet(StatSet other) {
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
+            if (tag == StatTag.NONE) continue;
             stats[tag] = Stat.Get(tag).Combinator.Decombine(stats[tag], other.stats[tag]);
         }
         return this;

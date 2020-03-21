@@ -42,7 +42,7 @@ public class Status {
 
     public async Task HealAsync(Battle battle, Unit unit) {
         await battle.WriteLineAsync("");
-        await battle.WriteLineAsync(unit.Name + " " + Data.healString + ".");
+        await battle.WriteLineAsync(unit.Name + Data.healString + ".");
         Heal(unit);
     }
 

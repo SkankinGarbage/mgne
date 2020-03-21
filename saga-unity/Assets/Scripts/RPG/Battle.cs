@@ -181,12 +181,16 @@ public class Battle {
         var participants = new List<Unit>();
         participants.AddRange(Enemy);
         participants.AddRange(Player);
+        var typed = View.battlebox.LinesTyped;
         foreach (var unit in participants) {
             await unit.UpdateForEndOfRoundAsync(this);
             if (IsVictory || IsDefeat) {
                 IsDone = true;
                 break;
             }
+        }
+        if (typed != View.battlebox.LinesTyped) {
+            await Global.Instance().Input.ConfirmRoutine();
         }
     }
 
@@ -319,8 +323,8 @@ public class Battle {
             offset = UnityEngine.Random.Range(0, Enemy.Size);
         }
         Unit dropper = null;
-        for (var i = 0; i < Enemy.Size; i += 1) {
-            var index = (i + offset) % Enemy.Size;
+        for (var i = 0; i < Enemy.Groups.Count; i += 1) {
+            var index = (i + offset) % Enemy.Groups.Count;
             if (roll < Enemy[index].MeatDropChance) {
                 dropper = Enemy[index];
                 break;

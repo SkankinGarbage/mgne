@@ -11,7 +11,8 @@ speak("David", "Of course! It looks like you must be too if you have the airseed
 speak(hero1, "Airseed? You mean this helmet?")
 speak("David", "Try it on! Even if you go underwater, you'll still be able to breathe. It must be the airseed.")
 speak(hero2, "For a magical artifact it sure looks awfully strange...")
-speak("David", "Artifacts come in many shapes and sizes. In fact, here's the artifact I already found... it's a sending stone! I have two, so you can keep one as a reward for freeing me.")
+speak("David", "Artifacts come in many shapes and sizes. In fact, here's the artifact I already found... it's a sending stone!")
+speak("David", "I have two, so you can keep one as a reward for freeing me.")
 
 playSound('get')
 addItem('key_artifactRadio')

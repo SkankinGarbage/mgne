@@ -57,6 +57,7 @@ public class LuaCutsceneContext : LuaContext {
         lua.Globals["face"] = (Action<DynValue, DynValue>)Face;
         lua.Globals["hideHero"] = (Action<DynValue>)HideHero;
         lua.Globals["addMember"] = (Action<DynValue>)AddMember;
+        lua.Globals["removeMember"] = (Action)RemoveMember;
         lua.Globals["addItem"] = (Action<DynValue, DynValue>)AddItem;
         lua.Globals["addCollectable"] = (Action<DynValue>)AddCollectable;
         lua.Globals["removeItem"] = (Action<DynValue, DynValue>)RemoveItem;
@@ -267,5 +268,10 @@ public class LuaCutsceneContext : LuaContext {
     private void AddMember(DynValue unitLua) {
         var data = IndexDatabase.Instance().Units.GetData(unitLua.String);
         Global.Instance().Party.AddMember(new Unit(data));
+    }
+
+    private void RemoveMember() {
+        var fifthMember = Global.Instance().Party[4];
+        Global.Instance().Party.RemoveMember(fifthMember);
     }
 }

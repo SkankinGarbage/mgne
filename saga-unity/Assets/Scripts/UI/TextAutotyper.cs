@@ -10,10 +10,11 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
     [SerializeField] protected GameObject advanceArrow;
     [SerializeField] protected bool speedUpWhenHurried;
 
-    protected bool hurried;
-    protected bool confirmed;
+    public int LinesTyped { get; private set; } = 0;
 
     protected int typingStartIndex = 0;
+    protected bool hurried;
+    protected bool confirmed;
 
     public bool OnCommand(InputManager.Command command, InputManager.Event eventType) {
         switch (eventType) {
@@ -33,6 +34,7 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
     }
 
     public IEnumerator TypeRoutine(string text, bool waitForConfirm = true) {
+        LinesTyped += 1;
         hurried = false; 
         float elapsed = 0.0f;
         float total = (text.Length - typingStartIndex) / charsPerSecond;

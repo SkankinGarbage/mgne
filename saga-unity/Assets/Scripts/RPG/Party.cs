@@ -37,10 +37,12 @@ public class Party : IEnumerable<Unit> {
             } else {
                 amount = int.Parse(member.amount);
             }
-            for (int i = 0; i < amount; i += 1) {
-                group.Add(new Unit(member.enemy));
+            if (amount > 0) {
+                for (int i = 0; i < amount; i += 1) {
+                    group.Add(new Unit(member.enemy));
+                }
+                Groups.Add(group);
             }
-            Groups.Add(group);
         }
     }
 
@@ -72,6 +74,19 @@ public class Party : IEnumerable<Unit> {
 
     public void AddMember(Unit member) {
         Groups.Add(new List<Unit>() { member });
+    }
+
+    public void RemoveMember(Unit member) {
+        var index = GroupIndexForUnit(member);
+        if (Groups[index].Count == 1) {
+            RemoveGroup(index);
+        } else {
+            Groups[index].Remove(member);
+        }
+    }
+
+    public void RemoveGroup(int groupIndex) {
+        Groups.RemoveAt(groupIndex);
     }
 
     /// <returns>The index of the group containing the given unit, or -1 if not found</returns>

@@ -80,9 +80,6 @@ public class ChestComponent : MonoBehaviour {
     }
 
     private IEnumerator OpenRoutine() {
-        Global.Instance().Data.SetSwitch(SwitchName, true);
-        UpdateSprite();
-
         var textbox = MapOverlayUI.Instance().textbox;
         if (encounterKey != null && encounterKey.Length > 0) {
             var party = IndexDatabase.Instance().Parties.GetData(encounterKey);
@@ -92,6 +89,8 @@ public class ChestComponent : MonoBehaviour {
                 var collectable = IndexDatabase.Instance().Collectables.GetData(itemKey);
                 Global.Instance().Audio.PlaySFX(sfxKey);
                 Global.Instance().Data.Collectables.AddItem(collectable);
+                Global.Instance().Data.SetSwitch(SwitchName, true);
+                UpdateSprite();
                 if (collectable.chestName != null && collectable.chestName.Length > 0) {
                     yield return textbox.SpeakRoutine("Retrieved " + UIUtils.GlyphifyString(collectable.chestName) + ".");
                 } else {
@@ -104,6 +103,8 @@ public class ChestComponent : MonoBehaviour {
                 } else {
                     Global.Instance().Audio.PlaySFX(sfxKey);
                     Global.Instance().Data.Inventory.Add(item);
+                    Global.Instance().Data.SetSwitch(SwitchName, true);
+                    UpdateSprite();
                     if (isKey) {
                         yield return textbox.SpeakRoutine("Retrieved the " + item.Name + ".");
                     } else {

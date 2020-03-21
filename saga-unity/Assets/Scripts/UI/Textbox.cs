@@ -61,6 +61,9 @@ public class Textbox : TextAutotyper {
             text = speakerName;
             speakerName = SystemSpeaker;
         }
+        if (speakerName == SystemSpeaker) {
+            SetNameboxEnabled(false);
+        }
         if (!isDisplaying) {
             SetNameboxEnabled(speakerName != SystemSpeaker);
             namebox.text = speakerName;

@@ -186,7 +186,7 @@ public abstract class MapEvent : MonoBehaviour {
     }
 
     public void CheckEnabled() {
-        IsSwitchEnabled = !LuaObject.EvaluateBool(PropertyLuaHide, false);
+        IsSwitchEnabled = !LuaObject.EvaluateBool(PropertyLuaHide, !IsSwitchEnabled);
     }
 
     public bool IsPassable() {
