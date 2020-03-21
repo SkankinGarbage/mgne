@@ -14,6 +14,7 @@ public class TmxImporter : CustomTmxImporter {
 
     private const string TypeCeiling = "Ceiling";
     private const string TypeChest = "Chest";
+    private const string TypeDoor = "Door";
 
     public override void TmxAssetImported(TmxAssetImportedArgs args) {
         var materials = GameboyMaterialSettings.GetDefault();
@@ -91,6 +92,12 @@ public class TmxImporter : CustomTmxImporter {
                         chestObject.transform.localPosition = new Vector3(0, 0, 0);
                     }
                     chest.Reconfigure(mapEvent, args.AssetImporter);
+                } else if (tmxObject.m_Type == TypeDoor) {
+                    var door = mapEvent.GetComponent<DoorComponent>();
+                    if (door == null) {
+                        door = mapEvent.gameObject.AddComponent<DoorComponent>();
+                    }
+                    door.Reconfigure(mapEvent, args.AssetImporter);
                 }
             }
         }

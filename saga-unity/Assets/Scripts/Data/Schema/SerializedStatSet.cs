@@ -44,6 +44,9 @@ public class SerializedStatSet {
         flagValues = new List<float>();
 
         foreach (StatTag tag in Enum.GetValues(typeof(StatTag))) {
+            if (tag == StatTag.NONE) {
+                continue;
+            }
             Stat stat = Stat.Get(tag);
             if (stat.UseBinaryEditor && stats[tag] != 0) {
                 flagKeys.Add(tag);

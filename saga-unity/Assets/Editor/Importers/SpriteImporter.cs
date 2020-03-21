@@ -20,7 +20,12 @@ internal sealed class SpriteImporter : AssetPostprocessor {
             Vector2Int textureSize = EditorUtils.GetPreprocessedImageSize(importer);
             if (path.Contains("Charas")) {
                 int edgeSizeX = 16;
-                int edgeSizeY = 16;
+                int edgeSizeY;
+                if (path.Contains("anim_")) {
+                    edgeSizeY = textureSize.y;
+                } else {
+                    edgeSizeY = 16;
+                }
                 int cols = textureSize.x / edgeSizeX;
                 int rows = textureSize.y / edgeSizeY;
                 importer.spritePixelsPerUnit = Map.PxPerTile / Map.UnitsPerTile;

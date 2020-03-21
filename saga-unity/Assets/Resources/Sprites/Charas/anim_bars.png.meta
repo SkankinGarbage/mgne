@@ -100,30 +100,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44cefa923da2e884baa5f612a67b4989
-      internalID: 7980145747350987619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: anim_bars_0_1
-      rect:
-        serializedVersion: 2
-        x: 0
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +110,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78ce3684a9d30dc4398ff029787d2445
-      internalID: -5720106510918495210
+      spriteID: ae887cc6c33d16d4ab18cf6cc653253a
+      internalID: 7980145747350987619
       vertices: []
       indices: 
       edges: []

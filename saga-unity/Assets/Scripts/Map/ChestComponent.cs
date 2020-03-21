@@ -44,8 +44,7 @@ public class ChestComponent : MonoBehaviour {
             isInivisble = prop.GetValueAsString() != "VISIBLE";
         }
         if (props.TryGetCustomProperty(PropertyKeyItem, out prop)) {
-            isKey = true;
-            itemKey = prop.GetValueAsString();
+            isKey = prop.GetValueAsString() == "KEY_ITEM";
         }
         if (props.TryGetCustomProperty(PropertyCollectable, out prop)) {
             isCollectable = true;
@@ -64,7 +63,7 @@ public class ChestComponent : MonoBehaviour {
     private bool IsOpen() {
         if (isKey) {
             var item = IndexDatabase.Instance().CombatItems.GetData(itemKey);
-            return !Global.Instance().Data.Inventory.ContainsItemType(item);
+            return Global.Instance().Data.Inventory.ContainsItemType(item);
         } else {
             return Global.Instance().Data.GetSwitch(SwitchName);
         }
