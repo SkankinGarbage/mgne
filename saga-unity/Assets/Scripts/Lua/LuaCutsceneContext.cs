@@ -240,7 +240,7 @@ public class LuaCutsceneContext : LuaContext {
 
     private void AddItem(DynValue itemLua, DynValue isCollectableLua) {
         var key = itemLua.String;
-        var isCollectable = isCollectableLua.IsNil() || isCollectableLua.Boolean;
+        var isCollectable = !isCollectableLua.IsNil() && isCollectableLua.Boolean;
         if (isCollectable) {
             Global.Instance().Data.Collectables.AddItem(key);
         } else {

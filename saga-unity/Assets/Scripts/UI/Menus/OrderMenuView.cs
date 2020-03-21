@@ -96,5 +96,6 @@ public class OrderMenuView : FullScreenMenuView {
         sprite1.animates = false;
 
         unitSelector.transform.GetChild(slot2).GetComponent<ReorderCellView>().Sprite = sprite1;
+        unitSelector.transform.GetChild(slot1).GetComponent<ReorderCellView>().Sprite = sprite2;
     }
 }

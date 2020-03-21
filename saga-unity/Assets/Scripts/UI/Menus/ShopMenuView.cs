@@ -56,7 +56,7 @@ public class ShopMenuView : FullScreenMenuView {
                     break;
                 case "Sell":
                     await SellAsync();
-                break;
+                    break;
                 default:
                     canceled = true;
                     break;
@@ -89,15 +89,16 @@ public class ShopMenuView : FullScreenMenuView {
             Populate(false);
             headerText.text = "Sold!";
             Global.Instance().Audio.PlaySFX(buySfxKey);
-            await Global.Instance().Input.ConfirmRoutine();
         }
     }
 
     private async Task SellAsync() {
+        headerText.text = "Sell what?";
         while (true) {
             Populate(true);
             var selection = await sellList.Selector.SelectItemAsync(select => {
-                headerText.text = data.items[select].itemDescription;
+                var toSell = Global.Instance().Data.Inventory[select];
+                headerText.text = toSell == null ? "" : toSell.Data.itemDescription;
             }, true);
             if (selection < 0) {
                 return;

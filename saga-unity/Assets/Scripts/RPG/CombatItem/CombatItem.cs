@@ -33,7 +33,7 @@ public class CombatItem {
 
     public CombatItem(CombatItemData data) : this() {
         Data = data;
-        RestoreUses();
+        UsesRemaining = data.uses;
         Effect = AbilEffectFactory.CreateEffect(data.warhead, this);
     }
 
@@ -53,7 +53,7 @@ public class CombatItem {
     }
 
     public void RestoreUses() {
-        UsesRemaining = Data.uses;
+        UsesRemaining = UsesWhenAdded;
     }
 
     public async Task<bool> UseOnMapAsync(IItemUseableMenu menu, Unit user) {
