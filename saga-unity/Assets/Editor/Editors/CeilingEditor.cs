@@ -9,7 +9,7 @@ public class CeilingEditor : Editor {
 
         CeilingComponent ceiling = (CeilingComponent)target;
         if (GUILayout.Button("Recalculate bounds")) {
-            ceiling.RecalculateBounds();
+            ceiling.RecalculateMesh();
             EditorUtility.SetDirty(ceiling);
         }
         if (GUILayout.Button("Debug bounds")) {

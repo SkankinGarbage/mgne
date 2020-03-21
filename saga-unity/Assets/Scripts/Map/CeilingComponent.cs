@@ -58,7 +58,7 @@ public class CeilingComponent : MonoBehaviour {
         RecalculateUVs();
         renderer.material = GameboyMaterialSettings.GetDefault().BackgroundMaterial;
 
-        RecalculateBounds(importer);
+        RecalculateMesh(importer);
     }
 
     public void Start() {
@@ -117,13 +117,30 @@ public class CeilingComponent : MonoBehaviour {
         return ContainsTile(Global.Instance().Maps.Avatar.Parent.Position);
     }
 
-    public void RecalculateBounds(TmxAssetImporter importer = null) {
-        RecalculateBounds(ContainsTile, importer);
+    public BoundsInt CalculateBounds() {
+        var minX = int.MaxValue;
+        var maxX = int.MinValue;
+        var minY = int.MaxValue;
+        var maxY = int.MinValue;
+        for (var x = 0; x < @event.Map.Width; x += 1) {
+            for (var y = 0; y < @event.Map.Height; y += 1) {
+                if (ContainsTile(new Vector2Int(x, y))) {
+                    if (x < minX) minX = x;
+                    if (x > maxX) maxX = x;
+                    if (y < minY) minY = y;
+                    if (y > maxY) maxY = y;
+                }
+            }
+        }
+        return new BoundsInt(minX, minY, 0, maxX, maxY, 0);
     }
-    public void RecalculateBounds(Func<Vector2Int, bool> rule, TmxAssetImporter importer = null) {
-        var bounds = collider.bounds;
-        var size = new Vector2Int(  Mathf.CeilToInt(bounds.size.x), 
-                                    Mathf.CeilToInt(bounds.size.y)  );
+
+    public void RecalculateMesh(TmxAssetImporter importer = null) {
+        RecalculateMesh(ContainsTile, importer);
+    }
+    public void RecalculateMesh(Func<Vector2Int, bool> rule, TmxAssetImporter importer = null) {
+        var bounds = CalculateBounds();
+        var size = new Vector2Int(Mathf.CeilToInt(bounds.size.x), Mathf.CeilToInt(bounds.size.y));
 
         Mesh mesh;
         if (Application.isPlaying) {
@@ -154,7 +171,7 @@ public class CeilingComponent : MonoBehaviour {
         uvsOffset = 0;
         for (int x = -StepMax; x <= size.x + StepMax; x += 1) {
             for (int y = -StepMax; y <= size.y + StepMax; y +=1) {
-                var tile = new Vector2Int(x + @event.Position.x, y + @event.Position.y);
+                var tile = new Vector2Int(x + bounds.xMin, y + bounds.yMin);
                 if (rule(tile)) {
                     AddTileQuadToMesh(tile, ref verts, ref tris, ref norms, ref uvs);
                 }
@@ -176,12 +193,12 @@ public class CeilingComponent : MonoBehaviour {
 
     public void DebugBounds() {
         var output = new StringBuilder();
-        var bounds = collider.bounds;
+        var bounds = CalculateBounds();
         var size = new Vector2Int(Mathf.CeilToInt(bounds.size.x),
                                     Mathf.CeilToInt(bounds.size.y));
         for (int y = -StepMax; y <= size.y + StepMax; y += 1) {
             for (int x = -StepMax; x <= size.x + StepMax; x += 1) {
-                var tile = new Vector2Int(x + @event.Position.x, y + @event.Position.y);
+                var tile = new Vector2Int(x + bounds.xMin, y + bounds.yMin);
                 if (ContainsTile(tile)) {
                     output.Append("x");
                 } else {
@@ -256,17 +273,17 @@ public class CeilingComponent : MonoBehaviour {
     }
 
     private void BuildStandard() {
-        RecalculateBounds(ContainsTile);
+        RecalculateMesh(ContainsTile);
     }
 
     private void BuildInverted() {
-        RecalculateBounds(tile => {
+        RecalculateMesh(tile => {
             return !ContainsTile(tile);
         });
     }
 
     private void BuildByRange(Vector2Int at, float reach) {
-        RecalculateBounds(tile => {
+        RecalculateMesh(tile => {
             var delta = (at - tile);
             if (Math.Abs(delta.x) > Math.Abs(reach) || Math.Abs(delta.y) > Math.Abs(reach)) {
                 return ContainsTile(tile) ^ reach > 0;
