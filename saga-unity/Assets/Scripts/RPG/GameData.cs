@@ -16,7 +16,7 @@ public class GameData {
     [JsonProperty] public int GP { get; private set; }
     [JsonProperty] public string LocationName { get; private set; }
     [JsonProperty] public string CurrentBGMKey { get; private set; }
-    [JsonProperty] public string BattleBGMKey { get; private set; } = "battle1";
+    [JsonProperty] public string BattleBGMKey { get; private set; } = "world1_battle";
 
     [JsonProperty] public string MapPath { get; set; }
     [JsonProperty] public Vector2Int MapLocation { get; set; }

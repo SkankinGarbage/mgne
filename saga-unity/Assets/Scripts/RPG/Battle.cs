@@ -126,16 +126,18 @@ public class Battle {
             } while (fightRunCommand == null);
             switch (fightRunCommand) {
                 case "FIGHT":
-                    await FightAsync();
+                    bool fought = await FightAsync();
+                    if (fought) {
+                        if (!IsDone) {
+                            await UpdateForEndOfRoundAsync();
+                        } else {
+                            await EndCombatAsync();
+                        }
+                    }
                     break;
                 case "RUN":
                     await RunAsync();
                     break;
-            }
-            if (!IsDone) {
-                await UpdateForEndOfRoundAsync();
-            } else {
-                await EndCombatAsync();
             }
         }
     }
