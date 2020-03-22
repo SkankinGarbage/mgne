@@ -48,7 +48,7 @@ public class OrderMenuView : FullScreenMenuView {
 
             destinationSelector.Selection = slot1;
             int slot2 = await destinationSelector.SelectItemAsync(null, true);
-            if (Global.Instance().Party[slot1].Is(StatTag.EQUIPMENT_FIX)) {
+            if (Global.Instance().Party[slot2].Is(StatTag.EQUIPMENT_FIX)) {
                 Global.Instance().Audio.PlaySFX("fail");
                 continue;
             }
