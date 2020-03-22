@@ -15,8 +15,12 @@ public abstract class GenericSelector : MonoBehaviour {
     private int selection;
     public int Selection {
         set {
-            int oldSelection = selection;
-            GetCell(selection).SetSelected(false);
+            if (CellCount() == 0) {
+                Debug.LogError("No selection possible");
+            }
+            if (selection >= 0 && selection < CellCount()) {
+                GetCell(selection).SetSelected(false);
+            }
             if (value < 0) value = CellCount() - 1;
             if (value >= CellCount()) value = 0;
             GetCell(value).SetSelected(true);
