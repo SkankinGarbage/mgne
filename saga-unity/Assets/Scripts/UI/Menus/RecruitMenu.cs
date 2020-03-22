@@ -141,6 +141,11 @@ public class RecruitMenu : FullScreenMenuView {
             unitCell.gameObject.SetActive(false);
             letterList.gameObject.SetActive(false);
         }
+
+        foreach (var highlight in letterHighlights) {
+            highlight.SetActive(false);
+        }
+
         return result.Value;
     }
 
