@@ -42,7 +42,7 @@ public class InputManager : MonoBehaviour {
         keybinds[Command.Cancel] = new List<KeyCode>(new[] { KeyCode.B, KeyCode.X, KeyCode.Backspace });
         keybinds[Command.Debug] = new List<KeyCode>(new[] { KeyCode.F9 });
         keybinds[Command.Menu] = new List<KeyCode>(new[] { KeyCode.Escape, KeyCode.C });
-        fastKeys = new List<KeyCode>(new[] { KeyCode.LeftControl, KeyCode.RightControl, KeyCode.Space });
+        fastKeys = new List<KeyCode>(new[] { KeyCode.LeftControl, KeyCode.RightControl, KeyCode.Space, KeyCode.Z });
 
         listeners = new List<IInputListener>();
         disabledListeners = new List<IInputListener>();

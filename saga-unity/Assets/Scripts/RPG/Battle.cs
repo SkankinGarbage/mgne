@@ -137,6 +137,11 @@ public class Battle {
                     break;
                 case "RUN":
                     await RunAsync();
+                    if (!IsDone) {
+                        await UpdateForEndOfRoundAsync();
+                    } else {
+                        await EndCombatAsync();
+                    }
                     break;
             }
         }

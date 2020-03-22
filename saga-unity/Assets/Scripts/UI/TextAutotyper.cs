@@ -19,12 +19,11 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
     public bool OnCommand(InputManager.Command command, InputManager.Event eventType) {
         switch (eventType) {
             case InputManager.Event.Hold:
-            case InputManager.Event.Down:
                 if (command == InputManager.Command.Confirm) {
                     hurried = true;
                 }
                 break;
-            case InputManager.Event.Up:
+            case InputManager.Event.Down:
                 if (command == InputManager.Command.Confirm) {
                     confirmed = true;
                 }
@@ -34,8 +33,8 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
     }
 
     public IEnumerator TypeRoutine(string text, bool waitForConfirm = true) {
-        LinesTyped += 1;
-        hurried = false; 
+        hurried = false;
+        confirmed = false;
         float elapsed = 0.0f;
         float total = (text.Length - typingStartIndex) / charsPerSecond;
         textbox.GetComponent<CanvasGroup>().alpha = 1.0f;
@@ -54,7 +53,11 @@ public class TextAutotyper : MonoBehaviour, IInputListener {
                 hurried = false;
                 if (speedUpWhenHurried) {
                     elapsed += Time.deltaTime * 4;
-                } else {
+                }
+            }
+            if (confirmed) {
+                confirmed = false;
+                if (!speedUpWhenHurried) {
                     break;
                 }
             }
