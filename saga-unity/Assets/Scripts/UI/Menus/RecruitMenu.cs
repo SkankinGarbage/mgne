@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Threading.Tasks;
 using System;
 using System.Linq;
+using System.Text;
 
 public class RecruitMenu : FullScreenMenuView {
 
@@ -94,8 +95,13 @@ public class RecruitMenu : FullScreenMenuView {
         int letterIndex = 0;
         bool? result = null;
         while (!result.HasValue && letterIndex < 10) {
-            if (nameArray.Select(@char => @char != 0 && @char != ' ').Count() > 0) {
-                unit.SetName(new string(nameArray).Trim());
+            var validChars = nameArray.Where(@char => @char != 0 && @char != ' ');
+            if (validChars.Count() > 0) {
+                StringBuilder name = new StringBuilder();
+                foreach (var c in validChars) {
+                    name.Append(c);
+                }
+                unit.SetName(name.ToString().Trim());
             }
             unitCell.Populate(unit);
             ShowLetterHighlight(letterIndex);
@@ -122,8 +128,12 @@ public class RecruitMenu : FullScreenMenuView {
             }
         }
 
-        if (!result.HasValue || result.Value) {
-            unit.SetName(new string(nameArray).Trim());
+        if (!result.HasValue) {
+            // the name is at the max length
+            result = unit.Name.Length > 0;
+        }
+
+        if (result.Value) {
             Global.Instance().Data.Party.AddMember(unit);
         } else {
             recruitCells.gameObject.SetActive(true);
