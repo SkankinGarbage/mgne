@@ -42,6 +42,11 @@ public class EquipMenuView : FullScreenMenuView {
                 continue;
             }
 
+            if (unit.Race == Race.ROBOT && inventory[inventorySlot] != null && inventory[inventorySlot].UsesRemaining == 1) {
+                AudioManager.PlayFail();
+                continue;
+            }
+
             var oldOccupant = unit.Equipment.Drop(equipSlot);
             unit.Equipment.SetSlot(equipSlot, inventory.Drop(inventorySlot), true);
             inventory.SetSlot(inventorySlot, oldOccupant, true);

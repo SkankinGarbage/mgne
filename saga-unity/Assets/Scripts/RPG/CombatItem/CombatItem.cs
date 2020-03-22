@@ -78,7 +78,7 @@ public class CombatItem {
         if (Data.uses == 0) return;
         if (Data.type == AbilityType.ABILITY) return;
         if (Container == null) return;
-        if (Container.UsesRegenerateAt(Container.SlotForItem(this))) return;
+        if (Container.UsesRegenerateAt(Container.SlotForItem(this)) && UsesWhenAdded > 0) return;
 
         Container.Drop(this);
     }
