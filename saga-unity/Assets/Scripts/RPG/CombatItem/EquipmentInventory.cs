@@ -41,6 +41,13 @@ public class EquipmentInventory : Inventory {
         return result;
     }
 
+    public override bool IsSlotReservedAt(int slot) {
+        return 
+            owner.Is(StatTag.EQUIPMENT_FIX) ||
+            owner.Race == Race.MONSTER ||
+            owner.Race == Race.MUTANT && slot <= 4;
+    }
+
     /// <returns>True if at least one item can be used in battle</returns>
     public bool ContainsBattleUseableItems() {
         for (int slot = 0; slot < base.Capacity; slot += 1) {
