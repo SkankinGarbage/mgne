@@ -61,6 +61,11 @@ public class TitleView : FullScreenMenuView {
     }
 
     private async Task<bool> SelectContinue() {
+        if (Global.Instance().SystemData.LastSaveSlot == -1) {
+            AudioManager.PlayFail();
+            return false;
+        }
+
         var saveMenu = SaveMenuView.ShowDefault();
         var loaded = await saveMenu.DoMenuAsync(SaveMenuView.Mode.Load);
         if (loaded > -1) {
