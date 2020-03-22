@@ -103,9 +103,9 @@ public class ShopMenuView : FullScreenMenuView {
             if (selection < 0) {
                 return;
             }
-            var item = data.items[selection];
+            var item = Global.Instance().Data.Inventory[selection];
 
-            if (item.cost <= 0) {
+            if (item.GoldValue <= 0) {
                 headerText.text = "Can't sell that.";
                 continue;
             }
@@ -113,7 +113,7 @@ public class ShopMenuView : FullScreenMenuView {
             headerText.text = "Thanks.";
             Global.Instance().Audio.PlaySFX(buySfxKey);
 
-            Global.Instance().Data.AddGP(item.cost);
+            Global.Instance().Data.AddGP(item.GoldValue);
             Global.Instance().Data.Inventory.Drop(selection);
         }
     }
