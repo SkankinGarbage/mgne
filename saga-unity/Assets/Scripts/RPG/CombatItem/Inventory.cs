@@ -125,7 +125,7 @@ public class Inventory : IEnumerable<CombatItem> {
     /// <param name="item">The slot to drop from</param>
     public CombatItem Drop(int slot) {
         var oldOccupant = items[slot];
-        items[slot] = null;
+        SetSlot(slot, null, true);
         return oldOccupant;
     }
 
