@@ -136,7 +136,7 @@
   <object id="19" name="autostart" type="Event" x="224" y="240" width="16" height="16">
    <properties>
     <property name="hide" value="return getSwitch('shrine_done')"/>
-    <property name="onEnter" value="playBGM('world1_town')"/>
+    <property name="onEnter" value="playBGM('town')"/>
    </properties>
   </object>
   <object id="21" name="autostart" type="Event" x="240" y="240" width="16" height="16">
